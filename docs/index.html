@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《麻薯日报》合集 · 目录</title>
+<style>
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+       max-width: 760px; margin: 0 auto; padding: 16px; line-height: 1.75;
+       color: #222; background: #fffdf8; }
+h1 { font-size: 1.5em; }
+h2 { border-bottom: 2px solid #f0c75e; padding-bottom: 4px; margin-top: 1.6em; }
+h3 { margin-top: 1.3em; }
+a { color: #b3541e; }
+ol li { margin: 8px 0; }
+img { max-width: 100%; }
+table { border-collapse: collapse; }
+td, th { border: 1px solid #ccc; padding: 4px 8px; }
+.note { color: #666; font-size: 0.92em; }
+.nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
+       border-bottom: 2px solid #f0c75e; padding-bottom: 8px; margin-bottom: 16px; font-size: 0.95em; }
+.nav.bottom { border-bottom: none; border-top: 2px solid #f0c75e; padding-top: 8px; margin-top: 24px; }
+body.spa .page { display: none; }
+body.spa .page.active { display: block; }
+a.navbtn { text-decoration: none; }
+.bgbar { text-align: right; margin-bottom: 10px; }
+#bgToggle { background: #f0c75e;
+  color: #222; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
+  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25); font-family: inherit; }
+body.dark { background: #141414; color: #e6e6e6; }
+body.dark a { color: #f0a35e; }
+body.dark .note { color: #a8a8a8; }
+body.dark h2 { border-bottom-color: #8a6d2f; }
+body.dark .nav { border-color: #8a6d2f; }
+body.dark td, body.dark th { border-color: #444; }
+</style>
+</head>
+<body>
+<div class="bgbar"><button id="bgToggle" onclick="toggleBg()">🌙 黑色背景</button></div>
+<h1>📰 《麻薯日报》合集</h1>
+<p class="note">Ricardo 的每日新闻简报合集，共 23 期。点任意一期，进到那一天的完整日报 👇<br>
+注：2026-09-27 当日未留存档，所以第 1 期是 09-26、第 2 期是 09-28，其后每日一期。</p>
+<h2>📚 目录</h2>
+<ol>
+<li><a href="issue-001.html">《麻薯日报》第1期 · 2026-09-26（星期六）</a></li>
+<li><a href="issue-002.html">《麻薯日报》第2期 · 2026-09-28（星期一）</a></li>
+<li><a href="issue-003.html">《麻薯日报》第3期 · 2026-09-29（星期二）</a></li>
+<li><a href="issue-004.html">《麻薯日报》第4期 · 2026-09-30（星期三）</a></li>
+<li><a href="issue-005.html">《麻薯日报》第5期 · 2026-10-01（星期四）</a></li>
+<li><a href="issue-006.html">《麻薯日报》第6期 · 2026-10-02（星期五）</a></li>
+<li><a href="issue-007.html">《麻薯日报》第7期 · 2026-10-03（星期六）</a></li>
+<li><a href="issue-008.html">《麻薯日报》第8期 · 2026-10-04（星期日）</a></li>
+<li><a href="issue-009.html">《麻薯日报》第9期 · 2026-10-05（星期一）</a></li>
+<li><a href="issue-010.html">《麻薯日报》第10期 · 2026-10-06（星期二）</a></li>
+<li><a href="issue-011.html">《麻薯日报》第11期 · 2026-10-07（星期三）</a></li>
+<li><a href="issue-012.html">《麻薯日报》第12期 · 2026-10-08（星期四）</a></li>
+<li><a href="issue-013.html">《麻薯日报》第13期 · 2026-10-09（星期五）</a></li>
+<li><a href="issue-014.html">《麻薯日报》第14期 · 2026-10-10（星期六）</a></li>
+<li><a href="issue-015.html">《麻薯日报》第15期 · 2026-10-11（星期日）</a></li>
+<li><a href="issue-016.html">《麻薯日报》第16期 · 2026-10-12（星期一）</a></li>
+<li><a href="issue-017.html">《麻薯日报》第17期 · 2026-10-13（星期二）</a></li>
+<li><a href="issue-018.html">《麻薯日报》第18期 · 2026-10-14（星期三）</a></li>
+<li><a href="issue-019.html">《麻薯日报》第19期 · 2026-10-15（星期四）</a></li>
+<li><a href="issue-020.html">《麻薯日报》第20期 · 2026-10-16（星期五）</a></li>
+<li><a href="issue-021.html">《麻薯日报》第21期 · 2026-10-17（星期六）</a></li>
+<li><a href="issue-022.html">《麻薯日报》第22期 · 2026-10-18（星期日）</a></li>
+<li><a href="issue-023.html">《麻薯日报》第23期 · 2026-10-19（星期一）</a></li>
+</ol>
+<script>
+function toggleBg() {
+  var dark = document.body.classList.toggle('dark');
+  document.getElementById('bgToggle').textContent = dark ? '☀️ 白色背景' : '🌙 黑色背景';
+  try { localStorage.setItem('mashu-bg', dark ? 'dark' : 'light'); } catch (e) {}
+}
+try {
+  if (localStorage.getItem('mashu-bg') === 'dark') {
+    document.body.classList.add('dark');
+    document.getElementById('bgToggle').textContent = '☀️ 白色背景';
+  }
+} catch (e) {}
+</script>
+</body>
+</html>
