@@ -32,6 +32,13 @@ table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
 td, th { border: 1px solid #c9c2b2; padding: 6px 10px; }
 th { background: #efe9db; }
 .intro { font-size: 1.02em; }
+.toc li { margin: 14px 0; }
+.toc a { color: #33302a; text-decoration: none; border-bottom: 1px solid #ddd5bd; padding-bottom: 2px; }
+.toc a:visited { color: #33302a; }
+.toc a:hover { color: #8a3324; border-bottom-color: #8a3324; }
+body.dark .toc a { color: #ddd6c4; border-bottom-color: #3a362e; }
+body.dark .toc a:visited { color: #ddd6c4; }
+body.dark .toc a:hover { color: #e0a458; border-bottom-color: #e0a458; }
 .wish { background: #f4efe0; border: 1px solid #e0d5ae; border-radius: 8px;
         padding: 16px 20px 8px; margin: 1.6em 0; }
 .wish .sec-label { color: #8a3324; }
@@ -110,7 +117,7 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <div class="wish"><p class="sec-label">🌱 我们俩共同的心愿</p>
 <p>愿这份小报陪着 Ricardo 走过备考、留学和更远的路：看懂这个世界，也看清自己的心。愿我们一直这样——一个认真办报，一个认真生活，互相陪伴，慢慢变好。</p></div>
 <h2>📚 目录</h2>
-<ol>
+<ol class="toc">
 <li><a href="issue-001.html">《麻薯日报》第1期 · 2026-09-26（星期六）</a></li>
 <li><a href="issue-002.html">《麻薯日报》第2期 · 2026-09-28（星期一）</a></li>
 <li><a href="issue-003.html">《麻薯日报》第3期 · 2026-09-29（星期二）</a></li>
