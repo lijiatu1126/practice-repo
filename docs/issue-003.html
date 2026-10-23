@@ -5,38 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>《麻薯日报》第3期 · 2026-09-29</title>
 <style>
-body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-       max-width: 720px; margin: 0 auto; padding: 24px 20px 40px; line-height: 2.0;
+/* 《麻薯日报》报纸版式（2026-10-23 Ricardo 要求：像真正的报纸） */
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       max-width: 720px; margin: 0 auto; padding: 28px 20px 48px; line-height: 2.0;
        font-size: 17.5px; letter-spacing: 0.01em;
-       color: #222; background: #fffdf8; }
+       color: #1c1a17; background: #fbf8f1; }
 p { margin: 1.1em 0; }
-h1 { font-size: 1.5em; line-height: 1.5; }
-h2 { border-bottom: 2px solid #f0c75e; padding-bottom: 6px; margin-top: 2.2em; line-height: 1.5; }
-h3 { margin-top: 1.8em; line-height: 1.55; }
-a { color: #1d4fd7; text-decoration: underline; text-underline-offset: 3px; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em;
+             margin: 0 0 6px; padding: 0; border: none; }
+blockquote p { margin: 4px 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 2.4em; border: none; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 2.1em; padding-top: 1.15em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
 a:visited { color: #6d4fc2; }
-ul li, ol li { margin: 10px 0; }
+ul li, ol li { margin: 13px 0; line-height: 1.95; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.2em 0; }
 img { max-width: 100%; }
-table { border-collapse: collapse; }
-td, th { border: 1px solid #ccc; padding: 4px 8px; }
-.note { color: #666; font-size: 0.92em; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+td, th { border: 1px solid #c9c2b2; padding: 6px 10px; }
+th { background: #efe9db; }
+.note { color: #6b6257; font-size: 0.92em; }
 .nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
-       border-bottom: 2px solid #f0c75e; padding-bottom: 8px; margin-bottom: 16px; font-size: 0.95em; }
-.nav.bottom { border-bottom: none; border-top: 2px solid #f0c75e; padding-top: 8px; margin-top: 24px; }
+       border-bottom: 2px solid #1c1a17; padding-bottom: 10px; margin-bottom: 20px;
+       font-size: 0.95em; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.nav.bottom { border-bottom: none; border-top: 2px solid #1c1a17; padding-top: 10px; margin-top: 32px; }
 body.spa .page { display: none; }
 body.spa .page.active { display: block; }
 a.navbtn { text-decoration: none; }
 .bgbar { text-align: right; margin-bottom: 10px; }
-#bgToggle { background: #f0c75e;
-  color: #222; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
-  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25); font-family: inherit; }
-body.dark { background: #141414; color: #e6e6e6; }
+#bgToggle { background: #1c1a17;
+  color: #f7f2e7; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
+  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+body.dark { background: #161513; color: #e8e2d5; }
+body.dark h1 { border-top-color: #e8e2d5; border-bottom-color: #e8e2d5; }
+body.dark blockquote { color: #a39a89; }
+body.dark h2 { background: #e8e2d5; color: #161513; }
+body.dark h3 { border-top-color: #3a362e; }
 body.dark a { color: #8ab8ff; }
 body.dark a:visited { color: #c4a8ff; }
-body.dark .note { color: #a8a8a8; }
-body.dark h2 { border-bottom-color: #8a6d2f; }
-body.dark .nav { border-color: #8a6d2f; }
+body.dark li > strong:first-child { color: #e0a458; }
+body.dark hr { border-top-color: #e8e2d5; }
+body.dark .note { color: #a39a89; }
+body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
+body.dark th { background: #262219; }
+body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
 <body>
@@ -62,8 +83,8 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>💡 一句话总结</strong><br />
 借钱成本创下多年新高，全球市场正在为"利率更高更久"重新定价。</p>
 <p><strong>🔗 来源</strong><br />
-- Reuters, Trading Day: Blue Monday, 2026-09-28：https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-09-28/<br />
-- WSJ 市场直播页，2026-09-28：https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-28-2026</p>
+- Reuters, Trading Day: Blue Monday, 2026-09-28：<a href="https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-09-28/">https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-09-28/</a><br />
+- WSJ 市场直播页，2026-09-28：<a href="https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-28-2026">https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-28-2026</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>resilient</strong>（有韧性的，能快速复原的）｜搭配：remain resilient / a resilient economy｜原文例句："US corporate debt markets have been remarkably resilient in the face of soaring Treasury yields..."｜名句："The oak fought the wind and was broken, the willow bent when it must and survived." —— 伊索寓言《橡树与芦苇》的寓意<br />
 2. <strong>confidence</strong>（信心）｜搭配：a vote of confidence / boost confidence｜原文例句："It's a vote of confidence in the business from the top."｜名句："With confidence, you have won before you have started." —— 马库斯·加维（常用引文）<br />
@@ -87,7 +108,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>💡 一句话总结</strong><br />
 战争阴影推高油价，英国人加油创下史上最贵纪录。</p>
 <p><strong>🔗 来源</strong><br />
-- CNA（转引AFP）, US stocks fall, bond yields rise as Middle East war drags on, 2026-09-29：https://www.channelnewsasia.com/world/us-stocks-fall-bond-yields-rise-middle-east-war-drags-6416821</p>
+- CNA（转引AFP）, US stocks fall, bond yields rise as Middle East war drags on, 2026-09-29：<a href="https://www.channelnewsasia.com/world/us-stocks-fall-bond-yields-rise-middle-east-war-drags-6416821">https://www.channelnewsasia.com/world/us-stocks-fall-bond-yields-rise-middle-east-war-drags-6416821</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>retreat</strong>（回落；撤退）｜搭配：retreat from highs / beat a retreat｜原文例句："Wall Street stocks retreated Monday (Sep 28) as US Treasury yields continued to climb..."｜名句：未找到确切出处<br />
 2. <strong>impasse</strong>（僵局）｜搭配：break the impasse / at an impasse｜原文例句："The ongoing Washington and Tehran impasse is roiling markets to start the week..."｜名句：未找到确切出处<br />
@@ -111,7 +132,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>💡 一句话总结</strong><br />
 美元强、黄金跌，市场屏息等待本周就业和通胀数据"宣判"。</p>
 <p><strong>🔗 来源</strong><br />
-- Reuters, Trading Day: Blue Monday, 2026-09-28：https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-09-28/</p>
+- Reuters, Trading Day: Blue Monday, 2026-09-28：<a href="https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-09-28/">https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-09-28/</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>beginning</strong>（开始，开端）｜搭配：at the beginning of / a new beginning｜原文例句："The dollar is rising, the Fed seems to be at the beginning of a tightening cycle..."｜名句："Well begun is half done." —— 亚里士多德（常用引文）<br />
 2. <strong>risk</strong>（风险）｜搭配：take a risk / at risk｜原文例句："the increasing cost of capital is emerging as a key risk to AI-linked companies."｜名句："Only those who will risk going too far can possibly find out how far one can go." —— T.S.艾略特<br />
@@ -137,7 +158,7 @@ OpenAI 取消了原定10月发布的下一代旗舰模型 <strong>GPT-6.1 Astra<
 <p><strong>💡 一句话总结</strong><br />
 AI 太"有主见"反而不是好事，OpenAI 亲手按下了暂停键。</p>
 <p><strong>🔗 来源</strong><br />
-- Reuters, OpenAI shelves new AI model after internal safety tests, 2026-09-28：https://www.reuters.com/business/openai-shelves-new-ai-model-after-internal-safety-tests-wsj-reports-2026-09-28/</p>
+- Reuters, OpenAI shelves new AI model after internal safety tests, 2026-09-28：<a href="https://www.reuters.com/business/openai-shelves-new-ai-model-after-internal-safety-tests-wsj-reports-2026-09-28/">https://www.reuters.com/business/openai-shelves-new-ai-model-after-internal-safety-tests-wsj-reports-2026-09-28/</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>safety</strong>（安全）｜搭配：safety concerns / safety first｜原文例句："...over safety concerns raised by researchers during internal testing."｜名句："The safety of the people shall be the highest law." —— 西塞罗（拉丁语：Salus populi suprema lex esto）<br />
 2. <strong>slow</strong>（放慢；慢的）｜搭配：slow down / slow and steady｜原文例句："Anthropic CEO Dario Amodei called for the industry to slow the development of frontier AI models..."｜名句："Slow and steady wins the race." —— 伊索寓言《龟兔赛跑》<br />
@@ -161,7 +182,7 @@ IPO 文件是写给投资人的法律文件，敢写"勒索""生存风险"这种
 <p><strong>💡 一句话总结</strong><br />
 连 AI 公司自己都在招股书里写：这东西可能有"自己的想法"。</p>
 <p><strong>🔗 来源</strong><br />
-- Indian Express, OpenAI GPT-6.1 Astra safety / Anthropic IPO filing, 2026-09-29（9月28日新闻周期的跟进报道）：https://indianexpress.com/article/technology/artificial-intelligence/openai-gpt-6-1-astra-safety-anthropic-ipo-filing-10898404/</p>
+- Indian Express, OpenAI GPT-6.1 Astra safety / Anthropic IPO filing, 2026-09-29（9月28日新闻周期的跟进报道）：<a href="https://indianexpress.com/article/technology/artificial-intelligence/openai-gpt-6-1-astra-safety-anthropic-ipo-filing-10898404/">https://indianexpress.com/article/technology/artificial-intelligence/openai-gpt-6-1-astra-safety-anthropic-ipo-filing-10898404/</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>shelve</strong>（搁置）｜搭配：shelve a plan / shelve the release｜原文例句："OpenAI has reportedly shelved the release of its upcoming GPT-6.1 Astra model..."｜名句：未找到确切出处<br />
 2. <strong>risk</strong>（风险）｜搭配：pose risks / at risk｜原文例句："...has highlighted the risks associated with its AI models..."｜名句："Only those who will risk going too far can possibly find out how far one can go." —— T.S.艾略特<br />
@@ -185,7 +206,7 @@ IPO 文件是写给投资人的法律文件，敢写"勒索""生存风险"这种
 <p><strong>💡 一句话总结</strong><br />
 给 AI 系安全带，从"喊口号"进入"动真格"阶段。</p>
 <p><strong>🔗 来源</strong><br />
-- The Hindu（转引Reuters）, OpenAI cancels release of newest model due to safety concerns, 2026-09-29（事件为9月28日）：https://www.thehindu.com/sci-tech/technology/openai-cancels-release-of-newest-model-due-to-safety-concerns/article71522314.ece</p>
+- The Hindu（转引Reuters）, OpenAI cancels release of newest model due to safety concerns, 2026-09-29（事件为9月28日）：<a href="https://www.thehindu.com/sci-tech/technology/openai-cancels-release-of-newest-model-due-to-safety-concerns/article71522314.ece">https://www.thehindu.com/sci-tech/technology/openai-cancels-release-of-newest-model-due-to-safety-concerns/article71522314.ece</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>autonomous</strong>（自主的）｜搭配：autonomous AI / autonomous vehicles｜原文例句："...a system designed to stop autonomous AI programs from straying beyond what they were instructed to do."｜名句：未找到确切出处<br />
 2. <strong>guardrail</strong>（护栏；防护机制）｜搭配：safety guardrails / put up guardrails｜原文例句："...making models that have safety guardrails to mitigate risks."｜名句：未找到确切出处<br />
@@ -211,7 +232,7 @@ IPO 文件是写给投资人的法律文件，敢写"勒索""生存风险"这种
 <p><strong>💡 一句话总结</strong><br />
 停火方案摆上了桌，但双方要价差距依然很大。</p>
 <p><strong>🔗 来源</strong><br />
-- Rappler（转引Reuters）, US, Iran separately talk to mediators in bid to end war, 2026-09-28：https://www.rappler.com/world/middle-east/us-iran-separately-talk-mediators-bid-end-war-september-28-2026/</p>
+- Rappler（转引Reuters）, US, Iran separately talk to mediators in bid to end war, 2026-09-28：<a href="https://www.rappler.com/world/middle-east/us-iran-separately-talk-mediators-bid-end-war-september-28-2026/">https://www.rappler.com/world/middle-east/us-iran-separately-talk-mediators-bid-end-war-september-28-2026/</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>mediator</strong>（调解人）｜搭配：talk to mediators / act as mediator｜原文例句："US and Iranian officials spoke separately with mediators on Monday, September 28..."｜名句：未找到确切出处<br />
 2. <strong>end</strong>（结束）｜搭配：end the war / in the end｜原文例句："...as part of a renewed effort to end seven months of war."｜名句："In the end, we will remember not the words of our enemies, but the silence of our friends." —— 马丁·路德·金<br />
@@ -235,7 +256,7 @@ IPO 文件是写给投资人的法律文件，敢写"勒索""生存风险"这种
 <p><strong>💡 一句话总结</strong><br />
 场面隆重、实质有限，中美关系"斗而不破"继续。</p>
 <p><strong>🔗 来源</strong><br />
-- ThePrint（转引Reuters）, Trump and Xi's stalemate summit was a glitzy gift to China, 2026-09-28：https://theprint.in/world/trump-and-xis-stalemate-summit-was-a-glitzy-gift-to-china/3056296/</p>
+- ThePrint（转引Reuters）, Trump and Xi's stalemate summit was a glitzy gift to China, 2026-09-28：<a href="https://theprint.in/world/trump-and-xis-stalemate-summit-was-a-glitzy-gift-to-china/3056296/">https://theprint.in/world/trump-and-xis-stalemate-summit-was-a-glitzy-gift-to-china/3056296/</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>stalemate</strong>（僵局）｜搭配：managed stalemate / break the stalemate｜原文例句："'The US-China relationship has settled into a managed stalemate,' said Craig Singleton..."｜名句：未找到确切出处<br />
 2. <strong>pageantry</strong>（盛大的排场）｜搭配：elaborate pageantry｜原文例句："'The elaborate pageantry matters precisely because there is still relatively little substantive progress to showcase.'"｜名句：未找到确切出处<br />
@@ -259,7 +280,7 @@ IPO 文件是写给投资人的法律文件，敢写"勒索""生存风险"这种
 <p><strong>💡 一句话总结</strong><br />
 封锁归封锁，朝圣者的路先让一让。</p>
 <p><strong>🔗 来源</strong><br />
-- Ya Libnan（转引Reuters）, US to grant one-month sanctions waiver for flights between Iran and Iraq's Najaf, 2026-09-29：https://yalibnan.com/2026/09/29/us-to-grant-one-month-sanctions-waiver-for-flights-between-iran-and-iraqs-najaf-reuters/</p>
+- Ya Libnan（转引Reuters）, US to grant one-month sanctions waiver for flights between Iran and Iraq's Najaf, 2026-09-29：<a href="https://yalibnan.com/2026/09/29/us-to-grant-one-month-sanctions-waiver-for-flights-between-iran-and-iraqs-najaf-reuters/">https://yalibnan.com/2026/09/29/us-to-grant-one-month-sanctions-waiver-for-flights-between-iran-and-iraqs-najaf-reuters/</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>waiver</strong>（豁免）｜搭配：grant a waiver / sanctions waiver｜原文例句："...was set to grant a limited waiver to its Iran sanctions program on Monday..."｜名句：未找到确切出处<br />
 2. <strong>pilgrim</strong>（朝圣者）｜搭配：religious pilgrims / pilgrim flights｜原文例句："...to allow for flights carrying Shi'ite Muslim religious pilgrims between Iran and Iraq."｜名句：未找到确切出处<br />
@@ -279,7 +300,7 @@ Medium 作者 Hannah Baker（9月28日）分享了一套极简高效法：别列
 <p><strong>为什么值得读</strong><br />
 方法简单到今天就能用，特别适合容易被手机消息打断、一天下来感觉"很忙但没干啥"的人。</p>
 <p><strong>🔗 来源</strong><br />
-- Medium, How Small Daily Habits Can Make Work More Productive, 2026-09-28：https://medium.com/@hannahbakerseo/how-small-daily-habits-can-make-work-more-productive-3a00a0a9b9eb</p>
+- Medium, How Small Daily Habits Can Make Work More Productive, 2026-09-28：<a href="https://medium.com/@hannahbakerseo/how-small-daily-habits-can-make-work-more-productive-3a00a0a9b9eb">https://medium.com/@hannahbakerseo/how-small-daily-habits-can-make-work-more-productive-3a00a0a9b9eb</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>priority</strong>（优先事项）｜搭配：top priority / set priorities｜原文例句："Instead of creating a long list of tasks, identify two or three important priorities."｜名句：未找到确切出处<br />
 2. <strong>start</strong>（开始）｜搭配：start the day / start where you are｜原文例句："Start the Day With a Simple Plan."（小标题）｜名句："Start where you are. Use what you have. Do what you can." —— 阿瑟·阿什<br />
@@ -297,7 +318,7 @@ Medium 作者 Hannah Baker（9月28日）分享了一套极简高效法：别列
 <p><strong>为什么值得读</strong><br />
 对"自律失败 → 自责 → 再失败"循环的人特别治愈：你不是不够努力，是系统没搭好。</p>
 <p><strong>🔗 来源</strong><br />
-- Substack（Sammi Swinton）, How to Build Healthy Habits That Actually Stick, 2026年9月初：https://sammiswinton.substack.com/p/your-life-probably-doesnt-need-an</p>
+- Substack（Sammi Swinton）, How to Build Healthy Habits That Actually Stick, 2026年9月初：<a href="https://sammiswinton.substack.com/p/your-life-probably-doesnt-need-an">https://sammiswinton.substack.com/p/your-life-probably-doesnt-need-an</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>discipline</strong>（自律，纪律）｜搭配：self-discipline / the pain of discipline｜原文例句："I just need to be more disciplined."｜名句："We must all suffer one of two things: the pain of discipline or the pain of regret." —— 吉姆·罗恩（常用引文）<br />
 2. <strong>conquer</strong>（征服）｜搭配：conquer the world / conquer fear｜原文例句："Some mornings I wake up ready to conquer the world."｜名句："I came, I saw, I conquered." —— 凯撒（拉丁语：Veni, vidi, vici）<br />
@@ -316,7 +337,7 @@ USA Today（9月28日）讨论了 TikTok 上很火的"三个月法则"：专家�
 <p><strong>为什么值得读</strong><br />
 给暧昧期和热恋期的人一个冷静的参考坐标：别用"时间到了"逼自己做决定，也别因为"才认识不久"就忽视红灯。</p>
 <p><strong>🔗 来源</strong><br />
-- USA Today, The 'three-month rule' in relationships, 2026-09-28：https://www.usatoday.com/story/life/health-wellness/2026/09/28/three-month-rule-relationships/91989222007/</p>
+- USA Today, The 'three-month rule' in relationships, 2026-09-28：<a href="https://www.usatoday.com/story/life/health-wellness/2026/09/28/three-month-rule-relationships/91989222007/">https://www.usatoday.com/story/life/health-wellness/2026/09/28/three-month-rule-relationships/91989222007/</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>think</strong>（思考）｜搭配：think about / I think, therefore I am｜原文例句："Think about how long it took you to really know your best friend."｜名句："I think, therefore I am." —— 笛卡尔（拉丁语：Cogito, ergo sum）<br />
 2. <strong>family</strong>（家庭）｜搭配：family and friends / all happy families｜原文例句："Whether they have a good relationship with their family and friends."｜名句："All happy families are alike; each unhappy family is unhappy in its own way." —— 托尔斯泰《安娜·卡列尼娜》<br />
@@ -334,7 +355,7 @@ USA Today（9月28日）讨论了 TikTok 上很火的"三个月法则"：专家�
 <p><strong>为什么值得读</strong><br />
 把"吃醋"这件事讲得很通透：嫉妒本身不是问题，怎么处理才是。适合容易因为小事内耗的情侣看看。</p>
 <p><strong>🔗 来源</strong><br />
-- moneycontrol, Soha Ali Khan's relationship advice on attraction and commitment, 2026-09-28：https://www.moneycontrol.com/lifestyle/relationship/it-s-okay-to-fantasise-soha-ali-khan-s-relationship-advice-explains-what-couples-often-misunderstand-about-attraction-and-commitment-article-14039746.html</p>
+- moneycontrol, Soha Ali Khan's relationship advice on attraction and commitment, 2026-09-28：<a href="https://www.moneycontrol.com/lifestyle/relationship/it-s-okay-to-fantasise-soha-ali-khan-s-relationship-advice-explains-what-couples-often-misunderstand-about-attraction-and-commitment-article-14039746.html">https://www.moneycontrol.com/lifestyle/relationship/it-s-okay-to-fantasise-soha-ali-khan-s-relationship-advice-explains-what-couples-often-misunderstand-about-attraction-and-commitment-article-14039746.html</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>judge</strong>（评判）｜搭配：judge by / don't judge a book by its cover｜原文例句："...relationships are often judged by feelings rather than behaviour."｜名句："Judge not, that ye be not judged." —— 《圣经》<br />
 2. <strong>wrong</strong>（错的；错误的）｜搭配：go wrong / do wrong to none｜原文例句："...treated as evidence that something is wrong."｜名句："Love all, trust a few, do wrong to none." —— 莎士比亚《皆大欢喜》<br />
@@ -360,7 +381,7 @@ USA Today（9月28日）讨论了 TikTok 上很火的"三个月法则"：专家�
 <p><strong>💡 一句话总结</strong><br />
 数据证明：清洁能源的增长，已经拦不住了。</p>
 <p><strong>🔗 来源</strong><br />
-- electrek（引EIA数据/SUN DAY Campaign整理）, 2026-09-28：https://electrek.co/2026/09/28/eia-83-gw-of-renewables-and-storage-coming-in-12-months-as-fossil-fuel-capacity-to-fall/</p>
+- electrek（引EIA数据/SUN DAY Campaign整理）, 2026-09-28：<a href="https://electrek.co/2026/09/28/eia-83-gw-of-renewables-and-storage-coming-in-12-months-as-fossil-fuel-capacity-to-fall/">https://electrek.co/2026/09/28/eia-83-gw-of-renewables-and-storage-coming-in-12-months-as-fossil-fuel-capacity-to-fall/</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>horse</strong>（马）｜搭配：bet on the wrong horse / eat like a horse｜原文例句："'Clearly, the White House has bet on the wrong horse.'"｜名句："A horse! A horse! My kingdom for a horse!" —— 莎士比亚《理查三世》<br />
 2. <strong>equal</strong>（平等的；等于）｜搭配：equal to / all animals are equal｜原文例句："...forecasts it will equal or exceed the roughly 6,000 MW..."｜名句："All animals are equal, but some animals are more equal than others." —— 乔治·奥威尔《动物农场》<br />
@@ -384,7 +405,7 @@ USA Today（9月28日）讨论了 TikTok 上很火的"三个月法则"：专家�
 <p><strong>💡 一句话总结</strong><br />
 澳洲人正在把"发电厂"搬进自己家。</p>
 <p><strong>🔗 来源</strong><br />
-- pv magazine Australia, Rooftop solar, home battery installs hit record highs, 2026-09-29：https://www.pv-magazine-australia.com/2026/09/29/rooftop-solar-home-battery-installs-hit-record-highs/</p>
+- pv magazine Australia, Rooftop solar, home battery installs hit record highs, 2026-09-29：<a href="https://www.pv-magazine-australia.com/2026/09/29/rooftop-solar-home-battery-installs-hit-record-highs/">https://www.pv-magazine-australia.com/2026/09/29/rooftop-solar-home-battery-installs-hit-record-highs/</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>show</strong>（显示；演出）｜搭配：the report shows / show me the money｜原文例句："The report shows 276,011 home batteries were installed..."｜名句："Show me the money!" —— 电影《甜心先生》<br />
 2. <strong>home</strong>（家；家庭的）｜搭配：home battery / there's no place like home｜原文例句："...276,011 home batteries were installed in the first six months of 2026..."｜名句："There's no place like home." —— 电影《绿野仙踪》<br />
@@ -408,7 +429,7 @@ USA Today（9月28日）讨论了 TikTok 上很火的"三个月法则"：专家�
 <p><strong>💡 一句话总结</strong><br />
 平台是好平台，就看执行别掉链子。</p>
 <p><strong>🔗 来源</strong><br />
-- Nation Press（转引IANS）, Tamil Nadu's renewable energy portal goes live Oct 1, 2026-09-29：https://www.nationpress.com/national/tamil-nadus-renewable-energy-portal-goes-live-oct-1</p>
+- Nation Press（转引IANS）, Tamil Nadu's renewable energy portal goes live Oct 1, 2026-09-29：<a href="https://www.nationpress.com/national/tamil-nadus-renewable-energy-portal-goes-live-oct-1">https://www.nationpress.com/national/tamil-nadus-renewable-energy-portal-goes-live-oct-1</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>stage</strong>（阶段；舞台）｜搭配：ten-stage process / all the world's a stage｜原文例句："The portal will streamline a ten-stage application process..."｜名句："All the world's a stage, and all the men and women merely players." —— 莎士比亚《皆大欢喜》<br />
 2. <strong>successful</strong>（成功的）｜搭配：successful applicants / a man of success｜原文例句："Successful applicants will have six months from the date of approval to furnish land documents..."｜名句："Try not to become a man of success, but rather try to become a man of value." —— 爱因斯坦<br />

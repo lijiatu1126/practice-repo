@@ -5,38 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>《麻薯日报》第25期 · 2026-10-23</title>
 <style>
-body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-       max-width: 720px; margin: 0 auto; padding: 24px 20px 40px; line-height: 2.0;
+/* 《麻薯日报》报纸版式（2026-10-23 Ricardo 要求：像真正的报纸） */
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       max-width: 720px; margin: 0 auto; padding: 28px 20px 48px; line-height: 2.0;
        font-size: 17.5px; letter-spacing: 0.01em;
-       color: #222; background: #fffdf8; }
+       color: #1c1a17; background: #fbf8f1; }
 p { margin: 1.1em 0; }
-h1 { font-size: 1.5em; line-height: 1.5; }
-h2 { border-bottom: 2px solid #f0c75e; padding-bottom: 6px; margin-top: 2.2em; line-height: 1.5; }
-h3 { margin-top: 1.8em; line-height: 1.55; }
-a { color: #1d4fd7; text-decoration: underline; text-underline-offset: 3px; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em;
+             margin: 0 0 6px; padding: 0; border: none; }
+blockquote p { margin: 4px 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 2.4em; border: none; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 2.1em; padding-top: 1.15em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
 a:visited { color: #6d4fc2; }
-ul li, ol li { margin: 10px 0; }
+ul li, ol li { margin: 13px 0; line-height: 1.95; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.2em 0; }
 img { max-width: 100%; }
-table { border-collapse: collapse; }
-td, th { border: 1px solid #ccc; padding: 4px 8px; }
-.note { color: #666; font-size: 0.92em; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+td, th { border: 1px solid #c9c2b2; padding: 6px 10px; }
+th { background: #efe9db; }
+.note { color: #6b6257; font-size: 0.92em; }
 .nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
-       border-bottom: 2px solid #f0c75e; padding-bottom: 8px; margin-bottom: 16px; font-size: 0.95em; }
-.nav.bottom { border-bottom: none; border-top: 2px solid #f0c75e; padding-top: 8px; margin-top: 24px; }
+       border-bottom: 2px solid #1c1a17; padding-bottom: 10px; margin-bottom: 20px;
+       font-size: 0.95em; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.nav.bottom { border-bottom: none; border-top: 2px solid #1c1a17; padding-top: 10px; margin-top: 32px; }
 body.spa .page { display: none; }
 body.spa .page.active { display: block; }
 a.navbtn { text-decoration: none; }
 .bgbar { text-align: right; margin-bottom: 10px; }
-#bgToggle { background: #f0c75e;
-  color: #222; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
-  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25); font-family: inherit; }
-body.dark { background: #141414; color: #e6e6e6; }
+#bgToggle { background: #1c1a17;
+  color: #f7f2e7; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
+  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+body.dark { background: #161513; color: #e8e2d5; }
+body.dark h1 { border-top-color: #e8e2d5; border-bottom-color: #e8e2d5; }
+body.dark blockquote { color: #a39a89; }
+body.dark h2 { background: #e8e2d5; color: #161513; }
+body.dark h3 { border-top-color: #3a362e; }
 body.dark a { color: #8ab8ff; }
 body.dark a:visited { color: #c4a8ff; }
-body.dark .note { color: #a8a8a8; }
-body.dark h2 { border-bottom-color: #8a6d2f; }
-body.dark .nav { border-color: #8a6d2f; }
+body.dark li > strong:first-child { color: #e0a458; }
+body.dark hr { border-top-color: #e8e2d5; }
+body.dark .note { color: #a39a89; }
+body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
+body.dark th { background: #262219; }
+body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
 <body>
@@ -68,9 +89,9 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>hedge</strong> 对冲（用稳妥资产抵消风险）；搭配：hedge against losses（对冲亏损）；例：Investors bought bonds to hedge against stock losses.（投资者买债券来对冲股票亏损。）💬 "Don't put all your eggs in one basket." —— English proverb（别把鸡蛋放在一个篮子里。——英语谚语）<br />
 - <strong>weigh on</strong> 拖累，压制；搭配：weigh on shares（拖累股价）；例：AI-spending worries weighed on tech shares.（对 AI 投入的担忧拖累了科技股。）💬 "An investment in knowledge pays the best interest." —— Benjamin Franklin（投资知识，回报最丰厚。——富兰克林）</p>
 <p>🔗 来源：<br />
-- Asian Stocks to Slide on Tech Rout, Bonds Rally: Markets Wrap（Bloomberg，经 swissinfo）—— https://www.swissinfo.ch/eng/asian-stocks-to-slide-on-tech-rout,-bonds-rally:-markets-wrap/92260391<br />
-- Bonds Reclaim Haven Status（Barron's）—— https://www.barrons.com/livecoverage/stock-market-news-today-102226/card/bonds-reclaim-haven-status-l7MgiotFi4QqRCe59Nu8<br />
-- AI Stocks Slide After Earnings Disappoint; French Bonds Tumble and Oil Tops $112（Dow Jones，经 Morningstar）—— https://www.morningstar.com/news/dow-jones/202610227189/ai-stocks-slide-after-earnings-disappoint-french-bonds-tumble-and-oil-tops-112-update</p>
+- Asian Stocks to Slide on Tech Rout, Bonds Rally: Markets Wrap（Bloomberg，经 swissinfo）—— <a href="https://www.swissinfo.ch/eng/asian-stocks-to-slide-on-tech-rout,-bonds-rally:-markets-wrap/92260391">https://www.swissinfo.ch/eng/asian-stocks-to-slide-on-tech-rout,-bonds-rally:-markets-wrap/92260391</a><br />
+- Bonds Reclaim Haven Status（Barron's）—— <a href="https://www.barrons.com/livecoverage/stock-market-news-today-102226/card/bonds-reclaim-haven-status-l7MgiotFi4QqRCe59Nu8">https://www.barrons.com/livecoverage/stock-market-news-today-102226/card/bonds-reclaim-haven-status-l7MgiotFi4QqRCe59Nu8</a><br />
+- AI Stocks Slide After Earnings Disappoint; French Bonds Tumble and Oil Tops $112（Dow Jones，经 Morningstar）—— <a href="https://www.morningstar.com/news/dow-jones/202610227189/ai-stocks-slide-after-earnings-disappoint-french-bonds-tumble-and-oil-tops-112-update">https://www.morningstar.com/news/dow-jones/202610227189/ai-stocks-slide-after-earnings-disappoint-french-bonds-tumble-and-oil-tops-112-update</a></p>
 <h3>2. 法国国债"爆雷"：收益率 24 年来首破 5%，法德利差创 2011 年欧债危机以来最宽</h3>
 <p>10 月 22 日，法国 10 年期国债收益率涨到 5.077%–5.085%，是 2002 年以来首次站上 5%；法国和德国国债的利差扩大到 164 个基点，为 2011 年欧债危机以来最宽。同一天欧元兑美元跌 0.3% 至 1.1198。导火索是法国的财政烂账：2025 年赤字占 GDP 的 5.1%、公共债务 115.7%（2026 年预计 118.1%），再加上街头骚乱蔓延、多地宵禁，家乐福因骚乱下调业绩预期、股价一天跌 14%，预算谈判也陷入僵局。评级机构 10 月 23 日（周五）还要复审法国主权评级。</p>
 <p>🔍 名词解释：<br />
@@ -90,8 +111,8 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>fiscal</strong> 财政的；搭配：fiscal discipline（财政纪律）；例：Markets doubt France's fiscal discipline.（市场怀疑法国的财政纪律。）💬 "Beware of little expenses; a small leak will sink a great ship." —— Benjamin Franklin（当心小额开支，小洞也能沉大船。——富兰克林）<br />
 - <strong>creditworthiness</strong> 偿还信用；搭配：question one's creditworthiness（质疑某人的偿还信用）；例：There are questions over France's creditworthiness.（对法国偿还信用存在质疑。）💬 "Trust takes years to build, seconds to break." —— English proverb（信任建立需多年，崩塌只一秒。——英语谚语）</p>
 <p>🔗 来源：<br />
-- French Government-Bond Yields Rise, Spread Widens as Treasury Yields Fall（Dow Jones，经 Morningstar）—— https://www.morningstar.com/news/dow-jones/202610222356/french-government-bond-yields-rise-spread-widens-as-treasury-yields-fall<br />
-- Euro Falls as French-German Bond Spread Reaches Its Widest Since 2011（Reuters，经 EconoTimes）—— https://www.econotimes.com/Euro-Falls-as-French-German-Bond-Spread-Reaches-Its-Widest-Since-2011-1760404</p>
+- French Government-Bond Yields Rise, Spread Widens as Treasury Yields Fall（Dow Jones，经 Morningstar）—— <a href="https://www.morningstar.com/news/dow-jones/202610222356/french-government-bond-yields-rise-spread-widens-as-treasury-yields-fall">https://www.morningstar.com/news/dow-jones/202610222356/french-government-bond-yields-rise-spread-widens-as-treasury-yields-fall</a><br />
+- Euro Falls as French-German Bond Spread Reaches Its Widest Since 2011（Reuters，经 EconoTimes）—— <a href="https://www.econotimes.com/Euro-Falls-as-French-German-Bond-Spread-Reaches-Its-Widest-Since-2011-1760404">https://www.econotimes.com/Euro-Falls-as-French-German-Bond-Spread-Reaches-Its-Widest-Since-2011-1760404</a></p>
 <h3>3. 油价飙升的导火索：胡塞袭击沙特油田和机场，美国下令外交人员撤离沙特</h3>
 <p>10 月 21–22 日，也门胡塞武装对沙特发动密集袭击：无人机袭击沙特阿美 Shaybah 油田（防空拦截的无人机残骸造成 2 死 2 伤）、袭击东部达曼法赫德国王国际机场（1 名沙特公民和 1 名印度公民死亡、8 人受伤）。沙特阿美罕见地疏散了达兰总部大楼、让员工远程办公。美国国务院 10 月 22 日下令驻沙特的"非紧急政府雇员及家属"撤离，并计划从约旦、科威特、卡塔尔、阿联酋等其他海湾国家也撤走外交官家属——这是 2 月底美以对伊朗开战以来最严重的一波跨境袭击。布伦特原油应声涨超 2.7%，突破每桶 111–113 美元，创五个月新高。</p>
 <p>🔍 名词解释：<br />
@@ -110,9 +131,9 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>flare up</strong> （冲突）爆发，加剧；搭配：violence flared up（暴力冲突加剧）；例：Violence flared up in the region.（地区暴力冲突加剧。）💬 "Great acts are made up of small deeds." —— Laozi（伟大由小事积累而成。——老子）<br />
 - <strong>drawdown</strong> 撤回，缩减；搭配：a drawdown of staff（人员撤回）；例：The US ordered a partial drawdown of staff.（美国下令局部撤回人员。）💬 "He who fights and runs away may live to fight another day." —— English proverb（留得青山在，不怕没柴烧。——英语谚语）</p>
 <p>🔗 来源：<br />
-- US orders diplomats to depart Saudi Arabia amid Houthi strikes（Reuters，经 BusinessWorld）—— https://bworldonline.com/world/2026/10/22/788601/us-orders-diplomats-to-depart-saudi-arabia-amid-houthi-strikes/<br />
-- U.S. Orders Diplomats to Depart Saudi Arabia Amid Houthi Strikes（Reuters，经 Haaretz）—— https://www.haaretz.com/middle-east-news/2026-10-22/ty-article/u-s-orders-diplomats-to-depart-saudi-arabia-amid-houthi-strikes/000001a1-6067-dc69-a1ff-75efd1b80000<br />
-- US Pulls Diplomats From Saudi as Houthi and Iran Tensions Worsen（Bloomberg，经 military.com）—— https://www.military.com/us-pulls-diplomats-from-saudi-as-houthi-and-iran-tensions-worsen</p>
+- US orders diplomats to depart Saudi Arabia amid Houthi strikes（Reuters，经 BusinessWorld）—— <a href="https://bworldonline.com/world/2026/10/22/788601/us-orders-diplomats-to-depart-saudi-arabia-amid-houthi-strikes/">https://bworldonline.com/world/2026/10/22/788601/us-orders-diplomats-to-depart-saudi-arabia-amid-houthi-strikes/</a><br />
+- U.S. Orders Diplomats to Depart Saudi Arabia Amid Houthi Strikes（Reuters，经 Haaretz）—— <a href="https://www.haaretz.com/middle-east-news/2026-10-22/ty-article/u-s-orders-diplomats-to-depart-saudi-arabia-amid-houthi-strikes/000001a1-6067-dc69-a1ff-75efd1b80000">https://www.haaretz.com/middle-east-news/2026-10-22/ty-article/u-s-orders-diplomats-to-depart-saudi-arabia-amid-houthi-strikes/000001a1-6067-dc69-a1ff-75efd1b80000</a><br />
+- US Pulls Diplomats From Saudi as Houthi and Iran Tensions Worsen（Bloomberg，经 military.com）—— <a href="https://www.military.com/us-pulls-diplomats-from-saudi-as-houthi-and-iran-tensions-worsen">https://www.military.com/us-pulls-diplomats-from-saudi-as-houthi-and-iran-tensions-worsen</a></p>
 <hr />
 <h2>二、AI 🤖</h2>
 <h3>1. Anthropic 发布 Claude Duet：基于 Opus 5.5 的"主动型" AI 助手 App</h3>
@@ -134,9 +155,9 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>misjudge</strong> 误判；搭配：misjudge urgency（误判紧急程度）；例：It may misjudge what is urgent.（它可能误判什么是紧急的。）💬 "To err is human." —— Alexander Pope（人非圣贤，孰能无过。——蒲柏）<br />
 - <strong>waitlist</strong> 候补名单；搭配：join the waitlist（加入候补名单）；例：US users can join the waitlist.（美国用户可加入候补名单。）💬 "Patience is a virtue." —— English proverb（耐心是一种美德。——英语谚语）</p>
 <p>🔗 来源：<br />
-- Anthropic unveils Claude Duet AI agent app —— https://www.reuters.com/technology/anthropic-unveils-claude-duet-ai-agent-app-2026-10-21/<br />
-- Anthropic Launches Claude Duet, a Proactive AI Agent（MacRumors）—— https://www.macrumors.com/2026/10/21/anthropic-claude-duet/<br />
-- Anthropic Launches Claude Duet: The Next-Gen AI Assistant for Professionals（ETCIO）—— https://cio.economictimes.indiatimes.com/news/artificial-intelligence/anthropic-unveils-claude-duet-ai-agent-app/135105380</p>
+- Anthropic unveils Claude Duet AI agent app —— <a href="https://www.reuters.com/technology/anthropic-unveils-claude-duet-ai-agent-app-2026-10-21/">https://www.reuters.com/technology/anthropic-unveils-claude-duet-ai-agent-app-2026-10-21/</a><br />
+- Anthropic Launches Claude Duet, a Proactive AI Agent（MacRumors）—— <a href="https://www.macrumors.com/2026/10/21/anthropic-claude-duet/">https://www.macrumors.com/2026/10/21/anthropic-claude-duet/</a><br />
+- Anthropic Launches Claude Duet: The Next-Gen AI Assistant for Professionals（ETCIO）—— <a href="https://cio.economictimes.indiatimes.com/news/artificial-intelligence/anthropic-unveils-claude-duet-ai-agent-app/135105380">https://cio.economictimes.indiatimes.com/news/artificial-intelligence/anthropic-unveils-claude-duet-ai-agent-app/135105380</a></p>
 <h3>2. OpenAI 和谷歌"世纪大和解"：GPT-6 系列模型登陆 Google Cloud</h3>
 <p>10 月 21 日，OpenAI 与 Google Cloud 官宣合作：OpenAI 的前沿模型（GPT-6 Astra、GPT-6.1 Sol、GPT-6 Luna）和 Codex 智能体工作流，将上架 Google Cloud 的"模型花园"（Model Garden），先以私有预览形式开放给部分企业客户，预计未来几周正式商用。要知道，OpenAI 背后是微软、谷歌背后是 Gemini，两家是 AI 领域最直接的死对头——这次"把对手的模型放进自家云店里卖"，相当于可口可乐进驻百事的自动售货机。谷歌也因此成为唯一一家同时提供三大闭源模型家族（Gemini、Claude、GPT）的超大规模云厂商。</p>
 <p>🔍 名词解释：<br />
@@ -155,9 +176,9 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>general availability</strong> 正式商用；搭配：reach general availability（进入正式商用）；例：General availability is expected in weeks.（预计几周内正式商用。）💬 "Good things come to those who wait." —— English proverb（好事多磨，耐心者得。——英语谚语）<br />
 - <strong>swap</strong> 切换，交换；搭配：swap models（切换模型）；例：Teams can swap models without lock-in.（团队可以无锁定地切换模型。）💬 "Change is the law of life." —— John F. Kennedy（变化是生活的法则。——肯尼迪）</p>
 <p>🔗 来源：<br />
-- Google Cloud brings OpenAI models to customers（Google Cloud 官方博客）—— https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers<br />
-- OpenAI to make its most advanced AI models available in Google Cloud（SiliconANGLE）—— https://siliconangle.com/2026/10/21/openai-to-make-its-most-advanced-ai-models-available-in-google-cloud/<br />
-- Google Cloud Adds OpenAI's GPT-Astra and GPT-6 Models to Model Garden（Unite.AI）—— https://www.unite.ai/google-cloud-adds-openais-gpt-astra-and-gpt-6-models-to-model-garden/</p>
+- Google Cloud brings OpenAI models to customers（Google Cloud 官方博客）—— <a href="https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers">https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers</a><br />
+- OpenAI to make its most advanced AI models available in Google Cloud（SiliconANGLE）—— <a href="https://siliconangle.com/2026/10/21/openai-to-make-its-most-advanced-ai-models-available-in-google-cloud/">https://siliconangle.com/2026/10/21/openai-to-make-its-most-advanced-ai-models-available-in-google-cloud/</a><br />
+- Google Cloud Adds OpenAI's GPT-Astra and GPT-6 Models to Model Garden（Unite.AI）—— <a href="https://www.unite.ai/google-cloud-adds-openais-gpt-astra-and-gpt-6-models-to-model-garden/">https://www.unite.ai/google-cloud-adds-openais-gpt-astra-and-gpt-6-models-to-model-garden/</a></p>
 <h3>3. IMF 和 OECD 联合警告：AI 可能把世界撕成"用得上"和"用不上"的两半</h3>
 <p>10 月 22 日，国际货币基金组织（IMF）和经合组织（OECD）的官员在路透社全球市场论坛上发出警告：AI 确实能推动增长（IMF 估算有效采用 AI 可让全球年增速提高 0.5 个百分点，OECD 估算成员国生产率年增 0.4%–1.2%），但红利可能只落在富国、大公司手里——穷国缺电力、缺网络、缺人才，中小企业和年轻人可能被甩下。IMF 估计全球约 40% 的岗位会被 AI 波及，年轻人尤其危险（AI 会吃掉新人"从打杂中学本事"的机会）。裁员潮已经在路上：巴克莱今年裁员约 5000 人（明确说用 AI 降本），eBay 传裁员 9%，高通也在全球"绩效优化"裁员。</p>
 <p>🔍 名词解释：<br />
@@ -176,7 +197,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>aggregate</strong> 总体的，合计的；搭配：aggregate data（总体数据）；例：Aggregate productivity data looks strong.（总体生产率数据看起来不错。）💬 "The whole is greater than the sum of its parts." —— Aristotle（整体大于部分之和。——亚里士多德）<br />
 - <strong>trajectory</strong> 轨迹，走向；搭配：the trajectory of AI gains（AI 收益的走向）；例：The trajectory of AI gains favors big firms.（AI 收益的走向偏向大公司。）💬 "Where there is a will, there is a way." —— English proverb（有志者事竟成。——英语谚语）</p>
 <p>🔗 来源：<br />
-- IMF, OECD warn AI could widen rich-poor country divide —— https://www.reuters.com/business/finance/imf-oecd-warn-ai-could-widen-rich-poor-country-divide-2026-10-22/</p>
+- IMF, OECD warn AI could widen rich-poor country divide —— <a href="https://www.reuters.com/business/finance/imf-oecd-warn-ai-could-widen-rich-poor-country-divide-2026-10-22/">https://www.reuters.com/business/finance/imf-oecd-warn-ai-could-widen-rich-poor-country-divide-2026-10-22/</a></p>
 <hr />
 <h2>三、国际事务 🌍</h2>
 <h3>1. 美国下令驻沙特外交人员撤离：中东战火烧向"世界油库"的心脏</h3>
@@ -197,9 +218,9 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>deter</strong> 威慑，阻止；搭配：deter further aggression（威慑进一步侵略）；例：The US hopes to deter further aggression.（美国希望威慑进一步的侵略。）💬 "Speak softly and carry a big stick." —— Theodore Roosevelt（说话温和，手持大棒。——罗斯福）<br />
 - <strong>alert</strong> 警报，预警；搭配：issue a security alert（发布安全预警）；例：The department issued a security alert.（国务院发布了安全预警。）💬 "Forewarned is forearmed." —— English proverb（预先警告就是预先武装。——英语谚语）</p>
 <p>🔗 来源：<br />
-- U.S. Orders Diplomats to Depart Saudi Arabia Amid Houthi Strikes（Reuters，经 Haaretz）—— https://www.haaretz.com/middle-east-news/2026-10-22/ty-article/u-s-orders-diplomats-to-depart-saudi-arabia-amid-houthi-strikes/000001a1-6067-dc69-a1ff-75efd1b80000<br />
-- US orders diplomats to depart Saudi Arabia amid Houthi strikes（Reuters，经 BusinessWorld）—— https://bworldonline.com/world/2026/10/22/788601/us-orders-diplomats-to-depart-saudi-arabia-amid-houthi-strikes/<br />
-- Gulf markets fall as fresh Houthi strikes on Saudi Arabia raise regional risk（Reuters）—— https://www.reuters.com/world/middle-east/gulf-markets-fall-fresh-houthi-strikes-saudi-arabia-raise-regional-risk-2026-10-22/</p>
+- U.S. Orders Diplomats to Depart Saudi Arabia Amid Houthi Strikes（Reuters，经 Haaretz）—— <a href="https://www.haaretz.com/middle-east-news/2026-10-22/ty-article/u-s-orders-diplomats-to-depart-saudi-arabia-amid-houthi-strikes/000001a1-6067-dc69-a1ff-75efd1b80000">https://www.haaretz.com/middle-east-news/2026-10-22/ty-article/u-s-orders-diplomats-to-depart-saudi-arabia-amid-houthi-strikes/000001a1-6067-dc69-a1ff-75efd1b80000</a><br />
+- US orders diplomats to depart Saudi Arabia amid Houthi strikes（Reuters，经 BusinessWorld）—— <a href="https://bworldonline.com/world/2026/10/22/788601/us-orders-diplomats-to-depart-saudi-arabia-amid-houthi-strikes/">https://bworldonline.com/world/2026/10/22/788601/us-orders-diplomats-to-depart-saudi-arabia-amid-houthi-strikes/</a><br />
+- Gulf markets fall as fresh Houthi strikes on Saudi Arabia raise regional risk（Reuters）—— <a href="https://www.reuters.com/world/middle-east/gulf-markets-fall-fresh-houthi-strikes-saudi-arabia-raise-regional-risk-2026-10-22/">https://www.reuters.com/world/middle-east/gulf-markets-fall-fresh-houthi-strikes-saudi-arabia-raise-regional-risk-2026-10-22/</a></p>
 <h3>2. IMF：美以对伊朗战争让中东、北非、巴基斯坦今年经济收缩 1.3%</h3>
 <p>10 月 22 日，IMF 在迪拜发布中东地区经济展望：受美以对伊朗战争冲击，今年中东、北非和巴基斯坦的整体经济产出将收缩 1.3%，原因是战争重创了能源生产、海运、旅游、贸易和市场信心；但 2027 年预计强劲反弹 6.6%。IMF 说冲击"巨大但不均衡"：产油国（能源生产和航运被打断）受伤最重，石油进口国反而显出韧性——靠侨汇、旅游和及时的民生补贴撑住了。IMF 的基准假设是冲突在 2027 年初平息、贸易逐步恢复，但也承认前景被"极高的不确定性"笼罩，最大风险是能源生产和贸易路线再受破坏、油价进一步冲高。</p>
 <p>🔍 名词解释：<br />
@@ -218,7 +239,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>forecast</strong> 预测；搭配：forecast a sharp drop（预测大幅下滑）；例：The IMF forecast a 1.3% contraction.（IMF 预测收缩 1.3%。）💬 "Prediction is very difficult, especially about the future." —— Niels Bohr（预测很难，尤其关于未来。——玻尔）<br />
 - <strong>cloud</strong> 遮蔽，使模糊；搭配：clouded by uncertainty（被不确定性笼罩）；例：The outlook is clouded by uncertainty.（前景被不确定性笼罩。）💬 "Every cloud has a silver lining." —— English proverb（乌云背后有银边。——英语谚语）</p>
 <p>🔗 来源：<br />
-- IMF sees 1.3% contraction in Middle East, North Africa and Pakistan in 2026 —— https://www.reuters.com/world/middle-east/imf-sees-13-contraction-middle-east-north-africa-pakistan-2026-2026-10-22/</p>
+- IMF sees 1.3% contraction in Middle East, North Africa and Pakistan in 2026 —— <a href="https://www.reuters.com/world/middle-east/imf-sees-13-contraction-middle-east-north-africa-pakistan-2026-2026-10-22/">https://www.reuters.com/world/middle-east/imf-sees-13-contraction-middle-east-north-africa-pakistan-2026-2026-10-22/</a></p>
 <h3>3. 苏伊士运河有望"复活"：多数集装箱船明年二季度前回归红海航线</h3>
 <p>10 月 22 日，全球货代巨头德迅（Kuehne+Nagel）CEO Stefan Paul 对路透社表示，多数集装箱班轮公司计划在 2027 年一季度末到二季度初恢复经苏伊士运河的亚欧航线，"船公司回归的意图很明确"。背景：2023 年 11 月起，也门胡塞武装在红海袭击商船，全球航运被迫绕道非洲好望角（亚欧航程多走 10–14 天）；今年 2 月美以对伊朗开战后，复航计划一度搁浅。目前马士基已恢复部分经苏伊士的航线。德迅还第三次上调了 2026 年盈利预期——货运量回暖是实在的生意。</p>
 <p>🔍 名词解释：<br />
@@ -236,7 +257,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>volatile</strong> 动荡的，不稳定的；搭配：geopolitics remained volatile（地缘政治依然动荡）；例：Geopolitics remained volatile.（地缘政治依然动荡。）💬 "Change is the only constant." —— Heraclitus（唯一不变的是变化。——赫拉克利特）<br />
 - <strong>dampen</strong> 削弱，浇冷水；搭配：dampen hopes（给希望浇冷水）；例：New attacks could dampen hopes of return.（新的袭击可能给复航希望浇冷水。）💬 "Don't cry over spilled milk." —— English proverb（覆水难收，别为打翻的牛奶哭泣。——英语谚语）</p>
 <p>🔗 来源：<br />
-- Kuehne+Nagel CEO expects most container lines back in Suez Canal by early Q2 —— https://www.reuters.com/world/middle-east/kuehnenagel-ceo-expects-most-container-lines-back-suez-canal-by-early-q2-2026-10-22/</p>
+- Kuehne+Nagel CEO expects most container lines back in Suez Canal by early Q2 —— <a href="https://www.reuters.com/world/middle-east/kuehnenagel-ceo-expects-most-container-lines-back-suez-canal-by-early-q2-2026-10-22/">https://www.reuters.com/world/middle-east/kuehnenagel-ceo-expects-most-container-lines-back-suez-canal-by-early-q2-2026-10-22/</a></p>
 <hr />
 <h2>四、个人成长 🌱</h2>
 <h3>1. 葛剑雄：青年学生不应过早依赖 AI 来替代自身思维锻炼</h3>
@@ -245,14 +266,14 @@ body.dark td, body.dark th { border-color: #444; }
 <p>🔍 名词解释：<br />
 - <strong>机械逻辑模拟</strong>：可以把 AI 想象成一台超级强大的"鹦鹉牌计算器"：它见过海量的文字，能算出"下一个词最可能是什么"，模仿得惟妙惟肖，但它并不"理解"自己在说什么。就像学生用计算器做算术，答案都对，但脑子里的算术能力会慢慢生锈。葛剑雄的意思是：思考这件事，大脑不用就会退化，跟肌肉一个道理。</p>
 <p>📌 一句话总结：AI 是拐杖，不是腿——年轻时先把自己的腿练结实，再谈借力。</p>
-<p>🔗 来源：北京日报客户端（2026-10-22 报道）—— https://news.bjd.com.cn/2026/10/22/12004600.shtml</p>
+<p>🔗 来源：北京日报客户端（2026-10-22 报道）—— <a href="https://news.bjd.com.cn/2026/10/22/12004600.shtml">https://news.bjd.com.cn/2026/10/22/12004600.shtml</a></p>
 <h3>2. "当 AI 也能'思考'时，我们如何认识世界？"——蔡志忠、冯时、曾毅跨界对谈</h3>
 <p>10 月 21 日，中国人民大学"科学、哲学与艺术：科技与人文协同之道"对话会第三期举行，漫画家蔡志忠、天文考古学家冯时、联合国 AI 高层顾问机构专家曾毅同台对谈。蔡志忠说"AI 能模仿笔触，但模仿不了修行；能组合线条，但组合不了顿悟"，"知识是脚下的土地，学知识是为了看见背后的规律"；曾毅以"司马光砸缸"为例，指出 AI 能完成标准化场景的解题，却没有"灵光一现的创造性思维时刻"；冯时强调"技术的能力并不能替代人的道德意识与价值判断"。</p>
 <p><strong>为什么值得关注</strong>：三位来自完全不同领域（漫画、考古、AI 治理）的人，在同一天给出了和葛剑雄呼应的答案：人和 AI 的分界线不在"知识多少"，而在"智慧"——也就是从知识里看出门道、做出价值判断的能力。对正在规划 AI 学习路线的 Ricardo 来说，这是很好的"学什么、怎么学"的定盘星：学知识，更要学判断。</p>
 <p>🔍 名词解释：<br />
 - <strong>智能 vs 智慧</strong>：可以把"智能"想象成冰箱里塞满了食材（知识储备丰富），"智慧"则是会做菜（知道怎么搭配、火候、调味，做出一桌好菜）。AI 现在是"食材多到爆炸但不会做菜"的超级冰箱，人要练的是做菜的手艺。</p>
 <p>📌 一句话总结：AI 负责装下知识，人负责长出智慧——别把冰箱当成厨师。</p>
-<p>🔗 来源：中新网经新浪财经（2026-10-22 报道）—— https://finance.sina.com.cn/roll/2026-10-22/doc-iniwcafi5924652.shtml</p>
+<p>🔗 来源：中新网经新浪财经（2026-10-22 报道）—— <a href="https://finance.sina.com.cn/roll/2026-10-22/doc-iniwcafi5924652.shtml">https://finance.sina.com.cn/roll/2026-10-22/doc-iniwcafi5924652.shtml</a></p>
 <h3>3. Sahil Bloom：提高工作效率、打破拖延的 7 个习惯</h3>
 <p>知名效率博主 Sahil Bloom 分享的 7 个习惯在近期持续热传：①"5 分钟规则"——不想开始时，告诉自己只干 5 分钟，跨过启动门槛大脑自会进入状态；②"先吞青蛙"——每天清晨先啃最难、最重要的任务；③"时间块规划"——把一天切成专注块和休息块，杜绝多任务切换；④优化数字环境——关通知、清桌面；⑤运用"帕金森定律"——给任务设紧迫的截止时间，逼自己抓核心；⑥"两分钟原则"——两分钟能做完的小事立刻做；⑦夜间复盘——睡前 3 分钟记录进展并定好明天的三件要事。</p>
 <p><strong>为什么值得关注</strong>：核心洞察很反常识——拖延多半不是意志力差，而是"启动摩擦力"太大。方法都极小、极具体，今晚就能用上：比如 Ricardo 的英语学习，打开单词本前先默念"只背 5 分钟"，往往背着背着就停不下来了。</p>
@@ -275,7 +296,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>compound</strong> 复利，复合增长；搭配：the power of compounding（复利的力量）；例：Small improvements compound over time.（微小的改进会随时间复利增长。）💬 "Compound interest is the eighth wonder of the world." —— attributed to Albert Einstein（复利是世界第八大奇迹。——据传为爱因斯坦所言）<br />
 - <strong>sustainable</strong> 可持续的；搭配：sustainable output（可持续的产出）；例：Sustainable high output needs a feedback loop.（可持续的高产出需要反馈机制。）💬 "We do not inherit the earth from our ancestors, we borrow it from our children." —— Native American proverb（我们不是从祖先那里继承了地球，而是从子孙那里借来的。——印第安谚语）<br />
 - <strong>linger</strong> 徘徊，拖延；搭配：let anxiety linger（任由焦虑蔓延）；例：Don't let anxiety linger all day.（别让焦虑蔓延一整天。）💬 "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment." —— Buddha（不要沉溺于过去，不要幻想未来，把心专注于当下。——佛陀）</p>
-<p>🔗 来源：藏书房译文（含英文原文 "7 Habits to Boost Productivity and Crush Procrastination"，近期热传）—— https://www.cangshufang.com/chengzhang/qcugtp.html</p>
+<p>🔗 来源：藏书房译文（含英文原文 "7 Habits to Boost Productivity and Crush Procrastination"，近期热传）—— <a href="https://www.cangshufang.com/chengzhang/qcugtp.html">https://www.cangshufang.com/chengzhang/qcugtp.html</a></p>
 <hr />
 <h2>五、爱情/关系 💕</h2>
 <h3>1. 武志红连发三篇长文控诉前女友李雪：最懂亲密关系的专家，吵成了"论敌"</h3>
@@ -284,14 +305,14 @@ body.dark td, body.dark th { border-color: #444; }
 <p>🔍 名词解释：<br />
 - <strong>NPD（自恋型人格障碍）</strong>：可以理解为一种"只能看见自己"的心理模式：就像一个人永远站在聚光灯下，觉得全世界都该围着自己转，听不进批评、共情不了别人。在亲密关系里，随手给对方贴"人格障碍"标签，本身就是一种攻击武器，标签一贴，对话就死了。</p>
 <p>📌 一句话总结：懂再多心理学，也代替不了一句"算了，放过彼此"。</p>
-<p>🔗 来源：中华网（2026-10-22 报道）—— https://news.china.com/socialgd/10000169/20261022/49809073.html</p>
+<p>🔗 来源：中华网（2026-10-22 报道）—— <a href="https://news.china.com/socialgd/10000169/20261022/49809073.html">https://news.china.com/socialgd/10000169/20261022/49809073.html</a></p>
 <h3>2. 对异性有强烈吸引力的人，不论男女，都有这 3 个共性</h3>
 <p>一篇 10 月 21 日发布的情感心理文章热传，总结心理学研究：长期吸引力不在脸和钱包，而在相处是否让人安心，共性有三——①情绪调节能力强：不拿亲近的人当情绪出口，矛盾时先讲事实（"你迟到了半小时，我等得委屈"）而不是定罪（"你根本不重视我"）；②内核独立：有自己的朋友、爱好和生活节奏，需要时求助但不把伴侣当安全感的唯一来源；③有边界感：不随意打探隐私、不强行管控，也敢平和地说"这话让我不舒服"。</p>
 <p><strong>为什么值得关注</strong>：文章引用了一项汇总 43 项亲密关系纵向研究的大规模分析：关系满意度更多取决于"人们如何体验这段关系"，而非双方的固定条件（颜值、收入）。对 Ricardo 很有用的一课是：把自己活成"站得稳、接得住、有分寸"的人，比琢磨怎么"抓住"谁重要得多。</p>
 <p>🔍 名词解释：<br />
 - <strong>安全型依恋</strong>：可以想象成手机的信号：安全型的人像信号满格的手机，伴侣在身边很好，不在身边也能正常运转，不会一没信号就恐慌；而不安全型的人像电量焦虑晚期，伴侣一回消息慢就开始脑补"他是不是不在意我了"。前者让人想靠近，后者让人想逃。</p>
 <p>📌 一句话总结：长期吸引力不是把人抓住，而是你站得稳、情绪接得住、相处有分寸。</p>
-<p>🔗 来源：腾讯新闻（2026-10-21）—— https://news.qq.com/rain/a/20261021A0384E00</p>
+<p>🔗 来源：腾讯新闻（2026-10-21）—— <a href="https://news.qq.com/rain/a/20261021A0384E00">https://news.qq.com/rain/a/20261021A0384E00</a></p>
 <h3>3. 心理学家 Mark Travers：情绪安全感强的人，每天做这 5 件小事</h3>
 <p>CNBC 官方 Threads 账号（@cnbc）在 10 月 21 日转发了心理学家 Mark Travers 的观点：情绪安全感不取决于从不吵架，而取决于伴侣如何处理冲突、独立、倦怠和怀疑。Travers 总结出情绪安全关系中人们每天会做、却最容易被忽视的 5 个习惯：有效处理冲突、给彼此留独立空间、主动对抗倦怠、共同面对怀疑、坚持每天的正向小互动。结论是：情绪安全感的培养"是一个持续的过程，而不是终点"。</p>
 <p><strong>为什么值得关注</strong>：把"安全感"从玄学变成了可执行的每日清单——重点不是制造浪漫大场面，而是"小而一致"的日常仪式。Travers 还打了个比方：每天 60 秒全神贯注的陪伴（不看手机），就是往感情的"情绪银行账户"里存钱。</p>
@@ -311,7 +332,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>flourish</strong> 繁盛，蓬勃发展；搭配：let love flourish（让爱繁盛）；例：Consistency lets love flourish.（持之以恒让爱繁盛。）💬 "Where flowers bloom, so does hope." —— Lady Bird Johnson（花开之处，希望亦生。——伯德·约翰逊夫人）<br />
 - <strong>inevitable</strong> 不可避免的；搭配：inevitable ups and downs（不可避免的起伏）；例：Every relationship has inevitable ups and downs.（每段关系都有不可避免的起伏。）💬 "Change is the only constant in life." —— Heraclitus（变化是人生中唯一不变的东西。——赫拉克利特）<br />
 - <strong>ebb and flow</strong> 潮起潮落，盛衰起伏；搭配：the ebb and flow of life（人生的潮起潮落）；例：Love flourishes through life's ebb and flow.（爱在人生的潮起潮落中繁盛。）💬 "This too shall pass." —— Persian proverb（这一切都会过去。——波斯谚语）</p>
-<p>🔗 来源：CNBC 官方 Threads（2026-10-21 转发）—— https://www.threads.com/@cnbc/post/DewkqfxkfiU；英文原文转述：https://www.indiavision.com/business/im-a-psychologist-who-studies-couples-people-in-emotionally-secure-relationships-do-5-things-every-daythat-most-neglect/600689/</p>
+<p>🔗 来源：CNBC 官方 Threads（2026-10-21 转发）—— <a href="https://www.threads.com/@cnbc/post/DewkqfxkfiU；英文原文转述：https://www.indiavision.com/business/im-a-psychologist-who-studies-couples-people-in-emotionally-secure-relationships-do-5-things-every-daythat-most-neglect/600689/">https://www.threads.com/@cnbc/post/DewkqfxkfiU；英文原文转述：https://www.indiavision.com/business/im-a-psychologist-who-studies-couples-people-in-emotionally-secure-relationships-do-5-things-every-daythat-most-neglect/600689/</a></p>
 <hr />
 <h2>六、绿色低碳能源 🌿</h2>
 <h3>1. 欧盟就加强碳市场"稳定储备"达成政治协议：配额缓冲上限从 4 亿提到 7 亿吨</h3>
@@ -333,14 +354,14 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>competitiveness</strong> 竞争力；搭配：Europe's competitiveness（欧洲竞争力）；例：The deal aims to strengthen Europe's competitiveness.（协议旨在增强欧洲竞争力。）💬 "The secret of getting ahead is getting started." —— Mark Twain（领先的秘诀，就是开始行动。——马克·吐温）<br />
 - <strong>modernisation</strong> 现代化；搭配：a wider modernisation（更广泛的现代化）；例：This is a first step towards wider modernisation.（这是迈向更广泛现代化的第一步。）💬 "The future depends on what you do today." —— Mahatma Gandhi（未来取决于你今天的所作所为。——甘地）<br />
 - <strong>endorsement</strong> 批准，背书；搭配：win endorsement（获得批准）；例：The deal must win endorsement from both institutions.（协议须经两大机构批准。）💬 "Actions speak louder than words." —— English proverb（行动胜于言辞。——英国谚语）</p>
-<p>🔗 来源：欧盟委员会官方声明（2026-10-22，经 European Sting 转述）—— https://europeansting.com/2026/10/22/commission-welcomes-political-agreement-on-rules-enhancing-stability-and-long-term-resilience-of-eu-carbon-market/</p>
+<p>🔗 来源：欧盟委员会官方声明（2026-10-22，经 European Sting 转述）—— <a href="https://europeansting.com/2026/10/22/commission-welcomes-political-agreement-on-rules-enhancing-stability-and-long-term-resilience-of-eu-carbon-market/">https://europeansting.com/2026/10/22/commission-welcomes-political-agreement-on-rules-enhancing-stability-and-long-term-resilience-of-eu-carbon-market/</a></p>
 <h3>2. 中国定下 2030 年工业碳目标：碳强度较 2025 年降 17% 以上</h3>
 <p>据 10 月 22 日报道，中国工信部于 10 月 21 日公开发布 2026–2030 年工业碳管控方案：到 2030 年，工业碳排放强度较 2025 年下降至少 17%，能源强度下降至少 10%；计划制定约 400 项产品碳足迹规则标准，建成约 500 家国家级零碳工厂和零碳算力设施，钢铁、化工、建材与光伏制造、算力设施是重点覆盖行业。"十五五"期间以强度控制为主，碳达峰后转向总量控制。</p>
 <p><strong>为什么值得关注</strong>：这是"十五五"开局之年工业绿色转型的总施工图，直接决定未来五年工厂怎么生产、产品怎么定价。500 家零碳工厂 + 400 项碳足迹标准意味着：以后买东西可能像看营养成分表一样看到"碳标签"，光伏、储能、节能设备行业将迎来实打实的需求。</p>
 <p>🔍 名词解释：<br />
 - <strong>碳强度</strong>：别跟"碳排放总量"搞混。碳强度 = 每创造 100 块钱产值排了多少碳。好比两个餐馆：A 家一天排 10 斤油烟、赚 1 万块；B 家排 8 斤、赚 2 万块——B 家的"油烟强度"更低，更绿色。目标就是让工业每赚 100 块的"碳代价"越来越小，而不是简单地让工厂关门。</p>
 <p>📌 一句话总结：未来五年工厂的 KPI 里，"每赚 100 块排多少碳"将和利润一样重要。</p>
-<p>🔗 来源：Asia Daily（2026-10-22 报道，信息源为工信部 10-21 公开发布）—— https://asiadaily.org/news/16192/</p>
+<p>🔗 来源：Asia Daily（2026-10-22 报道，信息源为工信部 10-21 公开发布）—— <a href="https://asiadaily.org/news/16192/">https://asiadaily.org/news/16192/</a></p>
 <h3>3. 美国 Gevo：光靠卖"碳"，2026 年预计进账超 5000 万美元</h3>
 <p>10 月 22 日，美国可再生柴油与可持续航空燃料（SAF）生产商 Gevo（纳斯达克代码 GEVO）发布业务更新：其"碳业务"（把燃料的低碳属性拿到合规与自愿碳市场上去卖）在 2026 年预计带来超 5000 万美元收入——其中约 2000 万来自出售此前囤积的加拿大清洁燃料法规（CFR）信用，另有约 3000 万来自现有产能的常规碳收益；而且这笔钱不依赖美国联邦 45Z 清洁燃料税收抵免。CEO 说："碳在市场上本身就有真实价值。"</p>
 <p><strong>为什么值得关注</strong>：这是"绿色转型真能赚钱"的一个硬案例——Gevo 卖的不只是燃料，还有燃料"很干净"这个属性本身。XCF Global（SAFX）同一天也宣布，靠各州低碳燃料标准（LCFS）信用，潜在年收入可达 2100 万美元。说明在美国，碳信用正在从"补贴品"变成"印钞机"，企业绿色转型的商业模式跑通了。</p>
@@ -359,7 +380,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>infrastructure</strong> 基础设施；搭配：existing infrastructure（现有基础设施）；例：The fuel drops into existing infrastructure.（该燃料可直接接入现有基础设施。）💬 "We shape our buildings; thereafter they shape us." —— Winston Churchill（我们塑造建筑，之后建筑塑造我们。——丘吉尔）<br />
 - <strong>prevailing</strong> 盛行的，现行的；搭配：prevailing prices（现行价格）；例：Based on prevailing credit pricing.（基于现行的信用价格。）💬 "Wherever you go, go with all your heart." —— Confucius（无论去往何处，都要全心全意。——孔子）<br />
 - <strong>stackable</strong> 可叠加的；搭配：stackable cash flows（可叠加的现金流）；例：The credits offer stackable cash flows.（这些信用带来可叠加的现金流。）💬 "Little strokes fell great oaks." —— English proverb（水滴石穿。——英语谚语）</p>
-<p>🔗 来源：GlobeNewswire 官方新闻稿（经 Morningstar，2026-10-22）—— https://www.morningstar.com/news/globe-newswire/9850989/gevo-provides-business-update-anticipates-carbon-business-to-deliver-over-50-million-of-revenue-in-2026</p>
+<p>🔗 来源：GlobeNewswire 官方新闻稿（经 Morningstar，2026-10-22）—— <a href="https://www.morningstar.com/news/globe-newswire/9850989/gevo-provides-business-update-anticipates-carbon-business-to-deliver-over-50-million-of-revenue-in-2026">https://www.morningstar.com/news/globe-newswire/9850989/gevo-provides-business-update-anticipates-carbon-business-to-deliver-over-50-million-of-revenue-in-2026</a></p>
 <hr />
 <h2>七、国内要闻 🇨🇳</h2>
 <h3>1. 纪念中国工农红军长征胜利 90 周年大会在京隆重举行，习近平发表重要讲话</h3>
@@ -368,32 +389,32 @@ body.dark td, body.dark th { border-color: #444; }
 <p>🔍 名词解释：<br />
 - <strong>长征</strong>：1934 年 10 月至 1936 年 10 月，红军为摆脱国民党军队围追堵截、北上抗日，纵横十余省、行程二万五千里的战略大转移。打个比方：就像一家公司被对手全面封杀，带着全部家当徒步穿越半个中国，边走边打，最后到达新根据地、东山再起。</p>
 <p>📌 一句话总结：90 年前的长征是"被逼出来的绝地求生"，今天官方把它讲成"新长征"的精神源头——记住苦难，是为了走好眼前的路。</p>
-<p>🔗 来源：新华社 —— https://www.dzwww.com/xinwen/guoneixinwen/202610/t20261022_18228827.htm</p>
+<p>🔗 来源：新华社 —— <a href="https://www.dzwww.com/xinwen/guoneixinwen/202610/t20261022_18228827.htm">https://www.dzwww.com/xinwen/guoneixinwen/202610/t20261022_18228827.htm</a></p>
 <h3>2. 商务部"十五五"发布会：消费是经济增长"第一拉动力"，全国退税商店超 1.8 万家</h3>
 <p>10 月 22 日下午，国新办举行"开局起步'十五五'"系列新闻发布会，商务部介绍"十五五"时期商务高质量发展情况。关键信息：党的十八大以来，最终消费支出对我国经济增长的年均贡献率达 55%，"消费是名副其实的第一拉动力"；2025 年社会消费品零售总额达 50.1 万亿元；全国退税商店已超 1.8 万家，较 2024 年底增长 4 倍；今年前 9 个月全行业对外直接投资达 1286.2 亿美元；服务零售额增速持续快于商品零售。</p>
 <p><strong>为什么值得关注</strong>：这是"十五五"（2026–2030）开局之年的政策定调会，等于官方给未来五年经济划了重点：增长主要靠大家花钱，尤其是花在文娱、旅游、演出、赛事这些"体验型"服务消费上。退税商店一年翻 4 倍，意味着外国人来中国旅游购物越来越方便；对外投资数据则说明"出海"仍是主旋律。</p>
 <p>🔍 名词解释：<br />
 - <strong>社会消费品零售总额</strong>：就是全国商场、超市、餐馆、网店一年卖出去的东西加起来有多少钱，可以理解成"全民一年剁手总额"，是衡量老百姓花钱意愿最直观的一个数字。50.1 万亿，大概就是"全国人民一年花掉 50 万亿"。</p>
 <p>📌 一句话总结：官方给"十五五"定了个调：以后经济增长主要靠大家花钱，尤其是花在旅游、演出、看比赛这些"体验"上。</p>
-<p>🔗 来源：凤凰网（转国新办发布会实录）—— https://finance.ifeng.com/c/8xQrjOhNLJN</p>
+<p>🔗 来源：凤凰网（转国新办发布会实录）—— <a href="https://finance.ifeng.com/c/8xQrjOhNLJN">https://finance.ifeng.com/c/8xQrjOhNLJN</a></p>
 <h3>3. 国家大科学装置 SHINE 在上海实现首次出光，向 2027 年底建成投用迈出关键一步</h3>
 <p>国家重大科技基础设施——硬 X 射线自由电子激光装置（简称 SHINE）建设取得突破性进展，成功实现自由电子激光首次出光（消息 10 月 21 日公布，22 日多家媒体跟进报道）。装置 2018 年 4 月在上海启动建设，由上海科技大学牵头，预计 2027 年底建成投用。建成后，它将与美国正在升级的 LCLS-II-HE 并列为全球仅有的两台同类型装置。</p>
 <p><strong>为什么值得关注</strong>：这是"国之重器"级别的大科学装置，相当于给科学家配了一台"超级显微镜＋超高速摄像机"：纳米级的空间分辨能力、飞秒级的时间分辨能力，能精准捕捉原子分子的快速动态过程，对生命科学、量子材料、未来能源等前沿研究意义重大，也标志着中国在高端科研装备上追平美国。</p>
 <p>🔍 名词解释：<br />
 - <strong>自由电子激光</strong>：一种特别亮的"光"。打个比方：普通 X 光机像手电筒，能照出骨头但看不清细节；自由电子激光像把无数手电筒的光拧成一束激光笔，亮上亿倍、快到能"定格"原子一眨眼（飞秒）的动作，科学家就能拍下分子跳舞的慢动作回放。</p>
 <p>📌 一句话总结：中国造出了世界上最亮的"手电筒"之一，以后看原子、看病毒、看新材料，都用得上它。</p>
-<p>🔗 来源：澎湃新闻 —— https://www.thepaper.cn/newsDetail_forward_34301008</p>
+<p>🔗 来源：澎湃新闻 —— <a href="https://www.thepaper.cn/newsDetail_forward_34301008">https://www.thepaper.cn/newsDetail_forward_34301008</a></p>
 <h3>4. 中国体操女团时隔 20 年再夺世锦赛冠军 🏆</h3>
 <p>北京时间 10 月 22 日，2026 年体操世锦赛在荷兰鹿特丹结束女子团体决赛的争夺，中国队以 165.764 分的成绩夺冠，这是中国队时隔 20 年再夺世锦赛女团冠军。</p>
 <p><strong>为什么值得关注</strong>：中国体操女队上一次拿世锦赛团体冠军还是 2006 年，整整 20 年。这 20 年里美国队长期统治，能打破垄断重新登顶，说明新一代队员成长起来了，低谷正在走出来，对后面的奥运周期是一针强心剂。</p>
 <p>🔍 名词解释：<br />
 - <strong>体操世锦赛</strong>：体操项目除奥运会之外最重要的世界大赛。女团比的是全队在跳马、高低杠、平衡木、自由操四个项目上的总分，就像班级比四科总分排名，考的是整体实力、不能偏科。</p>
 <p>📌 一句话总结：等了 20 年，中国体操姑娘们终于把世锦赛女团金牌拿回家了。</p>
-<p>🔗 来源：央视网《新闻联播》国内联播快讯 —— https://tv.cctv.com/2026/10/22/VIDEIUVYA2gTreeiGijvLXf1261022.shtml</p>
+<p>🔗 来源：央视网《新闻联播》国内联播快讯 —— <a href="https://tv.cctv.com/2026/10/22/VIDEIUVYA2gTreeiGijvLXf1261022.shtml">https://tv.cctv.com/2026/10/22/VIDEIUVYA2gTreeiGijvLXf1261022.shtml</a></p>
 <hr />
 <h2>八、GitHub 新技术 💻</h2>
 <h3>1. anthropics/knowledge-work-plugins —— Anthropic 官方开源的"岗位插件包"，让 Claude 变身各行专家</h3>
-<p><strong>仓库名与链接</strong>：anthropics/knowledge-work-plugins —— https://github.com/anthropics/knowledge-work-plugins</p>
+<p><strong>仓库名与链接</strong>：anthropics/knowledge-work-plugins —— <a href="https://github.com/anthropics/knowledge-work-plugins">https://github.com/anthropics/knowledge-work-plugins</a></p>
 <p><strong>它是做什么的（大白话）</strong>：这是 AI 公司 Anthropic 官方开源的一套"插件包"，专门给"坐办公室、靠脑力干活的人"用的。打个比方：Claude 本来是个什么都懂一点的万能助理，这套插件相当于给它发了 11 套"职业制服"——穿上销售那套，它就懂怎么查客户、准备电话提纲、写开发信；穿上财务那套，它就懂对账、做报表、盯关账；还有客服、法务、市场、人力、数据分析等。每套插件里装着该岗位的"工作手册"（skills，AI 会自动照着做）、"快捷指令"（slash commands，比如输入 <code>/sales:call-prep</code> 就自动帮你准备客户电话提纲）、"工具连接器"（connectors，能连上你公司的 Slack、Notion、Jira 等软件去拿数据）。而且全部是 Markdown 文本文件，不用写代码就能改，企业可以按自己公司的叫法和流程定制。</p>
 <p><strong>为什么最近火／值得关注</strong>：Anthropic 官方出品，约 3.2 万 stars，登上今日 GitHub Trending 第一名；Apache 2.0 协议完全开源免费。正赶上"AI 从聊天玩具变成打工神器"的风口——大家不再满足于问 AI 问题，而是想让 AI 直接替自己干完活。这套插件就是官方给出的"标准答案"：告诉 AI 你的岗位、你的工具、你的流程，它就能交付"成品级"的工作。</p>
 <p>🔍 技术名词大白话：<br />
@@ -414,9 +435,9 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>skill</strong> 技能，技巧；搭配：skill set（技能组合）；例：Skills fire automatically when relevant.（相关的技能会在需要时自动触发。）💬 "Skill to do comes of doing." —— Ralph Waldo Emerson（做事的本领，是在做事中练出来的。——爱默生）<br />
 - <strong>role</strong> 角色，职责；搭配：play a role（发挥作用）；例：The plugin turns Claude into a specialist for your role.（插件把 Claude 变成你岗位上的专家。）💬 "The role of a writer is not to say what we all can say, but what we are unable to say." —— Anaïs Nin（作家的职责不是说出我们都能说的话，而是说出我们说不出口的话。——阿娜伊斯·宁）<br />
 - <strong>tool</strong> 工具；搭配：a tool for（做……的工具）；例：Tell Claude which tools to pull data from.（告诉 Claude 该从哪些工具里拉数据。）💬 "A poor workman blames his tools." —— English proverb（手艺差的工匠总怪工具不好。——英语谚语）</p>
-<p>🔗 来源：GitHub 仓库页 —— https://github.com/anthropics/knowledge-work-plugins；GitHub Trending —— https://github.com/trending</p>
+<p>🔗 来源：GitHub 仓库页 —— <a href="https://github.com/anthropics/knowledge-work-plugins；GitHub">https://github.com/anthropics/knowledge-work-plugins；GitHub</a> Trending —— <a href="https://github.com/trending">https://github.com/trending</a></p>
 <h3>2. cloudflare/security-audit-skill —— Cloudflare 开源的"AI 安全审计员"，六阶段流程抓代码漏洞</h3>
-<p><strong>仓库名与链接</strong>：cloudflare/security-audit-skill —— https://github.com/cloudflare/security-audit-skill</p>
+<p><strong>仓库名与链接</strong>：cloudflare/security-audit-skill —— <a href="https://github.com/cloudflare/security-audit-skill">https://github.com/cloudflare/security-audit-skill</a></p>
 <p><strong>它是做什么的（大白话）</strong>：网络安全大厂 Cloudflare 开源的一个"AI 安全审计员"技能包。打个比方：你写完一个 App，心里没底有没有安全漏洞，请真人专家来查又贵又慢；这个技能包相当于给 AI 发了一本《安全审计标准作业流程》＋一套"找茬清单"——AI 先像侦察兵一样画出你代码的"地图"（哪里是入口、哪里存密码、哪里连外网），再派出一队"猎人"AI 分头找漏洞；每找到一个疑似漏洞，就换一个没参与搜寻的"质检员"AI 来挑刺、试图证伪；最后只把证据确凿的写进报告，拿不准的标成"待验证"、绝不瞎报。整个过程分 6 个阶段，全程留痕、多跑几轮还能互相补漏。</p>
 <p><strong>为什么最近火／值得关注</strong>：Cloudflare 官方出品、MIT 协议完全免费（约 4 万 stars，今日 Trending 前三）。而且它不是纸上谈兵——Cloudflare 自己就是靠这套方法起家：从 450 行指令开始，6 周内发展成持续扫描公司 128 个代码仓库的"漏洞发现流水线"，现在把"起点版本"开源了。正赶上"AI 写代码越来越普遍、谁来保证 AI 写的代码没漏洞"的大焦虑，等于白送全世界一个不知疲倦、还会自我挑刺的 AI 安全审计团队。</p>
 <p>🔍 技术名词大白话：<br />
@@ -437,7 +458,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>gap</strong> 缺口，差距；搭配：bridge the gap（弥合差距）；例：The skill uses prior findings to target gaps.（这个技能利用之前的发现去补覆盖的缺口。）💬 "Mind the gap." —— 伦敦地铁著名提示语（注意站台与车厢之间的间隙。）<br />
 - <strong>run</strong> 运行；搭配：in the long run（从长远看）；例：Multiple runs improve the coverage.（多跑几轮能提高覆盖面。）💬 "Run, Forrest, run!" —— 《Forrest Gump 阿甘正传》（跑，阿甘，跑！）<br />
 - <strong>finding</strong> 发现，调查结果；搭配：key findings（主要发现）；例：Findings are written to findings.json for review.（调查结果会被写入 findings.json 文件供复查。）💬 "Seek, and ye shall find." —— 《圣经·马太福音》（寻找，就必寻见。）</p>
-<p>🔗 来源：GitHub 仓库页 —— https://github.com/cloudflare/security-audit-skill；GitHub Trending —— https://github.com/trending</p>
+<p>🔗 来源：GitHub 仓库页 —— <a href="https://github.com/cloudflare/security-audit-skill；GitHub">https://github.com/cloudflare/security-audit-skill；GitHub</a> Trending —— <a href="https://github.com/trending">https://github.com/trending</a></p>
 <hr />
 <p>🌙 本期就是这样啦，Ricardo！周五加油，周末好好放松一下～我是芋泥麻薯，明天早上 8 点《麻薯日报》第 26 期准时见💜</p>
 <div class="nav bottom"><a href="issue-024.html">⬅ 上一期（第24期）</a><a href="index.html">📚 回到目录</a><span></span></div>

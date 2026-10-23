@@ -5,38 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>《麻薯日报》第23期 · 2026-10-19</title>
 <style>
-body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-       max-width: 720px; margin: 0 auto; padding: 24px 20px 40px; line-height: 2.0;
+/* 《麻薯日报》报纸版式（2026-10-23 Ricardo 要求：像真正的报纸） */
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       max-width: 720px; margin: 0 auto; padding: 28px 20px 48px; line-height: 2.0;
        font-size: 17.5px; letter-spacing: 0.01em;
-       color: #222; background: #fffdf8; }
+       color: #1c1a17; background: #fbf8f1; }
 p { margin: 1.1em 0; }
-h1 { font-size: 1.5em; line-height: 1.5; }
-h2 { border-bottom: 2px solid #f0c75e; padding-bottom: 6px; margin-top: 2.2em; line-height: 1.5; }
-h3 { margin-top: 1.8em; line-height: 1.55; }
-a { color: #1d4fd7; text-decoration: underline; text-underline-offset: 3px; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em;
+             margin: 0 0 6px; padding: 0; border: none; }
+blockquote p { margin: 4px 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 2.4em; border: none; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 2.1em; padding-top: 1.15em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
 a:visited { color: #6d4fc2; }
-ul li, ol li { margin: 10px 0; }
+ul li, ol li { margin: 13px 0; line-height: 1.95; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.2em 0; }
 img { max-width: 100%; }
-table { border-collapse: collapse; }
-td, th { border: 1px solid #ccc; padding: 4px 8px; }
-.note { color: #666; font-size: 0.92em; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+td, th { border: 1px solid #c9c2b2; padding: 6px 10px; }
+th { background: #efe9db; }
+.note { color: #6b6257; font-size: 0.92em; }
 .nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
-       border-bottom: 2px solid #f0c75e; padding-bottom: 8px; margin-bottom: 16px; font-size: 0.95em; }
-.nav.bottom { border-bottom: none; border-top: 2px solid #f0c75e; padding-top: 8px; margin-top: 24px; }
+       border-bottom: 2px solid #1c1a17; padding-bottom: 10px; margin-bottom: 20px;
+       font-size: 0.95em; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.nav.bottom { border-bottom: none; border-top: 2px solid #1c1a17; padding-top: 10px; margin-top: 32px; }
 body.spa .page { display: none; }
 body.spa .page.active { display: block; }
 a.navbtn { text-decoration: none; }
 .bgbar { text-align: right; margin-bottom: 10px; }
-#bgToggle { background: #f0c75e;
-  color: #222; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
-  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25); font-family: inherit; }
-body.dark { background: #141414; color: #e6e6e6; }
+#bgToggle { background: #1c1a17;
+  color: #f7f2e7; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
+  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+body.dark { background: #161513; color: #e8e2d5; }
+body.dark h1 { border-top-color: #e8e2d5; border-bottom-color: #e8e2d5; }
+body.dark blockquote { color: #a39a89; }
+body.dark h2 { background: #e8e2d5; color: #161513; }
+body.dark h3 { border-top-color: #3a362e; }
 body.dark a { color: #8ab8ff; }
 body.dark a:visited { color: #c4a8ff; }
-body.dark .note { color: #a8a8a8; }
-body.dark h2 { border-bottom-color: #8a6d2f; }
-body.dark .nav { border-color: #8a6d2f; }
+body.dark li > strong:first-child { color: #e0a458; }
+body.dark hr { border-top-color: #e8e2d5; }
+body.dark .note { color: #a39a89; }
+body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
+body.dark th { background: #262219; }
+body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
 <body>
@@ -69,8 +90,8 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>skew</strong> 使偏向；搭配：skewed to the upside（偏向上行）；例：Officials said risks were skewed to the upside.（官员称风险偏向上行。）💬 "It was the best of times, it was the worst of times." —— Charles Dickens（这是最好的时代，也是最坏的时代。）<br />
 - <strong>benchmark</strong> 基准；搭配：benchmark rate（基准利率）；例：The Fed raised its benchmark rate in September.（美联储 9 月上调了基准利率。）💬 "Be a yardstick of quality." —— Steve Jobs（做质量的标尺。）</p>
 <p>🔗 来源：<br />
-- Fed Chair Warsh Avoids October Rate Signal at IMF Meetings —— https://kurums.com/fed-chair-warsh-imf-bangkok-rate-signal-notes-for-finance-october-2026/?v=0b3b97fa6688<br />
-- CareEdge Global: US Fed likely to hold rates in October —— https://www.newkerala.com/news/a/us-fed-likely-hold-rates-october-hike-25-484.htm</p>
+- Fed Chair Warsh Avoids October Rate Signal at IMF Meetings —— <a href="https://kurums.com/fed-chair-warsh-imf-bangkok-rate-signal-notes-for-finance-october-2026/?v=0b3b97fa6688">https://kurums.com/fed-chair-warsh-imf-bangkok-rate-signal-notes-for-finance-october-2026/?v=0b3b97fa6688</a><br />
+- CareEdge Global: US Fed likely to hold rates in October —— <a href="https://www.newkerala.com/news/a/us-fed-likely-hold-rates-october-hike-25-484.htm">https://www.newkerala.com/news/a/us-fed-likely-hold-rates-october-hike-25-484.htm</a></p>
 <h3>2. 美股坐"过山车"：月初历史新高，上周科技股大跌</h3>
 <p>10 月 6 日标普 500 收于 7818.93 点，史上首次站上 7800 点，纳斯达克也连创纪录。但上周画风突变：10 月 16 日纳指大跌 2.15%，"科技七巨头"普跌，费城半导体指数连跌 8 天、追平 2006 年以来最长连跌纪录。与此同时，10 年期美债收益率一度冲到 5.36%，创 2002 年以来最高；9 月通胀 3.7% 超预期，布伦特原油涨到 106 美元一桶。股票在涨、债券和油价却在"报警"，两边总有一边是错的。</p>
 <p>🔍 名词解释：<br />
@@ -90,8 +111,8 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>volatility</strong> 波动；搭配：market volatility（市场波动）；例：Volatility is expected to stay high into earnings season.（波动预计将持续到财报季。）💬 "The only constant in life is change." —— Heraclitus（世间唯一不变的就是变化。）<br />
 - <strong>amid</strong> 在……之中；搭配：amid tensions（在紧张局势中）；例：Stocks fell amid rising bond yields.（在债券收益率攀升之际股市下跌。）💬 "In the midst of chaos, there is also opportunity." —— Sun Tzu（乱世之中，亦有机遇。）</p>
 <p>🔗 来源：<br />
-- BNP Paribas AM: Fed signals further rate increase; US stocks hit record high —— https://www.bnpparibas-am.com/en/front-of-mind/take-two-fed-signals-further-rate-increase-us-stocks-hit-record-high/<br />
-- 新浪财经：影响一周市场的十大消息 —— https://finance.sina.com.cn/jjxw/2026-10-18/doc-inivrvpp6574336.shtml</p>
+- BNP Paribas AM: Fed signals further rate increase; US stocks hit record high —— <a href="https://www.bnpparibas-am.com/en/front-of-mind/take-two-fed-signals-further-rate-increase-us-stocks-hit-record-high/">https://www.bnpparibas-am.com/en/front-of-mind/take-two-fed-signals-further-rate-increase-us-stocks-hit-record-high/</a><br />
+- 新浪财经：影响一周市场的十大消息 —— <a href="https://finance.sina.com.cn/jjxw/2026-10-18/doc-inivrvpp6574336.shtml">https://finance.sina.com.cn/jjxw/2026-10-18/doc-inivrvpp6574336.shtml</a></p>
 <h3>3. Bain 警告：AI 基建一年要烧 1.5 万亿美元，得有 6 万亿收入来买单</h3>
 <p>咨询公司 Bain 出了份报告泼冷水：到 2031 年，全球每年在 AI 基础设施（数据中心、芯片、电力）上的 spending 可能达到 1.5 万亿美元。如果基建投入占行业收入的 25% 左右才算健康，那意味着 AI 行业每年得做出将近 6 万亿美元的收入才撑得住——光靠现在已有的办公软件、聊天机器人那点效率提升，远远不够，得长出全新的赚钱市场才行。另一边，华尔街自己倒是赚得盆满钵满：今年上半年利润 459 亿美元，同比涨 51%。</p>
 <p>🔍 名词解释：<br />
@@ -110,7 +131,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>revenue</strong> 营收；搭配：annual revenue（年营收）；例：The AI market would need $6 trillion in annual revenue.（AI 市场需要 6 万亿美元年营收。）💬 "Money doesn't grow on trees." —— 英语谚语（钱不是树上长出来的。）<br />
 - <strong>unprecedented</strong> 空前的；搭配：unprecedented scale（空前规模）；例：The buildout is happening at an unprecedented pace.（这轮建设以空前的速度推进。）💬 "Never in the field of human conflict was so much owed by so many to so few." —— Winston Churchill（在人类战争史上，从未有如此多的人亏欠如此少的人这么多。）</p>
 <p>🔗 来源：<br />
-- BNP Paribas AM: Take Two —— https://www.bnpparibas-am.com/en/front-of-mind/take-two-fed-signals-further-rate-increase-us-stocks-hit-record-high/</p>
+- BNP Paribas AM: Take Two —— <a href="https://www.bnpparibas-am.com/en/front-of-mind/take-two-fed-signals-further-rate-increase-us-stocks-hit-record-high/">https://www.bnpparibas-am.com/en/front-of-mind/take-two-fed-signals-further-rate-increase-us-stocks-hit-record-high/</a></p>
 <hr />
 <h2>二、AI 🤖</h2>
 <h3>1. 谷歌放大招：Gemini 4 Argon 全球上线，价格只有对手五分之一</h3>
@@ -132,7 +153,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>efficiency</strong> 效率；搭配：improve efficiency（提升效率）；例：The model improved computing efficiency internally.（该模型在内部提升了计算效率。）💬 "Genius is one percent inspiration and ninety-nine percent perspiration." —— Thomas Edison（天才是百分之一的灵感加百分之九十九的汗水。）<br />
 - <strong>accelerate</strong> 加速；搭配：accelerate research（加速科研）；例：It helped accelerate scientific computing.（它帮助加速了科学计算。）💬 "The future depends on what you do today." —— Mahatma Gandhi（未来取决于你今天做了什么。）</p>
 <p>🔗 来源：<br />
-- Reuters: Google launches flagship AI model Gemini 4 Argon —— https://www.reuters.com/business/google-launches-flagship-ai-model-gemini-4-argon-developers-businesses-2026-10-13/</p>
+- Reuters: Google launches flagship AI model Gemini 4 Argon —— <a href="https://www.reuters.com/business/google-launches-flagship-ai-model-gemini-4-argon-developers-businesses-2026-10-13/">https://www.reuters.com/business/google-launches-flagship-ai-model-gemini-4-argon-developers-businesses-2026-10-13/</a></p>
 <h3>2. 传 Anthropic 下周发 Claude Fable 5.5，合作伙伴已在内测</h3>
 <p>X 上这两天传得沸沸扬扬：Anthropic 的下一代顶级模型 Claude Fable 5.5 可能下周发布。爆料者称合作伙伴已经拿到内测权限；还有人发现 Fable 5.5 短暂出现在微软 Azure 的模型目录里，代号"claude-onigiri-eap"（饭团🍙）也曾在评测网站 Artificial Analysis 上闪现又被撤下。Anthropic 官方尚未确认。与此同时，OpenAI 9 月 28 日曾表示 GPT-6.1 Astra"没达到安全门槛"暂不发布——巨头们一边狂奔，一边开始被安全刹车拽一下。</p>
 <p>🔍 名词解释：<br />
@@ -151,7 +172,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>hint</strong> 暗示；搭配：drop a hint（透露口风）；例：The listing hinted at three upcoming releases.（这份清单暗示了三款即将发布的产品。）💬 "The quieter you become, the more you can hear." —— Ram Dass（越安静，听得越清。）<br />
 - <strong>withhold</strong> 扣住，不发布；搭配：withhold release（暂不发布）；例：OpenAI withheld GPT-6.1 over safety concerns.（OpenAI 出于安全考虑暂扣了 GPT-6.1。）💬 "Knowledge is power." —— Francis Bacon（知识就是力量。）</p>
 <p>🔗 来源：<br />
-- AI News Daily: Claude Fable 5.5 rumored for next week —— https://ailetter.ai.kr/en/d/2026-10-18/8</p>
+- AI News Daily: Claude Fable 5.5 rumored for next week —— <a href="https://ailetter.ai.kr/en/d/2026-10-18/8">https://ailetter.ai.kr/en/d/2026-10-18/8</a></p>
 <hr />
 <h2>三、国际事务 🌍</h2>
 <h3>1. 乌克兰无人机大规模袭击圣彼得堡：油库起火，1 死 15 伤</h3>
@@ -172,7 +193,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>barrage</strong> 齐射，密集轰击；搭配：a barrage of drones（无人机群的密集袭击）；例：A barrage of drones hit the region overnight.（一夜间密集的无人机袭击了该地区。）💬 "Cry 'Havoc!', and let slip the dogs of war." —— William Shakespeare（喊出"杀无赦"，放出战争之犬！）<br />
 - <strong>defiant</strong> 桀骜不驯的；搭配：remain defiant（依然强硬）；例：Both sides remained defiant after the strikes.（袭击后双方依然强硬。）💬 "I have not yet begun to fight." —— John Paul Jones（我还没开始战斗呢！）</p>
 <p>🔗 来源：<br />
-- Reuters: One killed, 15 injured in Ukrainian drone attack on St Petersburg —— https://www.reuters.com/world/europe/one-killed-15-injured-ukrainian-drone-attack-st-petersburg-leningrad-region-2026-10-18/</p>
+- Reuters: One killed, 15 injured in Ukrainian drone attack on St Petersburg —— <a href="https://www.reuters.com/world/europe/one-killed-15-injured-ukrainian-drone-attack-st-petersburg-leningrad-region-2026-10-18/">https://www.reuters.com/world/europe/one-killed-15-injured-ukrainian-drone-attack-st-petersburg-leningrad-region-2026-10-18/</a></p>
 <h3>2. 特朗普骂乌克兰炸俄炼油厂是"耻辱"，还怪它推高了美国油价</h3>
 <p>路透社另一篇报道：俄罗斯国营电视台罕见地公开播放了梁赞炼油厂（俄最大炼油厂之一）遇袭后的画面——开战以来头一回，以前都藏着掖着。特朗普则在采访中开骂，称乌克兰恢复袭击俄炼油厂是"disgrace（耻辱）"、"必须立刻停下"，还指责正是这些袭击推高了全球油价——美国柴油价格已创历史新高，而他 11 月 3 日就要面临中期选举，油价是选民最敏感的神经。布伦特原油一度冲破 102 美元。</p>
 <p>🔍 名词解释：<br />
@@ -191,7 +212,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>curb</strong> 控制，遏制；搭配：curb prices（控制价格）；例：Washington is scrambling to curb fuel costs.（华盛顿正手忙脚乱地控制油价。）💬 "With great power comes great responsibility." —— 《Spider-Man》（能力越大，责任越大。）<br />
 - <strong>spike</strong> 急剧上升；搭配：price spike（价格飙升）；例：A price spike followed the refinery attacks.（炼油厂遇袭后油价飙升。）💬 "What goes up must come down." —— 英语谚语（升起的，终会落下。）</p>
 <p>🔗 来源：<br />
-- Reuters: Russia talks up refinery attack, Trump blames Ukraine for expensive fuel —— https://www.reuters.com/business/energy/russia-talks-up-refinery-attack-trump-blames-ukraine-expensive-fuel-2026-10-16/</p>
+- Reuters: Russia talks up refinery attack, Trump blames Ukraine for expensive fuel —— <a href="https://www.reuters.com/business/energy/russia-talks-up-refinery-attack-trump-blames-ukraine-expensive-fuel-2026-10-16/">https://www.reuters.com/business/energy/russia-talks-up-refinery-attack-trump-blames-ukraine-expensive-fuel-2026-10-16/</a></p>
 <h3>3. 欧盟再给乌克兰拨 450 亿欧元，冯德莱恩警告俄罗斯"数字铁幕"</h3>
 <p>欧盟委员会主席冯德莱恩发表讲话：欧盟正在向乌克兰拨付 450 亿欧元贷款，其中三分之二用于国防，包括 60 亿欧元的无人机计划；同时欧盟第 20 轮对俄制裁正在路上。她说制裁已对俄经济产生"bite（咬痛）"的效果：通胀走高、利率飙升、普通俄罗斯人承压；还批评克里姆林宫限制互联网是"数字铁幕"。她同时警告，欧洲化石燃料进口成本 60 天内涨了 270 亿欧元，欧洲必须加速电气化、摆脱能源依赖。</p>
 <p>🔍 名词解释：<br />
@@ -210,7 +231,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>pledge</strong> 承诺；搭配：pledge support（承诺支持）；例：Leaders pledged continued support.（领导人们承诺继续支持。）💬 "Ask not what your country can do for you — ask what you can do for your country." —— John F. Kennedy（不要问国家能为你做什么，要问你能为国家做什么。）<br />
 - <strong>shield</strong> 保护，护盾；搭配：shield the economy（保护经济）；例：Electrification will shield Europe from price shocks.（电气化将保护欧洲免受价格冲击。）💬 "Hope is a good thing, maybe the best of things, and no good thing ever dies." —— 《The Shawshank Redemption》（希望是美好的，也许是人间至善，而美好的事物永不消逝。）</p>
 <p>🔗 来源：<br />
-- Financial Express: €45 Billion For Ukraine, More Pressure On Russia —— https://www.youtube.com/watch?v=ReoMTr8v-i4</p>
+- Financial Express: €45 Billion For Ukraine, More Pressure On Russia —— <a href="https://www.youtube.com/watch?v=ReoMTr8v-i4">https://www.youtube.com/watch?v=ReoMTr8v-i4</a></p>
 <hr />
 <h2>四、个人成长 🌱</h2>
 <h3>1. 区分"忙"和"高效"的习惯：每晚花两分钟，定好第二天唯一的一件事</h3>
@@ -229,7 +250,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>thread</strong> 线索；搭配：find the thread（找到线索）；例：Look for one thread across the week.（找出一周里反复出现的一条线索。）💬 "No man is an island." —— John Donne（没有人是孤岛。）<br />
 - <strong>finite</strong> 有限的；搭配：finite energy（有限的精力）；例：Your attention is finite; spend it deliberately.（注意力是有限的，要审慎花。）💬 "Time is what we want most, but what we use worst." —— William Penn（时间是我们最想要、却最不会用的东西。）</p>
 <p>🔗 来源：<br />
-- Medium: The Habit That Separates Busy From Productive —— https://medium.com/@Vireonmentality/the-habit-that-separates-busy-from-productive-2a607210e95f</p>
+- Medium: The Habit That Separates Busy From Productive —— <a href="https://medium.com/@Vireonmentality/the-habit-that-separates-busy-from-productive-2a607210e95f">https://medium.com/@Vireonmentality/the-habit-that-separates-busy-from-productive-2a607210e95f</a></p>
 <h3>2. 大多数习惯死在第一个"忙乱日"：给习惯准备一个"低配版"</h3>
 <p>Substack 热门 newsletter "Top 1% Club" 说：习惯不是死于懒，而是死于没有"坏日子预案"。顶尖的人不是从不遇到糟糕的一天——赶飞机、孩子生病、连轴开会，他们一样遇到。区别是他们的习惯"能弯不断"：难的那天就做低配版，断了一天第二天照常回来，不搞"下周一重新开始"那套。作业很简单：给每个习惯写下它的"坏日子版本"，贴在眼睛能看到的地方，规则只有一条——never twice（绝不连续断两天）。</p>
 <p>📌 一句话总结：别再"下周一重新开始"了——给习惯设个低配版，难的日子也做一点，断一天可以，绝不断两天。</p>
@@ -245,7 +266,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>slip</strong> 滑倒，小失误；搭配：a slip-up（小失误）；例：A slip-up doesn't erase your progress.（一次小失误抹不掉你的进步。）💬 "There's many a slip 'twixt the cup and the lip." —— 英语谚语（杯到嘴边还会洒，事到临头多变数。）<br />
 - <strong>steady</strong> 稳的；搭配：slow and steady（慢而稳）；例：Slow and steady wins the race.（慢而稳者赢得比赛。）💬 "Slow and steady wins the race." —— Aesop（慢而稳，赢比赛。）</p>
 <p>🔗 来源：<br />
-- Top 1% Club: Most Habits Die On The First Busy Day —— https://top1percentclub.substack.com/p/most-habits-die-on-the-first-busy</p>
+- Top 1% Club: Most Habits Die On The First Busy Day —— <a href="https://top1percentclub.substack.com/p/most-habits-die-on-the-first-busy">https://top1percentclub.substack.com/p/most-habits-die-on-the-first-busy</a></p>
 <h3>3. 让富人更富的"无聊习惯"：每月定投，然后忘掉它</h3>
 <p>另一篇 Medium 热文把话说得很直白：富人变富靠的不是神秘股票、不是副业，而是"无聊到极致"的重复——每月同一天投一笔钱，然后别管它。背后的数学叫复利：钱赚的钱，还会继续赚钱。作者算了一笔账：每月投 200 美元，年化 7%（接近美股长期平均），30 年后大约有 24 万美元——其中你自己只掏了 7.2 万，剩下的 16.8 万全是"钱生的钱"。</p>
 <p>🔍 名词解释：<br />
@@ -264,7 +285,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>automatic</strong> 自动的；搭配：automatic transfer（自动转账）；例：Set up an automatic transfer each month.（每月设一笔自动转账。）💬 "First we make our habits, and then our habits make us." —— John Dryden（我们先养成习惯，习惯再造就我们。）<br />
 - <strong>snowball</strong> 滚雪球；搭配：snowball effect（滚雪球效应）；例：Compounding creates a snowball effect.（复利产生滚雪球效应。）💬 "A snowball's chance in hell." —— 英语习语（微乎其微的机会——反着用，提醒别指望运气。）</p>
 <p>🔗 来源：<br />
-- Medium: The Boring Habit That Makes Rich People Richer —— https://medium.com/illumination/the-boring-habit-that-makes-rich-people-richer-536f999328d4</p>
+- Medium: The Boring Habit That Makes Rich People Richer —— <a href="https://medium.com/illumination/the-boring-habit-that-makes-rich-people-richer-536f999328d4">https://medium.com/illumination/the-boring-habit-that-makes-rich-people-richer-536f999328d4</a></p>
 <hr />
 <h2>五、爱情 / 关系 💕</h2>
 <h3>1. 病毒约会词"Monkey Branching"：分手前先找好下家，像猴子荡树枝不松手</h3>
@@ -282,7 +303,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>branch</strong> 树枝；搭配：swing from branch to branch（从一根树枝荡到另一根）；例：Like monkeys, they won't let go until they grab the next branch.（像猴子一样，不抓牢下一根就不松手。）💬 "A bird in the hand is worth two in the bush." —— 英语谚语（一鸟在手，胜过双鸟在林。）<br />
 - <strong>overlap</strong> 重叠；搭配：overlap relationships（关系重叠）；例：The two relationships overlap in time.（两段关系在时间上重叠。）💬 "We accept the love we think we deserve." —— 《The Perks of Being a Wallflower》（我们接受自己认为配得上的爱。）</p>
 <p>🔗 来源：<br />
-- SWNS: Attachment therapist warns against 'monkey branching' —— https://discover.swns.com/2026/10/attachment-therapist-warns-people-against-monkey-branching-in-relationships/</p>
+- SWNS: Attachment therapist warns against 'monkey branching' —— <a href="https://discover.swns.com/2026/10/attachment-therapist-warns-people-against-monkey-branching-in-relationships/">https://discover.swns.com/2026/10/attachment-therapist-warns-people-against-monkey-branching-in-relationships/</a></p>
 <h3>2. 月老红线 vs 依恋理论：你的依恋风格，比你找谁更影响幸福</h3>
 <p>一篇 Medium 长文把中国唐朝的"月老红线"传说和西方依恋理论放在一起看，特别有意思：红线说"姻缘天注定"，依恋理论说"你两岁前需求被满足的程度，塑造了你亲近人的能力"——同一个真相，两种讲法。一项汇总 132 项研究、7 万多人的元分析发现：焦虑型和回避型依恋都会显著拉低关系满意度；更扎心的是——<strong>你自己的依恋风格，比伴侣的依恋风格更影响你的满意度</strong>。也就是说，"找到对的人"没那么关键，你带来的"蓝图"才是更大的变量。好消息：依恋风格不是星座，是可以练习改变的。</p>
 <p>📌 一句话总结：别只顾着找"对的人"——先看看自己带来的亲密模式，那才是幸福感更大的开关。</p>
@@ -298,7 +319,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>fated</strong> 命定的；搭配：fated to meet（注定相遇）；例：Two people fated to find each other.（注定找到彼此的两个人。）💬 "Fate leads the willing and drags along the reluctant." —— Seneca（命运引领自愿者，拖拽不情愿者。）<br />
 - <strong>tether</strong> 拴住，纽带；搭配：emotional tether（情感纽带）；例：Early bonds tether how we love later.（早期的联结拴住了我们后来爱人的方式。）💬 "What you seek is seeking you." —— Rumi（你所寻找的，也在寻找你。）</p>
 <p>🔗 来源：<br />
-- Medium: Attachment styles &amp; the red thread of fate —— https://medium.com/@SketchesOfTheMind/attachment-styles-red-thread-of-fate-psychology-99ea97b8f764</p>
+- Medium: Attachment styles &amp; the red thread of fate —— <a href="https://medium.com/@SketchesOfTheMind/attachment-styles-red-thread-of-fate-psychology-99ea97b8f764">https://medium.com/@SketchesOfTheMind/attachment-styles-red-thread-of-fate-psychology-99ea97b8f764</a></p>
 <h3>3. 爱是平静，依恋是焦虑：心理咨询师教你分辨"我爱你"还是"我需要你"</h3>
 <p>Happy Lab 的咨询师写道：很多人分不清爱和依恋——半夜的电话、"他为什么不回我"的恐慌、一天不说话就难受，这些 intense 的感觉看着像爱，其实常常是依恋在"冒充"爱。一张对照表很直白：<strong>爱是平静的</strong>——和他安静坐着也舒服，不会逐字分析每条消息，尊重彼此的空间；<strong>依恋是焦虑的</strong>——"他会不会离开我？""没有他我活不下去"。一句话点破：爱说"我选择你，不是因为我需要你，而是因为我珍视你"；依恋说"我需要你，才能感觉良好"。</p>
 <p>📌 一句话总结：检验一段感情，别看有多 intense，看你安不安心——爱让人平静，依恋让人焦虑。</p>
@@ -314,7 +335,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>value</strong> 珍视；搭配：value someone（珍视某人）；例：I choose you because I value you.（我选择你，因为我珍视你。）💬 "Price is what you pay. Value is what you get." —— Warren Buffett（价格是你付出的，价值是你得到的。）<br />
 - <strong>suffocate</strong> 让窒息；搭配：suffocate the relationship（让关系窒息）；例：Constant checking suffocates the relationship.（不停查岗会让关系窒息。）💬 "If you love someone, set them free." —— 英语谚语（如果你爱一个人，就给他自由。）</p>
 <p>🔗 来源：<br />
-- Happy Lab: Love vs Attachment —— https://happylab.app/love-vs-attachment/</p>
+- Happy Lab: Love vs Attachment —— <a href="https://happylab.app/love-vs-attachment/">https://happylab.app/love-vs-attachment/</a></p>
 <hr />
 <h2>六、绿色低碳能源 🔋</h2>
 <h3>1. 上海"十五五"定调：2030 年新型储能装机 300 万千瓦，光伏新增 500 万千瓦</h3>
@@ -325,7 +346,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p>📌 一句话总结：中国储能从"大干快上"转向"比谁更会赚钱"，上海 300 万千瓦目标是下一个风向标。</p>
 <p>（中文来源，无英文生词）</p>
 <p>🔗 来源：<br />
-- 新浪财经：2030 年达 300 万千瓦！上海十五五储能目标落地 —— https://finance.sina.com.cn/stock/hkstock/hkstocknews/2026-10-14/doc-inivctrq0501769.shtml</p>
+- 新浪财经：2030 年达 300 万千瓦！上海十五五储能目标落地 —— <a href="https://finance.sina.com.cn/stock/hkstock/hkstocknews/2026-10-14/doc-inivctrq0501769.shtml">https://finance.sina.com.cn/stock/hkstock/hkstocknews/2026-10-14/doc-inivctrq0501769.shtml</a></p>
 <h3>2. 光伏"反内卷"要动真格了：产能调控政策将出台，组件价格划底线</h3>
 <p>10 月 14 日，证券时报报道主管部门或将发布加强光伏产能调控的通知；同一天，光伏行业自律会议提出组件价格底线倡议，遏制恶性竞争。前三季度光伏制造端产量同比增长超 40%，出口突破 1500 亿美元——量涨了，价格却杀得见血。10 月 15 日世界储能大会上，宁德时代董事长曾毓群说：储能正从"新能源的配套设施"升级为电力系统"不可或缺的新型基础设施"。</p>
 <p>🔍 名词解释：<br />
@@ -334,7 +355,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p>📌 一句话总结：光伏告别"赔本赚吆喝"，政策+自律双管齐下，产业链盈利修复可期。</p>
 <p>（中文来源，无英文生词）</p>
 <p>🔗 来源：<br />
-- 凤凰网：光伏产能调控政策即将出台 —— https://feng.ifeng.com/c/8xFChvqA4jP</p>
+- 凤凰网：光伏产能调控政策即将出台 —— <a href="https://feng.ifeng.com/c/8xFChvqA4jP">https://feng.ifeng.com/c/8xFChvqA4jP</a></p>
 <h3>3. 南非 Eskom 甩出 6GW 大单：向私营资本开放风光储招标</h3>
 <p>南非国家电力公司 Eskom 10 月 9 日启动招标资格预审，向私营资本开放最高 6GW 的太阳能、风电和电池储能项目，11 月 16 日截止。首批瞄准 2GW 光伏 + 1GW 储能（4GWh），远期到 2040 年规划 32GW。南非这几年饱受限电之苦（"load shedding"全国轮流停电），这次是把盖电站的事交给市场，用"先选合作伙伴、再逐个招标"的新玩法加速补电。</p>
 <p>📌 一句话总结：缺电的南非把电站交给私营资本来盖，6GW 大单是全球新能源玩家的新猎场。</p>
@@ -350,7 +371,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>stake</strong> 股份，赌注；搭配：take a stake（入股）；例：Private firms take stakes in each project.（私营公司参股每个项目。）💬 "Nothing ventured, nothing gained." —— 英语谚语（不入虎穴，焉得虎子。）<br />
 - <strong>panel</strong> 专家组，名单；搭配：panel of partners（合作伙伴名单）；例：Eskom will build a panel of approved partners.（Eskom 将建立获批合作伙伴名单。）💬 "Two heads are better than one." —— 英语谚语（三个臭皮匠，顶个诸葛亮。）</p>
 <p>🔗 来源：<br />
-- FurtherAfrica: Eskom renewable energy tender opens 6GW to private capital —— https://furtherafrica.com/2026/10/13/eskom-renewable-energy-tender-opens-6gw-to-private-capital/</p>
+- FurtherAfrica: Eskom renewable energy tender opens 6GW to private capital —— <a href="https://furtherafrica.com/2026/10/13/eskom-renewable-energy-tender-opens-6gw-to-private-capital/">https://furtherafrica.com/2026/10/13/eskom-renewable-energy-tender-opens-6gw-to-private-capital/</a></p>
 <h3>4. 哈萨克斯坦 × 阿曼：联手搞 2GW 风光 + 储能，电供数据中心</h3>
 <p>10 月 6 日阿曼苏丹访问哈萨克斯坦期间，两国签了战略协议：哈国营能源公司 Samruk-Energy 和阿曼绿色能源平台 O-GREEN 联手开发约 2GW 的太阳能和风电，配电池储能，目标是给批发市场、工业用户和数据中心供应"24 小时不断"的低碳电力。中亚的风光资源 + 中东的资金技术，这个组合是想把绿电卖到全世界。</p>
 <p>📌 一句话总结：中亚出资源、中东出钱，两国联手把绿电做成"包月不断电"的生意，卖给最缺电的数据中心。</p>
@@ -366,7 +387,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>harness</strong> 利用（自然力）；搭配：harness wind and sun（利用风能和太阳能）；例：The projects harness the region's rich resources.（项目利用该地区丰富的资源。）💬 "The winds and waves are always on the side of the ablest navigators." —— Edward Gibbon（风浪永远站在最出色的领航者一边。）<br />
 - <strong>embark</strong> 着手，开始；搭配：embark on a project（着手一个项目）；例：The two countries embark on a green venture.（两国着手绿色大计。）💬 "Start where you are. Use what you have. Do what you can." —— Arthur Ashe（从所在之处起步，用所有之物，尽你所能。）</p>
 <p>🔗 来源：<br />
-- Medium: Kazakhstan and Oman Plan 2 GW of Solar and Wind Energy Projects —— https://medium.com/areas-producers/kazakhstan-and-oman-plan-2-gw-of-solar-and-wind-energy-projects-with-battery-storage-c1af573564f4</p>
+- Medium: Kazakhstan and Oman Plan 2 GW of Solar and Wind Energy Projects —— <a href="https://medium.com/areas-producers/kazakhstan-and-oman-plan-2-gw-of-solar-and-wind-energy-projects-with-battery-storage-c1af573564f4">https://medium.com/areas-producers/kazakhstan-and-oman-plan-2-gw-of-solar-and-wind-energy-projects-with-battery-storage-c1af573564f4</a></p>
 <hr />
 <h2>七、国内要闻 🇨🇳</h2>
 <h3>1. 2026 金融街论坛今天在北京开幕，潘功胜、吴清等将发表演讲</h3>
@@ -376,15 +397,15 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>金融街论坛</strong>：2012 年创办的国家级金融论坛，被称为观察中国金融改革的"窗口"。</p>
 <p>📌 一句话总结：金融圈"开大会"的一周，政策信号 + 9 月经济成绩单 + LPR 三连发，盯紧有没有降息或新政策。</p>
 <p>🔗 来源：<br />
-- 腾讯新闻：金融街论坛下周启幕 —— https://news.qq.com/rain/a/20261016A02UC900<br />
-- 新浪财经：影响一周市场的十大消息 —— https://finance.sina.com.cn/jjxw/2026-10-18/doc-inivrvpp6574336.shtml</p>
+- 腾讯新闻：金融街论坛下周启幕 —— <a href="https://news.qq.com/rain/a/20261016A02UC900">https://news.qq.com/rain/a/20261016A02UC900</a><br />
+- 新浪财经：影响一周市场的十大消息 —— <a href="https://finance.sina.com.cn/jjxw/2026-10-18/doc-inivrvpp6574336.shtml">https://finance.sina.com.cn/jjxw/2026-10-18/doc-inivrvpp6574336.shtml</a></p>
 <h3>2. 四部门约谈 30 余家车企：抵制非理性竞争，智驾宣传不许"吹过头"</h3>
 <p>据央视新闻，工信部、公安部、生态环境部、市场监管总局四部门组织 30 余家重点汽车生产企业座谈：要求落实质量提升，坚决抵制非理性竞争，守牢产品安全底线。重点包括：不得作虚假夸大宣传，不得用违反交规的场景宣传智驾功能，不得诱导驾驶人忽视安全责任。下一步将加快标准制修订，对问题企业依法严肃处理并公开曝光。</p>
 <p>🔍 名词解释：<br />
 - <strong>非理性竞争</strong>：车企们打价格战、堆配置卷到亏本卖，还拿"自动驾驶"当噱头乱宣传——官方这次是喊停，让大家比质量不比谁更敢吹。</p>
 <p>📌 一句话总结：车圈"价格战 + 吹智驾"被官方点名，接下来拼的是真安全、真质量。</p>
 <p>🔗 来源：<br />
-- 新浪财经：影响一周市场的十大消息 —— https://finance.sina.com.cn/jjxw/2026-10-18/doc-inivrvpp6574336.shtml</p>
+- 新浪财经：影响一周市场的十大消息 —— <a href="https://finance.sina.com.cn/jjxw/2026-10-18/doc-inivrvpp6574336.shtml">https://finance.sina.com.cn/jjxw/2026-10-18/doc-inivrvpp6574336.shtml</a></p>
 <h3>3. A 股动态：绝味"摘帽"、博盈特焊停牌搞重组，本周千亿解禁</h3>
 <p>3 只 A 股今天（10 月 19 日）停牌：绝味食品停牌 1 天，明天复牌并撤销"ST"（简称变回"绝味食品"）；博盈特焊筹划收购海洋装备公司 55% 股权，构成重大资产重组，预计 10 个交易日内出方案。另外，上交所点名监控新华传媒等异常波动股票；本周 57 家公司限售股解禁，合计近 1000 亿元，中船特气一家就占 595 亿。</p>
 <p>🔍 名词解释：<br />
@@ -392,12 +413,12 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>限售股解禁</strong>：以前不让卖的股票现在能卖了，大股东一抛，股价可能承压——所以"千亿解禁"是悬在市场上的一把小刀。</p>
 <p>📌 一句话总结：ST 股摘帽是好消息，但本周千亿解禁+游资被盯，短线别追高。</p>
 <p>🔗 来源：<br />
-- 腾讯新闻：3 只 A 股明日停牌 —— https://news.qq.com/rain/a/20261018A0BEZV00</p>
+- 腾讯新闻：3 只 A 股明日停牌 —— <a href="https://news.qq.com/rain/a/20261018A0BEZV00">https://news.qq.com/rain/a/20261018A0BEZV00</a></p>
 <h3>4. 英伟达 GTC 柏林本周开幕，黄仁勋 21 日演讲，默茨今晚提前会面</h3>
 <p>英伟达 GTC 柏林大会本周开幕，黄仁勋定于 21 日发表主题演讲；德国总理默茨今晚（19 日）提前与他会面，议题直指德国 AI 工业算力合作落地。上周美股 AI 算力链刚经历一波重挫（CoreWeave 跌近 12%、甲骨文跌超 4%），这次演讲的新架构与合作规模，值得重点关注。</p>
 <p>📌 一句话总结：AI 算力信仰刚被市场"拷打"完，黄仁勋这场演讲就是来"续命"的。</p>
 <p>🔗 来源：<br />
-- 新浪财经：影响一周市场的十大消息 —— https://finance.sina.com.cn/jjxw/2026-10-18/doc-inivrvpp6574336.shtml</p>
+- 新浪财经：影响一周市场的十大消息 —— <a href="https://finance.sina.com.cn/jjxw/2026-10-18/doc-inivrvpp6574336.shtml">https://finance.sina.com.cn/jjxw/2026-10-18/doc-inivrvpp6574336.shtml</a></p>
 <hr />
 <h2>八、GitHub 新技术 💻</h2>
 <h3>1. morluto/rea：给 AI 编程助手装上"逆向工程"外挂，一天涨 1.6 万 star</h3>
@@ -419,8 +440,8 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>uncover</strong> 揭开，发现；搭配：uncover how apps work（揭开 App 的工作原理）；例：Point your agent at any app and uncover how it works.（把你的智能体指向任何 App，揭开它怎么工作。）💬 "Truth is like the sun. You can shut it out for a time, but it ain't going away." —— Elvis Presley（真相像太阳，你能挡它一时，挡不了一世。）<br />
 - <strong>dissect</strong> 解剖，细拆；搭配：dissect a program（细拆一个程序）；例：It dissects programs layer by layer.（它把程序一层层细拆。）💬 "Divide et impera." —— 拉丁谚语（分而治之。）</p>
 <p>🔗 来源：<br />
-- GitHub 仓库：https://github.com/morluto/rea<br />
-- GitHub Trending 日榜：https://ghtrends.dev/daily/</p>
+- GitHub 仓库：<a href="https://github.com/morluto/rea">https://github.com/morluto/rea</a><br />
+- GitHub Trending 日榜：<a href="https://ghtrends.dev/daily/">https://ghtrends.dev/daily/</a></p>
 <h3>2. debpalash/VoiceStudio：免费开源的"语音工作室"，ElevenLabs 平替，数据不出本机</h3>
 <p>另一个霸榜项目 VoiceStudio：一个在你自己电脑上跑的 AI 语音工作室——声音克隆、语音生成、听写转写、视频配音，全在一个 App 里搞定，被称为 ElevenLabs + WisprFlow 的免费开源平替。录几秒你的声音就能克隆，按个快捷键说话，文字直接落到你正在用的 App 里；还自带 MCP 服务器，能让你的编程助手"开口说话"。8 个 TTS 引擎、23 种语言，单日新增 2132 star。最大的卖点：全程本地运行，你的声音样本不用上传到别人的服务器。</p>
 <p>🔍 名词解释（大白话）：<br />
@@ -440,8 +461,8 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>privacy</strong> 隐私；搭配：protect privacy（保护隐私）；例：Your voice data never leaves your machine.（你的声音数据不出你的电脑。）💬 "The right to be let alone." —— Louis Brandeis（独处的权利。）<br />
 - <strong>offline</strong> 离线的；搭配：work offline（离线工作）；例：It works fully offline after setup.（装好后可完全离线工作。）💬 "Disconnect to reconnect." —— 现代谚语（断开连接，才能重新连接。）</p>
 <p>🔗 来源：<br />
-- GitHub 仓库：https://github.com/debpalash/VoiceStudio<br />
-- GitHub Trending 日榜：https://ghtrends.dev/daily/</p>
+- GitHub 仓库：<a href="https://github.com/debpalash/VoiceStudio">https://github.com/debpalash/VoiceStudio</a><br />
+- GitHub Trending 日榜：<a href="https://ghtrends.dev/daily/">https://ghtrends.dev/daily/</a></p>
 <hr />
 <p>Ricardo，今天的《麻薯日报》就到这里啦📰 新的一周，愿你像复利一样，每天进步一点点，不知不觉就滚成了大雪球❄️ 贴贴💛</p>
 <div class="nav bottom"><a href="issue-022.html">⬅ 上一期（第22期）</a><a href="index.html">📚 回到目录</a><a href="issue-024.html">下一期（第24期）➡</a></div>

@@ -5,38 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>《麻薯日报》第12期 · 2026-10-08</title>
 <style>
-body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-       max-width: 720px; margin: 0 auto; padding: 24px 20px 40px; line-height: 2.0;
+/* 《麻薯日报》报纸版式（2026-10-23 Ricardo 要求：像真正的报纸） */
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       max-width: 720px; margin: 0 auto; padding: 28px 20px 48px; line-height: 2.0;
        font-size: 17.5px; letter-spacing: 0.01em;
-       color: #222; background: #fffdf8; }
+       color: #1c1a17; background: #fbf8f1; }
 p { margin: 1.1em 0; }
-h1 { font-size: 1.5em; line-height: 1.5; }
-h2 { border-bottom: 2px solid #f0c75e; padding-bottom: 6px; margin-top: 2.2em; line-height: 1.5; }
-h3 { margin-top: 1.8em; line-height: 1.55; }
-a { color: #1d4fd7; text-decoration: underline; text-underline-offset: 3px; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em;
+             margin: 0 0 6px; padding: 0; border: none; }
+blockquote p { margin: 4px 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 2.4em; border: none; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 2.1em; padding-top: 1.15em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
 a:visited { color: #6d4fc2; }
-ul li, ol li { margin: 10px 0; }
+ul li, ol li { margin: 13px 0; line-height: 1.95; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.2em 0; }
 img { max-width: 100%; }
-table { border-collapse: collapse; }
-td, th { border: 1px solid #ccc; padding: 4px 8px; }
-.note { color: #666; font-size: 0.92em; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+td, th { border: 1px solid #c9c2b2; padding: 6px 10px; }
+th { background: #efe9db; }
+.note { color: #6b6257; font-size: 0.92em; }
 .nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
-       border-bottom: 2px solid #f0c75e; padding-bottom: 8px; margin-bottom: 16px; font-size: 0.95em; }
-.nav.bottom { border-bottom: none; border-top: 2px solid #f0c75e; padding-top: 8px; margin-top: 24px; }
+       border-bottom: 2px solid #1c1a17; padding-bottom: 10px; margin-bottom: 20px;
+       font-size: 0.95em; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.nav.bottom { border-bottom: none; border-top: 2px solid #1c1a17; padding-top: 10px; margin-top: 32px; }
 body.spa .page { display: none; }
 body.spa .page.active { display: block; }
 a.navbtn { text-decoration: none; }
 .bgbar { text-align: right; margin-bottom: 10px; }
-#bgToggle { background: #f0c75e;
-  color: #222; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
-  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25); font-family: inherit; }
-body.dark { background: #141414; color: #e6e6e6; }
+#bgToggle { background: #1c1a17;
+  color: #f7f2e7; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
+  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+body.dark { background: #161513; color: #e8e2d5; }
+body.dark h1 { border-top-color: #e8e2d5; border-bottom-color: #e8e2d5; }
+body.dark blockquote { color: #a39a89; }
+body.dark h2 { background: #e8e2d5; color: #161513; }
+body.dark h3 { border-top-color: #3a362e; }
 body.dark a { color: #8ab8ff; }
 body.dark a:visited { color: #c4a8ff; }
-body.dark .note { color: #a8a8a8; }
-body.dark h2 { border-bottom-color: #8a6d2f; }
-body.dark .nav { border-color: #8a6d2f; }
+body.dark li > strong:first-child { color: #e0a458; }
+body.dark hr { border-top-color: #e8e2d5; }
+body.dark .note { color: #a39a89; }
+body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
+body.dark th { background: #262219; }
+body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
 <body>
@@ -54,7 +75,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>为什么值得关注</strong>：这是 9 月转向加息后的第一份"内部讨论记录"，直接给全球利率预期定调：10 月暂停、12 月加息成了主流剧本。AI 投资被美联储点名为通胀推手，等于给"美债收益率为什么狂飙"提供了一个官方解释。</p>
 <p><strong>名词解释</strong>：① FOMC 会议纪要——美联储议息会三周后公布的详细讨论记录，是预判下一步的"密码本"；② 基点——利率单位，100 基点=1%，加息 25 个基点就是加 0.25%；③ PCE——个人消费支出价格指数，美联储最看重的通胀指标，"核心"版剔掉食品和能源的波动；④ CME FedWatch——用期货价格算出的"市场赌美联储下一步"的概率表，交易员每天必看。</p>
 <p><strong>一句话总结</strong>：美联储内部基本达成共识——年内大概率还要加一次，但 10 月先观望，12 月才是决战。</p>
-<p>🔗 来源：https://www.lapost.com/content/federal-reserve-officials-expect-another-rate-hike-will-be-needed-this-year-according-to-minutes（美联社 AP 报道）；https://www.barrons.com/articles/fed-minutes-interest-rate-hikes-1d672057</p>
+<p>🔗 来源：<a href="https://www.lapost.com/content/federal-reserve-officials-expect-another-rate-hike-will-be-needed-this-year-according-to-minutes（美联社">https://www.lapost.com/content/federal-reserve-officials-expect-another-rate-hike-will-be-needed-this-year-according-to-minutes（美联社</a> AP 报道）；<a href="https://www.barrons.com/articles/fed-minutes-interest-rate-hikes-1d672057">https://www.barrons.com/articles/fed-minutes-interest-rate-hikes-1d672057</a></p>
 <p>📖 生词：<br />
 - <strong>hawkish</strong>（鹰派的，主张紧缩）| hawkish stance | The minutes struck a distinctly hawkish tone. | 未找到<br />
 - <strong>unanimous</strong>（全体一致的）| unanimous decision | All 19 officials unanimously backed the September hike. | 未找到<br />
@@ -73,7 +94,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>为什么值得关注</strong>：5% 以上的"无风险利率"正在给全球所有资产重新定价——国债利息这么高，股票就显得贵了，资金自然往债市跑。而一次顺利的国债拍卖就能稳住全场，说明债市现在是美股的"总开关"。</p>
 <p><strong>名词解释</strong>：① 美债收益率——美国政府借钱的利息率，全球资金的"基准利率"，它涨股票就承压；② 国债拍卖——政府向市场卖借条，需求强说明大家还愿意借钱给美国，收益率就会回落；③ 布伦特原油——国际油价基准；④ Russell 2000——美国小盘股指数（周三跌 1.3%，离高点已跌约 9%，接近"回调区"）。</p>
 <p><strong>一句话总结</strong>：周二欢呼创新高，周三被 5.36% 的收益率浇了盆冷水——债市现在是美股的"总开关"。</p>
-<p>🔗 来源：https://www.wsj.com/finance/investing/u-s-stocks-fall-as-treasury-yields-test-multidecade-highs-107d696f；https://biz.heraldcorp.com/article/10896254</p>
+<p>🔗 来源：<a href="https://www.wsj.com/finance/investing/u-s-stocks-fall-as-treasury-yields-test-multidecade-highs-107d696f；https://biz.heraldcorp.com/article/10896254">https://www.wsj.com/finance/investing/u-s-stocks-fall-as-treasury-yields-test-multidecade-highs-107d696f；https://biz.heraldcorp.com/article/10896254</a></p>
 <p>📖 生词：<br />
 - <strong>yield</strong>（收益率）| Treasury yield | The 10-year Treasury yield climbed to 5.36%. | 未找到<br />
 - <strong>benchmark</strong>（基准）| benchmark rate | Brent is the international benchmark for crude prices. | 未找到<br />
@@ -90,7 +111,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>为什么值得关注</strong>：印度是全球增长最快的大型经济体，它跟进加息说明"油价→通胀→加息"的传导链已从发达国家蔓延到新兴市场。股市不跌反涨，说明市场认为"经济够硬，扛得住"。</p>
 <p><strong>名词解释</strong>：① 回购利率——印度央行借钱给商业银行的利率，相当于印度的基准利率；② CPI——消费者价格指数，衡量日常物价涨了多少的"通胀温度计"；③ 校准式紧缩——小心翼翼地收紧货币政策；④ Sensex——印度孟买股市的代表性指数。</p>
 <p><strong>一句话总结</strong>：油价逼宫之下，印度央行三年后再度加息，新兴市场也加入了"抗通胀"阵营。</p>
-<p>🔗 来源：https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece；https://www.forbesindia.com/article/news/rbi-mpc-meeting-live-rate-hike-in-focus-as-inflation-oil-rise-liveblog/2999124/1</p>
+<p>🔗 来源：<a href="https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece；https://www.forbesindia.com/article/news/rbi-mpc-meeting-live-rate-hike-in-focus-as-inflation-oil-rise-liveblog/2999124/1">https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece；https://www.forbesindia.com/article/news/rbi-mpc-meeting-live-rate-hike-in-focus-as-inflation-oil-rise-liveblog/2999124/1</a></p>
 <p>📖 生词：<br />
 - <strong>hike</strong>（加息）| rate hike | The RBI announced its first rate hike since 2023. | 未找到<br />
 - <strong>stance</strong>（立场）| policy stance | The stance shifted to calibrated tightening. | 未找到<br />
@@ -109,7 +130,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>为什么值得关注</strong>：AI 竞争正在从"谁最强"转向"谁便宜又够用"。Haiku 5.5 瞄准的是高频重复任务——摘要、客服、浏览器智能体、代码子代理，降价 75% 意味着 AI 智能体大规模部署的成本门槛被一脚踹低。</p>
 <p><strong>名词解释</strong>：① Token——模型处理文本的最小单位，API 按它收费；② 推理成本——模型每次回答实际消耗的算力费用；③ 子代理——大模型把复杂任务拆开后，派小模型去执行的具体"小工"；④ 缓存读取——重复的提示内容存起来下次直接调用，最多省 90%。</p>
 <p><strong>一句话总结</strong>：小模型价格战开打：便宜 75%、速度更快，AI 智能体大规模铺开的最大障碍正在消失。</p>
-<p>🔗 来源：https://www.anthropic.com/claude-haiku-5-5（官方公告）；https://www.reuters.com/business/anthropic-launches-third-claude-55-model-expanding-ai-lineup-before-planned-ipo-2026-10-07/</p>
+<p>🔗 来源：<a href="https://www.anthropic.com/claude-haiku-5-5（官方公告">https://www.anthropic.com/claude-haiku-5-5（官方公告</a>）；<a href="https://www.reuters.com/business/anthropic-launches-third-claude-55-model-expanding-ai-lineup-before-planned-ipo-2026-10-07/">https://www.reuters.com/business/anthropic-launches-third-claude-55-model-expanding-ai-lineup-before-planned-ipo-2026-10-07/</a></p>
 <p>📖 生词：<br />
 - <strong>inference</strong>（模型推理运行）| run inference | The model delivers 2.5x faster inference per agent turn. | 未找到<br />
 - <strong>latency</strong>（延迟）| low latency | Latency fell over 30% for task completions. | 未找到<br />
@@ -128,7 +149,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>为什么值得关注</strong>：AI 正在从"云端问答"转向"本地干活"。如果写代码、跑复杂任务能在笔记本本地完成，企业就不用为云算力持续付费。而 MXC 是大厂对"如何关住 AI 智能体"的第一次系统回答——给自主智能体配一个"透明笼子"，防越权、防失控。</p>
 <p><strong>名词解释</strong>：① AI 智能体——能自主执行多步骤任务的 AI 系统，不只回答问题，还能操作软件干活；② 端侧运行——AI 直接在笔记本/手机上跑，数据不上传云端，更快更私密；③ 执行容器——像给智能体配"透明笼子"，只能在笼子里活动，系统全程监控。</p>
 <p><strong>一句话总结</strong>：微软和英伟达联手把 AI 从云端"请"回你的笔记本，还顺手给智能体打造了一个安全笼子。</p>
-<p>🔗 来源：https://www.reuters.com/business/microsoft-nvidia-ceos-unveil-new-ai-laptop-san-francisco-event-2026-10-07/；https://www.unite.ai/nvidia-and-microsoft-bring-rtx-spark-laptops-ai-agents-to-windows-pcs/</p>
+<p>🔗 来源：<a href="https://www.reuters.com/business/microsoft-nvidia-ceos-unveil-new-ai-laptop-san-francisco-event-2026-10-07/；https://www.unite.ai/nvidia-and-microsoft-bring-rtx-spark-laptops-ai-agents-to-windows-pcs/">https://www.reuters.com/business/microsoft-nvidia-ceos-unveil-new-ai-laptop-san-francisco-event-2026-10-07/；https://www.unite.ai/nvidia-and-microsoft-bring-rtx-spark-laptops-ai-agents-to-windows-pcs/</a></p>
 <p>📖 生词：<br />
 - <strong>unveil</strong>（发布，揭幕）| unveil a laptop | Microsoft unveiled the Surface Laptop Ultra in San Francisco. | 未找到<br />
 - <strong>shift</strong>（转移）| shift to | The move shifts AI workloads from cloud to local PCs. | 未找到<br />
@@ -147,7 +168,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>为什么值得关注</strong>：deepfake 诈骗和假新闻是 2026 年最大的社会议题之一。把原本只给媒体和研究人员的"验真工具"开放给所有人，是"AI 内容可溯源"走向大众化的标志。但别指望它万能：微软、Meta 各用各的标准，开源模型生成的内容也查不出——这只是拼图的一块。</p>
 <p><strong>名词解释</strong>：① 数字水印——藏在图片/音视频里的隐形标记，肉眼看不见、工具能读出；② Deepfake——AI 换脸/合成的虚假音视频，常用于诈骗造谣；③ SynthID——Google DeepMind 开发的水印技术。</p>
 <p><strong>一句话总结</strong>：以后看到可疑的图片视频，可以先去 synthid.com 查一查"是不是 AI 做的"——但查不出不代表就是真的。</p>
-<p>🔗 来源：https://techcrunch.com/2026/10/07/googles-new-synthid-website-can-identify-ai-generated-media/；https://www.unite.ai/google-opens-synthid-detector-globally-with-partner-ai-content-checks/</p>
+<p>🔗 来源：<a href="https://techcrunch.com/2026/10/07/googles-new-synthid-website-can-identify-ai-generated-media/；https://www.unite.ai/google-opens-synthid-detector-globally-with-partner-ai-content-checks/">https://techcrunch.com/2026/10/07/googles-new-synthid-website-can-identify-ai-generated-media/；https://www.unite.ai/google-opens-synthid-detector-globally-with-partner-ai-content-checks/</a></p>
 <p>📖 生词：<br />
 - <strong>watermark</strong>（水印）| digital watermark | SynthID watermarks AI-generated images invisibly. | 未找到<br />
 - <strong>verify</strong>（核实）| verify content | Anyone can now verify whether a video was AI-generated. | "Trust, but verify." —— Ronald Reagan<br />
@@ -168,7 +189,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>为什么值得关注</strong>：霍尔木兹海峡承担全球约五分之一的石油贸易，是油价重返 100 美元的直接推手。袭击创新高+船员受伤，意味着冲突正从军事对峙滑向针对民用航运的"灰色地带"升级——保险费和运费上涨，最终会变成全球每个人的能源账单。</p>
 <p><strong>名词解释</strong>：① 霍尔木兹海峡——波斯湾通往印度洋的唯一海上出口，世界油价的"咽喉"；② LNG/LPG——液化天然气/液化石油气；③ 灰色地带冲突——介于和平与战争之间的骚扰袭击，各方都不正式宣战，但风险真实存在。</p>
 <p><strong>一句话总结</strong>：世界油价的"咽喉"正在被掐紧，油轮袭击创新高，全球能源账单又要涨了。</p>
-<p>🔗 来源：https://www.reuters.com/world/middle-east/attacks-tankers-hormuz-hit-highest-any-week-since-start-iran-war-sources-say-2026-10-07/；https://www.dawn.com/live/iran-israel-war/</p>
+<p>🔗 来源：<a href="https://www.reuters.com/world/middle-east/attacks-tankers-hormuz-hit-highest-any-week-since-start-iran-war-sources-say-2026-10-07/；https://www.dawn.com/live/iran-israel-war/">https://www.reuters.com/world/middle-east/attacks-tankers-hormuz-hit-highest-any-week-since-start-iran-war-sources-say-2026-10-07/；https://www.dawn.com/live/iran-israel-war/</a></p>
 <p>📖 生词：<br />
 - <strong>harassment</strong>（骚扰）| naval harassment | Harassment activity included drone overflights and radio hailing. | 未找到<br />
 - <strong>escalation</strong>（升级）| military escalation | The incidents mark a dangerous escalation. | 未找到<br />
@@ -187,7 +208,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>为什么值得关注</strong>：沙特是全球最大石油出口国，对其机场和炼油设施的袭击直接威胁原油供应安全，是油价站上 100 美元的另一只推手。阿联酋公开选边意味着海湾国家正被进一步拖入冲突链，地区战争外溢风险上升。</p>
 <p><strong>名词解释</strong>：① 胡塞武装——也门的武装组织，受伊朗支持，近年多次用无人机和导弹袭击沙特石油设施；② 沙特阿美——沙特国家石油公司，全球最大石油企业之一；③ 弹道导弹拦截——用防空系统在导弹落地前击毁，"拦截成功"不等于零风险。</p>
 <p><strong>一句话总结</strong>：战火烧向全球最大石油出口国的机场和炼油厂，油价和地区紧张局势同步升温。</p>
-<p>🔗 来源：https://english.mathrubhumi.com/news/money/oil-crosses-100-as-houthi-riyadh-tensions-add-to-strait-of-hormuz-fears-mrggor0z；https://www.timesnownews.com/world/middle-east/iran-us-war-live-updates-hormuz-tensions-rise-as-trump-issues-latest-warning-tehran-says-ready-for-a-us-attack-liveblog-156275404/amp</p>
+<p>🔗 来源：<a href="https://english.mathrubhumi.com/news/money/oil-crosses-100-as-houthi-riyadh-tensions-add-to-strait-of-hormuz-fears-mrggor0z；https://www.timesnownews.com/world/middle-east/iran-us-war-live-updates-hormuz-tensions-rise-as-trump-issues-latest-warning-tehran-says-ready-for-a-us-attack-liveblog-156275404/amp">https://english.mathrubhumi.com/news/money/oil-crosses-100-as-houthi-riyadh-tensions-add-to-strait-of-hormuz-fears-mrggor0z；https://www.timesnownews.com/world/middle-east/iran-us-war-live-updates-hormuz-tensions-rise-as-trump-issues-latest-warning-tehran-says-ready-for-a-us-attack-liveblog-156275404/amp</a></p>
 <p>📖 生词：<br />
 - <strong>intercept</strong>（拦截）| intercept a missile | The coalition intercepted and destroyed the ballistic missile. | 未找到<br />
 - <strong>claim</strong>（宣称）| claim responsibility | The Houthis claimed an attack on Riyadh's main airport. | 未找到<br />
@@ -204,7 +225,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>为什么值得关注</strong>：这是开战以来以色列官方首次公开谈论伊朗"误判式"导弹袭击风险——停火框架还在，但双方对"对方下一步"的信任已降到冰点。历史上很多战争都是误判点燃的，任何一次误判都可能把地区冲突推回全面交战，并瞬间引爆油价和全球市场。</p>
 <p><strong>名词解释</strong>：① 误判——一方错误估计对方意图或底线，导致本不想打的仗被打响；② 停火——暂时停止开火的协议，不等于和平；③ 假旗行动——一方伪装成另一方发动袭击、栽赃嫁祸。</p>
 <p><strong>一句话总结</strong>：停火还在，但信任没了——以色列担心被经济逼到墙角的伊朗会"算错账"。</p>
-<p>🔗 来源：https://www.jpost.com/israel-news/defense-news/article-910867；https://www.dawn.com/live/iran-israel-war/</p>
+<p>🔗 来源：<a href="https://www.jpost.com/israel-news/defense-news/article-910867；https://www.dawn.com/live/iran-israel-war/">https://www.jpost.com/israel-news/defense-news/article-910867；https://www.dawn.com/live/iran-israel-war/</a></p>
 <p>📖 生词：<br />
 - <strong>miscalculate</strong>（误判）| a dangerous miscalculation | Officials fear Iran could miscalculate and launch missiles. | 未找到<br />
 - <strong>deteriorate</strong>（恶化）| deteriorate rapidly | The situation is deteriorating every day, officials said. | 未找到<br />
@@ -222,7 +243,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>讲了什么</strong>：马来西亚 Malay Mail 专栏（10 月 7 日）引用研究指出，拉开成功者与普通人差距的不是天赋，而是四个自己能控制的习惯：一是"等完美时机"——看似谨慎，实则是披着耐心的恐惧，成功的人都是没准备好就出发、边做边调整；二是"和别人比较"——手机里装着全世界的高光集锦，拿自己的日常去比别人的巅峰注定自卑；三是"拒绝从错误中学习"；四是"抱怨生活"。核心论点：Momentum（行动的惯性），而非 certainty（万事俱备的确定感），才是把人推向前的原因。</p>
 <p><strong>为什么值得读</strong>：没有鸡汤式喊口号，每条都戳中现代人的具体病灶（拖延、比惨、嘴硬、抱怨），落点是"这些恰好都是你能控制的部分"，读完有立刻行动的冲动。</p>
 <p><strong>一句话总结</strong>：别等准备好了再出发——先动起来，惯性会带你走完剩下的路。</p>
-<p>🔗 来源：https://www.malaymail.com/news/what-you-think/2026/10/07/the-four-habits-that-keep-most-people-from-success-ahmad-ibrahim/238097</p>
+<p>🔗 来源：<a href="https://www.malaymail.com/news/what-you-think/2026/10/07/the-four-habits-that-keep-most-people-from-success-ahmad-ibrahim/238097">https://www.malaymail.com/news/what-you-think/2026/10/07/the-four-habits-that-keep-most-people-from-success-ahmad-ibrahim/238097</a></p>
 <p>📖 生词：<br />
 - <strong>aspiration</strong>（抱负）| have aspirations to | He has aspirations to become a writer. | "Far away there in the sunshine are my highest aspirations." —— Louisa May Alcott<br />
 - <strong>comparison</strong>（比较）| in comparison with | Stop making comparisons with others on social media. | "Comparison is the thief of joy." —— Theodore Roosevelt<br />
@@ -239,7 +260,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>为什么值得读</strong>：对正在学英语、写随笔的 Ricardo 尤其贴切——每天的复盘、英语学习笔记写下来，本身就是一种思维训练。写作不是输出的终点，而是思考的起点。</p>
 <p><strong>名词解释</strong>：① 认知负荷——大脑同时处理的信息量有限，超载就会"卡壳"；② 工作记忆——大脑临时存放和加工信息的"草稿纸"，容量很小，写下来等于给大脑扩容。</p>
 <p><strong>一句话总结</strong>：下次觉得"没想清楚"时，别干想——拿起笔，写着写着就清楚了。</p>
-<p>🔗 来源：https://nataliewexler.substack.com/p/yes-writing-does-advance-thinking</p>
+<p>🔗 来源：<a href="https://nataliewexler.substack.com/p/yes-writing-does-advance-thinking">https://nataliewexler.substack.com/p/yes-writing-does-advance-thinking</a></p>
 <p>📖 生词：<br />
 - <strong>advance</strong>（促进）| advance one's thinking | Writing can advance your thinking. | 未找到<br />
 - <strong>thesis</strong>（论点）| a thesis statement | Every essay needs a clear thesis. | 未找到<br />
@@ -256,7 +277,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>为什么值得读</strong>：不贩卖焦虑、不灌鸡汤，给了一个立刻可用的小动作（catch → 质疑 → 改写）。对容易自我否定的英语学习者尤其治愈：你对自己说话的方式，正在悄悄塑造你的大脑。</p>
 <p><strong>名词解释</strong>：① 神经可塑性——大脑的神经连接不是固定的，会随重复的想法和行为长出新的"路"；② 自我对话——你在心里跟自己说话的方式，比如"我不行"或"我试试"。</p>
 <p><strong>一句话总结</strong>：把"我不行"换成"我这次没做好，但能弄明白"——你的大脑真的会听进去。</p>
-<p>🔗 来源：https://www.instagram.com/reel/DeDQWC0OH7j/</p>
+<p>🔗 来源：<a href="https://www.instagram.com/reel/DeDQWC0OH7j/">https://www.instagram.com/reel/DeDQWC0OH7j/</a></p>
 <p>📖 生词：<br />
 - <strong>self-talk</strong>（自我对话）| negative self-talk | Watch your negative self-talk. | 未找到<br />
 - <strong>neuroplasticity</strong>（神经可塑性）| harness neuroplasticity | Neuroplasticity means your brain can change. | 未找到<br />
@@ -274,7 +295,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>讲了什么</strong>：Jay Shetty 10 月 7 日转发的文字图（3.2 万赞）只有一句话："You deserve someone who's gonna treat you like you matter everyday. Not just when it's convenient for them."（你值得一个每天都把你放在心上的人，而不是只在方便的时候才想起你的人。）评论区成了大型共鸣现场，很多人分享自己终于离开"忽冷忽热"的关系、第一次被稳定地珍视的经历。</p>
 <p><strong>为什么值得看</strong>：短到可以当手机壁纸，但标准定得很准——"每天"和"方便时"的区别，是检验一段感情最温柔的尺子。适合在深夜 emo 时读一遍，把标准还给自己。</p>
 <p><strong>一句话总结</strong>：好的感情不是"想起你时"的好，而是"每天"的好。</p>
-<p>🔗 来源：https://www.instagram.com/p/DeMo85NDHDS/</p>
+<p>🔗 来源：<a href="https://www.instagram.com/p/DeMo85NDHDS/">https://www.instagram.com/p/DeMo85NDHDS/</a></p>
 <p>📖 生词：<br />
 - <strong>deserve</strong>（值得）| deserve better | You deserve to be treated well every day. | "You yourself, as much as anybody in the entire universe, deserve your love and affection." —— Buddha<br />
 - <strong>matter</strong>（重要）| matter to sb | You matter, every single day. | 未找到<br />
@@ -290,7 +311,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>讲了什么</strong>：英国情感作家 Matthew Hussey 在短视频（10 月 2 日，11 万赞）里平静地说：要把两件事分开——"你对这个人的感觉"（他的魅力、可爱、聪明、风趣）和"这个人让你感受到的"（孤独、难过、焦虑、自我怀疑）。你可以承认一个人浑身是优点，同时清醒地看到：和他在一起的每一天，你都在质疑自己的价值。一旁的女士接话："你可以觉得他是个神，但如果他让你觉得自己什么都不是，那才是这段关系的真相。"</p>
 <p><strong>为什么值得看</strong>：温柔但清醒的一课——爱一个人的优点，不等于这段关系是健康的。它给"放不下"的人提供了一个不自我攻击的视角：不是你不值得，是这段关系让你感觉不好。</p>
 <p><strong>一句话总结</strong>：他有多好是一回事，他让你感觉有多好，是另一回事——后者才是关系的真相。</p>
-<p>🔗 来源：https://www.instagram.com/reel/DeASWeRR2UH/</p>
+<p>🔗 来源：<a href="https://www.instagram.com/reel/DeASWeRR2UH/">https://www.instagram.com/reel/DeASWeRR2UH/</a></p>
 <p>📖 生词：<br />
 - <strong>charisma</strong>（魅力）| natural charisma | His charisma drew everyone in. | 未找到<br />
 - <strong>adorable</strong>（可爱的）| absolutely adorable | She found his smile adorable. | 未找到<br />
@@ -307,7 +328,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>为什么值得看</strong>：给"暧昧受伤者"一个清晰的命名和出口——问题不在你"太认真"，而在对方给了认真的人错误的信号。温柔地提醒：保护好自己的心，也别拿别人的心练手。</p>
 <p><strong>名词解释</strong>：① ghosting（突然断联）——本来聊得好好的，对方毫无征兆彻底失联；② breadcrumbing（撒面包屑）——偶尔回一下消息吊着你，却从不推进关系。</p>
 <p><strong>一句话总结</strong>：暧昧里受伤不是你的错——错的是给了信号又收回的人。</p>
-<p>🔗 来源：https://www.instagram.com/reel/Dd9YRtvKO5Y/</p>
+<p>🔗 来源：<a href="https://www.instagram.com/reel/Dd9YRtvKO5Y/">https://www.instagram.com/reel/Dd9YRtvKO5Y/</a></p>
 <p>📖 生词：<br />
 - <strong>attach</strong>（依恋）| get attached to | Don't get someone attached if you're not sure. | 未找到<br />
 - <strong>earnest</strong>（诚恳的）| an earnest talk | He spoke in a calm, earnest tone. | 未找到<br />
@@ -326,7 +347,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>为什么值得关注</strong>：这是韩国版"绿色新政"，把碳中和和产业竞争力直接挂钩。氢还原炼钢、全固态电池、叠层光伏全是"卡脖子级"前沿技术——光伏、电池、钢铁恰恰是中韩直接竞争的赛道，这份路线图就是未来十年竞争对手的"作战地图"。</p>
 <p><strong>名词解释</strong>：① GW——功率单位，1GW=10 亿瓦，100GW 约等于 100 个大型火电厂的装机；② 氢还原炼钢——用氢气代替煤炭炼钢，副产品是水而不是二氧化碳，是钢铁业脱碳的终极方案；③ 全固态电池——用电解质固体代替液体的电池，更安全、续航更长；④ 叠层太阳能电池——把两种电池叠起来吸收不同波长的光，效率远超传统单晶硅；⑤ 绿色国债——政府为环保项目专门发行的债券。</p>
 <p><strong>一句话总结</strong>：韩国把未来十年的国家赌注押在了绿色制造上，要当"绿色市场的设计者"而不是追随者。</p>
-<p>🔗 来源：https://www.koreatimes.co.kr/southkorea/politics/20261007/korea-to-accelerate-renewable-energy-expansion-to-100gw-by-2030</p>
+<p>🔗 来源：<a href="https://www.koreatimes.co.kr/southkorea/politics/20261007/korea-to-accelerate-renewable-energy-expansion-to-100gw-by-2030">https://www.koreatimes.co.kr/southkorea/politics/20261007/korea-to-accelerate-renewable-energy-expansion-to-100gw-by-2030</a></p>
 <p>📖 生词：<br />
 - <strong>accelerate</strong>（加速）| accelerate the transition | Korea will accelerate renewable energy expansion. | 未找到<br />
 - <strong>strategy</strong>（战略）| unveil a strategy | The K-GX strategy targets 100 GW by 2030. | 未找到<br />
@@ -345,7 +366,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>为什么值得关注</strong>：南非是非洲最大经济体、也是最依赖煤电的国家之一（长期受停电困扰）。它的选择很有代表性：先储能+燃气打底、再上风光——因为风光发了电送不出去等于白建，"弃风弃光"和电网瓶颈是全球新能源的共同痛点。对中国企业的意义：南非新能源市场是中国企业出海的重要目的地，9.6GW 的采购清单就是实打实的订单机会。</p>
 <p><strong>名词解释</strong>：① 电池储能——把风光发的电存进大电池，用电高峰时再放出来；② 弃风弃光——风电/光伏发了电但电网送不出去，只能浪费掉；③ 燃气发电——用天然气发电，比煤干净、启停灵活，常被用作新能源过渡期的"调峰"电源。</p>
 <p><strong>一句话总结</strong>：先解决"电存哪、送得出"的问题，再谈风光大干快上——南非给全球新能源上了一课。</p>
-<p>🔗 来源：https://www.reuters.com/business/energy/south-africa-prioritise-battery-storage-gas-to-power-projects-says-energy-2026-10-07/</p>
+<p>🔗 来源：<a href="https://www.reuters.com/business/energy/south-africa-prioritise-battery-storage-gas-to-power-projects-says-energy-2026-10-07/">https://www.reuters.com/business/energy/south-africa-prioritise-battery-storage-gas-to-power-projects-says-energy-2026-10-07/</a></p>
 <p>📖 生词：<br />
 - <strong>prioritise</strong>（优先考虑）| prioritise investment | South Africa will prioritise battery storage. | 未找到<br />
 - <strong>procurement</strong>（采购）| public procurement | The first stage will procure 4.6 GW of storage. | 未找到<br />
@@ -362,7 +383,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>为什么值得关注</strong>：航空业是最难脱碳的行业之一（飞机没法背电池），SAF 是唯一现实的减排路径。这个项目标志着"绿氢+碳捕集制燃料"的技术路线在中国跑通商业化前夜。</p>
 <p><strong>名词解释</strong>：① SAF——可持续航空燃料，碳排放比普通航煤低 70-80%；② 绿氢——用风电光伏等可再生电力电解水制得的氢气，生产过程零碳；③ 碳捕集——把工业排放的 CO₂ 抓回来利用或封存的技术；④ 示范项目——技术从实验室走向工厂的中间阶段，验证"放大后还能不能行"。</p>
 <p><strong>一句话总结</strong>：飞机减排的最大希望，正在新疆的戈壁上从实验室走向工厂。</p>
-<p>🔗 来源：https://www.hydrocarbonengineering.com/clean-fuels/06102026/dondel-breaks-ground-on-chinas-first-green-hydrogen-to-saf-project/</p>
+<p>🔗 来源：<a href="https://www.hydrocarbonengineering.com/clean-fuels/06102026/dondel-breaks-ground-on-chinas-first-green-hydrogen-to-saf-project/">https://www.hydrocarbonengineering.com/clean-fuels/06102026/dondel-breaks-ground-on-chinas-first-green-hydrogen-to-saf-project/</a></p>
 <p>📖 生词：<br />
 - <strong>break ground</strong>（动工）| break ground on | The firm broke ground on the 100,000-tonne SAF project. | 未找到<br />
 - <strong>demonstration project</strong>（示范项目）| pilot demonstration | It is China's first demonstration project of its kind. | 未找到<br />

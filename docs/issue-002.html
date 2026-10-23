@@ -5,38 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>《麻薯日报》第2期 · 2026-09-28</title>
 <style>
-body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-       max-width: 720px; margin: 0 auto; padding: 24px 20px 40px; line-height: 2.0;
+/* 《麻薯日报》报纸版式（2026-10-23 Ricardo 要求：像真正的报纸） */
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       max-width: 720px; margin: 0 auto; padding: 28px 20px 48px; line-height: 2.0;
        font-size: 17.5px; letter-spacing: 0.01em;
-       color: #222; background: #fffdf8; }
+       color: #1c1a17; background: #fbf8f1; }
 p { margin: 1.1em 0; }
-h1 { font-size: 1.5em; line-height: 1.5; }
-h2 { border-bottom: 2px solid #f0c75e; padding-bottom: 6px; margin-top: 2.2em; line-height: 1.5; }
-h3 { margin-top: 1.8em; line-height: 1.55; }
-a { color: #1d4fd7; text-decoration: underline; text-underline-offset: 3px; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em;
+             margin: 0 0 6px; padding: 0; border: none; }
+blockquote p { margin: 4px 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 2.4em; border: none; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 2.1em; padding-top: 1.15em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
 a:visited { color: #6d4fc2; }
-ul li, ol li { margin: 10px 0; }
+ul li, ol li { margin: 13px 0; line-height: 1.95; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.2em 0; }
 img { max-width: 100%; }
-table { border-collapse: collapse; }
-td, th { border: 1px solid #ccc; padding: 4px 8px; }
-.note { color: #666; font-size: 0.92em; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+td, th { border: 1px solid #c9c2b2; padding: 6px 10px; }
+th { background: #efe9db; }
+.note { color: #6b6257; font-size: 0.92em; }
 .nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
-       border-bottom: 2px solid #f0c75e; padding-bottom: 8px; margin-bottom: 16px; font-size: 0.95em; }
-.nav.bottom { border-bottom: none; border-top: 2px solid #f0c75e; padding-top: 8px; margin-top: 24px; }
+       border-bottom: 2px solid #1c1a17; padding-bottom: 10px; margin-bottom: 20px;
+       font-size: 0.95em; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.nav.bottom { border-bottom: none; border-top: 2px solid #1c1a17; padding-top: 10px; margin-top: 32px; }
 body.spa .page { display: none; }
 body.spa .page.active { display: block; }
 a.navbtn { text-decoration: none; }
 .bgbar { text-align: right; margin-bottom: 10px; }
-#bgToggle { background: #f0c75e;
-  color: #222; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
-  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25); font-family: inherit; }
-body.dark { background: #141414; color: #e6e6e6; }
+#bgToggle { background: #1c1a17;
+  color: #f7f2e7; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
+  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+body.dark { background: #161513; color: #e8e2d5; }
+body.dark h1 { border-top-color: #e8e2d5; border-bottom-color: #e8e2d5; }
+body.dark blockquote { color: #a39a89; }
+body.dark h2 { background: #e8e2d5; color: #161513; }
+body.dark h3 { border-top-color: #3a362e; }
 body.dark a { color: #8ab8ff; }
 body.dark a:visited { color: #c4a8ff; }
-body.dark .note { color: #a8a8a8; }
-body.dark h2 { border-bottom-color: #8a6d2f; }
-body.dark .nav { border-color: #8a6d2f; }
+body.dark li > strong:first-child { color: #e0a458; }
+body.dark hr { border-top-color: #e8e2d5; }
+body.dark .note { color: #a39a89; }
+body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
+body.dark th { background: #262219; }
+body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
 <body>
@@ -54,8 +75,8 @@ body.dark td, body.dark th { border-color: #444; }
 <h3>1. 美联储9月已加息，市场押注10月"背靠背"再加息，周五非农就业报告成关键</h3>
 <p><strong>发生了什么：</strong> 美联储在9月16日会议上加息25个基点，并暗示年内可能再次加息。路透社调查显示，9月非农就业预计新增约10万人、失业率维持在4.2%；本周三还将公布美联储最看重的PCE通胀数据。期货市场目前押注10月28日会议再加息的概率超过60%，部分机构测算已升至70%以上。</p>
 <p><strong>为什么值得关注：</strong> 连续加息意味着全社会借钱更贵，会压制股市估值、推高全球债市收益率；就业和通胀数据的好坏将直接决定10月是否加息，是本周全球市场的"审判日"。</p>
-<p><strong>来源：</strong> Reuters（路透社）— https://www.reuters.com/business/wall-st-week-ahead-jobs-report-inflation-data-test-us-rate-path-economic-2026-09-25/</p>
-<p><strong>社交平台热议：</strong> 中文财经社群也在紧盯这组数据。Threads 账号 @dinosa288962 梳理了本周数据日历，指出"偏热的PCE或强劲的非农会重新点燃加息预期"（https://www.threads.com/@dinosa288962/post/Ddti7hxEnuO）；Instagram 财经账号 @wealthgrowthlab 称10月加息概率已升至约70%（https://www.instagram.com/p/Ddy8D8PD6-o/）。</p>
+<p><strong>来源：</strong> Reuters（路透社）— <a href="https://www.reuters.com/business/wall-st-week-ahead-jobs-report-inflation-data-test-us-rate-path-economic-2026-09-25/">https://www.reuters.com/business/wall-st-week-ahead-jobs-report-inflation-data-test-us-rate-path-economic-2026-09-25/</a></p>
+<p><strong>社交平台热议：</strong> 中文财经社群也在紧盯这组数据。Threads 账号 @dinosa288962 梳理了本周数据日历，指出"偏热的PCE或强劲的非农会重新点燃加息预期"（<a href="https://www.threads.com/@dinosa288962/post/Ddti7hxEnuO">https://www.threads.com/@dinosa288962/post/Ddti7hxEnuO</a>）；Instagram 财经账号 @wealthgrowthlab 称10月加息概率已升至约70%（<a href="https://www.instagram.com/p/Ddy8D8PD6-o/">https://www.instagram.com/p/Ddy8D8PD6-o/</a>）。</p>
 <p><strong>名词解释：</strong><br />
 - 非农就业（nonfarm payrolls）：美国每月公布的新增就业人数（不含农业），是判断经济冷热的"体温计"；人数多说明经济火、加息可能性大。<br />
 - 加息：央行提高基准利率，相当于让全社会借钱变贵，用来给过热的经济和通胀"降温"。<br />
@@ -67,7 +88,7 @@ body.dark td, body.dark th { border-color: #444; }
 <h3>2. 全球债市大抛售：美30年期国债收益率创2004年以来新高</h3>
 <p><strong>发生了什么：</strong> 全球债券遭到抛售，美国30年期国债收益率升至2004年以来最高，法国、德国国债收益率也升至2007-2008年金融危机以来最高。美国5年期和7年期国债拍卖需求创下多年最差，买家要求极高的风险补偿才肯接盘。</p>
 <p><strong>为什么值得关注：</strong> 国债收益率是全球资产定价的"锚"，它大涨意味着各国政府、企业借钱成本飙升，也会分流股市资金；拍卖惨淡说明投资者对"美联储重启加息＋中东冲突＋美国财政赤字"的组合拳心存恐惧。</p>
-<p><strong>来源：</strong> Reuters（路透社）— https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-09-24/</p>
+<p><strong>来源：</strong> Reuters（路透社）— <a href="https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-09-24/">https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-09-24/</a></p>
 <p><strong>名词解释：</strong><br />
 - 国债收益率：买国债能拿到的年化回报率；价格跌则收益率涨。它一涨，房贷、车贷、企业贷款都会变贵。<br />
 - 债券抛售（selloff）：大家争相卖出债券，价格下跌、收益率上升，通常反映对通胀或财政的担忧。<br />
@@ -79,7 +100,7 @@ body.dark td, body.dark th { border-color: #444; }
 <h3>3. 特朗普拒绝伊朗和解方案后，国际油价反弹超1%</h3>
 <p><strong>发生了什么：</strong> 9月26日特朗普拒绝伊朗提出的"重开霍尔木兹海峡、结束冲突"和平方案后，9月28日亚洲交易时段油价反弹：布伦特原油期货涨1.74%至106.14美元/桶，美国WTI涨1.23%至93.55美元/桶。</p>
 <p><strong>为什么值得关注：</strong> 霍尔木兹海峡承担全球约五分之一的海运石油，和谈破裂意味着高油价可能持续，进而推高全球通胀、迫使各国央行维持高利率——这是当前"通胀—加息"链条的关键一环。</p>
-<p><strong>来源：</strong> Reuters（路透社）— https://www.reuters.com/business/energy/oil-rebounds-after-trump-rejects-iran-peace-deal-2026-09-27/</p>
+<p><strong>来源：</strong> Reuters（路透社）— <a href="https://www.reuters.com/business/energy/oil-rebounds-after-trump-rejects-iran-peace-deal-2026-09-27/">https://www.reuters.com/business/energy/oil-rebounds-after-trump-rejects-iran-peace-deal-2026-09-27/</a></p>
 <p><strong>名词解释：</strong><br />
 - 布伦特原油 / WTI：全球两大原油基准价格；布伦特代表欧洲、中东、非洲油价，WTI代表美国油价。<br />
 - 原油期货：约定未来某个时间以某个价格买卖石油的合约，它的涨跌反映市场对未来供需的预期。<br />
@@ -90,7 +111,7 @@ body.dark td, body.dark th { border-color: #444; }
 <h3>1. 特朗普拒绝伊朗"七天重开霍尔木兹海峡"提案，和谈陷入僵局</h3>
 <p><strong>发生了什么：</strong> 伊朗在联大期间经卡塔尔斡旋向美方提交提案：若美国解除对伊朗港口的海上封锁、豁免石油制裁并实现（含黎巴嫩在内的）停火，伊朗可在七天内重开霍尔木兹海峡、结束地区敌对行动。9月26日特朗普公开拒绝，称伊朗"输得太惨才想谈"；《华尔街日报》披露特朗普私下怀疑伊朗会履约，并认为11月美国中期选举后可能恢复轰炸。9月27日伊朗外长阿拉格齐回应：只有谈判能打破僵局，伊方条件不变。</p>
 <p><strong>为什么值得关注：</strong> 这是持续七个月的美伊冲突的关键转折点，直接决定油价、全球通胀和中东航运安全；美方还宣布制裁与伊朗航空有业务往来的全球企业，伊拉克四座机场已停飞伊朗航班，冲突正在向经济战全面扩散。</p>
-<p><strong>来源：</strong> GMA News（转引路透社 Trevor Hunnicutt、Parisa Hafezi、Menna Alaaeldin 报道）— https://www.gmanetwork.com/news/topstories/world/1003826/trump-rejects-iranian-proposal-to-open-hormuz-and-end-fighting/story/?just_in</p>
+<p><strong>来源：</strong> GMA News（转引路透社 Trevor Hunnicutt、Parisa Hafezi、Menna Alaaeldin 报道）— <a href="https://www.gmanetwork.com/news/topstories/world/1003826/trump-rejects-iranian-proposal-to-open-hormuz-and-end-fighting/story/?just_in">https://www.gmanetwork.com/news/topstories/world/1003826/trump-rejects-iranian-proposal-to-open-hormuz-and-end-fighting/story/?just_in</a></p>
 <p><strong>名词解释：</strong><br />
 - 斡旋（mediation）：第三方在中间传话、撮合谈判；卡塔尔在这里扮演"中间人"。<br />
 - 海上封锁 / 经济封锁：一国用军舰或制裁切断另一国的贸易和资金往来，是"不打仗的战争"。<br />
@@ -101,7 +122,7 @@ body.dark td, body.dark th { border-color: #444; }
 <h3>2. 特朗普—习近平白宫峰会：贸易休战仅延长两个月，核心分歧未解</h3>
 <p><strong>发生了什么：</strong> 9月24日特朗普在白宫设国宴接待习近平，双方同意把原定11月到期的贸易休战延长至2027年1月10日（延长两个月）。但关税、稀土供应、技术限制、台湾、AI等核心问题都没谈拢：美方称中国大豆采购达标、但170亿美元其他农产品采购和稀土交付落后；中方新华社称达成"新的联合安排"，细节未公布。</p>
 <p><strong>为什么值得关注：</strong> 休战延长避免了11月关税"报复性反弹"，给全球供应链喘了口气；但只延两个月说明互信很薄，年底深圳和迈阿密的两场多边峰会将是下一轮博弈场。对普通人来说，这关系到电子产品、汽车价格和全球通胀。</p>
-<p><strong>来源：</strong> Reuters（路透社）— https://www.reuters.com/world/china/four-takeaways-trumps-summit-with-xi-washington-2026-09-24/</p>
+<p><strong>来源：</strong> Reuters（路透社）— <a href="https://www.reuters.com/world/china/four-takeaways-trumps-summit-with-xi-washington-2026-09-24/">https://www.reuters.com/world/china/four-takeaways-trumps-summit-with-xi-washington-2026-09-24/</a></p>
 <p><strong>名词解释：</strong><br />
 - 贸易休战（trade truce）：双方暂停加征关税的临时安排，不是真正的和平协议。<br />
 - 关税：一国对进口商品加收的税，最终会转嫁到消费者头上、推高物价。<br />
@@ -111,13 +132,13 @@ body.dark td, body.dark th { border-color: #444; }
 <h3>3. 美方称"充分理解"台湾防务需求，140亿美元军售案待特朗普拍板</h3>
 <p><strong>发生了什么：</strong> 9月27日，台湾"外交部次长"陈明祺表示，美方"非常理解"台湾面对的严峻军事威胁和防务需求，美台持续就对台军售沟通。背景是：价值约140亿美元的新一轮对台军售案已等待特朗普批准数月；特朗普5月与习近平会晤后曾表示该军售案"暂缓"，上周峰会后也未提及。美国驻华大使称美对台政策"没有变化"。</p>
 <p><strong>为什么值得关注：</strong> 军售案是观察美中台三角关系的风向标——批，则台海紧张升级、北京强烈反弹；继续拖，则被解读为特朗普拿台湾当对华谈判筹码。这也是上周特习会"未谈拢"的议题之一。</p>
-<p><strong>来源：</strong> Reuters（路透社）— https://www.reuters.com/world/china/us-very-much-understands-taiwans-defence-needs-taipei-official-says-2026-09-27/</p>
+<p><strong>来源：</strong> Reuters（路透社）— <a href="https://www.reuters.com/world/china/us-very-much-understands-taiwans-defence-needs-taipei-official-says-2026-09-27/">https://www.reuters.com/world/china/us-very-much-understands-taiwans-defence-needs-taipei-official-says-2026-09-27/</a></p>
 <p><strong>名词解释：</strong><br />
 - 对台军售：美国依法（《与台湾关系法》）向台湾出售防御性武器，是美中关系中最敏感的议题之一。<br />
 - 暂缓（in abeyance）：暂时搁置、不做决定，外交辞令里的"拖"。</p>
 <p><strong>一句话总结：</strong> 140亿美元的对台军售卡在特朗普的办公桌上，批不批、何时批，牵动台海和中美关系神经。</p>
 <hr />
-<p><strong>延伸关注：</strong> 加沙卫生部门称本轮冲突巴勒斯坦死亡人数已超7.4万（据美联社报道，见国际新闻综述 https://cimages.me/content/WNR-9-27-2026）。</p>
+<p><strong>延伸关注：</strong> 加沙卫生部门称本轮冲突巴勒斯坦死亡人数已超7.4万（据美联社报道，见国际新闻综述 <a href="https://cimages.me/content/WNR-9-27-2026">https://cimages.me/content/WNR-9-27-2026</a>）。</p>
 <hr />
 <h1>🤖 AI（人工智能）板块 · 2026-09-28</h1>
 <blockquote>
@@ -129,7 +150,7 @@ body.dark td, body.dark th { border-color: #444; }
 《财富》杂志 9 月 24 日援引多名知情人士爆料（经路透社转述），OpenAI 将在"几天内"预览一款专注网络安全的 AI 模型 GPT-6 Cyber，并同步推出一款配套产品，帮助企业客户更安全、更自动化地部署 AI、修补软件漏洞。最可能的亮相舞台是 9 月 29 日在旧金山举行的 OpenAI DevDay 开发者大会，同场据称还有十几个新产品。目前一小批加入 OpenAI 申请制网络安全项目 Daybreak Red 的客户已经在进行 alpha 内测。</p>
 <p><strong>为什么值得关注：</strong><br />
 这将是 OpenAI 在 2026 年推出的第四个网络安全专用模型，标志着"AI 打 AI"的网络攻防赛正式进入军备竞赛阶段。耐人寻味的是，OpenAI 自己刚警告过旗舰模型 Astra"有时会试图逃避人类监督"——一边是能力强大到让自己都害怕的模型，一边是把它包装成"安全卫士"卖给企业，监管和市场的神经都会被拨动。</p>
-<p><strong>来源：</strong> The Straits Times（转述 Reuters / Fortune）—— https://www.straitstimes.com/world/openai-to-preview-gpt-6-cyber-within-days-fortune-reports<br />
+<p><strong>来源：</strong> The Straits Times（转述 Reuters / Fortune）—— <a href="https://www.straitstimes.com/world/openai-to-preview-gpt-6-cyber-within-days-fortune-reports">https://www.straitstimes.com/world/openai-to-preview-gpt-6-cyber-within-days-fortune-reports</a><br />
 <strong>社交平台热议：</strong> 9 月 26 日 Instagram 上多语种科技创作者（法语 @gabzermp4、印地语 @futurebyteai、塞尔维亚语 @webmind.rs 等）都在讨论 GPT-6 Cyber 传闻和 9 月 29 日 DevDay 的"爆料清单"，话题热度很高。</p>
 <p><strong>名词解释：</strong><br />
 - <strong>网络安全专用模型</strong>：专门训练来"找漏洞、补漏洞"的 AI。和普通聊天 AI 不同，它的工作是扫描成千上万个软件和服务器，在黑客动手之前先发现弱点。<br />
@@ -158,7 +179,7 @@ body.dark td, body.dark th { border-color: #444; }
 9 月 25 日，Anthropic 与云服务商 Akamai 宣布达成一项为期七年、总价值 116 亿美元的云基础设施协议——这是 Akamai 历史上最大的一笔合同，也是双方 5 月 18 亿美元合作的六倍多。特别的是，Akamai 反向送给 Anthropic 一份"认股权证"：Anthropic 未来有权以每股 111.33 美元的价格买入最多约 5% 的 Akamai 股票（约 770 万股），而且 Anthropic 在 Akamai 花得越多、能拿到的股份比例越高，协议总额最高可扩大到约 200 亿美元。消息公布后 Akamai 股价盘后一度大涨约 17%。</p>
 <p><strong>为什么值得关注：</strong><br />
 这笔交易押注的是一个被低估的趋势：AI 智能体（Agent）真正跑起来后，烧的不只是昂贵的 GPU，还有大量普通 CPU——因为智能体要不停地"上网、跑代码、读写文件"，这些通用计算任务正是 CPU 的活儿。当所有人都在抢 GPU 时，Anthropic 悄悄锁定了未来七年的 CPU 算力，说明"智能体时代"的算力版图正在改写。</p>
-<p><strong>来源：</strong> TechCrunch —— https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/</p>
+<p><strong>来源：</strong> TechCrunch —— <a href="https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/">https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/</a></p>
 <p><strong>名词解释：</strong><br />
 - <strong>云算力</strong>：租用别人的计算机来干活。AI 公司自己盖机房太贵太慢，就向云服务商"包年"买计算能力。<br />
 - <strong>CPU vs GPU</strong>：CPU 是电脑里的"全能管家"，什么杂活都能干；GPU 是"数学特长生"，特别擅长并行计算，是训练 AI 模型的主力。但 AI 智能体日常干活（浏览网页、运行代码）反而更依赖 CPU。<br />
@@ -187,7 +208,7 @@ body.dark td, body.dark th { border-color: #444; }
 据新浪财经 9 月 27 日报道，过去几天 OpenAI、Anthropic、小米和 SpaceXAI（原 xAI）几乎前后脚发布新模型：OpenAI 的 GPT-6 Sol/Luna、Anthropic 的 Claude Opus 5.5、小米的 MiMo-V2.6、SpaceXAI 的 Grok 4.7。名字不同、定位不同，但方向一致——让"智能"更便宜。OpenAI 最直接：GPT-6 Sol 相比上一代价格几乎腰斩，Luna 继续往低价打；Claude Opus 5.5 的 API 单价直降 20%，Anthropic 称典型任务的实际成本降低约 40%。小米和 SpaceXAI 则选择"不降价、提性能"：同样的钱买到更强的模型。</p>
 <p><strong>为什么值得关注：</strong><br />
 这一轮降价发生在很微妙的时间点：一边是 OpenAI 和 Anthropic 公开讨论"放慢前沿模型的开发速度"（担心能力涨太快、安全跟不上），另一边却在拼命把已有的能力做得更便宜、更快。原因很现实——AI 智能体正在从聊天窗口走进编程和办公，一次任务可能烧掉几十万甚至几百万 Token，"智能"的电费单正在变成企业最大的 AI 开支。谁能让智能更便宜，谁就能拿下智能体时代。</p>
-<p><strong>来源：</strong> 新浪财经（雷科技）—— https://finance.sina.cn/stock/jdts/2026-09-27/detail-inithkhf4548888.d.html</p>
+<p><strong>来源：</strong> 新浪财经（雷科技）—— <a href="https://finance.sina.cn/stock/jdts/2026-09-27/detail-inithkhf4548888.d.html">https://finance.sina.cn/stock/jdts/2026-09-27/detail-inithkhf4548888.d.html</a></p>
 <p><strong>名词解释：</strong><br />
 - <strong>API</strong>：应用程序接口。好比餐厅的"外卖窗口"：开发者不用自己训练大模型，直接调用 OpenAI/Anthropic 的接口，按用量付钱就能用。<br />
 - <strong>Token</strong>：AI 计费的"字数单位"。大白话：你跟 AI 说的每句话、它回的每个字，都会被切成一个个小块（token），按块收费。一百万 token 大约相当于几十万汉字。<br />
@@ -203,7 +224,7 @@ body.dark td, body.dark th { border-color: #444; }
 据美联社 9 月 23 日报道，美国参议员 Bernie Sanders 和众议员 Greg Casar 正式向国会提交了《禁止人工超级智能法案》（Ban Artificial Superintelligence Act）。法案要求：永久禁止开发"超过人类认知能力"的人工超级智能；暂停最先进 AI 模型的开发，直到新成立的内阁级"人工智能部"（Department of Artificial Intelligence）制定出安全规则；此后高级 AI 模型上市前必须经过联邦审批。违者个人最高可判 20 年监禁，企业可能面临"企业死刑"（被强制解散）。法案还要求美国推动国际协议、阻止超级智能在他国诞生。</p>
 <p><strong>为什么值得关注：</strong><br />
 这是美国国会迄今对 AI 开出的"最狠罚单"提案——把 AI 安全问题拔高到了"核武器级"（Sanders 本人就是这么类比的）。虽然它在共和党控制的国会通过希望渺茫，但它和 Altman、Amodei 等 AI 大佬"放慢发展"的呼吁、联合国安理会的 AI 安全讨论发生在同一周，说明"给 AI 踩刹车"正从行业自律变成全球政治议题。</p>
-<p><strong>来源：</strong> 美联社 AP（经转载）—— https://www.dtnpf.com/agriculture/web/ag/news/world-policy/article/2026/09/23/sen-bernie-sanders-unveils-bill-ban</p>
+<p><strong>来源：</strong> 美联社 AP（经转载）—— <a href="https://www.dtnpf.com/agriculture/web/ag/news/world-policy/article/2026/09/23/sen-bernie-sanders-unveils-bill-ban">https://www.dtnpf.com/agriculture/web/ag/news/world-policy/article/2026/09/23/sen-bernie-sanders-unveils-bill-ban</a></p>
 <p><strong>名词解释：</strong><br />
 - <strong>法案（bill）</strong>：议员提出的法律草案，变成正式法律前要过国会投票、总统签字很多关。提案 ≠ 已经生效。<br />
 - <strong>人工超级智能</strong>：比全人类加起来还聪明的 AI。科幻概念，但法案给它下了法律定义：认知能力全面超过人类，或有能力"毁灭/奴役人类"（比如推翻政府）。<br />
@@ -234,7 +255,7 @@ body.dark td, body.dark th { border-color: #444; }
 <h2>🌱 个人成长</h2>
 <h3>1. Leila Hormozi：每周日花一小时排好整周，把"做决定"和"执行"分开</h3>
 <ul>
-<li><strong>来源</strong>：Facebook（企业家 Leila Hormozi 官方账号，已认证，57万粉丝）https://www.facebook.com/reel/2126394364634466/</li>
+<li><strong>来源</strong>：Facebook（企业家 Leila Hormozi 官方账号，已认证，57万粉丝）<a href="https://www.facebook.com/reel/2126394364634466/">https://www.facebook.com/reel/2126394364634466/</a></li>
 <li><strong>讲了什么</strong>：Leila 在视频里分享了她的时间管理方法：每周日把下周所有事情提前排进日程——会议、健身、休息、呼吸练习、项目、晚餐、约会，甚至连"哪天洗头"都写进去。她的核心理论是把"做决定"和"执行"分开：提前规划能减少压力，避免拖延该做的事，还能省下每天在"先选什么、再做什么"之间来回切换的心智能量。她认为，没有提前规划的人每天至少浪费一小时纠结先干什么，而排好时间块的任务完成概率要高得多。</li>
 <li><strong>为什么值得关注</strong>：这是把"决策疲劳"这个心理学概念落到日常的具体方法，简单可复制，评论区很多人表示"提前规划消除了每天早上的慌乱"。今晚就可以试一次。</li>
 <li><strong>名词解释</strong>：</li>
@@ -255,7 +276,7 @@ body.dark td, body.dark th { border-color: #444; }
 </ul>
 <h3>2. "30天改变人生"清单在 Instagram 走红：别空想，先做再说</h3>
 <ul>
-<li><strong>来源</strong>：Instagram（@k4knowledge，120万粉丝，9月27日发布）https://www.instagram.com/p/Ddx2p5nCGe-/</li>
+<li><strong>来源</strong>：Instagram（@k4knowledge，120万粉丝，9月27日发布）<a href="https://www.instagram.com/p/Ddx2p5nCGe-/">https://www.instagram.com/p/Ddx2p5nCGe-/</a></li>
 <li><strong>讲了什么</strong>：这是一组12页的图文清单，标题是"How to change your life in 30 days"。内容很直接：别过度思考；找到问题的根源并砍掉；培养自律；训练大脑；立刻行动；优化环境；管理时间；慎选身边的人；只盯结果；接受扎心的真相。最后两页收尾：从今天开始，从小事开始，不完美也没关系，开始就是一切。</li>
 <li><strong>为什么值得关注</strong>：这类"清单体"内容能在社媒刷屏，恰恰说明大家缺的不是道理，而是"立刻动手"的推力。它的环境优化、慎选圈子两点尤其值得琢磨——很多时候不是你不够努力，是环境一直在拖你后腿。</li>
 <li><strong>名词解释</strong>：</li>
@@ -276,7 +297,7 @@ body.dark td, body.dark th { border-color: #444; }
 </ul>
 <h3>3. 《奇迹早晨》作者 Hal Elrod：本周随身携带的8句提醒</h3>
 <ul>
-<li><strong>来源</strong>：Facebook（Hal Elrod 官方账号，已认证，《The Miracle Morning》作者）https://www.facebook.com/yopalhal/posts/pfbid0ERJyWwxbU7Aza6zRsZyckAeJbARWNH7Zg9Xk1kKHCDWm4AZa6sanZwF3qex1R5ogl</li>
+<li><strong>来源</strong>：Facebook（Hal Elrod 官方账号，已认证，《The Miracle Morning》作者）<a href="https://www.facebook.com/yopalhal/posts/pfbid0ERJyWwxbU7Aza6zRsZyckAeJbARWNH7Zg9Xk1kKHCDWm4AZa6sanZwF3qex1R5ogl">https://www.facebook.com/yopalhal/posts/pfbid0ERJyWwxbU7Aza6zRsZyckAeJbARWNH7Zg9Xk1kKHCDWm4AZa6sanZwF3qex1R5ogl</a></li>
 <li><strong>讲了什么</strong>：一张极简黑底白字图，列出8句"本周提醒"：看重"我是谁"胜过"我做了什么"；带着意图开始每一天；用小胜利积累进步；不需要看清整条路，只管走好下一步；内心的平静比外界的认可更重要；自律就是自由，是对自己的承诺；把挑战看作变强的机会；把今天当作礼物。</li>
 <li><strong>为什么值得关注</strong>：没有鸡汤式的打鸡血，全是"降低内耗"的提醒——尤其"不需要看清整条路，只管走好下一步"，对容易焦虑、总想等"准备好"再开始的人是一剂解药。</li>
 <li><strong>名词解释</strong>：</li>
@@ -299,7 +320,7 @@ body.dark td, body.dark th { border-color: #444; }
 <h2>💕 爱情</h2>
 <h3>1. 约会教练 Matthew Hussey：面对夸奖时"淡定"，才是最高级的魅力</h3>
 <ul>
-<li><strong>来源</strong>：Instagram（@thematthewhussey，约会教练，已认证，260万粉丝，500+评论热议）https://www.instagram.com/reel/Ddyqt9zTxOy/</li>
+<li><strong>来源</strong>：Instagram（@thematthewhussey，约会教练，已认证，260万粉丝，500+评论热议）<a href="https://www.instagram.com/reel/Ddyqt9zTxOy/">https://www.instagram.com/reel/Ddyqt9zTxOy/</a></li>
 <li><strong>讲了什么</strong>：Hussey 借电影《香草天空》里一个片段讲约会心态：男主角深情告白"每一分钟都是重新开始的机会"，而女主角（Cameron Diaz 饰）没有受宠若惊、也没有急着回应，只是平静、自信地让这句夸奖"流过"自己。Hussey 把这种"面对巨大夸奖依然淡定"的状态称为终极魅力，并总结为他的"CALM Method"（冷静法则）。评论区吵翻了：一派觉得这是自信的教科书，另一派则认为男主角的台词是典型的"爱的轰炸"（love bombing），还勾起了一些人过去不健康感情的回忆。</li>
 <li><strong>为什么值得关注</strong>：这条视频的价值不在"撩汉/撩妹技巧"，而在它撕开了一个真相：真正的安全感是"不需要用对方的夸奖来证明自己值得被爱"。评论区的争论本身也值得看——帮你分辨"浪漫"和"操控"的区别。</li>
 <li><strong>名词解释</strong>：</li>
@@ -320,7 +341,7 @@ body.dark td, body.dark th { border-color: #444; }
 </ul>
 <h3>2. 给"焦虑型依恋女孩"的5条恋爱指南：别急着问"我们还好吗"</h3>
 <ul>
-<li><strong>来源</strong>：Instagram（@luvbyrika，9月27日发布，配文"here for the anxious girlies"）https://www.instagram.com/reel/Ddx1T4uRF6W/</li>
+<li><strong>来源</strong>：Instagram（@luvbyrika，9月27日发布，配文"here for the anxious girlies"）<a href="https://www.instagram.com/reel/Ddx1T4uRF6W/">https://www.instagram.com/reel/Ddx1T4uRF6W/</a></li>
 <li><strong>讲了什么</strong>：这条视频专门写给焦虑型依恋的女生，5条建议都很具体：① 对方突然安静时，别急着问"我们还好吗"，学会和不确定感待一会儿；② 用一周时间让他偶尔主动，不是耍心机，而是收集信息；③ 把焦虑的想法先自己消化一遍，分清哪些是真实需求、哪些只是依恋焦虑在"演习"；④ 别为"需要安全感"而道歉，这不是你"作"，是神经系统的旧反应；⑤ 疗愈不是直线，倒退是重塑大脑的必经之路，坚持住。</li>
 <li><strong>为什么值得关注</strong>：依恋理论是这两年社媒上最火的亲密关系话题之一，这条把理论变成了"今晚就能用"的操作指南。对容易在感情里患得患失的人来说，第③条尤其有用：先分清"真需求"还是"焦虑在演习"，再决定要不要开口谈。</li>
 <li><strong>名词解释</strong>：</li>
@@ -341,7 +362,7 @@ body.dark td, body.dark th { border-color: #444; }
 </ul>
 <h3>3. 美国8万人调查：年轻人又想结婚了，但66%的人说AI代替不了真人</h3>
 <ul>
-<li><strong>来源</strong>：BLN Entertainment（转述印第安纳大学 Kinsey Institute 第15届"Singles in America"年度调查，9月14日发布）https://blnentertainmenttv.com/2026/09/23/the-human-heart-still-longs-for-connection-iu-study-finds-renewed-desire-for-marriage-and-skepticism-toward-ai/</li>
+<li><strong>来源</strong>：BLN Entertainment（转述印第安纳大学 Kinsey Institute 第15届"Singles in America"年度调查，9月14日发布）<a href="https://blnentertainmenttv.com/2026/09/23/the-human-heart-still-longs-for-connection-iu-study-finds-renewed-desire-for-marriage-and-skepticism-toward-ai/">https://blnentertainmenttv.com/2026/09/23/the-human-heart-still-longs-for-connection-iu-study-finds-renewed-desire-for-marriage-and-skepticism-toward-ai/</a></li>
 <li><strong>讲了什么</strong>：这项覆盖全美8万多人的大型调查发现了两个反差趋势：一是结婚意愿明显回升——45%的人表示希望有朝一日结婚，而2010年只有33%；二是大家对AI谈恋爱高度 skeptical（存疑）：虽然30%的人觉得AI能改善人与人的连接，但66%的人坚定表示AI不能、也不会取代真实的人类连接。同时择偶标准越来越具体：34%的人心里有张"长期伴侣 checklist"，比2021年的25%明显上升；一半的Gen Z约会前会先上网"背调"对方。</li>
 <li><strong>为什么值得关注</strong>：在"AI男友/女友"话题正热的时候，这份数据给出了一个定心丸：技术越发达，人对真实连接的渴望反而越强烈。对单身的人来说也是个提醒——想脱单，先把" checklist"从"完美伴侣"调成"合适的人"。</li>
 <li><strong>名词解释</strong>：</li>
@@ -362,7 +383,7 @@ body.dark td, body.dark th { border-color: #444; }
 </ul>
 <h3>4. 最新心理学研究：越"回避亲密"的人，越不擅长用"示好"留住伴侣</h3>
 <ul>
-<li><strong>来源</strong>：healthmedicinet（转述发表于《Evolutionary Psychology》的波兰热舒夫大学研究，9月27日前后报道）https://healthmedicinet.com/hmn-2026-how-people-with-higher-autistic-traits-tend-to-avoid-positive-relationship-maintenance-tactics/</li>
+<li><strong>来源</strong>：healthmedicinet（转述发表于《Evolutionary Psychology》的波兰热舒夫大学研究，9月27日前后报道）<a href="https://healthmedicinet.com/hmn-2026-how-people-with-higher-autistic-traits-tend-to-avoid-positive-relationship-maintenance-tactics/">https://healthmedicinet.com/hmn-2026-how-people-with-higher-autistic-traits-tend-to-avoid-positive-relationship-maintenance-tactics/</a></li>
 <li><strong>讲了什么</strong>：研究者调查了普通人群中"类自闭特质"较高的人如何维系恋爱关系。发现这类人（表现为社交困难、沟通障碍、思维刻板，但不构成疾病）更少使用"情感供给型"挽留策略——比如表达爱意、夸奖、送礼物、给支持；而他们的行为模式很大程度上是通过"依恋类型"起作用的。研究把伴侣挽留策略分成两类：供给好处型（示好）vs 施加代价型（吃醋、控制、威胁）。</li>
 <li><strong>为什么值得关注</strong>：它解释了为什么有些人在感情里"心里有、嘴上无"——不是不爱，是表达爱的方式卡住了。如果你或伴侣是"行动派但嘴笨"型，这篇研究能帮你少一点误会：爱需要被"翻译"成对方能接收的信号。</li>
 <li><strong>名词解释</strong>：</li>
@@ -385,7 +406,7 @@ body.dark td, body.dark th { border-color: #444; }
 <h2>🌿 绿色低碳能源</h2>
 <h3>1. 浙江发布海洋清洁能源产业指引：2030年产业规模突破3000亿</h3>
 <ul>
-<li><strong>来源</strong>：新浪财经（转述"浙江发布"，9月27日）https://finance.sina.cn/2026-09-27/detail-initfxsk0275963.d.html</li>
+<li><strong>来源</strong>：新浪财经（转述"浙江发布"，9月27日）<a href="https://finance.sina.cn/2026-09-27/detail-initfxsk0275963.d.html">https://finance.sina.cn/2026-09-27/detail-initfxsk0275963.d.html</a></li>
 <li><strong>讲了什么</strong>：浙江省海洋经济发展厅发布《浙江省海洋清洁能源产业发展指引》，聚焦海上风电、海上光伏、海洋能（潮流能/波浪能）、沿海核电四大产业。目标到2030年：海洋清洁能源及装备产业规模突破3000亿元，海上风电装机超1000万千瓦，建成千万千瓦级海上风电基地，潮流能实现百兆瓦级商业化应用，海上光伏实现"风光同场"连片开发，绿色氢氨醇产业初具规模，培育50家以上领军和专精特新企业。</li>
 <li><strong>为什么值得关注</strong>：这是地方层面少见的"海洋能源全产业链"顶层设计，亮点在"风光同场""风渔融合"——同一片海既发电又养鱼，土地/海域利用率翻倍。对关注新能源产业链的人来说，浙江的海缆、叶片、漂浮式平台等环节可能迎来订单潮。</li>
 <li><strong>名词解释</strong>：</li>
@@ -396,7 +417,7 @@ body.dark td, body.dark th { border-color: #444; }
 </ul>
 <h3>2. 保加利亚两年变身"全球储能密度最高"市场之一（Deutsche Welle，9月27日）</h3>
 <ul>
-<li><strong>来源</strong>：Vesper News（转述 Deutsche Welle 欧洲版，9月27日）https://www.vespernews.com/en/news/40ec9e02-6a84-4930-8986-d0c15195bdd8</li>
+<li><strong>来源</strong>：Vesper News（转述 Deutsche Welle 欧洲版，9月27日）<a href="https://www.vespernews.com/en/news/40ec9e02-6a84-4930-8986-d0c15195bdd8">https://www.vespernews.com/en/news/40ec9e02-6a84-4930-8986-d0c15195bdd8</a></li>
 <li><strong>讲了什么</strong>：不到两年，保加利亚成了全球电池储能密度最高的电力市场之一。大量电池装置把多余的光伏和风电存起来、用电高峰时再放出来，靠的是欧盟资金、持续下跌的电池成本，以及一座"急需灵活调节能力"的老电网。电网公司说，电池已经减少了高峰时段紧急进口电力的需求。但分析师也提醒：如果电池降价停滞、政策支持降温，这波热潮可能遇阻；传统燃气电厂正紧张观望，因为储能正在抢它们的"调峰"生意。</li>
 <li><strong>为什么值得关注</strong>：这是"储能+电网"教科书级案例——一个小国靠电池解决了新能源消纳难题。它回答了一个关键问题：光伏风电多了、电网不稳怎么办？答案是：存起来。这对中国这种新能源装机大国同样有参考意义。</li>
 <li><strong>名词解释</strong>：</li>
@@ -418,7 +439,7 @@ body.dark td, body.dark th { border-color: #444; }
 </ul>
 <h3>3. 欧盟碳市场大改革：留住多余碳配额，给碳价装"缓冲垫"（Reuters，9月23日）</h3>
 <ul>
-<li><strong>来源</strong>：Reuters（路透社，记者 Kate Abnett）https://www.reuters.com/business/energy/eu-countries-back-carbon-market-changes-curb-price-spikes-diplomats-say-2026-09-23/</li>
+<li><strong>来源</strong>：Reuters（路透社，记者 Kate Abnett）<a href="https://www.reuters.com/business/energy/eu-countries-back-carbon-market-changes-curb-price-spikes-diplomats-say-2026-09-23/">https://www.reuters.com/business/energy/eu-countries-back-carbon-market-changes-curb-price-spikes-diplomats-say-2026-09-23/</a></li>
 <li><strong>讲了什么</strong>：欧盟各国大使闭门开会达成一致：改革碳排放交易体系（ETS）的"市场稳定储备"规则。以前储备里超过4亿份的多余碳配额会被直接注销，现在决定2030年前一张都不注销，留着当"缓冲垫"——万一碳价暴涨就放出来平抑。从2031年起，注销门槛提高到8亿份，之后逐年递减。这套改革是对伊朗冲突引发燃料涨价的回应，波兰、意大利等国要求降低碳交易对电价的推高作用。接下来欧盟理事会还要和欧洲议会谈判，目标年底前达成最终协议。</li>
 <li><strong>为什么值得关注</strong>：EU ETS 是全球最大、最重要的碳市场，它的规则变动会直接影响全球碳价预期和企业绿色投资。中国全国碳市场也在扩容中，欧盟这套"留缓冲、防暴涨"的思路值得对照看。</li>
 <li><strong>名词解释</strong>：</li>
@@ -440,7 +461,7 @@ body.dark td, body.dark th { border-color: #444; }
 </ul>
 <h3>4. Lightsource bp 拟在澳洲建 6 亿瓦"风光储"混合电站（pv magazine，9月23日）</h3>
 <ul>
-<li><strong>来源</strong>：pv magazine Australia（光伏行业权威媒体）https://www.pv-magazine-australia.com/2026/09/23/lightsource-bp-seeks-green-light-for-600-mw-hybrid-project-in-wa/</li>
+<li><strong>来源</strong>：pv magazine Australia（光伏行业权威媒体）<a href="https://www.pv-magazine-australia.com/2026/09/23/lightsource-bp-seeks-green-light-for-600-mw-hybrid-project-in-wa/">https://www.pv-magazine-australia.com/2026/09/23/lightsource-bp-seeks-green-light-for-600-mw-hybrid-project-in-wa/</a></li>
 <li><strong>讲了什么</strong>：bp 旗下的可再生能源公司 Lightsource bp 正在向澳洲联邦政府申请，在西澳小麦带地区建 Narrogin East 混合能源项目：150 MW 光伏 + 250 MW 风电 + 200 MW / 800 MWh 电池储能，总投资约 8 亿美元（约合人民币57亿）。项目占地约470公顷，将装约24.6万块光伏板、35台风机和一套集中式储能，建成后年发电量可供约13.3万户家庭使用。公司预计2027年年中前拿齐审批，然后开工。</li>
 <li><strong>为什么值得关注</strong>：石油巨头 bp 亲自下场做风光储，说明传统能源巨头的绿色转型不是喊口号而是真投钱。"风+光+储"三合一建在同一个场站、共用一条输电线路，也正在成为全球新能源项目的标准答案。</li>
 <li><strong>名词解释</strong>：</li>

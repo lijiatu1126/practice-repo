@@ -5,38 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>《麻薯日报》第21期 · 2026-10-17</title>
 <style>
-body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-       max-width: 720px; margin: 0 auto; padding: 24px 20px 40px; line-height: 2.0;
+/* 《麻薯日报》报纸版式（2026-10-23 Ricardo 要求：像真正的报纸） */
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       max-width: 720px; margin: 0 auto; padding: 28px 20px 48px; line-height: 2.0;
        font-size: 17.5px; letter-spacing: 0.01em;
-       color: #222; background: #fffdf8; }
+       color: #1c1a17; background: #fbf8f1; }
 p { margin: 1.1em 0; }
-h1 { font-size: 1.5em; line-height: 1.5; }
-h2 { border-bottom: 2px solid #f0c75e; padding-bottom: 6px; margin-top: 2.2em; line-height: 1.5; }
-h3 { margin-top: 1.8em; line-height: 1.55; }
-a { color: #1d4fd7; text-decoration: underline; text-underline-offset: 3px; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em;
+             margin: 0 0 6px; padding: 0; border: none; }
+blockquote p { margin: 4px 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 2.4em; border: none; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 2.1em; padding-top: 1.15em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
 a:visited { color: #6d4fc2; }
-ul li, ol li { margin: 10px 0; }
+ul li, ol li { margin: 13px 0; line-height: 1.95; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.2em 0; }
 img { max-width: 100%; }
-table { border-collapse: collapse; }
-td, th { border: 1px solid #ccc; padding: 4px 8px; }
-.note { color: #666; font-size: 0.92em; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+td, th { border: 1px solid #c9c2b2; padding: 6px 10px; }
+th { background: #efe9db; }
+.note { color: #6b6257; font-size: 0.92em; }
 .nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
-       border-bottom: 2px solid #f0c75e; padding-bottom: 8px; margin-bottom: 16px; font-size: 0.95em; }
-.nav.bottom { border-bottom: none; border-top: 2px solid #f0c75e; padding-top: 8px; margin-top: 24px; }
+       border-bottom: 2px solid #1c1a17; padding-bottom: 10px; margin-bottom: 20px;
+       font-size: 0.95em; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.nav.bottom { border-bottom: none; border-top: 2px solid #1c1a17; padding-top: 10px; margin-top: 32px; }
 body.spa .page { display: none; }
 body.spa .page.active { display: block; }
 a.navbtn { text-decoration: none; }
 .bgbar { text-align: right; margin-bottom: 10px; }
-#bgToggle { background: #f0c75e;
-  color: #222; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
-  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25); font-family: inherit; }
-body.dark { background: #141414; color: #e6e6e6; }
+#bgToggle { background: #1c1a17;
+  color: #f7f2e7; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
+  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+body.dark { background: #161513; color: #e8e2d5; }
+body.dark h1 { border-top-color: #e8e2d5; border-bottom-color: #e8e2d5; }
+body.dark blockquote { color: #a39a89; }
+body.dark h2 { background: #e8e2d5; color: #161513; }
+body.dark h3 { border-top-color: #3a362e; }
 body.dark a { color: #8ab8ff; }
 body.dark a:visited { color: #c4a8ff; }
-body.dark .note { color: #a8a8a8; }
-body.dark h2 { border-bottom-color: #8a6d2f; }
-body.dark .nav { border-color: #8a6d2f; }
+body.dark li > strong:first-child { color: #e0a458; }
+body.dark hr { border-top-color: #e8e2d5; }
+body.dark .note { color: #a39a89; }
+body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
+body.dark th { background: #262219; }
+body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
 <body>
@@ -51,8 +72,8 @@ body.dark td, body.dark th { border-color: #444; }
 <h2>一、财经 💹</h2>
 <h3>1. 纳指创 6 月以来最差一周，AI 债务担忧引爆科技股抛售</h3>
 <p>📌 <strong>来源</strong>：巴伦周刊 / 华尔街日报<br />
-- https://www.barrons.com/livecoverage/stock-market-news-today-101626/card/nasdaq-suffers-worst-week-since-june-ai-fears-are-shaking-markets--L5p8fiso3hzqEf33Vv8U<br />
-- https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-16-2026</p>
+- <a href="https://www.barrons.com/livecoverage/stock-market-news-today-101626/card/nasdaq-suffers-worst-week-since-june-ai-fears-are-shaking-markets--L5p8fiso3hzqEf33Vv8U">https://www.barrons.com/livecoverage/stock-market-news-today-101626/card/nasdaq-suffers-worst-week-since-june-ai-fears-are-shaking-markets--L5p8fiso3hzqEf33Vv8U</a><br />
+- <a href="https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-16-2026">https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-16-2026</a></p>
 <p><strong>发生了什么</strong>：以科技股为主的纳斯达克指数周五再跌 2.1%，全周累计下跌 4.5%，创下 6 月以来最差单周表现，终结了此前的四连涨。标普 500 全周跌约 2%，而道琼斯指数逆势上涨 0.7%，资金明显从科技股转向医药、日用品等防御性板块。导火索是市场对 AI 基建"烧钱"的担忧：英伟达支持的 AI 云服务商 CoreWeave 股价债券双杀，半导体 ETF 更是连跌 9 天，创下二十年来最长连跌纪录。</p>
 <p><strong>为什么值得关注</strong>：这是"AI 泡沫"争论第一次真正反映在股价里——投资者开始质疑巨额借债建数据中心这条路走不走得通。下周 Meta、特斯拉将率先公布财报，成绩好坏可能决定这轮抛售是短期回调还是长期转折。</p>
 <p><strong>名词解释</strong>：<br />
@@ -80,7 +101,7 @@ body.dark td, body.dark th { border-color: #444; }
 12. <strong>predict</strong> | 预测 | 常用搭配：predict the future（预测未来）, hard to predict（难以预测） | 例句：No one can predict where the market goes next.（没人能预测市场下一步走向何方。） | 名句："The best way to predict the future is to invent it." — Alan Kay（预测未来的最好方法，就是去创造未来。——艾伦·凯）</p>
 <h3>2. 美国通胀超预期，美联储 12 月加息概率飙至 89%</h3>
 <p>📌 <strong>来源</strong>：Investopedia<br />
-- https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-10162026-12176848</p>
+- <a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-10162026-12176848">https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-10162026-12176848</a></p>
 <p><strong>发生了什么</strong>：美国本周公布的 CPI（消费者价格指数）和 PPI（生产者价格指数）双双高于预期，显示物价压力挥之不去。美联储主席 Warsh 在曼谷 IMF 会议上拒绝"预判"本月是否加息，称"美联储已进入新篇章，不再做那种事"。市场押注随之调整：10 月底会议加息概率从 28% 降至 17%，但 12 月会议加息概率高达 89%。10 年期美债收益率一度冲高至 5.33%，周五回落至 5.09%。</p>
 <p><strong>为什么值得关注</strong>：通胀"退烧"失败意味着借钱成本可能继续走高——房贷、车贷、信用卡利息都和它挂钩。对普通人来说，这是"钱继续变毛、借钱继续变贵"的信号；对市场来说，12 月几乎板上钉钉的加息会压制股市估值。</p>
 <p><strong>名词解释</strong>：<br />
@@ -105,7 +126,7 @@ body.dark td, body.dark th { border-color: #444; }
 10. <strong>decision</strong> | 决定 | 常用搭配：make a decision（做决定）, tough decision（艰难的决定） | 例句：The Fed's next decision will move global markets.（美联储的下一次决议将牵动全球市场。） | 名句："Once you make a decision, the universe conspires to make it happen." — Ralph Waldo Emerson（一旦你做出决定，宇宙会合谋帮你实现。——爱默生）</p>
 <h3>3. 布伦特原油飙至 109 美元，创 5 月以来新高</h3>
 <p>📌 <strong>来源</strong>：巴伦周刊<br />
-- https://www.barrons.com/livecoverage/stock-market-news-today-101626/card/wall-street-s-fear-gauge-flashes-red-as-stocks-tumble-oil-surges-and-tech-reels-fixHy5gPLAzio74MriHe</p>
+- <a href="https://www.barrons.com/livecoverage/stock-market-news-today-101626/card/wall-street-s-fear-gauge-flashes-red-as-stocks-tumble-oil-surges-and-tech-reels-fixHy5gPLAzio74MriHe">https://www.barrons.com/livecoverage/stock-market-news-today-101626/card/wall-street-s-fear-gauge-flashes-red-as-stocks-tumble-oil-surges-and-tech-reels-fixHy5gPLAzio74MriHe</a></p>
 <p><strong>发生了什么</strong>：布伦特原油 12 月期货周五大涨 3.7%，收于每桶约 109.9 美元，创 5 月以来最高水平。直接导火索是美国国会议员采取行动，阻止特朗普从俄罗斯进口柴油的计划——市场担心供应收紧。与此同时，恐慌指数 VIX 飙升近 25% 至 20.57，10 年期美债则创下 2 月以来表现最好的一周，收益率回落至 5.097%。</p>
 <p><strong>为什么值得关注</strong>：油价是"万物之价"——原油涨，汽油、机票、快递运费、塑料制品全跟着涨，最终还是普通人买单。油价和通胀互相点火：油越贵，上面那条"通胀难退烧"的新闻就越难解决。</p>
 <p><strong>名词解释</strong>：<br />
@@ -129,7 +150,7 @@ body.dark td, body.dark th { border-color: #444; }
 <h2>二、AI 🤖</h2>
 <h3>1. 前 DeepMind 研究员发布"会反复看图"的 AI 模型 Glimpse</h3>
 <p>📌 <strong>来源</strong>：TechCrunch<br />
-- https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/</p>
+- <a href="https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/">https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/</a></p>
 <p><strong>发生了什么</strong>：Palo Alto 初创公司 Elorian 在 10 月 16 日发布了首个模型 Glimpse，目前以研究预览版开放 API，聊天界面还需排队。创始人 Andrew Dai 曾是谷歌 DeepMind 研究员，核心理念是：现在的 AI"看不懂图"——它们看一眼图片就转成文字去推理，像凭记忆描述照片；而 Glimpse 会在推理中途"回头再看"，放大局部、抽视频帧、甚至跑代码测量，被称为"视觉草稿纸"。公司称只用几百张 GPU、很小的团队就训出了它，体量远小于它对标的前沿模型。</p>
 <p><strong>为什么值得关注</strong>：这挑战了"大力出奇迹"的主流路线——如果小模型靠"看得更仔细"也能接近大模型效果，AI 竞赛可能从"拼算力"转向"拼巧思"，对创业公司是重大利好。</p>
 <p><strong>名词解释</strong>：<br />
@@ -156,7 +177,7 @@ body.dark td, body.dark th { border-color: #444; }
 12. <strong>amateur</strong> | 业余爱好者；业余的 | 常用搭配：rank amateur（纯外行）, amateur photographer（业余摄影师） | 例句：Every great lab starts as a team of amateurs.（每个伟大的实验室起初都是一群业余爱好者。） | 名句："Every artist was first an amateur." — Ralph Waldo Emerson（每位艺术家起初都是业余爱好者。——爱默生）</p>
 <h3>2. 物理 AI 实验室发布 Natura-1：500 亿参数的"灵巧手机器人脑"</h3>
 <p>📌 <strong>来源</strong>：公司官方新闻稿（经 FinancialContent 发布）<br />
-- https://www.financialcontent.com/article/accwirecq-2026-10-16-physical-ai-lab-nature-will-unveils-natura-1-first-general-foundation-model-for-the-physical-world</p>
+- <a href="https://www.financialcontent.com/article/accwirecq-2026-10-16-physical-ai-lab-nature-will-unveils-natura-1-first-general-foundation-model-for-the-physical-world">https://www.financialcontent.com/article/accwirecq-2026-10-16-physical-ai-lab-nature-will-unveils-natura-1-first-general-foundation-model-for-the-physical-world</a></p>
 <p><strong>发生了什么</strong>：物理 AI 实验室 Nature Will 在 10 月 16 日发布 Natura-1，号称首个面向物理世界的通用基础模型。它是一个 500 亿参数的混合专家模型，在语言、图像、视频和动作上联合训练，预训练用了超过 100 万小时的人类第一视角视频数据。它的本事是"灵巧手控制"：能听懂指令、直接上手做精细操作，以 0.1 秒一次的控制频率把语言、视觉和多自由度动作统一起来。</p>
 <p><strong>为什么值得关注</strong>：这是 AI 从"动嘴"（聊天）走向"动手"（干活）的关键一步——如果机器人真能像人手一样灵活拧瓶盖、捏零件，工厂、家庭服务业都会被改写。这是"具身智能"赛道今年最重磅的发布之一。</p>
 <p><strong>名词解释</strong>：<br />
@@ -183,7 +204,7 @@ body.dark td, body.dark th { border-color: #444; }
 12. <strong>believe</strong> | 相信 | 常用搭配：believe in（相信）, hard to believe（难以置信） | 例句：Many now believe robots will enter homes within years.（许多人现在相信机器人几年内就会走进家庭。） | 名句："The future belongs to those who believe in the beauty of their dreams." — Eleanor Roosevelt（未来属于相信梦想之美的人。——埃莉诺·罗斯福）</p>
 <h3>3. 奇瑞机器人品牌发布家用伴侣机器人 Mobo，开启全球预售</h3>
 <p>📌 <strong>来源</strong>：官方新闻稿（经 NY News Cast 发布）<br />
-- https://nynewscast.com/aimoga-to-launch-home-companion-robot-mobo-and-open-global-pre-orders-at-2026-chery-international-user-summit-266467/</p>
+- <a href="https://nynewscast.com/aimoga-to-launch-home-companion-robot-mobo-and-open-global-pre-orders-at-2026-chery-international-user-summit-266467/">https://nynewscast.com/aimoga-to-launch-home-companion-robot-mobo-and-open-global-pre-orders-at-2026-chery-international-user-summit-266467/</a></p>
 <p><strong>发生了什么</strong>：奇瑞旗下的机器人品牌 AiMOGA 宣布，将在 10 月 19–23 日芜湖"奇瑞国际用户生态大会"上正式展示首款家用伴侣人形机器人 Mobo，并同步开启全球预售。Mobo 搭载自研 MoAgent 系统，能把"把客厅收拾一下"这类复杂指令拆成可执行的步骤、做长期任务规划；全身 22 个自由度，能做表情、跳舞，具备空间感知和多模态交互，还能记住家庭成员的习惯偏好，官方称从设计之初就考虑了隐私保护。</p>
 <p><strong>为什么值得关注</strong>：汽车大厂纷纷跨界做机器人（把造车供应链经验搬过来），家用机器人正从"展会概念"走向"真能下单"。Mobo 是第一批面向普通家庭预售的人形机器人之一，标志着"机器人进家"开始进入消费倒计时。</p>
 <p><strong>名词解释</strong>：<br />
@@ -210,8 +231,8 @@ body.dark td, body.dark th { border-color: #444; }
 <h2>三、国际事务 🌍</h2>
 <h3>1. 泽连斯基布鲁塞尔求援 790 亿美元，欧盟声援、美乌裂痕加深</h3>
 <p>📌 <strong>来源</strong>：半岛电视台 / 南华早报<br />
-- https://www.aljazeera.com/amp/news/2026/10/16/eu-rallies-in-support-of-ukraine-amid-trump-standoff<br />
-- https://www.scmp.com/news/world/europe/article/3371207/zelensky-asks-eu-extra-79-billion-sustain-ukraines-war-effort</p>
+- <a href="https://www.aljazeera.com/amp/news/2026/10/16/eu-rallies-in-support-of-ukraine-amid-trump-standoff">https://www.aljazeera.com/amp/news/2026/10/16/eu-rallies-in-support-of-ukraine-amid-trump-standoff</a><br />
+- <a href="https://www.scmp.com/news/world/europe/article/3371207/zelensky-asks-eu-extra-79-billion-sustain-ukraines-war-effort">https://www.scmp.com/news/world/europe/article/3371207/zelensky-asks-eu-extra-79-billion-sustain-ukraines-war-effort</a></p>
 <p><strong>发生了什么</strong>：乌克兰总统泽连斯基 10 月 16 日在布鲁塞尔欧盟峰会上发表演讲，请求欧盟明年再提供 700 亿欧元（约 790 亿美元）援助，称"明年战争将花费 1550 亿欧元，至少需要你们再出 700 亿——用于国防、武器和国家韧性"。德国总理默茨表态支持加码，欧盟峰会集体声援基辅。与此同时美乌关系急冻：特朗普称乌克兰恢复打击俄炼油厂是"disgrace（耻辱）"，说泽连斯基"比普京还难打交道"；克里姆林宫则指责乌克兰袭击俄炼油厂违背了美国推动的"能源停火"。</p>
 <p><strong>为什么值得关注</strong>：欧洲正被迫独自扛起援乌大梁——美国靠不住之后，欧盟要不要动用被冻结的 2000 亿欧元俄罗斯资产，成为撕裂欧洲内部的难题。这个冬天乌克兰的能源设施能否撑住，直接关系战争走向。</p>
 <p><strong>名词解释</strong>：<br />
@@ -235,7 +256,7 @@ body.dark td, body.dark th { border-color: #444; }
 12. <strong>stand</strong> | 站立；坚持 | 常用搭配：stand by（支持）, stand firm（立场坚定） | 例句：Europe promised to stand by Ukraine through winter.（欧洲承诺在冬天与乌克兰站在一起。） | 名句："United we stand, divided we fall." — Aesop（团结则存，分裂则亡。——伊索）</p>
 <h3>2. 黑海货船连遭无人机袭击，7 名船员失踪（路透社）</h3>
 <p>📌 <strong>来源</strong>：路透社<br />
-- https://www.reuters.com/world/romania-resumes-search-seven-missing-sailors-drone-hit-ship-2026-10-16/</p>
+- <a href="https://www.reuters.com/world/romania-resumes-search-seven-missing-sailors-drone-hit-ship-2026-10-16/">https://www.reuters.com/world/romania-resumes-search-seven-missing-sailors-drone-hit-ship-2026-10-16/</a></p>
 <p><strong>发生了什么</strong>：12 小时内，两艘化学品油轮在罗马尼亚黑海海岸附近接连被无人机击中。悬挂圣马力诺旗的"Wine Trader"号在罗马尼亚领海线外约 1 英里处被击中起火，12 名船员中 5 人获救、7 人失踪，罗马尼亚 10 月 16 日恢复搜救；悬挂科摩罗旗的"Yara J"号在罗马尼亚领海内被击中，船员无恙，船被拖往康斯坦察港。一名北约军方消息人士称无人机来自俄罗斯。过去 10 天，罗马尼亚和保加利亚近海已有至少 5 艘货船遇袭，23 名船员死亡或失踪。</p>
 <p><strong>为什么值得关注</strong>：战火正在烧向北约家门口的商船航线——两船都停泊在苏利纳运河口附近，那是乌克兰粮食出口的生命线。商船接连遇袭可能推高航运保险和粮食价格，最终传导到全球餐桌。</p>
 <p><strong>名词解释</strong>：<br />
@@ -259,8 +280,8 @@ body.dark td, body.dark th { border-color: #444; }
 12. <strong>hope</strong> | 希望 | 常用搭配：hold out hope（抱有希望）, ray of hope（一线希望） | 例句：Families hold out hope for the seven missing sailors.（家属们对 7 名失踪船员仍抱有一线希望。） | 名句："Hope is a good thing, maybe the best of things." — The Shawshank Redemption（希望是美好的，也许是世间最美好的东西。——《肖申克的救赎》）</p>
 <h3>3. 美军第三艘航母开赴中东，对伊朗施压升级</h3>
 <p>📌 <strong>来源</strong>：JFeed / NoCut News<br />
-- https://www.jfeed.com/latest-news/u-s-surges-military-assets-to-middle-east-as-regional-tensions-escalate-55237<br />
-- https://en.nocutnews.co.kr/news/6592354</p>
+- <a href="https://www.jfeed.com/latest-news/u-s-surges-military-assets-to-middle-east-as-regional-tensions-escalate-55237">https://www.jfeed.com/latest-news/u-s-surges-military-assets-to-middle-east-as-regional-tensions-escalate-55237</a><br />
+- <a href="https://en.nocutnews.co.kr/news/6592354">https://en.nocutnews.co.kr/news/6592354</a></p>
 <p><strong>发生了什么</strong>："罗斯福"号航母战斗群正驶往中东，预计将与已在当地的"华盛顿"号、"老布什"号会合，使美军在中东的航母战斗群达到 3 个。五角大楼同时增派约 9000–10000 名官兵，"马金岛"号两栖戒备大队（载 2200 名海军陆战队员）也在途中。背景是：胡塞武装连月袭击沙特利雅得机场（6 架飞机受损、3 人死亡），伊朗击沉商船、威胁美舰，特朗普放话"很快就会击败伊朗"，而霍尔木兹海峡控制权问题让停火谈判陷入僵局。</p>
 <p><strong>为什么值得关注</strong>：3 个航母战斗群是 2003 年伊拉克战争初期以来的最高配置——这是"秀肌肉"逼谈判，还是大战前奏，全世界都在猜。霍尔木兹海峡一旦出事，全球约 1/5 的石油运输被掐住，油价（见财经第 3 条）会再上一个台阶。</p>
 <p><strong>名词解释</strong>：<br />
@@ -286,7 +307,7 @@ body.dark td, body.dark th { border-color: #444; }
 <h2>四、个人成长 🌱</h2>
 <h3>1. "番茄钟"升级版：效率专家教你用计时器逼出专注力</h3>
 <p>📌 <strong>来源</strong>：播客《The Diary Of A CEO》采访片段（Instagram）<br />
-- https://www.instagram.com/reel/DehH68-TjC9/</p>
+- <a href="https://www.instagram.com/reel/DehH68-TjC9/">https://www.instagram.com/reel/DehH68-TjC9/</a></p>
 <p><strong>发生了什么</strong>：10 月 15 日，知名播客《The Diary Of A CEO》发布了一段采访片段，主角是被称作"效率专家"的 Sahar Yousef 博士。她分享了让自己工作更快的头号秘诀：<strong>给任务定一个计时器</strong>。她解释，人类对"进度标记"极其敏感——看到时间一格格流逝，大脑会自动加速。她举例说，小孩平时坐不住，但放一首"收拾歌"、要求在歌结束前收拾好玩具，孩子立刻专注起来，因为任务有了明确的起点和终点。她建议把任务压缩进很短的时间块（比如只给 5 分钟而不是 1 小时），逼自己必须完成。</p>
 <p><strong>为什么值得关注</strong>：Ricardo 写论文、备考时总觉得"时间很多、效率很低"，这个方法几乎零成本、立刻能用：下次打开文档前先定个 25 分钟倒计时，亲测有效的"大脑加速器"。</p>
 <p><strong>名词解释</strong>：<br />
@@ -309,7 +330,7 @@ body.dark td, body.dark th { border-color: #444; }
 12. <strong>routine</strong> | 惯例、日常流程 | 常用搭配：morning routine（晨间惯例）、daily routine（日常流程） | 例句：A short morning routine sets the tone for the day.（简短的晨间惯例定下了一天的基调。） | 名句："We are what we repeatedly do. Excellence, then, is not an act, but a habit." — Aristotle（我们是我们反复所做的事；卓越不是一时之举，而是一种习惯。——亚里士多德）</p>
 <h3>2. Alex Hormozi：能连续深度工作 8 小时，是成大事的入场券</h3>
 <p>📌 <strong>来源</strong>：Alex Hormozi（Threads）<br />
-- https://www.threads.com/@hormozi/post/DegX9tYnFws</p>
+- <a href="https://www.threads.com/@hormozi/post/DegX9tYnFws">https://www.threads.com/@hormozi/post/DegX9tYnFws</a></p>
 <p><strong>发生了什么</strong>：10 月 15 日，知名企业家 Alex Hormozi 在 Threads 发帖称：能身体静坐、屏蔽手机通知等一切数字干扰、把注意力钉在一件事上长达 8 小时，是"成就伟大"的前提条件；做不到这一点，就别想干成大事。帖子获得大量转发讨论。</p>
 <p><strong>为什么值得关注</strong>：Ricardo 正处在"手机一响就分心"的备考期，这条帖子把"专注"从鸡汤变成了硬指标：先别谈天赋，问问自己能不能安静坐 3 小时不动手机——这是可以练出来的肌肉。</p>
 <p><strong>名词解释</strong>：<br />
@@ -332,7 +353,7 @@ body.dark td, body.dark th { border-color: #444; }
 12. <strong>distraction</strong> | 分心之事 | 常用搭配：digital distractions（数字干扰）、free from distraction（不受干扰） | 例句：Social media is the biggest distraction for students.（社交媒体是学生最大的分心源。） | 名句："Starve your distractions, feed your focus." — modern saying（饿死你的分心，喂饱你的专注。——现代谚语）</p>
 <h3>3. 印度作家 Chetan Bhagat：3–6 个月的高强度专注，能永远改变人生轨迹</h3>
 <p>📌 <strong>来源</strong>：Chetan Bhagat（Facebook）<br />
-- https://www.facebook.com/reel/1601186531786138/</p>
+- <a href="https://www.facebook.com/reel/1601186531786138/">https://www.facebook.com/reel/1601186531786138/</a></p>
 <p><strong>发生了什么</strong>：10 月 15 日，印度畅销作家 Chetan Bhagat（700 万+粉丝）在 Facebook 发布短视频称：永远别低估人生改变的速度——3 到 6 个月的高强度专注，就能永远改变你的人生轨迹。他建议：定一个"不合理、甚至有点吓人"的目标，保证充足睡眠，多晒太阳，拼命自我教育，保持创造性输出，追逐精通，找一份"像玩一样"的工作，培养能带来满足感的爱好。</p>
 <p><strong>为什么值得关注</strong>：Ricardo 正在备考雅思、规划留学的关键期，这条帖子正好是一剂"长期主义"强心针：别想着"逆袭要三年"，认真投入一个学期，人生真的可以拐弯。</p>
 <p><strong>名词解释</strong>：<br />
@@ -357,7 +378,7 @@ body.dark td, body.dark th { border-color: #444; }
 <h2>五、爱情/关系 💛</h2>
 <h3>1. 爆火 460 万播放的"Let Them 理论"：感情里最难但最必要的一课是"随他去"</h3>
 <p>📌 <strong>来源</strong>：Shaded Intimacy（转述 TikTok 博主 Abe Froman 视频）<br />
-- https://shadedintimacy.com/woman-goes-viral-sharing-hard-necessary-relationship-theory/</p>
+- <a href="https://shadedintimacy.com/woman-goes-viral-sharing-hard-necessary-relationship-theory/">https://shadedintimacy.com/woman-goes-viral-sharing-hard-necessary-relationship-theory/</a></p>
 <p><strong>发生了什么</strong>：一位 TikTok 博主 Abe Froman 分享的"let them（随他们去）"理论近日爆火，单条视频播放超 460 万。这个理论源自作家 Mel Robbins 2023 年在播客中提出的练习：允许对方按自己的方式行事，不再把对方的行为看作对自己的评价。Froman 强调，人们总会按自己的需求和习惯行事，感情里唯一的平静之道，是承认你无法控制别人如何对你——放下过度思考，不再把自我价值绑在对方的行为上。约会教练 Sabrina Alexis Bendory 赞同：比如被"已读不回"，别解读成"我不值得被爱"；另一位教练 Sabrina Zohar 则质疑，认为这与其说是"理论"，不如说是对人性的基本理解。</p>
 <p><strong>为什么值得关注</strong>：Ricardo 曾为感情反复内耗，这个理论像一颗"定心丸"：对方回不回消息、爱不爱你，说明的是对方，不是你的价值——把力气收回来照顾自己，才是成年人谈感情的方式。</p>
 <p><strong>名词解释</strong>：<br />
@@ -380,7 +401,7 @@ body.dark td, body.dark th { border-color: #444; }
 12. <strong>responsibility</strong> | 责任 | 常用搭配：take responsibility（承担责任）、a sense of responsibility（责任感） | 例句：Take responsibility for your own peace of mind.（为自己的内心平静负责。） | 名句："With great power comes great responsibility." — Spider-Man（能力越大，责任越大。——《蜘蛛侠》）</p>
 <h3>2. Tony Robbins 夫妇：吵架别等对方先低头，谁先认错谁赢</h3>
 <p>📌 <strong>来源</strong>：Sage Robbins（Instagram）<br />
-- https://www.instagram.com/reel/DehmXGuh1Mr/</p>
+- <a href="https://www.instagram.com/reel/DehmXGuh1Mr/">https://www.instagram.com/reel/DehmXGuh1Mr/</a></p>
 <p><strong>发生了什么</strong>：10 月 15 日，Sage Robbins 发布了一段她与丈夫、著名演说家 Tony Robbins 的现场对谈视频，核心信息被打在屏幕上："DON'T WAIT FOR THE OTHER PERSON. GO FIRST（别等对方，先行动）。"Sage 动情地说，伴侣能给彼此最好的礼物，就是敢于认错、说对不起、收拾残局、重新坠入爱河——而且双方都要持续这么做。Tony 回应：当一个人先这样做，另一个人"立刻就清醒了"，两人甚至会为"到底是谁的错"展开一场"有爱的争吵"。他把"都怪你"的指责和"我懂你"的连接做了对比：这就是区别所在。</p>
 <p><strong>为什么值得关注</strong>：很多感情死在"凭什么是我先低头"上。这段视频给了一个反常识的答案：先认错不是输，而是一种"以退为进"的智慧——你先软下来，对方反而硬不起来了。</p>
 <p><strong>名词解释</strong>：<br />
@@ -403,7 +424,7 @@ body.dark td, body.dark th { border-color: #444; }
 12. <strong>accountability</strong> | 担当、负责 | 常用搭配：personal accountability（个人担当）、hold accountable（要求负责） | 例句：Love grows where both people practice accountability.（两个人都敢于担当，爱才会生长。） | 名句："Accountability breeds response-ability." — Stephen Covey（担责孕育应变力。——史蒂芬·柯维）</p>
 <h3>3. "有些感情没坏，只是两个人从没学会好好说话"——6.3 万赞的扎心真相</h3>
 <p>📌 <strong>来源</strong>：Justin Owens（Instagram）<br />
-- https://www.instagram.com/reel/DehBDAfyQLW/</p>
+- <a href="https://www.instagram.com/reel/DehBDAfyQLW/">https://www.instagram.com/reel/DehBDAfyQLW/</a></p>
 <p><strong>发生了什么</strong>：10 月 15 日，博主 Justin Owens（340 万粉丝）发布的一段谈话视频获 6.3 万赞。他说：有些感情并没有破裂，只是两个人从没学会"不 defensive 地沟通"——一开口就像上法庭，每个人都在构筑自己的论据、而不是倾听；脆弱一出现，心墙比言语竖得更快，因为过去的经验告诉人们"诚实会被惩罚"。他强调，伴侣不是敌人，只是两个人都同时在和"被看穿又被拒绝"的恐惧搏斗；解法不是换个人，而是两个人同时选择放下防备。</p>
 <p><strong>为什么值得关注</strong>：Ricardo 写过"没说出口"会成为遗憾——这条视频正好回答了"为什么说不出口"：不是不爱，是害怕。看懂这一点，下次想说的话就敢说了。</p>
 <p><strong>名词解释</strong>：<br />
@@ -428,7 +449,7 @@ body.dark td, body.dark th { border-color: #444; }
 <h2>六、绿色低碳能源 🌿</h2>
 <h3>1. 意大利告急：光伏 2030 年冲向 82 吉瓦，急需 50 吉瓦时储能"接住"多余的电</h3>
 <p>📌 <strong>来源</strong>：ESS News（储能行业媒体）<br />
-- https://www.ess-news.com/2026/10/16/italy-needs-50-gwh-of-new-storage-as-solar-nears-82-gw-by-2030/</p>
+- <a href="https://www.ess-news.com/2026/10/16/italy-needs-50-gwh-of-new-storage-as-solar-nears-82-gw-by-2030/">https://www.ess-news.com/2026/10/16/italy-needs-50-gwh-of-new-storage-as-solar-nears-82-gw-by-2030/</a></p>
 <p><strong>发生了什么</strong>：10 月 16 日，意大利国家电网运营商 Terna 和天然气管网运营商 Snam 联合发布《2026 情景展望》：意大利光伏装机将从 2025 年底的 43.5 吉瓦飙升到 2030 年的 82.3 吉瓦，太阳能发电量将从 44 太瓦时涨到 110 太瓦时，占全国发电量的 37%。但问题也随之而来：中午阳光最强时发的电用不完，"弃光限电"将变成结构性常态。因此意大利到 2030 年需要新增 50 吉瓦时的大规模储能，把中午多余的电存起来晚上用。</p>
 <p><strong>为什么值得关注</strong>：这是全球能源转型的缩影——光伏便宜到"电多得用不完"，瓶颈从"发电"变成了"存电"。谁先解决储能，谁就掌握了新能源时代的话语权，中国的宁德时代、比亚迪正是这条赛道上的头部玩家。</p>
 <p><strong>名词解释</strong>：<br />
@@ -452,7 +473,7 @@ body.dark td, body.dark th { border-color: #444; }
 12. <strong>concentrate</strong> | 集中 | 常用搭配：be concentrated in（集中在）、concentrate on（专注于） | 例句：More than half the new capacity is concentrated in southern Italy.（过半新增装机集中在意大利南部。） | 名句："Where focus goes, energy flows." — Tony Robbins（注意力到哪里，能量就流向哪里。——托尼·罗宾斯）</p>
 <h3>2. 联合国官员警告非洲：别把最便宜的减排额度都卖了，小心自己完不成目标</h3>
 <p>📌 <strong>来源</strong>：Bloomberg（经 Swissinfo 转载）<br />
-- https://www.swissinfo.ch/eng/africa-told-to-weigh-own-needs-before-exporting-carbon-credits/92225724</p>
+- <a href="https://www.swissinfo.ch/eng/africa-told-to-weigh-own-needs-before-exporting-carbon-credits/92225724">https://www.swissinfo.ch/eng/africa-told-to-weigh-own-needs-before-exporting-carbon-credits/92225724</a></p>
 <p><strong>发生了什么</strong>：10 月 16 日，在卢旺达基加利举行的"非洲碳市场峰会"上，联合国气候秘书处官员 Perumal Arumugam（负责《巴黎协定》第六条碳市场规则）发出警告：非洲国家在向国外出售碳信用之前，要先掂量自己完成气候目标的成本。他说买家永远挑最便宜的项目下手——"别把容易摘的低垂果子全卖到国外"，否则未来只能花大价钱做更贵的减排项目，来完成自己承诺的"无条件"减排目标。</p>
 <p><strong>为什么值得关注</strong>：碳信用正在变成发展中国家的"新石油"——卖的是"少排的二氧化碳"。这条新闻点破了一个残酷真相：富国花小钱买非洲的便宜减排额度完成自己的 KPI，穷国却可能把最划算的减排机会拱手让人，最后自己达标反而更贵。</p>
 <p><strong>名词解释</strong>：<br />
@@ -476,7 +497,7 @@ body.dark td, body.dark th { border-color: #444; }
 12. <strong>buyer</strong> | 买家 | 常用搭配：buyer and seller（买卖双方）、attract buyers（吸引买家） | 例句：Buyers go for the cheapest projects first.（买家总是先挑最便宜的项目。） | 名句："Price is what you pay. Value is what you get." — Warren Buffett（价格是你付出的，价值是你得到的。——巴菲特）</p>
 <h3>3. 欧洲能源巨头联名上书：碳交易体系要改革，碳收入一半必须投回脱碳</h3>
 <p>📌 <strong>来源</strong>：Energy Live News<br />
-- https://www.energylivenews.com/2026/10/16/energy-companies-call-for-reform-on-emissions-trading-system/</p>
+- <a href="https://www.energylivenews.com/2026/10/16/energy-companies-call-for-reform-on-emissions-trading-system/">https://www.energylivenews.com/2026/10/16/energy-companies-call-for-reform-on-emissions-trading-system/</a></p>
 <p><strong>发生了什么</strong>：10 月 16 日，一批欧洲能源公司联名致信欧洲理事会，呼吁改革欧盟碳排放交易体系（ETS）。信中亮出成绩单：自 2005 年以来，ETS 覆盖行业的排放下降了约 50%，而欧盟经济同期增长了约 30%——证明碳定价能以划算的方式推动减排，还不耽误赚钱。企业们提出三点诉求：总量上限的下降路径要可预测；至少 50% 的碳交易收入必须再投回脱碳；外国碳信用不能替代欧盟本土的减排，钱要留在欧洲搞工业转型。</p>
 <p><strong>为什么值得关注</strong>：这是"环保 vs 赚钱"难得一致的案例：企业主动要求"管得更严、更可预测"，因为规则明确才敢投钱。对 Ricardo 的启发是：好的制度不是"管死人"，而是让所有人敢做长期投入——学习、攒钱、做项目同理。</p>
 <p><strong>名词解释</strong>：<br />
@@ -502,7 +523,7 @@ body.dark td, body.dark th { border-color: #444; }
 <h2>七、国内要闻 🇨🇳</h2>
 <h3>1. 习近平在内蒙古乌兰察布考察：统筹高质量发展和高水平保护，点赞绿色算力</h3>
 <p>📌 <strong>来源</strong>：新华社（10 月 16 日，经新浪网转载）<br />
-- https://news.sina.com.cn/c/xl/2026-10-16/doc-inivmiic6999053.shtml</p>
+- <a href="https://news.sina.com.cn/c/xl/2026-10-16/doc-inivmiic6999053.shtml">https://news.sina.com.cn/c/xl/2026-10-16/doc-inivmiic6999053.shtml</a></p>
 <p><strong>发生了什么</strong>：10 月 16 日，习近平在内蒙古乌兰察布考察。他先察看了黄旗海湿地的生态修复情况，强调湿地保护贵在保持原生态；随后到察哈尔高新区了解"东数西算"枢纽节点建设和绿色算力产业发展，要求把算力优势转化为发展优势，并察看了当地特色农牧产品。他强调，绿色发展是高质量发展的应有之义，要坚定不移走生态优先、绿色发展之路。</p>
 <p><strong>为什么值得关注</strong>：最高层亲自为"生态优先"和"绿色算力"定调——算力网被明确为国家规划建设的"六张网"之一，意味着算力基建（数据中心、新能源配套）还会继续加码；同时释放信号：地方发展不能再走"先污染后治理"的老路。</p>
 <p><strong>名词解释</strong>：<br />
@@ -512,7 +533,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>一句话总结</strong>：最高层在内蒙古同时点了"生态"和"算力"两个题：绿水青山要守住，绿色数据中心要建起来。</p>
 <h3>2. 国务院常务会议：深化"人工智能+"行动，教师法、价格法修订草案提请审议</h3>
 <p>📌 <strong>来源</strong>：新华社（10 月 16 日，经新浪财经转载）<br />
-- https://finance.sina.com.cn/china/2026-10-16/doc-inivmprk1640385.shtml</p>
+- <a href="https://finance.sina.com.cn/china/2026-10-16/doc-inivmprk1640385.shtml">https://finance.sina.com.cn/china/2026-10-16/doc-inivmprk1640385.shtml</a></p>
 <p><strong>发生了什么</strong>：10 月 16 日，李强主持召开国务院常务会议，听取"人工智能+"行动进展情况汇报，要求以落地应用牵引技术创新、夯实算力与数据底座、让 AI 更好转化为现实生产力，同时守牢安全底线。会议还原则通过《教师法（修订草案）》（强化教师待遇保障、减负）和《价格法（修正草案）》（治理低价无序竞争、规范平台价格竞争），决定提请全国人大常委会审议。</p>
 <p><strong>为什么值得关注</strong>：AI 政策风向从"技术突破"转向"落地赚钱、赋能实体经济"——国家要的是 AI 真正帮工厂、医院、农田干活；价格法修订则剑指"内卷式"低价竞争，以后平台靠亏本砸价挤死对手的做法会被管。</p>
 <p><strong>名词解释</strong>：<br />
@@ -523,7 +544,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>一句话总结</strong>：国家给 AI 定了新 KPI——别只秀技术，要真正帮实体经济干活；同时出手管"亏本砸价"的内卷竞争，教师减负也提上日程。</p>
 <h3>3. 商务部、科技部拟修订技术出口目录：AI、生物医药、光伏 40 项技术纳入管理并征求意见</h3>
 <p>📌 <strong>来源</strong>：经济日报（10 月 16 日，经新浪财经转载）<br />
-- https://finance.sina.cn/2026-10-16/detail-inivmprk1610633.d.html</p>
+- <a href="https://finance.sina.cn/2026-10-16/detail-inivmprk1610633.d.html">https://finance.sina.cn/2026-10-16/detail-inivmprk1610633.d.html</a></p>
 <p><strong>发生了什么</strong>：10 月 16 日，商务部、科技部发布公告，就修订《中国禁止出口限制出口技术目录》公开征求意见（截止 11 月 15 日）。拟增列人工智能、生物医药、光伏三个领域 40 项技术：其中 AI 占 23 项（大模型、智能体、算力集群等），拟禁止出口 14 项（如 AI 驱动的恶意代码生成技术、钙钛矿电池组件生产技术），拟限制出口 26 项。已通过开源、发论文进入公共领域的技术不管；公告发布到正式实施前，相关技术出口要先登记。</p>
 <p><strong>为什么值得关注</strong>：中国最强的几张技术牌——AI 大模型、光伏制造，第一次被系统性纳入出口管制视野。"管住少数、放开多数"：做 AI 出海、光伏出海的企业，以后卖技术、海外建厂前要先看合规边界；普通开发者用的开源模型不受影响。</p>
 <p><strong>名词解释</strong>：<br />

@@ -5,38 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>《麻薯日报》第24期 · 2026-10-20</title>
 <style>
-body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-       max-width: 720px; margin: 0 auto; padding: 24px 20px 40px; line-height: 2.0;
+/* 《麻薯日报》报纸版式（2026-10-23 Ricardo 要求：像真正的报纸） */
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       max-width: 720px; margin: 0 auto; padding: 28px 20px 48px; line-height: 2.0;
        font-size: 17.5px; letter-spacing: 0.01em;
-       color: #222; background: #fffdf8; }
+       color: #1c1a17; background: #fbf8f1; }
 p { margin: 1.1em 0; }
-h1 { font-size: 1.5em; line-height: 1.5; }
-h2 { border-bottom: 2px solid #f0c75e; padding-bottom: 6px; margin-top: 2.2em; line-height: 1.5; }
-h3 { margin-top: 1.8em; line-height: 1.55; }
-a { color: #1d4fd7; text-decoration: underline; text-underline-offset: 3px; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em;
+             margin: 0 0 6px; padding: 0; border: none; }
+blockquote p { margin: 4px 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 2.4em; border: none; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 2.1em; padding-top: 1.15em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
 a:visited { color: #6d4fc2; }
-ul li, ol li { margin: 10px 0; }
+ul li, ol li { margin: 13px 0; line-height: 1.95; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.2em 0; }
 img { max-width: 100%; }
-table { border-collapse: collapse; }
-td, th { border: 1px solid #ccc; padding: 4px 8px; }
-.note { color: #666; font-size: 0.92em; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+td, th { border: 1px solid #c9c2b2; padding: 6px 10px; }
+th { background: #efe9db; }
+.note { color: #6b6257; font-size: 0.92em; }
 .nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
-       border-bottom: 2px solid #f0c75e; padding-bottom: 8px; margin-bottom: 16px; font-size: 0.95em; }
-.nav.bottom { border-bottom: none; border-top: 2px solid #f0c75e; padding-top: 8px; margin-top: 24px; }
+       border-bottom: 2px solid #1c1a17; padding-bottom: 10px; margin-bottom: 20px;
+       font-size: 0.95em; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.nav.bottom { border-bottom: none; border-top: 2px solid #1c1a17; padding-top: 10px; margin-top: 32px; }
 body.spa .page { display: none; }
 body.spa .page.active { display: block; }
 a.navbtn { text-decoration: none; }
 .bgbar { text-align: right; margin-bottom: 10px; }
-#bgToggle { background: #f0c75e;
-  color: #222; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
-  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25); font-family: inherit; }
-body.dark { background: #141414; color: #e6e6e6; }
+#bgToggle { background: #1c1a17;
+  color: #f7f2e7; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
+  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+body.dark { background: #161513; color: #e8e2d5; }
+body.dark h1 { border-top-color: #e8e2d5; border-bottom-color: #e8e2d5; }
+body.dark blockquote { color: #a39a89; }
+body.dark h2 { background: #e8e2d5; color: #161513; }
+body.dark h3 { border-top-color: #3a362e; }
 body.dark a { color: #8ab8ff; }
 body.dark a:visited { color: #c4a8ff; }
-body.dark .note { color: #a8a8a8; }
-body.dark h2 { border-bottom-color: #8a6d2f; }
-body.dark .nav { border-color: #8a6d2f; }
+body.dark li > strong:first-child { color: #e0a458; }
+body.dark hr { border-top-color: #e8e2d5; }
+body.dark .note { color: #a39a89; }
+body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
+body.dark th { background: #262219; }
+body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
 <body>
@@ -69,8 +90,8 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>confidence</strong> 信心；搭配：restore confidence（重振信心）；例：Investor confidence is slowly coming back.（投资者信心正在缓慢恢复。）💬 "Believe you can and you're halfway there." —— Theodore Roosevelt（相信自己能行，你就已经成功了一半。）<br />
 - <strong>erase</strong> 抹去，抵消；搭配：erase losses（抹去亏损）；例：Monday's rally erased part of last week's losses.（周一的反弹抹去了上周的部分跌幅。）💬 "Do or do not. There is no try." —— Yoda，《Star Wars》（做，或者不做，没有"试试看"这回事。）</p>
 <p>🔗 来源：<br />
-- U.S. Stocks Mostly Higher as AI Credit Worries Abate —— https://www.wsj.com/finance/investing/u-s-stocks-mostly-higher-as-ai-credit-worries-abate-600bf008<br />
-- What's Moving Markets Today? —— https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-19-2026/card/what-s-moving-markets-today--TJ5atqZaDAjqYvGXqlAy</p>
+- U.S. Stocks Mostly Higher as AI Credit Worries Abate —— <a href="https://www.wsj.com/finance/investing/u-s-stocks-mostly-higher-as-ai-credit-worries-abate-600bf008">https://www.wsj.com/finance/investing/u-s-stocks-mostly-higher-as-ai-credit-worries-abate-600bf008</a><br />
+- What's Moving Markets Today? —— <a href="https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-19-2026/card/what-s-moving-markets-today--TJ5atqZaDAjqYvGXqlAy">https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-19-2026/card/what-s-moving-markets-today--TJ5atqZaDAjqYvGXqlAy</a></p>
 <h3>2. 10 月加息悬念基本落地：市场押注"按兵不动"概率 87%，12 月再议</h3>
 <p>距离 10 月 27–28 日美联储议息会议还有一周，市场对"10 月加息"的押注迅速降温：预测市场 Polymarket 显示，10 月维持利率不变的概率达 87%（历史新高），加息 25 个基点的概率跌至 13–14%。美联储主席沃什在 IMF 年会上拒绝"剧透"——"我从不提前预判会议"；副主席杰斐逊和纽约联储主席威廉姆斯也释放了"不急着动"的信号。背景：9 月 CPI 3.7% 超预期，一度把 10 月加息概率推高到接近 50%；但旧金山联储主席戴利等多位官员随后表态"可以在下次会议前再等等看"，9 月会议纪要也显示多数官员认为"年底前"还需再加一次，但没说死是 10 月还是 12 月。</p>
 <p>🔍 名词解释：<br />
@@ -91,8 +112,8 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>tighten</strong> 收紧（政策）；搭配：tighten policy（收紧政策）；例：The Fed may tighten policy again in December.（美联储可能在 12 月再次收紧政策。）💬 "Necessity is the mother of invention." —— 英语谚语（需要是发明之母。）<br />
 - <strong>signal</strong> 信号；搭配：send a signal（释放信号）；例：Warsh sent no signal of an imminent hike.（沃什没有释放即将加息的信号。）💬 "Actions speak louder than words." —— 英语谚语（行动胜于言语。）</p>
 <p>🔗 来源：<br />
-- Prediction markets make major U-turn on Fed's October rate decision —— https://finbold.com/prediction-markets-make-major-u-turn-on-feds-october-rate-decision/<br />
-- Polymarket: Fed Decision in October? —— https://polymarket.com/event/fed-decision-in-october-20260617190323537/will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031</p>
+- Prediction markets make major U-turn on Fed's October rate decision —— <a href="https://finbold.com/prediction-markets-make-major-u-turn-on-feds-october-rate-decision/">https://finbold.com/prediction-markets-make-major-u-turn-on-feds-october-rate-decision/</a><br />
+- Polymarket: Fed Decision in October? —— <a href="https://polymarket.com/event/fed-decision-in-october-20260617190323537/will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031">https://polymarket.com/event/fed-decision-in-october-20260617190323537/will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031</a></p>
 <h3>3. 中国三季度 GDP 增长 4.5% 超预期：出口一台发动机拉着整辆车跑</h3>
 <p>路透 10 月 19 日分析：中国三季度 GDP 同比增长 4.5%，快于经济学家预期。好消息是增速超预期，坏消息是增长几乎全靠"出口狂飙"拉动——中国正朝着打破去年 1.2 万亿美元贸易顺差纪录的方向冲刺。人民币过去 18 个月持续升值，已到 4 年高位，但实际有效汇率仍比 4 年前弱约 15%。IMF 等机构警告，中国不断膨胀的顺差正在加剧全球经济失衡。</p>
 <p>🔍 名词解释：<br />
@@ -113,7 +134,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>claw back</strong> 夺回，挽回；搭配：claw back losses（挽回损失）；例：The index has yet to claw back last week's slump.（该指数尚未挽回上周的跌幅。）💬 "Fall seven times, stand up eight." —— 日本谚语（七转八起。）<br />
 - <strong>boomerang</strong> 回旋镖效应；搭配：AI boomerang（AI 回旋镖）；例：After the selloff, an "AI boomerang" lifted chip stocks again.（暴跌之后，"AI 回旋镖"又把芯片股带了回来。）💬 "What goes around comes around." —— 英语谚语（出来混，迟早要还。）</p>
 <p>🔗 来源：<br />
-- Global markets trading day —— https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-10-19/</p>
+- Global markets trading day —— <a href="https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-10-19/">https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-10-19/</a></p>
 <hr />
 <h2>二、AI 🤖</h2>
 <h3>1. 微软撕毁伦敦 AI 数据中心租约：电网说"2030 年代前没电给你"</h3>
@@ -138,7 +159,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>setback</strong> 挫折；搭配：suffer a setback（遭遇挫折）；例：The project suffered a major setback over power supply.（该项目在供电问题上遭遇重大挫折。）💬 "Our greatest weakness lies in giving up." —— Thomas Edison（我们最大的弱点在于轻言放弃。）<br />
 - <strong>borrow</strong> 借贷；搭配：borrow heavily（大量举债）；例：The provider borrowed heavily to fund data-centre development.（该服务商为建设数据中心大量举债。）💬 "Neither a borrower nor a lender be." —— Shakespeare，《Hamlet》（既不借债，也不当债主。）</p>
 <p>🔗 来源：<br />
-- Nscale setback lights up weak spots in AI rollout —— https://www.reuters.com/commentary/breakingviews/nscale-setback-lights-up-weak-spots-ai-rollout-2026-10-19/</p>
+- Nscale setback lights up weak spots in AI rollout —— <a href="https://www.reuters.com/commentary/breakingviews/nscale-setback-lights-up-weak-spots-ai-rollout-2026-10-19/">https://www.reuters.com/commentary/breakingviews/nscale-setback-lights-up-weak-spots-ai-rollout-2026-10-19/</a></p>
 <h3>2. 亚马逊放大招：TorchNeuron 让 AI 芯片"说"PyTorch，开源免费挑战英伟达</h3>
 <p>路透 10 月 19 日报道，亚马逊 AWS 在硅谷开发者大会上发布新工具 TorchNeuron：开发者用最流行的 AI 编程语言 PyTorch 写的代码，只需改一行配置、无需重写，就能直接跑在亚马逊自研的 Trainium AI 芯片上，而且完全免费开源。PyTorch 由 Meta 维护，是绝大多数 AI 开发者的"母语"；而英伟达花了十多年打磨 CUDA 软件，让 PyTorch 代码在自家芯片上跑得最顺——这正是英伟达护城河的核心。亚马逊芯片部门副总裁对路透表示，已有 30 多家早期客户（覆盖机器人、世界模型、语音 AI）在用，切换到 Trainium 可大幅省钱。谷歌也在做类似的事，想把开发者从英伟达生态里"撬"走。</p>
 <p>🔍 名词解释：<br />
@@ -161,7 +182,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>lure away</strong> 吸引走，挖走；搭配：lure developers away（把开发者吸引走）；例：Google is working to lure developers away from Nvidia.（谷歌正努力把开发者从英伟达那边吸引过来。）💬 "The grass is always greener on the other side." —— 英语谚语（这山望着那山高。）<br />
 - <strong>underpin</strong> 支撑，巩固；搭配：underpin dominance（支撑霸主地位）；例：A decade of software work underpins Nvidia's dominance.（十余年的软件积累支撑着英伟达的霸主地位。）💬 "The roots of education are bitter, but the fruit is sweet." —— Aristotle（教育的根是苦的，但果实是甜的。）</p>
 <p>🔗 来源：<br />
-- Amazon says its AI chips will work with popular coding language, challenging Nvidia —— https://www.reuters.com/business/retail-consumer/amazon-says-its-ai-chips-will-work-with-popular-coding-language-challenging-2026-10-19/</p>
+- Amazon says its AI chips will work with popular coding language, challenging Nvidia —— <a href="https://www.reuters.com/business/retail-consumer/amazon-says-its-ai-chips-will-work-with-popular-coding-language-challenging-2026-10-19/">https://www.reuters.com/business/retail-consumer/amazon-says-its-ai-chips-will-work-with-popular-coding-language-challenging-2026-10-19/</a></p>
 <h3>3. 中国大模型价格战再升级：MiniMax M3.1 Flash 发布，跑任务成本直降 70%</h3>
 <p>10 月 19 日，中国 AI 公司 MiniMax 发布新推理模型 M3.1 Flash：总参数 4280 亿（MoE 架构），在 Artificial Analysis 智能指数上得分 42，比上一代 M3 高 13 分，略低于两天前发布的 DeepSeek V4.1 Flash（45 分）。关键在价格：API 定价输入每百万 token 只要 0.15 美元、输出 0.6 美元，MiniMax 称智能体任务成本比上一代直降 70%，速度快 3 倍，上下文窗口 100 万 token，模型权重将于 10 月 23 日发布。有趣的是，它正是 9 月以"Space Bunny"为代号匿名刷榜的神秘模型。同一天，Meta 被曝在另一端"反向操作"——旗下模型走高价路线，中国厂商和美国巨头在"便宜好用"和"贵但强"两条路上越走越远。</p>
 <p>🔍 名词解释：<br />
@@ -183,8 +204,8 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>competitor</strong> 竞争者；搭配：key competitor（主要竞争者）；例：DeepSeek's V4.1 Flash is a key competitor.（DeepSeek 的 V4.1 Flash 是主要竞争者。）💬 "Iron sharpens iron." —— 英语谚语（铁磨铁，越磨越利。）<br />
 - <strong>rival</strong> 对手；搭配：close rival（旗鼓相当的对手）；例：The two Chinese labs are close rivals in the price war.（这两家中国厂商在价格战中是旗鼓相当的对手。）💬 "If you can't beat them, join them." —— 英语谚语（打不过，就加入。）</p>
 <p>🔗 来源：<br />
-- MiniMax launches M3.1 Flash model, says it cuts AI agent costs by 70% —— https://siliconangle.com/2026/10/19/minimax-launches-m3-1-flash-model-says-it-cuts-ai-agent-costs-by-70/<br />
-- MiniMax Just Launched M3.1 Flash —— https://www.marktechpost.com/2026/10/19/minimax-m3-1-flash-release/</p>
+- MiniMax launches M3.1 Flash model, says it cuts AI agent costs by 70% —— <a href="https://siliconangle.com/2026/10/19/minimax-launches-m3-1-flash-model-says-it-cuts-ai-agent-costs-by-70/">https://siliconangle.com/2026/10/19/minimax-launches-m3-1-flash-model-says-it-cuts-ai-agent-costs-by-70/</a><br />
+- MiniMax Just Launched M3.1 Flash —— <a href="https://www.marktechpost.com/2026/10/19/minimax-m3-1-flash-release/">https://www.marktechpost.com/2026/10/19/minimax-m3-1-flash-release/</a></p>
 <hr />
 <h2>三、国际事务 🌍</h2>
 <h3>1. 特朗普为暂停对俄新制裁辩护：称不想把俄罗斯"推离谈判桌"</h3>
@@ -209,8 +230,8 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>controversy</strong> 争议，争论；搭配：cause controversy（引起争议）；例：The decision caused a lot of controversy.（这个决定引起了很多争议。）💬 "The only thing worse than being talked about is not being talked about." —— Oscar Wilde（比被人议论更糟糕的，是没人议论你。）<br />
 - <strong>settle</strong> 解决，平息；搭配：settle a dispute（解决争端）；例：They finally settled their dispute through talks.（他们最终通过谈判解决了争端。）💬 "I'm gonna make him an offer he can't refuse." —— 《The Godfather》（我会给他一个他无法拒绝的条件。）</p>
 <p>🔗 来源：<br />
-- Trump holds off on new measures against Russia to avoid undermining Ukraine peace talks —— https://www.aa.com.tr/en/americas/trump-holds-off-on-new-measures-against-russia-to-avoid-undermining-ukraine-peace-talks/4092929<br />
-- 普京三方峰会提议（Lokmat Times 国际新闻页）—— https://www.lokmattimes.com/international/page/13/</p>
+- Trump holds off on new measures against Russia to avoid undermining Ukraine peace talks —— <a href="https://www.aa.com.tr/en/americas/trump-holds-off-on-new-measures-against-russia-to-avoid-undermining-ukraine-peace-talks/4092929">https://www.aa.com.tr/en/americas/trump-holds-off-on-new-measures-against-russia-to-avoid-undermining-ukraine-peace-talks/4092929</a><br />
+- 普京三方峰会提议（Lokmat Times 国际新闻页）—— <a href="https://www.lokmattimes.com/international/page/13/">https://www.lokmattimes.com/international/page/13/</a></p>
 <h3>2. 法国骚乱升级：周末近 2400 人被捕、多城宣布宵禁</h3>
 <p>10 月 18–19 日，法国多个城市爆发针对学校标准和生活成本上涨的抗议，随后演变为暴力骚乱：蒙面抗议者在巴黎等地打砸商店、焚烧垃圾桶，与防暴警察发生冲突；意大利米兰也发生了类似骚乱。据法国内政部数据，周六的骚乱导致近 2400 人被捕、约 1000 名警察和宪兵受伤。10 月 19 日，法国总统马克龙谴责"无节制的暴力"，宣布一系列政策改革并誓言严惩暴徒；多个法国城市已宣布实行宵禁。</p>
 <p>🔍 名词解释：<br />
@@ -229,8 +250,8 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>reform</strong> 改革；搭配：carry out reforms（推行改革）；例：The government promised major education reforms.（政府承诺进行重大教育改革。）💬 "Change is the law of life. And those who look only to the past or present are certain to miss the future." —— John F. Kennedy（变化是生活的法则，只看过去或现在的人注定错过未来。）<br />
 - <strong>arrest</strong> 逮捕；搭配：make an arrest（实施逮捕）；例：Police made nearly 2,400 arrests over the weekend.（警方在周末逮捕了近 2400 人。）💬 "You have the right to remain silent." —— 经典警匪片台词（你有权保持沉默。）</p>
 <p>🔗 来源：<br />
-- Macron condemns violence, vows support for businesses after agitation engulfs France —— https://www.thenews.pk/update/world<br />
-- 新华社英文版 10 月 20 日跟进报道多城宵禁 —— https://english.news.cn/world/index.htm</p>
+- Macron condemns violence, vows support for businesses after agitation engulfs France —— <a href="https://www.thenews.pk/update/world">https://www.thenews.pk/update/world</a><br />
+- 新华社英文版 10 月 20 日跟进报道多城宵禁 —— <a href="https://english.news.cn/world/index.htm">https://english.news.cn/world/index.htm</a></p>
 <h3>3. 巴西大选"决赛圈"：卢拉与小博索纳罗首场电视辩论火药味十足</h3>
 <p>10 月 18 日晚（巴西时间），巴西总统卢拉与参议员弗拉维奥·博索纳罗（前总统博索纳罗之子）在圣保罗举行了决选前的首场电视辩论，持续约两小时。两人互相称对方"骗子"，卢拉指小博索纳罗是"暴徒""民兵"，小博索纳罗回击卢拉是"小丑"，还要求互相公开个人财务接受审查。辩论前，数万名支持者在圣保罗保利斯塔大街等地集会造势。首轮投票中弗拉维奥以 47% 对 45% 领先卢拉，民调显示决选（10 月 25 日）双方 51% 对 49%，极其接近。</p>
 <p>🔍 名词解释：<br />
@@ -249,8 +270,8 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>inject</strong> 注入；搭配：inject new energy（注入新活力）；例：The dispute injected new tension into the campaign.（这场争执给选战注入了新的紧张气氛。）💬 "Stay hungry, stay foolish." —— Steve Jobs（求知若饥，虚心若愚。）<br />
 - <strong>barb</strong> 讥讽的话；搭配：trade barbs（互相讥讽）；例：The candidates traded barbs throughout the debate.（候选人在整个辩论中互相讥讽。）💬 "Sarcasm is the lowest form of wit." —— Oscar Wilde（讥讽是最低级的机智。）</p>
 <p>🔗 来源：<br />
-- Brazil's Bolsonaro, Lula face off in first debate as supporters fill streets —— https://www.reuters.com/world/americas/brazils-bolsonaro-lula-head-into-first-debate-week-before-vote-2026-10-18/<br />
-- Lula and Bolsonaro spar in Brazil's fiery first presidential run-off debate —— https://www.aljazeera.com/news/2026/10/19/lula-and-bolsonaro-spar-in-brazils-fiery-first-presidential-run-off-debate</p>
+- Brazil's Bolsonaro, Lula face off in first debate as supporters fill streets —— <a href="https://www.reuters.com/world/americas/brazils-bolsonaro-lula-head-into-first-debate-week-before-vote-2026-10-18/">https://www.reuters.com/world/americas/brazils-bolsonaro-lula-head-into-first-debate-week-before-vote-2026-10-18/</a><br />
+- Lula and Bolsonaro spar in Brazil's fiery first presidential run-off debate —— <a href="https://www.aljazeera.com/news/2026/10/19/lula-and-bolsonaro-spar-in-brazils-fiery-first-presidential-run-off-debate">https://www.aljazeera.com/news/2026/10/19/lula-and-bolsonaro-spar-in-brazils-fiery-first-presidential-run-off-debate</a></p>
 <hr />
 <h2>四、个人成长 🌱</h2>
 <h3>1. 想改掉坏习惯？科学说：别死磕意志力</h3>
@@ -271,7 +292,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>intrinsic</strong> 内在的；搭配：intrinsic motivation（内在动力）；例：Intrinsic motivation outlasts external pressure.（内在动力比外部压力更持久。）💬 "Intrinsic motivation is what makes people do things for the sheer joy of it." —— Daniel Pink（内在动力让人纯粹为快乐去做事。）<br />
 - <strong>friction</strong> 摩擦，阻力；搭配：reduce friction（减少阻力）；例：Remove the friction between you and the habit.（清除你和习惯之间的阻力。）💬 "You do not rise to the level of your goals; you fall to the level of your systems." —— James Clear（你不会升到目标的高度，只会落到系统的水平。）</p>
 <p>🔗 来源：<br />
-- The Science of Habit Formation: How to Break Bad Habits —— https://www.headpsy.com/article/the-science-of-habit-formation-how-to-break-bad-habits-and-build-good-ones</p>
+- The Science of Habit Formation: How to Break Bad Habits —— <a href="https://www.headpsy.com/article/the-science-of-habit-formation-how-to-break-bad-habits-and-build-good-ones">https://www.headpsy.com/article/the-science-of-habit-formation-how-to-break-bad-habits-and-build-good-ones</a></p>
 <h3>2. 前 Meta 高管：扎克伯格教他的效率课——"这是马拉松，不是冲刺"</h3>
 <p>前 Meta 欧洲区高管 Martin Ott（现任 Taxfix CEO）接受 Fortune 采访，回忆扎克伯格教他的效率课：一天时间就那么多，别想着把每个小时塞满；每天只问自己"今天我能做的一件最有影响力的事是什么"，集中精力干那一件。对开会也要挑剔——每次都问"这个会我非去不可吗"。他也承认 24/7 连轴转短期有效，但长期一定会把人烧光，领导者更要保护团队不被累垮。</p>
 <p>🔍 名词解释：<br />
@@ -289,7 +310,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>sustainable</strong> 可持续的；搭配：sustainable routine（可持续的作息）；例：He built a sustainable morning routine.（他建立了可持续的晨间习惯。）💬 "The best plan is the one you can sustain." —— James Clear（最好的计划是你能长期坚持的那个。）<br />
 - <strong>delegate</strong> 授权，委派；搭配：delegate tasks（委派任务）；例：Learn to delegate the small stuff.（学会把小事交出去。）💬 "If you want to do a few small things right, do them yourself; if you want to do great things, learn to delegate." —— John C. Maxwell（想做好小事就自己干，想做大事就学会授权。）</p>
 <p>🔗 来源：<br />
-- Ex-Meta exec says Mark Zuckerberg taught him work-life balance —— https://indianexpress.com/article/trending/trending-globally/martin-ott-productivity-lesson-mark-zuckerberg-work-life-balance-10902612/</p>
+- Ex-Meta exec says Mark Zuckerberg taught him work-life balance —— <a href="https://indianexpress.com/article/trending/trending-globally/martin-ott-productivity-lesson-mark-zuckerberg-work-life-balance-10902612/">https://indianexpress.com/article/trending/trending-globally/martin-ott-productivity-lesson-mark-zuckerberg-work-life-balance-10902612/</a></p>
 <h3>3. "拖延二选一"：不想做的事，换个姿势拖</h3>
 <p>中文播客《閱讀前哨站》的瓦基在 10 月 13 日的视频里分享了一个用了很久的治拖延小技巧"拖延二選一"。他手头任务多（准备节目单、写大纲、规划产品），总有不想碰的那一件。办法：当不想做 A 时，不硬逼自己，而是把 B 和 C 两个备选任务摆出来，让自己"二选一"。人对"有得选"这件事天然更开心，于是表面上在拖 A，实际上整天都在产出，"动量"不断。这是一种"生产性拖延"——用有意义的事拖掉没动力的事。</p>
 <p>🔍 名词解释：<br />
@@ -298,7 +319,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p>📌 一句话总结：不想做 A 就别硬刚，摆 B 和 C 让自己二选一，用"有得选"的快乐骗过拖延症。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
-- 閱讀前哨站瓦基（Facebook Reel）—— https://www.facebook.com/reel/2164447597782015/</p>
+- 閱讀前哨站瓦基（Facebook Reel）—— <a href="https://www.facebook.com/reel/2164447597782015/">https://www.facebook.com/reel/2164447597782015/</a></p>
 <hr />
 <h2>五、爱情/关系 💕</h2>
 <h3>1. 研究：你对"这段感情有未来"的信心，决定了你的安全感</h3>
@@ -318,7 +339,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>precarious</strong> 不稳定的，岌岌可危的；搭配：feel precarious（感到岌岌可危）；例：Without support, the relationship felt precarious.（没有支持，这段感情感觉岌岌可危。）💬 "The most precarious thing in life is trying to avoid risk." —— Helen Keller（人生最危险的事就是试图回避风险。）<br />
 - <strong>transparency</strong> 透明度；搭配：preregistered transparency（预注册透明度）；例：The study's transparency builds trust in its findings.（研究的透明度增强了人们对结论的信任。）💬 "Transparency is the new objectivity." —— David Weinberger（透明是新的客观。）</p>
 <p>🔗 来源：<br />
-- Confidence in a relationship's future is linked to feelings of romantic security —— https://phys.org/news/2026-10-confidence-relationship-future-linked-romantic.html</p>
+- Confidence in a relationship's future is linked to feelings of romantic security —— <a href="https://phys.org/news/2026-10-confidence-relationship-future-linked-romantic.html">https://phys.org/news/2026-10-confidence-relationship-future-linked-romantic.html</a></p>
 <h3>2. "烟花易逝，家才长久"：别把心跳加速当成真爱</h3>
 <p>情感作家 Christine Hassler 在 Instagram 发了 13 页长图文，讲她怎么选对了老公：和他在一起没有"烟花般"的刺激、没有上瘾般的痴迷，反而像"回家"——不用表演、不用过度思考、神经系统终于放松。她说过去那些让人心跳加速的关系都走向了死胡同，还打了个很妙的比方：烟花好看 20 分钟，之后你就站在黑暗里闻烟味。评论区几千人共鸣：很多人把焦虑误认成了心动。</p>
 <p>🔍 名词解释：<br />
@@ -337,7 +358,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>self-abandonment</strong> 自我抛弃；搭配：avoid self-abandonment（避免自我抛弃）；例：Don't abandon yourself to keep someone else.（别为了留住别人而抛弃自己。）💬 "You cannot pour from an empty cup; self-abandonment helps no one." —— 英语格言（空杯倒不出水；抛弃自己帮不了任何人。）<br />
 - <strong>intoxicating</strong> 令人沉醉的；搭配：intoxicating chemistry（令人沉醉的来电）；例：Intoxicating chemistry often masks red flags.（令人沉醉的来电常常掩盖危险信号。）💬 "The most intoxicating thing is not wine but being truly seen." —— 英语格言（最醉人的不是酒，而是被真正看见。）</p>
 <p>🔗 来源：<br />
-- Christine Hassler（Instagram 轮播）—— https://www.instagram.com/p/DeUwKZPk75c/</p>
+- Christine Hassler（Instagram 轮播）—— <a href="https://www.instagram.com/p/DeUwKZPk75c/">https://www.instagram.com/p/DeUwKZPk75c/</a></p>
 <h3>3. 男生版焦虑型依恋自救：停止搞砸感情的 5 条</h3>
 <p>男性情感教练 Daniel Bak（23 万粉）在 Instagram 发了一条很火的视频（1.6 万赞），专门讲"焦虑型依恋的男生"常犯的 5 个自我破坏模式：嘴上说"我没事"心里翻江倒海；她一皱眉就觉得是自己的错、急着去哄；明明不同意也说好，怕被拒绝；想要安慰又觉得开口很丢人；不知道错哪也要先道歉。每条都给了"想-要-做"对照：比如你"想"不给她添麻烦，"需要"的其实是诚实说出感受，"要做"的是直接告诉她你怎么了，而不是替她做决定。评论区很多人说"像在说我"。</p>
 <p>🔍 名词解释：<br />
@@ -357,7 +378,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>accountability</strong> 负责，担当；搭配：take accountability（承担责任）；例：Your wounds deserve compassion; your actions require accountability.（你的伤值得被温柔对待，你的行为需要你负责。）💬 "Accountability is the glue that bonds commitment to results." —— Bob Proctor（担当是把承诺和结果粘在一起的胶水。）<br />
 - <strong>clingy</strong> 粘人的；搭配：labeled as clingy（被贴上粘人标签）；例：Wanting closeness doesn't make you clingy.（想要亲近不等于粘人。）💬 "There's a difference between clingy and connected." —— 情感格言（粘人和亲密是两回事。）</p>
 <p>🔗 来源：<br />
-- Daniel Bak | Men's Coach（Instagram Reel）—— https://www.instagram.com/reel/DeiLPLINEkn/</p>
+- Daniel Bak | Men's Coach（Instagram Reel）—— <a href="https://www.instagram.com/reel/DeiLPLINEkn/">https://www.instagram.com/reel/DeiLPLINEkn/</a></p>
 <hr />
 <h2>六、绿色低碳能源 🌿</h2>
 <h3>1. 广东立规矩：新能源"自发自用"，也要公平分摊电网成本</h3>
@@ -369,7 +390,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p>📌 一句话总结：广东给新能源"自发自用"立了收费规矩：用电网兜底，就得公平分摊成本。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
-- 广东发布新能源就近消纳价格政策 —— https://finance.sina.com.cn/jjxw/2026-10-19/doc-inivtpwr7607061.shtml</p>
+- 广东发布新能源就近消纳价格政策 —— <a href="https://finance.sina.com.cn/jjxw/2026-10-19/doc-inivtpwr7607061.shtml">https://finance.sina.com.cn/jjxw/2026-10-19/doc-inivtpwr7607061.shtml</a></p>
 <h3>2. 新能源车出口退税下调：57 万辆出口之后，出海规则变了</h3>
 <p>财政部、税务总局 10 月 12 日发布公告：自 2027 年 4 月 1 日起，新能源汽车增值税出口退税率从 13% 下调至 9%，覆盖 67 类产品。背景数字：9 月新能源乘用车出口 55.8 万辆，同比增长超 1.6 倍；同一周还落地两件事——中欧确认继续推进电动车价格承诺、全球电池联盟（GBA）电池护照进入倒计时。退税降 4 个点，一辆离岸价 2 万美元的车利润直接少约 800 美元；政策生效时点（2027 年 4 月）恰好撞上比亚迪匈牙利工厂、奇瑞西班牙工厂投产，等于明示车企：靠国内生产、整车出口的红利期收尾了，下一步要去海外本地化制造。</p>
 <p>🔍 名词解释：<br />
@@ -379,7 +400,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p>📌 一句话总结：57 万辆出口创纪录的同时，三重政策悄悄改写了中国电池出海的路线图：从"中国制造、全球卖车"转向"海外建厂、本地生产"。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
-- 57万辆出口之后，三重政策正在改写中国电池出海路线图 —— https://www.eefocus.com/article/2103873.html</p>
+- 57万辆出口之后，三重政策正在改写中国电池出海路线图 —— <a href="https://www.eefocus.com/article/2103873.html">https://www.eefocus.com/article/2103873.html</a></p>
 <h3>3. 9 月储能装机重回增长，全固态电池 GWh 级产线投产</h3>
 <p>10 月 19 日机构报告：9 月储能装机同环比正增长，前三季度储能装机已追平去年全年；巨湾技研 GWh 级全固态电池产线投产；三星 SDI 签署全固态电池新合作、冲刺 2027 年量产；中科海钠与武汉江夏签约建设 10GWh 钠离子电池生产线；11 家锂电公司三季度业绩预告全部预增或预盈。全固态电池是下一代电池技术的"圣杯"，GWh 级产线投产意味着它从实验室走向了量产线；钠离子电池用盐里的钠代替锂，是锂电池的"平替"，原材料便宜量大。</p>
 <p>🔍 名词解释：<br />
@@ -389,7 +410,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p>📌 一句话总结：储能装机回暖，固态电池和钠电池两条新赛道同时加速：电池行业的下一场革命正在量产线上排队。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
-- 机构：新能源汽车退税政策落地，9月储能装机同环比正增长 —— https://news.qq.com/rain/a/20261019A0CGVL00</p>
+- 机构：新能源汽车退税政策落地，9月储能装机同环比正增长 —— <a href="https://news.qq.com/rain/a/20261019A0CGVL00">https://news.qq.com/rain/a/20261019A0CGVL00</a></p>
 <h3>4. 南澳官宣近 13GW 风光大开发：钢铁城要变绿能城</h3>
 <p>2026 年 10 月 19 日，南澳大利亚州能源矿业部宣布：四家开发商获得 Whyalla West 释放区（3300 多平方公里牧区土地）可行性许可证的独家申请权，四个方案合计约 12.65GW——Windlab 的 6GW 风光混合项目、Altra Energy 的 4.7GW 风光项目、Heron Energy 的 1.6GW 风电项目、Neoen 的 350MW 光伏项目。这是该州《2023 年氢能与可再生能源法》下土地招标的首个成果。近 13GW 约等于半个三峡电站的装机规模，是澳大利亚近年最大的可再生能源土地释放之一；Whyalla 是传统钢铁工业城市，这次转型是"钢铁城变绿氢/绿钢城"的前哨战。</p>
 <p>🔍 名词解释：<br />
@@ -409,7 +430,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>generation</strong> 一代人；搭配：younger generation（年轻一代）；例：The project will power generations to come.（这个项目将为子孙后代供电。）💬 "Each generation imagines itself to be more intelligent than the one that went before it, and wiser than the one that comes after it." —— George Orwell（每一代人都觉得自己比上一代更聪明、比下一代更有智慧。）<br />
 - <strong>wind</strong> 风；搭配：wind power（风电）；例：Heron Energy is pursuing a 1.6 GW wind project.（Heron Energy 在推进一个 1.6GW 的风电项目。）💬 "Who has seen the wind? Neither I nor you." —— Christina Rossetti（谁见过风？你我都不曾见过。）</p>
 <p>🔗 来源：<br />
-- South Australia Selects Four Developers to Advance Almost 13 GW of Wind and Solar at Whyalla —— https://thedailyenergy.com/south-australia-whyalla-west-renewable-developers/</p>
+- South Australia Selects Four Developers to Advance Almost 13 GW of Wind and Solar at Whyalla —— <a href="https://thedailyenergy.com/south-australia-whyalla-west-renewable-developers/">https://thedailyenergy.com/south-australia-whyalla-west-renewable-developers/</a></p>
 <hr />
 <h2>七、国内要闻 🇨🇳</h2>
 <h3>1. 前三季度 GDP 同比增长 4.6%，三季度 4.5%：出口强劲托底，内需仍是短板</h3>
@@ -422,7 +443,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p>📌 一句话总结：三季度经济靠出口"单腿"站稳了 4.5%，但老百姓敢不敢花钱、企业敢不敢投资，才是年底真正的考题。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
-- 新华社《前三季度我国GDP同比增长4.6%》—— https://news.ifeng.com/c/8xLewQrPtIF</p>
+- 新华社《前三季度我国GDP同比增长4.6%》—— <a href="https://news.ifeng.com/c/8xLewQrPtIF">https://news.ifeng.com/c/8xLewQrPtIF</a></p>
 <h3>2. 16 部门联合部署：11 月开展全国"优化消费环境月"，失能老人将领养老服务消费补贴</h3>
 <p>记者 10 月 19 日从国家市场监督管理总局获悉，市场监管总局、工信部等 16 个部门联合部署 2026 年全国"优化消费环境月"活动，11 月开展，主题是"放心消费 你我共享"。活动聚焦五件事：引导商家落实主体责任、解读便民惠企举措、普及维权法律知识、宣传典型案例、以案释法。期间将开展 30 余项主题活动，包括向中度以上失能老年人发放养老服务消费补贴、一体化电视和插入式微型机顶盒推广行动等。</p>
 <p>🔍 名词解释：<br />
@@ -432,7 +453,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p>📌 一句话总结：国家组了个 16 部门的"消费天团"，11 月专治各种买东西的糟心事，还给失能老人发养老消费券。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
-- 新华社《16部门部署2026年全国"优化消费环境月"活动》—— https://www.cs.com.cn/xwzx/01/2026/10/19/detail_2026101910045531.html</p>
+- 新华社《16部门部署2026年全国"优化消费环境月"活动》—— <a href="https://www.cs.com.cn/xwzx/01/2026/10/19/detail_2026101910045531.html">https://www.cs.com.cn/xwzx/01/2026/10/19/detail_2026101910045531.html</a></p>
 <h3>3. 亚残运会中国首金！老将崔哲举起 120 公斤夺冠，五届参赛五届夺金</h3>
 <p>10 月 19 日，在日本爱知·名古屋举行的第五届亚洲残疾人运动会上，中国选手崔哲在举重女子 41 公斤级决赛中夺冠，为中国代表团拿下本届赛事首金。比赛过程堪称碾压：第一把 110 公斤稳稳举起，第二把 115 公斤，最后一把挑战 120 公斤一次成功——刷新了她在巴黎残奥会上创造的 119 公斤个人最好成绩。值得一提的是，2018 年雅加达亚残运会，中国代表团的首金也是她拿的。崔哲还有不到两个月就满 40 岁，这是她第五次参加亚残运会，五次全部夺金。</p>
 <p>🔍 名词解释：<br />
@@ -442,7 +463,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p>📌 一句话总结：快 40 岁的崔哲一把举起 120 公斤、刷新个人最佳，为中国拿下亚残运会首金——五届亚残运会，她一次都没让金牌旁落。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
-- 新华社日本名古屋专电《亚残运会|举重老将崔哲摘得中国代表团首金》—— https://feng.ifeng.com/c/8xM0QwJxwlG</p>
+- 新华社日本名古屋专电《亚残运会|举重老将崔哲摘得中国代表团首金》—— <a href="https://feng.ifeng.com/c/8xM0QwJxwlG">https://feng.ifeng.com/c/8xM0QwJxwlG</a></p>
 <h3>4. 国际科学理事会中期会员大会在北京开幕，发布《北京科学宣言》倡议</h3>
 <p>10 月 19 日，2026 年国际科学理事会中期会员大会暨北京科学对话在北京开幕，由国际科学理事会主办，中国科协、中科院、社科院、北京市政府共同举办，主题是"复杂世界中的科学——科学共创美好未来"，围绕"科学作为全球公共产品""负责任的人工智能""科学与社会信任"三大议题展开对话。这是该大会首次在北京举行。开幕式上以视频形式集中发布了五项重大成果，包括中科院《全球可持续发展数据产品（2025）》、国家自然科学基金委《中国基础研究发展报告（2026）》等；中科院院士朱永官介绍了《北京科学宣言》倡议，主张把科学作为全球公共产品、发展负责任的人工智能。</p>
 <p>🔍 名词解释：<br />
@@ -452,7 +473,7 @@ body.dark td, body.dark th { border-color: #444; }
 <p>📌 一句话总结：全球科学家在北京共商"科学向何处去"，中国借主场之利，把"科学要共享、AI 要守规矩"写进了面向 2030 年的共同倡议。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
-- 2026年国际科学理事会中期会员大会暨北京科学对话在京开幕 —— https://finance.sina.com.cn/stock/t/2026-10-19/doc-inivumai6168879.shtml</p>
+- 2026年国际科学理事会中期会员大会暨北京科学对话在京开幕 —— <a href="https://finance.sina.com.cn/stock/t/2026-10-19/doc-inivumai6168879.shtml">https://finance.sina.com.cn/stock/t/2026-10-19/doc-inivumai6168879.shtml</a></p>
 <hr />
 <h2>八、GitHub 新技术 💻</h2>
 <h3>1. ai-job-search：跑在你自己电脑上的 AI 求职助手</h3>
@@ -478,8 +499,8 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>genuine</strong> 真诚的，真正的；搭配：a genuine conversation（真诚的交谈）；例：Being upfront sparked genuine technical conversations.（坦率反而引发了真诚的技术交流。）💬 "Be yourself; everyone else is already taken." —— Oscar Wilde（做你自己，因为别人都已经有人做了。）<br />
 - <strong>outcome</strong> 结果；搭配：record the outcome（记录结果）；例：The outcome command records what happened to each application.（结果记录命令记录每份申请的进展。）💬 "It's not about how hard you hit. It's about how hard you can get hit and keep moving forward." —— 《Rocky Balboa》（重要的不是你出拳多重，而是你能挨多重还继续往前走。）</p>
 <p>🔗 来源：<br />
-- GitHub 仓库：https://github.com/MadsLorentzen/ai-job-search<br />
-- GitHub Trending：https://github.com/trending</p>
+- GitHub 仓库：<a href="https://github.com/MadsLorentzen/ai-job-search">https://github.com/MadsLorentzen/ai-job-search</a><br />
+- GitHub Trending：<a href="https://github.com/trending">https://github.com/trending</a></p>
 <h3>2. headroom：AI agent 的"省钱压缩机"</h3>
 <p>一个给 AI agent 省 token（计费单位）的开源压缩层（2026 年 1 月开源，现 7.6 万+ stars，Trendshift 日榜第 1）。AI agent 干活要读大量工具输出、日志、文件，这些都要按 token 花钱。Headroom 在内容送到大模型之前先压缩：编程 agent 场景省 20% token，JSON 数据省 60–95%，答案不变；压缩全在本地完成，数据不上传；原文存在本地，模型需要时可随时取回。提供代码库、代理、MCP 服务器三种用法。AI agent 越来越能"烧钱"，"怎么让 agent 便宜跑"是全行业痛点；它号称压缩耗时不到 1 毫秒（感觉不到延迟），还在 GSM8K、TruthfulQA 等基准测试里证明压缩后答题分数不变——省钱不丢准确率。</p>
 <p>🔍 名词解释（大白话）：<br />
@@ -504,8 +525,8 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>effort</strong> 努力，投入；搭配：effort routing（投入分配）；例：Effort routing dials thinking down on routine steps.（投入分配会在常规步骤调低思考量。）💬 "Genius is one percent inspiration and ninety-nine percent perspiration." —— Thomas Edison（天才是百分之一的灵感加百分之九十九的汗水。）<br />
 - <strong>route</strong> 路由，引导；搭配：route traffic（引导流量）；例：The ContentRouter routes each payload to the right compressor.（内容路由器把每份内容送到合适的压缩器。）💬 "All roads lead to Rome." —— 英语谚语（条条大路通罗马。）</p>
 <p>🔗 来源：<br />
-- GitHub 仓库：https://github.com/headroomlabs-ai/headroom<br />
-- GitHub Trending：https://github.com/trending</p>
+- GitHub 仓库：<a href="https://github.com/headroomlabs-ai/headroom">https://github.com/headroomlabs-ai/headroom</a><br />
+- GitHub Trending：<a href="https://github.com/trending">https://github.com/trending</a></p>
 <hr />
 <p>Ricardo，今天的《麻薯日报》第 24 期就到这里啦📰 周二加油，愿你今天的每一分钟都像复利一样，悄悄滚成大雪球❄️ 贴贴💛</p>
 <div class="nav bottom"><a href="issue-023.html">⬅ 上一期（第23期）</a><a href="index.html">📚 回到目录</a><a href="issue-025.html">下一期（第25期）➡</a></div>

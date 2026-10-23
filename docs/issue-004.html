@@ -5,38 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>《麻薯日报》第4期 · 2026-09-30</title>
 <style>
-body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-       max-width: 720px; margin: 0 auto; padding: 24px 20px 40px; line-height: 2.0;
+/* 《麻薯日报》报纸版式（2026-10-23 Ricardo 要求：像真正的报纸） */
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       max-width: 720px; margin: 0 auto; padding: 28px 20px 48px; line-height: 2.0;
        font-size: 17.5px; letter-spacing: 0.01em;
-       color: #222; background: #fffdf8; }
+       color: #1c1a17; background: #fbf8f1; }
 p { margin: 1.1em 0; }
-h1 { font-size: 1.5em; line-height: 1.5; }
-h2 { border-bottom: 2px solid #f0c75e; padding-bottom: 6px; margin-top: 2.2em; line-height: 1.5; }
-h3 { margin-top: 1.8em; line-height: 1.55; }
-a { color: #1d4fd7; text-decoration: underline; text-underline-offset: 3px; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em;
+             margin: 0 0 6px; padding: 0; border: none; }
+blockquote p { margin: 4px 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 2.4em; border: none; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 2.1em; padding-top: 1.15em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
 a:visited { color: #6d4fc2; }
-ul li, ol li { margin: 10px 0; }
+ul li, ol li { margin: 13px 0; line-height: 1.95; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.2em 0; }
 img { max-width: 100%; }
-table { border-collapse: collapse; }
-td, th { border: 1px solid #ccc; padding: 4px 8px; }
-.note { color: #666; font-size: 0.92em; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+td, th { border: 1px solid #c9c2b2; padding: 6px 10px; }
+th { background: #efe9db; }
+.note { color: #6b6257; font-size: 0.92em; }
 .nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
-       border-bottom: 2px solid #f0c75e; padding-bottom: 8px; margin-bottom: 16px; font-size: 0.95em; }
-.nav.bottom { border-bottom: none; border-top: 2px solid #f0c75e; padding-top: 8px; margin-top: 24px; }
+       border-bottom: 2px solid #1c1a17; padding-bottom: 10px; margin-bottom: 20px;
+       font-size: 0.95em; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.nav.bottom { border-bottom: none; border-top: 2px solid #1c1a17; padding-top: 10px; margin-top: 32px; }
 body.spa .page { display: none; }
 body.spa .page.active { display: block; }
 a.navbtn { text-decoration: none; }
 .bgbar { text-align: right; margin-bottom: 10px; }
-#bgToggle { background: #f0c75e;
-  color: #222; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
-  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25); font-family: inherit; }
-body.dark { background: #141414; color: #e6e6e6; }
+#bgToggle { background: #1c1a17;
+  color: #f7f2e7; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
+  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+body.dark { background: #161513; color: #e8e2d5; }
+body.dark h1 { border-top-color: #e8e2d5; border-bottom-color: #e8e2d5; }
+body.dark blockquote { color: #a39a89; }
+body.dark h2 { background: #e8e2d5; color: #161513; }
+body.dark h3 { border-top-color: #3a362e; }
 body.dark a { color: #8ab8ff; }
 body.dark a:visited { color: #c4a8ff; }
-body.dark .note { color: #a8a8a8; }
-body.dark h2 { border-bottom-color: #8a6d2f; }
-body.dark .nav { border-color: #8a6d2f; }
+body.dark li > strong:first-child { color: #e0a458; }
+body.dark hr { border-top-color: #e8e2d5; }
+body.dark .note { color: #a39a89; }
+body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
+body.dark th { background: #262219; }
+body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
 <body>
@@ -62,9 +83,9 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>💡 一句话总结</strong><br />
 美联储两大官员唱反调，10 月加息从"大概率"变成"抛硬币"，但债市仍在用 20 多年最高收益率给全市场"涨价"。</p>
 <p><strong>🔗 来源</strong><br />
-- Barron's《Odds of October Rate Increase Drop as Fed's Williams Signals He's Open to a Pause》(2026-09-29)：https://www.barrons.com/articles/fed-october-rate-hike-odds-john-williams-c9d07b72<br />
-- Reuters《Fed's Barr says more rate hikes likely to be needed to curb inflation》(2026-09-29)：https://www.reuters.com/business/feds-barr-says-more-rate-hikes-likely-be-needed-curb-inflation-2026-09-29/<br />
-- Barron's《Nasdaq Stages Afternoon Rebound as October Hike Odds Drop》(2026-09-29)：https://www.barrons.com/livecoverage/stock-market-news-today-092926/card/nasdaq-stages-afternoon-rebound-as-october-hike-odds-drop-q9qCPja4udBmZR7FO0iv</p>
+- Barron's《Odds of October Rate Increase Drop as Fed's Williams Signals He's Open to a Pause》(2026-09-29)：<a href="https://www.barrons.com/articles/fed-october-rate-hike-odds-john-williams-c9d07b72">https://www.barrons.com/articles/fed-october-rate-hike-odds-john-williams-c9d07b72</a><br />
+- Reuters《Fed's Barr says more rate hikes likely to be needed to curb inflation》(2026-09-29)：<a href="https://www.reuters.com/business/feds-barr-says-more-rate-hikes-likely-be-needed-curb-inflation-2026-09-29/">https://www.reuters.com/business/feds-barr-says-more-rate-hikes-likely-be-needed-curb-inflation-2026-09-29/</a><br />
+- Barron's《Nasdaq Stages Afternoon Rebound as October Hike Odds Drop》(2026-09-29)：<a href="https://www.barrons.com/livecoverage/stock-market-news-today-092926/card/nasdaq-stages-afternoon-rebound-as-october-hike-odds-drop-q9qCPja4udBmZR7FO0iv">https://www.barrons.com/livecoverage/stock-market-news-today-092926/card/nasdaq-stages-afternoon-rebound-as-october-hike-odds-drop-q9qCPja4udBmZR7FO0iv</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>urgency</strong>（紧迫感）｜搭配：with no urgency / a sense of urgency｜原文例句："signaled there was no urgency to raise rates again" (Barron's)｜名句：未找到确切出处<br />
 2. <strong>hike</strong>（上调）｜搭配：rate hike / hike interest rates｜原文例句："Odds of an October Federal Reserve rate hike fell Tuesday" (Barron's)｜名句：未找到确切出处<br />
@@ -89,8 +110,8 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>💡 一句话总结</strong><br />
 中国央行罕见地同时"放水"给基建科创和给首套房贷打折，是一次瞄准稳增长的精准刺激。</p>
 <p><strong>🔗 来源</strong><br />
-- Reuters《China unveils rate cut, mortgage subsidies to spur growth》(2026-09-29)：https://www.reuters.com/world/asia-pacific/china-unveils-rate-cut-mortgage-subsidies-spur-growth-2026-09-29/<br />
-- Nikkei Asia《China launches 'mini stimulus' targeting affordable homes, infrastructure》(2026-09-29)：https://asia.nikkei.com/business/markets/china-debt-crunch/china-launches-mini-stimulus-targeting-affordable-homes-infrastructure</p>
+- Reuters《China unveils rate cut, mortgage subsidies to spur growth》(2026-09-29)：<a href="https://www.reuters.com/world/asia-pacific/china-unveils-rate-cut-mortgage-subsidies-spur-growth-2026-09-29/">https://www.reuters.com/world/asia-pacific/china-unveils-rate-cut-mortgage-subsidies-spur-growth-2026-09-29/</a><br />
+- Nikkei Asia《China launches 'mini stimulus' targeting affordable homes, infrastructure》(2026-09-29)：<a href="https://asia.nikkei.com/business/markets/china-debt-crunch/china-launches-mini-stimulus-targeting-affordable-homes-infrastructure">https://asia.nikkei.com/business/markets/china-debt-crunch/china-launches-mini-stimulus-targeting-affordable-homes-infrastructure</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>subsidy</strong>（补贴）｜搭配：government subsidy / interest subsidy｜原文例句："announced interest subsidies on new commercial mortgages for eligible first-time homebuyers" (Reuters)｜名句：未找到确切出处<br />
 2. <strong>mortgage</strong>（抵押贷款、房贷）｜搭配：mortgage loan / mortgage rate｜原文例句："subsidise interest payments on new commercial mortgages for eligible first-home buyers nationwide from October 1" (Reuters)｜名句：未找到确切出处<br />
@@ -114,8 +135,8 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>💡 一句话总结</strong><br />
 美伊幕后谈判带来喘息，油价从恐慌高点回落，但地缘这根弦依然绷着。</p>
 <p><strong>🔗 来源</strong><br />
-- Reuters《Trading Day: Stocks still in bonds' grip》(2026-09-29)：https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-09-29/<br />
-- CHOSUNBIZ《Stocks open mixed as investors track rising US bond yields and weak data》(2026-09-29)：https://biz.chosun.com/en/en-international/2026/09/29/7QJMYUW4VRGGZHJXKQTJBNOGSM/</p>
+- Reuters《Trading Day: Stocks still in bonds' grip》(2026-09-29)：<a href="https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-09-29/">https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-09-29/</a><br />
+- CHOSUNBIZ《Stocks open mixed as investors track rising US bond yields and weak data》(2026-09-29)：<a href="https://biz.chosun.com/en/en-international/2026/09/29/7QJMYUW4VRGGZHJXKQTJBNOGSM/">https://biz.chosun.com/en/en-international/2026/09/29/7QJMYUW4VRGGZHJXKQTJBNOGSM/</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>ease</strong>（缓解）｜搭配：ease tensions / ease concerns｜原文例句："News that the United States and Iran are continuing back-channel talks eased market tensions somewhat" (CHOSUNBIZ)｜名句：未找到确切出处<br />
 2. <strong>mediate</strong>（调解、斡旋）｜搭配：mediated by / mediate a dispute｜原文例句："the two countries are holding indirect negotiations mediated by Qatar" (CHOSUNBIZ)｜名句：未找到确切出处<br />
@@ -141,8 +162,8 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>💡 一句话总结</strong><br />
 OpenAI 自己承认新模型"管不住"，AI 行业第一次为安全踩下急刹车。</p>
 <p><strong>🔗 来源</strong><br />
-- Reuters（经 GMA News 转载）《OpenAI shelves new AI model release over safety concerns》(2026-09-29)：https://www.gmanetwork.com/news/scitech/technology/1004130/openai-shelves-new-ai-model-release-over-safety-concerns/story/<br />
-- PYMNTS《OpenAI Shelves New Model Due to Safety Worries》(2026-09-29)：https://www.pymnts.com/news/artificial-intelligence/2026/openai-shelves-new-model-due-to-safety-worries/</p>
+- Reuters（经 GMA News 转载）《OpenAI shelves new AI model release over safety concerns》(2026-09-29)：<a href="https://www.gmanetwork.com/news/scitech/technology/1004130/openai-shelves-new-ai-model-release-over-safety-concerns/story/">https://www.gmanetwork.com/news/scitech/technology/1004130/openai-shelves-new-ai-model-release-over-safety-concerns/story/</a><br />
+- PYMNTS《OpenAI Shelves New Model Due to Safety Worries》(2026-09-29)：<a href="https://www.pymnts.com/news/artificial-intelligence/2026/openai-shelves-new-model-due-to-safety-worries/">https://www.pymnts.com/news/artificial-intelligence/2026/openai-shelves-new-model-due-to-safety-worries/</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>scrap</strong>（废弃、取消）｜搭配：scrap a plan / scrap the release｜原文例句："OpenAI has scrapped the release of GPT-6.1 Astra" (Reuters)｜名句：未找到确切出处<br />
 2. <strong>debut</strong>（首次亮相）｜搭配：make one's debut / planned debut｜原文例句："a next-generation AI model planned for an October debut" (Reuters)｜名句：未找到确切出处<br />
@@ -166,9 +187,9 @@ OpenAI 自己承认新模型"管不住"，AI 行业第一次为安全踩下急�
 <p><strong>💡 一句话总结</strong><br />
 收入暴涨 12 倍、亏损也暴涨，Anthropic 用一份"史上最贵赌局"的招股书叩响上市大门。</p>
 <p><strong>🔗 来源</strong><br />
-- Reuters《Exclusive-Anthropic IPO prospectus lays bare deep dependence on Big Tech partners》(2026-09-29)：https://www.reuters.com/world/anthropic-ipo-prospectus-lays-bare-deep-dependence-big-tech-partners-2026-09-29/<br />
-- CNA（转述路透独家）《Exclusive-Anthropic IPO prospectus lays bare deep dependence on Big Tech partners》(2026-09-29)：https://www.channelnewsasia.com/business/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-big-tech-partners-6419771<br />
-- Business Times（转述路透独家）《Surging revenue, widening losses and a sweeping AI vision: Inside Anthropic's IPO prospectus》(2026-09-29)：https://www.businesstimes.com.sg/international/global/surging-revenue-widening-losses-and-sweeping-ai-vision-inside-anthropics-ipo-prospectus?ref=home-top-stories-2</p>
+- Reuters《Exclusive-Anthropic IPO prospectus lays bare deep dependence on Big Tech partners》(2026-09-29)：<a href="https://www.reuters.com/world/anthropic-ipo-prospectus-lays-bare-deep-dependence-big-tech-partners-2026-09-29/">https://www.reuters.com/world/anthropic-ipo-prospectus-lays-bare-deep-dependence-big-tech-partners-2026-09-29/</a><br />
+- CNA（转述路透独家）《Exclusive-Anthropic IPO prospectus lays bare deep dependence on Big Tech partners》(2026-09-29)：<a href="https://www.channelnewsasia.com/business/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-big-tech-partners-6419771">https://www.channelnewsasia.com/business/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-big-tech-partners-6419771</a><br />
+- Business Times（转述路透独家）《Surging revenue, widening losses and a sweeping AI vision: Inside Anthropic's IPO prospectus》(2026-09-29)：<a href="https://www.businesstimes.com.sg/international/global/surging-revenue-widening-losses-and-sweeping-ai-vision-inside-anthropics-ipo-prospectus?ref=home-top-stories-2">https://www.businesstimes.com.sg/international/global/surging-revenue-widening-losses-and-sweeping-ai-vision-inside-anthropics-ipo-prospectus?ref=home-top-stories-2</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>staggering</strong>（惊人的）｜搭配：staggering costs / staggering losses｜原文例句："But the cost to get there will be staggering." (Reuters)｜名句：未找到确切出处<br />
 2. <strong>prospectus</strong>（招股说明书）｜搭配：IPO prospectus｜原文例句："according to its IPO prospectus seen by Reuters" (Reuters)｜名句：未找到确切出处<br />
@@ -192,7 +213,7 @@ OpenAI 自己承认新模型"管不住"，AI 行业第一次为安全踩下急�
 <p><strong>💡 一句话总结</strong><br />
 英伟达把"管住 AI"做成了一门生意，超百家机构站队，而惹祸最多的 OpenAI 却不在名单上。</p>
 <p><strong>🔗 来源</strong><br />
-- TechCrunch《Nvidia launches new platform for reining in rogue AI agents》(2026-09-28)：https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/</p>
+- TechCrunch《Nvidia launches new platform for reining in rogue AI agents》(2026-09-28)：<a href="https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/">https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>rogue</strong>（失控的、擅自行动的）｜搭配：go rogue / rogue agent｜原文例句："Nvidia launches new platform for reining in rogue AI agents" (TechCrunch 标题)｜名句：未找到确切出处<br />
 2. <strong>rein in</strong>（控制、约束）｜搭配：rein in spending / rein in inflation｜原文例句："for reining in rogue AI agents" (TechCrunch 标题)｜名句：未找到确切出处<br />
@@ -218,8 +239,8 @@ OpenAI 自己承认新模型"管不住"，AI 行业第一次为安全踩下急�
 <p><strong>💡 一句话总结</strong><br />
 停火方案终于摆上桌，但特朗普的嘴比谈判桌更难预测。</p>
 <p><strong>🔗 来源</strong><br />
-- Reuters《Trump says he does not know if Iran is going to 'give up yet'》(2026-09-29)：https://www.reuters.com/world/middle-east/trump-says-he-does-not-know-if-iran-is-going-give-up-yet-2026-09-29/<br />
-- CGTN《US, Iran separately talk with mediators in latest bid to end war》(2026-09-29)：https://news.cgtn.com/news/2026-09-29/US-Iran-separately-talk-with-mediators-in-latest-bid-to-end-war-1QPh2YQacM0/p.html</p>
+- Reuters《Trump says he does not know if Iran is going to 'give up yet'》(2026-09-29)：<a href="https://www.reuters.com/world/middle-east/trump-says-he-does-not-know-if-iran-is-going-give-up-yet-2026-09-29/">https://www.reuters.com/world/middle-east/trump-says-he-does-not-know-if-iran-is-going-give-up-yet-2026-09-29/</a><br />
+- CGTN《US, Iran separately talk with mediators in latest bid to end war》(2026-09-29)：<a href="https://news.cgtn.com/news/2026-09-29/US-Iran-separately-talk-with-mediators-in-latest-bid-to-end-war-1QPh2YQacM0/p.html">https://news.cgtn.com/news/2026-09-29/US-Iran-separately-talk-with-mediators-in-latest-bid-to-end-war-1QPh2YQacM0/p.html</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>mediator</strong>（调解人、斡旋方）｜搭配：mediate a dispute / act as mediator｜原文例句："US and Iranian officials spoke separately with mediators" (CGTN)｜名句：未找到确切出处<br />
 2. <strong>hostilities</strong>（敌对行动）｜搭配：cease hostilities / end hostilities｜原文例句："all hostilities in Iran and Lebanon would cease" (CGTN 引述路透)｜名句：未找到确切出处<br />
@@ -243,7 +264,7 @@ OpenAI 自己承认新模型"管不住"，AI 行业第一次为安全踩下急�
 <p><strong>💡 一句话总结</strong><br />
 中欧贸易关系再起波澜，双方都在亮肌肉。</p>
 <p><strong>🔗 来源</strong><br />
-- Reuters《China vows response if EU introduces moves targeting Chinese trade》(2026-09-29)：https://www.reuters.com/world/asia-pacific/china-vows-response-if-eu-introduces-moves-targeting-chinese-trade-2026-09-29/</p>
+- Reuters《China vows response if EU introduces moves targeting Chinese trade》(2026-09-29)：<a href="https://www.reuters.com/world/asia-pacific/china-vows-response-if-eu-introduces-moves-targeting-chinese-trade-2026-09-29/">https://www.reuters.com/world/asia-pacific/china-vows-response-if-eu-introduces-moves-targeting-chinese-trade-2026-09-29/</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>vow</strong>（发誓、郑重承诺）｜搭配：vow to do sth / vow a response｜原文例句："China has vowed a 'resolute response' to safeguard its industries" (Reuters)｜名句：未找到确切出处<br />
 2. <strong>resolute</strong>（坚定的、果断的）｜搭配：resolute response / remain resolute｜原文例句："vowed a 'resolute response' to safeguard its industries" (Reuters)｜名句：未找到确切出处<br />
@@ -267,7 +288,7 @@ OpenAI 自己承认新模型"管不住"，AI 行业第一次为安全踩下急�
 <p><strong>💡 一句话总结</strong><br />
 海地大选前给国际部队"续命"半年，但人手和钱都远远不够。</p>
 <p><strong>🔗 来源</strong><br />
-- Reuters《UN renews Haiti force mandate for six months after fresh gang killings》(2026-09-29)：https://www.reuters.com/world/americas/un-renews-haiti-force-mandate-six-months-after-fresh-gang-killings-2026-09-29/</p>
+- Reuters《UN renews Haiti force mandate for six months after fresh gang killings》(2026-09-29)：<a href="https://www.reuters.com/world/americas/un-renews-haiti-force-mandate-six-months-after-fresh-gang-killings-2026-09-29/">https://www.reuters.com/world/americas/un-renews-haiti-force-mandate-six-months-after-fresh-gang-killings-2026-09-29/</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>mandate</strong>（授权、任期）｜搭配：extend the mandate / renew the mandate｜原文例句："extended by six months the mandate of an international security force in Haiti" (Reuters)｜名句：未找到确切出处<br />
 2. <strong>abstain</strong>（弃权）｜搭配：abstain from voting｜原文例句："Three nations, however, abstained: China, Russia and Pakistan" (Reuters)｜名句：未找到确切出处<br />
@@ -293,7 +314,7 @@ OpenAI 自己承认新模型"管不住"，AI 行业第一次为安全踩下急�
 <p><strong>💡 一句话总结</strong><br />
 澳大利亚人用屋顶光伏"投票"，装机量超过了全国煤电。</p>
 <p><strong>🔗 来源</strong><br />
-- Renewable Energy Magazine《CEC releases new Rooftop solar and storage report, January to June 2026》(2026-09-29)：https://www.renewableenergymagazine.com/pv_solar/cec-releases-new-rooftop-solar-and-storage-20260929</p>
+- Renewable Energy Magazine《CEC releases new Rooftop solar and storage report, January to June 2026》(2026-09-29)：<a href="https://www.renewableenergymagazine.com/pv_solar/cec-releases-new-rooftop-solar-and-storage-20260929">https://www.renewableenergymagazine.com/pv_solar/cec-releases-new-rooftop-solar-and-storage-20260929</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>record-breaking</strong>（破纪录的）｜搭配：record-breaking growth / record-breaking heat｜原文例句："A record-breaking 1.89 GW of rooftop solar was installed in the first half of 2026" (CEC 报告转述)｜名句：未找到确切出处<br />
 2. <strong>flock</strong>（蜂拥、涌向）｜搭配：flock to / flock together｜原文例句："as households flock to cheap, reliable solar energy" (CEC 报告转述)｜名句："Birds of a feather flock together." —— 英语谚语（物以类聚）<br />
@@ -317,7 +338,7 @@ OpenAI 自己承认新模型"管不住"，AI 行业第一次为安全踩下急�
 <p><strong>💡 一句话总结</strong><br />
 西班牙再添一个"光伏 + 大电池"项目，欧洲储能热度不减。</p>
 <p><strong>🔗 来源</strong><br />
-- Ellomay Capital 官方新闻稿（GlobeNewswire，经 TradingView 转载）《Ellomay Announces Receipt of a 22.2 MW / 100.3 MWh (4.5-hour) Battery Storage Grid Access and Connection Permit》(2026-09-29)：https://www.tradingview.com/news/globenewswire:f1a3c1464094b:0-ellomay-announces-receipt-of-a-22-2-mw-100-3-mwh-4-5-hour-battery-storage-grid-access-and-connection-permit-by-ellomay-solar/</p>
+- Ellomay Capital 官方新闻稿（GlobeNewswire，经 TradingView 转载）《Ellomay Announces Receipt of a 22.2 MW / 100.3 MWh (4.5-hour) Battery Storage Grid Access and Connection Permit》(2026-09-29)：<a href="https://www.tradingview.com/news/globenewswire:f1a3c1464094b:0-ellomay-announces-receipt-of-a-22-2-mw-100-3-mwh-4-5-hour-battery-storage-grid-access-and-connection-permit-by-ellomay-solar/">https://www.tradingview.com/news/globenewswire:f1a3c1464094b:0-ellomay-announces-receipt-of-a-22-2-mw-100-3-mwh-4-5-hour-battery-storage-grid-access-and-connection-permit-by-ellomay-solar/</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>permit</strong>（许可、许可证）｜搭配：grid access permit / building permit｜原文例句："received a battery storage grid access and connection permit" (Ellomay 新闻稿)｜名句：未找到确切出处<br />
 2. <strong>subsidiary</strong>（子公司）｜搭配：wholly-owned subsidiary｜原文例句："its Spanish indirectly held wholly-owned subsidiary, Ellomay Solar S.L." (Ellomay 新闻稿)｜名句：未找到确切出处<br />
@@ -339,7 +360,7 @@ OpenAI 自己承认新模型"管不住"，AI 行业第一次为安全踩下急�
 <p><strong>💡 一句话总结</strong><br />
 高效不是做更多，而是勇敢地删掉更多。</p>
 <p><strong>🔗 来源</strong><br />
-- Harvard Business Review（LinkedIn 官方账号分享）《Want to Be More Productive? Try Doing Less》：https://s.hbr.org/3OTDAmx</p>
+- Harvard Business Review（LinkedIn 官方账号分享）《Want to Be More Productive? Try Doing Less》：<a href="https://s.hbr.org/3OTDAmx">https://s.hbr.org/3OTDAmx</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>subtraction</strong>（减法）｜搭配：think subtraction / subtraction approach｜原文例句："If you want to improve upon an area of your life, think subtraction, not addition." (HBR)｜名句：未找到确切出处<br />
 2. <strong>addition</strong>（加法、增加）｜搭配：in addition / decades of accumulated additions｜原文例句："think subtraction, not addition" (HBR)｜原文例句2："groan under decades of accumulated 'additions' no one ever revisits" (HBR)｜名句：未找到确切出处<br />
@@ -359,7 +380,7 @@ OpenAI 自己承认新模型"管不住"，AI 行业第一次为安全踩下急�
 <p><strong>💡 一句话总结</strong><br />
 效率的秘密不是鸡血，是稳。</p>
 <p><strong>🔗 来源</strong><br />
-- phys.org《Are remote workers more or less productive?》(2026-09-02，转述爱荷华大学研究，发表于 Organization Science)：https://phys.org/news/2026-09-remote-workers-productive.html</p>
+- phys.org《Are remote workers more or less productive?》(2026-09-02，转述爱荷华大学研究，发表于 Organization Science)：<a href="https://phys.org/news/2026-09-remote-workers-productive.html">https://phys.org/news/2026-09-remote-workers-productive.html</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>variability</strong>（波动性、变化性）｜搭配：energy variability / reduce variability｜原文例句："Workers experienced about 33% less energy variability on days working from home" (phys.org)｜名句：未找到确切出处<br />
 2. <strong>consistent</strong>（稳定的、一致的）｜搭配：consistent energy / remain consistent｜原文例句："more consistent energy levels lead to greater productivity than the ups and downs of working in the office" (phys.org)｜名句：未找到确切出处<br />
@@ -381,7 +402,7 @@ OpenAI 自己承认新模型"管不住"，AI 行业第一次为安全踩下急�
 <p><strong>💡 一句话总结</strong><br />
 童年写了草稿，但你的人生一直在改稿。</p>
 <p><strong>🔗 来源</strong><br />
-- Frontiers in Psychology 编辑部文章《Editorial: The power of relationships in human development: from prenatal bonding to attachment across the lifespan》(2026-09-17)：https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1955746/full</p>
+- Frontiers in Psychology 编辑部文章《Editorial: The power of relationships in human development: from prenatal bonding to attachment across the lifespan》(2026-09-17)：<a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1955746/full">https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1955746/full</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>attachment</strong>（依恋、依附）｜搭配：attachment style / secure attachment｜原文例句："showing that the same patterns of security and insecurity identified in infants also organize how adults experience closeness" (Frontiers)｜名句：未找到确切出处<br />
 2. <strong>lifespan</strong>（一生、寿命）｜搭配：across the lifespan / human lifespan｜原文例句："attachment across the lifespan" (Frontiers 标题)｜名句：未找到确切出处<br />
@@ -401,7 +422,7 @@ Simply Psychology 近日更新的约会指南，总结了 12 个"安全型依恋
 <p><strong>💡 一句话总结</strong><br />
 安全型的人，约会时"不端着也不演"。</p>
 <p><strong>🔗 来源</strong><br />
-- Simply Psychology《How To Know If Your Date Has A Secure Attachment Style》：https://www.simplypsychology.org/how-to-tell-someones-attachment-style-on-a-first-date.html</p>
+- Simply Psychology《How To Know If Your Date Has A Secure Attachment Style》：<a href="https://www.simplypsychology.org/how-to-tell-someones-attachment-style-on-a-first-date.html">https://www.simplypsychology.org/how-to-tell-someones-attachment-style-on-a-first-date.html</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>attuned</strong>（协调一致的、合拍的）｜搭配：be attuned to｜原文例句："Securely attached individuals are attuned to others but won't probe too much too soon." (Simply Psychology)｜名句：未找到确切出处<br />
 2. <strong>probe</strong>（探问、探查）｜搭配：probe too much｜原文例句："won't probe too much too soon" (Simply Psychology)｜名句：未找到确切出处<br />
@@ -421,8 +442,8 @@ Simply Psychology 近日更新的约会指南，总结了 12 个"安全型依恋
 <p><strong>💡 一句话总结</strong><br />
 先看清自己的剧本，才写得出新的结局。</p>
 <p><strong>🔗 来源</strong><br />
-- Instagram @blairguinntherapy（治疗师 Blair Guinn，2026-09-07）：https://www.instagram.com/reel/Dc_7js1S34I/<br />
-- Facebook @lovesecurely（认证账号，2026-09-08）：https://www.facebook.com/lovesecurely/posts/pfbid0Ji5f6ytn9QuhSoaobLvuCB3T6dMY7YNvC5M5mTMSzCAwwqgezUnPtv3uxHY7Lf1xl</p>
+- Instagram @blairguinntherapy（治疗师 Blair Guinn，2026-09-07）：<a href="https://www.instagram.com/reel/Dc_7js1S34I/">https://www.instagram.com/reel/Dc_7js1S34I/</a><br />
+- Facebook @lovesecurely（认证账号，2026-09-08）：<a href="https://www.facebook.com/lovesecurely/posts/pfbid0Ji5f6ytn9QuhSoaobLvuCB3T6dMY7YNvC5M5mTMSzCAwwqgezUnPtv3uxHY7Lf1xl">https://www.facebook.com/lovesecurely/posts/pfbid0Ji5f6ytn9QuhSoaobLvuCB3T6dMY7YNvC5M5mTMSzCAwwqgezUnPtv3uxHY7Lf1xl</a></p>
 <p><strong>📝 生词（10个）</strong><br />
 1. <strong>initiate</strong>（主动发起）｜搭配：initiate contact / take the initiative｜原文例句："noticing if the other person initiates and invests" (Blair Guinn)｜名句：未找到确切出处<br />
 2. <strong>tolerate</strong>（忍受、容忍）｜搭配：tolerate uncertainty｜原文例句："tolerating uncertainty without catastrophizing" (Blair Guinn)｜名句：未找到确切出处<br />

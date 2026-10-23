@@ -5,38 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>《麻薯日报》第1期 · 2026-09-26</title>
 <style>
-body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-       max-width: 720px; margin: 0 auto; padding: 24px 20px 40px; line-height: 2.0;
+/* 《麻薯日报》报纸版式（2026-10-23 Ricardo 要求：像真正的报纸） */
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       max-width: 720px; margin: 0 auto; padding: 28px 20px 48px; line-height: 2.0;
        font-size: 17.5px; letter-spacing: 0.01em;
-       color: #222; background: #fffdf8; }
+       color: #1c1a17; background: #fbf8f1; }
 p { margin: 1.1em 0; }
-h1 { font-size: 1.5em; line-height: 1.5; }
-h2 { border-bottom: 2px solid #f0c75e; padding-bottom: 6px; margin-top: 2.2em; line-height: 1.5; }
-h3 { margin-top: 1.8em; line-height: 1.55; }
-a { color: #1d4fd7; text-decoration: underline; text-underline-offset: 3px; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em;
+             margin: 0 0 6px; padding: 0; border: none; }
+blockquote p { margin: 4px 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 2.4em; border: none; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 2.1em; padding-top: 1.15em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
 a:visited { color: #6d4fc2; }
-ul li, ol li { margin: 10px 0; }
+ul li, ol li { margin: 13px 0; line-height: 1.95; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.2em 0; }
 img { max-width: 100%; }
-table { border-collapse: collapse; }
-td, th { border: 1px solid #ccc; padding: 4px 8px; }
-.note { color: #666; font-size: 0.92em; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+td, th { border: 1px solid #c9c2b2; padding: 6px 10px; }
+th { background: #efe9db; }
+.note { color: #6b6257; font-size: 0.92em; }
 .nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
-       border-bottom: 2px solid #f0c75e; padding-bottom: 8px; margin-bottom: 16px; font-size: 0.95em; }
-.nav.bottom { border-bottom: none; border-top: 2px solid #f0c75e; padding-top: 8px; margin-top: 24px; }
+       border-bottom: 2px solid #1c1a17; padding-bottom: 10px; margin-bottom: 20px;
+       font-size: 0.95em; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.nav.bottom { border-bottom: none; border-top: 2px solid #1c1a17; padding-top: 10px; margin-top: 32px; }
 body.spa .page { display: none; }
 body.spa .page.active { display: block; }
 a.navbtn { text-decoration: none; }
 .bgbar { text-align: right; margin-bottom: 10px; }
-#bgToggle { background: #f0c75e;
-  color: #222; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
-  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25); font-family: inherit; }
-body.dark { background: #141414; color: #e6e6e6; }
+#bgToggle { background: #1c1a17;
+  color: #f7f2e7; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
+  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+body.dark { background: #161513; color: #e8e2d5; }
+body.dark h1 { border-top-color: #e8e2d5; border-bottom-color: #e8e2d5; }
+body.dark blockquote { color: #a39a89; }
+body.dark h2 { background: #e8e2d5; color: #161513; }
+body.dark h3 { border-top-color: #3a362e; }
 body.dark a { color: #8ab8ff; }
 body.dark a:visited { color: #c4a8ff; }
-body.dark .note { color: #a8a8a8; }
-body.dark h2 { border-bottom-color: #8a6d2f; }
-body.dark .nav { border-color: #8a6d2f; }
+body.dark li > strong:first-child { color: #e0a458; }
+body.dark hr { border-top-color: #e8e2d5; }
+body.dark .note { color: #a39a89; }
+body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
+body.dark th { background: #262219; }
+body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
 <body>
@@ -55,36 +76,36 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>1. 美股周五收高但整周剧烈震荡，美债收益率创多年高位</strong><br />
 美东时间9月25日周五，美股三大指数集体收高：道指涨0.93%（+478.64点，报51,828.62点）、标普500涨0.51%（7,743.41点）、纳指涨0.50%（27,068.72点），主因是美伊外交缓和预期推动油价跌超2%，缓解了能源通胀担忧。全周看美股仍具韧性（纳指周涨2%），但此前周四道指曾连续第三个交易日收跌。债市警报未解除：10年期美债收益率徘徊在5.16%左右（此前创2007年以来最高），30年期触及5.45%+（2004年以来高位）。<br />
 <em>为什么值得关注</em>：利率高企与能源价格的"双压"是当前市场最大变量，直接决定全球股市和黄金走势。<br />
-来源：https://news.creaders.net/us/2026/09/25/3051468.html<br />
-来源：https://finance.sina.cn/usstock/mggd/2026-09-25/detail-inisyqhi4765190.d.html</p>
+来源：<a href="https://news.creaders.net/us/2026/09/25/3051468.html">https://news.creaders.net/us/2026/09/25/3051468.html</a><br />
+来源：<a href="https://finance.sina.cn/usstock/mggd/2026-09-25/detail-inisyqhi4765190.d.html">https://finance.sina.cn/usstock/mggd/2026-09-25/detail-inisyqhi4765190.d.html</a></p>
 <p><strong>2. 美联储10月再加息预期升温，市场定价概率约64%—70%</strong><br />
 9月24日公布的美国9月PMI初值创近五年新高；费城联储行长保尔森（今年票委）表示基础通胀"顽固高位"（2.5%—3%区间），"进一步小幅收紧政策可能是适当的"。美联储理事迈克尔·巴尔也释放鹰派信号。CME FedWatch显示市场将10月再次加息的概率定价在约64%—70%。美联储9月已加息25bp至3.75%—4%（2023年以来首次加息）。<br />
 <em>为什么值得关注</em>：强经济数据→通胀难降→继续加息的链条正在压制全球科技股和高估值资产，A股、港股、黄金都在承压。<br />
-来源：https://finance.sina.cn/usstock/mggd/2026-09-24/detail-inisxxkv4976863.d.html<br />
-来源：https://finance.sina.cn/stock/ssgs/2026-09-24/detail-inisxtaz0279187.d.html</p>
+来源：<a href="https://finance.sina.cn/usstock/mggd/2026-09-24/detail-inisxxkv4976863.d.html">https://finance.sina.cn/usstock/mggd/2026-09-24/detail-inisxxkv4976863.d.html</a><br />
+来源：<a href="https://finance.sina.cn/stock/ssgs/2026-09-24/detail-inisxtaz0279187.d.html">https://finance.sina.cn/stock/ssgs/2026-09-24/detail-inisxtaz0279187.d.html</a></p>
 <p><strong>3. 特朗普宣布新一轮高额关税，商务部启动新232调查</strong><br />
 9月25日特朗普宣布：自10月1日起，对品牌或专利药品征收100%关税（在美国建厂者豁免）、厨柜/浴室梳妆台等建材50%、家具30%、所有进口重型卡车25%。9月26日美国商务部对进口医疗设备、个人防护设备、机器人及工业机械启动232贸易调查。另据报道，欧盟正考虑对中国钢铁及相关产品征收25—50%关税。<br />
 <em>为什么值得关注</em>：药品100%关税直接冲击印度仿制药与全球医药供应链；232调查正成为特朗普填补被司法否决的IEEPA关税空缺的"备用方案"，全球贸易不确定性再度升温。<br />
-来源：https://finance.eastmoney.com/a/202509263524208491.html<br />
-来源：https://cdn.hangyan.co/documents/5b/5b2e30589a1a52a2f0d0510d28be2721d05779c9e1574694a5aff53495e8aeff.pdf</p>
+来源：<a href="https://finance.eastmoney.com/a/202509263524208491.html">https://finance.eastmoney.com/a/202509263524208491.html</a><br />
+来源：<a href="https://cdn.hangyan.co/documents/5b/5b2e30589a1a52a2f0d0510d28be2721d05779c9e1574694a5aff53495e8aeff.pdf">https://cdn.hangyan.co/documents/5b/5b2e30589a1a52a2f0d0510d28be2721d05779c9e1574694a5aff53495e8aeff.pdf</a></p>
 <p><em>补充经济数据</em>：央行9月25日开展8000亿元一年期MLF操作（到期加量2000亿元，连续第三个月净投放），并宣布国庆假期前后开展每日不超1万亿元的隔夜逆回购，节前维稳流动性；美国二季度GDP上修至3.8%，创近两年新高（来源同2条及早报）。</p>
 <hr />
 <h2>国际局势（3条）</h2>
 <p><strong>1. 美伊第三轮间接谈判在日内瓦举行，伊朗抛出霍尔木兹海峡方案</strong><br />
 伊朗外长阿拉格齐25日晚抵达日内瓦，将在阿曼斡旋下与美方举行第三轮间接谈判，聚焦核问题与解除制裁。伊朗提出新外交方案：若美国解除对伊朗港口的海上封锁、放松石油出口限制并落实停火安排，霍尔木兹海峡可能7天内重开。伊朗另列出重启谈判条件，包括接受阿曼—伊朗商定的安全航运路线、结束所有战线的战争、解冻伊朗海外资产。美国副总统万斯称美方对谈判"抱有希望"，但不排除动武选项。<br />
 <em>为什么值得关注</em>：海峡是否重开直接决定原油价格中地缘政治溢价的去留，是周五油价下跌、美股反弹的直接导火索，也是全球通胀预期的关键变量。<br />
-来源：https://news.creaders.net/us/2026/09/25/3051468.html<br />
-来源：https://finance.sina.cn/usstock/mggd/2026-09-24/detail-inisvytr8384613.d.html<br />
-来源：https://cnc.pecinfo.net/newscenter/detail-B00000-2026022600021.shtml</p>
+来源：<a href="https://news.creaders.net/us/2026/09/25/3051468.html">https://news.creaders.net/us/2026/09/25/3051468.html</a><br />
+来源：<a href="https://finance.sina.cn/usstock/mggd/2026-09-24/detail-inisvytr8384613.d.html">https://finance.sina.cn/usstock/mggd/2026-09-24/detail-inisvytr8384613.d.html</a><br />
+来源：<a href="https://cnc.pecinfo.net/newscenter/detail-B00000-2026022600021.shtml">https://cnc.pecinfo.net/newscenter/detail-B00000-2026022600021.shtml</a></p>
 <p><strong>2. 中美元首白宫会晤，美中贸易休战延长两个月</strong><br />
 特朗普9月25日在白宫欢迎中国国家主席习近平，习宣布赠送美国一对大熊猫，"熊猫外交"再现。美财长贝森特表示美中贸易休战延长两个月。同日，国务院总理李强在纽约同美国友好团体（美中贸易全国委员会、美中关系全国委员会、美国商会等）座谈，强调中美可以成为伙伴和朋友。<br />
 <em>为什么值得关注</em>：贸易休战延期为全球市场提供了短期喘息窗口，中美经贸谈判的任何"重大让步"都将是下一阶段市场焦点。<br />
-来源：https://www.youtube.com/watch?v=2DYA_UVIUUo<br />
-来源：https://finance.eastmoney.com/a/202509263524208491.html</p>
+来源：<a href="https://www.youtube.com/watch?v=2DYA_UVIUUo">https://www.youtube.com/watch?v=2DYA_UVIUUo</a><br />
+来源：<a href="https://finance.eastmoney.com/a/202509263524208491.html">https://finance.eastmoney.com/a/202509263524208491.html</a></p>
 <p><strong>3. 第80届联大一般性辩论开幕，西方"乱斗"与巴以抗议</strong><br />
 联合国大会进入一般性辩论：特朗普公开指责联合国及其他国家国内政策；俄乌问题上俄方继续外交口水战；在以色列总理发言时多国代表集体退场，以表达对以色列的抗议。中方派遣政府高级代表团出席联大辩论，同时中美工作组与商务、财政对口部门举行会晤，多部门对话全面推进。<br />
 <em>为什么值得关注</em>：联大舞台上的外交信号是俄乌、巴以及中美关系走向的风向标，退场抗议等动作反映国际阵营分化的加剧。<br />
-来源：https://cdn.hangyan.co/documents/5b/5b2e30589a1a52a2f0d0510d28be2721d05779c9e1574694a5aff53495e8aeff.pdf</p>
+来源：<a href="https://cdn.hangyan.co/documents/5b/5b2e30589a1a52a2f0d0510d28be2721d05779c9e1574694a5aff53495e8aeff.pdf">https://cdn.hangyan.co/documents/5b/5b2e30589a1a52a2f0d0510d28be2721d05779c9e1574694a5aff53495e8aeff.pdf</a></p>
 <hr />
 <p><strong>备注</strong>：上述条目中，伊朗谈判与关税部分的内容有多方独立来源交叉印证（creaders、sina、eastmoney 9月25—26日报道）；贸易调查与联大动态引自国金证券地缘政治周观察（9月30日标注）与东方财富早报，时效吻合。</p>
 <hr />
@@ -93,23 +114,23 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>1. 微软正式发布新版 Copilot"超级应用"，新增 Autopilot"数字队友"</strong><br />
 - 发生了什么：9 月 25 日晚间，微软发布新版 Copilot，把聊天、编程、智能体三类能力整合到同一界面，分为 Home（聊天+协作）、Code（自然语言创建应用）、Autopilot（云端持续运行的"数字队友"，可在用户睡觉时继续执行任务）三个标签页；Autopilot 与 Code 采用按使用量计费，模型调用由自动模型选择器分配。<br />
 - 为什么值得关注：这是巨头把 Agent 落地生产力场景的标志性产品更新，Autopilot 直接嵌入 Teams/Outlook 工作流，企业级 AI 从"聊天工具"转向"24 小时在线员工"。<br />
-- 来源：https://finance.sina.cn/stock/jdts/2026-09-25/detail-initaaiv4385187.d.html</p>
+- 来源：<a href="https://finance.sina.cn/stock/jdts/2026-09-25/detail-initaaiv4385187.d.html">https://finance.sina.cn/stock/jdts/2026-09-25/detail-initaaiv4385187.d.html</a></p>
 <p><strong>2. OpenAI 即将预览网络安全专用模型 GPT-6 Cyber</strong><br />
 - 发生了什么：据《财富》杂志 9 月 24–25 日消息，OpenAI 计划在未来几天内预览 GPT-6 Cyber，并配套推出一款帮助客户安全、自动化部署该模型的新产品（安全网关）；该模型及产品预计 9 月 29 日旧金山开发者大会亮相，是 OpenAI 今年第四款网络安全专用模型，已有少量 Daybreak Red 计划客户进行 Alpha 测试。<br />
 - 为什么值得关注：OpenAI 正在把"安全"做成一个独立的模型产品线，同时开发者大会上预计还有十余款非安全类新品密集发布，下周将是 OpenAI 发布周。<br />
-- 来源：https://finance.sina.cn/stock/jdts/2026-09-25/detail-inisyuqf4700131.d.html</p>
+- 来源：<a href="https://finance.sina.cn/stock/jdts/2026-09-25/detail-inisyuqf4700131.d.html">https://finance.sina.cn/stock/jdts/2026-09-25/detail-inisyuqf4700131.d.html</a></p>
 <p><strong>3. DeepSeek 降价：V4 闪模型输入价格下调 25%</strong><br />
 - 发生了什么：9 月 25 日，DeepSeek 将旗下三款 V4 模型的输入价格下调，闪模型版本降至每百万 token $0.03；同一天开源生态还有 DSPy 3.4（集成 Jev 决策模型）和 Pydantic AI v2.50.0 等工具发布。<br />
 - 为什么值得关注：紧接 GPT-6 Sol/Luna 与 Claude Opus 5.5 的降价潮，DeepSeek 再度压价，中美顶级实验室进入"降价换量"周期，AI 价格战已从上周打到本周。<br />
-- 来源：https://olud.ai/news/2026-09-25.html</p>
+- 来源：<a href="https://olud.ai/news/2026-09-25.html">https://olud.ai/news/2026-09-25.html</a></p>
 <p><strong>4. 行业观察：顶级实验室模型发布周期缩短至 44 天，AI 智能体正接管模型研发</strong><br />
 - 发生了什么：对 5 家美国公司和 4 家中国公司的调研显示，2026 年 4 月以来高性能模型平均发布间隔降至 44 天（2023 年 1 月–2026 年 3 月平均为 125 天），背后是 AI 智能体承担越来越多下一代模型的研发工作（如 OpenAI 内部爆料的 AI 自主训练 GPU 内核案例）。<br />
 - 为什么值得关注：模型发布从"季度事件"变成"月度例行"，下游集成商安全加固和外部评测的时间被压缩；AI 造 AI（RSI）正在从科幻变成需要监管应对的现实议题。<br />
-- 来源：https://www.ainewscrypto.com/news/ai-labs-cut-top-model-release-intervals-to-44-days-as-agents-take-on-core-rd-work</p>
+- 来源：<a href="https://www.ainewscrypto.com/news/ai-labs-cut-top-model-release-intervals-to-44-days-as-agents-take-on-core-rd-work">https://www.ainewscrypto.com/news/ai-labs-cut-top-model-release-intervals-to-44-days-as-agents-take-on-core-rd-work</a></p>
 <hr />
 <p>备选条目（未入选前 4，但也在 24 小时窗口内）：<br />
-- 高通发布 Snapdragon 8 Elite Gen 6 端侧 AI 芯片（9 月 23 日）— 来源：https://dailyaibrief.com/newsletters/daily-ai-brief/2026-09-23-qualcomm-s-on-device-ai-chips-nscale-s-3bn-ipo-and-astroforge-s-spacecraft-daily-ai-brief-546<br />
-- AI labs 降价战背景回顾（9 月 22 日：OpenAI GPT-6 Sol/Luna 与 Anthropic Claude Opus 5.5 同日发布、API 价格腰斩）— 来源：https://ai2roi.substack.com/p/ai-to-roi-news-and-analysis-september-780</p>
+- 高通发布 Snapdragon 8 Elite Gen 6 端侧 AI 芯片（9 月 23 日）— 来源：<a href="https://dailyaibrief.com/newsletters/daily-ai-brief/2026-09-23-qualcomm-s-on-device-ai-chips-nscale-s-3bn-ipo-and-astroforge-s-spacecraft-daily-ai-brief-546">https://dailyaibrief.com/newsletters/daily-ai-brief/2026-09-23-qualcomm-s-on-device-ai-chips-nscale-s-3bn-ipo-and-astroforge-s-spacecraft-daily-ai-brief-546</a><br />
+- AI labs 降价战背景回顾（9 月 22 日：OpenAI GPT-6 Sol/Luna 与 Anthropic Claude Opus 5.5 同日发布、API 价格腰斩）— 来源：<a href="https://ai2roi.substack.com/p/ai-to-roi-news-and-analysis-september-780">https://ai2roi.substack.com/p/ai-to-roi-news-and-analysis-september-780</a></p>
 <hr />
 <p>收集完成。以下为个人成长和爱情/亲密关系两个方面的精选内容：</p>
 <hr />
@@ -117,37 +138,37 @@ body.dark td, body.dark th { border-color: #444; }
 <p><strong>1. Raj Shamani：最好的routine是「在状态最差那天也能执行的」</strong><br />
 - 内容摘要：印度创业者/播主 Raj Shamani 9月25日发布的一张文字帖："Stop looking for the 'ultimate routine' used by elite performers. The best routine is the one you can execute reliably even on your worst day."（别再找精英人士的"终极作息表"了，最好的作息是你最糟糕那天也能坚持下来的。）<br />
 - 为什么值得看：9月25日当天发、30K点赞，直接击中了大多数人"要么完美执行、要么全盘放弃"的心态，对制定可执行计划很有启发。<br />
-- 来源：https://www.instagram.com/p/Dds5pDOhSMo/</p>
+- 来源：<a href="https://www.instagram.com/p/Dds5pDOhSMo/">https://www.instagram.com/p/Dds5pDOhSMo/</a></p>
 <p><strong>2. Dan Martell：没人教你的10个习惯</strong><br />
 - 内容摘要：企业家 Dan Martell 9月20日视频列出10个反常识习惯：给睡觉设闹钟而不是给起床设闹钟、不看新闻、更多地说"不"、取关现实中不会打招呼的人、健身可以跳过一天但绝不能连跳两天等。<br />
 - 为什么值得看：简短实操、多数习惯"睡前/社交边界"维度常见清单都覆盖不到，适合早上快速扫一遍对照。<br />
-- 来源：https://www.instagram.com/reel/DdhCtODBPY8/</p>
+- 来源：<a href="https://www.instagram.com/reel/DdhCtODBPY8/">https://www.instagram.com/reel/DdhCtODBPY8/</a></p>
 <p><strong>3. Alex Hormozi：超越99%的人很简单但不容易</strong><br />
 - 内容摘要：Alex Hormozi 9月22日帖子，给出九条基础习惯：早到、快速跟进、提前准备、记住别人的名字、提供价值、不犯重复的错误、敢于拒绝、能承担责任、稳定输出。<br />
 - 为什么值得看：把"复利式执行力"拆解成无门槛动作清单，适合反复对照执行，比任何方法论都直白。<br />
-- 来源：https://www.facebook.com/ahormozi/posts/pfbid02vK9AvEnrNBVmGxizevPw5gC7Z7D2usuJGZXUVYSvDuJ7VnE5LgPVLdeBo1PxzKNDl</p>
+- 来源：<a href="https://www.facebook.com/ahormozi/posts/pfbid02vK9AvEnrNBVmGxizevPw5gC7Z7D2usuJGZXUVYSvDuJ7VnE5LgPVLdeBo1PxzKNDl">https://www.facebook.com/ahormozi/posts/pfbid02vK9AvEnrNBVmGxizevPw5gC7Z7D2usuJGZXUVYSvDuJ7VnE5LgPVLdeBo1PxzKNDl</a></p>
 <p><strong>4. 文章：高绩效人士在2026年真正使用的7个效率系统</strong><br />
 - 内容摘要：9月初发布的Medium长文，核心是"用系统保护注意力"：90分钟深度工作块（当日排2-3个即可）、固定每周复盘（周五下午或周日晚上30-45分钟）等，强调高产不是工作更久而是打断更少。<br />
 - 为什么值得看：结合了2026年AI工具时代的注意力管理方案，信息量比短视频帖子完整，适合花5分钟精读。<br />
-- 来源：https://medium.com/@shurahbeelhamid/7-productivity-systems-that-high-performing-professionals-actually-use-in-2026-e0b0806b9e4f</p>
+- 来源：<a href="https://medium.com/@shurahbeelhamid/7-productivity-systems-that-high-performing-professionals-actually-use-in-2026-e0b0806b9e4f">https://medium.com/@shurahbeelhamid/7-productivity-systems-that-high-performing-professionals-actually-use-in-2026-e0b0806b9e4f</a></p>
 <hr />
 <h2>💛 爱情/亲密关系</h2>
 <p><strong>1. Sanusha PS（心理咨询师）：爱本身不足以维持一段关系</strong><br />
 - 内容摘要：9月23日视频（30K点赞），用马来语讲解：长期关系里"小事的影响比想象大"、吵架要以理解为目标而不是争输赢、批评会摧毁关系而欣赏能滋养关系，要主动选择承诺而不是只靠感觉。<br />
 - 为什么值得看：观点都来自咨询实践、落地性强，"吵架是为了理解不是为了赢"一句胜过很多情感鸡汤。<br />
-- 来源：https://www.instagram.com/reel/DdojFQTyE3Q/</p>
+- 来源：<a href="https://www.instagram.com/reel/DdojFQTyE3Q/">https://www.instagram.com/reel/DdojFQTyE3Q/</a></p>
 <p><strong>2. 爆款帖（82K点赞）：长期关系要准备好迎接"无聊的日子"</strong><br />
 - 内容摘要：9月23日的文字帖，引用 @lowkeyalbert 的话："If you want a long term relationship make sure that you're ready for the boring days, tears &amp; arguments. It's not all about happiness."（想要长期关系，先准备好面对无聊、眼泪和争吵，它不全是快乐。）<br />
 - 为什么值得看：82K点赞说明共鸣极强，用一句话完成了"反浪漫滤镜"教育，适合提醒自己/转发给伴侣。<br />
-- 来源：https://www.instagram.com/p/Ddol0nxDIXM/</p>
+- 来源：<a href="https://www.instagram.com/p/Ddol0nxDIXM/">https://www.instagram.com/p/Ddol0nxDIXM/</a></p>
 <p><strong>3. 治疗师 Jeffrey Meltzer：焦虑—回避依恋循环</strong><br />
 - 内容摘要：9月24日视频，持证治疗师用分屏动画讲清焦虑型—回避型的经典循环：回避型躲避情绪对话、压抑感受；焦虑型因受不了不确定而反复求证"我们没事吧"——双方都在寻找安全感。<br />
 - 为什么值得看：1分半把依恋理论讲得极清楚，看完马上能对号入座、理解冲突根源，是本期情感类最有干货的帖子。<br />
-- 来源：https://www.instagram.com/reel/DdsFmhEBK1B/</p>
+- 来源：<a href="https://www.instagram.com/reel/DdsFmhEBK1B/">https://www.instagram.com/reel/DdsFmhEBK1B/</a></p>
 <p><strong>4. 文章（Psychology Today）：感觉关系不安全时，用"对的"共同活动修复</strong><br />
 - 内容摘要：引用2026年《Social Psychological and Personality Science》研究：想拉近距离但没法物理独处时，试试和伴侣做"新奇有趣"的事（新菜谱、新旅行）；感到焦虑、想要确认关系稳定时，反而要做"熟悉routine"的事（如一起看熟悉的剧）——活动类型要按需求对症下药。<br />
 - 为什么值得看：基于最新同行评审研究、建议具体可执行，比泛泛的"好好沟通"更有实操价值。<br />
-- 来源：https://www.psychologytoday.com/us/blog/closer-encounters/202603/two-solutions-for-when-youre-feeling-insecurely-attached</p>
+- 来源：<a href="https://www.psychologytoday.com/us/blog/closer-encounters/202603/two-solutions-for-when-youre-feeling-insecurely-attached">https://www.psychologytoday.com/us/blog/closer-encounters/202603/two-solutions-for-when-youre-feeling-insecurely-attached</a></p>
 <hr />
 <p><strong>备注</strong>：个人成长共4条（3社交+1文章），爱情共4条（3社交+1文章），全部在9月19日至今的一周内发布（除文章类外），链接均为可直接打开的完整URL。</p>
 <div class="nav bottom"><span></span><a href="index.html">📚 回到目录</a><a href="issue-002.html">下一期（第2期）➡</a></div>

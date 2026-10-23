@@ -5,38 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>《麻薯日报》第19期 · 2026-10-15</title>
 <style>
-body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-       max-width: 720px; margin: 0 auto; padding: 24px 20px 40px; line-height: 2.0;
+/* 《麻薯日报》报纸版式（2026-10-23 Ricardo 要求：像真正的报纸） */
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       max-width: 720px; margin: 0 auto; padding: 28px 20px 48px; line-height: 2.0;
        font-size: 17.5px; letter-spacing: 0.01em;
-       color: #222; background: #fffdf8; }
+       color: #1c1a17; background: #fbf8f1; }
 p { margin: 1.1em 0; }
-h1 { font-size: 1.5em; line-height: 1.5; }
-h2 { border-bottom: 2px solid #f0c75e; padding-bottom: 6px; margin-top: 2.2em; line-height: 1.5; }
-h3 { margin-top: 1.8em; line-height: 1.55; }
-a { color: #1d4fd7; text-decoration: underline; text-underline-offset: 3px; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em;
+             margin: 0 0 6px; padding: 0; border: none; }
+blockquote p { margin: 4px 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 2.4em; border: none; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 2.1em; padding-top: 1.15em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
 a:visited { color: #6d4fc2; }
-ul li, ol li { margin: 10px 0; }
+ul li, ol li { margin: 13px 0; line-height: 1.95; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.2em 0; }
 img { max-width: 100%; }
-table { border-collapse: collapse; }
-td, th { border: 1px solid #ccc; padding: 4px 8px; }
-.note { color: #666; font-size: 0.92em; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+td, th { border: 1px solid #c9c2b2; padding: 6px 10px; }
+th { background: #efe9db; }
+.note { color: #6b6257; font-size: 0.92em; }
 .nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
-       border-bottom: 2px solid #f0c75e; padding-bottom: 8px; margin-bottom: 16px; font-size: 0.95em; }
-.nav.bottom { border-bottom: none; border-top: 2px solid #f0c75e; padding-top: 8px; margin-top: 24px; }
+       border-bottom: 2px solid #1c1a17; padding-bottom: 10px; margin-bottom: 20px;
+       font-size: 0.95em; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.nav.bottom { border-bottom: none; border-top: 2px solid #1c1a17; padding-top: 10px; margin-top: 32px; }
 body.spa .page { display: none; }
 body.spa .page.active { display: block; }
 a.navbtn { text-decoration: none; }
 .bgbar { text-align: right; margin-bottom: 10px; }
-#bgToggle { background: #f0c75e;
-  color: #222; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
-  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25); font-family: inherit; }
-body.dark { background: #141414; color: #e6e6e6; }
+#bgToggle { background: #1c1a17;
+  color: #f7f2e7; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
+  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+body.dark { background: #161513; color: #e8e2d5; }
+body.dark h1 { border-top-color: #e8e2d5; border-bottom-color: #e8e2d5; }
+body.dark blockquote { color: #a39a89; }
+body.dark h2 { background: #e8e2d5; color: #161513; }
+body.dark h3 { border-top-color: #3a362e; }
 body.dark a { color: #8ab8ff; }
 body.dark a:visited { color: #c4a8ff; }
-body.dark .note { color: #a8a8a8; }
-body.dark h2 { border-bottom-color: #8a6d2f; }
-body.dark .nav { border-color: #8a6d2f; }
+body.dark li > strong:first-child { color: #e0a458; }
+body.dark hr { border-top-color: #e8e2d5; }
+body.dark .note { color: #a39a89; }
+body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
+body.dark th { background: #262219; }
+body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
 <body>
@@ -261,7 +282,7 @@ body.dark td, body.dark th { border-color: #444; }
 <h2>🌱 个人成长</h2>
 <h3>1. 你现在的生活，是过去选择的"延迟回放"</h3>
 <p><strong>来源</strong>：Mark Manson（《The Subtle Art of Not Giving a F*ck》作者）个人 newsletter《Your Next Breakthrough》第 254 期，2026-10-12<br />
-<strong>链接</strong>：https://markmanson.net/breakthrough/254-shape</p>
+<strong>链接</strong>：<a href="https://markmanson.net/breakthrough/254-shape">https://markmanson.net/breakthrough/254-shape</a></p>
 <p><strong>核心观点</strong>：Manson 提出三个"滞后指标"：你的身体，是你过去饮食的滞后指标；你的知识，是你过去摄入信息的滞后指标；你的幸福感，是你在乎的人的滞后指标。现在的结果，都是过去无数小选择的延迟回放。他给出本周可做的三件小事：取关一个不值得你注意的信息源、戒掉一种不值得你健康的零食、少跟一个消耗你幸福感的人来往。还留了一个日记 prompts：哪些选择正在塑造未来的你？文末附了读者来信，有人终于鼓起勇气和儿子摊牌谈心，有人悟到"不是每个人都配得到我最好的那一面"。</p>
 <p><strong>为什么值得读</strong>：对 Ricardo 特别贴切——"信息饮食"直接对应他每天刷什么、学什么英语；"人在乎谁"对应他最近和凯迪的拉扯。滞后指标这个说法很治"急功近利"：背单词、练英语口语今天看不到变化，但它们正在延迟到账。</p>
 <p><strong>一句话总结</strong>：别只盯着今天的结果，去管那些正在塑造未来你的小选择。</p>
@@ -278,7 +299,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>question</strong>（问题；质疑）| ask a question / key question | Ask yourself one honest question each week.（每周问自己一个诚实的问题。）| "The important thing is not to stop questioning." — Albert Einstein（重要的是永远不要停止追问。——阿尔伯特·爱因斯坦）</p>
 <h3>2. 低落时，只需要五分钟就能"重启"</h3>
 <p><strong>来源</strong>：James Clear（《Atomic Habits》作者）newsletter《3-2-1》2026-10-08 期，2026-10-08<br />
-<strong>链接</strong>：https://jamesclear.com/3-2-1/october-8-2026</p>
+<strong>链接</strong>：<a href="https://jamesclear.com/3-2-1/october-8-2026">https://jamesclear.com/3-2-1/october-8-2026</a></p>
 <p><strong>核心观点</strong>：三个小观点。第一，"你的大脑会跟着你喂给它的东西走，想要更好的想法，就摄入更好的东西"——信息饮食决定思维质量。第二，"打破恶性循环只需要五分钟"：运动五分钟就回到正轨，写五分钟稿子就动起来了，聊五分钟天关系就修复了——重新感觉良好不需要大动作。第三，"很多时候真正的问题不是发生了什么，而是它是怎么被传达的"——沟通方式常常比事情本身更重要。另附两句引言：物理学家 Lise Meitner 说人生不必轻松，但不能空洞；Anthony de Mello 说人与真理之间最短的距离是一个故事。本周提问：什么事让你一想到就兴奋、想去学？</p>
 <p><strong>为什么值得读</strong>：五分钟重启法是给 Ricardo 的"犯懒急救包"——不想背单词时别想着"我要学两小时"，先学五分钟；信息饮食观和他每天看《麻薯日报》互相印证；"问题常出在传达方式"这句，值得他在和朋友闹别扭时想一想。</p>
 <p><strong>一句话总结</strong>：状态差不用硬扛，五分钟的小动作就能把自己拉回正轨。</p>
@@ -296,7 +317,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>mind</strong>（头脑；心智）| keep in mind / change one's mind | Your mind will follow whatever you feed it.（你的大脑会跟着你喂给它的东西走。）| "The mind is everything. What you think, you become." — Buddha（心即一切，你思故你在。——佛陀）</p>
 <h3>3. 别再猜了——把喜欢"大声说出来"</h3>
 <p><strong>来源</strong>：Sahil Bloom《The Curiosity Chronicle》，"The Loud Liker Theory"（大声点赞理论），2026-10-09<br />
-<strong>链接</strong>：https://www.sahilbloom.com/newsletter/the-loud-liker-theory</p>
+<strong>链接</strong>：<a href="https://www.sahilbloom.com/newsletter/the-loud-liker-theory">https://www.sahilbloom.com/newsletter/the-loud-liker-theory</a></p>
 <p><strong>核心观点</strong>：Bloom 承认自己从小到大都不擅长社交，成年后交新朋友尤其难，后来发现他撞上了两个心理学效应的"夹击"。第一，信号放大偏差（Signal Amplification Bias）：因为害怕被拒绝，我们发出的社交信号会被自己"调小"，而我们还误以为对方都接收到了——其实对方几乎没感觉到。第二，好感差距（Liking Gap）：人们系统性地低估别人对自己的喜欢程度，旁观者反而看得更准。两个一叠加就是：你发出的比你以为的少，你听到的比对方发出的少——两个互相喜欢的人聊完，各自都以为对方不喜欢自己，关系就这样没了下文。解法很简单，Bloom 称为"大声点赞"：把欣赏说出口，当面夸、主动约、明确表达善意。</p>
 <p><strong>为什么值得读</strong>：Ricardo 刚离开"黏性"社交环境（学校、固定班级），进入"顺滑"的成人社交场，这篇正是写给这个阶段的。别把"他没回我"自动翻译成"他不喜欢我"——很多时候只是信号没传达到。夸人、约人、说谢谢，大声一点，朋友就是这样攒出来的。</p>
 <p><strong>一句话总结</strong>：别人对你的喜欢，远比你以为的多——但前提是你得先大声表达你的喜欢。</p>
@@ -315,7 +336,7 @@ body.dark td, body.dark th { border-color: #444; }
 <h2>💕 爱情/关系</h2>
 <h3>1. 人生的质量，取决于关系的质量</h3>
 <p><strong>来源</strong>：Simon Sinek 播客《A Bit of Optimism》重播集 "Revisited: Why Relationships Are the Secret to a Long, Happy Life"，对话嘉宾为心理治疗师 Esther Perel（《Mating in Captivity》作者），2026-10-13<br />
-<strong>链接</strong>：https://simonsinek.com/podcast/episodes/revisited-why-relationships-are-the-secret-to-a-long-happy-life-with-psychotherapist-esther-perel-01m4smrspmhefjxq8d7h68r8n8</p>
+<strong>链接</strong>：<a href="https://simonsinek.com/podcast/episodes/revisited-why-relationships-are-the-secret-to-a-long-happy-life-with-psychotherapist-esther-perel-01m4smrspmhefjxq8d7h68r8n8">https://simonsinek.com/podcast/episodes/revisited-why-relationships-are-the-secret-to-a-long-happy-life-with-psychotherapist-esther-perel-01m4smrspmhefjxq8d7h68r8n8</a></p>
 <p><strong>核心观点</strong>：Perel 的核心结论四十年没变：关系的质量决定人生的质量。过去人们结婚、工作是因为"不得不"，幸福只是附赠品；今天我们能自己选择爱谁、在哪工作，幸福反而成了维系一切的黏合剂。但我们犯了一个错误：要求一个人（伴侣）给出过去整个"村子"才能给的东西——陪伴、激情、安全感、成长，什么都想要。节目还聊到：无摩擦的 App 正在扭曲我们对人的期待（希望人像软件一样可预测）；玩耍本质上是"让人觉得好玩的风险"，而正是这种风险建立信任；给 Z 世代的第一课是"去跟陌生人说话"——你珍视的每段关系，都始于一次和陌生人的交谈。</p>
 <p><strong>为什么值得读</strong>：给 Ricardo 一个健康的爱情坐标系：别把"全部人生"押在一个人身上，爱情是村子的一部分，不是村子的全部；同时"去跟陌生人说话"这句很实用，社团、球场、兼职里都能用上。</p>
 <p><strong>一句话总结</strong>：别让一个人承包你整个人生，去拥有一个"村子"。</p>
@@ -332,7 +353,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>conversation</strong>（交谈）| start a conversation / deep conversation | Every relationship you treasure started as a conversation with a stranger.（你珍视的每段关系，都始于一次和陌生人的交谈。）| "Every relationship you treasure started as a conversation with a stranger." — Simon Sinek（你珍视的每段关系，都始于一次和陌生人的交谈。——西蒙·斯涅克）</p>
 <h3>2. 别再用"财报"的语言谈恋爱</h3>
 <p><strong>来源</strong>：Bright Shiny Objects 专栏文章 "Living or Optimizing? Esther Perel on Emotional Capitalism"（梳理 Esther Perel 与 Sal Khan 在 TED Intersections 对谈 "Why the future is human … plus AI"），2026-10-13<br />
-<strong>链接</strong>：https://brightshinyobjects.net/2026/10/13/living-vs-optimizing-emotional-capitalism/</p>
+<strong>链接</strong>：<a href="https://brightshinyobjects.net/2026/10/13/living-vs-optimizing-emotional-capitalism/">https://brightshinyobjects.net/2026/10/13/living-vs-optimizing-emotional-capitalism/</a></p>
 <p><strong>核心观点</strong>：现在听年轻人聊恋爱，像在听季度财报：选项、升级、投资回报率、及时止损。Perel 把这叫"情感资本主义"——拿着购物清单找对象，总在算"我能不能找到更好的"、对冲风险、计算回报。与此同时，信任、安全感、脆弱这些心理词汇进了商界，商界的词汇也进了亲密关系。Perel 的提醒很妙：感情里的难题"不是等你去解决的问题，而是需要你去管理的悖论"。她还担心一种"无接触"的生活：我们聚得越来越少，却要求人像 App 一样可预测。文章最后留了一个问题：在你的生活里，有没有哪样东西，本来不该被衡量，你却开始给它打分了？</p>
 <p><strong>为什么值得读</strong>：Ricardo 天天泡在社交软件里，这篇是面镜子——把人当"选项"比较来比较去，最后比较掉的是自己的真心。Perel 那句"悖论是用来管理的，不是用来解决的"，对亲密关系里的拧巴特别管用。</p>
 <p><strong>一句话总结</strong>：爱人不是做投资，别拿算 ROI 的脑子去算感情。</p>
@@ -349,7 +370,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>emotion</strong>（情感）| mixed emotions / show emotion | Business language has moved firmly into our emotional lives.（商业语言已经深深渗入我们的情感生活。）| "Your intellect may be confused, but your emotions will never lie to you." — Roger Ebert（你的理智可能会糊涂，但你的情感永远不会骗你。——罗杰·伊伯特）</p>
 <h3>3. 交友软件没有"必胜公式"，但有五个清醒玩法</h3>
 <p><strong>来源</strong>：TechXplore 转载 The Conversation 文章 "Five ways to beat dating algorithms at their own game"（基于发表在学术期刊的研究），2026-10-12<br />
-<strong>链接</strong>：https://techxplore.com/news/2026-10-ways-dating-algorithms-game.html</p>
+<strong>链接</strong>：<a href="https://techxplore.com/news/2026-10-ways-dating-algorithms-game.html">https://techxplore.com/news/2026-10-ways-dating-algorithms-game.html</a></p>
 <p><strong>核心观点</strong>：研究者访谈了 21 位交友软件用户，发现大家同时活在三种心态里：浪漫派（慢慢来、建信任）、购物派（比选项、筛条件）、系统派（跟着 App 的节奏刷、配对、回消息）。三种心态互相打架，所以用 App 才又上头又累。研究结论很实在：没有任何"必胜的滑动公式"能让平台交出对的人，能"战胜算法"的只有夺回主动权。五个建议：先想清楚自己要什么（认真交往、随便约会、都行）；给自己设"停刷"点（有位受访者 Rose 直接给自己下滑动禁令，先好好聊手头的人）；把筛选条件当工具别当判决书——匹配少不代表你不值得；把有戏的聊天尽快搬出 App，别让下一个 profile 永远在旁边竞争；最后，允许自己卸载——研究者称之为夺回"心理主权"：你决定什么重要、给 App 多少注意力、什么时候够了。</p>
 <p><strong>为什么值得读</strong>：观点正、证据硬，而且特别护心态——"匹配率低≠你不值得"这句，玩过交友软件的人都该听一遍。"心理主权"这个词也很酷：App 可以开门，但进不进、待多久，你说了算。</p>
 <p><strong>一句话总结</strong>：算法决定谁出现在屏幕上，但只有你能决定接下来怎么做。</p>

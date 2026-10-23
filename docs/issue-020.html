@@ -5,38 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>《麻薯日报》第20期 · 2026-10-16</title>
 <style>
-body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-       max-width: 720px; margin: 0 auto; padding: 24px 20px 40px; line-height: 2.0;
+/* 《麻薯日报》报纸版式（2026-10-23 Ricardo 要求：像真正的报纸） */
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       max-width: 720px; margin: 0 auto; padding: 28px 20px 48px; line-height: 2.0;
        font-size: 17.5px; letter-spacing: 0.01em;
-       color: #222; background: #fffdf8; }
+       color: #1c1a17; background: #fbf8f1; }
 p { margin: 1.1em 0; }
-h1 { font-size: 1.5em; line-height: 1.5; }
-h2 { border-bottom: 2px solid #f0c75e; padding-bottom: 6px; margin-top: 2.2em; line-height: 1.5; }
-h3 { margin-top: 1.8em; line-height: 1.55; }
-a { color: #1d4fd7; text-decoration: underline; text-underline-offset: 3px; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em;
+             margin: 0 0 6px; padding: 0; border: none; }
+blockquote p { margin: 4px 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 2.4em; border: none; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 2.1em; padding-top: 1.15em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
 a:visited { color: #6d4fc2; }
-ul li, ol li { margin: 10px 0; }
+ul li, ol li { margin: 13px 0; line-height: 1.95; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.2em 0; }
 img { max-width: 100%; }
-table { border-collapse: collapse; }
-td, th { border: 1px solid #ccc; padding: 4px 8px; }
-.note { color: #666; font-size: 0.92em; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+td, th { border: 1px solid #c9c2b2; padding: 6px 10px; }
+th { background: #efe9db; }
+.note { color: #6b6257; font-size: 0.92em; }
 .nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
-       border-bottom: 2px solid #f0c75e; padding-bottom: 8px; margin-bottom: 16px; font-size: 0.95em; }
-.nav.bottom { border-bottom: none; border-top: 2px solid #f0c75e; padding-top: 8px; margin-top: 24px; }
+       border-bottom: 2px solid #1c1a17; padding-bottom: 10px; margin-bottom: 20px;
+       font-size: 0.95em; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.nav.bottom { border-bottom: none; border-top: 2px solid #1c1a17; padding-top: 10px; margin-top: 32px; }
 body.spa .page { display: none; }
 body.spa .page.active { display: block; }
 a.navbtn { text-decoration: none; }
 .bgbar { text-align: right; margin-bottom: 10px; }
-#bgToggle { background: #f0c75e;
-  color: #222; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
-  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25); font-family: inherit; }
-body.dark { background: #141414; color: #e6e6e6; }
+#bgToggle { background: #1c1a17;
+  color: #f7f2e7; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
+  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+body.dark { background: #161513; color: #e8e2d5; }
+body.dark h1 { border-top-color: #e8e2d5; border-bottom-color: #e8e2d5; }
+body.dark blockquote { color: #a39a89; }
+body.dark h2 { background: #e8e2d5; color: #161513; }
+body.dark h3 { border-top-color: #3a362e; }
 body.dark a { color: #8ab8ff; }
 body.dark a:visited { color: #c4a8ff; }
-body.dark .note { color: #a8a8a8; }
-body.dark h2 { border-bottom-color: #8a6d2f; }
-body.dark .nav { border-color: #8a6d2f; }
+body.dark li > strong:first-child { color: #e0a458; }
+body.dark hr { border-top-color: #e8e2d5; }
+body.dark .note { color: #a39a89; }
+body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
+body.dark th { background: #262219; }
+body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
 <body>
@@ -462,7 +483,7 @@ body.dark td, body.dark th { border-color: #444; }
 <h2>八、GitHub 新技术 💻</h2>
 <h3>1. NVIDIA/OpenShell —— AI 智能体的"安全工作间"</h3>
 <ul>
-<li><strong>链接</strong>：https://github.com/NVIDIA/OpenShell</li>
+<li><strong>链接</strong>：<a href="https://github.com/NVIDIA/OpenShell">https://github.com/NVIDIA/OpenShell</a></li>
 <li><strong>它是做什么的</strong>：它是英伟达（NVIDIA）开源的一个"AI 智能体安全运行环境"。先打个比方：AI 智能体（agent）就像一个很能干但有点"手脚没轻重"的实习生，你让他帮你办事，他可能会顺手翻你的私人文件、乱花你的钱、把密码发到网上。OpenShell 就是给这个实习生划了一个"安全工作间"（沙盒 sandbox）：他只能在里面干活，能碰哪些文件、能上哪些网站、能不能用你的账号密码，都由你提前写好的"规矩清单"（policy，政策/策略）说了算，违反规矩的操作会被直接拦下。更厉害的是，改规矩之前它还会"预演"一遍——用数学方法算出新规矩会不会放进来危险操作，觉得危险就先交给你这个人来审批。类比：API（应用程序接口）就像饭店的点餐窗口——你不用进后厨，照着窗口上的菜单点就行；OpenShell 管的就是"实习生能点哪些窗口的菜"。</li>
 <li><strong>为什么火</strong>：2026 年 AI 智能体大爆发，人人都在让 AI 自动写代码、自动操作电脑，但"AI 会不会偷看我的文件、乱花钱"成了最大的担忧。OpenShell 正好踩中这个痛点：它是显卡巨头英伟达官方出品（不是小作坊），开源免费，9 月底到 10 月初这一周新增星标超 5800 个、总星数突破 1.6 万，登上 GitHub 趋势榜前列。开发者们把它看作"给 AI 智能体上保险"的标准件。</li>
 <li><strong>一句话总结</strong>：英伟达官方开源的 AI 智能体"安全工作间"，让 AI 干活时既能干又闯不了祸，最近一周狂揽数千星标。</li>
@@ -481,7 +502,7 @@ body.dark td, body.dark th { border-color: #444; }
 - <strong>human</strong> | 人类；有人情味的 | 搭配：human rights 人权；human nature 人性 | 例句：We are all human, and we all make mistakes.（我们都是人，都会犯错。）| 名句："To err is human; to forgive, divine." — Alexander Pope（"犯错是人性，宽恕是神性。"——亚历山大·蒲柏）</p>
 <h3>2. thedotmack/claude-mem —— 给 AI 编程助手装"长期记忆"</h3>
 <ul>
-<li><strong>链接</strong>：https://github.com/thedotmack/claude-mem</li>
+<li><strong>链接</strong>：<a href="https://github.com/thedotmack/claude-mem">https://github.com/thedotmack/claude-mem</a></li>
 <li><strong>它是做什么的</strong>：它是给 AI 编程助手（比如 Claude Code）装的一个"长期记忆外挂"。先打个比方：你每次跟 AI 聊天都像跟一个"金鱼脑"的朋友合作——关掉窗口他就把你忘光了，下次还得从头讲项目背景。claude-mem 就是给这个朋友配了一个"记事本 + 档案室"：它会自动记下每次会话里 AI 做了什么、修了什么 bug、做了什么决定（capture，捕捉记录），然后把长篇记录压缩（compress，像把厚笔记本缩成一张小抄）成精华摘要存进"档案室"（SQLite/Chroma 向量数据库——可以理解成带智能索引的档案柜）；下次你开新会话，它会把相关的旧记忆"注射"（inject，像打预防针一样打进）回 AI 的脑子里。技术名词：token（词元）是 AI 读书的"计量单位"，好比按字数收费的水电表；embedding（嵌入向量）是把一段话变成一串数字坐标，好比给每本书贴上"图书馆索书号"，方便快速找到意思相近的内容；RAG（检索增强生成）就是"先查档案、再开口回答"的工作方式。</li>
 <li><strong>为什么火</strong>：它是 2026 年 GitHub 上增长最快的开源项目之一，总星数已突破 10 万（近 8900 个 fork），作者 Alex Newman（@thedotmack）还宣布加入 OpenAI、项目将转入开源基金会。它解决的是 AI 智能体时代最痛的痛点——"AI 没有长期记忆"，装上后你的 AI 助手真的会"记得"你，堪称给 AI 治好了"金鱼脑"。本周多家 AI 媒体把它列为必装插件，热度持续霸榜。</li>
 <li><strong>一句话总结</strong>：给 AI 编程助手装上"长期记忆"的开源插件，让 AI 关掉窗口也不再失忆，星数已破 10 万。</li>
