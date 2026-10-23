@@ -57,6 +57,44 @@ body.dark .note { color: #a39a89; }
 body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
 body.dark th { background: #262219; }
+.summary { background:#edf3fd; border-left:4px solid #1757c2; border-radius:6px; padding:12px 16px; }
+.blessing { text-align: center; color: #8a3324; font-size: 1.07em; font-weight: 600;
+            letter-spacing: 0.04em; margin: 0 0 16px; }
+.sec-label { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+             font-weight: 700; margin: 0 0 6px; font-size: 0.98em; letter-spacing: 0.03em; }
+.glossary { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 6px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.vocabbox .sec-label { color: #1757c2; }
+.vocabbox ul { list-style: none; padding-left: 0; margin: 6px 0 4px; }
+li.vocab { padding: 10px 0 12px; border-bottom: 1px dashed #ddd5bd; margin: 0; }
+li.vocab:last-child { border-bottom: none; }
+.vword { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         font-weight: 800; font-size: 1.12em; color: #1757c2; margin-right: 6px; }
+.vmean { font-weight: 700; }
+.vrow { font-size: 0.93em; color: #4a463e; margin-top: 3px; line-height: 1.8; }
+.vlabel { display: inline-block; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
+          padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
+.vquote { color: #6b6257; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources .sec-label { color: #5a554c; }
+.sources ul { margin: 4px 0; }
+h3::before { content: "▍"; color: #8a3324; }
+body.dark .blessing { color: #e0a458; }
+body.dark .glossary { background: #262219; }
+body.dark .vocabbox { background: #1d1b16; border-color: #3a362a; }
+body.dark li.vocab { border-bottom-color: #3a362a; }
+body.dark .vword { color: #8ab8ff; }
+body.dark .vrow { color: #c9c2b2; }
+body.dark .vlabel { background: #33302a; color: #e0c98a; }
+body.dark .vquote { color: #a39a89; }
+body.dark .summary { background: #1c2733; border-left-color: #8ab8ff; }
+body.dark .sources { color: #a39a89; }
+body.dark h3::before { color: #e0a458; }
 body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
@@ -67,6 +105,7 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📚 《麻薯日报》合集 · 第 19 期 · 2026-10-15（星期四）</p>
 </blockquote>
 <h1>📰 10月15日《麻薯日报》</h1>
+<p class="blessing">🌅 愿你心中有火，眼里有光，日子有盼头。</p>
 <p>早安 Ricardo ☀️ 周四快乐！今天是 2026 年 10 月 15 日，你的晨间简报来了——美国 9 月 CPI 爆表 3.7%，华尔街科技股被血洗、芯片股六天蒸发约 1 万亿美元；花旗"倒戈"改口预计 12 月加息；新加坡央行意外按兵不动；中国恢复购买美国大豆；意大利总理梅洛尼炮轰特朗普-普京柴油协议"非常冒险"；中朝新鸭绿江大桥今天开通；欧盟峰会开幕商量对华贸易"怎么办"；前三季度我国外贸增长 18.8%；公积金新政超 40 地落地；Meta 新模型 Muse Wonder 榜单漂亮却遭开发者实测质疑；Google 让不会编程的人"说句话"就能做安卓 App；GitHub 上"AI 拆软件"和"本地版 ElevenLabs"两个项目正走红。慢慢看 ☕</p>
 <hr />
 <h2>💰 金融</h2>
@@ -76,68 +115,76 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① CPI（消费者价格指数）——想象你每个月去同一家超市买同一车东西，把小票总价记下来连成一条线。CPI 就是全美国的"超级小票"，涨 3.7% 意味着去年 100 块能买到的东西，今年要花 103 块 7。② 核心通胀——把 CPI 里最"情绪化"的两样东西（油价和菜价，今天涨明天跌）先拿掉，剩下的是"脾气稳定"的价格。核心通胀还超预期，说明涨价不是一阵风，而是扎下根了。③ 抛售——像菜市场快收摊时摊主大甩卖，只不过这里是大家争先恐后"甩卖股票"，越甩越便宜，形成踩踏。④ 修正区间（correction）——华尔街的行话：指数从高点跌超 10% 就叫"进入修正"。好比班级平均分从 90 掉到 80 以下，老师就要"修正"教学计划了，意思是跌得够狠、值得警惕。⑤ 国债收益率——美国政府打的"借条"给的利息。收益率 5.19% 意味着你借钱给美国政府，一年能拿 5.19% 的利息——这是 2007 年金融危机前才见过的水平，说明"钱"现在很贵。⑥ 估值——大家愿意为一家公司掏多少钱，常用"市盈率"衡量：好比一家奶茶店一年赚 10 万，有人愿花 200 万买下（20 倍市盈率）。利率一高，未来的钱"打折"更厉害，奶茶店就不值 200 万了——这就是"高估值在高利率下最受伤"。</p>
 <p><strong>一句话总结</strong>：通胀超预期点燃了美联储继续加息的押注，华尔街科技股被血洗，芯片板块六天蒸发约 1 万亿美元。</p>
 <p>🔗 来源：<a href="https://www.swissinfo.ch/eng/asian-stocks-to-fall-as-hot-cpi-sparks-us-selloff:-markets-wrap/92218059">Bloomberg 经 swissinfo（10-15）</a>；<a href="https://rivkin.com.au/hide/morning-market-wrap-today/">Rivkin Report（10-15）</a>；<a href="https://m.economictimes.com/markets/us-stocks/wall-street-guide/dow-jones-us-stock-market-live-updates-nasdaq-sp-500-iran-war-hormuz-deal-brent-crude-oil-fed-rate-yield-inflation-data-bank-earnings-blackrock-bank-of-america-alphabet-micron-inflation-dataai-chip-stock-price-news-14th-october-2026/amp_liveblog/134942729.cms">Economic Times 美股直播（10-15）</a></p>
-<p>📖 生词：<br />
-- <strong>inflation</strong>（通货膨胀）| sticky inflation / tame inflation | Stubborn inflation pushed rate-hike bets higher.（顽固的通胀推高了加息押注。）| "Inflation is taxation without legislation." — Milton Friedman（通货膨胀是不经立法的征税。——弗里德曼）<br />
-- <strong>volatile</strong>（波动剧烈的）| highly volatile / volatile markets | Chip stocks have been volatile all week.（芯片股整周剧烈波动。）| "Volatility is the price of admission." — Morgan Housel（波动，是入场的票价。——摩根·豪泽尔）<br />
-- <strong>resilience</strong>（韧性）| economic resilience / show resilience | Bank earnings pointed to continued economic resilience.（银行财报显示经济韧性仍在。）| "Resilience is accepting your new reality, even if it's less good than the one you had before." — Elizabeth Edwards（韧性，就是接受新的现实，哪怕它不如从前。——伊丽莎白·爱德华兹）<br />
-- <strong>panic</strong>（恐慌）| don't panic / market panic | There was no full-blown panic, but nerves were frayed.（虽未出现全面恐慌，但市场神经紧绷。）| "Don't panic." — Douglas Adams, The Hitchhiker's Guide to the Galaxy（别慌。——道格拉斯·亚当斯《银河系漫游指南》）<br />
-- <strong>greedy</strong>（贪婪的）| greedy investors / greedy bets | "Be fearful when others are greedy, and greedy when others are fearful." — Warren Buffett（别人贪婪时恐惧，别人恐惧时贪婪。——巴菲特）<br />
-- <strong>irrational</strong>（非理性的）| irrational exuberance / irrational fears | "The market can remain irrational longer than you can remain solvent." — John Maynard Keynes（市场保持非理性的时间，可以比你保持偿付能力的时间更长。——凯恩斯）<br />
-- <strong>patience</strong>（耐心）| have patience / test one's patience | The hot CPI tested investors' patience.（炽热的 CPI 考验着投资者的耐心。）| "Patience is a virtue." — proverb（忍耐是一种美德。——谚语）<br />
-- <strong>risk</strong>（风险）| take a risk / at risk | "The biggest risk is not taking any risk. In a world that's changing quickly, the only strategy guaranteed to fail is not taking risks." — Mark Zuckerberg（最大的风险就是不冒任何风险。在快速变化的世界里，唯一注定失败的策略就是不冒险。——扎克伯格）<br />
-- <strong>debt</strong>（债务）| pile up debt / debt burden | Higher rates make government debt more expensive to service.（更高的利率让政府还债更贵。）| "Neither a borrower nor a lender be." — Shakespeare, Hamlet（既不要借入，也不要贷出。——莎士比亚《哈姆雷特》）<br />
-- <strong>optimism</strong>（乐观）| cautious optimism / optimism fades | Investors' optimism faded as inflation ran hot.（通胀走高，投资者的乐观情绪消退。）| "Optimism is the faith that leads to achievement." — Helen Keller（乐观是通往成就的信念。——海伦·凯勒）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>inflation</strong>（通货膨胀）| sticky inflation / tame inflation | Stubborn inflation pushed rate-hike bets higher.（顽固的通胀推高了加息押注。）| "Inflation is taxation without legislation." — Milton Friedman（通货膨胀是不经立法的征税。——弗里德曼）</li>
+<li><strong>volatile</strong>（波动剧烈的）| highly volatile / volatile markets | Chip stocks have been volatile all week.（芯片股整周剧烈波动。）| "Volatility is the price of admission." — Morgan Housel（波动，是入场的票价。——摩根·豪泽尔）</li>
+<li><strong>resilience</strong>（韧性）| economic resilience / show resilience | Bank earnings pointed to continued economic resilience.（银行财报显示经济韧性仍在。）| "Resilience is accepting your new reality, even if it's less good than the one you had before." — Elizabeth Edwards（韧性，就是接受新的现实，哪怕它不如从前。——伊丽莎白·爱德华兹）</li>
+<li><strong>panic</strong>（恐慌）| don't panic / market panic | There was no full-blown panic, but nerves were frayed.（虽未出现全面恐慌，但市场神经紧绷。）| "Don't panic." — Douglas Adams, The Hitchhiker's Guide to the Galaxy（别慌。——道格拉斯·亚当斯《银河系漫游指南》）</li>
+<li><strong>greedy</strong>（贪婪的）| greedy investors / greedy bets | "Be fearful when others are greedy, and greedy when others are fearful." — Warren Buffett（别人贪婪时恐惧，别人恐惧时贪婪。——巴菲特）</li>
+<li><strong>irrational</strong>（非理性的）| irrational exuberance / irrational fears | "The market can remain irrational longer than you can remain solvent." — John Maynard Keynes（市场保持非理性的时间，可以比你保持偿付能力的时间更长。——凯恩斯）</li>
+<li><strong>patience</strong>（耐心）| have patience / test one's patience | The hot CPI tested investors' patience.（炽热的 CPI 考验着投资者的耐心。）| "Patience is a virtue." — proverb（忍耐是一种美德。——谚语）</li>
+<li><strong>risk</strong>（风险）| take a risk / at risk | "The biggest risk is not taking any risk. In a world that's changing quickly, the only strategy guaranteed to fail is not taking risks." — Mark Zuckerberg（最大的风险就是不冒任何风险。在快速变化的世界里，唯一注定失败的策略就是不冒险。——扎克伯格）</li>
+<li><strong>debt</strong>（债务）| pile up debt / debt burden | Higher rates make government debt more expensive to service.（更高的利率让政府还债更贵。）| "Neither a borrower nor a lender be." — Shakespeare, Hamlet（既不要借入，也不要贷出。——莎士比亚《哈姆雷特》）</li>
+<li><strong>optimism</strong>（乐观）| cautious optimism / optimism fades | Investors' optimism faded as inflation ran hot.（通胀走高，投资者的乐观情绪消退。）| "Optimism is the faith that leads to achievement." — Helen Keller（乐观是通往成就的信念。——海伦·凯勒）</li>
+</ul>
 <h3>2. 花旗"倒戈"转鹰：预计美联储 12 月加息 25 基点，2027 年 6 月前别想降息</h3>
 <p><strong>发生了什么</strong>：9 月 CPI 爆表之后，华尔街大行花旗（Citigroup）在 10 月 14 日"倒戈"：它原本是全华尔街唯一一家坚持"今年美联储不会再加息"的机构，现在改口预计 12 月加息 25 个基点（0.25%），之后按兵不动，降息要等到 2027 年 6 月。市场定价显示 12 月加息概率高达约 94%。与此同时，波士顿联储主席柯林斯（Susan Collins）10 月 13 日重申：年底前"再加一点"是合适的，通胀目标 2% 已经连续五年多没达标了。她还暗示加息会落在 12 月而非 10 月 27–28 日的会议。CME 的 FedWatch 工具显示，10 月会议加息概率已从数据前的 22% 升至 47.1%。</p>
 <p><strong>为什么值得关注</strong>：连最"鸽"的花旗都转鹰了，说明"加息周期还没结束"正在成为华尔街共识。对普通人：全球贷款利率会在高位待更久——想等降息再买房、再贷款的人，可能要继续等；美元大概率维持强势，人民币汇率、黄金价格都会承压。</p>
 <p><strong>名词解释</strong>：① 加息——美联储给全美国"定利息"。好比小区物业突然宣布"本小区贷款利率上调"，所有人的房贷、车贷、信用卡分期跟着变贵，借钱的人少了，物价上涨就被按住了。② 基点——金融圈的"最小刻度"，100 个基点 = 1%。说"加息 25 个基点"就是加 0.25%，好比说"涨了 25 分"而不是"涨了 0.25 元"，显得专业。③ 鹰派/鸽派——"鹰派"像老鹰盯着猎物（通胀），主张加息要快要狠；"鸽派"像鸽子爱和平，主张别加太猛、保就业。花旗从鸽转鹰，就是从"别加了"变成"还得加"。④ 降息——加息的反方向，好比房东宣布"房租打折"，借钱变便宜，大家更愿意消费和投资。⑤ 市场定价/预期（priced in）——市场像个大赌盘，所有人用真金白银下注"12 月加不加息"。94% 概率的意思是：赌盘里 94% 的钱都押了"会加"。⑥ 按兵不动（hold steady）——美联储开完会决定"这次先不加也不降"，像开车时脚从油门挪开、但还没踩刹车。</p>
 <p><strong>一句话总结</strong>：连最鸽的花旗都改口预计 12 月加息，华尔街对"加息还没完"达成共识，降息至少等到 2027 年年中。</p>
 <p>🔗 来源：<a href="https://kelofm.com/2026/10/14/citi-turns-hawkish-on-fed-after-inflation-surprise-expects-december-rate-hike/">Reuters 经 KELO-FM（10-14）</a>；<a href="https://www.reuters.com/business/feds-collins-sees-another-rate-hike-table-before-end-2026-2026-10-13/">Reuters（10-13，Collins 讲话）</a></p>
-<p>📖 生词：<br />
-- <strong>odds</strong>（概率；胜算）| beat the odds / against all odds | The odds of a December hike rose to about 94%.（12 月加息的概率升至约 94%。）| "May the odds be ever in your favor." — The Hunger Games（愿好运永远眷顾你。——《饥饿游戏》）<br />
-- <strong>prediction</strong>（预测）| bold prediction / make a prediction | Policymakers' predictions penciled in another hike this year.（官员们的预测中写下了今年再加一次息。）| "Prediction is very difficult, especially about the future." — Niels Bohr（预测很难，尤其是预测未来。——尼尔斯·玻尔）<br />
-- <strong>surprise</strong>（意外）| inflation surprise / surprise move | The inflation surprise caught markets off guard.（通胀意外爆表让市场措手不及。）| "Expect the unexpected." — proverb（预料之外，才是常态。——谚语）<br />
-- <strong>bold</strong>（大胆的）| bold bet / bold move | Bold bets on a December hike now dominate the market.（对 12 月加息的大胆押注如今主导市场。）| "Fortune favors the bold." — Latin proverb（命运眷顾勇者。——拉丁谚语）<br />
-- <strong>wait</strong>（等待）| wait and see / worth the wait | With inflation hot, the Fed can afford to wait until December.（通胀高企，美联储等得到 12 月再动手。）| "All good things come to those who wait." — proverb（好事多磨，耐心者得。——谚语）<br />
-- <strong>timing</strong>（时机）| perfect timing / market timing | The timing of the next hike matters more than its size.（下一次加息的时机比幅度更重要。）| "Timing is everything." — proverb（时机就是一切。——谚语）<br />
-- <strong>calm</strong>（平静）| stay calm / calm markets | Officials urged calm as markets repriced rate bets.（市场重估加息押注之际，官员们呼吁保持冷静。）| "Keep calm and carry on." — British wartime poster（保持冷静，继续前行。——英国战时海报）<br />
-- <strong>balance</strong>（平衡）| strike a balance / balance risks | The Fed must balance growth against inflation.（美联储必须在增长和通胀之间求平衡。）| "Life is like riding a bicycle. To keep your balance, you must keep moving." — Albert Einstein（人生就像骑自行车，要保持平衡就得不断前行。——爱因斯坦）<br />
-- <strong>moon</strong>（月亮）| reach for the moon / over the moon | The Fed keeps missing its 2% target, five years and counting.（美联储连续五年多没够到 2% 的目标。）| "We choose to go to the Moon." — John F. Kennedy（我们选择登月。——肯尼迪）<br />
-- <strong>steady</strong>（稳定的）| hold steady / steady growth | Citi expects rates to hold steady after December.（花旗预计 12 月之后利率将按兵不动。）| "Slow and steady wins the race." — Aesop（慢而稳者赢得比赛。——伊索《龟兔赛跑》）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>odds</strong>（概率；胜算）| beat the odds / against all odds | The odds of a December hike rose to about 94%.（12 月加息的概率升至约 94%。）| "May the odds be ever in your favor." — The Hunger Games（愿好运永远眷顾你。——《饥饿游戏》）</li>
+<li><strong>prediction</strong>（预测）| bold prediction / make a prediction | Policymakers' predictions penciled in another hike this year.（官员们的预测中写下了今年再加一次息。）| "Prediction is very difficult, especially about the future." — Niels Bohr（预测很难，尤其是预测未来。——尼尔斯·玻尔）</li>
+<li><strong>surprise</strong>（意外）| inflation surprise / surprise move | The inflation surprise caught markets off guard.（通胀意外爆表让市场措手不及。）| "Expect the unexpected." — proverb（预料之外，才是常态。——谚语）</li>
+<li><strong>bold</strong>（大胆的）| bold bet / bold move | Bold bets on a December hike now dominate the market.（对 12 月加息的大胆押注如今主导市场。）| "Fortune favors the bold." — Latin proverb（命运眷顾勇者。——拉丁谚语）</li>
+<li><strong>wait</strong>（等待）| wait and see / worth the wait | With inflation hot, the Fed can afford to wait until December.（通胀高企，美联储等得到 12 月再动手。）| "All good things come to those who wait." — proverb（好事多磨，耐心者得。——谚语）</li>
+<li><strong>timing</strong>（时机）| perfect timing / market timing | The timing of the next hike matters more than its size.（下一次加息的时机比幅度更重要。）| "Timing is everything." — proverb（时机就是一切。——谚语）</li>
+<li><strong>calm</strong>（平静）| stay calm / calm markets | Officials urged calm as markets repriced rate bets.（市场重估加息押注之际，官员们呼吁保持冷静。）| "Keep calm and carry on." — British wartime poster（保持冷静，继续前行。——英国战时海报）</li>
+<li><strong>balance</strong>（平衡）| strike a balance / balance risks | The Fed must balance growth against inflation.（美联储必须在增长和通胀之间求平衡。）| "Life is like riding a bicycle. To keep your balance, you must keep moving." — Albert Einstein（人生就像骑自行车，要保持平衡就得不断前行。——爱因斯坦）</li>
+<li><strong>moon</strong>（月亮）| reach for the moon / over the moon | The Fed keeps missing its 2% target, five years and counting.（美联储连续五年多没够到 2% 的目标。）| "We choose to go to the Moon." — John F. Kennedy（我们选择登月。——肯尼迪）</li>
+<li><strong>steady</strong>（稳定的）| hold steady / steady growth | Citi expects rates to hold steady after December.（花旗预计 12 月之后利率将按兵不动。）| "Slow and steady wins the race." — Aesop（慢而稳者赢得比赛。——伊索《龟兔赛跑》）</li>
+</ul>
 <h3>3. 新加坡金管局出人意料按兵不动，三季度 GDP 增长 5.4% 超预期</h3>
 <p><strong>发生了什么</strong>：新加坡金管局（MAS，相当于新加坡的央行）在 10 月 14 日的议息会议上维持货币政策不变——在 4 月和 7 月连续两次收紧之后按下暂停键。这个决定让市场大跌眼镜：彭博调查的 20 位经济学家中有 17 位预计会进一步收紧，只有 3 位猜对。MAS 把 2026 年核心通胀预测从 1.5%–2.5% 收窄到 1.5%–2%，但同时警告：伊朗战争带来的能源涨价会让通胀高企到 2027 年，2027 年核心和整体通胀预计都在 1.5%–2.5%。同日公布的三季度 GDP 初值同比增长 5.4%，超出预期，主要靠科技相关行业拉动；但 MAS 预计，随着 AI 投资热潮从"异乎寻常的速度"降温、全球金融条件收紧，增长会放缓。</p>
 <p><strong>为什么值得关注</strong>：新加坡是亚洲的"风向标"：它不调利率、调汇率，是全世界独一份的货币政策，暂停收紧说明它判断通胀最猛的阶段可能正在过去——但能源这颗"雷"还没排。对 Ricardo：新元汇率、东南亚资产和区域供应链都会受影响；也顺带理解了"小国央行"怎么做决策。</p>
 <p><strong>名词解释</strong>：① S$NEER（新元名义有效汇率）——新加坡央行不调利率、调汇率。好比别人家央行是"调水温"（利率），新加坡是"调水位"：让新元对一篮子贸易伙伴货币"缓慢升值"，新元越值钱，进口的东西（新加坡 40% 的消费靠进口）就越便宜，通胀自然被压住。② 核心通胀——新加坡版本是去掉"住宿和私人交通"之后的物价，好比算班级平均分时先去掉两个偏科最严重的同学，剩下的更能反映真实水平。③ 收紧/紧缩——央行"踩刹车"：让货币升值更快（新加坡）或加息（美国），都是给过热的经济降温，好比水龙头拧小一点。④ 按兵不动——开完会决定"这次什么都不调"，但不是"躺平"：MAS 说政策带还在"升值通道"里，新元会继续慢慢走强。⑤ 经济学家调查/共识——开会前彭博挨个问经济学家"你猜加不加"，17 比 3 的结果说明市场几乎一边倒看"继续收紧"，结果被 MAS"打脸"——共识错了本身就是新闻。⑥ 产出缺口——经济实际跑出来的成绩，和它"本可以"跑出来的成绩之间的差。今年是正的（超常发挥，靠 AI 热潮），MAS 预计明年会收窄（回归正常）。</p>
 <p><strong>一句话总结</strong>：新加坡央行在连续两次收紧后意外暂停，让 17 位经济学家的预测落空，同时警告能源涨价会把高通胀拖到 2027 年。</p>
 <p>🔗 来源：<a href="https://www.businesstimes.com.sg/singapore/mas-holds-monetary-policy-settings-pausing-after-two-straight-tightenings">The Business Times（10-14）</a>；<a href="https://www.straitstimes.com/business/mas-keeps-singdollar-appreciation-rate-unchanged-but-warns-of-elevated-inflation">The Straits Times（10-14）</a></p>
-<p>📖 生词：<br />
-- <strong>majority</strong>（多数）| vast majority / majority of economists | A majority of economists expected tighter policy.（多数经济学家预计政策会收紧。）| "Whenever you find yourself on the side of the majority, it is time to pause and reflect." — Mark Twain（每当你发现自己站在多数人一边，就该停下来反思了。——马克·吐温）<br />
-- <strong>stronger</strong>（更强劲的）| stronger currency / grow stronger | A stronger currency helps tame imported inflation.（更强势的货币有助于压制输入型通胀。）| "That which does not kill us makes us stronger." — Friedrich Nietzsche（杀不死我们的，会让我们更强大。——尼采）<br />
-- <strong>easy</strong>（容易的）| take it easy / easier said than done | Easing inflation will not come easy while energy prices stay high.（能源价格居高不下，通胀缓解不会轻松。）| "All things are difficult before they are easy." — Thomas Fuller（凡事都是先难后易。——托马斯·富勒）<br />
-- <strong>future</strong>（未来）| bright future / in the near future | MAS sees a brighter inflation outlook for 2027 and beyond.（金管局认为 2027 年及以后的通胀前景更光明。）| "The future depends on what you do today." — Mahatma Gandhi（未来取决于你今天做了什么。——甘地）<br />
-- <strong>verify</strong>（核实）| verify the data / trust but verify | Traders verify every number before placing bets.（交易员下注前会核实每个数字。）| "Trust, but verify." — Ronald Reagan（信任，但要核实。——里根）<br />
-- <strong>history</strong>（历史）| make history / repeat history | The AI boom echoes past tech cycles — history may not repeat, but it rhymes.（AI 热潮让人想起过去的科技周期——历史不会重演，但常常押韵。）| "History doesn't repeat itself, but it often rhymes." — Mark Twain（历史不会重演，但常常押韵。——马克·吐温）<br />
-- <strong>intelligence</strong>（智力；智能）| artificial intelligence / emotional intelligence | The AI investment cycle is cooling from an exceptional pace.（AI 投资周期正从异乎寻常的速度降温。）| "The true sign of intelligence is not knowledge but imagination." — Albert Einstein（智力的真正标志不是知识，而是想象力。——爱因斯坦）<br />
-- <strong>confidence</strong>（信心）| boost confidence / lose confidence | Firm growth should keep business confidence up.（稳健增长应能维持企业信心。）| "Confidence comes not from always being right but from not fearing to be wrong." — Peter T. McIntyre（信心并非来自永远正确，而是来自不怕犯错。——麦金太尔）<br />
-- <strong>discretion</strong>（谨慎）| exercise discretion / at one's discretion | MAS exercised discretion and chose to wait.（金管局谨慎行事，选择观望。）| "Discretion is the better part of valor." — Shakespeare（谨慎是勇气中最好的部分。——莎士比亚）<br />
-- <strong>decision</strong>（决定）| tough decision / make a decision | The surprise decision wrong-footed most forecasters.（这个出人意料的决定让多数预测者措手不及。）| "In any moment of decision, the best thing you can do is the right thing, the next best thing is the wrong thing, and the worst thing you can do is nothing." — Theodore Roosevelt（在任何需要决定的时刻，最好是做正确的事，其次是做错事，最糟的是什么都不做。——罗斯福）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>majority</strong>（多数）| vast majority / majority of economists | A majority of economists expected tighter policy.（多数经济学家预计政策会收紧。）| "Whenever you find yourself on the side of the majority, it is time to pause and reflect." — Mark Twain（每当你发现自己站在多数人一边，就该停下来反思了。——马克·吐温）</li>
+<li><strong>stronger</strong>（更强劲的）| stronger currency / grow stronger | A stronger currency helps tame imported inflation.（更强势的货币有助于压制输入型通胀。）| "That which does not kill us makes us stronger." — Friedrich Nietzsche（杀不死我们的，会让我们更强大。——尼采）</li>
+<li><strong>easy</strong>（容易的）| take it easy / easier said than done | Easing inflation will not come easy while energy prices stay high.（能源价格居高不下，通胀缓解不会轻松。）| "All things are difficult before they are easy." — Thomas Fuller（凡事都是先难后易。——托马斯·富勒）</li>
+<li><strong>future</strong>（未来）| bright future / in the near future | MAS sees a brighter inflation outlook for 2027 and beyond.（金管局认为 2027 年及以后的通胀前景更光明。）| "The future depends on what you do today." — Mahatma Gandhi（未来取决于你今天做了什么。——甘地）</li>
+<li><strong>verify</strong>（核实）| verify the data / trust but verify | Traders verify every number before placing bets.（交易员下注前会核实每个数字。）| "Trust, but verify." — Ronald Reagan（信任，但要核实。——里根）</li>
+<li><strong>history</strong>（历史）| make history / repeat history | The AI boom echoes past tech cycles — history may not repeat, but it rhymes.（AI 热潮让人想起过去的科技周期——历史不会重演，但常常押韵。）| "History doesn't repeat itself, but it often rhymes." — Mark Twain（历史不会重演，但常常押韵。——马克·吐温）</li>
+<li><strong>intelligence</strong>（智力；智能）| artificial intelligence / emotional intelligence | The AI investment cycle is cooling from an exceptional pace.（AI 投资周期正从异乎寻常的速度降温。）| "The true sign of intelligence is not knowledge but imagination." — Albert Einstein（智力的真正标志不是知识，而是想象力。——爱因斯坦）</li>
+<li><strong>confidence</strong>（信心）| boost confidence / lose confidence | Firm growth should keep business confidence up.（稳健增长应能维持企业信心。）| "Confidence comes not from always being right but from not fearing to be wrong." — Peter T. McIntyre（信心并非来自永远正确，而是来自不怕犯错。——麦金太尔）</li>
+<li><strong>discretion</strong>（谨慎）| exercise discretion / at one's discretion | MAS exercised discretion and chose to wait.（金管局谨慎行事，选择观望。）| "Discretion is the better part of valor." — Shakespeare（谨慎是勇气中最好的部分。——莎士比亚）</li>
+<li><strong>decision</strong>（决定）| tough decision / make a decision | The surprise decision wrong-footed most forecasters.（这个出人意料的决定让多数预测者措手不及。）| "In any moment of decision, the best thing you can do is the right thing, the next best thing is the wrong thing, and the worst thing you can do is nothing." — Theodore Roosevelt（在任何需要决定的时刻，最好是做正确的事，其次是做错事，最糟的是什么都不做。——罗斯福）</li>
+</ul>
 <h3>4. 中国恢复购买美国大豆：特朗普-习峰会后首次，一口气买了 8–10 船</h3>
 <p><strong>发生了什么</strong>：路透 10 月 14 日援引三位贸易消息人士称，中国国营贸易商本周购买了 8–10 船美国大豆（Panamax 型，每船约 6.5 万吨），12 月起装运——这是 9 月特朗普与习在华盛顿峰会以来的首次采购，结束了数周的"空窗期"（部分原因是国庆长假期间需求疲软）。买家在芝加哥期货 1 月合约价基础上每蒲式耳加价 3.10–3.20 美元。此前中国已累计购买约 1370 万吨美国大豆，完成了白宫公布的 2026/27 年度 2500 万吨采购目标的一半以上。不过 9 月峰会后美方公布的关税削减清单把大豆排除在外，所以私人压榨企业还在观望；10 月 14 日当天中储粮拍卖 51.8 万吨进口大豆，只成交了 40.5%。</p>
 <p><strong>为什么值得关注</strong>：大豆是中美贸易的"晴雨表"和"人质"：中国是全球最大大豆买家，美国农民靠它吃饭。每一次恢复采购都意味着两国贸易紧张在缓和——这对全球农产品价格、航运，乃至两国关系的温度都是信号。对普通人：大豆是食用油和饲料的原料，贸易回暖有助于稳住相关价格。</p>
 <p><strong>名词解释</strong>：① 大豆的特殊地位——大豆是中美贸易战里最有名的"筹码"。美国中西部农民种的大豆一半以上卖给中国，中国则用它榨油、做饲料。贸易一紧张，中国就转头去巴西买，美国农民就喊疼——所以"中国买不买美国大豆"成了两国关系的体温计。② 关税——进口商品要交的"过路费"。比如美国大豆进中国，海关先收一笔税，豆子就变贵了，中国买家自然转向别国。③ 升水（premium）——在期货基准价上"加的钱"。好比奶茶店菜单价 20 元，你指定要加双倍珍珠得多付 5 元——这 5 元就是"升水"，反映这批货有多抢手。④ 蒲式耳——美国农产品的计量单位，1 蒲式耳大豆约 27 公斤。好比中国用"斤"，美国农民用"蒲式耳"论价。⑤ 采购目标——白宫宣布的 2500 万吨是两国谈判桌上定下的"军令状"，买够了算履约；现在完成过半，说明双方都在往这个方向走。</p>
 <p><strong>一句话总结</strong>：中美峰会后中国首次恢复购买美国大豆，一口气买下 8–10 船，农产品贸易的坚冰开始松动。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/world/china/china-buys-8-10-us-soybean-cargoes-first-deals-since-trump-xi-summit-sources-say-2026-10-14/">Reuters（10-14）</a></p>
-<p>📖 生词：<br />
-- <strong>voyage</strong>（航行）| maiden voyage / long voyage | The soybean cargoes will begin their voyage in December.（大豆货轮将于 12 月起航。）| "The voyage of discovery is not in seeking new landscapes but in having new eyes." — Marcel Proust（发现之旅不在于寻找新的风景，而在于拥有新的眼光。——普鲁斯特）<br />
-- <strong>price</strong>（价格）| price tag / pay the price | Buyers paid a premium on top of the futures price.（买家在期货价上额外支付了升水。）| "The price of anything is the amount of life you exchange for it." — Henry David Thoreau（任何东西的价格，都是你用生命去交换的量。——梭罗）<br />
-- <strong>reap</strong>（收获）| reap what you sow / reap rewards | After months of waiting, traders hope to reap the rewards of renewed buying.（等了几个月，交易员们希望迎来重新采购的收获。）| "As you sow, so shall you reap." — The Bible（种什么，收什么。——《圣经》）<br />
-- <strong>middle</strong>（中间）| in the middle of / middle ground | China is more than halfway toward its purchase target.（中国已完成采购目标过半。）| "In the middle of difficulty lies opportunity." — Albert Einstein（困难之中蕴藏着机遇。——爱因斯坦）<br />
-- <strong>expectation</strong>（预期）| meet expectations / dampen expectations | The tariff list dampened expectations of a buying spree.（关税清单浇灭了大举采购的预期。）| "Blessed is he who expects nothing, for he shall never be disappointed." — Alexander Pope（不抱期望的人是有福的，因为他永远不会失望。——蒲柏）<br />
-- <strong>struggle</strong>（挣扎；斗争）| power struggle / struggle with | The truce follows months of struggle over tariffs.（这次休战之前，双方在关税问题上拉扯了数月。）| "Where there is no struggle, there is no strength." — Oprah Winfrey（没有挣扎，就没有力量。——奥普拉·温弗瑞）<br />
-- <strong>goal</strong>（目标）| set a goal / achieve a goal | Beijing is more than halfway toward its 25-million-ton goal.（北京距离 2500 万吨的目标已完成过半。）| "A goal without a plan is just a wish." — Antoine de Saint-Exupéry（没有计划的目标只是愿望。——圣埃克絮佩里）<br />
-- <strong>appetite</strong>（胃口；需求欲望）| whet the appetite / strong appetite | The market had awaited signs of renewed buying appetite.（市场一直在等待重新采购意愿的信号。）| "Appetite comes with eating." — François Rabelais（胃口是吃出来的。——拉伯雷）<br />
-- <strong>hope</strong>（希望）| ray of hope / hold out hope | The purchases offer hope that farm trade is thawing.（这次采购让人们看到农产品贸易正在解冻的希望。）| "Hope is the thing with feathers that perches in the soul." — Emily Dickinson（希望是长着羽毛的东西，栖息在灵魂里。——狄金森）<br />
-- <strong>harvest</strong>（收获）| bumper harvest / harvest season | American farmers hope a new harvest of orders is beginning.（美国农民希望新一轮订单的"丰收季"正在到来。）| "Don't judge each day by the harvest you reap but by the seeds that you plant." — Robert Louis Stevenson（不要用每天的收获来评判一天，而要看你种下了什么种子。——史蒂文森）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>voyage</strong>（航行）| maiden voyage / long voyage | The soybean cargoes will begin their voyage in December.（大豆货轮将于 12 月起航。）| "The voyage of discovery is not in seeking new landscapes but in having new eyes." — Marcel Proust（发现之旅不在于寻找新的风景，而在于拥有新的眼光。——普鲁斯特）</li>
+<li><strong>price</strong>（价格）| price tag / pay the price | Buyers paid a premium on top of the futures price.（买家在期货价上额外支付了升水。）| "The price of anything is the amount of life you exchange for it." — Henry David Thoreau（任何东西的价格，都是你用生命去交换的量。——梭罗）</li>
+<li><strong>reap</strong>（收获）| reap what you sow / reap rewards | After months of waiting, traders hope to reap the rewards of renewed buying.（等了几个月，交易员们希望迎来重新采购的收获。）| "As you sow, so shall you reap." — The Bible（种什么，收什么。——《圣经》）</li>
+<li><strong>middle</strong>（中间）| in the middle of / middle ground | China is more than halfway toward its purchase target.（中国已完成采购目标过半。）| "In the middle of difficulty lies opportunity." — Albert Einstein（困难之中蕴藏着机遇。——爱因斯坦）</li>
+<li><strong>expectation</strong>（预期）| meet expectations / dampen expectations | The tariff list dampened expectations of a buying spree.（关税清单浇灭了大举采购的预期。）| "Blessed is he who expects nothing, for he shall never be disappointed." — Alexander Pope（不抱期望的人是有福的，因为他永远不会失望。——蒲柏）</li>
+<li><strong>struggle</strong>（挣扎；斗争）| power struggle / struggle with | The truce follows months of struggle over tariffs.（这次休战之前，双方在关税问题上拉扯了数月。）| "Where there is no struggle, there is no strength." — Oprah Winfrey（没有挣扎，就没有力量。——奥普拉·温弗瑞）</li>
+<li><strong>goal</strong>（目标）| set a goal / achieve a goal | Beijing is more than halfway toward its 25-million-ton goal.（北京距离 2500 万吨的目标已完成过半。）| "A goal without a plan is just a wish." — Antoine de Saint-Exupéry（没有计划的目标只是愿望。——圣埃克絮佩里）</li>
+<li><strong>appetite</strong>（胃口；需求欲望）| whet the appetite / strong appetite | The market had awaited signs of renewed buying appetite.（市场一直在等待重新采购意愿的信号。）| "Appetite comes with eating." — François Rabelais（胃口是吃出来的。——拉伯雷）</li>
+<li><strong>hope</strong>（希望）| ray of hope / hold out hope | The purchases offer hope that farm trade is thawing.（这次采购让人们看到农产品贸易正在解冻的希望。）| "Hope is the thing with feathers that perches in the soul." — Emily Dickinson（希望是长着羽毛的东西，栖息在灵魂里。——狄金森）</li>
+<li><strong>harvest</strong>（收获）| bumper harvest / harvest season | American farmers hope a new harvest of orders is beginning.（美国农民希望新一轮订单的"丰收季"正在到来。）| "Don't judge each day by the harvest you reap but by the seeds that you plant." — Robert Louis Stevenson（不要用每天的收获来评判一天，而要看你种下了什么种子。——史蒂文森）</li>
+</ul>
 <hr />
 <h2>🤖 AI</h2>
 <h3>1. Meta Muse Wonder 上线两天即遭开发者"实测打脸"，被批只会刷分</h3>
@@ -146,68 +193,76 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 基准测试（benchmark）——给 AI 出的"统考试卷"，考高分不等于真能干活，就像考试状元不一定会做饭；② 刷分（benchmaxing）——专门为考试调优，平时不练、考前突击，应试教育的 AI 版；③ API——程序之间的"点菜窗口"，开发者通过它调用模型干活；④ token——AI 读写文字的计量单位，按"字数"收费，好比水电表；⑤ agent（智能体）——不只会聊天、还能自己动手办事的 AI，比如替你回邮件、排日程；⑥ 上下文窗口——AI 一次能记住的"脑容量"，100 万 token 约等于一口气读完好几本长篇小说。</p>
 <p><strong>一句话总结</strong>：Muse Wonder 榜单很漂亮，但开发者实测泼冷水——分数和真本事之间，Meta 还得证明自己；同时 agent 的隐私权限问题再被翻出来，给所有重度用户提了个醒。</p>
 <p>🔗 来源：<a href="https://dev.to/hiroki-ii-ai/ai-daily-digest-october-15-2026-meta-wonder-faces-real-world-backlash-vibe-coded-apps-land-on-4lbg">dev.to AI Daily Digest（10-14）</a>；<a href="https://www.geeky-gadgets.com/meta-muse-wonder-ai/">Geeky Gadgets（10-14）</a>；<a href="http://economictimes.indiatimes.com/ai/ai-insights/metas-new-muse-ai-agents-raise-questions-about-privacy-and-user-control/articleshow/134942500.cms">The Economic Times（10-14）</a></p>
-<p>📖 生词：<br />
-- <strong>judge</strong>（评判；判断）| judge a person / judge by appearances / judge from | Developers judged the model by real tasks, not by its scores.（开发者用真实任务而不是分数来评判这个模型。）| "Judge a man by his questions rather than by his answers." — Voltaire（通过一个人提出的问题而非他的回答来评判他。——伏尔泰）<br />
-- <strong>applause</strong>（掌声；喝彩）| win applause / a round of applause / burst into applause | The launch won applause from the press on Monday.（周一的发布赢得了媒体的掌声。）| "Applause is the spur of noble minds, the end and aim of weak ones." — Edmund Burke（掌声是高尚心灵的鞭策，却是弱者的终点与目标。——埃德蒙·伯克）<br />
-- <strong>frontier</strong>（前沿；边疆）| at the frontier / push the frontier / frontier model | Meta asked to be compared with rivals at the AI frontier.（Meta 要求人们在 AI 前沿拿它和对手比较。）| "Space: the final frontier." — Star Trek（太空：最后的边疆。——《星际迷航》）<br />
-- <strong>gap</strong>（差距；鸿沟）| the gap between / bridge the gap / mind the gap | A gap opened up between the charts and real-world use.（榜单分数和真实使用之间出现了鸿沟。）| "Mind the gap." — London Underground announcement（小心站台空隙。——伦敦地铁广播）<br />
-- <strong>accuse</strong>（指控；指责）| accuse sb of sth / be accused of cheating | Developers accused Meta of tuning only for benchmarks.（开发者指责 Meta 只为刷榜调优。）| "Accuse not Nature, she hath done her part; do thou but thine." — John Milton（不要指责自然，她已尽了本分；你也尽你的本分吧。——约翰·弥尔顿）<br />
-- <strong>examine</strong>（检查；审视）| examine the evidence / examine closely / examine a patient | Analysts are examining whether the scores transfer to real work.（分析师正在审视这些分数能否转化成真实干活能力。）| "The unexamined life is not worth living." — Socrates（未经审视的人生不值得过。——苏格拉底）<br />
-- <strong>promise</strong>（承诺）| keep a promise / break a promise / make a promise | Meta promised a fuller safety report later.（Meta 承诺稍后发布更完整的安全报告。）| "A promise made is a debt unpaid." — Robert W. Service（许下的诺言就是未偿的债。——罗伯特·W·瑟维斯）<br />
-- <strong>price</strong>（价格）| price tag / pay the price / at any price | Wonder Full carries a premium price.（Wonder Full 定价高昂。）| "Quality is remembered long after the price is forgotten." — Gucci family motto（价格会被遗忘，品质会被记住。——古驰家族格言）<br />
-- <strong>persistent</strong>（持续的；持久的）| persistent memory / persistent efforts / persistent rain | Active Memory gives the agent persistent memory across chats.（Active Memory 让智能体在多次对话间拥有持久记忆。）| "Nothing in this world can take the place of persistence." — Calvin Coolidge（世上没有什么能取代坚持。——卡尔文·柯立芝）<br />
-- <strong>risk</strong>（风险）| take a risk / at risk / risk sth | Giving agents email access carries real privacy risks.（给智能体邮箱权限带来真实的隐私风险。）| "Only those who will risk going too far can possibly find out how far one can go." — T.S. Eliot（只有敢于冒险走得太远的人，才可能知道自己能走多远。——T.S.艾略特）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>judge</strong>（评判；判断）| judge a person / judge by appearances / judge from | Developers judged the model by real tasks, not by its scores.（开发者用真实任务而不是分数来评判这个模型。）| "Judge a man by his questions rather than by his answers." — Voltaire（通过一个人提出的问题而非他的回答来评判他。——伏尔泰）</li>
+<li><strong>applause</strong>（掌声；喝彩）| win applause / a round of applause / burst into applause | The launch won applause from the press on Monday.（周一的发布赢得了媒体的掌声。）| "Applause is the spur of noble minds, the end and aim of weak ones." — Edmund Burke（掌声是高尚心灵的鞭策，却是弱者的终点与目标。——埃德蒙·伯克）</li>
+<li><strong>frontier</strong>（前沿；边疆）| at the frontier / push the frontier / frontier model | Meta asked to be compared with rivals at the AI frontier.（Meta 要求人们在 AI 前沿拿它和对手比较。）| "Space: the final frontier." — Star Trek（太空：最后的边疆。——《星际迷航》）</li>
+<li><strong>gap</strong>（差距；鸿沟）| the gap between / bridge the gap / mind the gap | A gap opened up between the charts and real-world use.（榜单分数和真实使用之间出现了鸿沟。）| "Mind the gap." — London Underground announcement（小心站台空隙。——伦敦地铁广播）</li>
+<li><strong>accuse</strong>（指控；指责）| accuse sb of sth / be accused of cheating | Developers accused Meta of tuning only for benchmarks.（开发者指责 Meta 只为刷榜调优。）| "Accuse not Nature, she hath done her part; do thou but thine." — John Milton（不要指责自然，她已尽了本分；你也尽你的本分吧。——约翰·弥尔顿）</li>
+<li><strong>examine</strong>（检查；审视）| examine the evidence / examine closely / examine a patient | Analysts are examining whether the scores transfer to real work.（分析师正在审视这些分数能否转化成真实干活能力。）| "The unexamined life is not worth living." — Socrates（未经审视的人生不值得过。——苏格拉底）</li>
+<li><strong>promise</strong>（承诺）| keep a promise / break a promise / make a promise | Meta promised a fuller safety report later.（Meta 承诺稍后发布更完整的安全报告。）| "A promise made is a debt unpaid." — Robert W. Service（许下的诺言就是未偿的债。——罗伯特·W·瑟维斯）</li>
+<li><strong>price</strong>（价格）| price tag / pay the price / at any price | Wonder Full carries a premium price.（Wonder Full 定价高昂。）| "Quality is remembered long after the price is forgotten." — Gucci family motto（价格会被遗忘，品质会被记住。——古驰家族格言）</li>
+<li><strong>persistent</strong>（持续的；持久的）| persistent memory / persistent efforts / persistent rain | Active Memory gives the agent persistent memory across chats.（Active Memory 让智能体在多次对话间拥有持久记忆。）| "Nothing in this world can take the place of persistence." — Calvin Coolidge（世上没有什么能取代坚持。——卡尔文·柯立芝）</li>
+<li><strong>risk</strong>（风险）| take a risk / at risk / risk sth | Giving agents email access carries real privacy risks.（给智能体邮箱权限带来真实的隐私风险。）| "Only those who will risk going too far can possibly find out how far one can go." — T.S. Eliot（只有敢于冒险走得太远的人，才可能知道自己能走多远。——T.S.艾略特）</li>
+</ul>
 <h3>2. Google Play 开私人通道：不会编程的人也能"说句话"做出自己的安卓 App</h3>
 <p><strong>发生了什么</strong>：Google 宣布，美国 18 岁以上用户可以在 Google AI Studio 里用自然语言描述想要的功能，AI 直接生成一个安卓 App，然后通过 Google Play 以"私人应用"形式安装到自己手机上——全程不需要注册开发者账号。私人应用只存在个人库里，不进公开商店、不出现在搜索结果、别人看不见。未来几个月会加上小范围分享（家人朋友）；想公开发布，仍要走开发者账号和完整的安全审核。同批更新还包括 Play 商店的 AI 应用对比和个性化游戏推荐。</p>
 <p><strong>为什么值得关注</strong>：对 Ricardo 这种正在学编程、刚玩转 GitHub 的人来说，这是"把想法变成手机 App"的最短路径——以前要学编程语言、注册开发者账号、过审核，现在"动嘴就行"。他平时脑洞多（做视频、搞头像、记单词），以后想给自己做个小工具（比如背单词打卡器），不用求人也能先跑起来自己用。</p>
 <p><strong>名词解释</strong>：① vibe coding（氛围编程）——凭感觉写代码：你说人话，AI 写代码，像跟厨师说"我想吃酸甜口的"，他直接上菜；② 开发者账号——在应用商店"摆摊"要办的营业执照，还要交年费；③ 审核（review）——商店保安检查，怕你夹带病毒、偷隐私；④ 自然语言提示——用人话下指令，不用背代码语法；⑤ 个人库（Personal Library）——只属于你一个人的"私人货架"，别人看不见。</p>
 <p><strong>一句话总结</strong>：Google 把"做 App"从专业手艺变成了"动嘴就行"的家务事，门槛消失的那一刻，拼的是谁的想法好。</p>
 <p>🔗 来源：<a href="https://dataconomy.com/2026/10/14/google-play-private-vibe-coded-android-apps/">Dataconomy（10-14）</a>；<a href="https://www.unboxfuture.com/2026/10/google-play-opens-its-doors-to-vibe.html">Unbox Future（10-13）</a>；<a href="https://www.gadgets360.com/apps/news/google-play-store-updates-vibe-coded-apps-ai-comparisons-personalised-game-discovery-12183789/amp">Gadgets360（10-14）</a></p>
-<p>📖 生词：<br />
-- <strong>eliminate</strong>（消除；省去）| eliminate the need / eliminate errors / eliminate poverty | It eliminates the need for a developer account.（它省去了开发者账号这个门槛。）| "When you have eliminated the impossible, whatever remains, however improbable, must be the truth." — Arthur Conan Doyle (Sherlock Holmes)（排除掉不可能的之后，剩下的无论多离奇，就是真相。——柯南·道尔《福尔摩斯》）<br />
-- <strong>publish</strong>（发布；出版）| publish an app / publish a book / publish online | You can publish a private app for your own eyes only.（你可以发布一个只给自己看的私人应用。）| "Publish and be damned!" — Duke of Wellington（要发就发，管它呢！——惠灵顿公爵）<br />
-- <strong>secret</strong>（秘密的）| keep a secret / secret recipe / in secret | Private apps stay secret from the public store.（私人应用对公开商店保密。）| "Three may keep a secret, if two of them are dead." — Benjamin Franklin（三人能守秘密，前提是其中两人已死。——本杰明·富兰克林）<br />
-- <strong>expand</strong>（扩大）| expand access / expand into markets / expand one's horizons | Google plans to expand small-group sharing soon.（Google 计划很快扩大到小范围分享。）| "The mind, once expanded to the dimensions of larger ideas, never returns to its original size." — Oliver Wendell Holmes（思想一旦被大观念撑开，就再也回不到原来的尺寸。——奥利弗·温德尔·霍姆斯）<br />
-- <strong>limit</strong>（限制）| set a limit / within limits / speed limit | Age limits apply: users must be 18 or older.（有年龄限制：用户须年满 18 岁。）| "The only limit to our realization of tomorrow is our doubts of today." — Franklin D. Roosevelt（我们实现明天的唯一限制，是今天的疑虑。——富兰克林·罗斯福）<br />
-- <strong>verify</strong>（核实；验证）| verify identity / verify the facts / verify an account | Google will verify each public app before listing it.（Google 会在上架前逐一核验公开应用。）| "Trust, but verify." — Ronald Reagan（信任，但要核实。——罗纳德·里根）<br />
-- <strong>permission</strong>（许可；权限）| ask permission / grant permission / read permission | What permissions can a generated app request?（生成的应用能申请哪些权限？）| "It's easier to ask forgiveness than it is to get permission." — Grace Hopper（与其事先征得许可，不如事后请求原谅。——格蕾丝·霍珀）<br />
-- <strong>description</strong>（描述）| job description / vivid description / brief description | Users build apps by describing them in words.（用户用语言描述就能做出应用。）| "Description begins in the writer's imagination, but should finish in the reader's." — Stephen King（描述始于作者的想象，终于读者的脑海。——斯蒂芬·金）<br />
-- <strong>divide</strong>（划分；分开）| divide into / divide opinions / divide up | The store divides private experiments from public apps.（商店把私人实验和公开应用分开存放。）| "A house divided against itself cannot stand." — Abraham Lincoln（分裂之家无法屹立。——亚伯拉罕·林肯）<br />
-- <strong>share</strong>（分享）| share with friends / share ideas / share a room | Google will let users share personal apps with family.（Google 将允许用户把私人应用分享给家人。）| "Share our similarities, celebrate our differences." — M. Scott Peck（分享我们的相似，庆祝我们的不同。——斯科特·派克）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>eliminate</strong>（消除；省去）| eliminate the need / eliminate errors / eliminate poverty | It eliminates the need for a developer account.（它省去了开发者账号这个门槛。）| "When you have eliminated the impossible, whatever remains, however improbable, must be the truth." — Arthur Conan Doyle (Sherlock Holmes)（排除掉不可能的之后，剩下的无论多离奇，就是真相。——柯南·道尔《福尔摩斯》）</li>
+<li><strong>publish</strong>（发布；出版）| publish an app / publish a book / publish online | You can publish a private app for your own eyes only.（你可以发布一个只给自己看的私人应用。）| "Publish and be damned!" — Duke of Wellington（要发就发，管它呢！——惠灵顿公爵）</li>
+<li><strong>secret</strong>（秘密的）| keep a secret / secret recipe / in secret | Private apps stay secret from the public store.（私人应用对公开商店保密。）| "Three may keep a secret, if two of them are dead." — Benjamin Franklin（三人能守秘密，前提是其中两人已死。——本杰明·富兰克林）</li>
+<li><strong>expand</strong>（扩大）| expand access / expand into markets / expand one's horizons | Google plans to expand small-group sharing soon.（Google 计划很快扩大到小范围分享。）| "The mind, once expanded to the dimensions of larger ideas, never returns to its original size." — Oliver Wendell Holmes（思想一旦被大观念撑开，就再也回不到原来的尺寸。——奥利弗·温德尔·霍姆斯）</li>
+<li><strong>limit</strong>（限制）| set a limit / within limits / speed limit | Age limits apply: users must be 18 or older.（有年龄限制：用户须年满 18 岁。）| "The only limit to our realization of tomorrow is our doubts of today." — Franklin D. Roosevelt（我们实现明天的唯一限制，是今天的疑虑。——富兰克林·罗斯福）</li>
+<li><strong>verify</strong>（核实；验证）| verify identity / verify the facts / verify an account | Google will verify each public app before listing it.（Google 会在上架前逐一核验公开应用。）| "Trust, but verify." — Ronald Reagan（信任，但要核实。——罗纳德·里根）</li>
+<li><strong>permission</strong>（许可；权限）| ask permission / grant permission / read permission | What permissions can a generated app request?（生成的应用能申请哪些权限？）| "It's easier to ask forgiveness than it is to get permission." — Grace Hopper（与其事先征得许可，不如事后请求原谅。——格蕾丝·霍珀）</li>
+<li><strong>description</strong>（描述）| job description / vivid description / brief description | Users build apps by describing them in words.（用户用语言描述就能做出应用。）| "Description begins in the writer's imagination, but should finish in the reader's." — Stephen King（描述始于作者的想象，终于读者的脑海。——斯蒂芬·金）</li>
+<li><strong>divide</strong>（划分；分开）| divide into / divide opinions / divide up | The store divides private experiments from public apps.（商店把私人实验和公开应用分开存放。）| "A house divided against itself cannot stand." — Abraham Lincoln（分裂之家无法屹立。——亚伯拉罕·林肯）</li>
+<li><strong>share</strong>（分享）| share with friends / share ideas / share a room | Google will let users share personal apps with family.（Google 将允许用户把私人应用分享给家人。）| "Share our similarities, celebrate our differences." — M. Scott Peck（分享我们的相似，庆祝我们的不同。——斯科特·派克）</li>
+</ul>
 <h3>3. Google DeepMind 向 200 名欧洲科学家开放最强 AI 模型，还附赠 300 万美元算力</h3>
 <p><strong>发生了什么</strong>：10 月 14 日都柏林 AI 峰会上，Google 宣布：由欧盟委员会从 RAISE（欧洲 AI 科研计划）资助名单中挑选的 200 名欧洲科学家，将直接获得 DeepMind 最先进 AI 模型的使用权，包括 AlphaFold 3（蛋白质结构）、WeatherNext（天气预报）、AlphaGenome（基因组学）、AlphaEvolve、AlphaEarth，外加 300 万美元算力额度。RAISE 项目自身首期预算 3300 万欧元，2026–2027 年还有 1.07 亿欧元，Google 这 300 万美元只是"添头"，真正的卖点是"能用上全世界最强的科研 AI"。</p>
 <p><strong>为什么值得关注</strong>：AlphaFold 帮发明人拿了 2024 诺贝尔化学奖，是极少数"真能出诺奖级成果"的 AI 工具；欧洲实验室两年来一直抱怨"算力差距"——美国实验室算力管够，欧洲排不上队。这次等于 Google 免费发"粮票"。背后还有一层：欧洲现在凡事都先问"主权 AI"（别被美国卡脖子），Google 用"送算力"代替"建数据中心"，既卖了人情，又让欧洲科研流程离不开自家模型。</p>
 <p><strong>名词解释</strong>：① 算力（compute）——AI 干活的"力气"，训练和运行模型都要烧显卡，题目越复杂越费力气；② 算力额度（credits）——预存的"力气代金券"，花完就得续；③ 蛋白质折叠——蛋白质像一条绳子，打结的方式决定它在身体里干什么活，AlphaFold 就是算绳子怎么打结的；④ 基因组学——研究整本"生命说明书"（DNA）的学问；⑤ 主权 AI——一个国家/地区不想在 AI 上被别国卡脖子、自己说了算的诉求。</p>
 <p><strong>一句话总结</strong>：Google 给欧洲科学家发"免费粮票"，科学是真的，算盘也是真的——科研加速和地缘博弈，一鱼两吃。</p>
 <p>🔗 来源：<a href="https://techxplore.com/news/2026-10-google-latest-ai-european.html">Tech Xplore（法新社 AFP 稿，10-14）</a></p>
-<p>📖 生词：<br />
-- <strong>advance</strong>（推进；进步）| advance science / in advance / make advances | The credits help researchers advance their work.（这些额度帮助研究者推进工作。）| "Science advances one funeral at a time." — Max Planck（科学的进步是一场葬礼一场葬礼换来的。——马克斯·普朗克）<br />
-- <strong>strengthen</strong>（加强）| strengthen ties / strengthen the body / strengthen a position | Free access strengthens labs with tight budgets.（免费使用让预算紧张的实验室更有底气。）| "A chain is only as strong as its weakest link." — English proverb（链条的强度取决于最弱的一环。——英国谚语）<br />
-- <strong>cover</strong>（覆盖；封面）| cover a topic / book cover / cover costs | The toolkit covers five frontier models.（这套工具涵盖五个前沿模型。）| "Don't judge a book by its cover." — English proverb（不要以封面评判一本书。——英国谚语）<br />
-- <strong>experiment</strong>（实验）| conduct an experiment / experiment with / as an experiment | Researchers can experiment with AlphaFold 3 for free.（研究者可以免费拿 AlphaFold 3 做实验。）| "The true method of knowledge is experiment." — William Blake（获得知识的真正方法是实验。——威廉·布莱克）<br />
-- <strong>choose</strong>（选择）| choose between / nothing to choose / pick and choose | Researchers are chosen from the RAISE funding pool.（研究者从 RAISE 资助名单中挑选。）| "Choose a job you love, and you will never have to work a day in your life." — Confucius (attributed)（选择你热爱的工作，你一辈子都不用工作。——孔子，相传）<br />
-- <strong>budget</strong>（预算）| tight budget / within budget / cut the budget | Three million dollars is small against RAISE's own budget.（300 万美元在 RAISE 自身预算面前不算多。）| "A budget tells us what we can't afford, but it doesn't keep us from buying it." — William Feather（预算告诉我们什么买不起，但拦不住我们去买。——威廉·费瑟）<br />
-- <strong>strategy</strong>（战略；策略）| business strategy / develop a strategy / marketing strategy | The announcement is part of a wider strategy.（这次宣布是更宏大战略的一部分。）| "Strategy without tactics is the slowest route to victory." — Sun Tzu (attributed)（有战略无战术，是通往胜利最慢的路。——孙子，相传）<br />
-- <strong>door</strong>（门；机会）| open doors / behind closed doors / next door | The program opens doors to tools labs could never afford.（该项目为实验室打开了原本用不起的工具大门。）| "When one door closes, another opens." — Alexander Graham Bell（当一扇门关闭，另一扇会打开。——亚历山大·贝尔）<br />
-- <strong>predict</strong>（预测）| predict the future / hard to predict / predict rain | WeatherNext predicts weather with AI models.（WeatherNext 用 AI 模型预测天气。）| "The best way to predict the future is to create it." — Peter Drucker（预测未来最好的方式是创造未来。——彼得·德鲁克）<br />
-- <strong>credit</strong>（额度；功劳）| compute credits / give credit / take credit | Google hands out credits instead of cash.（Google 发的是算力额度而非现金。）| "Give credit where credit is due." — English proverb（该记功时就记功。——英国谚语）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>advance</strong>（推进；进步）| advance science / in advance / make advances | The credits help researchers advance their work.（这些额度帮助研究者推进工作。）| "Science advances one funeral at a time." — Max Planck（科学的进步是一场葬礼一场葬礼换来的。——马克斯·普朗克）</li>
+<li><strong>strengthen</strong>（加强）| strengthen ties / strengthen the body / strengthen a position | Free access strengthens labs with tight budgets.（免费使用让预算紧张的实验室更有底气。）| "A chain is only as strong as its weakest link." — English proverb（链条的强度取决于最弱的一环。——英国谚语）</li>
+<li><strong>cover</strong>（覆盖；封面）| cover a topic / book cover / cover costs | The toolkit covers five frontier models.（这套工具涵盖五个前沿模型。）| "Don't judge a book by its cover." — English proverb（不要以封面评判一本书。——英国谚语）</li>
+<li><strong>experiment</strong>（实验）| conduct an experiment / experiment with / as an experiment | Researchers can experiment with AlphaFold 3 for free.（研究者可以免费拿 AlphaFold 3 做实验。）| "The true method of knowledge is experiment." — William Blake（获得知识的真正方法是实验。——威廉·布莱克）</li>
+<li><strong>choose</strong>（选择）| choose between / nothing to choose / pick and choose | Researchers are chosen from the RAISE funding pool.（研究者从 RAISE 资助名单中挑选。）| "Choose a job you love, and you will never have to work a day in your life." — Confucius (attributed)（选择你热爱的工作，你一辈子都不用工作。——孔子，相传）</li>
+<li><strong>budget</strong>（预算）| tight budget / within budget / cut the budget | Three million dollars is small against RAISE's own budget.（300 万美元在 RAISE 自身预算面前不算多。）| "A budget tells us what we can't afford, but it doesn't keep us from buying it." — William Feather（预算告诉我们什么买不起，但拦不住我们去买。——威廉·费瑟）</li>
+<li><strong>strategy</strong>（战略；策略）| business strategy / develop a strategy / marketing strategy | The announcement is part of a wider strategy.（这次宣布是更宏大战略的一部分。）| "Strategy without tactics is the slowest route to victory." — Sun Tzu (attributed)（有战略无战术，是通往胜利最慢的路。——孙子，相传）</li>
+<li><strong>door</strong>（门；机会）| open doors / behind closed doors / next door | The program opens doors to tools labs could never afford.（该项目为实验室打开了原本用不起的工具大门。）| "When one door closes, another opens." — Alexander Graham Bell（当一扇门关闭，另一扇会打开。——亚历山大·贝尔）</li>
+<li><strong>predict</strong>（预测）| predict the future / hard to predict / predict rain | WeatherNext predicts weather with AI models.（WeatherNext 用 AI 模型预测天气。）| "The best way to predict the future is to create it." — Peter Drucker（预测未来最好的方式是创造未来。——彼得·德鲁克）</li>
+<li><strong>credit</strong>（额度；功劳）| compute credits / give credit / take credit | Google hands out credits instead of cash.（Google 发的是算力额度而非现金。）| "Give credit where credit is due." — English proverb（该记功时就记功。——英国谚语）</li>
+</ul>
 <h3>4. Anthropic 落子新加坡：开办公室、签政府安全合作备忘录</h3>
 <p><strong>发生了什么</strong>：10 月 13 日新加坡国际网络安全周期间，Anthropic 与新加坡数字发展及新闻部签署 AI 安全合作备忘录；10 月 14 日公司宣布在新加坡 Capella 开设办公室。双方渊源始于 2023 年：Anthropic 加入新加坡 IMDA（资讯通信媒体发展局）与 AI Verify 基金会搞的生成式 AI 评估沙盒，还合作做过英文、中文、马来文、泰米尔文四种语言的红队测试。今年 5 月新加坡刚和 OpenAI 签过应用创新协议，6 月 IMDA 又和微软签了 AI 安全备忘录——美国大厂排着队在新加坡"插旗"。</p>
 <p><strong>为什么值得关注</strong>：新加坡正在变成全球 AI 安全规则的"试验田"和"签字桌"——以后 AI 安全长什么样，可能先在新加坡定调。对普通人来说，这意味着 AI 产品的"安全说明书"会越来越厚、越来越像食品标签：成分、风险、适用人群，迟早都要标出来。Ricardo 在国内用各类 AI 应用，迟早会感受到这套规则落到产品上（比如更明确的权限说明和风险提示）。</p>
 <p><strong>名词解释</strong>：① 红队测试（red teaming）——请一帮人专门"找茬"：用刁钻问题考 AI，看它会不会说错话、办坏事，像请小偷来试你家门锁结不结实；② 沙盒（sandbox）——圈起来的试验场，在里面随便折腾，炸了也不影响外面，小孩子的沙坑就是这么个意思；③ 备忘录（MOU）——"君子协定"的正式版：先把合作意向白纸黑字写下来，细节以后再谈；④ IMDA——新加坡管通信和媒体的"工信部+广电总局"二合一机构。</p>
 <p><strong>一句话总结</strong>：Anthropic 把亚洲据点钉在新加坡，AI 安全的"考场"和"判卷权"，正在向这个小岛国集中。</p>
 <p>🔗 来源：<a href="https://asiadaily.org/news/15303/">Asia Daily（10-14）</a></p>
-<p>📖 生词：<br />
-- <strong>honest</strong>（诚实的）| honest answer / honest mistake / be honest with | Singapore wants honest, timely safety reporting.（新加坡希望安全报告诚实且及时。）| "Honesty is the first chapter in the book of wisdom." — Thomas Jefferson（诚实是智慧之书的第一章。——托马斯·杰斐逊）<br />
-- <strong>test</strong>（测试；考验）| pass a test / put to the test / run tests | The sandbox lets labs test models before wide use.（沙盒让实验室在广泛使用前先测试模型。）| "The test of our progress is not whether we add more to the abundance of those who have much; it is whether we provide enough for those who have too little." — Franklin D. Roosevelt（检验我们进步的标准，不是看富人更富了多少，而是看穷人是否得到了足够。——富兰克林·罗斯福）<br />
-- <strong>challenge</strong>（挑战）| face a challenge / rise to the challenge / pose a challenge | Testers challenge the model with tricky instructions.（测试者用刁钻指令挑战模型。）| "The ultimate measure of a man is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy." — Martin Luther King Jr.（衡量一个人的终极标准，不是看他顺境中的站位，而是看他在挑战与争议中的立场。——马丁·路德·金）<br />
-- <strong>together</strong>（一起）| work together / get together / put together | Labs and governments must work together on safety.（实验室和政府必须在安全上携手合作。）| "If you want to go fast, go alone. If you want to go far, go together." — African proverb（欲速则独行，欲远则同行。——非洲谚语）<br />
-- <strong>step</strong>（步骤）| take steps / one step at a time / watch your step | The office is the latest step in a three-year relationship.（设办公室是三年合作关系的最新一步。）| "That's one small step for man, one giant leap for mankind." — Neil Armstrong（这是个人的一小步，人类的一大步。——尼尔·阿姆斯特朗）<br />
-- <strong>trust</strong>（信任）| win trust / trust sb / in trust | Safety work between labs and states runs on trust.（实验室与国家之间的安全合作靠信任维系。）| "The best way to find out if you can trust somebody is to trust them." — Ernest Hemingway（想知道一个人值不值得信任，最好的办法是信任他。——欧内斯特·海明威）<br />
-- <strong>plant</strong>（种植；设立）| plant a tree / plant a flag / plant an idea | Anthropic is planting its flag in Southeast Asia.（Anthropic 正在东南亚插旗落子。）| "The best time to plant a tree was 20 years ago. The second best time is now." — English proverb（种树最好的时间是二十年前，其次是现在。——英国谚语）<br />
-- <strong>warn</strong>（警告）| warn of risks / warn against / warn sb | Testers warn that labs are moving too fast.（测试者警告实验室跑得太快。）| "Forewarned is forearmed." — English proverb（预先警告就是预先武装。——英国谚语）<br />
-- <strong>diversity</strong>（多样性）| cultural diversity / embrace diversity / biological diversity | Testing in four languages reflects Singapore's diversity.（四种语言测试体现了新加坡的多样性。）| "Diversity is being invited to the party; inclusion is being asked to dance." — Vernā Myers（多样性是被邀请参加派对，包容是被邀请跳舞。——弗娜·迈尔斯）<br />
-- <strong>will</strong>（意志；决心）| political will / strong will / free will | Real safety rules need political will, not just MOUs.（真正的安全规则需要政治决心，不只是一纸备忘录。）| "Where there's a will, there's a way." — English proverb（有志者事竟成。——英国谚语）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>honest</strong>（诚实的）| honest answer / honest mistake / be honest with | Singapore wants honest, timely safety reporting.（新加坡希望安全报告诚实且及时。）| "Honesty is the first chapter in the book of wisdom." — Thomas Jefferson（诚实是智慧之书的第一章。——托马斯·杰斐逊）</li>
+<li><strong>test</strong>（测试；考验）| pass a test / put to the test / run tests | The sandbox lets labs test models before wide use.（沙盒让实验室在广泛使用前先测试模型。）| "The test of our progress is not whether we add more to the abundance of those who have much; it is whether we provide enough for those who have too little." — Franklin D. Roosevelt（检验我们进步的标准，不是看富人更富了多少，而是看穷人是否得到了足够。——富兰克林·罗斯福）</li>
+<li><strong>challenge</strong>（挑战）| face a challenge / rise to the challenge / pose a challenge | Testers challenge the model with tricky instructions.（测试者用刁钻指令挑战模型。）| "The ultimate measure of a man is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy." — Martin Luther King Jr.（衡量一个人的终极标准，不是看他顺境中的站位，而是看他在挑战与争议中的立场。——马丁·路德·金）</li>
+<li><strong>together</strong>（一起）| work together / get together / put together | Labs and governments must work together on safety.（实验室和政府必须在安全上携手合作。）| "If you want to go fast, go alone. If you want to go far, go together." — African proverb（欲速则独行，欲远则同行。——非洲谚语）</li>
+<li><strong>step</strong>（步骤）| take steps / one step at a time / watch your step | The office is the latest step in a three-year relationship.（设办公室是三年合作关系的最新一步。）| "That's one small step for man, one giant leap for mankind." — Neil Armstrong（这是个人的一小步，人类的一大步。——尼尔·阿姆斯特朗）</li>
+<li><strong>trust</strong>（信任）| win trust / trust sb / in trust | Safety work between labs and states runs on trust.（实验室与国家之间的安全合作靠信任维系。）| "The best way to find out if you can trust somebody is to trust them." — Ernest Hemingway（想知道一个人值不值得信任，最好的办法是信任他。——欧内斯特·海明威）</li>
+<li><strong>plant</strong>（种植；设立）| plant a tree / plant a flag / plant an idea | Anthropic is planting its flag in Southeast Asia.（Anthropic 正在东南亚插旗落子。）| "The best time to plant a tree was 20 years ago. The second best time is now." — English proverb（种树最好的时间是二十年前，其次是现在。——英国谚语）</li>
+<li><strong>warn</strong>（警告）| warn of risks / warn against / warn sb | Testers warn that labs are moving too fast.（测试者警告实验室跑得太快。）| "Forewarned is forearmed." — English proverb（预先警告就是预先武装。——英国谚语）</li>
+<li><strong>diversity</strong>（多样性）| cultural diversity / embrace diversity / biological diversity | Testing in four languages reflects Singapore's diversity.（四种语言测试体现了新加坡的多样性。）| "Diversity is being invited to the party; inclusion is being asked to dance." — Vernā Myers（多样性是被邀请参加派对，包容是被邀请跳舞。——弗娜·迈尔斯）</li>
+<li><strong>will</strong>（意志；决心）| political will / strong will / free will | Real safety rules need political will, not just MOUs.（真正的安全规则需要政治决心，不只是一纸备忘录。）| "Where there's a will, there's a way." — English proverb（有志者事竟成。——英国谚语）</li>
+</ul>
 <hr />
 <h2>🌍 国际局势</h2>
 <h3>1. 梅洛尼批特朗普-普京柴油协议是"非常冒险的选择"，欧洲盟友裂痕加深</h3>
@@ -216,68 +271,76 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 制裁——国家之间的"经济断交"：不让你用我的银行、不买你的货、不卖你东西，目的是让你疼到坐上谈判桌。② 通用许可（general license）——制裁大网里开的一个"临时小门"：财政部说"这次允许俄柴油进来"，门一开，制裁就漏了个洞。③ 中期选举——11 月 3 日美国国会改选，决定两党谁控制国会。特朗普急着压油价，就是怕高油价让选民在投票时"用脚投票"。④ 混合战（hybrid warfare）——梅洛尼在议会还提到，欧盟峰会将讨论俄罗斯"混合攻击"升级：无人机越境、网络攻击、暗中破坏等"看不见的战争"，目的是瓦解欧洲对乌克兰的支持。</p>
 <p><strong>一句话总结</strong>：特朗普曾经的欧洲盟友梅洛尼公开抨击美俄柴油协议"非常冒险"，跨大西洋裂痕加深，10 月 18 日制裁决定期限逼近。</p>
 <p>🔗 来源：<a href="https://kyivindependent.com/trumps-diesel-deal-legitimizes-moscow-while-it-bombs-ukraine-italys-meloni-says/">Kyiv Independent 引路透（10-14）</a>；<a href="https://live.euronext.com/en/financial-news/us-russia-deal-diesel-very-risky-choice-italy-pm-meloni-says">Reuters 经 Euronext（10-14）</a></p>
-<p>📖 生词：<br />
-- <strong>risk</strong>（风险）| take a risk / at risk | Meloni called the deal a "very risky choice."（梅洛尼称该协议是"非常冒险的选择"。）| "The biggest risk is not taking any risk. In a world that's changing quickly, the only strategy guaranteed to fail is not taking risks." — Mark Zuckerberg（最大的风险就是不冒任何风险。在快速变化的世界里，唯一注定失败的策略就是不冒险。——扎克伯格）<br />
-- <strong>justify</strong>（证明……正当）| justify the decision / justify the cost | The administration failed to justify the decision to Congress.（政府没能向国会证明这个决定的正当性。）| "The end justifies the means." — Niccolò Machiavelli（目的证明手段正当。——马基雅维利）<br />
-- <strong>pressure</strong>（压力）| under pressure / mount pressure | The deal runs counter to Western efforts to pressure Putin into talks.（该协议与西方施压普京坐上谈判桌的努力背道而驰。）| "No pressure, no diamonds." — Thomas Carlyle（没有压力，就没有钻石。——卡莱尔）<br />
-- <strong>ally</strong>（盟友）| close ally / betray allies | Senators called the deal "a betrayal of our allies."（参议员们称该协议"背叛了我们的盟友"。）| "The enemy of my enemy is my friend." — proverb（敌人的敌人就是朋友。——谚语）<br />
-- <strong>principle</strong>（原则）| matter of principle / on principle | Zelensky thanked Meloni for her principled stance.（泽连斯基感谢梅洛尼有原则的立场。）| "In matters of principle, stand like a rock; in matters of taste, swim with the current." — Thomas Jefferson（在原则问题上，要像磐石一样坚定；在品味问题上，要随波逐流。——杰斐逊）<br />
-- <strong>silence</strong>（沉默）| break the silence / deafening silence | Trump sidestepped the bombs question, leaving a telling silence.（特朗普回避了炸弹问题，留下意味深长的沉默。）| "Speech is silver, silence is golden." — proverb（雄辩是银，沉默是金。——谚语）<br />
-- <strong>small</strong>（小的）| small step / think small | 300,000 tons is small — less than a day's US diesel use.（30 万吨很少——还不够美国一天的柴油用量。）| "Great things are done by a series of small things brought together." — Vincent van Gogh（伟大的事业，是由一系列小事汇聚而成的。——梵高）<br />
-- <strong>trust</strong>（信任）| break trust / earn trust | Allies say the deal breaks trust built over years of sanctions.（盟友们说，该协议打破了多年制裁建立起来的信任。）| "Trust takes years to build, seconds to break, and forever to repair." — Anonymous（信任需要多年建立，几秒钟打破，一辈子修复。——佚名）<br />
-- <strong>war</strong>（战争）| wage war / end the war | New revenue would help finance Putin's war.（新的收入将为普京的战争输血。）| "War does not determine who is right — only who is left." — Bertrand Russell（战争决定不了谁对谁错，只决定谁能活下来。——罗素）<br />
-- <strong>certain</strong>（确定的）| certain outcome / for certain | "The outcome of this decision is uncertain," Meloni said — nothing is certain except the risks.（"这个决定的结果不确定，"梅洛尼说——除了风险，什么都不确定。）| "In this world nothing can be said to be certain, except death and taxes." — Benjamin Franklin（这个世界上没有什么是一定的，除了死亡和税收。——富兰克林）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>risk</strong>（风险）| take a risk / at risk | Meloni called the deal a "very risky choice."（梅洛尼称该协议是"非常冒险的选择"。）| "The biggest risk is not taking any risk. In a world that's changing quickly, the only strategy guaranteed to fail is not taking risks." — Mark Zuckerberg（最大的风险就是不冒任何风险。在快速变化的世界里，唯一注定失败的策略就是不冒险。——扎克伯格）</li>
+<li><strong>justify</strong>（证明……正当）| justify the decision / justify the cost | The administration failed to justify the decision to Congress.（政府没能向国会证明这个决定的正当性。）| "The end justifies the means." — Niccolò Machiavelli（目的证明手段正当。——马基雅维利）</li>
+<li><strong>pressure</strong>（压力）| under pressure / mount pressure | The deal runs counter to Western efforts to pressure Putin into talks.（该协议与西方施压普京坐上谈判桌的努力背道而驰。）| "No pressure, no diamonds." — Thomas Carlyle（没有压力，就没有钻石。——卡莱尔）</li>
+<li><strong>ally</strong>（盟友）| close ally / betray allies | Senators called the deal "a betrayal of our allies."（参议员们称该协议"背叛了我们的盟友"。）| "The enemy of my enemy is my friend." — proverb（敌人的敌人就是朋友。——谚语）</li>
+<li><strong>principle</strong>（原则）| matter of principle / on principle | Zelensky thanked Meloni for her principled stance.（泽连斯基感谢梅洛尼有原则的立场。）| "In matters of principle, stand like a rock; in matters of taste, swim with the current." — Thomas Jefferson（在原则问题上，要像磐石一样坚定；在品味问题上，要随波逐流。——杰斐逊）</li>
+<li><strong>silence</strong>（沉默）| break the silence / deafening silence | Trump sidestepped the bombs question, leaving a telling silence.（特朗普回避了炸弹问题，留下意味深长的沉默。）| "Speech is silver, silence is golden." — proverb（雄辩是银，沉默是金。——谚语）</li>
+<li><strong>small</strong>（小的）| small step / think small | 300,000 tons is small — less than a day's US diesel use.（30 万吨很少——还不够美国一天的柴油用量。）| "Great things are done by a series of small things brought together." — Vincent van Gogh（伟大的事业，是由一系列小事汇聚而成的。——梵高）</li>
+<li><strong>trust</strong>（信任）| break trust / earn trust | Allies say the deal breaks trust built over years of sanctions.（盟友们说，该协议打破了多年制裁建立起来的信任。）| "Trust takes years to build, seconds to break, and forever to repair." — Anonymous（信任需要多年建立，几秒钟打破，一辈子修复。——佚名）</li>
+<li><strong>war</strong>（战争）| wage war / end the war | New revenue would help finance Putin's war.（新的收入将为普京的战争输血。）| "War does not determine who is right — only who is left." — Bertrand Russell（战争决定不了谁对谁错，只决定谁能活下来。——罗素）</li>
+<li><strong>certain</strong>（确定的）| certain outcome / for certain | "The outcome of this decision is uncertain," Meloni said — nothing is certain except the risks.（"这个决定的结果不确定，"梅洛尼说——除了风险，什么都不确定。）| "In this world nothing can be said to be certain, except death and taxes." — Benjamin Franklin（这个世界上没有什么是一定的，除了死亡和税收。——富兰克林）</li>
+</ul>
 <h3>2. 中朝新鸭绿江大桥今日开通，拖延 12 年终落地</h3>
 <p><strong>发生了什么</strong>：据新华社 10 月 14 日报道，中朝两国拖延已久的新鸭绿江大桥将于 10 月 15 日（今天）开通，双方将共同举行开通仪式。这座桥的故事很曲折：中国一侧 2014 年就建好了，本想提振贸易；但朝鲜因为核试验导致与中国关系恶化，加上联合国制裁，朝方一侧的引道和海关设施一直没修完，一拖就是 12 年。这次开通被视为北京-平壤关系进一步回暖的信号——就在几周前，朝鲜刚开通了与俄罗斯之间的第一座公路桥。数据：2025 年中国对朝出口 23 亿美元，创六年新高、同比增长 25%，但仍远低于 2017 年联合国制裁前的水平。</p>
 <p><strong>为什么值得关注</strong>：一座桥等了 12 年，今天通车，背后是东北亚地缘格局在动：朝鲜在俄乌战争后同时向中俄两边"修桥铺路"，制裁之网正在松动。对普通人：理解"为什么一条桥能等 12 年"，就理解了大国博弈是怎么落到一条路、一座桥上的。</p>
 <p><strong>名词解释</strong>：① 联合国制裁——联合国安理会投票决定"大家一起不跟你做生意"：禁运武器、限制贸易，目的是逼朝鲜放弃核试验。好比全班同学约好"谁也不跟他换文具"，直到他认错。② 引道/海关设施——桥修好了，但桥两头的路和检查站没修，就像新房装修好了、但小区门口的路还没通，照样住不进去。③ 贸易纽带——桥就是两国的"经济脐带"：货车能过，货就能走，人就能来，关系自然热起来。</p>
 <p><strong>一句话总结</strong>：中方 12 年前就建好的新鸭绿江大桥今天终于开通，标志着中朝关系进一步回暖。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/world/china/china-north-korea-bridge-open-october-15-2026-10-14/">Reuters 引新华社（10-14）</a></p>
-<p>📖 生词：<br />
-- <strong>late</strong>（迟的）| better late than never / too late | Twelve years late, the bridge finally opens.（迟到了十二年，大桥终于开通。）| "Better late than never." — proverb（迟做总比不做好。——谚语）<br />
-- <strong>bridge</strong>（桥；桥梁）| build bridges / burn bridges | The new bridge is, literally, a bridge — twelve years in the making.（这座新桥，字面意义上就是一座桥——筹备了十二年。）| "We build too many walls and not enough bridges." — Isaac Newton（我们筑了太多墙，却架了太少桥。——牛顿）<br />
-- <strong>cold</strong>（冷的）| cold shoulder / cold war | A decade of cold relations left the bridge half-built.（长达十年的冷淡关系让大桥成了"半拉子工程"。）| "Revenge is a dish best served cold." — proverb（复仇这道菜，冷着吃最香。——谚语）<br />
-- <strong>lift</strong>（抬升）| lift spirits / lift sanctions | Beijing hopes the bridge will lift cross-border trade.（北京希望大桥能提振跨境贸易。）| "A rising tide lifts all boats." — John F. Kennedy（水涨则船高。——肯尼迪）<br />
-- <strong>message</strong>（信息）| send a message / clear message | The opening sends a clear message: ties are warming.（开通释放了明确信号：两国关系正在回暖。）| "The medium is the message." — Marshall McLuhan（媒介即信息。——麦克卢汉）<br />
-- <strong>neighbor</strong>（邻居）| next-door neighbor / good neighbor | For neighbors sharing a long border, a bridge matters.（对共享漫长边界的邻居来说，一座桥意义重大。）| "Love thy neighbor as thyself." — The Bible（爱邻如己。——《圣经》）<br />
-- <strong>times</strong>（时代；时期）| best of times / changing times | After the worst of times for bilateral ties, the bridge opens in better times.（双边关系最坏的时期过去了，大桥在更好的时候开通。）| "It was the best of times, it was the worst of times." — Charles Dickens（那是最好的时代，也是最坏的时代。——狄更斯《双城记》）<br />
-- <strong>fence</strong>（篱笆）| mend fences / sit on the fence | This time the neighbors chose a bridge over a fence.（这一次，邻居们选择了建桥而不是筑墙。）| "Good fences make good neighbors." — Robert Frost（好篱笆，造就好邻居。——罗伯特·弗罗斯特）<br />
-- <strong>island</strong>（岛）| no man is an island / isolated island | Sanctions tried to make Pyongyang an island; bridges say otherwise.（制裁曾想让平壤成为一座孤岛；大桥说明并非如此。）| "No man is an island, entire of itself." — John Donne（没有人是一座孤岛。——约翰·多恩）<br />
-- <strong>together</strong>（一起）| work together / bring together | The joint ceremony shows what building together looks like.（联合开通仪式展示了"一起建设"的样子。）| "Alone we can do so little; together we can do so much." — Helen Keller（独行事小，众行事大。——海伦·凯勒）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>late</strong>（迟的）| better late than never / too late | Twelve years late, the bridge finally opens.（迟到了十二年，大桥终于开通。）| "Better late than never." — proverb（迟做总比不做好。——谚语）</li>
+<li><strong>bridge</strong>（桥；桥梁）| build bridges / burn bridges | The new bridge is, literally, a bridge — twelve years in the making.（这座新桥，字面意义上就是一座桥——筹备了十二年。）| "We build too many walls and not enough bridges." — Isaac Newton（我们筑了太多墙，却架了太少桥。——牛顿）</li>
+<li><strong>cold</strong>（冷的）| cold shoulder / cold war | A decade of cold relations left the bridge half-built.（长达十年的冷淡关系让大桥成了"半拉子工程"。）| "Revenge is a dish best served cold." — proverb（复仇这道菜，冷着吃最香。——谚语）</li>
+<li><strong>lift</strong>（抬升）| lift spirits / lift sanctions | Beijing hopes the bridge will lift cross-border trade.（北京希望大桥能提振跨境贸易。）| "A rising tide lifts all boats." — John F. Kennedy（水涨则船高。——肯尼迪）</li>
+<li><strong>message</strong>（信息）| send a message / clear message | The opening sends a clear message: ties are warming.（开通释放了明确信号：两国关系正在回暖。）| "The medium is the message." — Marshall McLuhan（媒介即信息。——麦克卢汉）</li>
+<li><strong>neighbor</strong>（邻居）| next-door neighbor / good neighbor | For neighbors sharing a long border, a bridge matters.（对共享漫长边界的邻居来说，一座桥意义重大。）| "Love thy neighbor as thyself." — The Bible（爱邻如己。——《圣经》）</li>
+<li><strong>times</strong>（时代；时期）| best of times / changing times | After the worst of times for bilateral ties, the bridge opens in better times.（双边关系最坏的时期过去了，大桥在更好的时候开通。）| "It was the best of times, it was the worst of times." — Charles Dickens（那是最好的时代，也是最坏的时代。——狄更斯《双城记》）</li>
+<li><strong>fence</strong>（篱笆）| mend fences / sit on the fence | This time the neighbors chose a bridge over a fence.（这一次，邻居们选择了建桥而不是筑墙。）| "Good fences make good neighbors." — Robert Frost（好篱笆，造就好邻居。——罗伯特·弗罗斯特）</li>
+<li><strong>island</strong>（岛）| no man is an island / isolated island | Sanctions tried to make Pyongyang an island; bridges say otherwise.（制裁曾想让平壤成为一座孤岛；大桥说明并非如此。）| "No man is an island, entire of itself." — John Donne（没有人是一座孤岛。——约翰·多恩）</li>
+<li><strong>together</strong>（一起）| work together / bring together | The joint ceremony shows what building together looks like.（联合开通仪式展示了"一起建设"的样子。）| "Alone we can do so little; together we can do so much." — Helen Keller（独行事小，众行事大。——海伦·凯勒）</li>
+</ul>
 <h3>3. 欧盟领导人今日齐聚布鲁塞尔，商量对华贸易"怎么办"</h3>
 <p><strong>发生了什么</strong>：欧洲领导人 10 月 15 日（今天）起在布鲁塞尔举行两天的欧盟峰会，头号议题是对华贸易：中国汽车等制成品汹涌涌入，威胁欧洲本土产业和就业。欧盟对华货物贸易逆差去年达到 3600 亿欧元（约 4020 亿美元），今年上半年就已达 2000 亿欧元。欧盟委员会主席冯德莱恩称这个逆差"不可持续"，承诺"用一切手段"缩小它。峰会将讨论：上周与中方达成的"混合动力汽车进口初步协议"够不够（欧方贸易委员塞夫科维奇称这是"很好的第一步"，但只是再平衡的开始）、法德联合提案（要求对化工品、PET 塑料等采取措施，限制对单一供应源的依赖）。值得注意的是德国 180 度转弯：两年前它还公开反对欧盟对中国电动车加征关税，现在却签了法国的保护主义路线。其他议题还包括乌克兰（含特朗普的柴油协议）、中东、国防、移民、欧盟长期预算和扩员。几位领导人各怀心事：马克龙在国内面临学生抗议和预算僵局导致的国债抛售，默茨的执政联盟在地方选举失利后磕磕绊绊，桑切斯民调落后、11 月 29 日提前大选。</p>
 <p><strong>为什么值得关注</strong>：这是决定未来几年"欧洲货架上有多少中国货"的大会，直接关系到全球贸易格局和中国的出口。中国商务部 10 月 13 日已表示新协议能让出口继续增长——中欧在"边打边谈"。对 Ricardo：理解这场峰会，就理解了为什么欧洲电动车、光伏等行业新闻总和"中国"绑在一起。</p>
 <p><strong>名词解释</strong>：① 贸易逆差——买得多、卖得少。好比你每个月找邻居买 3000 块的东西，只卖给他 1000 块，逆差 2000 块。欧盟对华一年逆差 3600 亿欧元，就是"买中国货花的钱比卖给中国的钱多出 3600 亿"。② 保护主义/关税——给外国货"加价"，让本国货显得便宜。好比小区门口开了家便宜的外来面馆，业委会决定"外来面馆每碗多收 5 块管理费"，保护本小区面馆生意。③ 峰会（summit）——各国领导人面对面开大会，平时外交官谈不拢的事，领导人坐下来拍板。④ 混合动力汽车协议——上周中欧谈成的一个初步安排：限制中国混动车涌入欧盟的数量，欧盟先不下重手，双方继续谈更大的贸易安排。</p>
 <p><strong>一句话总结</strong>：欧盟领导人今天起在布鲁塞尔开峰会，核心议题是如何应对 3600 亿欧元的对华贸易逆差，德国已转向法国的保护主义路线。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/world/china/pressured-home-eu-leaders-weigh-china-trade-steps-2026-10-14/">Reuters（10-14）</a></p>
-<p>📖 生词：<br />
-- <strong>gap</strong>（缺口；差距）| mind the gap / bridge the gap | Brussels wants to mind the €360 billion trade gap.（布鲁塞尔想管管这 3600 亿欧元的贸易缺口。）| "Mind the gap." — London Underground announcement（注意站台空隙。——伦敦地铁广播语）<br />
-- <strong>gather</strong>（聚集）| gather in / gather round | 27 leaders gather in Brussels for two days.（27 国领导人在布鲁塞尔聚集两天。）| "For where two or three gather in my name, there am I with them." — The Bible（哪里有两三个人奉我的名聚集，我就在他们中间。——《圣经》）<br />
-- <strong>job</strong>（工作）| lose one's job / do a good job | Cheap imports threaten jobs — 100,000 at Volkswagen alone.（廉价进口威胁就业——仅大众一家就涉及 10 万个岗位。）| "Choose a job you love, and you will never have to work a day in your life." — Confucius（选一份你热爱的工作，你一辈子都不用工作。——孔子）<br />
-- <strong>budget</strong>（预算）| tight budget / budget deadlock | Macron faces a budget deadlock at home.（马克龙在国内面临预算僵局。）| "A budget is telling your money where to go instead of wondering where it went." — Dave Ramsey（预算就是告诉你的钱该去哪，而不是事后纳闷钱去哪了。——戴夫·拉姆齐）<br />
-- <strong>united</strong>（团结的）| united front / stand united | Moves to enlarge the 27-country bloc test how united Europe stays.（扩员动议考验着欧洲能有多团结。）| "United we stand, divided we fall." — Aesop（团结则立，分裂则亡。——伊索）<br />
-- <strong>pass</strong>（过去；通过）| pass a law / this too shall pass | Von der Leyen called the deficit "unsustainable" — this too shall pass, but only with action.（冯德莱恩称逆差"不可持续"——这一切都会过去，但得靠行动。）| "This too shall pass." — Persian adage（这一切都会过去。——波斯谚语）<br />
-- <strong>change</strong>（改变）| bring change / change course | Germany's U-turn marks a real change — from EV-tariff critic to protectionist.（德国的 180 度转弯是真正的改变——从电动车关税批评者变成保护主义者。）| "Be the change that you wish to see in the world." — Mahatma Gandhi（欲变世界，先变自己。——甘地）<br />
-- <strong>ask</strong>（要求）| ask for / big ask | The Franco-German paper asks for urgent curbs on chemical imports.（法德联合文件要求紧急限制化工品进口。）| "Ask, and it shall be given you; seek, and ye shall find." — The Bible（你们祈求，就给你们；寻找，就寻见。——《圣经》）<br />
-- <strong>consider</strong>（考虑）| consider options / consider carefully | Leaders gather to consider how far to go on China trade.（领导人们聚在一起，商量对华贸易要走多远。）| "Consider the lilies of the field, how they grow." — The Bible（你们看野地的百合花，怎么生长。——《圣经》）<br />
-- <strong>burden</strong>（负担）| heavy burden / debt burden | Voters feel the burden as industry sheds jobs.（产业裁员，选民感到了重担。）| "Come to me, all you who are weary and burdened, and I will give you rest." — The Bible（凡劳苦担重担的人，可以到我这里来，我就使你们得安息。——《圣经》）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>gap</strong>（缺口；差距）| mind the gap / bridge the gap | Brussels wants to mind the €360 billion trade gap.（布鲁塞尔想管管这 3600 亿欧元的贸易缺口。）| "Mind the gap." — London Underground announcement（注意站台空隙。——伦敦地铁广播语）</li>
+<li><strong>gather</strong>（聚集）| gather in / gather round | 27 leaders gather in Brussels for two days.（27 国领导人在布鲁塞尔聚集两天。）| "For where two or three gather in my name, there am I with them." — The Bible（哪里有两三个人奉我的名聚集，我就在他们中间。——《圣经》）</li>
+<li><strong>job</strong>（工作）| lose one's job / do a good job | Cheap imports threaten jobs — 100,000 at Volkswagen alone.（廉价进口威胁就业——仅大众一家就涉及 10 万个岗位。）| "Choose a job you love, and you will never have to work a day in your life." — Confucius（选一份你热爱的工作，你一辈子都不用工作。——孔子）</li>
+<li><strong>budget</strong>（预算）| tight budget / budget deadlock | Macron faces a budget deadlock at home.（马克龙在国内面临预算僵局。）| "A budget is telling your money where to go instead of wondering where it went." — Dave Ramsey（预算就是告诉你的钱该去哪，而不是事后纳闷钱去哪了。——戴夫·拉姆齐）</li>
+<li><strong>united</strong>（团结的）| united front / stand united | Moves to enlarge the 27-country bloc test how united Europe stays.（扩员动议考验着欧洲能有多团结。）| "United we stand, divided we fall." — Aesop（团结则立，分裂则亡。——伊索）</li>
+<li><strong>pass</strong>（过去；通过）| pass a law / this too shall pass | Von der Leyen called the deficit "unsustainable" — this too shall pass, but only with action.（冯德莱恩称逆差"不可持续"——这一切都会过去，但得靠行动。）| "This too shall pass." — Persian adage（这一切都会过去。——波斯谚语）</li>
+<li><strong>change</strong>（改变）| bring change / change course | Germany's U-turn marks a real change — from EV-tariff critic to protectionist.（德国的 180 度转弯是真正的改变——从电动车关税批评者变成保护主义者。）| "Be the change that you wish to see in the world." — Mahatma Gandhi（欲变世界，先变自己。——甘地）</li>
+<li><strong>ask</strong>（要求）| ask for / big ask | The Franco-German paper asks for urgent curbs on chemical imports.（法德联合文件要求紧急限制化工品进口。）| "Ask, and it shall be given you; seek, and ye shall find." — The Bible（你们祈求，就给你们；寻找，就寻见。——《圣经》）</li>
+<li><strong>consider</strong>（考虑）| consider options / consider carefully | Leaders gather to consider how far to go on China trade.（领导人们聚在一起，商量对华贸易要走多远。）| "Consider the lilies of the field, how they grow." — The Bible（你们看野地的百合花，怎么生长。——《圣经》）</li>
+<li><strong>burden</strong>（负担）| heavy burden / debt burden | Voters feel the burden as industry sheds jobs.（产业裁员，选民感到了重担。）| "Come to me, all you who are weary and burdened, and I will give you rest." — The Bible（凡劳苦担重担的人，可以到我这里来，我就使你们得安息。——《圣经》）</li>
+</ul>
 <h3>4. 联合国维和负责人：黎巴嫩维和部队去留谈判必须尽快开始</h3>
 <p><strong>发生了什么</strong>：联合国维和事务负责人拉克鲁瓦（Jean-Pierre Lacroix）10 月 14 日在贝鲁特敦促安理会尽快就黎巴嫩维和部队（UNIFIL）的前途展开谈判。背景：UNIFIL 自 1978 年起驻扎在黎巴嫩南部；安理会去年决定该任务在 2026 年底开始撤出。但今年 3 月以色列与黎巴嫩真主党爆发新一轮战争后，黎巴嫩政府一直在争取延长授权（授权今年底到期），理由是维和部队在监督停火、向以色列占领区村庄运送援助方面不可替代。联合国秘书长古特雷斯今年初已提出"保留穿制服的联合国存在"的方案，但安理会至今没有动静。目前仍有约 7500 名维和人员驻扎在南部约 50 个据点；如果谈不成，这些据点要移交给黎巴嫩政府军——但多数据点位于以军占领区，黎军根本进不去。外交官透露，美国不支持延长授权。</p>
 <p><strong>为什么值得关注</strong>：中东战争的外溢效应：维和部队一走，黎巴嫩南部可能出现"权力真空"，以色列与真主党的停火监督就没人了。对普通人：理解"蓝盔部队"为什么重要——他们是战区平民和援助物资之间的最后一道屏障。</p>
 <p><strong>名词解释</strong>：① 维和部队（蓝盔部队）——联合国派到冲突地区的"国际保安"，戴蓝色头盔，任务是监督停火、保护平民、运送援助，不主动打仗。② 授权（mandate）——安理会给维和部队的"合同"：允许你待多久、能干什么。合同年底到期，续不续签要安理会投票。③ 停火监督——双方说好不打了，总得有人看着。维和部队就是"裁判"，哪边开火就记录、上报。④ 占领区——以军实际控制、黎巴嫩政府管不到的地方，援助进不去，全靠维和部队这条通道。</p>
 <p><strong>一句话总结</strong>：驻扎近 50 年的联合国黎巴嫩维和部队授权年底到期，联合国敦促安理会尽快谈判决定去留，美国对此持保留态度。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/world/middle-east/un-peacekeeping-chief-says-talks-future-lebanon-mission-must-begin-soon-2026-10-14/">Reuters（10-14）</a></p>
-<p>📖 生词：<br />
-- <strong>peace</strong>（和平）| keep the peace / peace talks | 7,500 peacekeepers still keep an uneasy peace in southern Lebanon.（7500 名维和人员仍在黎巴嫩南部维持着脆弱的和平。）| "There is no way to peace, peace is the way." — Mahatma Gandhi（没有通往和平的路，和平本身就是路。——甘地）<br />
-- <strong>mission</strong>（使命；任务）| peacekeeping mission / on a mission | The mission's mandate expires at year's end.（该任务的授权年底到期。）| "Your mission, should you choose to accept it..." — Mission: Impossible（你的任务，如果你选择接受……——《碟中谍》）<br />
-- <strong>deadline</strong>（截止期限）| meet a deadline / miss a deadline | The mandate's year-end deadline is approaching fast.（授权年底到期的期限正在逼近。）| "I love deadlines. I love the whooshing sound they make as they fly by." — Douglas Adams（我爱截止期限，我爱它们飞逝而过时发出的呼啸声。——道格拉斯·亚当斯）<br />
-- <strong>parting</strong>（离别）| parting words / sorrowful parting | A withdrawal would be a sorrowful parting for villages that rely on UNIFIL.（对依赖联黎部队的村庄来说，撤出将是一次令人心酸的告别。）| "Parting is such sweet sorrow." — Shakespeare, Romeo and Juliet（离别是如此甜蜜的忧伤。——莎士比亚《罗密欧与朱丽叶》）<br />
-- <strong>watch</strong>（注视；值守）| keep watch / watch over | Peacekeepers watch over 50 positions in the south.（维和人员在南部 50 个据点值守。）| "Who watches the watchmen?" — Juvenal（谁来监督监督者？——尤维纳利斯）<br />
-- <strong>feed</strong>（喂养）| feed the hungry / feed a family | The mission helps feed villages cut off in occupied zones.（该任务帮助养活被困在占领区的村庄。）| "Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime." — proverb（授人以鱼只解一日之饥，授人以渔终身受益。——谚语）<br />
-- <strong>talk</strong>（谈话）| peace talks / talk it over | Lacroix urged the Council to turn talk into negotiations — soon.（拉克鲁瓦敦促安理会把空谈变成谈判——越快越好。）| "Talk is cheap." — proverb（光说不练。——谚语）<br />
-- <strong>absence</strong>（缺席）| in the absence of / conspicuous absence | Villagers fear what the absence of the blue helmets would bring.（村民们担心蓝盔部队一旦缺席会带来什么。）| "Absence makes the heart grow fonder." — proverb（小别胜新婚。——谚语）<br />
-- <strong>stay</strong>（停留）| stay put / stay the course | Beirut is campaigning for the mission to stay.（贝鲁特正在争取让维和任务留下来。）| "Stay hungry, stay foolish." — Steve Jobs（求知若饥，虚心若愚。——乔布斯）<br />
-- <strong>soldier</strong>（士兵）| fallen soldier / old soldier | Positions would be handed to Lebanese army soldiers — if they can reach them.（据点将移交给黎巴嫩政府军士兵——如果他们到得了的话。）| "Old soldiers never die; they just fade away." — Douglas MacArthur（老兵不死，只是凋零。——麦克阿瑟）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>peace</strong>（和平）| keep the peace / peace talks | 7,500 peacekeepers still keep an uneasy peace in southern Lebanon.（7500 名维和人员仍在黎巴嫩南部维持着脆弱的和平。）| "There is no way to peace, peace is the way." — Mahatma Gandhi（没有通往和平的路，和平本身就是路。——甘地）</li>
+<li><strong>mission</strong>（使命；任务）| peacekeeping mission / on a mission | The mission's mandate expires at year's end.（该任务的授权年底到期。）| "Your mission, should you choose to accept it..." — Mission: Impossible（你的任务，如果你选择接受……——《碟中谍》）</li>
+<li><strong>deadline</strong>（截止期限）| meet a deadline / miss a deadline | The mandate's year-end deadline is approaching fast.（授权年底到期的期限正在逼近。）| "I love deadlines. I love the whooshing sound they make as they fly by." — Douglas Adams（我爱截止期限，我爱它们飞逝而过时发出的呼啸声。——道格拉斯·亚当斯）</li>
+<li><strong>parting</strong>（离别）| parting words / sorrowful parting | A withdrawal would be a sorrowful parting for villages that rely on UNIFIL.（对依赖联黎部队的村庄来说，撤出将是一次令人心酸的告别。）| "Parting is such sweet sorrow." — Shakespeare, Romeo and Juliet（离别是如此甜蜜的忧伤。——莎士比亚《罗密欧与朱丽叶》）</li>
+<li><strong>watch</strong>（注视；值守）| keep watch / watch over | Peacekeepers watch over 50 positions in the south.（维和人员在南部 50 个据点值守。）| "Who watches the watchmen?" — Juvenal（谁来监督监督者？——尤维纳利斯）</li>
+<li><strong>feed</strong>（喂养）| feed the hungry / feed a family | The mission helps feed villages cut off in occupied zones.（该任务帮助养活被困在占领区的村庄。）| "Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime." — proverb（授人以鱼只解一日之饥，授人以渔终身受益。——谚语）</li>
+<li><strong>talk</strong>（谈话）| peace talks / talk it over | Lacroix urged the Council to turn talk into negotiations — soon.（拉克鲁瓦敦促安理会把空谈变成谈判——越快越好。）| "Talk is cheap." — proverb（光说不练。——谚语）</li>
+<li><strong>absence</strong>（缺席）| in the absence of / conspicuous absence | Villagers fear what the absence of the blue helmets would bring.（村民们担心蓝盔部队一旦缺席会带来什么。）| "Absence makes the heart grow fonder." — proverb（小别胜新婚。——谚语）</li>
+<li><strong>stay</strong>（停留）| stay put / stay the course | Beirut is campaigning for the mission to stay.（贝鲁特正在争取让维和任务留下来。）| "Stay hungry, stay foolish." — Steve Jobs（求知若饥，虚心若愚。——乔布斯）</li>
+<li><strong>soldier</strong>（士兵）| fallen soldier / old soldier | Positions would be handed to Lebanese army soldiers — if they can reach them.（据点将移交给黎巴嫩政府军士兵——如果他们到得了的话。）| "Old soldiers never die; they just fade away." — Douglas MacArthur（老兵不死，只是凋零。——麦克阿瑟）</li>
+</ul>
 <hr />
 <h2>🌱 个人成长</h2>
 <h3>1. 你现在的生活，是过去选择的"延迟回放"</h3>
@@ -286,52 +349,58 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>核心观点</strong>：Manson 提出三个"滞后指标"：你的身体，是你过去饮食的滞后指标；你的知识，是你过去摄入信息的滞后指标；你的幸福感，是你在乎的人的滞后指标。现在的结果，都是过去无数小选择的延迟回放。他给出本周可做的三件小事：取关一个不值得你注意的信息源、戒掉一种不值得你健康的零食、少跟一个消耗你幸福感的人来往。还留了一个日记 prompts：哪些选择正在塑造未来的你？文末附了读者来信，有人终于鼓起勇气和儿子摊牌谈心，有人悟到"不是每个人都配得到我最好的那一面"。</p>
 <p><strong>为什么值得读</strong>：对 Ricardo 特别贴切——"信息饮食"直接对应他每天刷什么、学什么英语；"人在乎谁"对应他最近和凯迪的拉扯。滞后指标这个说法很治"急功近利"：背单词、练英语口语今天看不到变化，但它们正在延迟到账。</p>
 <p><strong>一句话总结</strong>：别只盯着今天的结果，去管那些正在塑造未来你的小选择。</p>
-<p>📖 生词：<br />
-- <strong>reflect</strong>（反映；反思）| reflect on / reflect one's hopes | May your choices reflect your hopes, not your fears.（愿你的选择映照的是希望，而非恐惧。）| "We do not learn from experience… we learn from reflecting on experience." — John Dewey（我们不是从经历中学习，而是从对经历的反思中学习。——约翰·杜威）<br />
-- <strong>choice</strong>（选择）| make a choice / hard choice | Every small choice shapes who you become.（每个小选择都在塑造未来的你。）| "May your choices reflect your hopes, not your fears." — Nelson Mandela（愿你的选择映照的是希望，而非恐惧。——纳尔逊·曼德拉）<br />
-- <strong>shape</strong>（塑造）| shape one's future / shape up | What choices are shaping your future self?（哪些选择正在塑造未来的你？）| "We shape our tools and thereafter our tools shape us." — Marshall McLuhan（我们塑造工具，随后工具塑造我们。——马歇尔·麦克卢汉）<br />
-- <strong>consume</strong>（摄入；消费）| consume information / consume less | The information you consume is the soil from which your future thoughts grow.（你摄入的信息，是未来思想生长的土壤。）| "The information you consume is the soil from which your future thoughts grow." — James Clear（你摄入的信息，是未来思想生长的土壤。——詹姆斯·克利尔）<br />
-- <strong>worth</strong>（值得的）| worth one's attention / not worth it | Unfollow one source of information that is not worth your attention.（取关一个不值得你注意的信息源。）| "Every man is worth just so much as the things about which he busies himself." — Marcus Aurelius（一个人的价值，就看他整天忙些什么。——马可·奥勒留）<br />
-- <strong>small</strong>（小的）| small changes / small steps | Small changes lead to lasting breakthroughs.（微小的改变带来持久的突破。）| "Small deeds done are better than great deeds planned." — Peter Marshall（做成的小事，胜过计划中的大事。——彼得·马歇尔）<br />
-- <strong>habit</strong>（习惯）| build a habit / break a habit | Your body is a lagging indicator of your eating habits.（你的身体是你饮食习惯的滞后指标。）| "We are what we repeatedly do. Excellence, then, is not an act, but a habit." — Aristotle（我们的行为塑造我们，卓越不是一次行动，而是一种习惯。——亚里士多德）<br />
-- <strong>decision</strong>（决定）| make a decision / tough decision | Better inputs lead to better decisions later.（更好的输入，带来日后更好的决定。）| "In any moment of decision, the best thing you can do is the right thing." — Theodore Roosevelt（在做决定的任何时刻，最好的做法就是做正确的事。——西奥多·罗斯福）<br />
-- <strong>focus</strong>（专注）| lose focus / focus on | Where your focus goes, your life follows.（你的专注投向哪里，人生就跟向哪里。）| "Where focus goes, energy flows." — Tony Robbins（专注所至，能量随行。——托尼·罗宾斯）<br />
-- <strong>question</strong>（问题；质疑）| ask a question / key question | Ask yourself one honest question each week.（每周问自己一个诚实的问题。）| "The important thing is not to stop questioning." — Albert Einstein（重要的是永远不要停止追问。——阿尔伯特·爱因斯坦）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>reflect</strong>（反映；反思）| reflect on / reflect one's hopes | May your choices reflect your hopes, not your fears.（愿你的选择映照的是希望，而非恐惧。）| "We do not learn from experience… we learn from reflecting on experience." — John Dewey（我们不是从经历中学习，而是从对经历的反思中学习。——约翰·杜威）</li>
+<li><strong>choice</strong>（选择）| make a choice / hard choice | Every small choice shapes who you become.（每个小选择都在塑造未来的你。）| "May your choices reflect your hopes, not your fears." — Nelson Mandela（愿你的选择映照的是希望，而非恐惧。——纳尔逊·曼德拉）</li>
+<li><strong>shape</strong>（塑造）| shape one's future / shape up | What choices are shaping your future self?（哪些选择正在塑造未来的你？）| "We shape our tools and thereafter our tools shape us." — Marshall McLuhan（我们塑造工具，随后工具塑造我们。——马歇尔·麦克卢汉）</li>
+<li><strong>consume</strong>（摄入；消费）| consume information / consume less | The information you consume is the soil from which your future thoughts grow.（你摄入的信息，是未来思想生长的土壤。）| "The information you consume is the soil from which your future thoughts grow." — James Clear（你摄入的信息，是未来思想生长的土壤。——詹姆斯·克利尔）</li>
+<li><strong>worth</strong>（值得的）| worth one's attention / not worth it | Unfollow one source of information that is not worth your attention.（取关一个不值得你注意的信息源。）| "Every man is worth just so much as the things about which he busies himself." — Marcus Aurelius（一个人的价值，就看他整天忙些什么。——马可·奥勒留）</li>
+<li><strong>small</strong>（小的）| small changes / small steps | Small changes lead to lasting breakthroughs.（微小的改变带来持久的突破。）| "Small deeds done are better than great deeds planned." — Peter Marshall（做成的小事，胜过计划中的大事。——彼得·马歇尔）</li>
+<li><strong>habit</strong>（习惯）| build a habit / break a habit | Your body is a lagging indicator of your eating habits.（你的身体是你饮食习惯的滞后指标。）| "We are what we repeatedly do. Excellence, then, is not an act, but a habit." — Aristotle（我们的行为塑造我们，卓越不是一次行动，而是一种习惯。——亚里士多德）</li>
+<li><strong>decision</strong>（决定）| make a decision / tough decision | Better inputs lead to better decisions later.（更好的输入，带来日后更好的决定。）| "In any moment of decision, the best thing you can do is the right thing." — Theodore Roosevelt（在做决定的任何时刻，最好的做法就是做正确的事。——西奥多·罗斯福）</li>
+<li><strong>focus</strong>（专注）| lose focus / focus on | Where your focus goes, your life follows.（你的专注投向哪里，人生就跟向哪里。）| "Where focus goes, energy flows." — Tony Robbins（专注所至，能量随行。——托尼·罗宾斯）</li>
+<li><strong>question</strong>（问题；质疑）| ask a question / key question | Ask yourself one honest question each week.（每周问自己一个诚实的问题。）| "The important thing is not to stop questioning." — Albert Einstein（重要的是永远不要停止追问。——阿尔伯特·爱因斯坦）</li>
+</ul>
 <h3>2. 低落时，只需要五分钟就能"重启"</h3>
 <p><strong>来源</strong>：James Clear（《Atomic Habits》作者）newsletter《3-2-1》2026-10-08 期，2026-10-08<br />
 <strong>链接</strong>：<a href="https://jamesclear.com/3-2-1/october-8-2026">https://jamesclear.com/3-2-1/october-8-2026</a></p>
 <p><strong>核心观点</strong>：三个小观点。第一，"你的大脑会跟着你喂给它的东西走，想要更好的想法，就摄入更好的东西"——信息饮食决定思维质量。第二，"打破恶性循环只需要五分钟"：运动五分钟就回到正轨，写五分钟稿子就动起来了，聊五分钟天关系就修复了——重新感觉良好不需要大动作。第三，"很多时候真正的问题不是发生了什么，而是它是怎么被传达的"——沟通方式常常比事情本身更重要。另附两句引言：物理学家 Lise Meitner 说人生不必轻松，但不能空洞；Anthony de Mello 说人与真理之间最短的距离是一个故事。本周提问：什么事让你一想到就兴奋、想去学？</p>
 <p><strong>为什么值得读</strong>：五分钟重启法是给 Ricardo 的"犯懒急救包"——不想背单词时别想着"我要学两小时"，先学五分钟；信息饮食观和他每天看《麻薯日报》互相印证；"问题常出在传达方式"这句，值得他在和朋友闹别扭时想一想。</p>
 <p><strong>一句话总结</strong>：状态差不用硬扛，五分钟的小动作就能把自己拉回正轨。</p>
-<p>📖 生词：<br />
-- <strong>information</strong>（信息）| information diet / useful information | Your mind will follow whatever you feed it.（你的大脑会跟着你喂给它的东西走。）| "The information you consume is the soil from which your future thoughts grow." — James Clear（你摄入的信息，是未来思想生长的土壤。——詹姆斯·克利尔）<br />
-- <strong>feed</strong>（喂养；投喂）| feed one's mind / feed on | Want better thoughts? Consume better things.（想要更好的想法？那就摄入更好的东西。）| "Your mind will follow whatever you feed it." — James Clear（你的大脑会跟着你喂给它的东西走。——詹姆斯·克利尔）<br />
-- <strong>story</strong>（故事）| tell a story / short story | A good story beats a long lecture.（一个好故事胜过长篇大论。）| "The shortest distance between a human being and Truth is a story." — Anthony de Mello（人与真理之间最短的距离，是一个故事。——安东尼·德·梅勒）<br />
-- <strong>empty</strong>（空洞的；空的）| feel empty / empty words | A busy life can still feel empty inside.（忙碌的生活，内心仍可能空洞。）| "Life need not be easy, provided only that it is not empty." — Lise Meitner（人生不必轻松，只要它不空洞。——莉泽·迈特纳）<br />
-- <strong>energy</strong>（精力；能量）| full of energy / low energy | Energy seems to magically appear when there is genuine interest.（当你真正感兴趣时，精力仿佛会凭空出现。）| "Energy and persistence conquer all things." — Benjamin Franklin（精力与坚持能征服一切。——本杰明·富兰克林）<br />
-- <strong>exercise</strong>（锻炼）| do exercise / regular exercise | Five minutes of exercise and you are back on the path.（运动五分钟，你就回到了正轨。）| "Those who think they have no time for exercise will sooner or later have to find time for illness." — Edward Stanley（自以为没时间锻炼的人，迟早要腾出时间生病。——爱德华·斯坦利）<br />
-- <strong>thought</strong>（想法；思考）| deep thought / train of thought | Want better thoughts? Consume better things.（想要更好的想法？那就摄入更好的东西。）| "Change your thoughts and you change your world." — Norman Vincent Peale（改变你的想法，你就改变了你的世界。——诺曼·文森特·皮尔）<br />
-- <strong>journey</strong>（旅程）| long journey / life journey | The result matters less than the journey itself.（结果远没有旅程本身重要。）| "It is good to have an end to journey towards; but it is the journey that matters, in the end." — Ursula K. Le Guin（有个终点可以奔赴是好事，但归根结底，重要的是旅程。——厄休拉·勒古恩）<br />
-- <strong>communicate</strong>（沟通；传达）| communicate well / communicate with | The real problem is often how it was communicated.（真正的问题常常出在它是怎么被传达的。）| "The art of communication is the language of leadership." — James Humes（沟通的艺术，就是领导力的语言。——詹姆斯·休姆斯）<br />
-- <strong>curious</strong>（好奇的）| curious about / stay curious | Stay curious about what excites you.（对让你兴奋的事物保持好奇。）| "I have no special talents. I am only passionately curious." — Albert Einstein（我没有什么特殊天赋，只是格外好奇。——阿尔伯特·爱因斯坦）<br />
-- <strong>mind</strong>（头脑；心智）| keep in mind / change one's mind | Your mind will follow whatever you feed it.（你的大脑会跟着你喂给它的东西走。）| "The mind is everything. What you think, you become." — Buddha（心即一切，你思故你在。——佛陀）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>information</strong>（信息）| information diet / useful information | Your mind will follow whatever you feed it.（你的大脑会跟着你喂给它的东西走。）| "The information you consume is the soil from which your future thoughts grow." — James Clear（你摄入的信息，是未来思想生长的土壤。——詹姆斯·克利尔）</li>
+<li><strong>feed</strong>（喂养；投喂）| feed one's mind / feed on | Want better thoughts? Consume better things.（想要更好的想法？那就摄入更好的东西。）| "Your mind will follow whatever you feed it." — James Clear（你的大脑会跟着你喂给它的东西走。——詹姆斯·克利尔）</li>
+<li><strong>story</strong>（故事）| tell a story / short story | A good story beats a long lecture.（一个好故事胜过长篇大论。）| "The shortest distance between a human being and Truth is a story." — Anthony de Mello（人与真理之间最短的距离，是一个故事。——安东尼·德·梅勒）</li>
+<li><strong>empty</strong>（空洞的；空的）| feel empty / empty words | A busy life can still feel empty inside.（忙碌的生活，内心仍可能空洞。）| "Life need not be easy, provided only that it is not empty." — Lise Meitner（人生不必轻松，只要它不空洞。——莉泽·迈特纳）</li>
+<li><strong>energy</strong>（精力；能量）| full of energy / low energy | Energy seems to magically appear when there is genuine interest.（当你真正感兴趣时，精力仿佛会凭空出现。）| "Energy and persistence conquer all things." — Benjamin Franklin（精力与坚持能征服一切。——本杰明·富兰克林）</li>
+<li><strong>exercise</strong>（锻炼）| do exercise / regular exercise | Five minutes of exercise and you are back on the path.（运动五分钟，你就回到了正轨。）| "Those who think they have no time for exercise will sooner or later have to find time for illness." — Edward Stanley（自以为没时间锻炼的人，迟早要腾出时间生病。——爱德华·斯坦利）</li>
+<li><strong>thought</strong>（想法；思考）| deep thought / train of thought | Want better thoughts? Consume better things.（想要更好的想法？那就摄入更好的东西。）| "Change your thoughts and you change your world." — Norman Vincent Peale（改变你的想法，你就改变了你的世界。——诺曼·文森特·皮尔）</li>
+<li><strong>journey</strong>（旅程）| long journey / life journey | The result matters less than the journey itself.（结果远没有旅程本身重要。）| "It is good to have an end to journey towards; but it is the journey that matters, in the end." — Ursula K. Le Guin（有个终点可以奔赴是好事，但归根结底，重要的是旅程。——厄休拉·勒古恩）</li>
+<li><strong>communicate</strong>（沟通；传达）| communicate well / communicate with | The real problem is often how it was communicated.（真正的问题常常出在它是怎么被传达的。）| "The art of communication is the language of leadership." — James Humes（沟通的艺术，就是领导力的语言。——詹姆斯·休姆斯）</li>
+<li><strong>curious</strong>（好奇的）| curious about / stay curious | Stay curious about what excites you.（对让你兴奋的事物保持好奇。）| "I have no special talents. I am only passionately curious." — Albert Einstein（我没有什么特殊天赋，只是格外好奇。——阿尔伯特·爱因斯坦）</li>
+<li><strong>mind</strong>（头脑；心智）| keep in mind / change one's mind | Your mind will follow whatever you feed it.（你的大脑会跟着你喂给它的东西走。）| "The mind is everything. What you think, you become." — Buddha（心即一切，你思故你在。——佛陀）</li>
+</ul>
 <h3>3. 别再猜了——把喜欢"大声说出来"</h3>
 <p><strong>来源</strong>：Sahil Bloom《The Curiosity Chronicle》，"The Loud Liker Theory"（大声点赞理论），2026-10-09<br />
 <strong>链接</strong>：<a href="https://www.sahilbloom.com/newsletter/the-loud-liker-theory">https://www.sahilbloom.com/newsletter/the-loud-liker-theory</a></p>
 <p><strong>核心观点</strong>：Bloom 承认自己从小到大都不擅长社交，成年后交新朋友尤其难，后来发现他撞上了两个心理学效应的"夹击"。第一，信号放大偏差（Signal Amplification Bias）：因为害怕被拒绝，我们发出的社交信号会被自己"调小"，而我们还误以为对方都接收到了——其实对方几乎没感觉到。第二，好感差距（Liking Gap）：人们系统性地低估别人对自己的喜欢程度，旁观者反而看得更准。两个一叠加就是：你发出的比你以为的少，你听到的比对方发出的少——两个互相喜欢的人聊完，各自都以为对方不喜欢自己，关系就这样没了下文。解法很简单，Bloom 称为"大声点赞"：把欣赏说出口，当面夸、主动约、明确表达善意。</p>
 <p><strong>为什么值得读</strong>：Ricardo 刚离开"黏性"社交环境（学校、固定班级），进入"顺滑"的成人社交场，这篇正是写给这个阶段的。别把"他没回我"自动翻译成"他不喜欢我"——很多时候只是信号没传达到。夸人、约人、说谢谢，大声一点，朋友就是这样攒出来的。</p>
 <p><strong>一句话总结</strong>：别人对你的喜欢，远比你以为的多——但前提是你得先大声表达你的喜欢。</p>
-<p>📖 生词：<br />
-- <strong>like</strong>（喜欢）| like out loud / would like | Like people out loud and watch what happens.（大声地喜欢别人，然后看会发生什么。）| "Like people out loud." — Sahil Bloom（大声地去喜欢别人。——萨希尔·布鲁姆）<br />
-- <strong>rejection</strong>（拒绝）| fear of rejection / face rejection | Fear of rejection mutes the signals we send.（对被拒绝的恐惧，会调小我们发出的信号。）| "I take rejection as someone blowing a bugle in my ear to wake me up and get going." — Sylvester Stallone（我把拒绝当作有人在我耳边吹号，叫我醒来、出发。——西尔维斯特·史泰龙）<br />
-- <strong>fear</strong>（恐惧）| overcome fear / in fear | Fear makes us underestimate how much we are liked.（恐惧让我们低估别人对自己的喜欢。）| "The only thing we have to fear is fear itself." — Franklin D. Roosevelt（我们唯一需要恐惧的，就是恐惧本身。——富兰克林·罗斯福）<br />
-- <strong>friendship</strong>（友谊）| build friendship / true friendship | Adult friendships need deliberate effort to grow.（成年人的友谊需要刻意经营才能生长。）| "A real friend is one who walks in when the rest of the world walks out." — Walter Winchell（真正的朋友，是在全世界都离开时走进来的那个人。——沃尔特·温切尔）<br />
-- <strong>introvert</strong>（内向的人）| shy introvert / fellow introvert | Even introverts can learn to connect out loud.（内向的人也能学会大声地连接。）| "Introverts are capable of acting like extroverts for the sake of work they consider important." — Susan Cain（内向者为了自认为重要的事，也能表现得像外向者。——苏珊·凯恩）<br />
-- <strong>assumption</strong>（假设；臆断）| make an assumption / false assumption | Don't let assumptions kill a budding friendship.（别让臆断扼杀一段刚萌芽的友谊。）| "Don't make assumptions." — Don Miguel Ruiz, The Four Agreements（不要妄加假设。——堂·米格尔·鲁伊斯《四个约定》）<br />
-- <strong>social</strong>（社交的）| social skills / social settings | We misread social signals more often than we think.（我们误读社交信号的频率远超想象。）| "Man is by nature a social animal." — Aristotle（人天生是社会性动物。——亚里士多德）<br />
-- <strong>courage</strong>（勇气）| have the courage / take courage | It takes courage to express appreciation first.（先表达欣赏需要勇气。）| "Courage is not the absence of fear, but the triumph over it." — Nelson Mandela（勇气不是没有恐惧，而是战胜恐惧。——纳尔逊·曼德拉）<br />
-- <strong>conversation</strong>（交谈）| start a conversation / deep conversation | A short conversation can change how someone sees you.（一次短暂的交谈就能改变别人对你的看法。）| "The art of conversation lies in listening." — Malcolm Forbes（交谈的艺术在于倾听。——马尔科姆·福布斯）<br />
-- <strong>vulnerability</strong>（脆弱；袒露）| show vulnerability / embrace vulnerability | Saying "I like you" first requires vulnerability.（先说出"我欣赏你"需要袒露脆弱的勇气。）| "Vulnerability is the birthplace of innovation, creativity and change." — Brené Brown（脆弱是创新、创造力和改变的诞生地。——布琳·布朗）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>like</strong>（喜欢）| like out loud / would like | Like people out loud and watch what happens.（大声地喜欢别人，然后看会发生什么。）| "Like people out loud." — Sahil Bloom（大声地去喜欢别人。——萨希尔·布鲁姆）</li>
+<li><strong>rejection</strong>（拒绝）| fear of rejection / face rejection | Fear of rejection mutes the signals we send.（对被拒绝的恐惧，会调小我们发出的信号。）| "I take rejection as someone blowing a bugle in my ear to wake me up and get going." — Sylvester Stallone（我把拒绝当作有人在我耳边吹号，叫我醒来、出发。——西尔维斯特·史泰龙）</li>
+<li><strong>fear</strong>（恐惧）| overcome fear / in fear | Fear makes us underestimate how much we are liked.（恐惧让我们低估别人对自己的喜欢。）| "The only thing we have to fear is fear itself." — Franklin D. Roosevelt（我们唯一需要恐惧的，就是恐惧本身。——富兰克林·罗斯福）</li>
+<li><strong>friendship</strong>（友谊）| build friendship / true friendship | Adult friendships need deliberate effort to grow.（成年人的友谊需要刻意经营才能生长。）| "A real friend is one who walks in when the rest of the world walks out." — Walter Winchell（真正的朋友，是在全世界都离开时走进来的那个人。——沃尔特·温切尔）</li>
+<li><strong>introvert</strong>（内向的人）| shy introvert / fellow introvert | Even introverts can learn to connect out loud.（内向的人也能学会大声地连接。）| "Introverts are capable of acting like extroverts for the sake of work they consider important." — Susan Cain（内向者为了自认为重要的事，也能表现得像外向者。——苏珊·凯恩）</li>
+<li><strong>assumption</strong>（假设；臆断）| make an assumption / false assumption | Don't let assumptions kill a budding friendship.（别让臆断扼杀一段刚萌芽的友谊。）| "Don't make assumptions." — Don Miguel Ruiz, The Four Agreements（不要妄加假设。——堂·米格尔·鲁伊斯《四个约定》）</li>
+<li><strong>social</strong>（社交的）| social skills / social settings | We misread social signals more often than we think.（我们误读社交信号的频率远超想象。）| "Man is by nature a social animal." — Aristotle（人天生是社会性动物。——亚里士多德）</li>
+<li><strong>courage</strong>（勇气）| have the courage / take courage | It takes courage to express appreciation first.（先表达欣赏需要勇气。）| "Courage is not the absence of fear, but the triumph over it." — Nelson Mandela（勇气不是没有恐惧，而是战胜恐惧。——纳尔逊·曼德拉）</li>
+<li><strong>conversation</strong>（交谈）| start a conversation / deep conversation | A short conversation can change how someone sees you.（一次短暂的交谈就能改变别人对你的看法。）| "The art of conversation lies in listening." — Malcolm Forbes（交谈的艺术在于倾听。——马尔科姆·福布斯）</li>
+<li><strong>vulnerability</strong>（脆弱；袒露）| show vulnerability / embrace vulnerability | Saying "I like you" first requires vulnerability.（先说出"我欣赏你"需要袒露脆弱的勇气。）| "Vulnerability is the birthplace of innovation, creativity and change." — Brené Brown（脆弱是创新、创造力和改变的诞生地。——布琳·布朗）</li>
+</ul>
 <hr />
 <h2>💕 爱情/关系</h2>
 <h3>1. 人生的质量，取决于关系的质量</h3>
@@ -340,51 +409,57 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>核心观点</strong>：Perel 的核心结论四十年没变：关系的质量决定人生的质量。过去人们结婚、工作是因为"不得不"，幸福只是附赠品；今天我们能自己选择爱谁、在哪工作，幸福反而成了维系一切的黏合剂。但我们犯了一个错误：要求一个人（伴侣）给出过去整个"村子"才能给的东西——陪伴、激情、安全感、成长，什么都想要。节目还聊到：无摩擦的 App 正在扭曲我们对人的期待（希望人像软件一样可预测）；玩耍本质上是"让人觉得好玩的风险"，而正是这种风险建立信任；给 Z 世代的第一课是"去跟陌生人说话"——你珍视的每段关系，都始于一次和陌生人的交谈。</p>
 <p><strong>为什么值得读</strong>：给 Ricardo 一个健康的爱情坐标系：别把"全部人生"押在一个人身上，爱情是村子的一部分，不是村子的全部；同时"去跟陌生人说话"这句很实用，社团、球场、兼职里都能用上。</p>
 <p><strong>一句话总结</strong>：别让一个人承包你整个人生，去拥有一个"村子"。</p>
-<p>📖 生词：<br />
-- <strong>quality</strong>（质量）| high quality / quality of life | The quality of our relationships determines the quality of our lives.（我们关系的质量，决定我们人生的质量。）| "The quality of our relationships determines the quality of our lives." — Esther Perel（我们关系的质量，决定我们人生的质量。——埃丝特·佩雷尔）<br />
-- <strong>relationship</strong>（关系）| build a relationship / healthy relationship | Every treasured relationship started as a conversation with a stranger.（每段被珍视的关系，都始于一次和陌生人的交谈。）| "The quality of your life is the quality of your relationships." — Tony Robbins（你人生的质量，就是你关系的质量。——托尼·罗宾斯）<br />
-- <strong>village</strong>（村子；圈子）| whole village / global village | Don't ask one person to be your whole village.（别要求一个人成为你的整个村子。）| "It takes a village to raise a child." — African proverb（养育一个孩子需要整个村子的力量。——非洲谚语）<br />
-- <strong>belonging</strong>（归属感）| sense of belonging / belonging to | True belonging never asks you to change who you are.（真正的归属感从不要求你改变自己。）| "True belonging doesn't require you to change who you are; it requires you to be who you are." — Brené Brown（真正的归属感不要求你改变自己，它要求你做自己。——布琳·布朗）<br />
-- <strong>stranger</strong>（陌生人）| talk to strangers / total stranger | Talk to strangers — it is a skill worth practicing.（去跟陌生人说话吧，这是一项值得练习的技能。）| "A stranger is just a friend you haven't met." — Will Rogers（陌生人，只是你还没认识的朋友。——威尔·罗杰斯）<br />
-- <strong>risk</strong>（风险；冒险）| take a risk / at risk | Play is just risk that feels fun.（玩耍，不过是让人觉得好玩的风险。）| "Play is just risk that feels fun." — Esther Perel（玩耍，不过是让人觉得好玩的风险。——埃丝特·佩雷尔）<br />
-- <strong>play</strong>（玩耍）| play together / child's play | We build trust through play, not through perfection.（信任是在玩耍中建立的，不是在完美中。）| "We don't stop playing because we grow old; we grow old because we stop playing." — George Bernard Shaw（我们不是因年老而停止玩耍，而是因停止玩耍而年老。——萧伯纳）<br />
-- <strong>comfort</strong>（舒适）| comfort zone / take comfort | Growth begins at the end of your comfort zone.（成长始于舒适区的边缘。）| "Life begins at the end of your comfort zone." — Neale Donald Walsch（人生始于舒适区终结之处。——尼尔·唐纳德·沃尔什）<br />
-- <strong>happy</strong>（幸福的）| happy life / feel happy | Happiness has become the glue that holds relationships together.（幸福成了维系关系的黏合剂。）| "Happiness is not something ready made. It comes from your own actions." — Dalai Lama（幸福不是现成的，它来自你自己的行动。——达赖喇嘛）<br />
-- <strong>conversation</strong>（交谈）| start a conversation / deep conversation | Every relationship you treasure started as a conversation with a stranger.（你珍视的每段关系，都始于一次和陌生人的交谈。）| "Every relationship you treasure started as a conversation with a stranger." — Simon Sinek（你珍视的每段关系，都始于一次和陌生人的交谈。——西蒙·斯涅克）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>quality</strong>（质量）| high quality / quality of life | The quality of our relationships determines the quality of our lives.（我们关系的质量，决定我们人生的质量。）| "The quality of our relationships determines the quality of our lives." — Esther Perel（我们关系的质量，决定我们人生的质量。——埃丝特·佩雷尔）</li>
+<li><strong>relationship</strong>（关系）| build a relationship / healthy relationship | Every treasured relationship started as a conversation with a stranger.（每段被珍视的关系，都始于一次和陌生人的交谈。）| "The quality of your life is the quality of your relationships." — Tony Robbins（你人生的质量，就是你关系的质量。——托尼·罗宾斯）</li>
+<li><strong>village</strong>（村子；圈子）| whole village / global village | Don't ask one person to be your whole village.（别要求一个人成为你的整个村子。）| "It takes a village to raise a child." — African proverb（养育一个孩子需要整个村子的力量。——非洲谚语）</li>
+<li><strong>belonging</strong>（归属感）| sense of belonging / belonging to | True belonging never asks you to change who you are.（真正的归属感从不要求你改变自己。）| "True belonging doesn't require you to change who you are; it requires you to be who you are." — Brené Brown（真正的归属感不要求你改变自己，它要求你做自己。——布琳·布朗）</li>
+<li><strong>stranger</strong>（陌生人）| talk to strangers / total stranger | Talk to strangers — it is a skill worth practicing.（去跟陌生人说话吧，这是一项值得练习的技能。）| "A stranger is just a friend you haven't met." — Will Rogers（陌生人，只是你还没认识的朋友。——威尔·罗杰斯）</li>
+<li><strong>risk</strong>（风险；冒险）| take a risk / at risk | Play is just risk that feels fun.（玩耍，不过是让人觉得好玩的风险。）| "Play is just risk that feels fun." — Esther Perel（玩耍，不过是让人觉得好玩的风险。——埃丝特·佩雷尔）</li>
+<li><strong>play</strong>（玩耍）| play together / child's play | We build trust through play, not through perfection.（信任是在玩耍中建立的，不是在完美中。）| "We don't stop playing because we grow old; we grow old because we stop playing." — George Bernard Shaw（我们不是因年老而停止玩耍，而是因停止玩耍而年老。——萧伯纳）</li>
+<li><strong>comfort</strong>（舒适）| comfort zone / take comfort | Growth begins at the end of your comfort zone.（成长始于舒适区的边缘。）| "Life begins at the end of your comfort zone." — Neale Donald Walsch（人生始于舒适区终结之处。——尼尔·唐纳德·沃尔什）</li>
+<li><strong>happy</strong>（幸福的）| happy life / feel happy | Happiness has become the glue that holds relationships together.（幸福成了维系关系的黏合剂。）| "Happiness is not something ready made. It comes from your own actions." — Dalai Lama（幸福不是现成的，它来自你自己的行动。——达赖喇嘛）</li>
+<li><strong>conversation</strong>（交谈）| start a conversation / deep conversation | Every relationship you treasure started as a conversation with a stranger.（你珍视的每段关系，都始于一次和陌生人的交谈。）| "Every relationship you treasure started as a conversation with a stranger." — Simon Sinek（你珍视的每段关系，都始于一次和陌生人的交谈。——西蒙·斯涅克）</li>
+</ul>
 <h3>2. 别再用"财报"的语言谈恋爱</h3>
 <p><strong>来源</strong>：Bright Shiny Objects 专栏文章 "Living or Optimizing? Esther Perel on Emotional Capitalism"（梳理 Esther Perel 与 Sal Khan 在 TED Intersections 对谈 "Why the future is human … plus AI"），2026-10-13<br />
 <strong>链接</strong>：<a href="https://brightshinyobjects.net/2026/10/13/living-vs-optimizing-emotional-capitalism/">https://brightshinyobjects.net/2026/10/13/living-vs-optimizing-emotional-capitalism/</a></p>
 <p><strong>核心观点</strong>：现在听年轻人聊恋爱，像在听季度财报：选项、升级、投资回报率、及时止损。Perel 把这叫"情感资本主义"——拿着购物清单找对象，总在算"我能不能找到更好的"、对冲风险、计算回报。与此同时，信任、安全感、脆弱这些心理词汇进了商界，商界的词汇也进了亲密关系。Perel 的提醒很妙：感情里的难题"不是等你去解决的问题，而是需要你去管理的悖论"。她还担心一种"无接触"的生活：我们聚得越来越少，却要求人像 App 一样可预测。文章最后留了一个问题：在你的生活里，有没有哪样东西，本来不该被衡量，你却开始给它打分了？</p>
 <p><strong>为什么值得读</strong>：Ricardo 天天泡在社交软件里，这篇是面镜子——把人当"选项"比较来比较去，最后比较掉的是自己的真心。Perel 那句"悖论是用来管理的，不是用来解决的"，对亲密关系里的拧巴特别管用。</p>
 <p><strong>一句话总结</strong>：爱人不是做投资，别拿算 ROI 的脑子去算感情。</p>
-<p>📖 生词：<br />
-- <strong>measure</strong>（衡量）| measure success / take measures | We started measuring things that were never meant to be measured.（我们开始衡量那些本不该被衡量的东西。）| "What gets measured gets managed." — Peter Drucker（被衡量的，才会被管理。——彼得·德鲁克）<br />
-- <strong>paradox</strong>（悖论）| seeming paradox / love paradox | Relational dilemmas are paradoxes to manage, not problems to solve.（感情里的两难是需要管理的悖论，不是等着解决的问题。）| "Relational dilemmas are often not problems that you solve, but paradoxes that you manage." — Esther Perel（感情中的两难，常常不是等你解决的问题，而是需要你管理的悖论。——埃丝特·佩雷尔）<br />
-- <strong>language</strong>（语言）| body language / strong language | The words we borrow quietly reshape how we love.（我们借来的词汇，正在悄悄重塑我们爱的方式。）| "The limits of my language mean the limits of my world." — Ludwig Wittgenstein（我的语言的边界，就是我的世界的边界。——维特根斯坦）<br />
-- <strong>harvest</strong>（收获）| reap the harvest / rich harvest | Don't judge each day by the harvest you reap.（别用每天的收获来评判这一天。）| "Don't judge each day by the harvest you reap but by the seeds that you plant." — Robert Louis Stevenson（评判一天，别看你收获了什么，而看你种下了什么。——罗伯特·路易斯·史蒂文森）<br />
-- <strong>capitalism</strong>（资本主义）| emotional capitalism / modern capitalism | Emotional capitalism treats partners like positions to exit.（情感资本主义把伴侣当成可以清仓的头寸。）| "The inherent vice of capitalism is the unequal sharing of blessings." — Winston Churchill（资本主义固有的弊端，是福泽分配不均。——温斯顿·丘吉尔）<br />
-- <strong>distance</strong>（距离）| keep one's distance / long distance | Desire needs a little distance to breathe.（欲望需要一点距离来呼吸。）| "Distance means so little when someone means so much." — Unknown（当一个人足够重要，距离便微不足道。——佚名）<br />
-- <strong>predict</strong>（预测）| predict the future / hard to predict | We expect people to be as predictable as apps.（我们要求人像 App 一样可预测。）| "The best way to predict the future is to invent it." — Alan Kay（预测未来的最好方式，就是去创造它。——阿兰·凯）<br />
-- <strong>solve</strong>（解决）| solve a problem / solve the puzzle | Some dilemmas are not problems to solve.（有些两难，本来就不是用来"解决"的。）| "We cannot solve our problems with the same thinking we used when we created them." — Albert Einstein（用制造问题时的思维，解决不了问题。——阿尔伯特·爱因斯坦）<br />
-- <strong>trust</strong>（信任）| build trust / win trust | Trust grows through managed paradoxes, not perfect solutions.（信任在妥善管理的悖论中生长，不在完美的答案里。）| "The best way to find out if you can trust somebody is to trust them." — Ernest Hemingway（想知道一个人值不值得信任，最好的办法就是去信任他。——欧内斯特·海明威）<br />
-- <strong>emotion</strong>（情感）| mixed emotions / show emotion | Business language has moved firmly into our emotional lives.（商业语言已经深深渗入我们的情感生活。）| "Your intellect may be confused, but your emotions will never lie to you." — Roger Ebert（你的理智可能会糊涂，但你的情感永远不会骗你。——罗杰·伊伯特）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>measure</strong>（衡量）| measure success / take measures | We started measuring things that were never meant to be measured.（我们开始衡量那些本不该被衡量的东西。）| "What gets measured gets managed." — Peter Drucker（被衡量的，才会被管理。——彼得·德鲁克）</li>
+<li><strong>paradox</strong>（悖论）| seeming paradox / love paradox | Relational dilemmas are paradoxes to manage, not problems to solve.（感情里的两难是需要管理的悖论，不是等着解决的问题。）| "Relational dilemmas are often not problems that you solve, but paradoxes that you manage." — Esther Perel（感情中的两难，常常不是等你解决的问题，而是需要你管理的悖论。——埃丝特·佩雷尔）</li>
+<li><strong>language</strong>（语言）| body language / strong language | The words we borrow quietly reshape how we love.（我们借来的词汇，正在悄悄重塑我们爱的方式。）| "The limits of my language mean the limits of my world." — Ludwig Wittgenstein（我的语言的边界，就是我的世界的边界。——维特根斯坦）</li>
+<li><strong>harvest</strong>（收获）| reap the harvest / rich harvest | Don't judge each day by the harvest you reap.（别用每天的收获来评判这一天。）| "Don't judge each day by the harvest you reap but by the seeds that you plant." — Robert Louis Stevenson（评判一天，别看你收获了什么，而看你种下了什么。——罗伯特·路易斯·史蒂文森）</li>
+<li><strong>capitalism</strong>（资本主义）| emotional capitalism / modern capitalism | Emotional capitalism treats partners like positions to exit.（情感资本主义把伴侣当成可以清仓的头寸。）| "The inherent vice of capitalism is the unequal sharing of blessings." — Winston Churchill（资本主义固有的弊端，是福泽分配不均。——温斯顿·丘吉尔）</li>
+<li><strong>distance</strong>（距离）| keep one's distance / long distance | Desire needs a little distance to breathe.（欲望需要一点距离来呼吸。）| "Distance means so little when someone means so much." — Unknown（当一个人足够重要，距离便微不足道。——佚名）</li>
+<li><strong>predict</strong>（预测）| predict the future / hard to predict | We expect people to be as predictable as apps.（我们要求人像 App 一样可预测。）| "The best way to predict the future is to invent it." — Alan Kay（预测未来的最好方式，就是去创造它。——阿兰·凯）</li>
+<li><strong>solve</strong>（解决）| solve a problem / solve the puzzle | Some dilemmas are not problems to solve.（有些两难，本来就不是用来"解决"的。）| "We cannot solve our problems with the same thinking we used when we created them." — Albert Einstein（用制造问题时的思维，解决不了问题。——阿尔伯特·爱因斯坦）</li>
+<li><strong>trust</strong>（信任）| build trust / win trust | Trust grows through managed paradoxes, not perfect solutions.（信任在妥善管理的悖论中生长，不在完美的答案里。）| "The best way to find out if you can trust somebody is to trust them." — Ernest Hemingway（想知道一个人值不值得信任，最好的办法就是去信任他。——欧内斯特·海明威）</li>
+<li><strong>emotion</strong>（情感）| mixed emotions / show emotion | Business language has moved firmly into our emotional lives.（商业语言已经深深渗入我们的情感生活。）| "Your intellect may be confused, but your emotions will never lie to you." — Roger Ebert（你的理智可能会糊涂，但你的情感永远不会骗你。——罗杰·伊伯特）</li>
+</ul>
 <h3>3. 交友软件没有"必胜公式"，但有五个清醒玩法</h3>
 <p><strong>来源</strong>：TechXplore 转载 The Conversation 文章 "Five ways to beat dating algorithms at their own game"（基于发表在学术期刊的研究），2026-10-12<br />
 <strong>链接</strong>：<a href="https://techxplore.com/news/2026-10-ways-dating-algorithms-game.html">https://techxplore.com/news/2026-10-ways-dating-algorithms-game.html</a></p>
 <p><strong>核心观点</strong>：研究者访谈了 21 位交友软件用户，发现大家同时活在三种心态里：浪漫派（慢慢来、建信任）、购物派（比选项、筛条件）、系统派（跟着 App 的节奏刷、配对、回消息）。三种心态互相打架，所以用 App 才又上头又累。研究结论很实在：没有任何"必胜的滑动公式"能让平台交出对的人，能"战胜算法"的只有夺回主动权。五个建议：先想清楚自己要什么（认真交往、随便约会、都行）；给自己设"停刷"点（有位受访者 Rose 直接给自己下滑动禁令，先好好聊手头的人）；把筛选条件当工具别当判决书——匹配少不代表你不值得；把有戏的聊天尽快搬出 App，别让下一个 profile 永远在旁边竞争；最后，允许自己卸载——研究者称之为夺回"心理主权"：你决定什么重要、给 App 多少注意力、什么时候够了。</p>
 <p><strong>为什么值得读</strong>：观点正、证据硬，而且特别护心态——"匹配率低≠你不值得"这句，玩过交友软件的人都该听一遍。"心理主权"这个词也很酷：App 可以开门，但进不进、待多久，你说了算。</p>
 <p><strong>一句话总结</strong>：算法决定谁出现在屏幕上，但只有你能决定接下来怎么做。</p>
-<p>📖 生词：<br />
-- <strong>intention</strong>（意图；打算）| clear intention / good intentions | Keep a clear picture of your intentions before swiping.（滑动之前，先想清楚自己到底要什么。）| "Our intention creates our reality." — Wayne Dyer（我们的意图创造我们的现实。——韦恩·戴尔）<br />
-- <strong>attention</strong>（注意力）| pay attention / grab attention | Decide how much attention you give the app.（你来决定给这个 App 多少注意力。）| "Attention is the rarest and purest form of generosity." — Simone Weil（注意力是最稀有、最纯粹的慷慨。——西蒙娜·薇依）<br />
-- <strong>control</strong>（掌控）| take control / lose control | You are the one who is in control, not the algorithm.（掌控的人是你，不是算法。）| "You cannot control what happens to you, but you can control your attitude." — Brian Tracy（你控制不了发生在你身上的事，但能控制你面对它的态度。——布莱恩·特雷西）<br />
-- <strong>value</strong>（价值）| personal value / of great value | A low match rate is not a measure of your value.（匹配率低不代表你的价值低。）| "Price is what you pay. Value is what you get." — Warren Buffett（价格是你付出的，价值是你得到的。——巴菲特）<br />
-- <strong>connection</strong>（连接；关系）| build connection / deep connection | Give a real connection a chance to grow offline.（给一段真实的连接在线下生长的机会。）| "Connection is why we're here; it is what gives purpose and meaning to our lives." — Brené Brown（连接是我们存在的原因，它赋予生命目的和意义。——布琳·布朗）<br />
-- <strong>freedom</strong>（自由）| enjoy freedom / freedom of choice | Taking a break from the app is also freedom.（暂时离开 App 也是一种自由。）| "Freedom lies in being bold." — Robert Frost（自由在于勇敢。——罗伯特·弗罗斯特）<br />
-- <strong>compare</strong>（比较）| compare with / no compare | Stop comparing people like products on a shelf.（别再像比较货架上的商品一样比较人。）| "Comparison is the thief of joy." — Theodore Roosevelt（比较是快乐的小偷。——西奥多·罗斯福）<br />
-- <strong>fatigue</strong>（疲惫）| decision fatigue / battle fatigue | Endless swiping leads to decision fatigue.（无休止地滑动会导致决策疲劳。）| "Fatigue is the best pillow." — Benjamin Franklin（疲惫是最好的枕头。——本杰明·富兰克林）<br />
-- <strong>door</strong>（门）| open the door / open doors | Dating apps can open doors, but you choose whether to walk through.（交友软件能为你开门，但进不进去由你决定。）| "When one door closes, another opens." — Alexander Graham Bell（当一扇门关闭，另一扇就会打开。——亚历山大·格拉汉姆·贝尔）<br />
-- <strong>present</strong>（当下；出席的）| be present / live in the present | Put the phone away and be present with the person.（放下手机，好好陪在眼前的人身边。）| "Yesterday is history, tomorrow is a mystery, today is a gift — which is why we call it the present." — Bil Keane（昨天是历史，明天是谜，今天是礼物——所以我们叫它"当下"。——比尔·基恩）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>intention</strong>（意图；打算）| clear intention / good intentions | Keep a clear picture of your intentions before swiping.（滑动之前，先想清楚自己到底要什么。）| "Our intention creates our reality." — Wayne Dyer（我们的意图创造我们的现实。——韦恩·戴尔）</li>
+<li><strong>attention</strong>（注意力）| pay attention / grab attention | Decide how much attention you give the app.（你来决定给这个 App 多少注意力。）| "Attention is the rarest and purest form of generosity." — Simone Weil（注意力是最稀有、最纯粹的慷慨。——西蒙娜·薇依）</li>
+<li><strong>control</strong>（掌控）| take control / lose control | You are the one who is in control, not the algorithm.（掌控的人是你，不是算法。）| "You cannot control what happens to you, but you can control your attitude." — Brian Tracy（你控制不了发生在你身上的事，但能控制你面对它的态度。——布莱恩·特雷西）</li>
+<li><strong>value</strong>（价值）| personal value / of great value | A low match rate is not a measure of your value.（匹配率低不代表你的价值低。）| "Price is what you pay. Value is what you get." — Warren Buffett（价格是你付出的，价值是你得到的。——巴菲特）</li>
+<li><strong>connection</strong>（连接；关系）| build connection / deep connection | Give a real connection a chance to grow offline.（给一段真实的连接在线下生长的机会。）| "Connection is why we're here; it is what gives purpose and meaning to our lives." — Brené Brown（连接是我们存在的原因，它赋予生命目的和意义。——布琳·布朗）</li>
+<li><strong>freedom</strong>（自由）| enjoy freedom / freedom of choice | Taking a break from the app is also freedom.（暂时离开 App 也是一种自由。）| "Freedom lies in being bold." — Robert Frost（自由在于勇敢。——罗伯特·弗罗斯特）</li>
+<li><strong>compare</strong>（比较）| compare with / no compare | Stop comparing people like products on a shelf.（别再像比较货架上的商品一样比较人。）| "Comparison is the thief of joy." — Theodore Roosevelt（比较是快乐的小偷。——西奥多·罗斯福）</li>
+<li><strong>fatigue</strong>（疲惫）| decision fatigue / battle fatigue | Endless swiping leads to decision fatigue.（无休止地滑动会导致决策疲劳。）| "Fatigue is the best pillow." — Benjamin Franklin（疲惫是最好的枕头。——本杰明·富兰克林）</li>
+<li><strong>door</strong>（门）| open the door / open doors | Dating apps can open doors, but you choose whether to walk through.（交友软件能为你开门，但进不进去由你决定。）| "When one door closes, another opens." — Alexander Graham Bell（当一扇门关闭，另一扇就会打开。——亚历山大·格拉汉姆·贝尔）</li>
+<li><strong>present</strong>（当下；出席的）| be present / live in the present | Put the phone away and be present with the person.（放下手机，好好陪在眼前的人身边。）| "Yesterday is history, tomorrow is a mystery, today is a gift — which is why we call it the present." — Bil Keane（昨天是历史，明天是谜，今天是礼物——所以我们叫它"当下"。——比尔·基恩）</li>
+</ul>
 <hr />
 <h2>🌿 绿色低碳能源</h2>
 <h3>1. 我国规模最大光氢储一体化项目储能电站并网投运，"发电—储能—制氢—加氢"产业链打通</h3>
@@ -405,22 +480,24 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 合作备忘录（MoU）——两家公司先签的一份"合作意向书"，还不是正式合同。好比两个人先签个"恋爱意向"，表达"我想认真谈"，但离领证（签正式合同）还早，随时可能因为谈不拢而分手。② 吉瓦（GW）——功率单位，1 吉瓦 = 100 万千瓦。4.5 吉瓦大概相当于 4 台大型核电机组的发电能力，是个非常大的规模。③ 电池储能系统（BESS）——电网用的"大号充电宝"。风和太阳不稳定，储能系统在电多时充电、电少时放电，让送出去的电更平稳。④ 跨境输电——把电"快递"到别的国家。好比蒙古的风电场是"发电厂"，中国是"收货人"，中间要修一条超长"电线高速公路"把电送过去。⑤ 购电协议——买电的长期合同。电厂最怕建好了没人买电，所以开工前一般要先和买家签好"未来 20 年我包销你的电"这样的协议，这个项目目前还没有签。</p>
 <p><strong>一句话总结</strong>：沙特出钱、蒙古出风光资源，计划建 4.5 吉瓦新能源项目把绿电卖给中国——全球能源版图重画，连产油大国都在抢着"卖阳光"，而中国是头号买家。</p>
 <p>🔗 来源：<a href="https://www.tradingview.com/news/reuters.com,2026:newsml_S8N44Y01R:0-acwa-power-signs-preliminary-renewables-export-deal-with-mongolia-s-sunsteppe-power/">Reuters 经 TradingView（10-13）</a>；<a href="https://solarquarter.com/2026/10/14/acwa-and-mongolias-sun-steppe-power-explore-4-5-gw-renewable-energy-export-project-to-china/">SolarQuarter（10-14）</a></p>
-<p>📖 生词：<br />
-- <strong>memorandum</strong>（备忘录）| sign a memorandum / memorandum of understanding | ACWA and Sun Steppe Power signed a memorandum to explore the project.（ACWA 与 Sun Steppe 电力签署了一份备忘录，共同研究这个项目。）| "A verbal contract isn't worth the paper it's written on." — Samuel Goldwyn（口头协议连写它的那张纸都不值。——塞缪尔·戈德温）<br />
-- <strong>preliminary</strong>（初步的，预备的）| preliminary agreement / preliminary results | The deal is only preliminary; many details are still undecided.（这笔交易还只是初步协议，很多细节还没定。）| "A journey of a thousand miles begins with a single step." — Laozi（千里之行，始于足下。——老子）<br />
-- <strong>export</strong>（出口；输出）| export goods / electricity exports | Mongolia hopes to export its clean power to China.（蒙古希望把清洁电力出口到中国。）| "No nation was ever ruined by trade." — Benjamin Franklin（没有任何一个国家是因为贸易而衰败的。——本杰明·富兰克林）<br />
-- <strong>capacity</strong>（产能；装机容量）| installed capacity / at full capacity | The planned solar farms would add 4.5GW of capacity.（规划中的太阳能电站将新增 4.5 吉瓦装机容量。）| "Capacity is a state of mind." — 常用表达（能力是一种心态。）<br />
-- <strong>infrastructure</strong>（基础设施）| energy infrastructure / transmission infrastructure | Building cross-border power lines requires huge infrastructure investment.（建设跨境输电线路需要巨额的基础设施投入。）| "If you build it, he will come." — Field of Dreams（只要你建起来，他就会来。——电影《梦幻之地》）<br />
-- <strong>cooperation</strong>（合作）| international cooperation / memorandum of cooperation | The project is a new cooperation between Saudi and Mongolian firms.（这个项目是沙特与蒙古企业之间的新合作。）| "It is through cooperation, rather than conflict, that your greatest successes will be derived." — Ralph Charell（最大的成功来自于合作而非对抗。——拉尔夫·查雷尔）<br />
-- <strong>feasible</strong>（可行的）| technically feasible / economically feasible | Engineers must check whether the 4.5GW plan is feasible.（工程师们必须核实 4.5 吉瓦计划是否可行。）| "Everything is theoretically impossible, until it is done." — Robert A. Heinlein（在事情完成之前，一切在理论上都是不可能的。——罗伯特·海因莱因）<br />
-- <strong>assess</strong>（评估）| assess the risks / assess feasibility | The two companies will assess costs and grid conditions first.（两家公司将先评估成本和电网条件。）| "What gets measured gets managed." — Peter Drucker（能量化的才能被管理。——彼得·德鲁克）<br />
-- <strong>ambition</strong>（雄心，抱负）| regional ambitions / clean-energy ambition | The deal shows the region's growing clean-energy ambitions.（这笔交易展现了该地区日益增长的清洁能源雄心。）| "Ambition is the last refuge of failure." — Oscar Wilde（野心是失败者的最后避难所。——奥斯卡·王尔德）<br />
-- <strong>modest</strong>（不大的，适度的）| relatively modest / a modest proposal | The 500MWh battery plan is modest compared with the 4.5GW target.（与 4.5 吉瓦目标相比，500 兆瓦时的储能计划不算大。）| "Be modest, and you will be respected." — 常用表达（谦虚使人受尊敬。）<br />
-- <strong>portfolio</strong>（项目组合；投资组合）| energy portfolio / project portfolio | The agreement covers a portfolio of wind and solar projects.（协议涵盖了一批风电和光伏项目组合。）| "Don't put all your eggs in one basket." — 常用谚语（不要把所有鸡蛋放在一个篮子里。）<br />
-- <strong>generation</strong>（发电）| power generation / renewable generation | Mongolia's wind and solar generation potential is huge.（蒙古的风电和光伏发电潜力巨大。）| "Each generation imagines itself to be more intelligent than the one that went before it." — George Orwell（每一代人都自以为比上一代更聪明。——乔治·奥威尔）<br />
-- <strong>binding</strong>（有约束力的）| binding agreement / legally binding | A memorandum is not a binding contract yet.（备忘录目前还不是有约束力的合同。）| "Put it in writing." — 常用表达（白纸黑字写下来。）<br />
-- <strong>witness</strong>（见证）| witness a signing / bear witness | Saudi Arabia's energy minister witnessed the signing ceremony.（沙特能源大臣见证了签署仪式。）| "Well begun is half done." — 常用谚语（好的开始是成功的一半。）<br />
-- <strong>renewable</strong>（可再生的）| renewable energy / renewable sources | Solar and wind are renewable because they never run out.（太阳能和风能是可再生的，因为它们取之不尽。）| "The earth provides enough to satisfy every man's need, but not every man's greed." — Mahatma Gandhi（地球足以满足每个人的需要，但满足不了每个人的贪欲。——圣雄甘地）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>memorandum</strong>（备忘录）| sign a memorandum / memorandum of understanding | ACWA and Sun Steppe Power signed a memorandum to explore the project.（ACWA 与 Sun Steppe 电力签署了一份备忘录，共同研究这个项目。）| "A verbal contract isn't worth the paper it's written on." — Samuel Goldwyn（口头协议连写它的那张纸都不值。——塞缪尔·戈德温）</li>
+<li><strong>preliminary</strong>（初步的，预备的）| preliminary agreement / preliminary results | The deal is only preliminary; many details are still undecided.（这笔交易还只是初步协议，很多细节还没定。）| "A journey of a thousand miles begins with a single step." — Laozi（千里之行，始于足下。——老子）</li>
+<li><strong>export</strong>（出口；输出）| export goods / electricity exports | Mongolia hopes to export its clean power to China.（蒙古希望把清洁电力出口到中国。）| "No nation was ever ruined by trade." — Benjamin Franklin（没有任何一个国家是因为贸易而衰败的。——本杰明·富兰克林）</li>
+<li><strong>capacity</strong>（产能；装机容量）| installed capacity / at full capacity | The planned solar farms would add 4.5GW of capacity.（规划中的太阳能电站将新增 4.5 吉瓦装机容量。）| "Capacity is a state of mind." — 常用表达（能力是一种心态。）</li>
+<li><strong>infrastructure</strong>（基础设施）| energy infrastructure / transmission infrastructure | Building cross-border power lines requires huge infrastructure investment.（建设跨境输电线路需要巨额的基础设施投入。）| "If you build it, he will come." — Field of Dreams（只要你建起来，他就会来。——电影《梦幻之地》）</li>
+<li><strong>cooperation</strong>（合作）| international cooperation / memorandum of cooperation | The project is a new cooperation between Saudi and Mongolian firms.（这个项目是沙特与蒙古企业之间的新合作。）| "It is through cooperation, rather than conflict, that your greatest successes will be derived." — Ralph Charell（最大的成功来自于合作而非对抗。——拉尔夫·查雷尔）</li>
+<li><strong>feasible</strong>（可行的）| technically feasible / economically feasible | Engineers must check whether the 4.5GW plan is feasible.（工程师们必须核实 4.5 吉瓦计划是否可行。）| "Everything is theoretically impossible, until it is done." — Robert A. Heinlein（在事情完成之前，一切在理论上都是不可能的。——罗伯特·海因莱因）</li>
+<li><strong>assess</strong>（评估）| assess the risks / assess feasibility | The two companies will assess costs and grid conditions first.（两家公司将先评估成本和电网条件。）| "What gets measured gets managed." — Peter Drucker（能量化的才能被管理。——彼得·德鲁克）</li>
+<li><strong>ambition</strong>（雄心，抱负）| regional ambitions / clean-energy ambition | The deal shows the region's growing clean-energy ambitions.（这笔交易展现了该地区日益增长的清洁能源雄心。）| "Ambition is the last refuge of failure." — Oscar Wilde（野心是失败者的最后避难所。——奥斯卡·王尔德）</li>
+<li><strong>modest</strong>（不大的，适度的）| relatively modest / a modest proposal | The 500MWh battery plan is modest compared with the 4.5GW target.（与 4.5 吉瓦目标相比，500 兆瓦时的储能计划不算大。）| "Be modest, and you will be respected." — 常用表达（谦虚使人受尊敬。）</li>
+<li><strong>portfolio</strong>（项目组合；投资组合）| energy portfolio / project portfolio | The agreement covers a portfolio of wind and solar projects.（协议涵盖了一批风电和光伏项目组合。）| "Don't put all your eggs in one basket." — 常用谚语（不要把所有鸡蛋放在一个篮子里。）</li>
+<li><strong>generation</strong>（发电）| power generation / renewable generation | Mongolia's wind and solar generation potential is huge.（蒙古的风电和光伏发电潜力巨大。）| "Each generation imagines itself to be more intelligent than the one that went before it." — George Orwell（每一代人都自以为比上一代更聪明。——乔治·奥威尔）</li>
+<li><strong>binding</strong>（有约束力的）| binding agreement / legally binding | A memorandum is not a binding contract yet.（备忘录目前还不是有约束力的合同。）| "Put it in writing." — 常用表达（白纸黑字写下来。）</li>
+<li><strong>witness</strong>（见证）| witness a signing / bear witness | Saudi Arabia's energy minister witnessed the signing ceremony.（沙特能源大臣见证了签署仪式。）| "Well begun is half done." — 常用谚语（好的开始是成功的一半。）</li>
+<li><strong>renewable</strong>（可再生的）| renewable energy / renewable sources | Solar and wind are renewable because they never run out.（太阳能和风能是可再生的，因为它们取之不尽。）| "The earth provides enough to satisfy every man's need, but not every man's greed." — Mahatma Gandhi（地球足以满足每个人的需要，但满足不了每个人的贪欲。——圣雄甘地）</li>
+</ul>
 <hr />
 <h2>🇨🇳 国内要闻</h2>
 <h3>1. 前三季度我国外贸增长 18.8%，继续稳居全球货物贸易第一大国</h3>
@@ -450,17 +527,19 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 开源——菜谱公开，谁都能看、能用、能改；② 仓库（repository）——程序员在 GitHub 上的"菜谱收藏夹"，一个项目一个夹子；③ star——收藏点赞数，相当于 B 站的"收藏+投币"，越多越火；④ 逆向工程——买到成品包子，反推出馅料配方和包法；⑤ 二进制——机器读的"天书"，人类看不懂，REA 负责翻译成人话；⑥ MCP——AI 助手和外部工具之间的"通用插头"，插上就能让 AI 调用各种工具；⑦ 反编译——把"天书"翻回接近人类能读的代码；⑧ fork——把别人的菜谱复印一份到自己名下接着改。</p>
 <p><strong>一句话总结</strong>：想知道 App 背后怎么实现的？现在不用啃代码了，让 AI 替你"拆包子"，还附赠配方——这就是它一周涨粉 20 万的原因。</p>
 <p>🔗 来源：<a href="https://github.com/morluto/rea">GitHub 仓库</a>（10-15 当天 Trending 全站第 1）；<a href="https://startupfortune.com/an-ai-agent-that-reverse-engineers-any-software-just-hit-number-one-on-github/">Startup Fortune 报道</a></p>
-<p>📖 生词：<br />
-- <strong>curious</strong>（好奇的）| curious about / curious minds / curious to know | See a feature you like? Get curious about how it works.（看到喜欢的功能？好奇它是怎么实现的吧。）| "I have no special talent. I am only passionately curious." — Albert Einstein（我没有什么特殊天赋，只是极度好奇。——阿尔伯特·爱因斯坦）<br />
-- <strong>evidence</strong>（证据）| show evidence / hard evidence / gather evidence | Every finding comes with evidence attached.（每个结论都附带证据。）| "Extraordinary claims require extraordinary evidence." — Carl Sagan（超凡的主张需要超凡的证据。——卡尔·萨根）<br />
-- <strong>trail</strong>（痕迹；小径）| leave a trail / hit the trail / paper trail | REA follows the code trail until it finds the answer.（REA 沿着代码的痕迹一路找到答案。）| "Do not go where the path may lead, go instead where there is no path and leave a trail." — Ralph Waldo Emerson（不要走现成的路，要走没人走过的路，并留下自己的足迹。——拉尔夫·爱默生）<br />
-- <strong>join</strong>（加入）| join a team / join in / join forces | Join the reverse-engineering community on Discord.（去 Discord 加入逆向工程社区。）| "If you can't beat them, join them." — English proverb（打不过就加入。——英国谚语）<br />
-- <strong>leap</strong>（跳跃）| look before you leap / take the leap / a leap forward | Review the plan before you take the leap.（先看清方案再动手。）| "Look before you leap." — English proverb（三思而后行。——英国谚语）<br />
-- <strong>bridge</strong>（桥梁）| build a bridge / bridge the gap / cross a bridge | REA is a bridge between machine code and humans.（REA 是机器码和人类之间的桥梁。）| "We build too many walls and not enough bridges." — Isaac Newton (attributed)（我们筑了太多墙，却搭了太少桥。——牛顿，相传）<br />
-- <strong>local</strong>（本地的）| local machine / act locally / local business | Analysis runs locally; nothing leaves your machine.（分析全在本地运行，什么都不外传。）| "Think globally, act locally." — English proverb（全球思考，本地行动。——英国谚语）<br />
-- <strong>habit</strong>（习惯）| form a habit / break a habit / out of habit | Make updating REA a habit; it changes fast.（养成更新 REA 的习惯，它迭代很快。）| "We are what we repeatedly do. Excellence, then, is not an act, but a habit." — Aristotle (attributed)（我们是自己重复行为的总和，卓越不是一次行动，而是一种习惯。——亚里士多德，相传）<br />
-- <strong>run</strong>（运行）| run a command / run locally / run out of | Run one command and you are set.（运行一条命令就搞定了。）| "Run, Forrest, run!" — Forrest Gump（跑吧，阿甘，跑！——《阿甘正传》）<br />
-- <strong>free</strong>（免费的；自由的）| free of charge / free software / feel free | The tool itself is completely free.（工具本身完全免费。）| "The best things in life are free." — English proverb（人生最好的东西都是免费的。——英国谚语）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>curious</strong>（好奇的）| curious about / curious minds / curious to know | See a feature you like? Get curious about how it works.（看到喜欢的功能？好奇它是怎么实现的吧。）| "I have no special talent. I am only passionately curious." — Albert Einstein（我没有什么特殊天赋，只是极度好奇。——阿尔伯特·爱因斯坦）</li>
+<li><strong>evidence</strong>（证据）| show evidence / hard evidence / gather evidence | Every finding comes with evidence attached.（每个结论都附带证据。）| "Extraordinary claims require extraordinary evidence." — Carl Sagan（超凡的主张需要超凡的证据。——卡尔·萨根）</li>
+<li><strong>trail</strong>（痕迹；小径）| leave a trail / hit the trail / paper trail | REA follows the code trail until it finds the answer.（REA 沿着代码的痕迹一路找到答案。）| "Do not go where the path may lead, go instead where there is no path and leave a trail." — Ralph Waldo Emerson（不要走现成的路，要走没人走过的路，并留下自己的足迹。——拉尔夫·爱默生）</li>
+<li><strong>join</strong>（加入）| join a team / join in / join forces | Join the reverse-engineering community on Discord.（去 Discord 加入逆向工程社区。）| "If you can't beat them, join them." — English proverb（打不过就加入。——英国谚语）</li>
+<li><strong>leap</strong>（跳跃）| look before you leap / take the leap / a leap forward | Review the plan before you take the leap.（先看清方案再动手。）| "Look before you leap." — English proverb（三思而后行。——英国谚语）</li>
+<li><strong>bridge</strong>（桥梁）| build a bridge / bridge the gap / cross a bridge | REA is a bridge between machine code and humans.（REA 是机器码和人类之间的桥梁。）| "We build too many walls and not enough bridges." — Isaac Newton (attributed)（我们筑了太多墙，却搭了太少桥。——牛顿，相传）</li>
+<li><strong>local</strong>（本地的）| local machine / act locally / local business | Analysis runs locally; nothing leaves your machine.（分析全在本地运行，什么都不外传。）| "Think globally, act locally." — English proverb（全球思考，本地行动。——英国谚语）</li>
+<li><strong>habit</strong>（习惯）| form a habit / break a habit / out of habit | Make updating REA a habit; it changes fast.（养成更新 REA 的习惯，它迭代很快。）| "We are what we repeatedly do. Excellence, then, is not an act, but a habit." — Aristotle (attributed)（我们是自己重复行为的总和，卓越不是一次行动，而是一种习惯。——亚里士多德，相传）</li>
+<li><strong>run</strong>（运行）| run a command / run locally / run out of | Run one command and you are set.（运行一条命令就搞定了。）| "Run, Forrest, run!" — Forrest Gump（跑吧，阿甘，跑！——《阿甘正传》）</li>
+<li><strong>free</strong>（免费的；自由的）| free of charge / free software / feel free | The tool itself is completely free.（工具本身完全免费。）| "The best things in life are free." — English proverb（人生最好的东西都是免费的。——英国谚语）</li>
+</ul>
 <h3>2. debpalash/VoiceStudio——免费开源的"本地版 ElevenLabs"，声音克隆配音全离线</h3>
 <p><strong>仓库</strong>：<a href="https://github.com/debpalash/VoiceStudio">debpalash/VoiceStudio</a>（⭐ 66,271，fork 7,312，AGPL-3.0 协议）</p>
 <p><strong>它是做什么的</strong>：开源桌面应用（Mac / Windows / Linux 都有安装包，一条命令装好）：声音克隆（3 秒录音就能模仿你的声音）、设计新声音、视频配音、实时听写、转录、有声书制作，支持 646 种语言，内置 16 种语音引擎随便换。全部在你自己电脑上跑，不用联网、不用注册账号、不用 API key，声音数据不出家门。</p>
@@ -468,17 +547,19 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① API key——调用云端服务的"门禁卡"，这个应用不需要，因为它根本不出门；② 本地运行——饭在自己家厨房做，不叫外卖，食材（你的声音）不经外人手；③ 声音克隆——听你说 3 秒钟，就学会用你的嗓子念任何文字，像顶级模仿秀；④ 转录——把录音/视频里说的话变成文字稿；⑤ 配音（dubbing）——给视频换上另一种语言或声音的"声道"；⑥ 显卡加速（CUDA / MPS）——有好显卡就像有大火灶，做饭（生成语音）更快，没有也能用小火慢炖（CPU 慢慢跑）。</p>
 <p><strong>一句话总结</strong>：想给视频配音、克隆自己的声音，又不想按月交钱、不想把声音上传云端？这个免费开源工具就是为你准备的。</p>
 <p>🔗 来源：<a href="https://github.com/debpalash/VoiceStudio">GitHub 仓库</a>（10-15 当天 Trending 全站第 2）</p>
-<p>📖 生词：<br />
-- <strong>imitate</strong>（模仿）| imitate sb / imitate a voice / imitate nature | The app can imitate your voice from a short sample.（应用凭一小段录音就能模仿你的声音。）| "Imitation is the sincerest form of flattery." — Oscar Wilde (attributed)（模仿是最真诚的恭维。——奥斯卡·王尔德，相传）<br />
-- <strong>speak</strong>（说话）| speak up / speak softly / speak volumes | Type text and the app speaks it in your voice.（输入文字，应用就用你的声音说出来。）| "Speak softly and carry a big stick." — Theodore Roosevelt（说话温和，手持大棒。——西奥多·罗斯福）<br />
-- <strong>write</strong>（写）| write down / write to sb / write off | Dictation writes down what you say in real time.（听写功能实时把你说的话写下来。）| "We write to taste life twice, in the moment and in retrospect." — Anaïs Nin（我们写作，是为了把人生品尝两次：活着时一次，回忆时一次。——阿娜伊斯·宁）<br />
-- <strong>listen</strong>（听）| listen to / listen carefully / listen up | The engine listens and writes in 646 languages.（引擎用 646 种语言边听边写。）| "Most people do not listen with the intent to understand; they listen with the intent to reply." — Stephen Covey（多数人听不是为了理解，而是为了回应。——史蒂芬·柯维）<br />
-- <strong>control</strong>（控制；掌控）| take control / under control / in control | You stay in control of your voice data.（你的声音数据由你掌控。）| "Who controls the past controls the future: who controls the present controls the past." — George Orwell, 1984（谁控制过去就控制未来，谁控制现在就控制过去。——乔治·奥威尔《1984》）<br />
-- <strong>keep</strong>（保持；保留）| keep settings / keep in touch / keep a promise | Updates keep your projects and voices intact.（更新会完好保留你的项目和声音。）| "Keep your friends close, and your enemies closer." — The Godfather Part II（与朋友亲近，与敌人更亲近。——《教父2》）<br />
-- <strong>manage</strong>（管理）| manage files / manage time / manage to do | Manage all your voices in one place.（在一个地方管理你所有的声音。）| "If you can't measure it, you can't manage it." — Peter Drucker (attributed)（无法衡量就无法管理。——彼得·德鲁克，相传）<br />
-- <strong>prepare</strong>（准备）| prepare for / be prepared / prepare a meal | The installer prepares everything before first launch.（安装程序在首次启动前准备好一切。）| "Be prepared." — Scout motto（时刻准备着。——童子军铭言）<br />
-- <strong>power</strong>（动力；权力）| power through / in power / solar power | Your own GPU powers everything locally.（你自己的显卡在本地驱动一切。）| "With great power comes great responsibility." — Spider-Man（能力越大，责任越大。——《蜘蛛侠》）<br />
-- <strong>language</strong>（语言）| in 646 languages / body language / native language | It supports 646 languages out of the box.（开箱即支持 646 种语言。）| "The limits of my language mean the limits of my world." — Ludwig Wittgenstein（我语言的边界，就是我世界的边界。——路德维希·维特根斯坦）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>imitate</strong>（模仿）| imitate sb / imitate a voice / imitate nature | The app can imitate your voice from a short sample.（应用凭一小段录音就能模仿你的声音。）| "Imitation is the sincerest form of flattery." — Oscar Wilde (attributed)（模仿是最真诚的恭维。——奥斯卡·王尔德，相传）</li>
+<li><strong>speak</strong>（说话）| speak up / speak softly / speak volumes | Type text and the app speaks it in your voice.（输入文字，应用就用你的声音说出来。）| "Speak softly and carry a big stick." — Theodore Roosevelt（说话温和，手持大棒。——西奥多·罗斯福）</li>
+<li><strong>write</strong>（写）| write down / write to sb / write off | Dictation writes down what you say in real time.（听写功能实时把你说的话写下来。）| "We write to taste life twice, in the moment and in retrospect." — Anaïs Nin（我们写作，是为了把人生品尝两次：活着时一次，回忆时一次。——阿娜伊斯·宁）</li>
+<li><strong>listen</strong>（听）| listen to / listen carefully / listen up | The engine listens and writes in 646 languages.（引擎用 646 种语言边听边写。）| "Most people do not listen with the intent to understand; they listen with the intent to reply." — Stephen Covey（多数人听不是为了理解，而是为了回应。——史蒂芬·柯维）</li>
+<li><strong>control</strong>（控制；掌控）| take control / under control / in control | You stay in control of your voice data.（你的声音数据由你掌控。）| "Who controls the past controls the future: who controls the present controls the past." — George Orwell, 1984（谁控制过去就控制未来，谁控制现在就控制过去。——乔治·奥威尔《1984》）</li>
+<li><strong>keep</strong>（保持；保留）| keep settings / keep in touch / keep a promise | Updates keep your projects and voices intact.（更新会完好保留你的项目和声音。）| "Keep your friends close, and your enemies closer." — The Godfather Part II（与朋友亲近，与敌人更亲近。——《教父2》）</li>
+<li><strong>manage</strong>（管理）| manage files / manage time / manage to do | Manage all your voices in one place.（在一个地方管理你所有的声音。）| "If you can't measure it, you can't manage it." — Peter Drucker (attributed)（无法衡量就无法管理。——彼得·德鲁克，相传）</li>
+<li><strong>prepare</strong>（准备）| prepare for / be prepared / prepare a meal | The installer prepares everything before first launch.（安装程序在首次启动前准备好一切。）| "Be prepared." — Scout motto（时刻准备着。——童子军铭言）</li>
+<li><strong>power</strong>（动力；权力）| power through / in power / solar power | Your own GPU powers everything locally.（你自己的显卡在本地驱动一切。）| "With great power comes great responsibility." — Spider-Man（能力越大，责任越大。——《蜘蛛侠》）</li>
+<li><strong>language</strong>（语言）| in 646 languages / body language / native language | It supports 646 languages out of the box.（开箱即支持 646 种语言。）| "The limits of my language mean the limits of my world." — Ludwig Wittgenstein（我语言的边界，就是我世界的边界。——路德维希·维特根斯坦）</li>
+</ul>
 <hr />
 <div class="nav bottom"><a href="issue-018.html">⬅ 上一期（第18期）</a><a href="index.html">📚 回到目录</a><a href="issue-020.html">下一期（第20期）➡</a></div>
 <script>

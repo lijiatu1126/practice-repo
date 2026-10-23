@@ -57,6 +57,44 @@ body.dark .note { color: #a39a89; }
 body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
 body.dark th { background: #262219; }
+.summary { background:#edf3fd; border-left:4px solid #1757c2; border-radius:6px; padding:12px 16px; }
+.blessing { text-align: center; color: #8a3324; font-size: 1.07em; font-weight: 600;
+            letter-spacing: 0.04em; margin: 0 0 16px; }
+.sec-label { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+             font-weight: 700; margin: 0 0 6px; font-size: 0.98em; letter-spacing: 0.03em; }
+.glossary { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 6px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.vocabbox .sec-label { color: #1757c2; }
+.vocabbox ul { list-style: none; padding-left: 0; margin: 6px 0 4px; }
+li.vocab { padding: 10px 0 12px; border-bottom: 1px dashed #ddd5bd; margin: 0; }
+li.vocab:last-child { border-bottom: none; }
+.vword { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         font-weight: 800; font-size: 1.12em; color: #1757c2; margin-right: 6px; }
+.vmean { font-weight: 700; }
+.vrow { font-size: 0.93em; color: #4a463e; margin-top: 3px; line-height: 1.8; }
+.vlabel { display: inline-block; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
+          padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
+.vquote { color: #6b6257; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources .sec-label { color: #5a554c; }
+.sources ul { margin: 4px 0; }
+h3::before { content: "▍"; color: #8a3324; }
+body.dark .blessing { color: #e0a458; }
+body.dark .glossary { background: #262219; }
+body.dark .vocabbox { background: #1d1b16; border-color: #3a362a; }
+body.dark li.vocab { border-bottom-color: #3a362a; }
+body.dark .vword { color: #8ab8ff; }
+body.dark .vrow { color: #c9c2b2; }
+body.dark .vlabel { background: #33302a; color: #e0c98a; }
+body.dark .vquote { color: #a39a89; }
+body.dark .summary { background: #1c2733; border-left-color: #8ab8ff; }
+body.dark .sources { color: #a39a89; }
+body.dark h3::before { color: #e0a458; }
 body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
@@ -67,6 +105,7 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📚 《麻薯日报》合集 · 第 17 期 · 2026-10-13（星期二）</p>
 </blockquote>
 <h1>📰 10月13日 新闻简报</h1>
+<p class="blessing">🌅 愿你今天的努力，都能在某一天开花结果。</p>
 <p>早安 Ricardo ☀️ 周二快乐！今天是 2026 年 10 月 13 日，你的晨间简报来了——美银预测美联储 10 月、12 月再加息两次；美股芯片股重挫拖累亚太市场、美元创 17 个月新高；2026 诺贝尔经济学奖揭晓；苹果今日"Welcome Home"发布会；国产 AI 芯片一天吸金超 64 亿；北约最高指挥官警告俄罗斯；特朗普"能源停火"落地即破；埃塞俄比亚称遭厄立特里亚"全面入侵"；新质生产力 19 条出炉、房贷贴息满 10 天、灵活就业社保新政；十月理论教你温和重启；夫妻变"室友"的心理学解释。慢慢看 ☕</p>
 <hr />
 <h2>💰 金融</h2>
@@ -76,52 +115,58 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 加息——央行把借钱的价格调高，目的是让经济降温、压住通胀；② 基点——利率的最小单位，25 个基点 = 0.25%；③ 限制性政策——利率高到能抑制经济活动的水平，给经济"踩刹车"；④ 粘性通胀——物价涨上去了就很难再降下来，像粘住了一样；⑤ 落后于曲线——央行行动太慢，通胀已经跑到前面了，贬义词；⑥ FOMC——美联储里决定利率的开会小组。</p>
 <p><strong>一句话总结</strong>：美银押注美联储年内还要加两次息，高利率时代短期内看不到头。</p>
 <p>🔗 来源：<a href="https://www.tribuneindia.com/news/business/strong-us-growth-sticky-inflation-may-prompt-two-more-fed-rate-hikes-in-2026-bofa/">The Tribune（转述美银报告，10-12）</a>；<a href="https://m.economictimes.com/markets/us-stocks/wall-street-guide/dow-jones-us-stock-market-live-updates-nasdaq-sp-500-iran-war-trump-hormuz-deal-brent-crude-oil-fed-rate-yield-earnings-season-iren-wells-fargo-goldman-sachs-citigroup-jpmorgan-ai-chip-stock-price-news-12th-october-2026/amp_liveblog/134892994.cms">Economic Times（美联储官员言论，10-12）</a></p>
-<p>📖 生词：<br />
-- <strong>resilient</strong>（有韧性的、坚挺的）| resilient economy / resilient demand | Resilient consumer spending supported growth. | "The world breaks everyone, and afterward, many are strong at the broken places." — Ernest Hemingway《永别了，武器》<br />
-- <strong>persistent</strong>（持续的、顽固的）| persistent inflation / persistent pressure | Persistent inflation pressures could require further tightening. | "Nothing in this world can take the place of persistence." — Calvin Coolidge<br />
-- <strong>tightening</strong>（收紧，尤指货币政策）| monetary tightening / tightening cycle | Further tightening may be needed to cool prices. | "When the going gets tough, the tough get going." — 常用英文谚语<br />
-- <strong>gauge</strong>（衡量、评估）| gauge inflation / gauge the mood | The Fed is gauging inflation through new data. | "You can't manage what you can't measure." — Peter Drucker<br />
-- <strong>curb</strong>（控制、抑制）| curb inflation / curb spending | Rate hikes aim to curb inflation. | "With great power comes great responsibility." —《蜘蛛侠》<br />
-- <strong>momentum</strong>（势头、动量）| economic momentum / gain momentum | The economy kept its momentum in Q3. | "Success is not final, failure is not fatal: it is the courage to continue that counts." — Winston Churchill<br />
-- <strong>assess</strong>（评估）| assess the risk / assess the situation | Officials will assess incoming data before acting. | "The unexamined life is not worth living." — Socrates<br />
-- <strong>pass through</strong>（传导，价格上涨传到下游）| pass through to prices | Energy costs may pass through to food prices. | "No man is an island." — John Donne（万物相连的语境）<br />
-- <strong>entrenched</strong>（根深蒂固的）| entrenched inflation / entrenched views | Entrenched inflation is hard to bring down. | "Old habits die hard." — 经典谚语<br />
-- <strong>broaden</strong>（扩大、变得更广泛）| broaden the base / broad-based | Inflation pressures became broad-based. | "The mind, once stretched by a new idea, never returns to its original dimensions." — Ralph Waldo Emerson</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>resilient</strong>（有韧性的、坚挺的）| resilient economy / resilient demand | Resilient consumer spending supported growth. | "The world breaks everyone, and afterward, many are strong at the broken places." — Ernest Hemingway《永别了，武器》</li>
+<li><strong>persistent</strong>（持续的、顽固的）| persistent inflation / persistent pressure | Persistent inflation pressures could require further tightening. | "Nothing in this world can take the place of persistence." — Calvin Coolidge</li>
+<li><strong>tightening</strong>（收紧，尤指货币政策）| monetary tightening / tightening cycle | Further tightening may be needed to cool prices. | "When the going gets tough, the tough get going." — 常用英文谚语</li>
+<li><strong>gauge</strong>（衡量、评估）| gauge inflation / gauge the mood | The Fed is gauging inflation through new data. | "You can't manage what you can't measure." — Peter Drucker</li>
+<li><strong>curb</strong>（控制、抑制）| curb inflation / curb spending | Rate hikes aim to curb inflation. | "With great power comes great responsibility." —《蜘蛛侠》</li>
+<li><strong>momentum</strong>（势头、动量）| economic momentum / gain momentum | The economy kept its momentum in Q3. | "Success is not final, failure is not fatal: it is the courage to continue that counts." — Winston Churchill</li>
+<li><strong>assess</strong>（评估）| assess the risk / assess the situation | Officials will assess incoming data before acting. | "The unexamined life is not worth living." — Socrates</li>
+<li><strong>pass through</strong>（传导，价格上涨传到下游）| pass through to prices | Energy costs may pass through to food prices. | "No man is an island." — John Donne（万物相连的语境）</li>
+<li><strong>entrenched</strong>（根深蒂固的）| entrenched inflation / entrenched views | Entrenched inflation is hard to bring down. | "Old habits die hard." — 经典谚语</li>
+<li><strong>broaden</strong>（扩大、变得更广泛）| broaden the base / broad-based | Inflation pressures became broad-based. | "The mind, once stretched by a new idea, never returns to its original dimensions." — Ralph Waldo Emerson</li>
+</ul>
 <h3>2. 芯片股重挫拖累全球市场：长鑫存储突破引发抛售，美元创 17 个月新高</h3>
 <p><strong>发生了什么</strong>：10 月 13 日彭博"Markets Wrap"显示，美国芯片股大跌：美光跌 3.9%、SK 海力士美股跌 4%、Sandisk 重挫 6%，原因是长鑫存储（CXMT）宣布在存储芯片设计上取得突破，能存储更多数据。芯片股指数跌 2.7%，纳斯达克 100 跌 0.7%。亚太市场跟随走低——日本、香港、韩国股指期货均指向低开。美元走强至 2025 年 5 月中旬以来的最高水平。市场正在等待本周的美国 CPI 通胀数据和即将到来的财报季，投资者开始担心高利率环境下科技股的高估值能否被盈利撑住。</p>
 <p><strong>为什么值得关注</strong>：芯片股是 AI 行情的发动机，它一跌，整个科技板块和全球市场都会震动。长鑫存储的突破意味着中国在存储芯片领域追赶速度加快，这也是中美科技竞争的缩影。加上本周 CPI 数据和银行财报密集来袭，市场波动会加大。</p>
 <p><strong>名词解释</strong>：① 估值——市场给一家公司定的"身价"；估值高意味着股价贵，靠的是未来赚钱的预期；② 财报季——上市公司集中公布季度成绩单的时期，成绩好坏直接决定股价涨跌；③ 股指期货——还没开盘时，市场对第二天涨跌的"预判单"，常被看作风向标；④ 避险资产——市场害怕时资金躲的地方，如美元、黄金、美债；⑤ 国债收益率——政府借钱的利率，收益率越高，借钱越贵，股市越难受；⑥ 抛售——大家集中卖股票，导致价格快速下跌。</p>
 <p><strong>一句话总结</strong>：中国存储芯片新突破引发美股芯片股抛售，亚太市场承压，美元创 17 个月新高。</p>
 <p>🔗 来源：<a href="https://www.swissinfo.ch/eng/asian-stocks-to-fall-after-us-chipmaker-selloff:-markets-wrap/92205594">Bloomberg 经 Swissinfo（10-13）</a></p>
-<p>📖 生词：<br />
-- <strong>weigh on</strong>（拖累、压制）| weigh on sentiment / weigh on markets | The chip selloff weighed on market sentiment. | "Heavy is the head that wears the crown." — Shakespeare《亨利四世》<br />
-- <strong>gauge</strong>（指标、衡量尺度）| a gauge of chipmakers / key gauge | A gauge of chipmakers fell 2.7%. | "What gets measured gets managed." — Peter Drucker<br />
-- <strong>fluctuate</strong>（波动、涨跌不定）| fluctuate sharply / fluctuate with | Treasury futures fluctuated ahead of the data. | "The only constant in life is change." — Heraclitus<br />
-- <strong>onus</strong>（责任、重担）| put the onus on / bear the onus | The onus is on earnings growth to justify valuations. | "With great power comes great responsibility." —《蜘蛛侠》<br />
-- <strong>elevated</strong>（偏高的、升高的）| elevated valuations / elevated yields | Investors worry about elevated valuations. | "Pride goes before a fall." —《圣经·箴言》<br />
-- <strong>reinforce</strong>（加强、巩固）| reinforce the narrative / reinforce confidence | Strong earnings could reinforce the bull narrative. | "Repetition is the mother of learning." — 拉丁谚语<br />
-- <strong>catalyze</strong>（引发、催化）| catalyze a pullback / catalyze change | A disappointment could catalyze a broader pullback. | "A journey of a thousand miles begins with a single step." — Laozi《道德经》<br />
-- <strong>pivotal</strong>（关键的、转折性的）| pivotal earnings season / pivotal moment | Markets awaited a pivotal earnings season. | "In the middle of difficulty lies opportunity." — Albert Einstein<br />
-- <strong>edge higher / lower</strong>（小幅上涨/下跌）| edged higher / edged lower | Futures for Australia edged higher. | "Little strokes fell great oaks." — Benjamin Franklin<br />
-- <strong>sentiment</strong>（市场情绪）| weigh on sentiment / boost sentiment | Weak chips weighed on investor sentiment. | "The market can stay irrational longer than you can stay solvent." — John Maynard Keynes<br />
-- <strong>outlook</strong>（前景、展望）| economic outlook / earnings outlook | Investors weighed the outlook for capital spending. | "The best way to predict the future is to create it." — Peter Drucker</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>weigh on</strong>（拖累、压制）| weigh on sentiment / weigh on markets | The chip selloff weighed on market sentiment. | "Heavy is the head that wears the crown." — Shakespeare《亨利四世》</li>
+<li><strong>gauge</strong>（指标、衡量尺度）| a gauge of chipmakers / key gauge | A gauge of chipmakers fell 2.7%. | "What gets measured gets managed." — Peter Drucker</li>
+<li><strong>fluctuate</strong>（波动、涨跌不定）| fluctuate sharply / fluctuate with | Treasury futures fluctuated ahead of the data. | "The only constant in life is change." — Heraclitus</li>
+<li><strong>onus</strong>（责任、重担）| put the onus on / bear the onus | The onus is on earnings growth to justify valuations. | "With great power comes great responsibility." —《蜘蛛侠》</li>
+<li><strong>elevated</strong>（偏高的、升高的）| elevated valuations / elevated yields | Investors worry about elevated valuations. | "Pride goes before a fall." —《圣经·箴言》</li>
+<li><strong>reinforce</strong>（加强、巩固）| reinforce the narrative / reinforce confidence | Strong earnings could reinforce the bull narrative. | "Repetition is the mother of learning." — 拉丁谚语</li>
+<li><strong>catalyze</strong>（引发、催化）| catalyze a pullback / catalyze change | A disappointment could catalyze a broader pullback. | "A journey of a thousand miles begins with a single step." — Laozi《道德经》</li>
+<li><strong>pivotal</strong>（关键的、转折性的）| pivotal earnings season / pivotal moment | Markets awaited a pivotal earnings season. | "In the middle of difficulty lies opportunity." — Albert Einstein</li>
+<li><strong>edge higher / lower</strong>（小幅上涨/下跌）| edged higher / edged lower | Futures for Australia edged higher. | "Little strokes fell great oaks." — Benjamin Franklin</li>
+<li><strong>sentiment</strong>（市场情绪）| weigh on sentiment / boost sentiment | Weak chips weighed on investor sentiment. | "The market can stay irrational longer than you can stay solvent." — John Maynard Keynes</li>
+<li><strong>outlook</strong>（前景、展望）| economic outlook / earnings outlook | Investors weighed the outlook for capital spending. | "The best way to predict the future is to create it." — Peter Drucker</li>
+</ul>
 <h3>3. 2026 年诺贝尔经济学奖揭晓：授予霍尔与伍德福德，表彰"经济稳定的微观基础"</h3>
 <p><strong>发生了什么</strong>：瑞典皇家科学院 10 月 12 日宣布，2026 年诺贝尔经济学奖授予美国学者罗伯特·霍尔（Robert Hall，斯坦福大学）与迈克尔·伍德福德（Michael Woodford，哥伦比亚大学），表彰他们在"宏观经济稳定的微观基础"方面的贡献。奖金 1200 万瑞典克朗（约 120 万美元），两人平分。他们的核心洞见是：要熨平经济波动，必须从家庭和企业每个微观决策出发建模，而不是只看通胀、产出等宏观变量。评审委员会主席哈斯勒说，他们的理论"为全球央行和政府使用的模型提供了稳定的理论基础"，帮助应对能源危机、消费突变等冲击。伍德福德在新闻发布会上特别提到，这套框架在 2008 年金融危机后的政策应对中发挥了重要作用。</p>
 <p><strong>为什么值得关注</strong>：这几乎是"央行的诺贝尔奖"——全球各大央行现在用的政策模型都建立在这套理论上。在全球通胀反复、能源冲击不断的当下（美联储正在加息抗通胀、能源价格波动），这项理论的现实意义格外突出。它也解释了为什么央行现在如此重视"预期管理"：央行说的话本身就能影响家庭和企业的行为。</p>
 <p><strong>名词解释</strong>：① 宏观经济稳定化——让经济别大起大落，熨平高峰和低谷；② 微观基础——从每个家庭、每家企业的具体决策出发来理解整个经济；③ 货币政策——央行调利率等手段；财政政策则是政府花钱、减税等手段；④ 外部冲击——经济体控制不了的突发打击，如战争、油价暴涨、疫情；⑤ 通胀预期——大家心里觉得未来物价会涨多少，这个预期本身就会影响实际物价。</p>
 <p><strong>一句话总结</strong>：全球央行都在用的理论模型拿了诺奖，"预期管理"是它的现实注解。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/world/hall-woodford-win-2026-nobel-economics-prize-2026-10-12/">Reuters（10-12）</a></p>
-<p>📖 生词：<br />
-- <strong>prestigious</strong>（声望很高的）| prestigious award / prestigious university | The prestigious award is worth $1.2 million. | "With great power comes great responsibility." —《蜘蛛侠》<br />
-- <strong>stabilise</strong>（稳定、使平稳）| stabilise the economy / stabilise prices | The models help stabilise economies. | "In the midst of chaos, there is also opportunity." — Sun Tzu《孙子兵法》<br />
-- <strong>downturn</strong>（经济衰退、低迷期）| economic downturn / weather the downturn | The models help deal with economic downturns. | "When the going gets tough, the tough get going." — 常用谚语<br />
-- <strong>trough</strong>（低谷、波谷）| peaks and troughs / smooth out troughs | They helped smooth out the economy's peaks and troughs. | "After a storm comes a calm." — 常用谚语<br />
-- <strong>ground-up</strong>（自下而上的、从基层做起的）| ground-up models / build ground-up | They built ground-up models used by central banks. | "A journey of a thousand miles begins with a single step." — Laozi《道德经》<br />
-- <strong>grapple with</strong>（努力应对、搏斗）| grapple with inflation / grapple with the shock | Central banks are grappling with the energy shock. | "I have not failed. I've just found 10,000 ways that won't work." — Thomas Edison<br />
-- <strong>bolster</strong>（加强、支持）| bolster confidence / bolster tools | The framework bolstered traditional policy tools. | "United we stand, divided we fall." — Aesop<br />
-- <strong>explicit</strong>（明确的、直白的）| explicit statement / make explicit | Making explicit statements about rate paths helped. | "Honesty is the first chapter in the book of wisdom." — Thomas Jefferson<br />
-- <strong>keel</strong>（船的龙骨；even keel 喻平稳）| keep on an even keel / off keel | The models kept economies on an even keel. | "Smooth seas do not make skillful sailors." — 非洲谚语<br />
-- <strong>entrenched</strong>（根深蒂固的）| entrenched views / entrenched inflation | The new framework replaced entrenched old theories. | "The only thing we have to fear is fear itself." — Franklin D. Roosevelt</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>prestigious</strong>（声望很高的）| prestigious award / prestigious university | The prestigious award is worth $1.2 million. | "With great power comes great responsibility." —《蜘蛛侠》</li>
+<li><strong>stabilise</strong>（稳定、使平稳）| stabilise the economy / stabilise prices | The models help stabilise economies. | "In the midst of chaos, there is also opportunity." — Sun Tzu《孙子兵法》</li>
+<li><strong>downturn</strong>（经济衰退、低迷期）| economic downturn / weather the downturn | The models help deal with economic downturns. | "When the going gets tough, the tough get going." — 常用谚语</li>
+<li><strong>trough</strong>（低谷、波谷）| peaks and troughs / smooth out troughs | They helped smooth out the economy's peaks and troughs. | "After a storm comes a calm." — 常用谚语</li>
+<li><strong>ground-up</strong>（自下而上的、从基层做起的）| ground-up models / build ground-up | They built ground-up models used by central banks. | "A journey of a thousand miles begins with a single step." — Laozi《道德经》</li>
+<li><strong>grapple with</strong>（努力应对、搏斗）| grapple with inflation / grapple with the shock | Central banks are grappling with the energy shock. | "I have not failed. I've just found 10,000 ways that won't work." — Thomas Edison</li>
+<li><strong>bolster</strong>（加强、支持）| bolster confidence / bolster tools | The framework bolstered traditional policy tools. | "United we stand, divided we fall." — Aesop</li>
+<li><strong>explicit</strong>（明确的、直白的）| explicit statement / make explicit | Making explicit statements about rate paths helped. | "Honesty is the first chapter in the book of wisdom." — Thomas Jefferson</li>
+<li><strong>keel</strong>（船的龙骨；even keel 喻平稳）| keep on an even keel / off keel | The models kept economies on an even keel. | "Smooth seas do not make skillful sailors." — 非洲谚语</li>
+<li><strong>entrenched</strong>（根深蒂固的）| entrenched views / entrenched inflation | The new framework replaced entrenched old theories. | "The only thing we have to fear is fear itself." — Franklin D. Roosevelt</li>
+</ul>
 <hr />
 <h2>🤖 AI</h2>
 <h3>1. 苹果今日举行"Welcome Home"发布会，Siri AI 进军智能家居</h3>
@@ -130,52 +175,58 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 智能家居中枢——家里的智能设备"总指挥"，一台带屏音箱能控制灯、空调、门锁等；② Siri AI——苹果语音助手的新一代 AI 版本；③ 生态系统——同一品牌设备加软件形成的闭环，用得越多越离不开。</p>
 <p><strong>一句话总结</strong>：苹果今天杀入智能家居中枢市场，Siri AI 成为家庭新入口。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/business/retail-consumer/apple-plans-make-push-into-smart-home-market-oct-13-bloomberg-news-reports-2026-09-30/">Reuters 援引 Bloomberg News</a>；<a href="https://www.macrumors.com/2026/10/08/new-apple-product-still-expected-october-13/">MacRumors（10-08）</a></p>
-<p>📖 生词：<br />
-- <strong>innovation</strong>（创新）| technological innovation / drive innovation | Siri AI represents a major innovation in smart home control. | "Innovation distinguishes between a leader and a follower." — Steve Jobs<br />
-- <strong>ambition</strong>（雄心、抱负）| bold ambition / fulfill one's ambition | Apple's ambition is to dominate the smart home market. | "Ambition is the path to success. Persistence is the vehicle you arrive in." — Bill Bradley<br />
-- <strong>breakthrough</strong>（突破）| major breakthrough / breakthrough technology | The new Siri is being called a breakthrough in voice assistants. | "A breakthrough in machine learning would be worth ten Microsofts." — Bill Gates<br />
-- <strong>leap</strong>（飞跃、跳跃）| a giant leap / leap forward | The hub marks a giant leap for Apple's home strategy. | "That's one small step for man, one giant leap for mankind." — Neil Armstrong<br />
-- <strong>vision</strong>（愿景）| long-term vision / share a vision | The CEO outlined his vision for the AI-powered home. | "The only thing worse than being blind is having sight but no vision." — Helen Keller<br />
-- <strong>strategy</strong>（战略、策略）| marketing strategy / at the center of one's strategy | The hub is at the center of Apple's smart-home strategy. | "Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat." — Sun Tzu《孙子兵法》<br />
-- <strong>curious</strong>（好奇的）| be curious about / curious minds | Consumers are curious about the hub's price and release date. | "I have no special talent. I am only passionately curious." — Albert Einstein<br />
-- <strong>commitment</strong>（承诺、投入）| deepen one's commitment / commitment to privacy | Apple reiterated its commitment to on-device AI processing. | "There's a difference between interest and commitment. When you're interested in doing something, you do it only when it's convenient. When you're committed to something, you accept no excuses; only results." — Kenneth Blanchard<br />
-- <strong>frontier</strong>（前沿、边疆）| at the frontier of AI / technological frontier | Smart homes are the next frontier for AI assistants. | "Space: the final frontier. These are the voyages of the starship Enterprise." —《Star Trek 星际迷航》<br />
-- <strong>change</strong>（变化、改变）| bring about change / embrace change | The hub could change how families interact with technology. | "Be the change you wish to see in the world." — Mahatma Gandhi</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>innovation</strong>（创新）| technological innovation / drive innovation | Siri AI represents a major innovation in smart home control. | "Innovation distinguishes between a leader and a follower." — Steve Jobs</li>
+<li><strong>ambition</strong>（雄心、抱负）| bold ambition / fulfill one's ambition | Apple's ambition is to dominate the smart home market. | "Ambition is the path to success. Persistence is the vehicle you arrive in." — Bill Bradley</li>
+<li><strong>breakthrough</strong>（突破）| major breakthrough / breakthrough technology | The new Siri is being called a breakthrough in voice assistants. | "A breakthrough in machine learning would be worth ten Microsofts." — Bill Gates</li>
+<li><strong>leap</strong>（飞跃、跳跃）| a giant leap / leap forward | The hub marks a giant leap for Apple's home strategy. | "That's one small step for man, one giant leap for mankind." — Neil Armstrong</li>
+<li><strong>vision</strong>（愿景）| long-term vision / share a vision | The CEO outlined his vision for the AI-powered home. | "The only thing worse than being blind is having sight but no vision." — Helen Keller</li>
+<li><strong>strategy</strong>（战略、策略）| marketing strategy / at the center of one's strategy | The hub is at the center of Apple's smart-home strategy. | "Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat." — Sun Tzu《孙子兵法》</li>
+<li><strong>curious</strong>（好奇的）| be curious about / curious minds | Consumers are curious about the hub's price and release date. | "I have no special talent. I am only passionately curious." — Albert Einstein</li>
+<li><strong>commitment</strong>（承诺、投入）| deepen one's commitment / commitment to privacy | Apple reiterated its commitment to on-device AI processing. | "There's a difference between interest and commitment. When you're interested in doing something, you do it only when it's convenient. When you're committed to something, you accept no excuses; only results." — Kenneth Blanchard</li>
+<li><strong>frontier</strong>（前沿、边疆）| at the frontier of AI / technological frontier | Smart homes are the next frontier for AI assistants. | "Space: the final frontier. These are the voyages of the starship Enterprise." —《Star Trek 星际迷航》</li>
+<li><strong>change</strong>（变化、改变）| bring about change / embrace change | The hub could change how families interact with technology. | "Be the change you wish to see in the world." — Mahatma Gandhi</li>
+</ul>
 <h3>2. SiMa.ai 完成 1.5 亿美元 C 轮融资，估值 14.5 亿美元，加码"Physical AI"芯片</h3>
 <p><strong>发生了什么</strong>：AI 芯片公司 SiMa.ai 于 10 月 12 日宣布完成 1.5 亿美元 C 轮融资，估值达到 14.5 亿美元，累计融资额达 5 亿美元。本轮由 Fidelity 和 Amplify 领投。公司打造专用 AI 芯片 + 软件一体平台，让 AI 直接在机器人、汽车、无人机等物理设备上本地运行，而不依赖云端的高功耗 GPU。</p>
 <p><strong>为什么值得关注</strong>：AI 正在从云端走向物理世界（具身智能 / Physical AI），Counterpoint 预测到 2035 年 Physical AI 设备累计出货将达 1.45 亿台；低功耗专用芯片成为新赛道，资本正在押注"下一个英伟达时刻"发生在边缘端。</p>
 <p><strong>名词解释</strong>：① C 轮融资——创业公司第三轮大额融资，通常已接近成熟；② 估值——投资人给公司定的"身价"；③ 领投——一轮融资里出钱最多的投资方；④ Physical AI（具身智能）——AI 从屏幕走进物理世界，跑在车、机器人等硬件上；⑤ 边缘计算——数据在设备本地处理、不传回云端，速度快还省电。</p>
 <p><strong>一句话总结</strong>：资本押注 AI 走出云端，"边缘端英伟达"争夺战开打。</p>
 <p>🔗 来源：<a href="https://www.intelligentcio.com/north-america/2026/10/12/sima-ai-hits-us1-45-billion-valuation-after-us150-million-funding-round-to-scale-physical-ai/">Intelligent CIO（10-12）</a></p>
-<p>📖 生词：<br />
-- <strong>worth</strong>（值得的、相当于……价值的）| be worth doing / worth billions | The startup proved to be worth every dollar invested. | "A breakthrough in machine learning would be worth ten Microsofts." — Bill Gates<br />
-- <strong>security</strong>（安全、保障）| national security / financial security | Investors are seeking security in hard tech assets. | "Security is mostly a superstition. It does not exist in nature." — Helen Keller<br />
-- <strong>speed</strong>（速度）| at speed / processing speed | The new chip boosts on-device processing speed. | "I feel the need... the need for speed!" —《Top Gun 壮志凌云》<br />
-- <strong>persistence</strong>（坚持、毅力）| with persistence / the key is persistence | The founder's persistence finally paid off with this funding round. | "Nothing in this world can take the place of persistence." — Calvin Coolidge<br />
-- <strong>pledge</strong>（承诺、保证）| make a pledge / pledge allegiance | The CEO pledged faster delivery of the next-gen chip. | "I pledge allegiance to the Flag of the United States of America..." — 美国效忠誓词<br />
-- <strong>rule</strong>（规则）| break the rules / as a rule | The startup is rewriting the rules of chip design. | "The first rule of Fight Club is: you do not talk about Fight Club." —《Fight Club 搏击俱乐部》<br />
-- <strong>convince</strong>（说服）| convince sb. of sth. / be convinced that | The team convinced investors that edge AI is the future. | "The greatest trick the devil ever pulled was convincing the world he didn't exist." —《The Usual Suspects 非常嫌疑犯》<br />
-- <strong>frankly</strong>（坦率地）| frankly speaking | Frankly, the chip market has never been this hot. | "Frankly, my dear, I don't give a damn." —《Gone with the Wind 乱世佳人》<br />
-- <strong>enemy</strong>（敌人、对手）| fierce enemy / make enemies | In the chip race, power consumption is the enemy. | "Keep your friends close, but your enemies closer." —《The Godfather Part II 教父 2》<br />
-- <strong>try</strong>（尝试）| give it a try / try one's best | Startups must try new approaches to chip architecture. | "Do, or do not. There is no try." — Yoda《Star Wars 星球大战》<br />
-- <strong>fear</strong>（恐惧）| fear of missing out / overcome fear | Investors' fear of missing the AI wave is driving record funding. | "Fear is the path to the dark side. Fear leads to anger." — Yoda《Star Wars 星球大战》</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>worth</strong>（值得的、相当于……价值的）| be worth doing / worth billions | The startup proved to be worth every dollar invested. | "A breakthrough in machine learning would be worth ten Microsofts." — Bill Gates</li>
+<li><strong>security</strong>（安全、保障）| national security / financial security | Investors are seeking security in hard tech assets. | "Security is mostly a superstition. It does not exist in nature." — Helen Keller</li>
+<li><strong>speed</strong>（速度）| at speed / processing speed | The new chip boosts on-device processing speed. | "I feel the need... the need for speed!" —《Top Gun 壮志凌云》</li>
+<li><strong>persistence</strong>（坚持、毅力）| with persistence / the key is persistence | The founder's persistence finally paid off with this funding round. | "Nothing in this world can take the place of persistence." — Calvin Coolidge</li>
+<li><strong>pledge</strong>（承诺、保证）| make a pledge / pledge allegiance | The CEO pledged faster delivery of the next-gen chip. | "I pledge allegiance to the Flag of the United States of America..." — 美国效忠誓词</li>
+<li><strong>rule</strong>（规则）| break the rules / as a rule | The startup is rewriting the rules of chip design. | "The first rule of Fight Club is: you do not talk about Fight Club." —《Fight Club 搏击俱乐部》</li>
+<li><strong>convince</strong>（说服）| convince sb. of sth. / be convinced that | The team convinced investors that edge AI is the future. | "The greatest trick the devil ever pulled was convincing the world he didn't exist." —《The Usual Suspects 非常嫌疑犯》</li>
+<li><strong>frankly</strong>（坦率地）| frankly speaking | Frankly, the chip market has never been this hot. | "Frankly, my dear, I don't give a damn." —《Gone with the Wind 乱世佳人》</li>
+<li><strong>enemy</strong>（敌人、对手）| fierce enemy / make enemies | In the chip race, power consumption is the enemy. | "Keep your friends close, but your enemies closer." —《The Godfather Part II 教父 2》</li>
+<li><strong>try</strong>（尝试）| give it a try / try one's best | Startups must try new approaches to chip architecture. | "Do, or do not. There is no try." — Yoda《Star Wars 星球大战》</li>
+<li><strong>fear</strong>（恐惧）| fear of missing out / overcome fear | Investors' fear of missing the AI wave is driving record funding. | "Fear is the path to the dark side. Fear leads to anger." — Yoda《Star Wars 星球大战》</li>
+</ul>
 <h3>3. 国产 AI 芯片融资潮：无问芯穹完成 23 亿元 C 轮融资领跑</h3>
 <p><strong>发生了什么</strong>：10 月 12 日的创投日报显示，国产 AI 芯片公司无问芯穹（Infinigence AI）完成 23 亿元人民币 C 轮融资，领跑当日中国 AI 融资榜；同日还有摩西智能（超 10 亿元 Pre-A）、富联集成（近 10 亿元战略 B 轮）等多起 AI 芯片融资落地，当日可统计的中国融资总额超过 64 亿元。</p>
 <p><strong>为什么值得关注</strong>：国产 AI 算力芯片正进入密集融资期，资本在押注"中国版英伟达"；结合此前 DeepSeek 120 亿美元融资传闻（IPO 前最后一轮），中国 AI 产业链正在加速补齐算力短板，中美 AI 芯片竞赛进入白热化。</p>
 <p><strong>名词解释</strong>：① Pre-A 轮——A 轮之前的过渡融资；② IPO（首次公开募股）——公司第一次向公众卖股票、上市；③ 算力芯片——专门用来跑 AI 计算的芯片，AI 时代的"发动机"。</p>
 <p><strong>一句话总结</strong>：国产 AI 芯片一天吸金超 64 亿，"中国版英伟达"争夺进入白热化。</p>
 <p>🔗 来源：<a href="https://techstartups.com/2026/10/12/startup-funding-news-today-october-12-2026-infinigence-ai-mosi-intelligence-fulian-integrated-more/">TechStartups（10-12）</a></p>
-<p>📖 生词：<br />
-- <strong>deception</strong>（欺骗、蒙蔽）| political deception / free from deception | There is no deception in the company's technical claims. | "All warfare is based on deception." — Sun Tzu《孙子兵法》<br />
-- <strong>deceive</strong>（欺骗、误导）| deceive oneself / be deceived by | Flashy demos can deceive investors about real progress. | "Oh, what a tangled web we weave, when first we practise to deceive!" — Walter Scott<br />
-- <strong>responsibility</strong>（责任）| take responsibility / corporate responsibility | Chipmakers bear responsibility for the AI supply chain. | "With great power comes great responsibility." —《Spider-Man 蜘蛛侠》<br />
-- <strong>stir</strong>（激起）| stir up / stir controversy | The mega funding round stirred excitement across the industry. | "A martini. Shaken, not stirred." —《James Bond 詹姆斯·邦德》<br />
-- <strong>hope</strong>（希望）| give hope / beyond hope | The funding gives hope to domestic chip startups. | "Hope is a good thing, maybe the best of things, and no good thing ever dies." —《The Shawshank Redemption 肖申克的救赎》<br />
-- <strong>truth</strong>（真相、事实）| tell the truth / the truth is | The truth is, chip self-sufficiency takes years. | "You can't handle the truth!" —《A Few Good Men 好人寥寥》<br />
-- <strong>money</strong>（金钱、资金）| raise money / pour money into | Investors are pouring money into AI chips. | "Show me the money!" —《Jerry Maguire 甜心先生》<br />
-- <strong>foolish</strong>（愚蠢的）| foolish mistake / look foolish | It would be foolish to ignore China's chip progress. | "Stay hungry, stay foolish." — Steve Jobs（斯坦福演讲）<br />
-- <strong>dream</strong>（梦想、梦）| fulfill one's dream / beyond one's dreams | The founders' dream is to build China's Nvidia. | "I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character." — Martin Luther King Jr.<br />
-- <strong>win</strong>（获胜、赢得）| win over / win-win | Chinese chipmakers are winning investor confidence. | "Winning isn't everything; it's the only thing." — Vince Lombardi</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>deception</strong>（欺骗、蒙蔽）| political deception / free from deception | There is no deception in the company's technical claims. | "All warfare is based on deception." — Sun Tzu《孙子兵法》</li>
+<li><strong>deceive</strong>（欺骗、误导）| deceive oneself / be deceived by | Flashy demos can deceive investors about real progress. | "Oh, what a tangled web we weave, when first we practise to deceive!" — Walter Scott</li>
+<li><strong>responsibility</strong>（责任）| take responsibility / corporate responsibility | Chipmakers bear responsibility for the AI supply chain. | "With great power comes great responsibility." —《Spider-Man 蜘蛛侠》</li>
+<li><strong>stir</strong>（激起）| stir up / stir controversy | The mega funding round stirred excitement across the industry. | "A martini. Shaken, not stirred." —《James Bond 詹姆斯·邦德》</li>
+<li><strong>hope</strong>（希望）| give hope / beyond hope | The funding gives hope to domestic chip startups. | "Hope is a good thing, maybe the best of things, and no good thing ever dies." —《The Shawshank Redemption 肖申克的救赎》</li>
+<li><strong>truth</strong>（真相、事实）| tell the truth / the truth is | The truth is, chip self-sufficiency takes years. | "You can't handle the truth!" —《A Few Good Men 好人寥寥》</li>
+<li><strong>money</strong>（金钱、资金）| raise money / pour money into | Investors are pouring money into AI chips. | "Show me the money!" —《Jerry Maguire 甜心先生》</li>
+<li><strong>foolish</strong>（愚蠢的）| foolish mistake / look foolish | It would be foolish to ignore China's chip progress. | "Stay hungry, stay foolish." — Steve Jobs（斯坦福演讲）</li>
+<li><strong>dream</strong>（梦想、梦）| fulfill one's dream / beyond one's dreams | The founders' dream is to build China's Nvidia. | "I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character." — Martin Luther King Jr.</li>
+<li><strong>win</strong>（获胜、赢得）| win over / win-win | Chinese chipmakers are winning investor confidence. | "Winning isn't everything; it's the only thing." — Vince Lombardi</li>
+</ul>
 <hr />
 <h2>🌍 国际局势</h2>
 <h3>1. 北约最高指挥官华沙警告俄罗斯："若敢进攻，将被彻底粉碎"</h3>
@@ -184,51 +235,57 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 北约（NATO）——美国和欧洲主要国家组成的军事同盟，信条是"打一个等于打全部"；② 最高指挥官——北约在欧洲的最高军事长官，历来由美国将领担任；③ 加里宁格勒——俄罗斯在波罗的海沿岸的一块"飞地"，被波兰和立陶宛包围，是俄军重要军事基地。</p>
 <p><strong>一句话总结</strong>：北约军事最高层对俄发出最直白威慑，美欧对俄政策分歧却在加深。</p>
 <p>🔗 来源：<a href="https://www.gmanetwork.com/news/topstories/world/1005664/nato-commander-grynkewich-warns-russia-attack-would-be-utterly-futile/story/?just_in">Reuters 经 GMA（10-12）</a>；<a href="https://www.aljazeera.com/news/2026/10/12/nato-says-will-do-anything-and-everything-if-alliance-is-attacked">Al Jazeera（10-12）</a></p>
-<p>📖 生词：<br />
-- <strong>blunt</strong>（钝挫、削弱冲击力）| blunt the attack / blunt criticism | NATO forces aim to blunt any enemy advance. | "Why do we fall, sir? So that we can learn to pick ourselves up." — Alfred《蝙蝠侠：侠影之谜》（挫折语境）<br />
-- <strong>futile</strong>（徒劳的、无用的）| a futile attempt / utterly futile | Resistance proved utterly futile. | "Chaos isn't a pit. Chaos is a ladder." — 小指头《权力的游戏》（反衬徒劳的挣扎）<br />
-- <strong>adversary</strong>（对手、敌手）| formidable adversary / political adversary | The general warned the adversary not to miscalculate. | "Keep your friends close, but your enemies closer." —《教父》<br />
-- <strong>retaliation</strong>（报复、反击）| threat of retaliation / in retaliation for | The alliance promised massive retaliation. | "An eye for an eye will only make the whole world blind." — 甘地<br />
-- <strong>incursion</strong>（入侵、侵入，小规模）| border incursion / drone incursion | Officials reported several drone incursions. | "We shall fight on the beaches." — 丘吉尔（抗击入侵语境）<br />
-- <strong>sabotage</strong>（蓄意破坏）| sabotage campaign / act of sabotage | The campaign included sabotage of key infrastructure. | "Your mission, should you choose to accept it..." —《碟中谍》（间谍破坏语境）<br />
-- <strong>imminent</strong>（迫在眉睫的）| imminent danger / imminent threat | He does not believe war is imminent. | "To be, or not to be." —《哈姆雷特》（面对迫近抉择的经典）<br />
-- <strong>exclave</strong>（飞地，一国领土中被他国包围的部分）| military exclave | Kaliningrad is Russia's Baltic exclave. | "We shall defend our island, whatever the cost may be." — 丘吉尔（保卫孤立领土语境）<br />
-- <strong>deter / deterrence</strong>（威慑、震慑）| nuclear deterrence / deter aggression | The speech was designed to deter Moscow. | "Peace through strength." — 冷战名言（以实力求和平）<br />
-- <strong>assure</strong>（向……保证、安抚）| assure the public / assure allies | He sought to assure one billion citizens of the alliance. | "Life is like a box of chocolates." —《阿甘正传》（安抚式经典台词）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>blunt</strong>（钝挫、削弱冲击力）| blunt the attack / blunt criticism | NATO forces aim to blunt any enemy advance. | "Why do we fall, sir? So that we can learn to pick ourselves up." — Alfred《蝙蝠侠：侠影之谜》（挫折语境）</li>
+<li><strong>futile</strong>（徒劳的、无用的）| a futile attempt / utterly futile | Resistance proved utterly futile. | "Chaos isn't a pit. Chaos is a ladder." — 小指头《权力的游戏》（反衬徒劳的挣扎）</li>
+<li><strong>adversary</strong>（对手、敌手）| formidable adversary / political adversary | The general warned the adversary not to miscalculate. | "Keep your friends close, but your enemies closer." —《教父》</li>
+<li><strong>retaliation</strong>（报复、反击）| threat of retaliation / in retaliation for | The alliance promised massive retaliation. | "An eye for an eye will only make the whole world blind." — 甘地</li>
+<li><strong>incursion</strong>（入侵、侵入，小规模）| border incursion / drone incursion | Officials reported several drone incursions. | "We shall fight on the beaches." — 丘吉尔（抗击入侵语境）</li>
+<li><strong>sabotage</strong>（蓄意破坏）| sabotage campaign / act of sabotage | The campaign included sabotage of key infrastructure. | "Your mission, should you choose to accept it..." —《碟中谍》（间谍破坏语境）</li>
+<li><strong>imminent</strong>（迫在眉睫的）| imminent danger / imminent threat | He does not believe war is imminent. | "To be, or not to be." —《哈姆雷特》（面对迫近抉择的经典）</li>
+<li><strong>exclave</strong>（飞地，一国领土中被他国包围的部分）| military exclave | Kaliningrad is Russia's Baltic exclave. | "We shall defend our island, whatever the cost may be." — 丘吉尔（保卫孤立领土语境）</li>
+<li><strong>deter / deterrence</strong>（威慑、震慑）| nuclear deterrence / deter aggression | The speech was designed to deter Moscow. | "Peace through strength." — 冷战名言（以实力求和平）</li>
+<li><strong>assure</strong>（向……保证、安抚）| assure the public / assure allies | He sought to assure one billion citizens of the alliance. | "Life is like a box of chocolates." —《阿甘正传》（安抚式经典台词）</li>
+</ul>
 <h3>2. 泽连斯基指责俄罗斯违反特朗普宣布的"能源停火"</h3>
 <p><strong>发生了什么</strong>：10 月 12 日，乌克兰总统泽连斯基在华沙安全论坛视频发言中称，俄军在夜间继续袭击乌克兰能源设施，包括哈尔科夫一座火力发电厂、一处天然气生产设施和一座加油站，造成数人死亡、数十人受伤——这违反了特朗普 10 月 11 日在社交媒体上宣布的俄乌"能源停火"（双方互不袭击能源设施）。泽连斯基称自己是从媒体上才得知该停火协议的，并表示如果俄方遵守，乌方愿停止袭击俄罗斯炼油厂。</p>
 <p><strong>为什么值得关注</strong>：这是特朗普第二次单方面宣布"能源停火"（上一次也无果而终），暴露美国与乌克兰、欧洲盟友在对俄政策上的严重脱节——欧盟同日批准了 2022 年全面入侵以来最大规模的一轮对俄制裁，并敦促美国不要放松对俄压力。冬季临近，能源设施成为俄乌双方互相打击的重点，停火能否落实直接关系乌克兰民生。</p>
 <p><strong>名词解释</strong>：① 能源停火——双方约定互不袭击对方的发电厂、炼油厂、输油管道等能源设施；② 制裁——一国或国际组织对另一国采取的经济惩罚，如冻结资产、禁止贸易；③ Truth Social——特朗普自己的社交媒体平台，类似微博。</p>
 <p><strong>一句话总结</strong>：特朗普单方面宣布的"能源停火"落地即破，美乌欧对俄政策严重脱节。</p>
 <p>🔗 来源：<a href="https://theprint.in/world/kyiv-says-russia-hits-energy-targets-despite-trump-ceasefire/3069500/">Reuters 经 ThePrint（10-12）</a>；<a href="https://www.etvbharat.com/en/international/zelenskyy-says-russia-strikes-energy-facilities-despite-trump-claim-of-an-energy-ceasefire-enn26101204684">AP 经 ETV Bharat（10-12）</a></p>
-<p>📖 生词：<br />
-- <strong>violation</strong>（违反、违背）| violation of the ceasefire / in violation of | Kyiv called the strikes a violation of the ceasefire. | "You see, their morals, their code, it's a bad joke." — 小丑《蝙蝠侠：黑暗骑士》（破坏规则语境）<br />
-- <strong>purported</strong>（声称的、所谓的，暗含未证实）| the purported agreement | Trump's purported deal offered few details. | "Do you want to take a leap of faith?" — Cobb《盗梦空间》（对"所谓"真相的质疑语境）<br />
-- <strong>blindsided</strong>（使措手不及）| blindsided by the announcement | Kyiv was blindsided by the sudden declaration. | "Everyone has a plan until they get punched in the mouth." — 迈克·泰森<br />
-- <strong>skepticism</strong>（怀疑态度）| express skepticism / deep skepticism | European allies voiced skepticism of the deal. | "I think, therefore I am." — 笛卡尔（怀疑一切的哲学起点）<br />
-- <strong>refrain</strong>（克制、避免做某事）| refrain from attacks | Ukraine refrained from hitting refineries overnight. | "Do or do not. There is no try." — 尤达《星球大战》<br />
-- <strong>thermal</strong>（热的、热力的）| thermal power plant（火力发电厂）| A strike hit a thermal power plant in Kharkiv. | "Energy cannot be created or destroyed." — 爱因斯坦（能量语境）<br />
-- <strong>infrastructure</strong>（基础设施）| critical infrastructure / energy infrastructure | Both sides target energy infrastructure. | "Hope is a good thing, maybe the best of things." —《肖申克的救赎》（重建希望语境）<br />
-- <strong>impose</strong>（施加、强制实行）| impose sanctions / impose restrictions | The EU imposed new sanctions on Moscow. | "I'm gonna make him an offer he can't refuse." — Don Corleone《教父》（强加意志语境）<br />
-- <strong>wary</strong>（谨慎的、警惕的）| wary of the deal / remain wary | Kyiv remains wary of any lopsided agreement. | "With great power comes great responsibility." —《蜘蛛侠》（谨慎用权语境）<br />
-- <strong>lopsided</strong>（一边倒的、不均衡的）| lopsided deal | Kyiv fears a lopsided agreement favoring Russia. | "All animals are equal, but some animals are more equal than others." — 奥威尔《动物庄园》</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>violation</strong>（违反、违背）| violation of the ceasefire / in violation of | Kyiv called the strikes a violation of the ceasefire. | "You see, their morals, their code, it's a bad joke." — 小丑《蝙蝠侠：黑暗骑士》（破坏规则语境）</li>
+<li><strong>purported</strong>（声称的、所谓的，暗含未证实）| the purported agreement | Trump's purported deal offered few details. | "Do you want to take a leap of faith?" — Cobb《盗梦空间》（对"所谓"真相的质疑语境）</li>
+<li><strong>blindsided</strong>（使措手不及）| blindsided by the announcement | Kyiv was blindsided by the sudden declaration. | "Everyone has a plan until they get punched in the mouth." — 迈克·泰森</li>
+<li><strong>skepticism</strong>（怀疑态度）| express skepticism / deep skepticism | European allies voiced skepticism of the deal. | "I think, therefore I am." — 笛卡尔（怀疑一切的哲学起点）</li>
+<li><strong>refrain</strong>（克制、避免做某事）| refrain from attacks | Ukraine refrained from hitting refineries overnight. | "Do or do not. There is no try." — 尤达《星球大战》</li>
+<li><strong>thermal</strong>（热的、热力的）| thermal power plant（火力发电厂）| A strike hit a thermal power plant in Kharkiv. | "Energy cannot be created or destroyed." — 爱因斯坦（能量语境）</li>
+<li><strong>infrastructure</strong>（基础设施）| critical infrastructure / energy infrastructure | Both sides target energy infrastructure. | "Hope is a good thing, maybe the best of things." —《肖申克的救赎》（重建希望语境）</li>
+<li><strong>impose</strong>（施加、强制实行）| impose sanctions / impose restrictions | The EU imposed new sanctions on Moscow. | "I'm gonna make him an offer he can't refuse." — Don Corleone《教父》（强加意志语境）</li>
+<li><strong>wary</strong>（谨慎的、警惕的）| wary of the deal / remain wary | Kyiv remains wary of any lopsided agreement. | "With great power comes great responsibility." —《蜘蛛侠》（谨慎用权语境）</li>
+<li><strong>lopsided</strong>（一边倒的、不均衡的）| lopsided deal | Kyiv fears a lopsided agreement favoring Russia. | "All animals are equal, but some animals are more equal than others." — 奥威尔《动物庄园》</li>
+</ul>
 <h3>3. 埃塞俄比亚称遭厄立特里亚"全面入侵"，非洲之角战争一触即发</h3>
 <p><strong>发生了什么</strong>：埃塞俄比亚政府 10 月 9 日致信联合国安理会，称厄立特里亚军队（含机械化部队）已深入其北部提格雷地区境内约 60 公里，构成"公然的侵略行为"，埃方"别无选择，只能自卫"。厄立特里亚则否认入侵，反指这是埃塞俄比亚为发动侵略战争制造的借口，并于 10 月 10 日致信安理会，要求采取威慑措施，指责埃塞俄比亚的指控"等同于宣战"。两国已于 10 月初断绝外交关系。10 月 10 日，埃塞俄比亚军队重新进入边境城市阿迪格拉特（Adigrat），当地曾报告爆炸声。</p>
 <p><strong>为什么值得关注</strong>：两国曾在 1998–2000 年打过惨烈的边境战争，2020–2022 年提格雷内战中厄立特里亚也曾深度介入。如今内战余烬未熄（提格雷反政府联盟 9 月 23 日起与联邦政府交战）、苏丹内战外溢、红海局势紧张，非洲之角一旦再爆全面战争，将引发大规模人道主义灾难并冲击红海航运。</p>
 <p><strong>名词解释</strong>：① 联合国安理会——联合国负责维护世界和平的核心机构，有权授权制裁和维和行动；② 机械化部队——配有坦克、装甲车的部队，机动和火力都强，是"动真格"的信号；③ 非洲之角——非洲东北部伸入印度洋的地区，战略位置重要但战乱频发；④ 断绝外交关系——两国互相关闭大使馆、驱逐外交官，是战争前常见的严重信号。</p>
 <p><strong>一句话总结</strong>：埃厄两国互相指责对方侵略，非洲之角再爆全面战争的风险陡增。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/world/africa/ethiopia-says-it-must-defend-itself-against-eritreas-all-out-invasion-2026-10-09/">Reuters（10-09）</a>；<a href="https://www.reuters.com/world/africa/ethiopian-forces-regain-control-border-city-after-reported-eritrean-incursion-2026-10-10/">Reuters（10-10）</a></p>
-<p>📖 生词：<br />
-- <strong>incursion</strong>（入侵、侵入）| military incursion / cross-border incursion | The reported incursion raised fears of all-out war. | "They may take our lives, but they'll never take our freedom!" — 华莱士《勇敢的心》<br />
-- <strong>belligerence</strong>（好战、挑衅）| acts of belligerence | The letter condemned Eritrea's belligerence. | "I know not with what weapons World War III will be fought..." — 爱因斯坦（反战名言）<br />
-- <strong>intransigence</strong>（顽固、不妥协）| political intransigence | Negotiations failed due to intransigence on both sides. | "Never, never, never give up." — 丘吉尔<br />
-- <strong>blatant</strong>（公然的、明目张胆的）| blatant aggression / blatant lie | Ethiopia called it a blatant act of aggression. | "But he hasn't got anything on!" — 安徒生《皇帝的新装》<br />
-- <strong>deterrent</strong>（威慑物、遏制力量）| deterrent measures / nuclear deterrent | Eritrea asked the UN for deterrent measures. | "Speak softly and carry a big stick." — 罗斯福<br />
-- <strong>sever</strong>（切断、断绝）| sever ties / sever diplomatic relations | The neighbours severed diplomatic ties last week. | "Let it go." —《冰雪奇缘》（切断过去语境）<br />
-- <strong>persona non grata</strong>（不受欢迎的人，外交术语）| declare someone persona non grata | Ten diplomats were declared persona non grata. | "Here's looking at you, kid." —《卡萨布兰卡》<br />
-- <strong>escalation</strong>（升级、恶化）| escalation of violence / military escalation | Analysts fear further escalation in the region. | "You see, it's the schemers that put you where you are." — 小丑《黑暗骑士》（局势升级语境）<br />
-- <strong>restraint</strong>（克制）| exercise restraint / show restraint | The African Union urged maximum restraint. | "Be water, my friend." — 李小龙<br />
-- <strong>fragile</strong>（脆弱的）| fragile ceasefire / fragile region | The conflict erupted in an increasingly fragile region. | "Life is like a box of chocolates, you never know what you're gonna get." —《阿甘正传》</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>incursion</strong>（入侵、侵入）| military incursion / cross-border incursion | The reported incursion raised fears of all-out war. | "They may take our lives, but they'll never take our freedom!" — 华莱士《勇敢的心》</li>
+<li><strong>belligerence</strong>（好战、挑衅）| acts of belligerence | The letter condemned Eritrea's belligerence. | "I know not with what weapons World War III will be fought..." — 爱因斯坦（反战名言）</li>
+<li><strong>intransigence</strong>（顽固、不妥协）| political intransigence | Negotiations failed due to intransigence on both sides. | "Never, never, never give up." — 丘吉尔</li>
+<li><strong>blatant</strong>（公然的、明目张胆的）| blatant aggression / blatant lie | Ethiopia called it a blatant act of aggression. | "But he hasn't got anything on!" — 安徒生《皇帝的新装》</li>
+<li><strong>deterrent</strong>（威慑物、遏制力量）| deterrent measures / nuclear deterrent | Eritrea asked the UN for deterrent measures. | "Speak softly and carry a big stick." — 罗斯福</li>
+<li><strong>sever</strong>（切断、断绝）| sever ties / sever diplomatic relations | The neighbours severed diplomatic ties last week. | "Let it go." —《冰雪奇缘》（切断过去语境）</li>
+<li><strong>persona non grata</strong>（不受欢迎的人，外交术语）| declare someone persona non grata | Ten diplomats were declared persona non grata. | "Here's looking at you, kid." —《卡萨布兰卡》</li>
+<li><strong>escalation</strong>（升级、恶化）| escalation of violence / military escalation | Analysts fear further escalation in the region. | "You see, it's the schemers that put you where you are." — 小丑《黑暗骑士》（局势升级语境）</li>
+<li><strong>restraint</strong>（克制）| exercise restraint / show restraint | The African Union urged maximum restraint. | "Be water, my friend." — 李小龙</li>
+<li><strong>fragile</strong>（脆弱的）| fragile ceasefire / fragile region | The conflict erupted in an increasingly fragile region. | "Life is like a box of chocolates, you never know what you're gonna get." —《阿甘正传》</li>
+</ul>
 <hr />
 <h2>🌱 个人成长</h2>
 <h3>1. 十月理论：如何在十月温和地重启目标</h3>
@@ -236,30 +293,34 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>为什么值得读</strong>：它把"重启人生"的宏大叙事拆成了低门槛、可执行的节奏设计，特别适合想在年底前找回状态的人。</p>
 <p><strong>一句话总结</strong>：十月是温和重启的最佳节点，把目标切小、绑在旧习惯上。</p>
 <p>🔗 来源：<a href="https://www.wholecelium.com/blog/october-theory-how-to-reset-your-goals-with-a-little-help-from-psilocybin/">WholeCelium 博客（英文）</a></p>
-<p>📖 生词：<br />
-- <strong>momentum</strong>（势头、动力）| build/gather/lose momentum | Small daily wins build momentum for bigger changes. | "People who succeed have momentum. The more they succeed, the more they want to succeed." — Tony Robbins<br />
-- <strong>traction</strong>（进展、起色，原意"抓地力"）| gain/get traction | Small goals create traction and build your confidence. | "The best time to plant a tree was 20 years ago. The second best time is now." — 中国谚语<br />
-- <strong>overhaul</strong>（彻底改造、大修）| a complete overhaul | You don't need a total overhaul — just a gentle reset. | "If you don't like something, change it. If you can't change it, change your attitude." — Maya Angelou<br />
-- <strong>accumulate</strong>（积累、积聚）| accumulate wealth/experience | Tiny actions accumulate power through consistency. | "Beware of little expenses; a small leak will sink a great ship." — Benjamin Franklin<br />
-- <strong>ritual</strong>（仪式、惯例）| morning ritual / nightly ritual | A short nightly ritual can anchor a new habit. | "We are what we repeatedly do. Excellence, then, is not an act, but a habit." — Aristotle<br />
-- <strong>flexibility</strong>（灵活性、变通）| show flexibility | October Theory thrives on flexibility, not rigidity. | "Be like water, my friend." — Bruce Lee<br />
-- <strong>kindling</strong>（引火物，喻开端）| — | Mini habits are like mental kindling — small enough to start, strong enough to keep you warm. | "A journey of a thousand miles begins with a single step." — Lao Tzu<br />
-- <strong>stack</strong>（叠加、堆积）| stack habits / habit stacking | Stack the new habit onto something you already do. | "Motivation is what gets you started. Habit is what keeps you going." — Jim Ryun<br />
-- <strong>rigidity</strong>（僵硬、死板）| — | Real progress comes through rhythm, not rigidity. | "Nothing is softer or more flexible than water, yet nothing can resist it." — Lao Tzu</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>momentum</strong>（势头、动力）| build/gather/lose momentum | Small daily wins build momentum for bigger changes. | "People who succeed have momentum. The more they succeed, the more they want to succeed." — Tony Robbins</li>
+<li><strong>traction</strong>（进展、起色，原意"抓地力"）| gain/get traction | Small goals create traction and build your confidence. | "The best time to plant a tree was 20 years ago. The second best time is now." — 中国谚语</li>
+<li><strong>overhaul</strong>（彻底改造、大修）| a complete overhaul | You don't need a total overhaul — just a gentle reset. | "If you don't like something, change it. If you can't change it, change your attitude." — Maya Angelou</li>
+<li><strong>accumulate</strong>（积累、积聚）| accumulate wealth/experience | Tiny actions accumulate power through consistency. | "Beware of little expenses; a small leak will sink a great ship." — Benjamin Franklin</li>
+<li><strong>ritual</strong>（仪式、惯例）| morning ritual / nightly ritual | A short nightly ritual can anchor a new habit. | "We are what we repeatedly do. Excellence, then, is not an act, but a habit." — Aristotle</li>
+<li><strong>flexibility</strong>（灵活性、变通）| show flexibility | October Theory thrives on flexibility, not rigidity. | "Be like water, my friend." — Bruce Lee</li>
+<li><strong>kindling</strong>（引火物，喻开端）| — | Mini habits are like mental kindling — small enough to start, strong enough to keep you warm. | "A journey of a thousand miles begins with a single step." — Lao Tzu</li>
+<li><strong>stack</strong>（叠加、堆积）| stack habits / habit stacking | Stack the new habit onto something you already do. | "Motivation is what gets you started. Habit is what keeps you going." — Jim Ryun</li>
+<li><strong>rigidity</strong>（僵硬、死板）| — | Real progress comes through rhythm, not rigidity. | "Nothing is softer or more flexible than water, yet nothing can resist it." — Lao Tzu</li>
+</ul>
 <h3>2. 她得到的最好职业建议：成为"还没开口就被信任的人"</h3>
 <p><strong>核心观点</strong>：Isra Chaker 在视频中说，她得到过最好的职业建议不是"更努力工作"或"争取升职"，而是成为那种"别人还没讲完问题就愿意信任你"的人。这让她从"收集头衔、公司、人脉"转向经营"声誉"：她最大的机会往往不是来自完美的履历，而是来自别人相信她能把事情办好。建立这种信任的方法是：在困难时到场、说到做到、在混乱中带来清晰。</p>
 <p><strong>为什么值得读</strong>：把"职业发展"从拼履历换成拼信任度，一句话就点破了很多人努力错方向的问题。</p>
 <p><strong>一句话总结</strong>：职业发展的真正货币不是头衔，是别人对你的信任。</p>
 <p>🔗 来源：<a href="https://www.instagram.com/reel/DeZeLL_AhGw/">Instagram @israspeaks（10-12）</a></p>
-<p>📖 生词：<br />
-- <strong>reputation</strong>（声誉、名声）| build/earn/ruin one's reputation | Focus on building your reputation, not just collecting titles. | "It takes 20 years to build a reputation and five minutes to ruin it." — Warren Buffett<br />
-- <strong>credentials</strong>（资历、资格证书）| impressive credentials | Her biggest opportunities came not from perfect credentials, but from trust. | "The only way to do great work is to love what you do." — Steve Jobs<br />
-- <strong>indispensable</strong>（不可或缺的）| make yourself indispensable | Ask what you want to be indispensable for. | "Be so good they can't ignore you." — Steve Martin<br />
-- <strong>hesitation</strong>（犹豫、迟疑）| without hesitation | What do people come to you for without hesitation? | "He who hesitates is lost." — 谚语<br />
-- <strong>clarity</strong>（清晰、清楚）| bring clarity / gain clarity | Bring clarity when everything feels unclear. | "Simplicity is the ultimate sophistication." — Leonardo da Vinci<br />
-- <strong>fade</strong>（褪色、逐渐消失）| fade away | Titles fade, companies change, but being trusted lasts forever. | "This too shall pass." — 波斯古谚<br />
-- <strong>shift</strong>（转变、转移）| a shift in mindset / shift focus | She describes the shift from collecting titles to building trust. | "Be the change that you wish to see in the world." — Gandhi<br />
-- <strong>insight</strong>（洞察、见解）| gain insight into | This one-line insight changed her thinking about growth. | "The important thing is not to stop questioning." — Albert Einstein</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>reputation</strong>（声誉、名声）| build/earn/ruin one's reputation | Focus on building your reputation, not just collecting titles. | "It takes 20 years to build a reputation and five minutes to ruin it." — Warren Buffett</li>
+<li><strong>credentials</strong>（资历、资格证书）| impressive credentials | Her biggest opportunities came not from perfect credentials, but from trust. | "The only way to do great work is to love what you do." — Steve Jobs</li>
+<li><strong>indispensable</strong>（不可或缺的）| make yourself indispensable | Ask what you want to be indispensable for. | "Be so good they can't ignore you." — Steve Martin</li>
+<li><strong>hesitation</strong>（犹豫、迟疑）| without hesitation | What do people come to you for without hesitation? | "He who hesitates is lost." — 谚语</li>
+<li><strong>clarity</strong>（清晰、清楚）| bring clarity / gain clarity | Bring clarity when everything feels unclear. | "Simplicity is the ultimate sophistication." — Leonardo da Vinci</li>
+<li><strong>fade</strong>（褪色、逐渐消失）| fade away | Titles fade, companies change, but being trusted lasts forever. | "This too shall pass." — 波斯古谚</li>
+<li><strong>shift</strong>（转变、转移）| a shift in mindset / shift focus | She describes the shift from collecting titles to building trust. | "Be the change that you wish to see in the world." — Gandhi</li>
+<li><strong>insight</strong>（洞察、见解）| gain insight into | This one-line insight changed her thinking about growth. | "The important thing is not to stop questioning." — Albert Einstein</li>
+</ul>
 <hr />
 <h2>💕 爱情</h2>
 <h3>1. 为什么有些夫妻越过越像"室友"？心理学解释亲密感如何慢慢流失</h3>
@@ -267,30 +328,34 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>为什么值得读</strong>：它把"感情变淡"去戏剧化了——问题往往不是不爱了，而是停止了对彼此好奇，给了读者一个清晰的自查视角。</p>
 <p><strong>一句话总结</strong>：感情变淡很少因为不爱了，而是因为停止了对彼此好奇。</p>
 <p>🔗 来源：<a href="https://timesofindia.indiatimes.com/relationships/why-some-couples-start-feeling-more-like-housemates-than-romantic-partners-psychology-explains-how-daily-routines-emotional-distance-and-unspoken-needs-can-slowly-change-a-relationship/photostory/134880928.cms">Times of India, Relationships（10-12）</a></p>
-<p>📖 生词：<br />
-- <strong>drift</strong>（漂移，喻渐渐疏远）| drift apart | Couples often drift apart through small things left unsaid. | "The course of true love never did run smooth." — Shakespeare《仲夏夜之梦》<br />
-- <strong>intimacy</strong>（亲密、亲近）| emotional intimacy | Loneliness in marriage often goes hand in hand with less intimacy. | "Love is composed of a single soul inhabiting two bodies." — Aristotle<br />
-- <strong>routine</strong>（日常惯例）| daily routine / fall into a routine | Routines start to crowd out connection. | "We are what we repeatedly do. Excellence, then, is not an act, but a habit." — Aristotle<br />
-- <strong>unfold</strong>（展开、逐渐发生）| as events unfold | Here are five ways the drift tends to unfold. | "Life is what happens to you while you're busy making other plans." — John Lennon<br />
-- <strong>logistics</strong>（后勤，喻琐碎安排）| — | The relationship quietly turns into a well-run logistics team. | "The details are not the details. They make the design." — Charles Eames<br />
-- <strong>curiosity</strong>（好奇心）| out of curiosity / satisfy one's curiosity | Little room is left for curiosity about each other. | "I have no special talents. I am only passionately curious." — Albert Einstein<br />
-- <strong>erode</strong>（侵蚀、逐渐削弱）| erode trust/confidence | Daily stress can slowly erode closeness. | "Constant dripping hollows out a stone." — Lucretius<br />
-- <strong>spouse</strong>（配偶）| — | It is common for married people to feel lonely beside a spouse. | "A successful marriage requires falling in love many times, always with the same person." — Mignon McLaughlin<br />
-- <strong>neglect</strong>（忽视、疏忽）| neglect one's health | Ask yourself which foundation of closeness you most neglect. | "The opposite of love is not hate, it's indifference." — Elie Wiesel</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>drift</strong>（漂移，喻渐渐疏远）| drift apart | Couples often drift apart through small things left unsaid. | "The course of true love never did run smooth." — Shakespeare《仲夏夜之梦》</li>
+<li><strong>intimacy</strong>（亲密、亲近）| emotional intimacy | Loneliness in marriage often goes hand in hand with less intimacy. | "Love is composed of a single soul inhabiting two bodies." — Aristotle</li>
+<li><strong>routine</strong>（日常惯例）| daily routine / fall into a routine | Routines start to crowd out connection. | "We are what we repeatedly do. Excellence, then, is not an act, but a habit." — Aristotle</li>
+<li><strong>unfold</strong>（展开、逐渐发生）| as events unfold | Here are five ways the drift tends to unfold. | "Life is what happens to you while you're busy making other plans." — John Lennon</li>
+<li><strong>logistics</strong>（后勤，喻琐碎安排）| — | The relationship quietly turns into a well-run logistics team. | "The details are not the details. They make the design." — Charles Eames</li>
+<li><strong>curiosity</strong>（好奇心）| out of curiosity / satisfy one's curiosity | Little room is left for curiosity about each other. | "I have no special talents. I am only passionately curious." — Albert Einstein</li>
+<li><strong>erode</strong>（侵蚀、逐渐削弱）| erode trust/confidence | Daily stress can slowly erode closeness. | "Constant dripping hollows out a stone." — Lucretius</li>
+<li><strong>spouse</strong>（配偶）| — | It is common for married people to feel lonely beside a spouse. | "A successful marriage requires falling in love many times, always with the same person." — Mignon McLaughlin</li>
+<li><strong>neglect</strong>（忽视、疏忽）| neglect one's health | Ask yourself which foundation of closeness you most neglect. | "The opposite of love is not hate, it's indifference." — Elie Wiesel</li>
+</ul>
 <h3>2. 吵架三回合：Ankur Warikoo 夫妇的"吵架规则"</h3>
 <p><strong>核心观点</strong>：印度知名创业者 Ankur Warikoo 和妻子用拳击赛"三回合"的形式分享他们的吵架规则：第一回合——不在外人或孩子面前吵架，争执是两个人的私事；第二回合——绝不带着没解决的架去睡觉，哪怕聊到凌晨 1 点 40 也要解决；第三回合——不纠结谁对谁错，而是"我们组队打问题"（TEAM US VS THE PROBLEM）。</p>
 <p><strong>为什么值得读</strong>：三条规则具体、可执行，把"好好吵架"从鸡汤变成了可以直接照抄的流程。</p>
 <p><strong>一句话总结</strong>：吵架不怕，怕的是不讲规则——私下吵、不过夜、组队打问题。</p>
 <p>🔗 来源：<a href="https://www.instagram.com/reel/DeYaMEcqF_w/">Instagram @ankurwarikoo（10-12）</a></p>
-<p>📖 生词：<br />
-- <strong>resolve</strong>（解决、下决心）| resolve a conflict/dispute | They stay up until the fight is fully resolved. | "Peace cannot be kept by force; it can only be achieved by understanding." — Albert Einstein<br />
-- <strong>reframe</strong>（重新定义、换个角度看待）| reframe the problem | They reframe the fight as "TEAM US VS THE PROBLEM." | "We cannot solve our problems with the same thinking we used when we created them." — Albert Einstein<br />
-- <strong>escalate</strong>（升级、加剧）| escalate quickly | Stepping away keeps arguments from escalating. | "When anger rises, think of the consequences." — Confucius<br />
-- <strong>collaborate</strong>（合作、协作）| collaborate with | The tone of their advice is warm and collaborative. | "Alone we can do so little; together we can do so much." — Helen Keller<br />
-- <strong>dynamics</strong>（动态、互动模式）| relationship dynamics / power dynamics | Healthy communication changes the dynamics of a fight. | "The meeting of two personalities is like the contact of two chemical substances: if there is any reaction, both are transformed." — Carl Jung<br />
-- <strong>compromise</strong>（妥协、折中）| reach a compromise | Every disagreement should end with a compromise, not a winner. | "Peace is not the absence of conflict, but the ability to handle conflict by peaceful means." — Ronald Reagan<br />
-- <strong>resentment</strong>（怨恨、不满）| harbor resentment | Unresolved fights leave lingering resentment. | "Holding on to anger is like drinking poison and expecting the other person to die." — Buddha<br />
-- <strong>trivial</strong>（琐碎的、微不足道的）| trivial matters | Don't let trivial fights turn into fundamental rifts. | "Enjoy the little things, for one day you may look back and realize they were the big things." — Robert Brault</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>resolve</strong>（解决、下决心）| resolve a conflict/dispute | They stay up until the fight is fully resolved. | "Peace cannot be kept by force; it can only be achieved by understanding." — Albert Einstein</li>
+<li><strong>reframe</strong>（重新定义、换个角度看待）| reframe the problem | They reframe the fight as "TEAM US VS THE PROBLEM." | "We cannot solve our problems with the same thinking we used when we created them." — Albert Einstein</li>
+<li><strong>escalate</strong>（升级、加剧）| escalate quickly | Stepping away keeps arguments from escalating. | "When anger rises, think of the consequences." — Confucius</li>
+<li><strong>collaborate</strong>（合作、协作）| collaborate with | The tone of their advice is warm and collaborative. | "Alone we can do so little; together we can do so much." — Helen Keller</li>
+<li><strong>dynamics</strong>（动态、互动模式）| relationship dynamics / power dynamics | Healthy communication changes the dynamics of a fight. | "The meeting of two personalities is like the contact of two chemical substances: if there is any reaction, both are transformed." — Carl Jung</li>
+<li><strong>compromise</strong>（妥协、折中）| reach a compromise | Every disagreement should end with a compromise, not a winner. | "Peace is not the absence of conflict, but the ability to handle conflict by peaceful means." — Ronald Reagan</li>
+<li><strong>resentment</strong>（怨恨、不满）| harbor resentment | Unresolved fights leave lingering resentment. | "Holding on to anger is like drinking poison and expecting the other person to die." — Buddha</li>
+<li><strong>trivial</strong>（琐碎的、微不足道的）| trivial matters | Don't let trivial fights turn into fundamental rifts. | "Enjoy the little things, for one day you may look back and realize they were the big things." — Robert Brault</li>
+</ul>
 <hr />
 <h2>🌿 绿色低碳能源</h2>
 <h3>1. 中国氢能产业全面提速：产量占全球一半以上，"十五五"首次纳入非化石能源供应体系</h3>
@@ -299,38 +364,42 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 绿氢——用风电、光电等可再生能源电解水制出的氢气，全过程几乎不排放二氧化碳；② 电解水制氢——给水通电，把水分解成氢气和氧气的技术，绿氢的核心生产方式；③ 非化石能源——不包括煤、油、气的能源，如风、光、水、核、氢能等；④ "十五五"规划——中国 2026–2030 年的五年发展规划，决定国家未来五年的大方向；⑤ 试点——先在小范围试行，成功了再全国推广。</p>
 <p><strong>一句话总结</strong>：氢能正式"转正"为国家能源战略组成部分，中国产量已占全球一半以上。</p>
 <p>🔗 来源：<a href="https://www.wam.ae/en/article/c2pf7xr-china-accelerates-hydrogen-sector-growth-green">WAM 阿联酋通讯社（10-12）</a></p>
-<p>📖 生词：<br />
-- <strong>energy</strong>（能量、能源）| renewable energy / energy transition / save energy | China is leading the global energy transition. | "Energy and persistence conquer all things." — Benjamin Franklin<br />
-- <strong>innovation</strong>（创新）| technological innovation / drive innovation | Innovation is the key to the hydrogen economy. | "Innovation distinguishes between a leader and a follower." — Steve Jobs<br />
-- <strong>future</strong>（未来）| in the future / the future of | Hydrogen is the fuel of the future. | "The best way to predict the future is to invent it." — Alan Kay<br />
-- <strong>impossible</strong>（不可能的）| seem impossible / mission impossible | Building 13,000 km of pipelines seemed impossible a decade ago. | "It always seems impossible until it's done." — Nelson Mandela<br />
-- <strong>opportunity</strong>（机会）| seize the opportunity / golden opportunity | Green hydrogen brings new opportunities for western China. | "In the middle of difficulty lies opportunity." — Albert Einstein<br />
-- <strong>risk</strong>（风险、冒险）| take a risk / at risk | Investing in new pipelines involves some risk. | "Only those who will risk going too far can possibly find out how far one can go." — T.S. Eliot<br />
-- <strong>hope</strong>（希望）| give hope / hope for the best | Hydrogen gives hope for a cleaner future. | "Hope is a good thing, maybe the best of things, and no good thing ever dies." —《肖申克的救赎》<br />
-- <strong>courage</strong>（勇气）| have the courage to / take courage | It takes courage to bet on a new energy source. | "Courage is not the absence of fear, but the triumph over it." — Nelson Mandela<br />
-- <strong>success</strong>（成功）| achieve success / the key to success | The pilot programmes are key to the plan's success. | "Success is not final, failure is not fatal: it is the courage to continue that counts." — Winston Churchill<br />
-- <strong>dream</strong>（梦想、梦）| chase one's dream / dream big | A hydrogen-powered society was once just a dream. | "You mustn't be afraid to dream a little bigger, darling." —《盗梦空间》<br />
-- <strong>nature</strong>（自然、本性）| in nature / by nature | Hydrogen is the most abundant element in nature. | "Look deep into nature, and then you will understand everything better." — Albert Einstein<br />
-- <strong>change</strong>（改变、变化）| bring about change / climate change | The hydrogen push will change the energy map. | "Be the change that you wish to see in the world." — Mahatma Gandhi</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>energy</strong>（能量、能源）| renewable energy / energy transition / save energy | China is leading the global energy transition. | "Energy and persistence conquer all things." — Benjamin Franklin</li>
+<li><strong>innovation</strong>（创新）| technological innovation / drive innovation | Innovation is the key to the hydrogen economy. | "Innovation distinguishes between a leader and a follower." — Steve Jobs</li>
+<li><strong>future</strong>（未来）| in the future / the future of | Hydrogen is the fuel of the future. | "The best way to predict the future is to invent it." — Alan Kay</li>
+<li><strong>impossible</strong>（不可能的）| seem impossible / mission impossible | Building 13,000 km of pipelines seemed impossible a decade ago. | "It always seems impossible until it's done." — Nelson Mandela</li>
+<li><strong>opportunity</strong>（机会）| seize the opportunity / golden opportunity | Green hydrogen brings new opportunities for western China. | "In the middle of difficulty lies opportunity." — Albert Einstein</li>
+<li><strong>risk</strong>（风险、冒险）| take a risk / at risk | Investing in new pipelines involves some risk. | "Only those who will risk going too far can possibly find out how far one can go." — T.S. Eliot</li>
+<li><strong>hope</strong>（希望）| give hope / hope for the best | Hydrogen gives hope for a cleaner future. | "Hope is a good thing, maybe the best of things, and no good thing ever dies." —《肖申克的救赎》</li>
+<li><strong>courage</strong>（勇气）| have the courage to / take courage | It takes courage to bet on a new energy source. | "Courage is not the absence of fear, but the triumph over it." — Nelson Mandela</li>
+<li><strong>success</strong>（成功）| achieve success / the key to success | The pilot programmes are key to the plan's success. | "Success is not final, failure is not fatal: it is the courage to continue that counts." — Winston Churchill</li>
+<li><strong>dream</strong>（梦想、梦）| chase one's dream / dream big | A hydrogen-powered society was once just a dream. | "You mustn't be afraid to dream a little bigger, darling." —《盗梦空间》</li>
+<li><strong>nature</strong>（自然、本性）| in nature / by nature | Hydrogen is the most abundant element in nature. | "Look deep into nature, and then you will understand everything better." — Albert Einstein</li>
+<li><strong>change</strong>（改变、变化）| bring about change / climate change | The hydrogen push will change the energy map. | "Be the change that you wish to see in the world." — Mahatma Gandhi</li>
+</ul>
 <h3>2. 联合国碳市场通过清洁炉灶项目新规：须预留碳信用防范森林损失风险</h3>
 <p><strong>发生了什么</strong>：联合国《巴黎协定》第 6.4 条碳市场监管机构（Article 6.4 Supervisory Body）上周五批准了两套新的"方法学"（methodology），清洁炉灶项目今后可在联合国碳市场下申请碳信用。按照新规，发放高效炉灶、减少木柴砍伐的项目，必须预留一部分碳信用作为"保险"，以防范所保护的森林因火灾、干旱或盗伐而损失的风险——此前业界要求豁免该条款的呼吁被驳回。</p>
 <p><strong>为什么值得关注</strong>：清洁炉灶是全球碳市场最受欢迎、也最受争议的信用类型之一（曾被批评夸大减排效果）。这是联合国机制首次为该品类制定规则，直接决定了数十亿美元规模的炉灶碳信用能否继续流通，也为 11 月 COP31 气候大会前的碳市场谈判定了调。对中国企业参与境外碳项目、开发 CCER（国家核证自愿减排量）方法学也有参考意义。</p>
 <p><strong>名词解释</strong>：① 碳市场——允许买卖"碳排放额度/碳信用"的市场；减排多的可以把多余额度卖给减排不够的；② 碳信用——代表减少了一定量温室气体排放的"凭证"，1 个信用通常等于 1 吨二氧化碳；③ 《巴黎协定》第 6.4 条——联合国层面统一的全球碳市场机制，各国减排项目可在此生成国际通用的碳信用；④ 方法学——计算一个项目到底减了多少排的"官方算法"，没有方法学就发不出碳信用；⑤ 清洁炉灶项目——向烧柴做饭的地区发放高效炉灶，减少木柴消耗和烟雾，靠"少砍树+少冒烟"赚碳信用。</p>
 <p><strong>一句话总结</strong>：联合国给争议最大的碳信用品类立了规矩，碳市场可信度再进一步。</p>
 <p>🔗 来源：<a href="https://littlebunker.com/2026/10/12/environmental_news-un-carbon-market-forces-cookstove-projec-6a90762a/">Little Bunker（10-12）</a></p>
-<p>📖 生词：<br />
-- <strong>action</strong>（行动）| take action / climate action | The new rules turn climate promises into real action. | "Action is the foundational key to all success." — Pablo Picasso<br />
-- <strong>trust</strong>（信任、相信）| win/lose trust / trust in | Strict rules help buyers trust carbon credits. | "The best way to find out if you can trust somebody is to trust them." — Ernest Hemingway<br />
-- <strong>honesty</strong>（诚实）| in all honesty / question one's honesty | The market needs honesty in measuring emission cuts. | "Honesty is the first chapter in the book of wisdom." — Thomas Jefferson<br />
-- <strong>decision</strong>（决定）| make a decision / tough decision | The regulator's decision affects billions of dollars in credits. | "The most difficult thing is the decision to act; the rest is merely tenacity." — Amelia Earhart<br />
-- <strong>promise</strong>（承诺、许诺）| keep/break a promise / promise of | The market must deliver on its promise of real emission cuts. | "A promise made is a debt unpaid." — Robert W. Service<br />
-- <strong>responsibility</strong>（责任）| take responsibility / corporate responsibility | Project developers now carry more responsibility for forest loss. | "With great power comes great responsibility." —《蜘蛛侠》<br />
-- <strong>doubt</strong>（怀疑、疑虑）| cast doubt on / no doubt | Critics have long cast doubt on cookstove credits. | "Our doubts are traitors, and make us lose the good we oft might win, by fearing to attempt." — Shakespeare<br />
-- <strong>freedom</strong>（自由）| fight for freedom / freedom of choice | Countries want freedom to design their own carbon rules. | "Freedom is never given; it is won." — A. Philip Randolph<br />
-- <strong>journey</strong>（旅程、历程）| begin a journey / a long journey | Building a credible carbon market is a long journey. | "The journey of a thousand miles begins with a single step." — Lao Tzu<br />
-- <strong>peace</strong>（和平、平静）| make peace / peace of mind | Reliable credits give buyers peace of mind. | "Peace cannot be kept by force; it can only be achieved by understanding." — Albert Einstein<br />
-- <strong>truth</strong>（真相、真理）| tell the truth / the truth about | The new methodology gets closer to the truth of real emission cuts. | "Three things cannot be long hidden: the sun, the moon, and the truth." — Buddha<br />
-- <strong>light</strong>（光、点燃）| shed light on / in the light of | The new rules shed light on how credits are calculated. | "There is a crack in everything, that's how the light gets in." — Leonard Cohen</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>action</strong>（行动）| take action / climate action | The new rules turn climate promises into real action. | "Action is the foundational key to all success." — Pablo Picasso</li>
+<li><strong>trust</strong>（信任、相信）| win/lose trust / trust in | Strict rules help buyers trust carbon credits. | "The best way to find out if you can trust somebody is to trust them." — Ernest Hemingway</li>
+<li><strong>honesty</strong>（诚实）| in all honesty / question one's honesty | The market needs honesty in measuring emission cuts. | "Honesty is the first chapter in the book of wisdom." — Thomas Jefferson</li>
+<li><strong>decision</strong>（决定）| make a decision / tough decision | The regulator's decision affects billions of dollars in credits. | "The most difficult thing is the decision to act; the rest is merely tenacity." — Amelia Earhart</li>
+<li><strong>promise</strong>（承诺、许诺）| keep/break a promise / promise of | The market must deliver on its promise of real emission cuts. | "A promise made is a debt unpaid." — Robert W. Service</li>
+<li><strong>responsibility</strong>（责任）| take responsibility / corporate responsibility | Project developers now carry more responsibility for forest loss. | "With great power comes great responsibility." —《蜘蛛侠》</li>
+<li><strong>doubt</strong>（怀疑、疑虑）| cast doubt on / no doubt | Critics have long cast doubt on cookstove credits. | "Our doubts are traitors, and make us lose the good we oft might win, by fearing to attempt." — Shakespeare</li>
+<li><strong>freedom</strong>（自由）| fight for freedom / freedom of choice | Countries want freedom to design their own carbon rules. | "Freedom is never given; it is won." — A. Philip Randolph</li>
+<li><strong>journey</strong>（旅程、历程）| begin a journey / a long journey | Building a credible carbon market is a long journey. | "The journey of a thousand miles begins with a single step." — Lao Tzu</li>
+<li><strong>peace</strong>（和平、平静）| make peace / peace of mind | Reliable credits give buyers peace of mind. | "Peace cannot be kept by force; it can only be achieved by understanding." — Albert Einstein</li>
+<li><strong>truth</strong>（真相、真理）| tell the truth / the truth about | The new methodology gets closer to the truth of real emission cuts. | "Three things cannot be long hidden: the sun, the moon, and the truth." — Buddha</li>
+<li><strong>light</strong>（光、点燃）| shed light on / in the light of | The new rules shed light on how credits are calculated. | "There is a crack in everything, that's how the light gets in." — Leonard Cohen</li>
+</ul>
 <hr />
 <h2>🇨🇳 国内要闻</h2>
 <h3>1. 中共中央、国务院印发《关于发展新质生产力的意见》：19 条举措，警告不得"贪大求全搞泡沫化"</h3>

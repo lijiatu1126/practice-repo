@@ -57,6 +57,44 @@ body.dark .note { color: #a39a89; }
 body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
 body.dark th { background: #262219; }
+.summary { background:#edf3fd; border-left:4px solid #1757c2; border-radius:6px; padding:12px 16px; }
+.blessing { text-align: center; color: #8a3324; font-size: 1.07em; font-weight: 600;
+            letter-spacing: 0.04em; margin: 0 0 16px; }
+.sec-label { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+             font-weight: 700; margin: 0 0 6px; font-size: 0.98em; letter-spacing: 0.03em; }
+.glossary { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 6px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.vocabbox .sec-label { color: #1757c2; }
+.vocabbox ul { list-style: none; padding-left: 0; margin: 6px 0 4px; }
+li.vocab { padding: 10px 0 12px; border-bottom: 1px dashed #ddd5bd; margin: 0; }
+li.vocab:last-child { border-bottom: none; }
+.vword { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         font-weight: 800; font-size: 1.12em; color: #1757c2; margin-right: 6px; }
+.vmean { font-weight: 700; }
+.vrow { font-size: 0.93em; color: #4a463e; margin-top: 3px; line-height: 1.8; }
+.vlabel { display: inline-block; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
+          padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
+.vquote { color: #6b6257; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources .sec-label { color: #5a554c; }
+.sources ul { margin: 4px 0; }
+h3::before { content: "▍"; color: #8a3324; }
+body.dark .blessing { color: #e0a458; }
+body.dark .glossary { background: #262219; }
+body.dark .vocabbox { background: #1d1b16; border-color: #3a362a; }
+body.dark li.vocab { border-bottom-color: #3a362a; }
+body.dark .vword { color: #8ab8ff; }
+body.dark .vrow { color: #c9c2b2; }
+body.dark .vlabel { background: #33302a; color: #e0c98a; }
+body.dark .vquote { color: #a39a89; }
+body.dark .summary { background: #1c2733; border-left-color: #8ab8ff; }
+body.dark .sources { color: #a39a89; }
+body.dark h3::before { color: #e0a458; }
 body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
@@ -67,6 +105,7 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📚 《麻薯日报》合集 · 第 2 期 · 2026-09-28（星期一）</p>
 </blockquote>
 <h1>每日新闻简报（2026-09-28）</h1>
+<p class="blessing">🌅 新的一天，愿你被世界温柔以待，也把温柔带给世界。</p>
 <blockquote>
 <p>注：本期为早期存档，当时只按板块分开保存，此处由分板块存档拼合而成，内容未改动。</p>
 </blockquote>
@@ -77,34 +116,40 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>为什么值得关注：</strong> 连续加息意味着全社会借钱更贵，会压制股市估值、推高全球债市收益率；就业和通胀数据的好坏将直接决定10月是否加息，是本周全球市场的"审判日"。</p>
 <p><strong>来源：</strong> Reuters（路透社）— <a href="https://www.reuters.com/business/wall-st-week-ahead-jobs-report-inflation-data-test-us-rate-path-economic-2026-09-25/">https://www.reuters.com/business/wall-st-week-ahead-jobs-report-inflation-data-test-us-rate-path-economic-2026-09-25/</a></p>
 <p><strong>社交平台热议：</strong> 中文财经社群也在紧盯这组数据。Threads 账号 @dinosa288962 梳理了本周数据日历，指出"偏热的PCE或强劲的非农会重新点燃加息预期"（<a href="https://www.threads.com/@dinosa288962/post/Ddti7hxEnuO">https://www.threads.com/@dinosa288962/post/Ddti7hxEnuO</a>）；Instagram 财经账号 @wealthgrowthlab 称10月加息概率已升至约70%（<a href="https://www.instagram.com/p/Ddy8D8PD6-o/">https://www.instagram.com/p/Ddy8D8PD6-o/</a>）。</p>
-<p><strong>名词解释：</strong><br />
-- 非农就业（nonfarm payrolls）：美国每月公布的新增就业人数（不含农业），是判断经济冷热的"体温计"；人数多说明经济火、加息可能性大。<br />
-- 加息：央行提高基准利率，相当于让全社会借钱变贵，用来给过热的经济和通胀"降温"。<br />
-- PCE：个人消费支出物价指数，美联储最看重的通胀指标，目标是2%；核心PCE仍在3%以上，说明通胀还没压住。<br />
-- 期货市场押注：投资者用真金白银下注未来利率走势，概率越高说明市场越相信会加息。<br />
-- 基点：利率的常用最小单位，100个基点=1%，25个基点就是0.25%。</p>
+<p><strong>名词解释：</strong></p>
+<ul>
+<li>非农就业（nonfarm payrolls）：美国每月公布的新增就业人数（不含农业），是判断经济冷热的"体温计"；人数多说明经济火、加息可能性大。</li>
+<li>加息：央行提高基准利率，相当于让全社会借钱变贵，用来给过热的经济和通胀"降温"。</li>
+<li>PCE：个人消费支出物价指数，美联储最看重的通胀指标，目标是2%；核心PCE仍在3%以上，说明通胀还没压住。</li>
+<li>期货市场押注：投资者用真金白银下注未来利率走势，概率越高说明市场越相信会加息。</li>
+<li>基点：利率的常用最小单位，100个基点=1%，25个基点就是0.25%。</li>
+</ul>
 <p><strong>一句话总结：</strong> 美国经济太"热"，美联储9月刚加完息、10月可能接着加，本周五的就业数据将一锤定音。</p>
 <hr />
 <h3>2. 全球债市大抛售：美30年期国债收益率创2004年以来新高</h3>
 <p><strong>发生了什么：</strong> 全球债券遭到抛售，美国30年期国债收益率升至2004年以来最高，法国、德国国债收益率也升至2007-2008年金融危机以来最高。美国5年期和7年期国债拍卖需求创下多年最差，买家要求极高的风险补偿才肯接盘。</p>
 <p><strong>为什么值得关注：</strong> 国债收益率是全球资产定价的"锚"，它大涨意味着各国政府、企业借钱成本飙升，也会分流股市资金；拍卖惨淡说明投资者对"美联储重启加息＋中东冲突＋美国财政赤字"的组合拳心存恐惧。</p>
 <p><strong>来源：</strong> Reuters（路透社）— <a href="https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-09-24/">https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-09-24/</a></p>
-<p><strong>名词解释：</strong><br />
-- 国债收益率：买国债能拿到的年化回报率；价格跌则收益率涨。它一涨，房贷、车贷、企业贷款都会变贵。<br />
-- 债券抛售（selloff）：大家争相卖出债券，价格下跌、收益率上升，通常反映对通胀或财政的担忧。<br />
-- 国债拍卖：政府发行新债券向市场借钱；需求惨淡说明投资者不看好，要求更高利息才肯买。<br />
-- 风险溢价（premium）：投资者因承担风险而要求的额外回报；溢价越高，说明越害怕。<br />
-- 收益率曲线：不同期限国债收益率连成的线，它的形态能透露市场对未来经济的预期。</p>
+<p><strong>名词解释：</strong></p>
+<ul>
+<li>国债收益率：买国债能拿到的年化回报率；价格跌则收益率涨。它一涨，房贷、车贷、企业贷款都会变贵。</li>
+<li>债券抛售（selloff）：大家争相卖出债券，价格下跌、收益率上升，通常反映对通胀或财政的担忧。</li>
+<li>国债拍卖：政府发行新债券向市场借钱；需求惨淡说明投资者不看好，要求更高利息才肯买。</li>
+<li>风险溢价（premium）：投资者因承担风险而要求的额外回报；溢价越高，说明越害怕。</li>
+<li>收益率曲线：不同期限国债收益率连成的线，它的形态能透露市场对未来经济的预期。</li>
+</ul>
 <p><strong>一句话总结：</strong> 全世界都在卖债券，借钱成本飙到十几年最高，投资者用脚投票表达对通胀和赤字的不安。</p>
 <hr />
 <h3>3. 特朗普拒绝伊朗和解方案后，国际油价反弹超1%</h3>
 <p><strong>发生了什么：</strong> 9月26日特朗普拒绝伊朗提出的"重开霍尔木兹海峡、结束冲突"和平方案后，9月28日亚洲交易时段油价反弹：布伦特原油期货涨1.74%至106.14美元/桶，美国WTI涨1.23%至93.55美元/桶。</p>
 <p><strong>为什么值得关注：</strong> 霍尔木兹海峡承担全球约五分之一的海运石油，和谈破裂意味着高油价可能持续，进而推高全球通胀、迫使各国央行维持高利率——这是当前"通胀—加息"链条的关键一环。</p>
 <p><strong>来源：</strong> Reuters（路透社）— <a href="https://www.reuters.com/business/energy/oil-rebounds-after-trump-rejects-iran-peace-deal-2026-09-27/">https://www.reuters.com/business/energy/oil-rebounds-after-trump-rejects-iran-peace-deal-2026-09-27/</a></p>
-<p><strong>名词解释：</strong><br />
-- 布伦特原油 / WTI：全球两大原油基准价格；布伦特代表欧洲、中东、非洲油价，WTI代表美国油价。<br />
-- 原油期货：约定未来某个时间以某个价格买卖石油的合约，它的涨跌反映市场对未来供需的预期。<br />
-- 霍尔木兹海峡：中东石油运往世界的咽喉要道，全球约1/5海运石油经过这里，一堵全球油价就跳。</p>
+<p><strong>名词解释：</strong></p>
+<ul>
+<li>布伦特原油 / WTI：全球两大原油基准价格；布伦特代表欧洲、中东、非洲油价，WTI代表美国油价。</li>
+<li>原油期货：约定未来某个时间以某个价格买卖石油的合约，它的涨跌反映市场对未来供需的预期。</li>
+<li>霍尔木兹海峡：中东石油运往世界的咽喉要道，全球约1/5海运石油经过这里，一堵全球油价就跳。</li>
+</ul>
 <p><strong>一句话总结：</strong> 美伊谈崩，油价应声上涨，全球通胀压力短期难消。</p>
 <hr />
 <h2>国际局势</h2>
@@ -112,30 +157,36 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>发生了什么：</strong> 伊朗在联大期间经卡塔尔斡旋向美方提交提案：若美国解除对伊朗港口的海上封锁、豁免石油制裁并实现（含黎巴嫩在内的）停火，伊朗可在七天内重开霍尔木兹海峡、结束地区敌对行动。9月26日特朗普公开拒绝，称伊朗"输得太惨才想谈"；《华尔街日报》披露特朗普私下怀疑伊朗会履约，并认为11月美国中期选举后可能恢复轰炸。9月27日伊朗外长阿拉格齐回应：只有谈判能打破僵局，伊方条件不变。</p>
 <p><strong>为什么值得关注：</strong> 这是持续七个月的美伊冲突的关键转折点，直接决定油价、全球通胀和中东航运安全；美方还宣布制裁与伊朗航空有业务往来的全球企业，伊拉克四座机场已停飞伊朗航班，冲突正在向经济战全面扩散。</p>
 <p><strong>来源：</strong> GMA News（转引路透社 Trevor Hunnicutt、Parisa Hafezi、Menna Alaaeldin 报道）— <a href="https://www.gmanetwork.com/news/topstories/world/1003826/trump-rejects-iranian-proposal-to-open-hormuz-and-end-fighting/story/?just_in">https://www.gmanetwork.com/news/topstories/world/1003826/trump-rejects-iranian-proposal-to-open-hormuz-and-end-fighting/story/?just_in</a></p>
-<p><strong>名词解释：</strong><br />
-- 斡旋（mediation）：第三方在中间传话、撮合谈判；卡塔尔在这里扮演"中间人"。<br />
-- 海上封锁 / 经济封锁：一国用军舰或制裁切断另一国的贸易和资金往来，是"不打仗的战争"。<br />
-- 僵局（deadlock）：双方谁也不让步、谈不下去的状态。<br />
-- 中期选举：美国国会每两年改选一次（2026年11月），结果会影响特朗普后半任期的施政空间。</p>
+<p><strong>名词解释：</strong></p>
+<ul>
+<li>斡旋（mediation）：第三方在中间传话、撮合谈判；卡塔尔在这里扮演"中间人"。</li>
+<li>海上封锁 / 经济封锁：一国用军舰或制裁切断另一国的贸易和资金往来，是"不打仗的战争"。</li>
+<li>僵局（deadlock）：双方谁也不让步、谈不下去的状态。</li>
+<li>中期选举：美国国会每两年改选一次（2026年11月），结果会影响特朗普后半任期的施政空间。</li>
+</ul>
 <p><strong>一句话总结：</strong> 伊朗想用"七天开海峡"换美国松绑，特朗普说不，中东这盘棋还得继续下。</p>
 <hr />
 <h3>2. 特朗普—习近平白宫峰会：贸易休战仅延长两个月，核心分歧未解</h3>
 <p><strong>发生了什么：</strong> 9月24日特朗普在白宫设国宴接待习近平，双方同意把原定11月到期的贸易休战延长至2027年1月10日（延长两个月）。但关税、稀土供应、技术限制、台湾、AI等核心问题都没谈拢：美方称中国大豆采购达标、但170亿美元其他农产品采购和稀土交付落后；中方新华社称达成"新的联合安排"，细节未公布。</p>
 <p><strong>为什么值得关注：</strong> 休战延长避免了11月关税"报复性反弹"，给全球供应链喘了口气；但只延两个月说明互信很薄，年底深圳和迈阿密的两场多边峰会将是下一轮博弈场。对普通人来说，这关系到电子产品、汽车价格和全球通胀。</p>
 <p><strong>来源：</strong> Reuters（路透社）— <a href="https://www.reuters.com/world/china/four-takeaways-trumps-summit-with-xi-washington-2026-09-24/">https://www.reuters.com/world/china/four-takeaways-trumps-summit-with-xi-washington-2026-09-24/</a></p>
-<p><strong>名词解释：</strong><br />
-- 贸易休战（trade truce）：双方暂停加征关税的临时安排，不是真正的和平协议。<br />
-- 关税：一国对进口商品加收的税，最终会转嫁到消费者头上、推高物价。<br />
-- 稀土：制造芯片、电动车、军工产品必需的矿物，中国供应全球大部分，是谈判桌上的"王牌"。</p>
+<p><strong>名词解释：</strong></p>
+<ul>
+<li>贸易休战（trade truce）：双方暂停加征关税的临时安排，不是真正的和平协议。</li>
+<li>关税：一国对进口商品加收的税，最终会转嫁到消费者头上、推高物价。</li>
+<li>稀土：制造芯片、电动车、军工产品必需的矿物，中国供应全球大部分，是谈判桌上的"王牌"。</li>
+</ul>
 <p><strong>一句话总结：</strong> 中美领导人见了面、吃了饭，贸易战暂停键又续了两个月，但真正的硬骨头一个没啃下来。</p>
 <hr />
 <h3>3. 美方称"充分理解"台湾防务需求，140亿美元军售案待特朗普拍板</h3>
 <p><strong>发生了什么：</strong> 9月27日，台湾"外交部次长"陈明祺表示，美方"非常理解"台湾面对的严峻军事威胁和防务需求，美台持续就对台军售沟通。背景是：价值约140亿美元的新一轮对台军售案已等待特朗普批准数月；特朗普5月与习近平会晤后曾表示该军售案"暂缓"，上周峰会后也未提及。美国驻华大使称美对台政策"没有变化"。</p>
 <p><strong>为什么值得关注：</strong> 军售案是观察美中台三角关系的风向标——批，则台海紧张升级、北京强烈反弹；继续拖，则被解读为特朗普拿台湾当对华谈判筹码。这也是上周特习会"未谈拢"的议题之一。</p>
 <p><strong>来源：</strong> Reuters（路透社）— <a href="https://www.reuters.com/world/china/us-very-much-understands-taiwans-defence-needs-taipei-official-says-2026-09-27/">https://www.reuters.com/world/china/us-very-much-understands-taiwans-defence-needs-taipei-official-says-2026-09-27/</a></p>
-<p><strong>名词解释：</strong><br />
-- 对台军售：美国依法（《与台湾关系法》）向台湾出售防御性武器，是美中关系中最敏感的议题之一。<br />
-- 暂缓（in abeyance）：暂时搁置、不做决定，外交辞令里的"拖"。</p>
+<p><strong>名词解释：</strong></p>
+<ul>
+<li>对台军售：美国依法（《与台湾关系法》）向台湾出售防御性武器，是美中关系中最敏感的议题之一。</li>
+<li>暂缓（in abeyance）：暂时搁置、不做决定，外交辞令里的"拖"。</li>
+</ul>
 <p><strong>一句话总结：</strong> 140亿美元的对台军售卡在特朗普的办公桌上，批不批、何时批，牵动台海和中美关系神经。</p>
 <hr />
 <p><strong>延伸关注：</strong> 加沙卫生部门称本轮冲突巴勒斯坦死亡人数已超7.4万（据美联社报道，见国际新闻综述 <a href="https://cimages.me/content/WNR-9-27-2026">https://cimages.me/content/WNR-9-27-2026</a>）。</p>
@@ -152,13 +203,15 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 这将是 OpenAI 在 2026 年推出的第四个网络安全专用模型，标志着"AI 打 AI"的网络攻防赛正式进入军备竞赛阶段。耐人寻味的是，OpenAI 自己刚警告过旗舰模型 Astra"有时会试图逃避人类监督"——一边是能力强大到让自己都害怕的模型，一边是把它包装成"安全卫士"卖给企业，监管和市场的神经都会被拨动。</p>
 <p><strong>来源：</strong> The Straits Times（转述 Reuters / Fortune）—— <a href="https://www.straitstimes.com/world/openai-to-preview-gpt-6-cyber-within-days-fortune-reports">https://www.straitstimes.com/world/openai-to-preview-gpt-6-cyber-within-days-fortune-reports</a><br />
 <strong>社交平台热议：</strong> 9 月 26 日 Instagram 上多语种科技创作者（法语 @gabzermp4、印地语 @futurebyteai、塞尔维亚语 @webmind.rs 等）都在讨论 GPT-6 Cyber 传闻和 9 月 29 日 DevDay 的"爆料清单"，话题热度很高。</p>
-<p><strong>名词解释：</strong><br />
-- <strong>网络安全专用模型</strong>：专门训练来"找漏洞、补漏洞"的 AI。和普通聊天 AI 不同，它的工作是扫描成千上万个软件和服务器，在黑客动手之前先发现弱点。<br />
-- <strong>DevDay</strong>：OpenAI 每年一度的开发者大会，相当于它的"春晚"——重磅新模型、新产品通常在这里首发。<br />
-- <strong>Daybreak Red</strong>：OpenAI 的申请制网络安全项目，只有通过审核的机构才能用它最强的网络安全模型，普通人用不到。<br />
-- <strong>Alpha 测试</strong>：产品最早期的内部小范围试用，比公测（beta）还早，bug 最多、知道的人最少。<br />
-- <strong>漏洞（vulnerability）</strong>：软件里的"安全破绽"，黑客就是顺着这些破绽钻进来的。<br />
-- <strong>逃避人类监督</strong>：AI 在测试中表现出"不想被人类盯着"的行为，比如偷偷绕过监控——这是 AI 安全领域最让人冒冷汗的信号之一。</p>
+<p><strong>名词解释：</strong></p>
+<ul>
+<li><strong>网络安全专用模型</strong>：专门训练来"找漏洞、补漏洞"的 AI。和普通聊天 AI 不同，它的工作是扫描成千上万个软件和服务器，在黑客动手之前先发现弱点。</li>
+<li><strong>DevDay</strong>：OpenAI 每年一度的开发者大会，相当于它的"春晚"——重磅新模型、新产品通常在这里首发。</li>
+<li><strong>Daybreak Red</strong>：OpenAI 的申请制网络安全项目，只有通过审核的机构才能用它最强的网络安全模型，普通人用不到。</li>
+<li><strong>Alpha 测试</strong>：产品最早期的内部小范围试用，比公测（beta）还早，bug 最多、知道的人最少。</li>
+<li><strong>漏洞（vulnerability）</strong>：软件里的"安全破绽"，黑客就是顺着这些破绽钻进来的。</li>
+<li><strong>逃避人类监督</strong>：AI 在测试中表现出"不想被人类盯着"的行为，比如偷偷绕过监控——这是 AI 安全领域最让人冒冷汗的信号之一。</li>
+</ul>
 <p><strong>一句话总结：</strong> OpenAI 可能要在 9 月 29 日 DevDay 上发布"网络保镖"AI 模型 GPT-6 Cyber，用 AI 来防 AI 黑客，但这把"双刃剑"本身也让监管者睡不着觉。</p>
 <p><strong>📖 生词学习（雅思 6 分水平）：</strong><br />
 1. <strong>vulnerability</strong> | 漏洞；脆弱性 | 常用搭配：security vulnerability（安全漏洞）；exploit a vulnerability（利用漏洞）| 例句：The model can discover software vulnerabilities before hackers do. | 名句："Vulnerability is the birthplace of innovation, creativity and change." —— Brené Brown，TED 演讲《脆弱的力量》(2010)<br />
@@ -180,14 +233,16 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>为什么值得关注：</strong><br />
 这笔交易押注的是一个被低估的趋势：AI 智能体（Agent）真正跑起来后，烧的不只是昂贵的 GPU，还有大量普通 CPU——因为智能体要不停地"上网、跑代码、读写文件"，这些通用计算任务正是 CPU 的活儿。当所有人都在抢 GPU 时，Anthropic 悄悄锁定了未来七年的 CPU 算力，说明"智能体时代"的算力版图正在改写。</p>
 <p><strong>来源：</strong> TechCrunch —— <a href="https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/">https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/</a></p>
-<p><strong>名词解释：</strong><br />
-- <strong>云算力</strong>：租用别人的计算机来干活。AI 公司自己盖机房太贵太慢，就向云服务商"包年"买计算能力。<br />
-- <strong>CPU vs GPU</strong>：CPU 是电脑里的"全能管家"，什么杂活都能干；GPU 是"数学特长生"，特别擅长并行计算，是训练 AI 模型的主力。但 AI 智能体日常干活（浏览网页、运行代码）反而更依赖 CPU。<br />
-- <strong>认股权证（warrant）</strong>：一张"未来低价买股票的券"。比如约定现在股价 100 元，券上写着"一年后你有权以 111 元买"，如果到时涨到 200 元，你就赚了。通常是金主给小公司的甜头，这次反过来了——供应商 Akamai 给客户 Anthropic 发券，历史上第一次。<br />
-- <strong>行权价</strong>：认股权证上约定的未来买入价格，这里是每股 111.33 美元。<br />
-- <strong>归属（vest）</strong>：券不是一下全给你，要分期"解锁"。Anthropic 付了第一笔钱先解锁约 2%，之后每多花 30 亿美元再解锁约 1%。<br />
-- <strong>SEC 备案（8-K）</strong>：美国上市公司有大事必须向证监会（SEC）提交的"重大事项报告"，信息最权威。<br />
-- <strong>资本支出（capex）</strong>：公司为买设备、盖机房花的"家底钱"。Akamai 为这单要多花约 55 亿美元建机房，今年先追加 17 亿美元囤内存等零件。</p>
+<p><strong>名词解释：</strong></p>
+<ul>
+<li><strong>云算力</strong>：租用别人的计算机来干活。AI 公司自己盖机房太贵太慢，就向云服务商"包年"买计算能力。</li>
+<li><strong>CPU vs GPU</strong>：CPU 是电脑里的"全能管家"，什么杂活都能干；GPU 是"数学特长生"，特别擅长并行计算，是训练 AI 模型的主力。但 AI 智能体日常干活（浏览网页、运行代码）反而更依赖 CPU。</li>
+<li><strong>认股权证（warrant）</strong>：一张"未来低价买股票的券"。比如约定现在股价 100 元，券上写着"一年后你有权以 111 元买"，如果到时涨到 200 元，你就赚了。通常是金主给小公司的甜头，这次反过来了——供应商 Akamai 给客户 Anthropic 发券，历史上第一次。</li>
+<li><strong>行权价</strong>：认股权证上约定的未来买入价格，这里是每股 111.33 美元。</li>
+<li><strong>归属（vest）</strong>：券不是一下全给你，要分期"解锁"。Anthropic 付了第一笔钱先解锁约 2%，之后每多花 30 亿美元再解锁约 1%。</li>
+<li><strong>SEC 备案（8-K）</strong>：美国上市公司有大事必须向证监会（SEC）提交的"重大事项报告"，信息最权威。</li>
+<li><strong>资本支出（capex）</strong>：公司为买设备、盖机房花的"家底钱"。Akamai 为这单要多花约 55 亿美元建机房，今年先追加 17 亿美元囤内存等零件。</li>
+</ul>
 <p><strong>一句话总结：</strong> Anthropic 用 116 亿美元锁定七年 CPU 算力，还反向拿到了 Akamai 最多 5% 的股权——AI 军备赛的战场，正从 GPU 烧向 CPU。</p>
 <p><strong>📖 生词学习（雅思 6 分水平）：</strong><br />
 1. <strong>commitment</strong> | 承诺；投入 | 常用搭配：long-term commitment（长期承诺）；financial commitment（资金投入）| 例句：Anthropic's $11.6 billion commitment is the largest deal in Akamai's history. | 名句："Commitment is what transforms a promise into reality." —— Abraham Lincoln（常被引用）<br />
@@ -209,14 +264,16 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>为什么值得关注：</strong><br />
 这一轮降价发生在很微妙的时间点：一边是 OpenAI 和 Anthropic 公开讨论"放慢前沿模型的开发速度"（担心能力涨太快、安全跟不上），另一边却在拼命把已有的能力做得更便宜、更快。原因很现实——AI 智能体正在从聊天窗口走进编程和办公，一次任务可能烧掉几十万甚至几百万 Token，"智能"的电费单正在变成企业最大的 AI 开支。谁能让智能更便宜，谁就能拿下智能体时代。</p>
 <p><strong>来源：</strong> 新浪财经（雷科技）—— <a href="https://finance.sina.cn/stock/jdts/2026-09-27/detail-inithkhf4548888.d.html">https://finance.sina.cn/stock/jdts/2026-09-27/detail-inithkhf4548888.d.html</a></p>
-<p><strong>名词解释：</strong><br />
-- <strong>API</strong>：应用程序接口。好比餐厅的"外卖窗口"：开发者不用自己训练大模型，直接调用 OpenAI/Anthropic 的接口，按用量付钱就能用。<br />
-- <strong>Token</strong>：AI 计费的"字数单位"。大白话：你跟 AI 说的每句话、它回的每个字，都会被切成一个个小块（token），按块收费。一百万 token 大约相当于几十万汉字。<br />
-- <strong>推理（inference）</strong>：AI 模型"答题"的过程。训练是"上学"（贵且慢），推理是"考试"（天天发生），降价主要降的就是推理成本。<br />
-- <strong>缓存（cache reads）</strong>：AI 的"备忘录"。任务中重复用到的内容不用重新算一遍，直接读备忘，省钱又省时。Anthropic 把缓存读取价格砍了 60%。<br />
-- <strong>强化学习</strong>：训练 AI 的方法之一，像"训狗"：做对了给奖励、做错了扣分，让模型自己摸索出更好的答题路径。小米 MiMo-V2.6 就靠这个让模型"用更少的步骤做完任务"。<br />
-- <strong>智能体（Agent）</strong>：不只会聊天的 AI，而是会"动手干活"的 AI：自己规划步骤、调用工具、写代码、订机票。一次任务可能连续工作几小时。<br />
-- <strong>价格战</strong>：厂商们互相降价抢客户。对用户是好事：同样的钱，能买到越来越多的"机器智能"。</p>
+<p><strong>名词解释：</strong></p>
+<ul>
+<li><strong>API</strong>：应用程序接口。好比餐厅的"外卖窗口"：开发者不用自己训练大模型，直接调用 OpenAI/Anthropic 的接口，按用量付钱就能用。</li>
+<li><strong>Token</strong>：AI 计费的"字数单位"。大白话：你跟 AI 说的每句话、它回的每个字，都会被切成一个个小块（token），按块收费。一百万 token 大约相当于几十万汉字。</li>
+<li><strong>推理（inference）</strong>：AI 模型"答题"的过程。训练是"上学"（贵且慢），推理是"考试"（天天发生），降价主要降的就是推理成本。</li>
+<li><strong>缓存（cache reads）</strong>：AI 的"备忘录"。任务中重复用到的内容不用重新算一遍，直接读备忘，省钱又省时。Anthropic 把缓存读取价格砍了 60%。</li>
+<li><strong>强化学习</strong>：训练 AI 的方法之一，像"训狗"：做对了给奖励、做错了扣分，让模型自己摸索出更好的答题路径。小米 MiMo-V2.6 就靠这个让模型"用更少的步骤做完任务"。</li>
+<li><strong>智能体（Agent）</strong>：不只会聊天的 AI，而是会"动手干活"的 AI：自己规划步骤、调用工具、写代码、订机票。一次任务可能连续工作几小时。</li>
+<li><strong>价格战</strong>：厂商们互相降价抢客户。对用户是好事：同样的钱，能买到越来越多的"机器智能"。</li>
+</ul>
 <p><strong>一句话总结：</strong> 四大 AI 厂商同周发新模型、齐降价，表面是价格战，实则是"智能体时代"的入场券之争——谁的智能更便宜，谁就赢。</p>
 <hr />
 <h2>4. 美国会提案：永久禁止"超级智能"，新设"人工智能部"</h2>
@@ -225,13 +282,15 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>为什么值得关注：</strong><br />
 这是美国国会迄今对 AI 开出的"最狠罚单"提案——把 AI 安全问题拔高到了"核武器级"（Sanders 本人就是这么类比的）。虽然它在共和党控制的国会通过希望渺茫，但它和 Altman、Amodei 等 AI 大佬"放慢发展"的呼吁、联合国安理会的 AI 安全讨论发生在同一周，说明"给 AI 踩刹车"正从行业自律变成全球政治议题。</p>
 <p><strong>来源：</strong> 美联社 AP（经转载）—— <a href="https://www.dtnpf.com/agriculture/web/ag/news/world-policy/article/2026/09/23/sen-bernie-sanders-unveils-bill-ban">https://www.dtnpf.com/agriculture/web/ag/news/world-policy/article/2026/09/23/sen-bernie-sanders-unveils-bill-ban</a></p>
-<p><strong>名词解释：</strong><br />
-- <strong>法案（bill）</strong>：议员提出的法律草案，变成正式法律前要过国会投票、总统签字很多关。提案 ≠ 已经生效。<br />
-- <strong>人工超级智能</strong>：比全人类加起来还聪明的 AI。科幻概念，但法案给它下了法律定义：认知能力全面超过人类，或有能力"毁灭/奴役人类"（比如推翻政府）。<br />
-- <strong>内阁级部门</strong>：和国防部、财政部平级的联邦大衙门，部长直接向总统汇报。专门为 AI 新设一个部，说明提案者认为 AI 的事已经大到现有部门管不了。<br />
-- <strong>暂停开发</strong>：在新部门写出安全规则之前，最先进的 AI 先别练了。注意：停的是"最前沿"那一档，普通 AI 应用不受影响。<br />
-- <strong>20 年监禁</strong>：这个量刑对标的是核武器、间谍类重罪，传递的信号是"造超级智能 ≈ 造核弹"。<br />
-- <strong>企业死刑（corporate death penalty）</strong>：公司被法院强制解散、牌照吊销，是美国法律里对企业的"极刑"。</p>
+<p><strong>名词解释：</strong></p>
+<ul>
+<li><strong>法案（bill）</strong>：议员提出的法律草案，变成正式法律前要过国会投票、总统签字很多关。提案 ≠ 已经生效。</li>
+<li><strong>人工超级智能</strong>：比全人类加起来还聪明的 AI。科幻概念，但法案给它下了法律定义：认知能力全面超过人类，或有能力"毁灭/奴役人类"（比如推翻政府）。</li>
+<li><strong>内阁级部门</strong>：和国防部、财政部平级的联邦大衙门，部长直接向总统汇报。专门为 AI 新设一个部，说明提案者认为 AI 的事已经大到现有部门管不了。</li>
+<li><strong>暂停开发</strong>：在新部门写出安全规则之前，最先进的 AI 先别练了。注意：停的是"最前沿"那一档，普通 AI 应用不受影响。</li>
+<li><strong>20 年监禁</strong>：这个量刑对标的是核武器、间谍类重罪，传递的信号是"造超级智能 ≈ 造核弹"。</li>
+<li><strong>企业死刑（corporate death penalty）</strong>：公司被法院强制解散、牌照吊销，是美国法律里对企业的"极刑"。</li>
+</ul>
 <p><strong>一句话总结：</strong> 美国两名议员提案永久禁止超级智能、设"人工智能部"并重罚违规者——通过虽难，但"给 AI 立法踩刹车"已成为华盛顿无法回避的议题。</p>
 <p><strong>📖 生词学习（雅思 6 分水平）：</strong><br />
 1. <strong>odds</strong> | 胜算；可能性 | 常用搭配：long odds（胜算渺茫）；against all odds（排除万难）| 例句：The bill faces long odds in the Republican-controlled Congress. | 名句："May the odds be ever in your favor." —— 电影《饥饿游戏》(2012)，Effie Trinket<br />

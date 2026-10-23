@@ -57,6 +57,44 @@ body.dark .note { color: #a39a89; }
 body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
 body.dark th { background: #262219; }
+.summary { background:#edf3fd; border-left:4px solid #1757c2; border-radius:6px; padding:12px 16px; }
+.blessing { text-align: center; color: #8a3324; font-size: 1.07em; font-weight: 600;
+            letter-spacing: 0.04em; margin: 0 0 16px; }
+.sec-label { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+             font-weight: 700; margin: 0 0 6px; font-size: 0.98em; letter-spacing: 0.03em; }
+.glossary { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 6px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.vocabbox .sec-label { color: #1757c2; }
+.vocabbox ul { list-style: none; padding-left: 0; margin: 6px 0 4px; }
+li.vocab { padding: 10px 0 12px; border-bottom: 1px dashed #ddd5bd; margin: 0; }
+li.vocab:last-child { border-bottom: none; }
+.vword { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         font-weight: 800; font-size: 1.12em; color: #1757c2; margin-right: 6px; }
+.vmean { font-weight: 700; }
+.vrow { font-size: 0.93em; color: #4a463e; margin-top: 3px; line-height: 1.8; }
+.vlabel { display: inline-block; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
+          padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
+.vquote { color: #6b6257; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources .sec-label { color: #5a554c; }
+.sources ul { margin: 4px 0; }
+h3::before { content: "▍"; color: #8a3324; }
+body.dark .blessing { color: #e0a458; }
+body.dark .glossary { background: #262219; }
+body.dark .vocabbox { background: #1d1b16; border-color: #3a362a; }
+body.dark li.vocab { border-bottom-color: #3a362a; }
+body.dark .vword { color: #8ab8ff; }
+body.dark .vrow { color: #c9c2b2; }
+body.dark .vlabel { background: #33302a; color: #e0c98a; }
+body.dark .vquote { color: #a39a89; }
+body.dark .summary { background: #1c2733; border-left-color: #8ab8ff; }
+body.dark .sources { color: #a39a89; }
+body.dark h3::before { color: #e0a458; }
 body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
@@ -67,6 +105,7 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📚 《麻薯日报》合集 · 第 11 期 · 2026-10-07（星期三）</p>
 </blockquote>
 <h1>📰 10月7日 新闻简报</h1>
+<p class="blessing">🌅 愿你笑口常开，好运自然来。</p>
 <p>早安 Recardo ☀️ 周三快乐！今天的简报来了——美股三线创新高、美联储今晚放"会议纪要"、欧洲AI带着新模型杀回来，还有三条很走心的成长和情感帖。慢慢看 ☕</p>
 <hr />
 <h2>💰 金融</h2>
@@ -76,51 +115,57 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① S&amp;P 500 指数——美国 500 家大公司股价的加权平均，美股最重要的"晴雨表"；② 美债收益率——美国国债的年化回报率，相当于全球资金的"基准利率"，它一下降，股票就相对更划算。</p>
 <p><strong>一句话总结</strong>：债市松绑+油价降温+AI 热情不减，美股拿下三项收盘纪录，牛市从科技股蔓延到了电力股。</p>
 <p>🔗 来源：<a href="https://www.cnn.com/2026/10/06/investing/us-stocks-bonds?cid=external-feeds_iluminar_meta">https://www.cnn.com/2026/10/06/investing/us-stocks-bonds?cid=external-feeds_iluminar_meta</a></p>
-<p>📖 生词：<br />
-- <strong>record</strong>（纪录）| set a record | The S&amp;P 500 closed at a record 7,819 points. | 未找到<br />
-- <strong>rally</strong>（上涨行情）| market rally | A broad rally lifted nearly all S&amp;P 500 sectors. | 未找到<br />
-- <strong>yield</strong>（债券收益率）| Treasury yield | The 10-year Treasury yield eased from a 24-year high. | 未找到<br />
-- <strong>gain</strong>（涨幅；收益）| post gains | The Nasdaq posted a 0.5% gain on Tuesday. | "No pain, no gain."（英语谚语）<br />
-- <strong>money</strong>（资金）| pour money into | Investors keep pouring money into AI-related plays. | "Show me the money!" ——《Jerry Maguire》（1996）<br />
-- <strong>fear</strong>（恐惧）| allay fears | Easing yields calmed fears of even higher rates. | "The only thing we have to fear is fear itself." —— Franklin D. Roosevelt<br />
-- <strong>ease</strong>（缓解）| ease concerns | Falling oil prices helped ease inflation worries. | 未找到<br />
-- <strong>surge</strong>（飙升）| surge 12% | Constellation Energy surged about 12% on Alphabet's power deal. | 未找到<br />
-- <strong>benchmark</strong>（基准）| benchmark index | The S&amp;P 500 is the main benchmark for US equities. | 未找到<br />
-- <strong>earnings</strong>（盈利；财报）| earnings season | Earnings season kicks off next week with big banks reporting. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>record</strong>（纪录）| set a record | The S&amp;P 500 closed at a record 7,819 points. | 未找到</li>
+<li><strong>rally</strong>（上涨行情）| market rally | A broad rally lifted nearly all S&amp;P 500 sectors. | 未找到</li>
+<li><strong>yield</strong>（债券收益率）| Treasury yield | The 10-year Treasury yield eased from a 24-year high. | 未找到</li>
+<li><strong>gain</strong>（涨幅；收益）| post gains | The Nasdaq posted a 0.5% gain on Tuesday. | "No pain, no gain."（英语谚语）</li>
+<li><strong>money</strong>（资金）| pour money into | Investors keep pouring money into AI-related plays. | "Show me the money!" ——《Jerry Maguire》（1996）</li>
+<li><strong>fear</strong>（恐惧）| allay fears | Easing yields calmed fears of even higher rates. | "The only thing we have to fear is fear itself." —— Franklin D. Roosevelt</li>
+<li><strong>ease</strong>（缓解）| ease concerns | Falling oil prices helped ease inflation worries. | 未找到</li>
+<li><strong>surge</strong>（飙升）| surge 12% | Constellation Energy surged about 12% on Alphabet's power deal. | 未找到</li>
+<li><strong>benchmark</strong>（基准）| benchmark index | The S&amp;P 500 is the main benchmark for US equities. | 未找到</li>
+<li><strong>earnings</strong>（盈利；财报）| earnings season | Earnings season kicks off next week with big banks reporting. | 未找到</li>
+</ul>
 <h3>2. 美国 9 月就业"熄火"，市场押注美联储 10 月暂停加息</h3>
 <p><strong>发生了什么</strong>：美国 9 月非农就业仅新增 2.9 万人，远低于预期的 9 万人，失业率从 4.1% 升至 4.2%。CME FedWatch 显示 10 月 27–28 日会议维持利率不变的概率升至约 76%（一周前仅 29%）。背景是美联储 9 月 16 日刚加息 25 个基点至 3.75%–4.00%（2023 年以来首次加息），而 10 年期美债收益率一度突破 5.3%、创 20 多年新高。</p>
 <p><strong>为什么重要</strong>：就业走弱 vs 通胀仍高，美联储被夹在中间——这份报告让"10 月暂停、12 月再看"成为主流剧本，直接决定未来两个月全球资金的松紧。</p>
 <p><strong>名词解释</strong>：① 非农就业数据——美国每月新增工作岗位数，判断经济冷热的"体温计"；② CME FedWatch——根据期货价格算出的"市场赌美联储下一步干什么"的概率表，交易员每天必看。</p>
 <p><strong>一句话总结</strong>：就业数据意外疲软，给了美联储 10 月"歇一歇"的台阶，但 12 月是否再加息仍悬而未决。</p>
 <p>🔗 来源：<a href="https://www.financialexpress.com/market/global-markets/us-fed-october-rate-decision-why-a-rate-hike-is-still-on-the-table/4353959/">https://www.financialexpress.com/market/global-markets/us-fed-october-rate-decision-why-a-rate-hike-is-still-on-the-table/4353959/</a></p>
-<p>📖 生词：<br />
-- <strong>hike</strong>（加息）| rate hike | The Fed hiked rates in September for the first time since 2023. | 未找到<br />
-- <strong>pause</strong>（暂停）| pause rate hikes | Markets now expect the Fed to pause in October. | 未找到<br />
-- <strong>payroll</strong>（就业人数）| nonfarm payrolls | Payrolls rose by just 29,000 in September. | 未找到<br />
-- <strong>unemployment</strong>（失业）| unemployment rate | The unemployment rate ticked up to 4.2%. | 未找到<br />
-- <strong>inflation</strong>（通货膨胀）| tame inflation | Elevated oil prices remain a key inflation risk. | 未找到<br />
-- <strong>hold</strong>（维持不变）| hold rates steady | Siegel says the data gives Warsh cover to hold. | 未找到<br />
-- <strong>greedy</strong>（贪婪的）| greedy investors | Don't chase greedy bets on a sure hike. | "Be fearful when others are greedy, and greedy when others are fearful." —— Warren Buffett<br />
-- <strong>risk</strong>（风险）| pose a risk | High oil prices pose an inflation risk for the Fed. | "Risk comes from not knowing what you're doing." —— Warren Buffett<br />
-- <strong>bet</strong>（押注）| bet on | Traders are now betting on a December move instead. | 未找到<br />
-- <strong>odds</strong>（概率）| the odds of | The odds of an October hike have fallen to about 18%. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>hike</strong>（加息）| rate hike | The Fed hiked rates in September for the first time since 2023. | 未找到</li>
+<li><strong>pause</strong>（暂停）| pause rate hikes | Markets now expect the Fed to pause in October. | 未找到</li>
+<li><strong>payroll</strong>（就业人数）| nonfarm payrolls | Payrolls rose by just 29,000 in September. | 未找到</li>
+<li><strong>unemployment</strong>（失业）| unemployment rate | The unemployment rate ticked up to 4.2%. | 未找到</li>
+<li><strong>inflation</strong>（通货膨胀）| tame inflation | Elevated oil prices remain a key inflation risk. | 未找到</li>
+<li><strong>hold</strong>（维持不变）| hold rates steady | Siegel says the data gives Warsh cover to hold. | 未找到</li>
+<li><strong>greedy</strong>（贪婪的）| greedy investors | Don't chase greedy bets on a sure hike. | "Be fearful when others are greedy, and greedy when others are fearful." —— Warren Buffett</li>
+<li><strong>risk</strong>（风险）| pose a risk | High oil prices pose an inflation risk for the Fed. | "Risk comes from not knowing what you're doing." —— Warren Buffett</li>
+<li><strong>bet</strong>（押注）| bet on | Traders are now betting on a December move instead. | 未找到</li>
+<li><strong>odds</strong>（概率）| the odds of | The odds of an October hike have fallen to about 18%. | 未找到</li>
+</ul>
 <h3>3. 美联储 9 月会议纪要今晚公布，市场紧盯"内部分歧"</h3>
 <p><strong>发生了什么</strong>：美联储将于北京时间 10 月 8 日凌晨 2 点公布 9 月 15–16 日 FOMC 会议纪要。市场想从纪要里读出：当时官员们对加息的分歧有多大，以及对年底是否继续加息的真实立场。背景是 10 年期美债收益率刚冲上 5.3% 的 20 多年高位，9 月官方预测中位数显示年底利率在 4.1%（暗示年内大约再加一次）。</p>
 <p><strong>为什么重要</strong>：纪要是美联储"没说出口的话"——偏鹰则债市收益率可能再冲高、压制股市；偏鸽则是风险资产的利好。今晚是四季度第一个重磅政策信号。</p>
 <p><strong>名词解释</strong>：① FOMC 会议纪要——美联储议息会三周后公布的"会议记录"，是预判下次会议的密码本；② 鹰派/鸽派——鹰派主张加息抗通胀（强硬），鸽派主张宽松保就业（温和）。</p>
 <p><strong>一句话总结</strong>：今晚美联储公布 9 月加息决策的"幕后讨论记录"，鹰还是鸽，将左右债市和股市的下一步。</p>
 <p>🔗 来源：<a href="https://schwabnetwork.com/articles/week-ahead-fomc-minutes-kick-off-final-quarter-of-2026">https://schwabnetwork.com/articles/week-ahead-fomc-minutes-kick-off-final-quarter-of-2026</a></p>
-<p>📖 生词：<br />
-- <strong>minutes</strong>（会议纪要）| FOMC minutes | The FOMC minutes will be released Wednesday at 2 p.m. ET. | 未找到<br />
-- <strong>hawkish</strong>（鹰派的）| hawkish stance | Investors are watching for any hawkish signals in the minutes. | 未找到<br />
-- <strong>dovish</strong>（鸽派的）| dovish tilt | A dovish surprise in the minutes could lift gold prices. | 未找到<br />
-- <strong>median</strong>（中位数的）| median forecast | The Fed's median forecast sees rates at 4.1% at end-2026. | 未找到<br />
-- <strong>plateau</strong>（高位平台期）| rate plateau | Markets debate how long the rate plateau will last. | 未找到<br />
-- <strong>treasury</strong>（国债）| Treasury yield | The 10-year Treasury yield topped 5.3%. | 未找到<br />
-- <strong>consensus</strong>（市场共识）| consensus forecast | Claims data came in below consensus this week. | 未找到<br />
-- <strong>backdrop</strong>（背景）| against a backdrop of | The minutes land against a backdrop of soaring yields. | 未找到<br />
-- <strong>time</strong>（时机）| timing | The release is timed for 2 p.m. ET sharp. | "Time is money." —— Benjamin Franklin<br />
-- <strong>outlook</strong>（前景）| rate outlook | Officials' inflation outlook will be closely scrutinized. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>minutes</strong>（会议纪要）| FOMC minutes | The FOMC minutes will be released Wednesday at 2 p.m. ET. | 未找到</li>
+<li><strong>hawkish</strong>（鹰派的）| hawkish stance | Investors are watching for any hawkish signals in the minutes. | 未找到</li>
+<li><strong>dovish</strong>（鸽派的）| dovish tilt | A dovish surprise in the minutes could lift gold prices. | 未找到</li>
+<li><strong>median</strong>（中位数的）| median forecast | The Fed's median forecast sees rates at 4.1% at end-2026. | 未找到</li>
+<li><strong>plateau</strong>（高位平台期）| rate plateau | Markets debate how long the rate plateau will last. | 未找到</li>
+<li><strong>treasury</strong>（国债）| Treasury yield | The 10-year Treasury yield topped 5.3%. | 未找到</li>
+<li><strong>consensus</strong>（市场共识）| consensus forecast | Claims data came in below consensus this week. | 未找到</li>
+<li><strong>backdrop</strong>（背景）| against a backdrop of | The minutes land against a backdrop of soaring yields. | 未找到</li>
+<li><strong>time</strong>（时机）| timing | The release is timed for 2 p.m. ET sharp. | "Time is money." —— Benjamin Franklin</li>
+<li><strong>outlook</strong>（前景）| rate outlook | Officials' inflation outlook will be closely scrutinized. | 未找到</li>
+</ul>
 <hr />
 <h2>🤖 AI</h2>
 <h3>1. 法国 Mistral 发布旗舰模型 Large 4，自称"部分能力超过中国模型"</h3>
@@ -129,51 +174,57 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 开放权重（open-weight）——模型参数公开下载、谁都能跑的模型，和只能调 API 的"闭源"相对；② 前沿模型（frontier model）——当前能力最强的那批顶尖模型，全行业追赶的标杆。</p>
 <p><strong>一句话总结</strong>：欧洲 AI 头号选手带着新旗舰杀回来，指名挑战中国开源模型，10 月 27 日见分晓。</p>
 <p>🔗 来源：<a href="https://www.lemonde.fr/en/economy/article/2026/10/06/mistral-ai-unveils-new-ai-model-aimed-at-narrowing-the-gap-with-top-chinese-competitors_6758318_19.html">https://www.lemonde.fr/en/economy/article/2026/10/06/mistral-ai-unveils-new-ai-model-aimed-at-narrowing-the-gap-with-top-chinese-competitors_6758318_19.html</a></p>
-<p>📖 生词：<br />
-- <strong>unveil</strong>（发布；揭晓）| unveil a model | Mistral unveiled its new flagship model on Tuesday. | 未找到<br />
-- <strong>flagship</strong>（旗舰的）| flagship model | Mistral Large 4 is the company's new flagship. | 未找到<br />
-- <strong>narrow the gap</strong>（缩小差距）| narrow the gap with rivals | The model aims to narrow the gap with Chinese rivals. | 未找到<br />
-- <strong>open-weight</strong>（开放权重的）| open-weight model | Open-weight means anyone can download and run it. | 未找到<br />
-- <strong>rival</strong>（竞争对手）| rival models | Mistral claims an edge over its Chinese rivals. | 未找到<br />
-- <strong>cyber</strong>（网络安全的）| cyber security | The CEO highlighted the model's cyber capabilities. | 未找到<br />
-- <strong>trajectory</strong>（发展轨迹）| on a trajectory to | Mistral says it is on a trajectory to improve further. | 未找到<br />
-- <strong>milestone</strong>（里程碑）| reach a milestone | The launch is a major milestone for the French startup. | 未找到<br />
-- <strong>frontier</strong>（前沿）| frontier model | Large 4 is "closing the gap with frontier models." | 未找到<br />
-- <strong>imagination</strong>（想象力）| stretch one's imagination | Building frontier AI takes engineering and imagination. | "Imagination is more important than knowledge." —— Albert Einstein</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>unveil</strong>（发布；揭晓）| unveil a model | Mistral unveiled its new flagship model on Tuesday. | 未找到</li>
+<li><strong>flagship</strong>（旗舰的）| flagship model | Mistral Large 4 is the company's new flagship. | 未找到</li>
+<li><strong>narrow the gap</strong>（缩小差距）| narrow the gap with rivals | The model aims to narrow the gap with Chinese rivals. | 未找到</li>
+<li><strong>open-weight</strong>（开放权重的）| open-weight model | Open-weight means anyone can download and run it. | 未找到</li>
+<li><strong>rival</strong>（竞争对手）| rival models | Mistral claims an edge over its Chinese rivals. | 未找到</li>
+<li><strong>cyber</strong>（网络安全的）| cyber security | The CEO highlighted the model's cyber capabilities. | 未找到</li>
+<li><strong>trajectory</strong>（发展轨迹）| on a trajectory to | Mistral says it is on a trajectory to improve further. | 未找到</li>
+<li><strong>milestone</strong>（里程碑）| reach a milestone | The launch is a major milestone for the French startup. | 未找到</li>
+<li><strong>frontier</strong>（前沿）| frontier model | Large 4 is "closing the gap with frontier models." | 未找到</li>
+<li><strong>imagination</strong>（想象力）| stretch one's imagination | Building frontier AI takes engineering and imagination. | "Imagination is more important than knowledge." —— Albert Einstein</li>
+</ul>
 <h3>2. 英伟达支持的 Reflection 发布首个开源模型 Beam，叫板 DeepSeek</h3>
 <p><strong>发生了什么</strong>：由前 DeepMind 研究员创立、获英伟达支持的 Reflection AI，10 月 5–6 日发布首个开放权重模型 Beam，主攻代码生成和智能体任务。Beam 总参数 5010 亿，但每次只激活 230 亿参数——"部分神经元干活"让模型又快又省钱。公司称 Beam 可与 Z.ai 的 GLM-5.2 一战，代码任务上接近通义 Qwen3.8-Max。</p>
 <p><strong>为什么重要</strong>：这是美国对"中国开源模型又便宜又好用"的正面回应——开源竞争已从"堆参数"转向"比效率"，中美在开源赛道进入贴身肉搏。</p>
 <p><strong>名词解释</strong>：① 参数（parameters）——模型里的"旋钮"数量，越多一般越聪明也越贵；② 稀疏激活——5010 亿参数不全用、每次只叫醒 230 亿干活，像按项目组队，人多但开销小。</p>
 <p><strong>一句话总结</strong>：美国版"高性价比开源模型"来了：参数砍半、专攻写代码，直接对标 DeepSeek 和 Kimi。</p>
 <p>🔗 来源：<a href="https://indianexpress.com/article/technology/artificial-intelligence/nvidia-backed-reflection-unveils-first-ai-model-to-take-on-chinese-open-models-10908391/">https://indianexpress.com/article/technology/artificial-intelligence/nvidia-backed-reflection-unveils-first-ai-model-to-take-on-chinese-open-models-10908391/</a></p>
-<p>📖 生词：<br />
-- <strong>parameter</strong>（参数）| model parameters | Beam has 501 billion total parameters. | 未找到<br />
-- <strong>activate</strong>（激活）| activate neurons | It activates only 23 billion parameters per task. | 未找到<br />
-- <strong>efficient</strong>（高效的）| cost-efficient | Sparse activation makes the model cheaper to run. | 未找到<br />
-- <strong>coding</strong>（编程）| coding tasks | Beam is designed for coding and agentic tasks. | 未找到<br />
-- <strong>agentic</strong>（自主智能体的）| agentic AI | Agentic models can complete multi-step tasks on their own. | 未找到<br />
-- <strong>compete</strong>（竞争）| compete with | The startup aims to compete with DeepSeek and Kimi. | 未找到<br />
-- <strong>proliferate</strong>（迅速扩散）| proliferating models | Chinese open models are rapidly proliferating. | 未找到<br />
-- <strong>customize</strong>（定制）| customizable | Open models are cheaper and more customizable. | 未找到<br />
-- <strong>automate</strong>（使自动化）| automate coding | Reflection builds tools that automate software development. | 未找到<br />
-- <strong>beyond</strong>（超越）| beyond expectations | Beam goes beyond simple chatbots into real coding work. | "To infinity and beyond!" ——《Toy Story》（1995）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>parameter</strong>（参数）| model parameters | Beam has 501 billion total parameters. | 未找到</li>
+<li><strong>activate</strong>（激活）| activate neurons | It activates only 23 billion parameters per task. | 未找到</li>
+<li><strong>efficient</strong>（高效的）| cost-efficient | Sparse activation makes the model cheaper to run. | 未找到</li>
+<li><strong>coding</strong>（编程）| coding tasks | Beam is designed for coding and agentic tasks. | 未找到</li>
+<li><strong>agentic</strong>（自主智能体的）| agentic AI | Agentic models can complete multi-step tasks on their own. | 未找到</li>
+<li><strong>compete</strong>（竞争）| compete with | The startup aims to compete with DeepSeek and Kimi. | 未找到</li>
+<li><strong>proliferate</strong>（迅速扩散）| proliferating models | Chinese open models are rapidly proliferating. | 未找到</li>
+<li><strong>customize</strong>（定制）| customizable | Open models are cheaper and more customizable. | 未找到</li>
+<li><strong>automate</strong>（使自动化）| automate coding | Reflection builds tools that automate software development. | 未找到</li>
+<li><strong>beyond</strong>（超越）| beyond expectations | Beam goes beyond simple chatbots into real coding work. | "To infinity and beyond!" ——《Toy Story》（1995）</li>
+</ul>
 <h3>3. Anthropic 扩大创业扶持：免费一年 Claude Team + 1000 美元 API 额度</h3>
 <p><strong>发生了什么</strong>：Anthropic 在 10 月 6 日旧金山科技周上宣布扩大 "Claude for Startups" 计划：符合条件的初创公司可获一年免费 Claude Team（团队付费版）+ 1,000 美元 API 调用额度，还能用插件市场、预约一对一办公时间。申请条件是过去 5 年内成立、或过去 2 年内拿过融资。</p>
 <p><strong>为什么重要</strong>：Anthropic 在 11 月 IPO 传闻（估值或达 2 万亿美元）前夜发力"开发者生态"——AI 大战下半场比的不只是模型，而是谁的模型上长出的公司更多。</p>
 <p><strong>名词解释</strong>：① API 额度（credits）——调用 AI 模型的"充值卡"；② Claude Team——Anthropic 的团队付费版，相当于"企业微信高级版"，多人协作+更高用量。</p>
 <p><strong>一句话总结</strong>：Anthropic 给创业公司发"大礼包"：免费团队版+千元调用额度，IPO 前夜疯狂圈开发者。</p>
 <p>🔗 来源：<a href="https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/">https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/</a></p>
-<p>📖 生词：<br />
-- <strong>startup</strong>（初创公司）| startup founder | The program targets early-stage startups. | 未找到<br />
-- <strong>subsidize</strong>（补贴）| subsidized access | Anthropic is offering subsidized access to its models. | 未找到<br />
-- <strong>credit</strong>（额度）| API credits | Startups get $1,000 in API credits. | 未找到<br />
-- <strong>eligible</strong>（符合条件的）| be eligible for | Firms founded in the last five years are eligible. | 未找到<br />
-- <strong>embed</strong>（嵌入）| embed technology | Anthropic wants to embed its tech in new companies. | 未找到<br />
-- <strong>perk</strong>（福利）| perks and benefits | The expanded program adds fresh perks for founders. | 未找到<br />
-- <strong>expire</strong>（到期）| expire after | Unused credits typically expire after a set period. | 未找到<br />
-- <strong>bootstrap</strong>（白手起家）| bootstrapped startup | Bootstrapped teams can also apply. | 未找到<br />
-- <strong>mission</strong>（使命）| central to a mission | Partnering with founders is central to our mission. | 未找到<br />
-- <strong>keep</strong>（保持）| keep doing | The free credits help startups keep building. | "Just keep swimming." ——《Finding Nemo》（2003）</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>startup</strong>（初创公司）| startup founder | The program targets early-stage startups. | 未找到</li>
+<li><strong>subsidize</strong>（补贴）| subsidized access | Anthropic is offering subsidized access to its models. | 未找到</li>
+<li><strong>credit</strong>（额度）| API credits | Startups get $1,000 in API credits. | 未找到</li>
+<li><strong>eligible</strong>（符合条件的）| be eligible for | Firms founded in the last five years are eligible. | 未找到</li>
+<li><strong>embed</strong>（嵌入）| embed technology | Anthropic wants to embed its tech in new companies. | 未找到</li>
+<li><strong>perk</strong>（福利）| perks and benefits | The expanded program adds fresh perks for founders. | 未找到</li>
+<li><strong>expire</strong>（到期）| expire after | Unused credits typically expire after a set period. | 未找到</li>
+<li><strong>bootstrap</strong>（白手起家）| bootstrapped startup | Bootstrapped teams can also apply. | 未找到</li>
+<li><strong>mission</strong>（使命）| central to a mission | Partnering with founders is central to our mission. | 未找到</li>
+<li><strong>keep</strong>（保持）| keep doing | The free credits help startups keep building. | "Just keep swimming." ——《Finding Nemo》（2003）</li>
+</ul>
 <hr />
 <h2>🌍 国际局势</h2>
 <h3>1. 巴西总统大选进入第二轮：博索纳罗对决卢拉，特朗普发声引关注</h3>
@@ -182,51 +233,57 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：决选（runoff）——首轮无人过半时，得票最高的两名候选人再比一轮，赢者当选。</p>
 <p><strong>一句话总结</strong>：巴西大选首轮无人过半，博索纳罗与卢拉10月25日决战，特朗普的表态让选情多了层美巴博弈的味道。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/world/americas/trumps-remarks-brazil-election-show-lula-is-isolated-says-bolsonaro-2026-10-06/">https://www.reuters.com/world/americas/trumps-remarks-brazil-election-show-lula-is-isolated-says-bolsonaro-2026-10-06/</a></p>
-<p>📖 生词：<br />
-- <strong>runoff</strong>（决选）| runoff election | Sunday's vote sent Bolsonaro to a runoff on October 25. | 未找到<br />
-- <strong>incumbent</strong>（现任者）| incumbent president | The leftist incumbent Lula faces Bolsonaro in the runoff. | 未找到<br />
-- <strong>isolated</strong>（被孤立的）| diplomatically isolated | Flavio Bolsonaro said Lula is increasingly isolated on the world stage. | 未找到<br />
-- <strong>endorse</strong>（公开支持）| endorse a candidate | Right-wing rivals endorsed Bolsonaro for the runoff. | 未找到<br />
-- <strong>payroll</strong>（工资总额）| payroll tax | He promised to cut payroll taxes if elected. | 未找到<br />
-- <strong>underscore</strong>（强调）| underscore the importance of | Trump's remarks underscored Lula's isolation, Bolsonaro said. | 未找到<br />
-- <strong>change</strong>（变革）| eager for change | "The world is eager for change in Brazil," Bolsonaro said. | "The only constant in life is change." —— Heraclitus（赫拉克利特）<br />
-- <strong>victory</strong>（胜利）| claim victory | Trump called the result "a very, very big victory." | "Victory has a hundred fathers and defeat is an orphan." —— John F. Kennedy（肯尼迪）<br />
-- <strong>stage</strong>（世界舞台）| world stage | Brazil is back on the world stage this election season. | "All the world's a stage, and all the men and women merely players." —— William Shakespeare《As You Like It》（《皆大欢喜》）<br />
-- <strong>remark</strong>（言论）| make remarks | Trump's remarks about the election made headlines. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>runoff</strong>（决选）| runoff election | Sunday's vote sent Bolsonaro to a runoff on October 25. | 未找到</li>
+<li><strong>incumbent</strong>（现任者）| incumbent president | The leftist incumbent Lula faces Bolsonaro in the runoff. | 未找到</li>
+<li><strong>isolated</strong>（被孤立的）| diplomatically isolated | Flavio Bolsonaro said Lula is increasingly isolated on the world stage. | 未找到</li>
+<li><strong>endorse</strong>（公开支持）| endorse a candidate | Right-wing rivals endorsed Bolsonaro for the runoff. | 未找到</li>
+<li><strong>payroll</strong>（工资总额）| payroll tax | He promised to cut payroll taxes if elected. | 未找到</li>
+<li><strong>underscore</strong>（强调）| underscore the importance of | Trump's remarks underscored Lula's isolation, Bolsonaro said. | 未找到</li>
+<li><strong>change</strong>（变革）| eager for change | "The world is eager for change in Brazil," Bolsonaro said. | "The only constant in life is change." —— Heraclitus（赫拉克利特）</li>
+<li><strong>victory</strong>（胜利）| claim victory | Trump called the result "a very, very big victory." | "Victory has a hundred fathers and defeat is an orphan." —— John F. Kennedy（肯尼迪）</li>
+<li><strong>stage</strong>（世界舞台）| world stage | Brazil is back on the world stage this election season. | "All the world's a stage, and all the men and women merely players." —— William Shakespeare《As You Like It》（《皆大欢喜》）</li>
+<li><strong>remark</strong>（言论）| make remarks | Trump's remarks about the election made headlines. | 未找到</li>
+</ul>
 <h3>2. 以色列10月27日议会选举临近，内塔尼亚胡警告哈马斯勿干预选情</h3>
 <p><strong>发生了什么</strong>：以色列将于10月27日举行议会选举。10月6日内阁会议上，总理内塔尼亚胡警告哈马斯不要试图以袭击干预选举，称以方将挫败企图并以"巨大力量"回应。此前一天，以军总参谋长和辛贝特局长也警告，选举与10月7日周年纪念使以色列进入"格外敏感时期"。</p>
 <p><strong>为什么重要</strong>：这是2023年10月7日袭击以来的首次以色列大选，安全局势与加沙战后安排直接塑造选情；选举结果将决定以色列未来对加沙、黎巴嫩及伊朗政策的走向。</p>
 <p><strong>名词解释</strong>：辛贝特（Shin Bet）——以色列国内安全情报机构，类似"国内版摩萨德"，负责反恐和境内安全。</p>
 <p><strong>一句话总结</strong>：以色列警告哈马斯"勿碰大选"，大选前两周进入最敏感时期，安全牌成了选战主角。</p>
 <p>🔗 来源：<a href="https://www.jpost.com:443/israel-news/article-910823">https://www.jpost.com:443/israel-news/article-910823</a></p>
-<p>📖 生词：<br />
-- <strong>commemorate</strong>（纪念）| commemorate the victims | The ceremony commemorated those killed on October 7. | 未找到<br />
-- <strong>thwart</strong>（挫败）| thwart an attack | Israel vowed to thwart any attempt to disrupt the vote. | 未找到<br />
-- <strong>tremendous</strong>（巨大的）| tremendous force | He promised to respond with "tremendous force." | 未找到<br />
-- <strong>force</strong>（武力）| use force | The army may use force against new attacks. | "May the Force be with you." —— Star Wars《星球大战》<br />
-- <strong>remnant</strong>（残余）| remnants of the forces | Hamas would act "with the remnants of its forces," Netanyahu said. | 未找到<br />
-- <strong>sensitive</strong>（敏感的）| sensitive period | Israel is entering a particularly sensitive period, the IDF chief said. | 未找到<br />
-- <strong>warn</strong>（警告）| warn against | Netanyahu warned Hamas against trying to influence the election. | 未找到<br />
-- <strong>influence</strong>（影响）| influence the election | Security officials fear attempts to influence the October 27 vote. | 未找到<br />
-- <strong>cabinet</strong>（内阁）| cabinet meeting | He spoke at the opening of the cabinet meeting. | 未找到<br />
-- <strong>anniversary</strong>（周年纪念日）| third anniversary | The third anniversary of the attack was marked on October 5. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>commemorate</strong>（纪念）| commemorate the victims | The ceremony commemorated those killed on October 7. | 未找到</li>
+<li><strong>thwart</strong>（挫败）| thwart an attack | Israel vowed to thwart any attempt to disrupt the vote. | 未找到</li>
+<li><strong>tremendous</strong>（巨大的）| tremendous force | He promised to respond with "tremendous force." | 未找到</li>
+<li><strong>force</strong>（武力）| use force | The army may use force against new attacks. | "May the Force be with you." —— Star Wars《星球大战》</li>
+<li><strong>remnant</strong>（残余）| remnants of the forces | Hamas would act "with the remnants of its forces," Netanyahu said. | 未找到</li>
+<li><strong>sensitive</strong>（敏感的）| sensitive period | Israel is entering a particularly sensitive period, the IDF chief said. | 未找到</li>
+<li><strong>warn</strong>（警告）| warn against | Netanyahu warned Hamas against trying to influence the election. | 未找到</li>
+<li><strong>influence</strong>（影响）| influence the election | Security officials fear attempts to influence the October 27 vote. | 未找到</li>
+<li><strong>cabinet</strong>（内阁）| cabinet meeting | He spoke at the opening of the cabinet meeting. | 未找到</li>
+<li><strong>anniversary</strong>（周年纪念日）| third anniversary | The third anniversary of the attack was marked on October 5. | 未找到</li>
+</ul>
 <h3>3. 利比亚东部议会选举新议长，结束萨利赫近12年任期</h3>
 <p><strong>发生了什么</strong>：10月6日，利比亚东部众议院选举萨勒欣·阿卜杜勒纳比为新议长，接替任职近12年的阿吉拉·萨利赫。此前一天，98名议员通过新规，将议长任期限制为 single 12个月，终结了自2014年以来不变的领导层安排。</p>
 <p><strong>为什么重要</strong>：利比亚是重要油气生产国，自2014年起东西分裂；东部权力更迭关系到国家统一进程、石油出口稳定以及地中海移民路线。</p>
 <p><strong>名词解释</strong>：东西分裂——2014年后利比亚形成东部（图卜鲁格议会+哈夫塔尔武装）与西部（的黎波里政府）两个对立政权，至今未统一。</p>
 <p><strong>一句话总结</strong>：利比亚东部12年不变的"老议长"下台，换人+限任期，东西分裂格局迎来一次内部松动。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/world/africa/libyas-eastern-lawmakers-elect-abdulnabi-speaker-after-12-years-saleh-2026-10-06/">https://www.reuters.com/world/africa/libyas-eastern-lawmakers-elect-abdulnabi-speaker-after-12-years-saleh-2026-10-06/</a></p>
-<p>📖 生词：<br />
-- <strong>elect</strong>（选举）| elect a speaker | Eastern lawmakers elected a new speaker on Tuesday. | 未找到<br />
-- <strong>speaker</strong>（议长）| house speaker | Abdulnabi replaced Saleh as speaker after 12 years. | 未找到<br />
-- <strong>replace</strong>（取代）| replace someone | The vote replaced a leadership in place since 2014. | 未找到<br />
-- <strong>discontent</strong>（不满）| growing discontent | There was significant discontent among MPs, one lawmaker said. | 未找到<br />
-- <strong>term</strong>（任期）| term limit | The new rule limits the speaker to a single 12-month term. | 未找到<br />
-- <strong>chamber</strong>（议院）| legislative chamber | Libya has two legislative chambers. | 未找到<br />
-- <strong>rival</strong>（对立的）| rival administrations | The country is split between rival administrations in east and west. | 未找到<br />
-- <strong>consult</strong>（商议）| consult MPs | Decisions were made without consulting MPs, critics said. | 未找到<br />
-- <strong>deputy</strong>（副职）| deputy speaker | Two deputy speakers were elected alongside Abdulnabi. | 未找到<br />
-- <strong>arrangement</strong>（安排）| political arrangement | The vote ended an arrangement unchanged since 2014. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>elect</strong>（选举）| elect a speaker | Eastern lawmakers elected a new speaker on Tuesday. | 未找到</li>
+<li><strong>speaker</strong>（议长）| house speaker | Abdulnabi replaced Saleh as speaker after 12 years. | 未找到</li>
+<li><strong>replace</strong>（取代）| replace someone | The vote replaced a leadership in place since 2014. | 未找到</li>
+<li><strong>discontent</strong>（不满）| growing discontent | There was significant discontent among MPs, one lawmaker said. | 未找到</li>
+<li><strong>term</strong>（任期）| term limit | The new rule limits the speaker to a single 12-month term. | 未找到</li>
+<li><strong>chamber</strong>（议院）| legislative chamber | Libya has two legislative chambers. | 未找到</li>
+<li><strong>rival</strong>（对立的）| rival administrations | The country is split between rival administrations in east and west. | 未找到</li>
+<li><strong>consult</strong>（商议）| consult MPs | Decisions were made without consulting MPs, critics said. | 未找到</li>
+<li><strong>deputy</strong>（副职）| deputy speaker | Two deputy speakers were elected alongside Abdulnabi. | 未找到</li>
+<li><strong>arrangement</strong>（安排）| political arrangement | The vote ended an arrangement unchanged since 2014. | 未找到</li>
+</ul>
 <hr />
 <h2>🔋 绿色低碳能源</h2>
 <h3>1. 美国聚变公司 Type One 完成2亿美元B轮融资，西门子能源参投</h3>
@@ -235,145 +292,163 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① B轮融资——初创公司的第二大笔机构资金，意味着技术已验证、开始规模化；② 仿星器（stellarator）——用复杂磁场约束超高温等离子体实现核聚变的装置路线。</p>
 <p><strong>一句话总结</strong>：聚变赛道拿到2亿美元"续命钱"，西门子能源买的不只是股权，更是未来聚变电站的制造入场券。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/business/energy/fusion-firm-type-one-200-million-siemens-energy-backed-raise-2026-10-06/">https://www.reuters.com/business/energy/fusion-firm-type-one-200-million-siemens-energy-backed-raise-2026-10-06/</a></p>
-<p>📖 生词：<br />
-- <strong>fusion</strong>（聚变）| nuclear fusion | Fusion could one day provide abundant clean power. | 未找到<br />
-- <strong>reactor</strong>（反应堆）| fusion reactor | The firm aims to build the first commercial fusion reactor. | 未找到<br />
-- <strong>plasma</strong>（等离子体）| superheated plasma | Complex magnets contain the superheated plasma. | 未找到<br />
-- <strong>prototype</strong>（原型机）| engineering prototype | Funding will support the Infinity One prototype. | 未找到<br />
-- <strong>stellarator</strong>（仿星器）| stellarator design | Type One is developing a stellarator, a type of fusion reactor. | 未找到<br />
-- <strong>commercialize</strong>（使商业化）| commercialize technology | Siemens wants to help commercialize fusion power. | 未找到<br />
-- <strong>venture</strong>（风险投资）| venture capital | Siemens Energy's venture unit joined the funding round. | 未找到<br />
-- <strong>back</strong>（支持）| backed by | The start-up is backed by Bill Gates' Breakthrough Energy Ventures. | "I'll be back." —— The Terminator《终结者》<br />
-- <strong>round</strong>（融资轮次）| Series B round | The Series B round raised $200 million. | 未找到<br />
-- <strong>decade</strong>（十年）| within a decade | It hopes to launch a commercial plant within a decade. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>fusion</strong>（聚变）| nuclear fusion | Fusion could one day provide abundant clean power. | 未找到</li>
+<li><strong>reactor</strong>（反应堆）| fusion reactor | The firm aims to build the first commercial fusion reactor. | 未找到</li>
+<li><strong>plasma</strong>（等离子体）| superheated plasma | Complex magnets contain the superheated plasma. | 未找到</li>
+<li><strong>prototype</strong>（原型机）| engineering prototype | Funding will support the Infinity One prototype. | 未找到</li>
+<li><strong>stellarator</strong>（仿星器）| stellarator design | Type One is developing a stellarator, a type of fusion reactor. | 未找到</li>
+<li><strong>commercialize</strong>（使商业化）| commercialize technology | Siemens wants to help commercialize fusion power. | 未找到</li>
+<li><strong>venture</strong>（风险投资）| venture capital | Siemens Energy's venture unit joined the funding round. | 未找到</li>
+<li><strong>back</strong>（支持）| backed by | The start-up is backed by Bill Gates' Breakthrough Energy Ventures. | "I'll be back." —— The Terminator《终结者》</li>
+<li><strong>round</strong>（融资轮次）| Series B round | The Series B round raised $200 million. | 未找到</li>
+<li><strong>decade</strong>（十年）| within a decade | It hopes to launch a commercial plant within a decade. | 未找到</li>
+</ul>
 <h3>2. 谷歌与 Constellation 达成协议：新增890MW核电，15年长约锁定清洁电力</h3>
 <p><strong>发生了什么</strong>：10月6日，谷歌与美国最大核电运营商 Constellation 宣布里程碑协议：通过增容改造向 PJM 电网新增890兆瓦无碳核电，首批2028年投运；同时签署2700兆瓦、15年长期购电协议。计划覆盖6个核电站，预计维持约4400个岗位、创造约7200个建设岗位，新增投资超43亿美元。</p>
 <p><strong>为什么重要</strong>：AI 数据中心的用电需求正推动科技巨头直接锁定大规模清洁电力；这是企业购电领域最具标志性的核电交易之一，核电在"AI+清洁电力"叙事中强势回归。</p>
 <p><strong>名词解释</strong>：购电协议（PPA）——用电大户和发电方签的长期买电合同，锁定电价、保障供应；890MW约够70多万户美国家庭一年用电。</p>
 <p><strong>一句话总结</strong>：谷歌为AI数据中心"囤电"：890兆瓦新增核电+15年长约，核电成了科技巨头的香饽饽。</p>
 <p>🔗 来源：<a href="https://www.businesswire.com/news/home/20261006125246/en/Google-and-Constellation-Announce-Landmark-Agreement-to-Bring-890-MW-of-New-Nuclear-Capacity-to-PJM-Grid-as-Part-of-Long-Term-Power-Deal">https://www.businesswire.com/news/home/20261006125246/en/Google-and-Constellation-Announce-Landmark-Agreement-to-Bring-890-MW-of-New-Nuclear-Capacity-to-PJM-Grid-as-Part-of-Long-Term-Power-Deal</a></p>
-<p>📖 生词：<br />
-- <strong>landmark</strong>（里程碑式的）| landmark agreement | The two firms signed a landmark clean-power agreement. | 未找到<br />
-- <strong>capacity</strong>（容量）| nuclear capacity | The deal adds 890 MW of carbon-free capacity to the grid. | 未找到<br />
-- <strong>uprate</strong>（增容提功率）| plant uprate | The first uprate is expected to be delivered by 2028. | 未找到<br />
-- <strong>grid</strong>（电网）| power grid | New capacity will feed into the PJM power grid. | 未找到<br />
-- <strong>sustain</strong>（维持）| sustain jobs | The deal helps sustain about 4,400 existing jobs. | 未找到<br />
-- <strong>revenue</strong>（营收）| revenue certainty | A 15-year contract gives the plants revenue certainty. | 未找到<br />
-- <strong>framework</strong>（框架）| strategic framework | They also agreed on a framework for future clean projects. | 未找到<br />
-- <strong>curtail</strong>（削减）| curtail consumption | Google can curtail non-critical power use during grid stress. | 未找到<br />
-- <strong>investment</strong>（投资）| billion-dollar investment | The plan represents over $4.3 billion of new investment. | "The best investment you can make is in yourself." —— Warren Buffett（巴菲特）<br />
-- <strong>certainty</strong>（确定性）| revenue certainty | Long-term deals bring certainty to clean-energy investors. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>landmark</strong>（里程碑式的）| landmark agreement | The two firms signed a landmark clean-power agreement. | 未找到</li>
+<li><strong>capacity</strong>（容量）| nuclear capacity | The deal adds 890 MW of carbon-free capacity to the grid. | 未找到</li>
+<li><strong>uprate</strong>（增容提功率）| plant uprate | The first uprate is expected to be delivered by 2028. | 未找到</li>
+<li><strong>grid</strong>（电网）| power grid | New capacity will feed into the PJM power grid. | 未找到</li>
+<li><strong>sustain</strong>（维持）| sustain jobs | The deal helps sustain about 4,400 existing jobs. | 未找到</li>
+<li><strong>revenue</strong>（营收）| revenue certainty | A 15-year contract gives the plants revenue certainty. | 未找到</li>
+<li><strong>framework</strong>（框架）| strategic framework | They also agreed on a framework for future clean projects. | 未找到</li>
+<li><strong>curtail</strong>（削减）| curtail consumption | Google can curtail non-critical power use during grid stress. | 未找到</li>
+<li><strong>investment</strong>（投资）| billion-dollar investment | The plan represents over $4.3 billion of new investment. | "The best investment you can make is in yourself." —— Warren Buffett（巴菲特）</li>
+<li><strong>certainty</strong>（确定性）| revenue certainty | Long-term deals bring certainty to clean-energy investors. | 未找到</li>
+</ul>
 <h3>3. 住友商事投资印度500MW光风储混合项目，获49%股权</h3>
 <p><strong>发生了什么</strong>：10月6日，日本住友商事宣布投资印度 Hero Future Energies 在卡纳塔克邦的光伏—风电—储能混合项目：光伏与风电合计500兆瓦，配套200MWh电池储能，已进入后期阶段。电力主要通过25年购电协议售予印度国有公用事业 SJVN；住友将收购项目公司 49% 股权。</p>
 <p><strong>为什么重要</strong>："光伏+风电+储能"混合电站配长期购电协议，正成为提供全天候清洁电力的主流模式；日资进入显示国际资本对印度绿色基建的信心。</p>
 <p><strong>名词解释</strong>：光风储混合——太阳能+风电+电池储能三合一电站，白天/有风时发电、多余存起来，没太阳没风时放电，实现24小时稳定供电。</p>
 <p><strong>一句话总结</strong>：日本住友掏钱入股印度500兆瓦"光风储"大电站，国际资本继续加注印度绿电。</p>
 <p>🔗 来源：<a href="https://www.energy-storage.news/sumitomo-corporation-invests-in-hero-future-energies-solar-wind-storage-hybrid-in-karnataka-india/">https://www.energy-storage.news/sumitomo-corporation-invests-in-hero-future-energies-solar-wind-storage-hybrid-in-karnataka-india/</a></p>
-<p>📖 生词：<br />
-- <strong>hybrid</strong>（混合的）| hybrid project | The hybrid park combines solar, wind and battery storage. | 未找到<br />
-- <strong>stake</strong>（股份）| acquire a stake | Sumitomo will acquire a 49% stake in the project company. | 未找到<br />
-- <strong>acquire</strong>（收购）| acquire a stake | The trading house acquired nearly half of the venture. | 未找到<br />
-- <strong>utility</strong>（公用事业公司）| state-owned utility | Power will flow primarily to the utility SJVN under a 25-year deal. | 未找到<br />
-- <strong>surplus</strong>（过剩的）| surplus electricity | Surplus electricity will be sold on the power exchange. | 未找到<br />
-- <strong>primarily</strong>（主要地）| primarily to | The park will supply power primarily to government buyers. | 未找到<br />
-- <strong>advanced</strong>（后期的）| advanced stage | The project is in an advanced stage of development. | 未找到<br />
-- <strong>ceremony</strong>（仪式）| signing ceremony | Executives attended a signing ceremony in Delhi. | 未找到<br />
-- <strong>battery</strong>（电池）| battery storage | A 200MWh battery system will sit alongside the solar and wind farms. | 未找到<br />
-- <strong>solar</strong>（太阳能的）| solar PV | The site will host 500MW of solar PV and wind power. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>hybrid</strong>（混合的）| hybrid project | The hybrid park combines solar, wind and battery storage. | 未找到</li>
+<li><strong>stake</strong>（股份）| acquire a stake | Sumitomo will acquire a 49% stake in the project company. | 未找到</li>
+<li><strong>acquire</strong>（收购）| acquire a stake | The trading house acquired nearly half of the venture. | 未找到</li>
+<li><strong>utility</strong>（公用事业公司）| state-owned utility | Power will flow primarily to the utility SJVN under a 25-year deal. | 未找到</li>
+<li><strong>surplus</strong>（过剩的）| surplus electricity | Surplus electricity will be sold on the power exchange. | 未找到</li>
+<li><strong>primarily</strong>（主要地）| primarily to | The park will supply power primarily to government buyers. | 未找到</li>
+<li><strong>advanced</strong>（后期的）| advanced stage | The project is in an advanced stage of development. | 未找到</li>
+<li><strong>ceremony</strong>（仪式）| signing ceremony | Executives attended a signing ceremony in Delhi. | 未找到</li>
+<li><strong>battery</strong>（电池）| battery storage | A 200MWh battery system will sit alongside the solar and wind farms. | 未找到</li>
+<li><strong>solar</strong>（太阳能的）| solar PV | The site will host 500MW of solar PV and wind power. | 未找到</li>
+</ul>
 <hr />
 <h2>🌱 个人成长</h2>
 <h3>1. Dan Koe：容易"上瘾"不是缺点，是放错地方的天赋</h3>
 <p><strong>核心观点</strong>：Dan Koe 在 10 月 5 日的 Instagram 图文中提出反常识观点：容易对一件事上瘾、能不知不觉投入六小时，是一种稀有特质——大多数人恰恰是三分钟热度。问题不在于"上瘾"本身，而在于这股能量被投放到了游戏和信息流上。解法是选一件值得的难事（一项技能、身体或事业），把同样的痴迷倾注进去两年，就能超过那些浅尝辄止十年的人。配文点睛："人们说你最大的毛病，往往正是能带你走得最远的东西。"</p>
 <p><strong>为什么值得读</strong>：把一个常被污名化的特质翻转为优势，给出可操作的"转移能量"思路，而非空洞的"戒掉手机"说教。</p>
 <p>🔗 来源：Instagram @thedankoe（180 万粉丝），2026-10-05：<a href="https://www.instagram.com/p/DeHiLWwm-is/">https://www.instagram.com/p/DeHiLWwm-is/</a></p>
-<p>📖 生词：<br />
-- <strong>obsession</strong>（痴迷）| an obsession with sth | His obsession with chess made him practice six hours a day. | "The only way to do great work is to love what you do." —— Steve Jobs（2005年斯坦福演讲）<br />
-- <strong>trait</strong>（特质）| personality trait | Patience is a valuable trait in a teacher. | "Be yourself; everyone else is already taken." —— Oscar Wilde<br />
-- <strong>redirect</strong>（重新引导）| redirect one's energy into sth | She redirected her anxiety into training for the marathon. | 未找到<br />
-- <strong>worthwhile</strong>（值得的）| a worthwhile cause | It was a worthwhile trip despite the rain. | "In the middle of difficulty lies opportunity." —— Albert Einstein<br />
-- <strong>outperform</strong>（胜过）| outperform expectations | The rookie outperformed every veteran on the team. | 未找到<br />
-- <strong>compulsive</strong>（难以克制的）| compulsive scrolling | He has a compulsive need to check his phone. | 未找到<br />
-- <strong>casual</strong>（漫不经心的）| casual effort | A casual remark can sometimes hurt deeply. | 未找到<br />
-- <strong>compound</strong>（累积增长）| compound over time | Small habits compound into big results. | 未找到<br />
-- <strong>fixation</strong>（执念）| have a fixation on sth | His fixation on perfection slowed the whole project. | 未找到<br />
-- <strong>harness</strong>（驾驭利用）| harness one's energy | She learned to harness her restlessness into creative work. | "Whether you think you can or you think you can't, you're right." —— Henry Ford</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>obsession</strong>（痴迷）| an obsession with sth | His obsession with chess made him practice six hours a day. | "The only way to do great work is to love what you do." —— Steve Jobs（2005年斯坦福演讲）</li>
+<li><strong>trait</strong>（特质）| personality trait | Patience is a valuable trait in a teacher. | "Be yourself; everyone else is already taken." —— Oscar Wilde</li>
+<li><strong>redirect</strong>（重新引导）| redirect one's energy into sth | She redirected her anxiety into training for the marathon. | 未找到</li>
+<li><strong>worthwhile</strong>（值得的）| a worthwhile cause | It was a worthwhile trip despite the rain. | "In the middle of difficulty lies opportunity." —— Albert Einstein</li>
+<li><strong>outperform</strong>（胜过）| outperform expectations | The rookie outperformed every veteran on the team. | 未找到</li>
+<li><strong>compulsive</strong>（难以克制的）| compulsive scrolling | He has a compulsive need to check his phone. | 未找到</li>
+<li><strong>casual</strong>（漫不经心的）| casual effort | A casual remark can sometimes hurt deeply. | 未找到</li>
+<li><strong>compound</strong>（累积增长）| compound over time | Small habits compound into big results. | 未找到</li>
+<li><strong>fixation</strong>（执念）| have a fixation on sth | His fixation on perfection slowed the whole project. | 未找到</li>
+<li><strong>harness</strong>（驾驭利用）| harness one's energy | She learned to harness her restlessness into creative work. | "Whether you think you can or you think you can't, you're right." —— Henry Ford</li>
+</ul>
 <h3>2. 小馬倪子鈞：停止"赴汤蹈火式"讨好，健康的关系从自爱开始</h3>
 <p><strong>核心观点</strong>：小馬倪子鈞在 10 月 5 日的 Facebook 视频中反思：他曾相信"忠诚"就是为别人赴汤蹈火、委屈自己，把过度付出当作维系关系的地基，结果只换来精疲力竭。转折点是他第一次尝试真实表达、设立边界——害怕关系破裂，却发现根本没人记得他的离开，因为他高估了自己的重要性。结论：处在健康、自爱的状态里，自然会吸引来人，不需要用透支自己去"留住"谁。</p>
 <p><strong>为什么值得读</strong>：中文语境、真人真事，把"讨好型人格"讲得具体可感，对习惯用付出换关系的人是一剂清醒剂。</p>
 <p>🔗 来源：Facebook @小馬 倪子鈞（15 万粉丝），2026-10-05：<a href="https://www.facebook.com/reel/4529052780709847/">https://www.facebook.com/reel/4529052780709847/</a></p>
-<p>📖 生词：<br />
-- <strong>sacrifice</strong>（牺牲）| make a sacrifice | She made great sacrifices to put her kids through school. | 未找到<br />
-- <strong>boundary</strong>（界限）| set boundaries | Setting boundaries at work saved her from burnout. | "Daring to set boundaries is about having the courage to love ourselves even when we risk disappointing others." —— Brené Brown<br />
-- <strong>overextend</strong>（过度透支自己）| overextend oneself | He overextended himself trying to please everyone. | 未找到<br />
-- <strong>authentic</strong>（真实的）| authentic self | People trust leaders who are authentic about their mistakes. | "Be yourself; everyone else is already taken." —— Oscar Wilde<br />
-- <strong>exhaustion</strong>（精疲力竭）| emotional exhaustion | After months of overtime, exhaustion finally hit him. | 未找到<br />
-- <strong>validation</strong>（认可）| seek validation | She stopped seeking validation from social media likes. | 未找到<br />
-- <strong>self-worth</strong>（自我价值感）| sense of self-worth | His self-worth no longer depends on others' praise. | 未找到<br />
-- <strong>resentment</strong>（怨恨）| harbor resentment | Years of unspoken resentment finally surfaced. | 未找到<br />
-- <strong>martyr</strong>（扮可怜式付出者）| play the martyr | Stop playing the martyr and ask for help. | 未找到<br />
-- <strong>reciprocate</strong>（回报善意）| reciprocate sb's kindness | He reciprocated her honesty with his own story. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>sacrifice</strong>（牺牲）| make a sacrifice | She made great sacrifices to put her kids through school. | 未找到</li>
+<li><strong>boundary</strong>（界限）| set boundaries | Setting boundaries at work saved her from burnout. | "Daring to set boundaries is about having the courage to love ourselves even when we risk disappointing others." —— Brené Brown</li>
+<li><strong>overextend</strong>（过度透支自己）| overextend oneself | He overextended himself trying to please everyone. | 未找到</li>
+<li><strong>authentic</strong>（真实的）| authentic self | People trust leaders who are authentic about their mistakes. | "Be yourself; everyone else is already taken." —— Oscar Wilde</li>
+<li><strong>exhaustion</strong>（精疲力竭）| emotional exhaustion | After months of overtime, exhaustion finally hit him. | 未找到</li>
+<li><strong>validation</strong>（认可）| seek validation | She stopped seeking validation from social media likes. | 未找到</li>
+<li><strong>self-worth</strong>（自我价值感）| sense of self-worth | His self-worth no longer depends on others' praise. | 未找到</li>
+<li><strong>resentment</strong>（怨恨）| harbor resentment | Years of unspoken resentment finally surfaced. | 未找到</li>
+<li><strong>martyr</strong>（扮可怜式付出者）| play the martyr | Stop playing the martyr and ask for help. | 未找到</li>
+<li><strong>reciprocate</strong>（回报善意）| reciprocate sb's kindness | He reciprocated her honesty with his own story. | 未找到</li>
+</ul>
 <h3>3. Rob Dial：改变人生的唯一习惯，是"对自己说到做到"</h3>
 <p><strong>核心观点</strong>：播客主持人 Rob Dial（550 万粉丝）在 10 月 5 日的视频中反驳流行的"网红习惯"：冷水澡、凌晨4点起床、冗长晨间仪式——都很好，但都不是最有力量的。唯一能改变人生的习惯是：对自己说到做到（Do what you say you're going to do），兑现对自己的每一个承诺。这是最高形式的自爱：告诉自己"我爱自己，所以不会让自己失望"。</p>
 <p><strong>为什么值得读</strong>：把自律从"折磨清单"还原为"自我信任"，一句话的习惯，对执行力差的人有直接的行动指向。</p>
 <p>🔗 来源：Facebook @Rob Dial（550 万粉丝），2026-10-05：<a href="https://www.facebook.com/reel/1403271124732363/">https://www.facebook.com/reel/1403271124732363/</a></p>
-<p>📖 生词：<br />
-- <strong>follow through</strong>（贯彻到底）| follow through on one's word | She followed through on her promise to quit smoking. | "Don't watch the clock; do what it does. Keep going." —— Sam Levenson<br />
-- <strong>fad</strong>（一时风尚）| a passing fad | Cold showers are just the latest wellness fad. | 未找到<br />
-- <strong>affirmation</strong>（肯定语）| daily affirmations | She starts the day with positive affirmations. | 未找到<br />
-- <strong>integrity</strong>（言行一致）| personal integrity | He is admired for his integrity both in and out of office. | 未找到<br />
-- <strong>commitment</strong>（承诺）| honor a commitment | Marriage is a lifelong commitment. | 未找到<br />
-- <strong>guru</strong>（网红大师）| self-help guru | Don't trust every self-styled fitness guru online. | 未找到<br />
-- <strong>discipline</strong>（自律）| self-discipline | Discipline beats motivation on hard days. | "We are what we repeatedly do. Excellence, then, is not an act, but a habit." —— 亚里士多德（经后人概括流传）<br />
-- <strong>consistency</strong>（持续性）| consistency is key | Consistency turned his side project into a business. | "Success isn't always about greatness. It's about consistency. Consistent hard work leads to success. Greatness will come." —— Dwayne Johnson<br />
-- <strong>momentum</strong>（势头）| gain momentum | Once you start, momentum carries you forward. | 未找到<br />
-- <strong>self-love</strong>（自爱）| practice self-love | Self-love is not selfish; it's necessary. | "You yourself, as much as anybody in the entire universe, deserve your love and affection." —— Buddha</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>follow through</strong>（贯彻到底）| follow through on one's word | She followed through on her promise to quit smoking. | "Don't watch the clock; do what it does. Keep going." —— Sam Levenson</li>
+<li><strong>fad</strong>（一时风尚）| a passing fad | Cold showers are just the latest wellness fad. | 未找到</li>
+<li><strong>affirmation</strong>（肯定语）| daily affirmations | She starts the day with positive affirmations. | 未找到</li>
+<li><strong>integrity</strong>（言行一致）| personal integrity | He is admired for his integrity both in and out of office. | 未找到</li>
+<li><strong>commitment</strong>（承诺）| honor a commitment | Marriage is a lifelong commitment. | 未找到</li>
+<li><strong>guru</strong>（网红大师）| self-help guru | Don't trust every self-styled fitness guru online. | 未找到</li>
+<li><strong>discipline</strong>（自律）| self-discipline | Discipline beats motivation on hard days. | "We are what we repeatedly do. Excellence, then, is not an act, but a habit." —— 亚里士多德（经后人概括流传）</li>
+<li><strong>consistency</strong>（持续性）| consistency is key | Consistency turned his side project into a business. | "Success isn't always about greatness. It's about consistency. Consistent hard work leads to success. Greatness will come." —— Dwayne Johnson</li>
+<li><strong>momentum</strong>（势头）| gain momentum | Once you start, momentum carries you forward. | 未找到</li>
+<li><strong>self-love</strong>（自爱）| practice self-love | Self-love is not selfish; it's necessary. | "You yourself, as much as anybody in the entire universe, deserve your love and affection." —— Buddha</li>
+</ul>
 <hr />
 <h2>💕 爱情 / 亲密关系</h2>
 <h3>1. Sabrina Zohar：恋爱中最该警惕的两个 red flag</h3>
 <p><strong>核心观点</strong>：认证约会教练 Sabrina Zohar（210 万粉丝）在 10 月 4 日的视频中指出两个最危险的信号：一是当你说出困扰，对方不接住你的情绪，反而说你"想太多""太戏剧化"，然后转移话题，让你怀疑自己在无理取闹；二是当你表达不满，对方用冷暴力回应——消失几天、用漠视惩罚你，而不是正面处理问题。她的建议：对这些信号保持好奇，去问问自己——是谁教会了你"这样的对待是可以接受的"。</p>
 <p><strong>为什么值得读</strong>：把精神操控（gaslighting）和冷暴力讲得非常具体、可对照自查，适合在关系里常自我怀疑的人。</p>
 <p>🔗 来源：Instagram @thesabrinazoharshow（210 万粉丝），2026-10-04：<a href="https://www.instagram.com/reel/DeFoDHKS2iF/">https://www.instagram.com/reel/DeFoDHKS2iF/</a></p>
-<p>📖 生词：<br />
-- <strong>red flag</strong>（危险信号）| spot a red flag | Dismissing your feelings is a major red flag. | 未找到<br />
-- <strong>dismiss</strong>（轻视打发）| dismiss sb's feelings | Don't dismiss her concerns as overreacting. | 未找到<br />
-- <strong>validate</strong>（认同情绪）| validate sb's feelings | A good partner validates your emotions instead of mocking them. | 未找到<br />
-- <strong>deflect</strong>（转移话题）| deflect blame | He deflected every question about his late nights. | 未找到<br />
-- <strong>gaslighting</strong>（精神操控）| experience gaslighting | Constant denial of your memory is a form of gaslighting. | 未找到<br />
-- <strong>stonewalling</strong>（拒绝沟通）| resort to stonewalling | Stonewalling shuts down any chance of repair. | 未找到<br />
-- <strong>indifference</strong>（冷漠）| treat sb with indifference | Indifference can hurt more than anger. | "The opposite of love is not hate, it's indifference." —— Elie Wiesel<br />
-- <strong>manipulate</strong>（操纵）| manipulate sb into doing sth | He manipulated her guilt to control the relationship. | 未找到<br />
-- <strong>belittle</strong>（贬低）| belittle sb's efforts | Never belittle someone for showing vulnerability. | 未找到<br />
-- <strong>self-doubt</strong>（自我怀疑）| filled with self-doubt | Constant criticism planted seeds of self-doubt. | "Whether you think you can or you think you can't, you're right." —— Henry Ford</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>red flag</strong>（危险信号）| spot a red flag | Dismissing your feelings is a major red flag. | 未找到</li>
+<li><strong>dismiss</strong>（轻视打发）| dismiss sb's feelings | Don't dismiss her concerns as overreacting. | 未找到</li>
+<li><strong>validate</strong>（认同情绪）| validate sb's feelings | A good partner validates your emotions instead of mocking them. | 未找到</li>
+<li><strong>deflect</strong>（转移话题）| deflect blame | He deflected every question about his late nights. | 未找到</li>
+<li><strong>gaslighting</strong>（精神操控）| experience gaslighting | Constant denial of your memory is a form of gaslighting. | 未找到</li>
+<li><strong>stonewalling</strong>（拒绝沟通）| resort to stonewalling | Stonewalling shuts down any chance of repair. | 未找到</li>
+<li><strong>indifference</strong>（冷漠）| treat sb with indifference | Indifference can hurt more than anger. | "The opposite of love is not hate, it's indifference." —— Elie Wiesel</li>
+<li><strong>manipulate</strong>（操纵）| manipulate sb into doing sth | He manipulated her guilt to control the relationship. | 未找到</li>
+<li><strong>belittle</strong>（贬低）| belittle sb's efforts | Never belittle someone for showing vulnerability. | 未找到</li>
+<li><strong>self-doubt</strong>（自我怀疑）| filled with self-doubt | Constant criticism planted seeds of self-doubt. | "Whether you think you can or you think you can't, you're right." —— Henry Ford</li>
+</ul>
 <h3>2. Threads 热议：回避型依恋的人，被冷落时会是什么反应？</h3>
 <p><strong>核心观点</strong>：Threads 用户 @dms_cicco 10 月 5 日的一段对话引发热议（1.2 万赞）：一人怀疑自己是回避型依恋，朋友出题——"如果你在乎的人突然不理你，你会怎样？"他答：先反思自己是不是做错了什么，然后去关心对方。朋友判定：这就不是回避型。评论区讨论：真正的回避型是"根本不会反思、不在乎对方感受"。厘清了一个流行误区：会焦虑复盘、会自我怀疑的，大概率不是回避，而是焦虑型。</p>
 <p><strong>为什么值得读</strong>：一场生动的"群众心理学小测验"，帮你分清回避与焦虑的真实区别，比标签化地给自己贴标签有用得多。</p>
 <p>🔗 来源：Threads @dms_cicco，2026-10-05：<a href="https://www.threads.com/@dms_cicco/post/DeGX7-mGBnG">https://www.threads.com/@dms_cicco/post/DeGX7-mGBnG</a></p>
-<p>📖 生词：<br />
-- <strong>attachment</strong>（依恋）| attachment style | Attachment styles shape how we handle closeness. | "Love is composed of a single soul inhabiting two bodies." —— Aristotle<br />
-- <strong>avoidant</strong>（回避型的）| avoidant attachment | Avoidant partners often withdraw when things get serious. | 未找到<br />
-- <strong>anxious</strong>（焦虑的）| anxious attachment | She felt anxious waiting for his reply. | "We accept the love we think we deserve." —— Stephen Chbosky《壁花少年》(The Perks of Being a Wallflower)<br />
-- <strong>ghosting</strong>（突然断联）| experience ghosting | Ghosting leaves the other person with no closure. | 未找到<br />
-- <strong>ruminate</strong>（反复咀嚼）| ruminate over sth | He ruminated for days over one short text. | 未找到<br />
-- <strong>reassurance</strong>（安慰保证）| seek reassurance | She kept seeking reassurance that he still loved her. | 未找到<br />
-- <strong>hypervigilance</strong>（高度警觉）| emotional hypervigilance | Hypervigilance kept her scanning every tone shift. | 未找到<br />
-- <strong>self-blame</strong>（自责）| drown in self-blame | Self-blame followed every unanswered message. | 未找到<br />
-- <strong>scenario</strong>（设想场景）| hypothetical scenario | The friend posed a simple scenario as a test. | 未找到<br />
-- <strong>mislabel</strong>（贴错标签）| mislabel oneself | Many people mislabel normal anxiety as avoidant. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>attachment</strong>（依恋）| attachment style | Attachment styles shape how we handle closeness. | "Love is composed of a single soul inhabiting two bodies." —— Aristotle</li>
+<li><strong>avoidant</strong>（回避型的）| avoidant attachment | Avoidant partners often withdraw when things get serious. | 未找到</li>
+<li><strong>anxious</strong>（焦虑的）| anxious attachment | She felt anxious waiting for his reply. | "We accept the love we think we deserve." —— Stephen Chbosky《壁花少年》(The Perks of Being a Wallflower)</li>
+<li><strong>ghosting</strong>（突然断联）| experience ghosting | Ghosting leaves the other person with no closure. | 未找到</li>
+<li><strong>ruminate</strong>（反复咀嚼）| ruminate over sth | He ruminated for days over one short text. | 未找到</li>
+<li><strong>reassurance</strong>（安慰保证）| seek reassurance | She kept seeking reassurance that he still loved her. | 未找到</li>
+<li><strong>hypervigilance</strong>（高度警觉）| emotional hypervigilance | Hypervigilance kept her scanning every tone shift. | 未找到</li>
+<li><strong>self-blame</strong>（自责）| drown in self-blame | Self-blame followed every unanswered message. | 未找到</li>
+<li><strong>scenario</strong>（设想场景）| hypothetical scenario | The friend posed a simple scenario as a test. | 未找到</li>
+<li><strong>mislabel</strong>（贴错标签）| mislabel oneself | Many people mislabel normal anxiety as avoidant. | 未找到</li>
+</ul>
 <h3>3. Matthew Hussey：对的人，是让你"像回家一样自在"的人</h3>
 <p><strong>核心观点</strong>：情感专家 Matthew Hussey（260 万粉丝）在 10 月 4 日的 ABtalks 访谈中回答"如何知道对方是对的人"：对的人是让你感到"像在家一样"的人——可以做自己，不必伪装，唱歌难听也不怕被嫌弃，安静待在一起也不尴尬。健康的关系提供安全空间，而这恰恰是成长的土壤：被全然接纳的同时，又被支持着成为更好的自己。核心是：不要为了留住谁而弄丢自己；真正的亲密是安全感，而不是小心翼翼。</p>
 <p><strong>为什么值得读</strong>：一句话讲清"安全感"的本质，对总在关系里"表演"的人特别有共鸣。</p>
 <p>🔗 来源：Instagram @thematthewhussey（260 万粉丝），2026-10-04：<a href="https://www.instagram.com/reel/DeE3ODHs3mu/">https://www.instagram.com/reel/DeE3ODHs3mu/</a></p>
-<p>📖 生词：<br />
-- <strong>pretense</strong>（伪装）| without pretense | With him she could drop all pretense. | "Be yourself; everyone else is already taken." —— Oscar Wilde<br />
-- <strong>intimacy</strong>（亲密感）| emotional intimacy | Intimacy grows from small honest moments. | "The best thing to hold onto in life is each other." —— Audrey Hepburn<br />
-- <strong>vulnerable</strong>（袒露心声的）| allow oneself to be vulnerable | Being vulnerable with him felt safe for the first time. | "Vulnerability is not winning or losing; it's having the courage to show up and be seen when we have no control over the outcome." —— Brené Brown《脆弱的力量》(Daring Greatly)<br />
-- <strong>judgment</strong>（评判）| without judgment | Their home is a place without judgment. | 未找到<br />
-- <strong>authentic</strong>（真实的）| authentic connection | An authentic connection needs no performance. | 未找到<br />
-- <strong>cherish</strong>（珍爱）| cherish the moments | They cherished quiet evenings more than grand gestures. | 未找到<br />
-- <strong>reciprocity</strong>（相互性）| emotional reciprocity | Love needs reciprocity to survive. | 未找到<br />
-- <strong>belonging</strong>（归属感）| sense of belonging | Home is where you feel belonging. | "There's no place like home." —— 电影《绿野仙踪》(The Wizard of Oz)<br />
-- <strong>reassure</strong>（使安心）| reassure sb | His steady presence reassured her. | 未找到<br />
-- <strong>nurture</strong>（滋养）| nurture a relationship | They nurtured their bond with daily honesty. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>pretense</strong>（伪装）| without pretense | With him she could drop all pretense. | "Be yourself; everyone else is already taken." —— Oscar Wilde</li>
+<li><strong>intimacy</strong>（亲密感）| emotional intimacy | Intimacy grows from small honest moments. | "The best thing to hold onto in life is each other." —— Audrey Hepburn</li>
+<li><strong>vulnerable</strong>（袒露心声的）| allow oneself to be vulnerable | Being vulnerable with him felt safe for the first time. | "Vulnerability is not winning or losing; it's having the courage to show up and be seen when we have no control over the outcome." —— Brené Brown《脆弱的力量》(Daring Greatly)</li>
+<li><strong>judgment</strong>（评判）| without judgment | Their home is a place without judgment. | 未找到</li>
+<li><strong>authentic</strong>（真实的）| authentic connection | An authentic connection needs no performance. | 未找到</li>
+<li><strong>cherish</strong>（珍爱）| cherish the moments | They cherished quiet evenings more than grand gestures. | 未找到</li>
+<li><strong>reciprocity</strong>（相互性）| emotional reciprocity | Love needs reciprocity to survive. | 未找到</li>
+<li><strong>belonging</strong>（归属感）| sense of belonging | Home is where you feel belonging. | "There's no place like home." —— 电影《绿野仙踪》(The Wizard of Oz)</li>
+<li><strong>reassure</strong>（使安心）| reassure sb | His steady presence reassured her. | 未找到</li>
+<li><strong>nurture</strong>（滋养）| nurture a relationship | They nurtured their bond with daily honesty. | 未找到</li>
+</ul>
 <hr />
 <p><em>小麻薯今日份简报完工 ✍️ 18 条全覆盖：金融3、AI3、国际3、绿能3、成长3、爱情3。生词共 180 个已存档，明早 8:30 复习见～</em></p>
 <div class="nav bottom"><a href="issue-010.html">⬅ 上一期（第10期）</a><a href="index.html">📚 回到目录</a><a href="issue-012.html">下一期（第12期）➡</a></div>

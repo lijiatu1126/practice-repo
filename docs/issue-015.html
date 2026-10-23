@@ -57,6 +57,44 @@ body.dark .note { color: #a39a89; }
 body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
 body.dark th { background: #262219; }
+.summary { background:#edf3fd; border-left:4px solid #1757c2; border-radius:6px; padding:12px 16px; }
+.blessing { text-align: center; color: #8a3324; font-size: 1.07em; font-weight: 600;
+            letter-spacing: 0.04em; margin: 0 0 16px; }
+.sec-label { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+             font-weight: 700; margin: 0 0 6px; font-size: 0.98em; letter-spacing: 0.03em; }
+.glossary { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 6px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.vocabbox .sec-label { color: #1757c2; }
+.vocabbox ul { list-style: none; padding-left: 0; margin: 6px 0 4px; }
+li.vocab { padding: 10px 0 12px; border-bottom: 1px dashed #ddd5bd; margin: 0; }
+li.vocab:last-child { border-bottom: none; }
+.vword { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         font-weight: 800; font-size: 1.12em; color: #1757c2; margin-right: 6px; }
+.vmean { font-weight: 700; }
+.vrow { font-size: 0.93em; color: #4a463e; margin-top: 3px; line-height: 1.8; }
+.vlabel { display: inline-block; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
+          padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
+.vquote { color: #6b6257; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources .sec-label { color: #5a554c; }
+.sources ul { margin: 4px 0; }
+h3::before { content: "▍"; color: #8a3324; }
+body.dark .blessing { color: #e0a458; }
+body.dark .glossary { background: #262219; }
+body.dark .vocabbox { background: #1d1b16; border-color: #3a362a; }
+body.dark li.vocab { border-bottom-color: #3a362a; }
+body.dark .vword { color: #8ab8ff; }
+body.dark .vrow { color: #c9c2b2; }
+body.dark .vlabel { background: #33302a; color: #e0c98a; }
+body.dark .vquote { color: #a39a89; }
+body.dark .summary { background: #1c2733; border-left-color: #8ab8ff; }
+body.dark .sources { color: #a39a89; }
+body.dark h3::before { color: #e0a458; }
 body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
@@ -67,6 +105,7 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📚 《麻薯日报》合集 · 第 15 期 · 2026-10-11（星期日）</p>
 </blockquote>
 <h1>📰 10月11日 新闻简报</h1>
+<p class="blessing">🌅 愿你今天眼里有光，心里有糖，脚下的路越走越宽。</p>
 <p>早安 Ricardo ☀️ 周日快乐！今天是 2026 年 10 月 11 日，你的晨间简报来了——特朗普政府调查美联储理事库克、俄美达成柴油供应协议、下周三 9 月 CPI 定调议息、AI 圈"不聊天的模型"三周估值 75 亿美元、软银拟募 1000 亿美元押注"工业 AI"、诺贝尔和平奖花落纳维·皮莱、巴拿马 7.7 级地震、韩国 4750 亿美元绿色转型战略。国内看："十五五"就业社保定调、卫星互联网 27 组卫星上天、烟威特高压投运。慢慢看 ☕</p>
 <hr />
 <h2>💰 金融</h2>
@@ -96,57 +135,63 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 估值——市场给一家没上市公司的"身价"，75 亿美元≈540 亿人民币；② A 轮融资——创业公司早期的大额融资轮次（种子轮→A 轮→B 轮……）；③ Transformer 架构——当今大模型的基础技术框架；④ Token——AI 计费的"字块"单位，用得越少成本越低。</p>
 <p><strong>一句话总结</strong>：不聊天的 AI 反而最赚钱——Jev 三周冲上 75 亿美元估值，"机器替机器干活"时代来了。</p>
 <p>🔗 来源：<a href="https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/">TechCrunch（10-09）</a></p>
-<p>📖 生词：<br />
-- <strong>valuation</strong>（估值）| at a $7.5 billion valuation | valued at $7.5B just weeks after launch. | "Price is what you pay. Value is what you get." —— Warren Buffett<br />
-- <strong>fundraise</strong>（融资，募资）| a massive fundraise | The massive fundraise comes as little surprise. | 未找到<br />
-- <strong>viral</strong>（病毒式传播的，爆火的）| go viral | Jev went viral almost instantly after its release. | 未找到<br />
-- <strong>enterprise</strong>（企业）| enterprise adoption | a remarkably swift adoption by enterprises. | "The best way to predict the future is to create it." —— Peter Drucker<br />
-- <strong>calibrate</strong>（校准）| calibrated decisions | It produces "calibrated decisions." | 未找到<br />
-- <strong>automate</strong>（使自动化）| automate tasks | uniquely suited for automating tasks. | 未找到<br />
-- <strong>co-founder</strong>（联合创始人）| co-founder Diogo Almeida | TypeSafe co-founder Diogo Almeida told TechCrunch. | 未找到<br />
-- <strong>transformer</strong>（Transformer 架构）| transformer architecture | Jev is based on a transformer architecture. | 未找到<br />
-- <strong>position</strong>（定位）| position as | The company positions its approach as uniquely suited for automation. | "If you don't know where you are going, you'll end up someplace else." —— Yogi Berra<br />
-- <strong>claim</strong>（宣称）| claim that | The startup claims a third of Fortune 500 companies are using it. | "Extraordinary claims require extraordinary evidence." —— Carl Sagan<br />
-- <strong>investor</strong>（投资者）| existing investor | with participation from Sequoia and existing investor DCVC. | "Be fearful when others are greedy, and greedy when others are fearful." —— Warren Buffett<br />
-- <strong>seed round</strong>（种子轮融资）| a $40 million seed round | announced a $40 million seed round led by DCVC. | "The best time to plant a tree was 20 years ago. The second best time is now." —— 英语谚语</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>valuation</strong>（估值）| at a $7.5 billion valuation | valued at $7.5B just weeks after launch. | "Price is what you pay. Value is what you get." —— Warren Buffett</li>
+<li><strong>fundraise</strong>（融资，募资）| a massive fundraise | The massive fundraise comes as little surprise. | 未找到</li>
+<li><strong>viral</strong>（病毒式传播的，爆火的）| go viral | Jev went viral almost instantly after its release. | 未找到</li>
+<li><strong>enterprise</strong>（企业）| enterprise adoption | a remarkably swift adoption by enterprises. | "The best way to predict the future is to create it." —— Peter Drucker</li>
+<li><strong>calibrate</strong>（校准）| calibrated decisions | It produces "calibrated decisions." | 未找到</li>
+<li><strong>automate</strong>（使自动化）| automate tasks | uniquely suited for automating tasks. | 未找到</li>
+<li><strong>co-founder</strong>（联合创始人）| co-founder Diogo Almeida | TypeSafe co-founder Diogo Almeida told TechCrunch. | 未找到</li>
+<li><strong>transformer</strong>（Transformer 架构）| transformer architecture | Jev is based on a transformer architecture. | 未找到</li>
+<li><strong>position</strong>（定位）| position as | The company positions its approach as uniquely suited for automation. | "If you don't know where you are going, you'll end up someplace else." —— Yogi Berra</li>
+<li><strong>claim</strong>（宣称）| claim that | The startup claims a third of Fortune 500 companies are using it. | "Extraordinary claims require extraordinary evidence." —— Carl Sagan</li>
+<li><strong>investor</strong>（投资者）| existing investor | with participation from Sequoia and existing investor DCVC. | "Be fearful when others are greedy, and greedy when others are fearful." —— Warren Buffett</li>
+<li><strong>seed round</strong>（种子轮融资）| a $40 million seed round | announced a $40 million seed round led by DCVC. | "The best time to plant a tree was 20 years ago. The second best time is now." —— 英语谚语</li>
+</ul>
 <h3>2. 科技巨头今年在欧洲债市狂借 480 亿美元，给 AI 烧钱续命</h3>
 <p><strong>发生了什么</strong>：Apollo 数据显示，科技巨头今年已在欧洲债券市场融资 480 亿美元，用于 AI 热潮的烧钱。以瑞士法郎计价的债券发行中，科技巨头份额从 2025 年的 0% 飙升到 22%；英镑债市份额也从 0% 升至 10%，超过其在美国债市 8% 的份额。欧洲央行官员警告，这可能只是"史无前例融资浪潮"的开始。</p>
 <p><strong>为什么值得关注</strong>：连最有钱的科技公司都要借钱搞 AI 了——说明 AI 基建的烧钱速度超出想象。欧洲债市正成为科技巨头的新"提款机"，这笔钱最终会变成数据中心和芯片订单，也可能变成未来的债务风险。</p>
 <p><strong>名词解释</strong>：① 债券——公司向投资者借钱的"借条"，到期还本付息；② 以××计价——债券用哪种货币发行和结算；③ 融资浪潮——大量公司集中借钱的现象。</p>
 <p><strong>一句话总结</strong>：AI 太烧钱，巨头们把手伸向了欧洲债市——480 亿美元只是"开胃菜"。</p>
 <p>🔗 来源：<a href="https://www.hokanews.com/2026/10/big-tech-raises-48-billion-in-european.html">Hokanews（引 Apollo/Coin Bureau，10-10）</a></p>
-<p>📖 生词：<br />
-- <strong>bond</strong>（债券）| bond markets | Big Tech raised $48 billion in European bond markets. | "In the short run, the market is a voting machine but in the long run, it is a weighing machine." —— Benjamin Graham<br />
-- <strong>finance</strong>（为……提供资金）| finance the AI boom | to finance the artificial intelligence boom. | "Beware of little expenses. A small leak will sink a great ship." —— Benjamin Franklin<br />
-- <strong>denominated</strong>（以……计价的）| denominated in Swiss francs | bond sales denominated in Swiss francs. | 未找到<br />
-- <strong>climb</strong>（攀升）| climb from zero | has climbed from zero in 2025. | "It always seems impossible until it's done." —— Nelson Mandela<br />
-- <strong>pronounced</strong>（显著的）| particularly pronounced | The shift is particularly pronounced in the Swiss franc market. | 未找到<br />
-- <strong>exceed</strong>（超过）| exceed its share | exceeding its 8% share of the US bond market. | 未找到<br />
-- <strong>warn</strong>（警告）| officials have warned | European Central Bank officials have warned. | "Forewarned is forearmed." —— 英语谚语<br />
-- <strong>unprecedented</strong>（史无前例的）| of unprecedented proportions | a financing wave of unprecedented proportions. | 未找到<br />
-- <strong>wave</strong>（浪潮）| financing wave | the beginning of a much larger wave of financing. | "You can't stop the waves, but you can learn to surf." —— Jon Kabat-Zinn<br />
-- <strong>figure</strong>（数据，数字）| according to figures | according to figures cited by Coin Bureau from Apollo. | "There are three kinds of lies: lies, damned lies, and statistics." —— Mark Twain<br />
-- <strong>share</strong>（份额）| market share | their share of bond sales climbed. | 未找到<br />
-- <strong>proportion</strong>（比例，规模）| of unprecedented proportions | a financing wave of unprecedented proportions. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>bond</strong>（债券）| bond markets | Big Tech raised $48 billion in European bond markets. | "In the short run, the market is a voting machine but in the long run, it is a weighing machine." —— Benjamin Graham</li>
+<li><strong>finance</strong>（为……提供资金）| finance the AI boom | to finance the artificial intelligence boom. | "Beware of little expenses. A small leak will sink a great ship." —— Benjamin Franklin</li>
+<li><strong>denominated</strong>（以……计价的）| denominated in Swiss francs | bond sales denominated in Swiss francs. | 未找到</li>
+<li><strong>climb</strong>（攀升）| climb from zero | has climbed from zero in 2025. | "It always seems impossible until it's done." —— Nelson Mandela</li>
+<li><strong>pronounced</strong>（显著的）| particularly pronounced | The shift is particularly pronounced in the Swiss franc market. | 未找到</li>
+<li><strong>exceed</strong>（超过）| exceed its share | exceeding its 8% share of the US bond market. | 未找到</li>
+<li><strong>warn</strong>（警告）| officials have warned | European Central Bank officials have warned. | "Forewarned is forearmed." —— 英语谚语</li>
+<li><strong>unprecedented</strong>（史无前例的）| of unprecedented proportions | a financing wave of unprecedented proportions. | 未找到</li>
+<li><strong>wave</strong>（浪潮）| financing wave | the beginning of a much larger wave of financing. | "You can't stop the waves, but you can learn to surf." —— Jon Kabat-Zinn</li>
+<li><strong>figure</strong>（数据，数字）| according to figures | according to figures cited by Coin Bureau from Apollo. | "There are three kinds of lies: lies, damned lies, and statistics." —— Mark Twain</li>
+<li><strong>share</strong>（份额）| market share | their share of bond sales climbed. | 未找到</li>
+<li><strong>proportion</strong>（比例，规模）| of unprecedented proportions | a financing wave of unprecedented proportions. | 未找到</li>
+</ul>
 <h3>3. 孙正义再出手：软银拟向海湾金主募资 1000 亿美元，不做模型、做"工业 AI"</h3>
 <p><strong>发生了什么</strong>：据 FT 报道，软银创始人孙正义正在游说海湾投资者，筹建规模可能高达 1000 亿美元的新基金。与以往不同，这只基金不投 AI 模型和数据中心，而是收购传统企业、用 AI 和先进技术改造它们（"工业 AI"），软银的机器人与物理 AI 部门 Roze 可能挑大梁。阿联酋投资者是潜在金主之一，但谈判仍处早期，金额和出资都未锁定。</p>
 <p><strong>为什么值得关注</strong>：这是 AI 投资逻辑的一次"转向"——从"造更聪明的模型"转向"用 AI 改造旧生意"。孙正义赌的是：AI 真正的钱不在实验室，而在工厂、物流和传统行业的效率提升里。</p>
 <p><strong>名词解释</strong>：① 海湾金主——中东产油国的"国家钱袋子"（如沙特 PIF、阿布扎比 Mubadala），全球最大金主之一；② 工业 AI——把 AI 用于改造传统产业，而非开发新模型；③ 愿景基金——软银 2017 年发起的千亿美元基金，上一代"金主"也是这些海湾土豪。</p>
 <p><strong>一句话总结</strong>：孙正义不追模型了，要拿 1000 亿美元收购旧公司、用 AI"翻新"——AI 投资进入"下半场"。</p>
 <p>🔗 来源：<a href="https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/softbank-bets-on-industrial-ai-over-model-hype-with-gulf-fund-and-sarawak/70289306">ad-hoc-news（引 FT，10-10）</a></p>
-<p>📖 生词：<br />
-- <strong>court</strong>（争取，拉拢）| court investors | courting Gulf investors for a fund. | "Fortune favors the bold." —— 拉丁谚语<br />
-- <strong>mandate</strong>（授权，任务）| with a mandate that | with a mandate that steers away from building better AI models. | 未找到<br />
-- <strong>steer</strong>（引导）| steer away from | a mandate that steers away from building better AI models. | 未找到<br />
-- <strong>overhaul</strong>（彻底改革）| overhaul operations | toward overhauling how existing companies operate. | "The only constant in life is change." —— Heraclitus<br />
-- <strong>grounded</strong>（务实的，脚踏实地的）| a grounded proposition | It is a more grounded proposition than the model race. | 未找到<br />
-- <strong>proposition</strong>（提议，主张）| a grounded proposition | a more grounded proposition than the model race. | 未找到<br />
-- <strong>prerequisite</strong>（先决条件）| a prerequisite for | A confirmed fund would be a prerequisite for that story. | 未找到<br />
-- <strong>retrofit</strong>（翻新改造）| a retrofitted company | the test for a retrofitted company is whether the technology improves its business. | 未找到<br />
-- <strong>acquire</strong>（收购）| acquire businesses | the vehicle would acquire established businesses. | "I'm gonna make him an offer he can't refuse." —— 《教父》<br />
-- <strong>dominate</strong>（主导）| dominate the conversation | revenue growth and comparability dominate the conversation. | 未找到<br />
-- <strong>vehicle</strong>（投资工具，载体）| the vehicle would acquire | the vehicle would acquire established businesses. | 未找到<br />
-- <strong>confirm</strong>（证实）| has not confirmed | SoftBank has not confirmed the plan. | "Trust, but verify." —— 英语谚语</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>court</strong>（争取，拉拢）| court investors | courting Gulf investors for a fund. | "Fortune favors the bold." —— 拉丁谚语</li>
+<li><strong>mandate</strong>（授权，任务）| with a mandate that | with a mandate that steers away from building better AI models. | 未找到</li>
+<li><strong>steer</strong>（引导）| steer away from | a mandate that steers away from building better AI models. | 未找到</li>
+<li><strong>overhaul</strong>（彻底改革）| overhaul operations | toward overhauling how existing companies operate. | "The only constant in life is change." —— Heraclitus</li>
+<li><strong>grounded</strong>（务实的，脚踏实地的）| a grounded proposition | It is a more grounded proposition than the model race. | 未找到</li>
+<li><strong>proposition</strong>（提议，主张）| a grounded proposition | a more grounded proposition than the model race. | 未找到</li>
+<li><strong>prerequisite</strong>（先决条件）| a prerequisite for | A confirmed fund would be a prerequisite for that story. | 未找到</li>
+<li><strong>retrofit</strong>（翻新改造）| a retrofitted company | the test for a retrofitted company is whether the technology improves its business. | 未找到</li>
+<li><strong>acquire</strong>（收购）| acquire businesses | the vehicle would acquire established businesses. | "I'm gonna make him an offer he can't refuse." —— 《教父》</li>
+<li><strong>dominate</strong>（主导）| dominate the conversation | revenue growth and comparability dominate the conversation. | 未找到</li>
+<li><strong>vehicle</strong>（投资工具，载体）| the vehicle would acquire | the vehicle would acquire established businesses. | 未找到</li>
+<li><strong>confirm</strong>（证实）| has not confirmed | SoftBank has not confirmed the plan. | "Trust, but verify." —— 英语谚语</li>
+</ul>
 <hr />
 <h2>🌍 国际局势</h2>
 <h3>1. 诺贝尔和平奖揭晓：前国际刑事法院法官纳维·皮莱获奖，特朗普怒斥挪威"留下不可磨灭的污点"</h3>
@@ -155,68 +200,76 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 诺贝尔和平奖——由挪威诺贝尔委员会颁发（注意：不是瑞典），表彰为和平做贡献的人；② 国际刑事法院（ICC）——海牙的国际法庭，审判战争罪等；值得一提的是，美国此前还制裁过 ICC（昨日简报提过）。</p>
 <p><strong>一句话总结</strong>：和平奖给了加沙报告主笔，特朗普气得骂挪威——诺奖成了地缘政治的"修罗场"。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/world/europe/trump-says-norway-has-indelible-stain-not-awarding-him-nobel-peace-prize-2026-10-10/">Reuters（10-10）</a></p>
-<p>📖 生词：<br />
-- <strong>stain</strong>（污点）| leave a stain on | had left a stain on Norway. | 未找到<br />
-- <strong>indelible</strong>（不可磨灭的）| an indelible stain | an indelible stain on the country of Norway. | "What's done cannot be undone." —— Shakespeare《麦克白》<br />
-- <strong>disgraceful</strong>（可耻的）| disgraceful decision | a disgraceful and embarrassing decision. | 未找到<br />
-- <strong>embarrassing</strong>（令人难堪的）| embarrassing decision | a disgraceful and embarrassing decision. | 未找到<br />
-- <strong>reiterate</strong>（重申）| reiterate complaints | reiterated his complaints about not receiving the Nobel Peace Prize. | "Repetition is the mother of learning." —— 拉丁谚语<br />
-- <strong>mystery</strong>（神秘人物）| a "mystery person" | Trump called Pillay a "mystery person." | "The mystery of human existence lies not in just staying alive, but in finding something to live for." —— Dostoevsky<br />
-- <strong>discredit</strong>（使名誉扫地）| has been discredited | The Nobel Peace Prize has been forever discredited. | 未找到<br />
-- <strong>oversee</strong>（主持，监督）| oversaw a report | a former ICC judge who oversaw a UN report. | 未找到<br />
-- <strong>award</strong>（授予）| award the prize | the committee awarded this year's prize to Navi Pillay. | "The reward for work well done is the opportunity to do more." —— Jonas Salk<br />
-- <strong>claim</strong>（声称）| claimed a role | he claimed a role in resolving conflicts. | "Extraordinary claims require extraordinary evidence." —— Carl Sagan</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>stain</strong>（污点）| leave a stain on | had left a stain on Norway. | 未找到</li>
+<li><strong>indelible</strong>（不可磨灭的）| an indelible stain | an indelible stain on the country of Norway. | "What's done cannot be undone." —— Shakespeare《麦克白》</li>
+<li><strong>disgraceful</strong>（可耻的）| disgraceful decision | a disgraceful and embarrassing decision. | 未找到</li>
+<li><strong>embarrassing</strong>（令人难堪的）| embarrassing decision | a disgraceful and embarrassing decision. | 未找到</li>
+<li><strong>reiterate</strong>（重申）| reiterate complaints | reiterated his complaints about not receiving the Nobel Peace Prize. | "Repetition is the mother of learning." —— 拉丁谚语</li>
+<li><strong>mystery</strong>（神秘人物）| a "mystery person" | Trump called Pillay a "mystery person." | "The mystery of human existence lies not in just staying alive, but in finding something to live for." —— Dostoevsky</li>
+<li><strong>discredit</strong>（使名誉扫地）| has been discredited | The Nobel Peace Prize has been forever discredited. | 未找到</li>
+<li><strong>oversee</strong>（主持，监督）| oversaw a report | a former ICC judge who oversaw a UN report. | 未找到</li>
+<li><strong>award</strong>（授予）| award the prize | the committee awarded this year's prize to Navi Pillay. | "The reward for work well done is the opportunity to do more." —— Jonas Salk</li>
+<li><strong>claim</strong>（声称）| claimed a role | he claimed a role in resolving conflicts. | "Extraordinary claims require extraordinary evidence." —— Carl Sagan</li>
+</ul>
 <h3>2. 巴拿马 7.7 级强震：房屋开裂、六省断电，运河运营正常</h3>
 <p><strong>发生了什么</strong>：10 月 10 日（周五），巴拿马南部发生 7.7 级地震，震源深度仅 12.6 公里，引发十几次余震。南部埃雷拉省多处房屋开裂，六个省断电，首都主要国际机场暂停航班，居民纷纷跑上街头。美国地质调查局估计经济损失可达巴拿马 GDP 的 1%–10%。好消息：距震中约 203 公里的巴拿马运河运营正常，约 90 艘货轮在两端等待通行。</p>
 <p><strong>为什么值得关注</strong>：巴拿马很少发生大地震，这次是该国近年最强之一。运河是全球贸易大动脉——它没事，全球供应链就松了一口气；但浅源强震＋余震不断，后续伤亡和损失还需观察。</p>
 <p><strong>名词解释</strong>：① 震级——地震释放能量的等级，7.7 级属于"大地震"（7 级以上）；② 震源深度——越浅破坏越大，12.6 公里算很浅了；③ 余震——主震后接连发生的小地震；④ GDP 占比——USGS 用"占 GDP 百分之几"来估算灾害经济损失。</p>
 <p><strong>一句话总结</strong>：巴拿马遭遇罕见强震，好在运河这条"世界咽喉"安然无恙。</p>
 <p>🔗 来源：<a href="https://www.gmanetwork.com/news/topstories/world/1005417/powerful-earthquake-hits-panama-damages-homes-canal-operations-normal/story/">Reuters（经 GMA，10-10）</a></p>
-<p>📖 生词：<br />
-- <strong>magnitude</strong>（震级）| a magnitude 7.7 earthquake | a magnitude 7.7 earthquake struck southern Panama. | 未找到<br />
-- <strong>epicenter</strong>（震中）| from the epicenter | about 126 miles from the epicenter. | 未找到<br />
-- <strong>aftershock</strong>（余震）| a dozen aftershocks | triggering more than a dozen aftershocks. | 未找到<br />
-- <strong>trigger</strong>（引发）| triggered by | the quake was triggered by the Azuero Sona Fault System. | 未找到<br />
-- <strong>disrupt</strong>（扰乱，中断）| disrupts power | disrupts power and air travel. | 未找到<br />
-- <strong>casualty</strong>（伤亡）| casualties were possible | some casualties were possible. | 未找到<br />
-- <strong>suspend</strong>（暂停）| suspended flights | The Tocumen International airport suspended flights. | 未找到<br />
-- <strong>estimate</strong>（估计）| USGS estimated | USGS estimated economic losses could amount to 1% to 10% of Panama's GDP. | "In God we trust; all others must bring data." —— W. Edwards Deming<br />
-- <strong>rare</strong>（罕见的）| rare in Panama | Major earthquakes are rare in Panama. | "Be yourself; everyone else is already taken." —— Oscar Wilde<br />
-- <strong>resident</strong>（居民）| residents into the streets | sending residents into the streets. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>magnitude</strong>（震级）| a magnitude 7.7 earthquake | a magnitude 7.7 earthquake struck southern Panama. | 未找到</li>
+<li><strong>epicenter</strong>（震中）| from the epicenter | about 126 miles from the epicenter. | 未找到</li>
+<li><strong>aftershock</strong>（余震）| a dozen aftershocks | triggering more than a dozen aftershocks. | 未找到</li>
+<li><strong>trigger</strong>（引发）| triggered by | the quake was triggered by the Azuero Sona Fault System. | 未找到</li>
+<li><strong>disrupt</strong>（扰乱，中断）| disrupts power | disrupts power and air travel. | 未找到</li>
+<li><strong>casualty</strong>（伤亡）| casualties were possible | some casualties were possible. | 未找到</li>
+<li><strong>suspend</strong>（暂停）| suspended flights | The Tocumen International airport suspended flights. | 未找到</li>
+<li><strong>estimate</strong>（估计）| USGS estimated | USGS estimated economic losses could amount to 1% to 10% of Panama's GDP. | "In God we trust; all others must bring data." —— W. Edwards Deming</li>
+<li><strong>rare</strong>（罕见的）| rare in Panama | Major earthquakes are rare in Panama. | "Be yourself; everyone else is already taken." —— Oscar Wilde</li>
+<li><strong>resident</strong>（居民）| residents into the streets | sending residents into the streets. | 未找到</li>
+</ul>
 <h3>3. 印度德里"封城"：2000 余人被拘，"蟑螂"青年运动抗议选举舞弊</h3>
 <p><strong>发生了什么</strong>：10 月 10 日（周六），印度警方在首都新德里拘留了 2000 多名抗议者和"蟑螂青年运动"创始人迪普克，挫败了一场要求首席选举专员辞职的大规模集会。当局部署数千军警、关闭数十个地铁站和市场，在中央商务区暂停移动互联网。抗议源于选民名单修订——批评者称数百万选民被除名，且修订不成比例地有利于莫迪的人民党。迪普克因一篇"蟑螂"帖文走红，从网红变成了抗议领袖。</p>
 <p><strong>为什么值得关注</strong>：印度是世界最大民主国家，首都为阻止一场集会动用"封城级"手段，极为罕见。选民名单争议直指选举公正性——这是民主制度的"地基问题"，后续发酵可能冲击莫迪政府。</p>
 <p><strong>名词解释</strong>：① 首席选举专员——印度选举委员会的"一把手"，负责选民名单和选举公正；② 选民除名——把名字从选民册上划掉，被除名就投不了票；③ 移动互联网暂停——印度政府管控抗议的"常规操作"，断网防串联。</p>
 <p><strong>一句话总结</strong>：印度首都为一场抗议"封城"拘捕两千人——选民名单争议正在考验"世界最大民主国家"的成色。</p>
 <p>🔗 来源：<a href="https://www.jpost.com:443/international/article-911233">Reuters（经 JPost，10-10）</a></p>
-<p>📖 生词：<br />
-- <strong>detain</strong>（拘留）| detained protesters | Police detained more than 2,000 protesters. | "Injustice anywhere is a threat to justice everywhere." —— Martin Luther King Jr.<br />
-- <strong>lockdown</strong>（封锁）| Delhi lockdown | after Delhi lockdown. | 未找到<br />
-- <strong>thwart</strong>（挫败）| thwart a rally | to thwart a rally demanding the resignation of India's election chief. | "The best-laid plans of mice and men often go awry." —— Robert Burns<br />
-- <strong>rally</strong>（集会）| anti-government rally | ahead of a major anti-government rally. | "¡El pueblo unido jamás será vencido!" —— 智利抗议口号（团结的人民永不被击败）<br />
-- <strong>disproportionately</strong>（不成比例地）| disproportionately benefits | critics say disproportionately benefits Modi's BJP. | 未找到<br />
-- <strong>intimidate</strong>（恫吓）| quite intimidating | it is quite intimidating right now in Delhi. | "Courage is grace under pressure." —— Ernest Hemingway<br />
-- <strong>chant</strong>（高呼口号）| protesters chanted | "Long live the revolution," some young protesters chanted. | "Do you hear the people sing?" —— 《悲惨世界》<br />
-- <strong>allege</strong>（指称）| allegations that | allegations that millions of names were removed from voter rolls. | "Innocent until proven guilty." —— 法律谚语<br />
-- <strong>suspend</strong>（暂停）| internet suspended | mobile internet services were suspended. | 未找到<br />
-- <strong>deploy</strong>（部署）| personnel deployed | Thousands of police and paramilitary personnel were deployed. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>detain</strong>（拘留）| detained protesters | Police detained more than 2,000 protesters. | "Injustice anywhere is a threat to justice everywhere." —— Martin Luther King Jr.</li>
+<li><strong>lockdown</strong>（封锁）| Delhi lockdown | after Delhi lockdown. | 未找到</li>
+<li><strong>thwart</strong>（挫败）| thwart a rally | to thwart a rally demanding the resignation of India's election chief. | "The best-laid plans of mice and men often go awry." —— Robert Burns</li>
+<li><strong>rally</strong>（集会）| anti-government rally | ahead of a major anti-government rally. | "¡El pueblo unido jamás será vencido!" —— 智利抗议口号（团结的人民永不被击败）</li>
+<li><strong>disproportionately</strong>（不成比例地）| disproportionately benefits | critics say disproportionately benefits Modi's BJP. | 未找到</li>
+<li><strong>intimidate</strong>（恫吓）| quite intimidating | it is quite intimidating right now in Delhi. | "Courage is grace under pressure." —— Ernest Hemingway</li>
+<li><strong>chant</strong>（高呼口号）| protesters chanted | "Long live the revolution," some young protesters chanted. | "Do you hear the people sing?" —— 《悲惨世界》</li>
+<li><strong>allege</strong>（指称）| allegations that | allegations that millions of names were removed from voter rolls. | "Innocent until proven guilty." —— 法律谚语</li>
+<li><strong>suspend</strong>（暂停）| internet suspended | mobile internet services were suspended. | 未找到</li>
+<li><strong>deploy</strong>（部署）| personnel deployed | Thousands of police and paramilitary personnel were deployed. | 未找到</li>
+</ul>
 <h3>4. 冲绳美军士兵涉谋杀案发酵：鲁比奥承诺全力配合日方调查</h3>
 <p><strong>发生了什么</strong>：美国国务卿鲁比奥 10 月 10 日（周六）与日本外相茂木敏充通话，就驻冲绳美军士兵涉嫌抢劫杀害当地女性一案"表达诚挚哀悼"，承诺美方将与日本政府及地方当局"充分沟通、全力配合"调查。嫌疑人、海军陆战队队员德文·雅各布·巴拉德 10 月 4 日被捕，被控在那霸一家酒店抢劫并杀害 39 岁的矢木安娜（音），本人否认指控。事发后驻冲绳美军已被实施为期一个月的宵禁＋禁酒，并接受纪律整训。</p>
 <p><strong>为什么值得关注</strong>：冲绳驻扎着约 1.8 万名美国海军陆战队员，是美军海外最大集中地之一。每一起涉军刑事案件都会引爆当地反基地情绪，直接冲击美日同盟的"地基"。鲁比奥亲自通话灭火，说明华盛顿对此案的政治敏感度拉满。</p>
 <p><strong>名词解释</strong>：① 驻日美军——美日安保条约下的驻军，冲绳是"大本营"；② 宵禁＋禁酒——出事后美军内部的纪律处分，限制夜间外出、禁止饮酒；③ 地位协定——规定驻军司法管辖的美日协议，一直是日方心结。</p>
 <p><strong>一句话总结</strong>：一桩谋杀案让美日同盟"后院起火"，鲁比奥亲自打电话"灭火"。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/world/asia-pacific/rubio-pledges-us-cooperation-okinawa-murder-case-2026-10-10/">Reuters（10-10）</a></p>
-<p>📖 生词：<br />
-- <strong>pledge</strong>（承诺）| pledges cooperation | Rubio pledges US cooperation in Okinawa murder case. | "An ounce of performance is worth pounds of promises." —— Mae West<br />
-- <strong>cooperate</strong>（配合）| fully cooperate | determination to communicate and fully cooperate with the Government of Japan. | "Alone we can do so little; together we can do so much." —— Helen Keller<br />
-- <strong>condolences</strong>（哀悼）| expressed condolences | expressed sincere condolences over the death. | 未找到<br />
-- <strong>curfew</strong>（宵禁）| a month-long curfew | given a month-long curfew and banned from drinking alcohol. | 未找到<br />
-- <strong>discipline</strong>（纪律）| discipline training | undergo discipline training. | "We are what we repeatedly do. Excellence, then, is not an act, but a habit." —— Aristotle<br />
-- <strong>renew</strong>（使重新燃起）| renewed tensions | has renewed tensions over the US military presence. | 未找到<br />
-- <strong>allege</strong>（指控）| allegations that | investigating allegations that a US Marine murdered a woman. | "Innocent until proven guilty." —— 法律谚语<br />
-- <strong>deny</strong>（否认）| denied the allegations | Ballard has denied the allegations. | 未找到<br />
-- <strong>investigate</strong>（调查）| conduct an investigation | as they conduct an investigation. | "The important thing is not to stop questioning." —— Albert Einstein<br />
-- <strong>determine</strong>（决心）| determination to cooperate | the United States' determination to communicate and fully cooperate. | "It always seems impossible until it's done." —— Nelson Mandela</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>pledge</strong>（承诺）| pledges cooperation | Rubio pledges US cooperation in Okinawa murder case. | "An ounce of performance is worth pounds of promises." —— Mae West</li>
+<li><strong>cooperate</strong>（配合）| fully cooperate | determination to communicate and fully cooperate with the Government of Japan. | "Alone we can do so little; together we can do so much." —— Helen Keller</li>
+<li><strong>condolences</strong>（哀悼）| expressed condolences | expressed sincere condolences over the death. | 未找到</li>
+<li><strong>curfew</strong>（宵禁）| a month-long curfew | given a month-long curfew and banned from drinking alcohol. | 未找到</li>
+<li><strong>discipline</strong>（纪律）| discipline training | undergo discipline training. | "We are what we repeatedly do. Excellence, then, is not an act, but a habit." —— Aristotle</li>
+<li><strong>renew</strong>（使重新燃起）| renewed tensions | has renewed tensions over the US military presence. | 未找到</li>
+<li><strong>allege</strong>（指控）| allegations that | investigating allegations that a US Marine murdered a woman. | "Innocent until proven guilty." —— 法律谚语</li>
+<li><strong>deny</strong>（否认）| denied the allegations | Ballard has denied the allegations. | 未找到</li>
+<li><strong>investigate</strong>（调查）| conduct an investigation | as they conduct an investigation. | "The important thing is not to stop questioning." —— Albert Einstein</li>
+<li><strong>determine</strong>（决心）| determination to cooperate | the United States' determination to communicate and fully cooperate. | "It always seems impossible until it's done." —— Nelson Mandela</li>
+</ul>
 <hr />
 <h2>🌱 个人成长</h2>
 <h3>1. 财务自由的人和你，差在这四个思维</h3>
@@ -253,34 +306,38 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 钙钛矿叠层电池——在传统硅电池上再叠一层钙钛矿，效率更高，是光伏"下一代技术"；② 钠电池——用钠代替锂的电池，更便宜、更不依赖特定矿产，被视为储能新星；③ 集中采购——政府统一招标买储能，给产业"保底订单"。</p>
 <p><strong>一句话总结</strong>：韩国 4750 亿美元 all in 绿色产业，核心目标就一个：摆脱对中国供应链的依赖。</p>
 <p>🔗 来源：<a href="https://www.energy-storage.news/south-korea-unveils-us475-billion-green-transformation-industrial-strategy/">energy-storage.news（10-10）</a></p>
-<p>📖 生词：<br />
-- <strong>unveil</strong>（公布，揭晓）| unveils strategy | South Korea unveils US$475 billion Green Transformation industrial strategy. | 未找到<br />
-- <strong>transformation</strong>（转型）| Green Transformation | Green Transformation industrial strategy. | "The only constant in life is change." —— Heraclitus<br />
-- <strong>fiscal</strong>（财政的）| fiscal funds | KRW200 trillion in fiscal funds. | 未找到<br />
-- <strong>incentive</strong>（激励措施）| tax incentives | bold tax incentives and regulatory improvements. | 未找到<br />
-- <strong>procurement</strong>（采购）| total procurement | Capacity Target: 1,180MW total procurement. | 未找到<br />
-- <strong>pilot</strong>（试点）| pilot production line | set up a pilot production line for sodium-battery-based energy storage. | "Well begun is half done." —— Aristotle<br />
-- <strong>decarbonise</strong>（脱碳）| decarbonise industries | decarbonise national industries. | 未找到<br />
-- <strong>localization</strong>（本土化）| localization of technology | pursue localization of tandem solar cell technology. | 未找到<br />
-- <strong>curtail</strong>（削减，限制）| can be curtailed | Solar PV output can be temporarily curtailed for system management. | 未找到<br />
-- <strong>dispatch</strong>（调度）| priority dispatch | Renewables given priority dispatch over fossil fuels. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>unveil</strong>（公布，揭晓）| unveils strategy | South Korea unveils US$475 billion Green Transformation industrial strategy. | 未找到</li>
+<li><strong>transformation</strong>（转型）| Green Transformation | Green Transformation industrial strategy. | "The only constant in life is change." —— Heraclitus</li>
+<li><strong>fiscal</strong>（财政的）| fiscal funds | KRW200 trillion in fiscal funds. | 未找到</li>
+<li><strong>incentive</strong>（激励措施）| tax incentives | bold tax incentives and regulatory improvements. | 未找到</li>
+<li><strong>procurement</strong>（采购）| total procurement | Capacity Target: 1,180MW total procurement. | 未找到</li>
+<li><strong>pilot</strong>（试点）| pilot production line | set up a pilot production line for sodium-battery-based energy storage. | "Well begun is half done." —— Aristotle</li>
+<li><strong>decarbonise</strong>（脱碳）| decarbonise industries | decarbonise national industries. | 未找到</li>
+<li><strong>localization</strong>（本土化）| localization of technology | pursue localization of tandem solar cell technology. | 未找到</li>
+<li><strong>curtail</strong>（削减，限制）| can be curtailed | Solar PV output can be temporarily curtailed for system management. | 未找到</li>
+<li><strong>dispatch</strong>（调度）| priority dispatch | Renewables given priority dispatch over fossil fuels. | 未找到</li>
+</ul>
 <h3>2. 德国启动 500MW 绿氢大项目：电解槽＋盐穴储氢，打包解决"不稳定"难题</h3>
 <p><strong>发生了什么</strong>：德国 EWE 与奥地利 Verbund 联手启动 JadeWeser 项目：500MW 绿氢产能，直接配套地下盐穴储氢。项目卡在欧盟政策上：德国已通过具约束力的 RFNBO 交通配额（2040 年达 10%、2030 年中期目标 1.5%），欧盟氢能银行年内将举行第四次拍卖；但 2029 年后"逐小时匹配"规则若维持不变，没有储氢配套的项目将面临结构性成本劣势——JadeWeser 的盐穴正好是"技术对冲"，最终投资决定待定。</p>
 <p><strong>为什么值得关注</strong>：绿氢最大的痛点是"风光不稳定→制氢不稳定→成本高"。盐穴储氢＋电解槽是欧洲给出的标准答案，这个项目是检验答案成色的"试金石"。</p>
 <p><strong>名词解释</strong>：① 绿氢——用可再生能源电解水制成的氢，零碳；② 电解槽——把水"电"成氢气和氧气的设备；③ 盐穴储氢——把废弃盐矿洞当"大气罐"存氢气，便宜又安全；④ RFNBO——欧盟对"可再生来源燃料"的认证，配额制逼着交通行业用绿氢。</p>
 <p><strong>一句话总结</strong>：德国用"电解槽＋盐穴"组合拳攻克绿氢不稳定难题，成败看欧盟政策脸色。</p>
 <p>🔗 来源：<a href="https://Www.techtimes.com/articles/328866/20261010/green-hydrogen-germany-ewe-verbund-launch-500mw-plant-collocated-cavern-storage.htm">techtimes（10-10）</a></p>
-<p>📖 生词：<br />
-- <strong>viability</strong>（可行性）| commercial viability | commercial viability will be substantially determined by decisions in Brussels. | 未找到<br />
-- <strong>quota</strong>（配额）| transport quota | a binding RFNBO transport quota of 10% for road and rail transport by 2040. | 未找到<br />
-- <strong>interim</strong>（中期的，暂时的）| interim target | with a 1.5% interim target by 2030. | 未找到<br />
-- <strong>electrolyzer</strong>（电解槽）| PEM electrolyzer | A PEM electrolyzer splits water into hydrogen and oxygen. | 未找到<br />
-- <strong>ramp</strong>（快速提升）| ramp from idle | PEM systems can ramp from idle to full output in seconds. | 未找到<br />
-- <strong>collocated</strong>（同址配套的）| collocated with storage | 500MW plant collocated with cavern storage. | 未找到<br />
-- <strong>cavern</strong>（洞穴，盐穴）| cavern storage | cavern storage proximity gives it a technical hedge. | 未找到<br />
-- <strong>hedge</strong>（对冲，防范）| a technical hedge | gives it a technical hedge that most canceled projects lacked. | "Don't put all your eggs in one basket." —— 英语谚语<br />
-- <strong>auction</strong>（拍卖）| Hydrogen Bank auction | a fourth European Hydrogen Bank auction before year-end 2026. | "Going once, going twice — sold!" —— 拍卖师常用语<br />
-- <strong>modify</strong>（修改）| without modification | If it maintains the post-2029 hourly matching rule without modification. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>viability</strong>（可行性）| commercial viability | commercial viability will be substantially determined by decisions in Brussels. | 未找到</li>
+<li><strong>quota</strong>（配额）| transport quota | a binding RFNBO transport quota of 10% for road and rail transport by 2040. | 未找到</li>
+<li><strong>interim</strong>（中期的，暂时的）| interim target | with a 1.5% interim target by 2030. | 未找到</li>
+<li><strong>electrolyzer</strong>（电解槽）| PEM electrolyzer | A PEM electrolyzer splits water into hydrogen and oxygen. | 未找到</li>
+<li><strong>ramp</strong>（快速提升）| ramp from idle | PEM systems can ramp from idle to full output in seconds. | 未找到</li>
+<li><strong>collocated</strong>（同址配套的）| collocated with storage | 500MW plant collocated with cavern storage. | 未找到</li>
+<li><strong>cavern</strong>（洞穴，盐穴）| cavern storage | cavern storage proximity gives it a technical hedge. | 未找到</li>
+<li><strong>hedge</strong>（对冲，防范）| a technical hedge | gives it a technical hedge that most canceled projects lacked. | "Don't put all your eggs in one basket." —— 英语谚语</li>
+<li><strong>auction</strong>（拍卖）| Hydrogen Bank auction | a fourth European Hydrogen Bank auction before year-end 2026. | "Going once, going twice — sold!" —— 拍卖师常用语</li>
+<li><strong>modify</strong>（修改）| without modification | If it maintains the post-2029 hourly matching rule without modification. | 未找到</li>
+</ul>
 <h3>3. 烟威 1000 千伏特高压投运："十五五"首个特高压交流工程</h3>
 <p><strong>发生了什么</strong>：10 月 10 日，烟威 1000 千伏特高压工程竣工投运——这是我国"十五五"时期投运的首个特高压交流输变电工程，线路全长 1197 公里。投运后，烟台海阳、莱阳等地的核电将通过该通道送出，大幅提升山东省内绿电供给能力。</p>
 <p><strong>为什么值得关注</strong>：特高压是新能源消纳的"高速公路"——风光电大都在西部北部，用电大户在东部，没有特高压，绿电就"送不出去、用不上"。这条线直接服务山东这个用电大省＋核电基地。</p>

@@ -57,6 +57,44 @@ body.dark .note { color: #a39a89; }
 body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
 body.dark th { background: #262219; }
+.summary { background:#edf3fd; border-left:4px solid #1757c2; border-radius:6px; padding:12px 16px; }
+.blessing { text-align: center; color: #8a3324; font-size: 1.07em; font-weight: 600;
+            letter-spacing: 0.04em; margin: 0 0 16px; }
+.sec-label { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+             font-weight: 700; margin: 0 0 6px; font-size: 0.98em; letter-spacing: 0.03em; }
+.glossary { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 6px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.vocabbox .sec-label { color: #1757c2; }
+.vocabbox ul { list-style: none; padding-left: 0; margin: 6px 0 4px; }
+li.vocab { padding: 10px 0 12px; border-bottom: 1px dashed #ddd5bd; margin: 0; }
+li.vocab:last-child { border-bottom: none; }
+.vword { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         font-weight: 800; font-size: 1.12em; color: #1757c2; margin-right: 6px; }
+.vmean { font-weight: 700; }
+.vrow { font-size: 0.93em; color: #4a463e; margin-top: 3px; line-height: 1.8; }
+.vlabel { display: inline-block; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
+          padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
+.vquote { color: #6b6257; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources .sec-label { color: #5a554c; }
+.sources ul { margin: 4px 0; }
+h3::before { content: "▍"; color: #8a3324; }
+body.dark .blessing { color: #e0a458; }
+body.dark .glossary { background: #262219; }
+body.dark .vocabbox { background: #1d1b16; border-color: #3a362a; }
+body.dark li.vocab { border-bottom-color: #3a362a; }
+body.dark .vword { color: #8ab8ff; }
+body.dark .vrow { color: #c9c2b2; }
+body.dark .vlabel { background: #33302a; color: #e0c98a; }
+body.dark .vquote { color: #a39a89; }
+body.dark .summary { background: #1c2733; border-left-color: #8ab8ff; }
+body.dark .sources { color: #a39a89; }
+body.dark h3::before { color: #e0a458; }
 body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
@@ -67,256 +105,286 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📚 《麻薯日报》合集 · 第 24 期 · 2026-10-20（星期二）</p>
 </blockquote>
 <h1>《麻薯日报》第 24 期 · 2026 年 10 月 20 日（星期二）</h1>
+<p class="blessing">🌅 慢慢来，愿你想要的，岁月都会慢慢给你。</p>
 <p>Ricardo，早上好呀☀️周二啦！今天的《麻薯日报》第 24 期准时送到：美股从暴跌里喘了口气、美联储 10 月大概率按兵不动、巴西大选进入"决赛圈"、法国街头却不太平……八大板块满满干货，配着早餐慢慢看吧🍞</p>
 <hr />
 <h2>一、财经 💰</h2>
 <h3>1. 美股周一反弹：纳指大涨 1.1%，芯片股终结 8 连跌</h3>
 <p>10 月 19 日（周一）美股多数收涨：道指微跌 36 点收 51966 点，标普 500 涨 0.41% 收 7690 点，纳指大涨 1.11% 收 26430 点，收复了上周"6 月以来最惨一周"的部分失地。费城半导体指数涨 2.5%，终结了连续 8 个交易日的下跌——这是 2008 年以来最长连跌，上周累计跌了 11.5%。亚马逊涨 5%，英伟达涨 1.4%。但另一边：10 年期美债收益率升到 5.135%，创 10 月以来最大单日涨幅；美国 10 月房屋建筑商信心指数降到 29，是 2012 年 6 月以来最低。本周财报季开幕：SpaceX、Netflix 周二盘后发布，Meta、特斯拉周三发布。</p>
-<p>🔍 名词解释：<br />
-- <strong>纳指/标普 500/道指</strong>：三个不同班级的"平均分排行榜"。纳指全是科技优等生，涨跌最刺激；标普 500 是 500 家大公司的平均分，最能代表大盘；道指是 30 家老牌蓝筹的平均分。<br />
-- <strong>美债收益率（10 年期 5.135%）</strong>：你把钱借给美国政府 10 年，它每年给你的"利息率"。它是全球资产的"地心引力"——越高，股票、房子越没吸引力，因为"躺着吃国债利息"都比冒险划算。<br />
-- <strong>加息的后劲</strong>：美联储加息像给经济"踩刹车"，但刹车片要几个月才真正抱死。现在房贷利率跟着美债收益率冲高，买房的被月供吓跑、卖房的舍不得低利率旧贷款——楼市"冻住"了，这就是后劲。<br />
-- <strong>财报季</strong>：上市公司每三个月"交成绩单"的日子。成绩好股价涨，成绩差就被砸，是市场情绪的"期中考试周"。</p>
-<p>📌 一句话总结：科技股从暴跌中喘了口气，但美债收益率和房市数据提醒人们：紧缩的账单才刚刚开始寄到。</p>
-<p>📚 生词：<br />
-- <strong>rebound</strong> 反弹，复苏；搭配：stage a rebound（发起反弹）；例：Monday's rally was a rebound from last week's slump.（周一的上涨是对上周暴跌的反弹。）💬 "The greatest glory in living lies not in never falling, but in rising every time we fall." —— Nelson Mandela（活着最大的荣耀不在于永不跌倒，而在于每次跌倒都能重新站起来。）<br />
-- <strong>benchmark</strong> 基准，标杆；搭配：industry benchmark（行业标杆）；例：The 10-year Treasury yield is the benchmark for global borrowing costs.（10 年期美债收益率是全球借贷成本的基准。）💬 "What gets measured gets managed." —— Peter Drucker（能量化的东西，才能被管理好。）<br />
-- <strong>yield</strong> 收益率，产出；搭配：bond yield（债券收益率）；例：The 10-year Treasury yield rose to 5.135%.（10 年期美债收益率升至 5.135%。）💬 "An investment in knowledge pays the best interest." —— Benjamin Franklin（对知识的投资，回报最为丰厚。）<br />
-- <strong>slump</strong> 暴跌，萧条；搭配：in a slump（陷入低迷）；例：The chip index is trying to recover from last week's slump.（芯片指数正试图从上周的暴跌中恢复。）💬 "Success is not final, failure is not fatal: it is the courage to continue that counts." —— Winston Churchill（成功不是终点，失败也不是终结，唯有继续前行的勇气才最重要。）<br />
-- <strong>outlook</strong> 前景，展望；搭配：economic outlook（经济前景）；例：The outlook for tech earnings remains uncertain.（科技股财报前景依然不明朗。）💬 "The future belongs to those who believe in the beauty of their dreams." —— Eleanor Roosevelt（未来属于相信梦想之美的人。）<br />
-- <strong>volatile</strong> 波动剧烈的；搭配：volatile market（剧烈波动的市场）；例：AI-related stocks have been extremely volatile lately.（AI 概念股最近波动极其剧烈。）💬 "The only constant in life is change." —— Heraclitus（人生唯一不变的，就是变化本身。）<br />
-- <strong>plunge</strong> 猛跌，跳水；搭配：plunge 16%（暴跌 16%）；例：The memory-chip maker plunged 17.9% last week.（这家存储芯片公司上周暴跌 17.9%。）💬 "Fortune favors the bold." —— 拉丁谚语（幸运眷顾勇者。）<br />
-- <strong>gauge</strong> 衡量指标；搭配：a gauge of confidence（信心晴雨表）；例：The index is a closely watched gauge of builder confidence.（该指数是备受关注的建筑商信心晴雨表。）💬 "Knowledge is power." —— Francis Bacon（知识就是力量。）<br />
-- <strong>confidence</strong> 信心；搭配：restore confidence（重振信心）；例：Investor confidence is slowly coming back.（投资者信心正在缓慢恢复。）💬 "Believe you can and you're halfway there." —— Theodore Roosevelt（相信自己能行，你就已经成功了一半。）<br />
-- <strong>erase</strong> 抹去，抵消；搭配：erase losses（抹去亏损）；例：Monday's rally erased part of last week's losses.（周一的反弹抹去了上周的部分跌幅。）💬 "Do or do not. There is no try." —— Yoda，《Star Wars》（做，或者不做，没有"试试看"这回事。）</p>
-<p>🔗 来源：<br />
-- U.S. Stocks Mostly Higher as AI Credit Worries Abate —— <a href="https://www.wsj.com/finance/investing/u-s-stocks-mostly-higher-as-ai-credit-worries-abate-600bf008">https://www.wsj.com/finance/investing/u-s-stocks-mostly-higher-as-ai-credit-worries-abate-600bf008</a><br />
-- What's Moving Markets Today? —— <a href="https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-19-2026/card/what-s-moving-markets-today--TJ5atqZaDAjqYvGXqlAy">https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-19-2026/card/what-s-moving-markets-today--TJ5atqZaDAjqYvGXqlAy</a></p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>纳指/标普 500/道指</strong>：三个不同班级的"平均分排行榜"。纳指全是科技优等生，涨跌最刺激；标普 500 是 500 家大公司的平均分，最能代表大盘；道指是 30 家老牌蓝筹的平均分。</li>
+<li><strong>美债收益率（10 年期 5.135%）</strong>：你把钱借给美国政府 10 年，它每年给你的"利息率"。它是全球资产的"地心引力"——越高，股票、房子越没吸引力，因为"躺着吃国债利息"都比冒险划算。</li>
+<li><strong>加息的后劲</strong>：美联储加息像给经济"踩刹车"，但刹车片要几个月才真正抱死。现在房贷利率跟着美债收益率冲高，买房的被月供吓跑、卖房的舍不得低利率旧贷款——楼市"冻住"了，这就是后劲。</li>
+<li><strong>财报季</strong>：上市公司每三个月"交成绩单"的日子。成绩好股价涨，成绩差就被砸，是市场情绪的"期中考试周"。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：科技股从暴跌中喘了口气，但美债收益率和房市数据提醒人们：紧缩的账单才刚刚开始寄到。</p>
+<div class="vocabbox"><p class="sec-label">📚 生词：</p><ul>
+<li class="vocab"><span class="vword">rebound</span> <span class="vmean">反弹，复苏</span><div class="vrow"><span class="vlabel">搭配</span>stage a rebound（发起反弹）</div><div class="vrow"><span class="vlabel">例句</span>Monday's rally was a rebound from last week's slump.（周一的上涨是对上周暴跌的反弹。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The greatest glory in living lies not in never falling, but in rising every time we fall." —— Nelson Mandela（活着最大的荣耀不在于永不跌倒，而在于每次跌倒都能重新站起来。）</div></li>
+<li class="vocab"><span class="vword">benchmark</span> <span class="vmean">基准，标杆</span><div class="vrow"><span class="vlabel">搭配</span>industry benchmark（行业标杆）</div><div class="vrow"><span class="vlabel">例句</span>The 10-year Treasury yield is the benchmark for global borrowing costs.（10 年期美债收益率是全球借贷成本的基准。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"What gets measured gets managed." —— Peter Drucker（能量化的东西，才能被管理好。）</div></li>
+<li class="vocab"><span class="vword">yield</span> <span class="vmean">收益率，产出</span><div class="vrow"><span class="vlabel">搭配</span>bond yield（债券收益率）</div><div class="vrow"><span class="vlabel">例句</span>The 10-year Treasury yield rose to 5.135%.（10 年期美债收益率升至 5.135%。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"An investment in knowledge pays the best interest." —— Benjamin Franklin（对知识的投资，回报最为丰厚。）</div></li>
+<li class="vocab"><span class="vword">slump</span> <span class="vmean">暴跌，萧条</span><div class="vrow"><span class="vlabel">搭配</span>in a slump（陷入低迷）</div><div class="vrow"><span class="vlabel">例句</span>The chip index is trying to recover from last week's slump.（芯片指数正试图从上周的暴跌中恢复。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Success is not final, failure is not fatal: it is the courage to continue that counts." —— Winston Churchill（成功不是终点，失败也不是终结，唯有继续前行的勇气才最重要。）</div></li>
+<li class="vocab"><span class="vword">outlook</span> <span class="vmean">前景，展望</span><div class="vrow"><span class="vlabel">搭配</span>economic outlook（经济前景）</div><div class="vrow"><span class="vlabel">例句</span>The outlook for tech earnings remains uncertain.（科技股财报前景依然不明朗。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The future belongs to those who believe in the beauty of their dreams." —— Eleanor Roosevelt（未来属于相信梦想之美的人。）</div></li>
+<li class="vocab"><span class="vword">volatile</span> <span class="vmean">波动剧烈的</span><div class="vrow"><span class="vlabel">搭配</span>volatile market（剧烈波动的市场）</div><div class="vrow"><span class="vlabel">例句</span>AI-related stocks have been extremely volatile lately.（AI 概念股最近波动极其剧烈。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The only constant in life is change." —— Heraclitus（人生唯一不变的，就是变化本身。）</div></li>
+<li class="vocab"><span class="vword">plunge</span> <span class="vmean">猛跌，跳水</span><div class="vrow"><span class="vlabel">搭配</span>plunge 16%（暴跌 16%）</div><div class="vrow"><span class="vlabel">例句</span>The memory-chip maker plunged 17.9% last week.（这家存储芯片公司上周暴跌 17.9%。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Fortune favors the bold." —— 拉丁谚语（幸运眷顾勇者。）</div></li>
+<li class="vocab"><span class="vword">gauge</span> <span class="vmean">衡量指标</span><div class="vrow"><span class="vlabel">搭配</span>a gauge of confidence（信心晴雨表）</div><div class="vrow"><span class="vlabel">例句</span>The index is a closely watched gauge of builder confidence.（该指数是备受关注的建筑商信心晴雨表。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Knowledge is power." —— Francis Bacon（知识就是力量。）</div></li>
+<li class="vocab"><span class="vword">confidence</span> <span class="vmean">信心</span><div class="vrow"><span class="vlabel">搭配</span>restore confidence（重振信心）</div><div class="vrow"><span class="vlabel">例句</span>Investor confidence is slowly coming back.（投资者信心正在缓慢恢复。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Believe you can and you're halfway there." —— Theodore Roosevelt（相信自己能行，你就已经成功了一半。）</div></li>
+<li class="vocab"><span class="vword">erase</span> <span class="vmean">抹去，抵消</span><div class="vrow"><span class="vlabel">搭配</span>erase losses（抹去亏损）</div><div class="vrow"><span class="vlabel">例句</span>Monday's rally erased part of last week's losses.（周一的反弹抹去了上周的部分跌幅。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Do or do not. There is no try." —— Yoda，《Star Wars》（做，或者不做，没有"试试看"这回事。）</div></li>
+</ul></div>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>U.S. Stocks Mostly Higher as AI Credit Worries Abate —— <a href="https://www.wsj.com/finance/investing/u-s-stocks-mostly-higher-as-ai-credit-worries-abate-600bf008">https://www.wsj.com/finance/investing/u-s-stocks-mostly-higher-as-ai-credit-worries-abate-600bf008</a></li>
+<li>What's Moving Markets Today? —— <a href="https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-19-2026/card/what-s-moving-markets-today--TJ5atqZaDAjqYvGXqlAy">https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-19-2026/card/what-s-moving-markets-today--TJ5atqZaDAjqYvGXqlAy</a></li>
+</ul></div>
 <h3>2. 10 月加息悬念基本落地：市场押注"按兵不动"概率 87%，12 月再议</h3>
 <p>距离 10 月 27–28 日美联储议息会议还有一周，市场对"10 月加息"的押注迅速降温：预测市场 Polymarket 显示，10 月维持利率不变的概率达 87%（历史新高），加息 25 个基点的概率跌至 13–14%。美联储主席沃什在 IMF 年会上拒绝"剧透"——"我从不提前预判会议"；副主席杰斐逊和纽约联储主席威廉姆斯也释放了"不急着动"的信号。背景：9 月 CPI 3.7% 超预期，一度把 10 月加息概率推高到接近 50%；但旧金山联储主席戴利等多位官员随后表态"可以在下次会议前再等等看"，9 月会议纪要也显示多数官员认为"年底前"还需再加一次，但没说死是 10 月还是 12 月。</p>
-<p>🔍 名词解释：<br />
-- <strong>加息</strong>：美联储把"借钱的基准利息"往上调。好比全村共用一口井，村长把水价调贵——大家贷款、房贷、信用卡分期都变贵，自然不敢乱花钱，物价就被压下来。但水太贵，庄稼（经济）也会渴死，所以每次加不加息都是走钢丝。<br />
-- <strong>议息会议/静默期</strong>：美联储一年开 8 次"定水价"的会。开会前一周官员们集体"闭麦"（静默期），免得一句话搅动市场。<br />
-- <strong>CPI 3.7%</strong>：一篮子日常商品（菜、油、房租等）一年贵了 3.7%。美联储的目标是 2%，3.7% 就是"东西涨太快了"，是加息的理由。<br />
-- <strong>预测市场（Polymarket）</strong>：网友真金白银下注"会不会发生某件事"的网站，赔率≈市场真实预期，比专家嘴炮更诚实。</p>
-<p>📌 一句话总结：10 月大概率"按兵不动"，但通胀还没死，12 月那只"靴子"还在半空。</p>
-<p>📚 生词：<br />
-- <strong>hike</strong> 加息，上调；搭配：rate hike（加息）；例：Markets now expect the Fed to skip an October rate hike.（市场现在预计美联储将跳过 10 月加息。）💬 "Don't put all your eggs in one basket." —— 英语谚语（不要把所有鸡蛋放在一个篮子里。）<br />
-- <strong>minutes</strong> 会议纪要；搭配：FOMC minutes（美联储会议纪要）；例：The minutes showed most officials back another hike this year.（会议纪要显示多数官员支持年内再加息一次。）💬 "Those who cannot remember the past are condemned to repeat it." —— George Santayana（忘记过去的人，注定重蹈覆辙。）<br />
-- <strong>assess</strong> 评估，评定；搭配：assess the risk（评估风险）；例：Most participants assessed that another increase would be appropriate.（多数与会者评估认为再次加息是合适的。）💬 "The unexamined life is not worth living." —— Socrates（未经审视的人生不值得过。）<br />
-- <strong>probability</strong> 概率，可能性；搭配：high probability（高概率）；例：The probability of an October hike has fallen to 14%.（10 月加息的概率已降至 14%。）💬 "In the middle of difficulty lies opportunity." —— Albert Einstein（困难之中蕴藏着机会。）<br />
-- <strong>inflation</strong> 通货膨胀；搭配：curb inflation（抑制通胀）；例：Annual inflation accelerated to 3.7% in September.（9 月年通胀加速至 3.7%。）💬 "Price is what you pay. Value is what you get." —— Warren Buffett（价格是你付出的，价值是你得到的。）<br />
-- <strong>persist</strong> 持续存在；搭配：persistent inflation（顽固的通胀）；例：Price pressures persist above the Fed's target.（价格压力持续高于美联储目标。）💬 "It always seems impossible until it's done." —— Nelson Mandela（事成之前，一切都看似不可能。）<br />
-- <strong>reinforce</strong> 加强，强化；搭配：reinforce expectations（强化预期）；例：Hot inflation data reinforced expectations of tighter policy.（火热的通胀数据强化了政策收紧的预期。）💬 "Repetition is the mother of learning." —— 拉丁谚语（重复是学习之母。）<br />
-- <strong>cautious</strong> 谨慎的；搭配：remain cautious（保持谨慎）；例：Investors remain cautious ahead of the meeting.（投资者在会议前保持谨慎。）💬 "Look before you leap." —— 英语谚语（三思而后行。）<br />
-- <strong>tighten</strong> 收紧（政策）；搭配：tighten policy（收紧政策）；例：The Fed may tighten policy again in December.（美联储可能在 12 月再次收紧政策。）💬 "Necessity is the mother of invention." —— 英语谚语（需要是发明之母。）<br />
-- <strong>signal</strong> 信号；搭配：send a signal（释放信号）；例：Warsh sent no signal of an imminent hike.（沃什没有释放即将加息的信号。）💬 "Actions speak louder than words." —— 英语谚语（行动胜于言语。）</p>
-<p>🔗 来源：<br />
-- Prediction markets make major U-turn on Fed's October rate decision —— <a href="https://finbold.com/prediction-markets-make-major-u-turn-on-feds-october-rate-decision/">https://finbold.com/prediction-markets-make-major-u-turn-on-feds-october-rate-decision/</a><br />
-- Polymarket: Fed Decision in October? —— <a href="https://polymarket.com/event/fed-decision-in-october-20260617190323537/will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031">https://polymarket.com/event/fed-decision-in-october-20260617190323537/will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031</a></p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>加息</strong>：美联储把"借钱的基准利息"往上调。好比全村共用一口井，村长把水价调贵——大家贷款、房贷、信用卡分期都变贵，自然不敢乱花钱，物价就被压下来。但水太贵，庄稼（经济）也会渴死，所以每次加不加息都是走钢丝。</li>
+<li><strong>议息会议/静默期</strong>：美联储一年开 8 次"定水价"的会。开会前一周官员们集体"闭麦"（静默期），免得一句话搅动市场。</li>
+<li><strong>CPI 3.7%</strong>：一篮子日常商品（菜、油、房租等）一年贵了 3.7%。美联储的目标是 2%，3.7% 就是"东西涨太快了"，是加息的理由。</li>
+<li><strong>预测市场（Polymarket）</strong>：网友真金白银下注"会不会发生某件事"的网站，赔率≈市场真实预期，比专家嘴炮更诚实。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：10 月大概率"按兵不动"，但通胀还没死，12 月那只"靴子"还在半空。</p>
+<div class="vocabbox"><p class="sec-label">📚 生词：</p><ul>
+<li class="vocab"><span class="vword">hike</span> <span class="vmean">加息，上调</span><div class="vrow"><span class="vlabel">搭配</span>rate hike（加息）</div><div class="vrow"><span class="vlabel">例句</span>Markets now expect the Fed to skip an October rate hike.（市场现在预计美联储将跳过 10 月加息。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Don't put all your eggs in one basket." —— 英语谚语（不要把所有鸡蛋放在一个篮子里。）</div></li>
+<li class="vocab"><span class="vword">minutes</span> <span class="vmean">会议纪要</span><div class="vrow"><span class="vlabel">搭配</span>FOMC minutes（美联储会议纪要）</div><div class="vrow"><span class="vlabel">例句</span>The minutes showed most officials back another hike this year.（会议纪要显示多数官员支持年内再加息一次。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Those who cannot remember the past are condemned to repeat it." —— George Santayana（忘记过去的人，注定重蹈覆辙。）</div></li>
+<li class="vocab"><span class="vword">assess</span> <span class="vmean">评估，评定</span><div class="vrow"><span class="vlabel">搭配</span>assess the risk（评估风险）</div><div class="vrow"><span class="vlabel">例句</span>Most participants assessed that another increase would be appropriate.（多数与会者评估认为再次加息是合适的。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The unexamined life is not worth living." —— Socrates（未经审视的人生不值得过。）</div></li>
+<li class="vocab"><span class="vword">probability</span> <span class="vmean">概率，可能性</span><div class="vrow"><span class="vlabel">搭配</span>high probability（高概率）</div><div class="vrow"><span class="vlabel">例句</span>The probability of an October hike has fallen to 14%.（10 月加息的概率已降至 14%。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"In the middle of difficulty lies opportunity." —— Albert Einstein（困难之中蕴藏着机会。）</div></li>
+<li class="vocab"><span class="vword">inflation</span> <span class="vmean">通货膨胀</span><div class="vrow"><span class="vlabel">搭配</span>curb inflation（抑制通胀）</div><div class="vrow"><span class="vlabel">例句</span>Annual inflation accelerated to 3.7% in September.（9 月年通胀加速至 3.7%。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Price is what you pay. Value is what you get." —— Warren Buffett（价格是你付出的，价值是你得到的。）</div></li>
+<li class="vocab"><span class="vword">persist</span> <span class="vmean">持续存在</span><div class="vrow"><span class="vlabel">搭配</span>persistent inflation（顽固的通胀）</div><div class="vrow"><span class="vlabel">例句</span>Price pressures persist above the Fed's target.（价格压力持续高于美联储目标。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"It always seems impossible until it's done." —— Nelson Mandela（事成之前，一切都看似不可能。）</div></li>
+<li class="vocab"><span class="vword">reinforce</span> <span class="vmean">加强，强化</span><div class="vrow"><span class="vlabel">搭配</span>reinforce expectations（强化预期）</div><div class="vrow"><span class="vlabel">例句</span>Hot inflation data reinforced expectations of tighter policy.（火热的通胀数据强化了政策收紧的预期。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Repetition is the mother of learning." —— 拉丁谚语（重复是学习之母。）</div></li>
+<li class="vocab"><span class="vword">cautious</span> <span class="vmean">谨慎的</span><div class="vrow"><span class="vlabel">搭配</span>remain cautious（保持谨慎）</div><div class="vrow"><span class="vlabel">例句</span>Investors remain cautious ahead of the meeting.（投资者在会议前保持谨慎。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Look before you leap." —— 英语谚语（三思而后行。）</div></li>
+<li class="vocab"><span class="vword">tighten</span> <span class="vmean">收紧（政策）</span><div class="vrow"><span class="vlabel">搭配</span>tighten policy（收紧政策）</div><div class="vrow"><span class="vlabel">例句</span>The Fed may tighten policy again in December.（美联储可能在 12 月再次收紧政策。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Necessity is the mother of invention." —— 英语谚语（需要是发明之母。）</div></li>
+<li class="vocab"><span class="vword">signal</span> <span class="vmean">信号</span><div class="vrow"><span class="vlabel">搭配</span>send a signal（释放信号）</div><div class="vrow"><span class="vlabel">例句</span>Warsh sent no signal of an imminent hike.（沃什没有释放即将加息的信号。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Actions speak louder than words." —— 英语谚语（行动胜于言语。）</div></li>
+</ul></div>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>Prediction markets make major U-turn on Fed's October rate decision —— <a href="https://finbold.com/prediction-markets-make-major-u-turn-on-feds-october-rate-decision/">https://finbold.com/prediction-markets-make-major-u-turn-on-feds-october-rate-decision/</a></li>
+<li>Polymarket: Fed Decision in October? —— <a href="https://polymarket.com/event/fed-decision-in-october-20260617190323537/will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031">https://polymarket.com/event/fed-decision-in-october-20260617190323537/will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031</a></li>
+</ul></div>
 <h3>3. 中国三季度 GDP 增长 4.5% 超预期：出口一台发动机拉着整辆车跑</h3>
 <p>路透 10 月 19 日分析：中国三季度 GDP 同比增长 4.5%，快于经济学家预期。好消息是增速超预期，坏消息是增长几乎全靠"出口狂飙"拉动——中国正朝着打破去年 1.2 万亿美元贸易顺差纪录的方向冲刺。人民币过去 18 个月持续升值，已到 4 年高位，但实际有效汇率仍比 4 年前弱约 15%。IMF 等机构警告，中国不断膨胀的顺差正在加剧全球经济失衡。</p>
-<p>🔍 名词解释：<br />
-- <strong>GDP 增长 4.5%</strong>：一个国家一季度"新创造的财富"比去年同期多了 4.5%。好比你家小店今年比去年多赚了 4.5%。<br />
-- <strong>贸易顺差</strong>：卖出去的比买进来的多，多出来的差额就是顺差。好比你摆摊一天卖 1200 块、进货只花 200 块，顺差就是 1000 块。顺差大说明东西好卖，但也容易被买家抱怨"你赚太多了"。<br />
-- <strong>实际有效汇率</strong>：人民币对一篮子货币"综合购买力"的真实强弱。不只看对美元，还要看对欧元、日元等，还要扣掉各国通胀差异——是衡量货币真实贵贱的"综合体检报告"。<br />
-- <strong>全球失衡</strong>：有的国家拼命出口赚钱、有的国家拼命借钱消费，长期下来就像跷跷板一边越来越重，IMF 担心哪天会"翻"。</p>
-<p>📌 一句话总结：数据超预期是好事，但"出口单引擎"模式越跑越快，内需引擎何时点火才是关键。</p>
-<p>📚 生词：<br />
-- <strong>surplus</strong> 顺差，盈余；搭配：trade surplus（贸易顺差）；例：China is on course to top last year's $1.2 trillion trade surplus.（中国正朝着打破去年 1.2 万亿美元贸易顺差纪录迈进。）💬 "Beware of little expenses; a small leak will sink a great ship." —— Benjamin Franklin（当心小额开支，小洞也能沉大船。）<br />
-- <strong>accelerate</strong> 加速；搭配：accelerate growth（加速增长）；例：Growth accelerated to 4.5% in the third quarter.（三季度增速加快至 4.5%。）💬 "The secret of getting ahead is getting started." —— Mark Twain（领先的秘诀，就是开始行动。）<br />
-- <strong>appreciate</strong> 升值，感激；搭配：currency appreciation（货币升值）；例：The yuan has been appreciating for 18 months.（人民币已连续升值 18 个月。）💬 "Gratitude turns what we have into enough." —— Aesop（感恩让我们懂得知足。）<br />
-- <strong>imbalance</strong> 失衡；搭配：global imbalance（全球失衡）；例：The bulging surplus is widening global imbalances.（不断膨胀的顺差正在加剧全球失衡。）💬 "Everything in moderation." —— Aristotle（凡事皆应适度。）<br />
-- <strong>economist</strong> 经济学家；搭配：chief economist（首席经济学家）；例：The figure beat what economists had expected.（该数据好于经济学家的预期。）💬 "If all the economists were laid end to end, they'd never reach a conclusion." —— George Bernard Shaw（就算把所有经济学家首尾相连，他们也得不出个结论。）<br />
-- <strong>wean off</strong> 使摆脱（依赖）；搭配：wean off exports（摆脱对出口的依赖）；例：A stronger yuan may help wean the economy off exports.（人民币走强可能帮助经济摆脱对出口的依赖。）💬 "Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime." —— 英语谚语（授人以鱼不如授人以渔。）<br />
-- <strong>multilateralism</strong> 多边主义；搭配：spirit of multilateralism（多边主义精神）；例：The spirit of multilateralism is at its lowest in decades.（多边主义精神处于几十年来的低谷。）💬 "No man is an island." —— John Donne（没有人是一座孤岛。）<br />
-- <strong>polarized</strong> 两极分化的；搭配：polarized debate（两极分化的争论）；例：Sentiment on AI stocks is becoming increasingly polarized.（市场对 AI 股票的情绪日益两极分化。）💬 "A house divided against itself cannot stand." —— Abraham Lincoln（分裂的房子无法屹立不倒。）<br />
-- <strong>claw back</strong> 夺回，挽回；搭配：claw back losses（挽回损失）；例：The index has yet to claw back last week's slump.（该指数尚未挽回上周的跌幅。）💬 "Fall seven times, stand up eight." —— 日本谚语（七转八起。）<br />
-- <strong>boomerang</strong> 回旋镖效应；搭配：AI boomerang（AI 回旋镖）；例：After the selloff, an "AI boomerang" lifted chip stocks again.（暴跌之后，"AI 回旋镖"又把芯片股带了回来。）💬 "What goes around comes around." —— 英语谚语（出来混，迟早要还。）</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>GDP 增长 4.5%</strong>：一个国家一季度"新创造的财富"比去年同期多了 4.5%。好比你家小店今年比去年多赚了 4.5%。</li>
+<li><strong>贸易顺差</strong>：卖出去的比买进来的多，多出来的差额就是顺差。好比你摆摊一天卖 1200 块、进货只花 200 块，顺差就是 1000 块。顺差大说明东西好卖，但也容易被买家抱怨"你赚太多了"。</li>
+<li><strong>实际有效汇率</strong>：人民币对一篮子货币"综合购买力"的真实强弱。不只看对美元，还要看对欧元、日元等，还要扣掉各国通胀差异——是衡量货币真实贵贱的"综合体检报告"。</li>
+<li><strong>全球失衡</strong>：有的国家拼命出口赚钱、有的国家拼命借钱消费，长期下来就像跷跷板一边越来越重，IMF 担心哪天会"翻"。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：数据超预期是好事，但"出口单引擎"模式越跑越快，内需引擎何时点火才是关键。</p>
+<div class="vocabbox"><p class="sec-label">📚 生词：</p><ul>
+<li class="vocab"><span class="vword">surplus</span> <span class="vmean">顺差，盈余</span><div class="vrow"><span class="vlabel">搭配</span>trade surplus（贸易顺差）</div><div class="vrow"><span class="vlabel">例句</span>China is on course to top last year's $1.2 trillion trade surplus.（中国正朝着打破去年 1.2 万亿美元贸易顺差纪录迈进。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Beware of little expenses; a small leak will sink a great ship." —— Benjamin Franklin（当心小额开支，小洞也能沉大船。）</div></li>
+<li class="vocab"><span class="vword">accelerate</span> <span class="vmean">加速</span><div class="vrow"><span class="vlabel">搭配</span>accelerate growth（加速增长）</div><div class="vrow"><span class="vlabel">例句</span>Growth accelerated to 4.5% in the third quarter.（三季度增速加快至 4.5%。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The secret of getting ahead is getting started." —— Mark Twain（领先的秘诀，就是开始行动。）</div></li>
+<li class="vocab"><span class="vword">appreciate</span> <span class="vmean">升值，感激</span><div class="vrow"><span class="vlabel">搭配</span>currency appreciation（货币升值）</div><div class="vrow"><span class="vlabel">例句</span>The yuan has been appreciating for 18 months.（人民币已连续升值 18 个月。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Gratitude turns what we have into enough." —— Aesop（感恩让我们懂得知足。）</div></li>
+<li class="vocab"><span class="vword">imbalance</span> <span class="vmean">失衡</span><div class="vrow"><span class="vlabel">搭配</span>global imbalance（全球失衡）</div><div class="vrow"><span class="vlabel">例句</span>The bulging surplus is widening global imbalances.（不断膨胀的顺差正在加剧全球失衡。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Everything in moderation." —— Aristotle（凡事皆应适度。）</div></li>
+<li class="vocab"><span class="vword">economist</span> <span class="vmean">经济学家</span><div class="vrow"><span class="vlabel">搭配</span>chief economist（首席经济学家）</div><div class="vrow"><span class="vlabel">例句</span>The figure beat what economists had expected.（该数据好于经济学家的预期。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"If all the economists were laid end to end, they'd never reach a conclusion." —— George Bernard Shaw（就算把所有经济学家首尾相连，他们也得不出个结论。）</div></li>
+<li class="vocab"><span class="vword">wean off</span> <span class="vmean">使摆脱（依赖）</span><div class="vrow"><span class="vlabel">搭配</span>wean off exports（摆脱对出口的依赖）</div><div class="vrow"><span class="vlabel">例句</span>A stronger yuan may help wean the economy off exports.（人民币走强可能帮助经济摆脱对出口的依赖。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime." —— 英语谚语（授人以鱼不如授人以渔。）</div></li>
+<li class="vocab"><span class="vword">multilateralism</span> <span class="vmean">多边主义</span><div class="vrow"><span class="vlabel">搭配</span>spirit of multilateralism（多边主义精神）</div><div class="vrow"><span class="vlabel">例句</span>The spirit of multilateralism is at its lowest in decades.（多边主义精神处于几十年来的低谷。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"No man is an island." —— John Donne（没有人是一座孤岛。）</div></li>
+<li class="vocab"><span class="vword">polarized</span> <span class="vmean">两极分化的</span><div class="vrow"><span class="vlabel">搭配</span>polarized debate（两极分化的争论）</div><div class="vrow"><span class="vlabel">例句</span>Sentiment on AI stocks is becoming increasingly polarized.（市场对 AI 股票的情绪日益两极分化。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"A house divided against itself cannot stand." —— Abraham Lincoln（分裂的房子无法屹立不倒。）</div></li>
+<li class="vocab"><span class="vword">claw back</span> <span class="vmean">夺回，挽回</span><div class="vrow"><span class="vlabel">搭配</span>claw back losses（挽回损失）</div><div class="vrow"><span class="vlabel">例句</span>The index has yet to claw back last week's slump.（该指数尚未挽回上周的跌幅。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Fall seven times, stand up eight." —— 日本谚语（七转八起。）</div></li>
+<li class="vocab"><span class="vword">boomerang</span> <span class="vmean">回旋镖效应</span><div class="vrow"><span class="vlabel">搭配</span>AI boomerang（AI 回旋镖）</div><div class="vrow"><span class="vlabel">例句</span>After the selloff, an "AI boomerang" lifted chip stocks again.（暴跌之后，"AI 回旋镖"又把芯片股带了回来。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"What goes around comes around." —— 英语谚语（出来混，迟早要还。）</div></li>
+</ul></div>
 <p>🔗 来源：<br />
 - Global markets trading day —— <a href="https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-10-19/">https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-10-19/</a></p>
 <hr />
 <h2>二、AI 🤖</h2>
 <h3>1. 微软撕毁伦敦 AI 数据中心租约：电网说"2030 年代前没电给你"</h3>
 <p>路透 10 月 19 日报道，微软退出了与伦敦 AI 云服务商 Nscale 的一笔交易——原计划租用 Nscale 在埃塞克斯郡在建数据中心的算力。原因是：英国国家电网官员告诉 Nscale，这座设施 2030 年代之前都接不上电。Nscale 向路透确认终止，但强调"与微软的关系依然牢固且长期"，正在探索替代电源方案。评论指出，这暴露了 AI 基建热的"软肋"：不只是钱的问题，电网、土地、借贷成本都在卡脖子——与此同时 CoreWeave 等重债 AI 基建公司的信用利差正在走阔，市场开始担心它们还不起债。</p>
-<p>🔍 名词解释：<br />
-- <strong>算力</strong>：AI 干活的"力气"，来自 GPU 芯片。训练一个大模型需要的算力，好比盖一栋楼需要的"人工天数"——没有足够的"工人"（芯片），再好的图纸（算法）也盖不起来。<br />
-- <strong>数据中心</strong>：给 AI 打工的"大厂房"，里面塞满发烫的芯片，所以极其费电，一个数据中心的耗电量能赶上一座小城市。<br />
-- <strong>信用利差</strong>：市场觉得某家公司"可能还不起钱"时，要求它多付的利息差。好比你找朋友借钱，朋友觉得你靠谱就收正常利息，觉得你悬就加价——加得越多，说明大家越不放心。<br />
-- <strong>云服务商</strong>：自己盖"大厂房"、把算力切成小块租给别人的二房东。Nscale 就是专做 AI 算力租赁的新玩家。</p>
-<p>📌 一句话总结：AI 最缺的可能不是聪明的模型，而是有电、有钱盖"厂房"。</p>
-<p>📚 生词：<br />
-- <strong>terminate</strong> 终止；搭配：terminate a deal（终止交易）；例：Microsoft terminated the deal with the London-based AI cloud provider.（微软终止了与这家伦敦 AI 云服务商的交易。）💬 "When one door closes, another opens." —— Alexander Graham Bell（一扇门关闭时，另一扇门会打开。）<br />
-- <strong>capacity</strong> 产能，容量；搭配：computing capacity（算力）；例：Microsoft would have rented computing capacity from the planned data centre.（微软本将租用这座规划中数据中心的算力。）💬 "We are what we repeatedly do. Excellence, then, is not an act, but a habit." —— Aristotle（我们反复的行动造就了我们，卓越不是一次行为，而是一种习惯。）<br />
-- <strong>infrastructure</strong> 基础设施；搭配：AI infrastructure（AI 基础设施）；例：Concerns are rising over AI infrastructure borrowing costs.（市场对 AI 基础设施借贷成本的担忧在上升。）💬 "Rome was not built in a day." —— 英语谚语（罗马不是一天建成的。）<br />
-- <strong>grid</strong> 电网；搭配：power grid（电网）；例：Grid officials said no power supply until the 2030s.（电网官员称 2030 年代之前都供不上电。）💬 "Energy and persistence conquer all things." —— Benjamin Franklin（精力与毅力征服一切。）<br />
-- <strong>spokesperson</strong> 发言人；搭配：company spokesperson（公司发言人）；例：A spokesperson said the relationship remains strong.（一位发言人表示双方关系依然稳固。）💬 "Well done is better than well said." —— Benjamin Franklin（做得好胜过说得好。）<br />
-- <strong>explore</strong> 探索；搭配：explore alternatives（探索替代方案）；例：The company is exploring alternative power sources.（该公司正在探索替代电源方案。）💬 "The journey of a thousand miles begins with a single step." —— Laozi（千里之行，始于足下。）<br />
-- <strong>alternative</strong> 替代的，替代方案；搭配：alternative source（替代来源）；例：They are exploring alternative power sources for the site.（他们正在为该场地探索替代电源。）💬 "If you can't beat them, join them." —— 英语谚语（打不过，就加入。）<br />
-- <strong>contract</strong> 合同；搭配：long-term contract（长期合同）；例：The termination has no impact on other contracts.（这次终止不影响其他合同。）💬 "Honesty is the first chapter in the book of wisdom." —— Thomas Jefferson（诚实是智慧之书的第一章。）<br />
-- <strong>weak spot</strong> 薄弱环节；搭配：expose weak spots（暴露薄弱环节）；例：The setback exposes weak spots in the AI rollout.（这次挫折暴露了 AI 落地中的薄弱环节。）💬 "A chain is only as strong as its weakest link." —— 英语谚语（链条的强度取决于最弱的一环。）<br />
-- <strong>obligation</strong> 义务，债务；搭配：debt obligations（偿债义务）；例：Rising rates make it harder to meet obligations.（利率上升让履行偿债义务更难了。）💬 "With great power comes great responsibility." —— 《Spider-Man》（能力越大，责任越大。）<br />
-- <strong>setback</strong> 挫折；搭配：suffer a setback（遭遇挫折）；例：The project suffered a major setback over power supply.（该项目在供电问题上遭遇重大挫折。）💬 "Our greatest weakness lies in giving up." —— Thomas Edison（我们最大的弱点在于轻言放弃。）<br />
-- <strong>borrow</strong> 借贷；搭配：borrow heavily（大量举债）；例：The provider borrowed heavily to fund data-centre development.（该服务商为建设数据中心大量举债。）💬 "Neither a borrower nor a lender be." —— Shakespeare，《Hamlet》（既不借债，也不当债主。）</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>算力</strong>：AI 干活的"力气"，来自 GPU 芯片。训练一个大模型需要的算力，好比盖一栋楼需要的"人工天数"——没有足够的"工人"（芯片），再好的图纸（算法）也盖不起来。</li>
+<li><strong>数据中心</strong>：给 AI 打工的"大厂房"，里面塞满发烫的芯片，所以极其费电，一个数据中心的耗电量能赶上一座小城市。</li>
+<li><strong>信用利差</strong>：市场觉得某家公司"可能还不起钱"时，要求它多付的利息差。好比你找朋友借钱，朋友觉得你靠谱就收正常利息，觉得你悬就加价——加得越多，说明大家越不放心。</li>
+<li><strong>云服务商</strong>：自己盖"大厂房"、把算力切成小块租给别人的二房东。Nscale 就是专做 AI 算力租赁的新玩家。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：AI 最缺的可能不是聪明的模型，而是有电、有钱盖"厂房"。</p>
+<div class="vocabbox"><p class="sec-label">📚 生词：</p><ul>
+<li class="vocab"><span class="vword">terminate</span> <span class="vmean">终止</span><div class="vrow"><span class="vlabel">搭配</span>terminate a deal（终止交易）</div><div class="vrow"><span class="vlabel">例句</span>Microsoft terminated the deal with the London-based AI cloud provider.（微软终止了与这家伦敦 AI 云服务商的交易。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"When one door closes, another opens." —— Alexander Graham Bell（一扇门关闭时，另一扇门会打开。）</div></li>
+<li class="vocab"><span class="vword">capacity</span> <span class="vmean">产能，容量</span><div class="vrow"><span class="vlabel">搭配</span>computing capacity（算力）</div><div class="vrow"><span class="vlabel">例句</span>Microsoft would have rented computing capacity from the planned data centre.（微软本将租用这座规划中数据中心的算力。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"We are what we repeatedly do. Excellence, then, is not an act, but a habit." —— Aristotle（我们反复的行动造就了我们，卓越不是一次行为，而是一种习惯。）</div></li>
+<li class="vocab"><span class="vword">infrastructure</span> <span class="vmean">基础设施</span><div class="vrow"><span class="vlabel">搭配</span>AI infrastructure（AI 基础设施）</div><div class="vrow"><span class="vlabel">例句</span>Concerns are rising over AI infrastructure borrowing costs.（市场对 AI 基础设施借贷成本的担忧在上升。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Rome was not built in a day." —— 英语谚语（罗马不是一天建成的。）</div></li>
+<li class="vocab"><span class="vword">grid</span> <span class="vmean">电网</span><div class="vrow"><span class="vlabel">搭配</span>power grid（电网）</div><div class="vrow"><span class="vlabel">例句</span>Grid officials said no power supply until the 2030s.（电网官员称 2030 年代之前都供不上电。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Energy and persistence conquer all things." —— Benjamin Franklin（精力与毅力征服一切。）</div></li>
+<li class="vocab"><span class="vword">spokesperson</span> <span class="vmean">发言人</span><div class="vrow"><span class="vlabel">搭配</span>company spokesperson（公司发言人）</div><div class="vrow"><span class="vlabel">例句</span>A spokesperson said the relationship remains strong.（一位发言人表示双方关系依然稳固。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Well done is better than well said." —— Benjamin Franklin（做得好胜过说得好。）</div></li>
+<li class="vocab"><span class="vword">explore</span> <span class="vmean">探索</span><div class="vrow"><span class="vlabel">搭配</span>explore alternatives（探索替代方案）</div><div class="vrow"><span class="vlabel">例句</span>The company is exploring alternative power sources.（该公司正在探索替代电源方案。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The journey of a thousand miles begins with a single step." —— Laozi（千里之行，始于足下。）</div></li>
+<li class="vocab"><span class="vword">alternative</span> <span class="vmean">替代的，替代方案</span><div class="vrow"><span class="vlabel">搭配</span>alternative source（替代来源）</div><div class="vrow"><span class="vlabel">例句</span>They are exploring alternative power sources for the site.（他们正在为该场地探索替代电源。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"If you can't beat them, join them." —— 英语谚语（打不过，就加入。）</div></li>
+<li class="vocab"><span class="vword">contract</span> <span class="vmean">合同</span><div class="vrow"><span class="vlabel">搭配</span>long-term contract（长期合同）</div><div class="vrow"><span class="vlabel">例句</span>The termination has no impact on other contracts.（这次终止不影响其他合同。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Honesty is the first chapter in the book of wisdom." —— Thomas Jefferson（诚实是智慧之书的第一章。）</div></li>
+<li class="vocab"><span class="vword">weak spot</span> <span class="vmean">薄弱环节</span><div class="vrow"><span class="vlabel">搭配</span>expose weak spots（暴露薄弱环节）</div><div class="vrow"><span class="vlabel">例句</span>The setback exposes weak spots in the AI rollout.（这次挫折暴露了 AI 落地中的薄弱环节。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"A chain is only as strong as its weakest link." —— 英语谚语（链条的强度取决于最弱的一环。）</div></li>
+<li class="vocab"><span class="vword">obligation</span> <span class="vmean">义务，债务</span><div class="vrow"><span class="vlabel">搭配</span>debt obligations（偿债义务）</div><div class="vrow"><span class="vlabel">例句</span>Rising rates make it harder to meet obligations.（利率上升让履行偿债义务更难了。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"With great power comes great responsibility." —— 《Spider-Man》（能力越大，责任越大。）</div></li>
+<li class="vocab"><span class="vword">setback</span> <span class="vmean">挫折</span><div class="vrow"><span class="vlabel">搭配</span>suffer a setback（遭遇挫折）</div><div class="vrow"><span class="vlabel">例句</span>The project suffered a major setback over power supply.（该项目在供电问题上遭遇重大挫折。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Our greatest weakness lies in giving up." —— Thomas Edison（我们最大的弱点在于轻言放弃。）</div></li>
+<li class="vocab"><span class="vword">borrow</span> <span class="vmean">借贷</span><div class="vrow"><span class="vlabel">搭配</span>borrow heavily（大量举债）</div><div class="vrow"><span class="vlabel">例句</span>The provider borrowed heavily to fund data-centre development.（该服务商为建设数据中心大量举债。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Neither a borrower nor a lender be." —— Shakespeare，《Hamlet》（既不借债，也不当债主。）</div></li>
+</ul></div>
 <p>🔗 来源：<br />
 - Nscale setback lights up weak spots in AI rollout —— <a href="https://www.reuters.com/commentary/breakingviews/nscale-setback-lights-up-weak-spots-ai-rollout-2026-10-19/">https://www.reuters.com/commentary/breakingviews/nscale-setback-lights-up-weak-spots-ai-rollout-2026-10-19/</a></p>
 <h3>2. 亚马逊放大招：TorchNeuron 让 AI 芯片"说"PyTorch，开源免费挑战英伟达</h3>
 <p>路透 10 月 19 日报道，亚马逊 AWS 在硅谷开发者大会上发布新工具 TorchNeuron：开发者用最流行的 AI 编程语言 PyTorch 写的代码，只需改一行配置、无需重写，就能直接跑在亚马逊自研的 Trainium AI 芯片上，而且完全免费开源。PyTorch 由 Meta 维护，是绝大多数 AI 开发者的"母语"；而英伟达花了十多年打磨 CUDA 软件，让 PyTorch 代码在自家芯片上跑得最顺——这正是英伟达护城河的核心。亚马逊芯片部门副总裁对路透表示，已有 30 多家早期客户（覆盖机器人、世界模型、语音 AI）在用，切换到 Trainium 可大幅省钱。谷歌也在做类似的事，想把开发者从英伟达生态里"撬"走。</p>
-<p>🔍 名词解释：<br />
-- <strong>PyTorch / CUDA</strong>：PyTorch 是 AI 开发者写代码的"普通话"，CUDA 是英伟达的"方言翻译器"——你的普通话代码经它一翻，在英伟达芯片上跑得飞快。别的芯片听不懂普通话，所以开发者被"锁"在英伟达家。TorchNeuron 就是亚马逊的"同声传译"，让普通话代码直接在自家芯片上跑。<br />
-- <strong>Trainium</strong>：亚马逊自己设计的 AI 芯片，相当于"自家盖的厂房"，比租英伟达的便宜，AWS 想靠它把客户留在自家云上。<br />
-- <strong>开源免费</strong>：代码公开、谁都能免费用。好比菜谱公开，街坊都能照着做——目的是让尽可能多的人用起来，把生态做大。<br />
-- <strong>护城河</strong>：巴菲特发明的词，指企业让对手难以攻破的优势。英伟达的护城河不是芯片本身，而是十几年积累的 CUDA 生态——开发者习惯了就懒得搬家。</p>
-<p>📌 一句话总结：亚马逊不跟英伟达拼芯片性能，改拼"让开发者搬家零成本"——挖的是护城河的地基。</p>
-<p>📚 生词：<br />
-- <strong>erode</strong> 侵蚀，削弱；搭配：erode the advantage（侵蚀优势）；例：Amazon seeks to erode the advantage underpinning Nvidia's dominance.（亚马逊试图侵蚀支撑英伟达霸主地位的优势。）💬 "Water dripping day by day wears the hardest rock." —— 英语谚语（水滴石穿。）<br />
-- <strong>dominance</strong> 主导地位；搭配：market dominance（市场主导地位）；例：CUDA software underpins Nvidia's dominance in AI computing.（CUDA 软件支撑着英伟达在 AI 计算领域的主导地位。）💬 "Heavy is the head that wears the crown." —— Shakespeare（欲戴王冠，必承其重。）<br />
-- <strong>framework</strong> 框架；搭配：software framework（软件框架）；例：PyTorch is the most popular AI coding framework.（PyTorch 是最流行的 AI 编程框架。）💬 "Give me a place to stand and I will move the Earth." —— Archimedes（给我一个支点，我能撬动地球。）<br />
-- <strong>modify</strong> 修改；搭配：without modification（无需修改）；例：The code runs on the new chips without modification.（代码无需修改就能在新芯片上运行。）💬 "If you want something you've never had, you must be willing to do something you've never done." —— Thomas Jefferson（想要从未拥有过的东西，就要去做从未做过的事。）<br />
-- <strong>configure</strong> 配置；搭配：configuration change（配置改动）；例：It takes just a single configuration change.（只需要改一行配置。）💬 "Simplicity is the ultimate sophistication." —— Leonardo da Vinci（简约是终极的精致。）<br />
-- <strong>steep</strong> 陡峭的，大幅的；搭配：steep savings（大幅节约）；例：Switching chips can bring steep cost savings.（切换芯片能带来大幅的成本节约。）💬 "No pain, no gain." —— 英语谚语（不劳则无获。）<br />
-- <strong>savings</strong> 节省，省下的钱；搭配：cost savings（成本节约）；例：Early customers report steep savings.（早期客户报告节约了可观的成本。）💬 "A penny saved is a penny earned." —— Benjamin Franklin（省下一分钱，就是赚到一分钱。）<br />
-- <strong>open source</strong> 开源；搭配：open-source software（开源软件）；例：The tool will be released as a free and open-source offering.（该工具将作为免费开源产品发布。）💬 "Sharing is caring." —— 英语谚语（分享即关怀。）<br />
-- <strong>rival</strong> 竞争对手；搭配：key rival（主要对手）；例：Google, another key rival, is making a similar move.（另一个主要对手谷歌也在采取类似行动。）💬 "Keep your friends close, and your enemies closer." —— 《The Godfather》（亲近朋友，更要亲近敌人。）<br />
-- <strong>interview</strong> 采访；搭配：in an interview（在采访中）；例：He told Reuters in an interview.（他在接受路透采访时表示。）💬 "The most important thing in communication is hearing what isn't said." —— Peter Drucker（沟通中最重要的，是听出那些没说出口的话。）<br />
-- <strong>lure away</strong> 吸引走，挖走；搭配：lure developers away（把开发者吸引走）；例：Google is working to lure developers away from Nvidia.（谷歌正努力把开发者从英伟达那边吸引过来。）💬 "The grass is always greener on the other side." —— 英语谚语（这山望着那山高。）<br />
-- <strong>underpin</strong> 支撑，巩固；搭配：underpin dominance（支撑霸主地位）；例：A decade of software work underpins Nvidia's dominance.（十余年的软件积累支撑着英伟达的霸主地位。）💬 "The roots of education are bitter, but the fruit is sweet." —— Aristotle（教育的根是苦的，但果实是甜的。）</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>PyTorch / CUDA</strong>：PyTorch 是 AI 开发者写代码的"普通话"，CUDA 是英伟达的"方言翻译器"——你的普通话代码经它一翻，在英伟达芯片上跑得飞快。别的芯片听不懂普通话，所以开发者被"锁"在英伟达家。TorchNeuron 就是亚马逊的"同声传译"，让普通话代码直接在自家芯片上跑。</li>
+<li><strong>Trainium</strong>：亚马逊自己设计的 AI 芯片，相当于"自家盖的厂房"，比租英伟达的便宜，AWS 想靠它把客户留在自家云上。</li>
+<li><strong>开源免费</strong>：代码公开、谁都能免费用。好比菜谱公开，街坊都能照着做——目的是让尽可能多的人用起来，把生态做大。</li>
+<li><strong>护城河</strong>：巴菲特发明的词，指企业让对手难以攻破的优势。英伟达的护城河不是芯片本身，而是十几年积累的 CUDA 生态——开发者习惯了就懒得搬家。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：亚马逊不跟英伟达拼芯片性能，改拼"让开发者搬家零成本"——挖的是护城河的地基。</p>
+<div class="vocabbox"><p class="sec-label">📚 生词：</p><ul>
+<li class="vocab"><span class="vword">erode</span> <span class="vmean">侵蚀，削弱</span><div class="vrow"><span class="vlabel">搭配</span>erode the advantage（侵蚀优势）</div><div class="vrow"><span class="vlabel">例句</span>Amazon seeks to erode the advantage underpinning Nvidia's dominance.（亚马逊试图侵蚀支撑英伟达霸主地位的优势。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Water dripping day by day wears the hardest rock." —— 英语谚语（水滴石穿。）</div></li>
+<li class="vocab"><span class="vword">dominance</span> <span class="vmean">主导地位</span><div class="vrow"><span class="vlabel">搭配</span>market dominance（市场主导地位）</div><div class="vrow"><span class="vlabel">例句</span>CUDA software underpins Nvidia's dominance in AI computing.（CUDA 软件支撑着英伟达在 AI 计算领域的主导地位。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Heavy is the head that wears the crown." —— Shakespeare（欲戴王冠，必承其重。）</div></li>
+<li class="vocab"><span class="vword">framework</span> <span class="vmean">框架</span><div class="vrow"><span class="vlabel">搭配</span>software framework（软件框架）</div><div class="vrow"><span class="vlabel">例句</span>PyTorch is the most popular AI coding framework.（PyTorch 是最流行的 AI 编程框架。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Give me a place to stand and I will move the Earth." —— Archimedes（给我一个支点，我能撬动地球。）</div></li>
+<li class="vocab"><span class="vword">modify</span> <span class="vmean">修改</span><div class="vrow"><span class="vlabel">搭配</span>without modification（无需修改）</div><div class="vrow"><span class="vlabel">例句</span>The code runs on the new chips without modification.（代码无需修改就能在新芯片上运行。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"If you want something you've never had, you must be willing to do something you've never done." —— Thomas Jefferson（想要从未拥有过的东西，就要去做从未做过的事。）</div></li>
+<li class="vocab"><span class="vword">configure</span> <span class="vmean">配置</span><div class="vrow"><span class="vlabel">搭配</span>configuration change（配置改动）</div><div class="vrow"><span class="vlabel">例句</span>It takes just a single configuration change.（只需要改一行配置。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Simplicity is the ultimate sophistication." —— Leonardo da Vinci（简约是终极的精致。）</div></li>
+<li class="vocab"><span class="vword">steep</span> <span class="vmean">陡峭的，大幅的</span><div class="vrow"><span class="vlabel">搭配</span>steep savings（大幅节约）</div><div class="vrow"><span class="vlabel">例句</span>Switching chips can bring steep cost savings.（切换芯片能带来大幅的成本节约。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"No pain, no gain." —— 英语谚语（不劳则无获。）</div></li>
+<li class="vocab"><span class="vword">savings</span> <span class="vmean">节省，省下的钱</span><div class="vrow"><span class="vlabel">搭配</span>cost savings（成本节约）</div><div class="vrow"><span class="vlabel">例句</span>Early customers report steep savings.（早期客户报告节约了可观的成本。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"A penny saved is a penny earned." —— Benjamin Franklin（省下一分钱，就是赚到一分钱。）</div></li>
+<li class="vocab"><span class="vword">open source</span> <span class="vmean">开源</span><div class="vrow"><span class="vlabel">搭配</span>open-source software（开源软件）</div><div class="vrow"><span class="vlabel">例句</span>The tool will be released as a free and open-source offering.（该工具将作为免费开源产品发布。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Sharing is caring." —— 英语谚语（分享即关怀。）</div></li>
+<li class="vocab"><span class="vword">rival</span> <span class="vmean">竞争对手</span><div class="vrow"><span class="vlabel">搭配</span>key rival（主要对手）</div><div class="vrow"><span class="vlabel">例句</span>Google, another key rival, is making a similar move.（另一个主要对手谷歌也在采取类似行动。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Keep your friends close, and your enemies closer." —— 《The Godfather》（亲近朋友，更要亲近敌人。）</div></li>
+<li class="vocab"><span class="vword">interview</span> <span class="vmean">采访</span><div class="vrow"><span class="vlabel">搭配</span>in an interview（在采访中）</div><div class="vrow"><span class="vlabel">例句</span>He told Reuters in an interview.（他在接受路透采访时表示。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The most important thing in communication is hearing what isn't said." —— Peter Drucker（沟通中最重要的，是听出那些没说出口的话。）</div></li>
+<li class="vocab"><span class="vword">lure away</span> <span class="vmean">吸引走，挖走</span><div class="vrow"><span class="vlabel">搭配</span>lure developers away（把开发者吸引走）</div><div class="vrow"><span class="vlabel">例句</span>Google is working to lure developers away from Nvidia.（谷歌正努力把开发者从英伟达那边吸引过来。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The grass is always greener on the other side." —— 英语谚语（这山望着那山高。）</div></li>
+<li class="vocab"><span class="vword">underpin</span> <span class="vmean">支撑，巩固</span><div class="vrow"><span class="vlabel">搭配</span>underpin dominance（支撑霸主地位）</div><div class="vrow"><span class="vlabel">例句</span>A decade of software work underpins Nvidia's dominance.（十余年的软件积累支撑着英伟达的霸主地位。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The roots of education are bitter, but the fruit is sweet." —— Aristotle（教育的根是苦的，但果实是甜的。）</div></li>
+</ul></div>
 <p>🔗 来源：<br />
 - Amazon says its AI chips will work with popular coding language, challenging Nvidia —— <a href="https://www.reuters.com/business/retail-consumer/amazon-says-its-ai-chips-will-work-with-popular-coding-language-challenging-2026-10-19/">https://www.reuters.com/business/retail-consumer/amazon-says-its-ai-chips-will-work-with-popular-coding-language-challenging-2026-10-19/</a></p>
 <h3>3. 中国大模型价格战再升级：MiniMax M3.1 Flash 发布，跑任务成本直降 70%</h3>
 <p>10 月 19 日，中国 AI 公司 MiniMax 发布新推理模型 M3.1 Flash：总参数 4280 亿（MoE 架构），在 Artificial Analysis 智能指数上得分 42，比上一代 M3 高 13 分，略低于两天前发布的 DeepSeek V4.1 Flash（45 分）。关键在价格：API 定价输入每百万 token 只要 0.15 美元、输出 0.6 美元，MiniMax 称智能体任务成本比上一代直降 70%，速度快 3 倍，上下文窗口 100 万 token，模型权重将于 10 月 23 日发布。有趣的是，它正是 9 月以"Space Bunny"为代号匿名刷榜的神秘模型。同一天，Meta 被曝在另一端"反向操作"——旗下模型走高价路线，中国厂商和美国巨头在"便宜好用"和"贵但强"两条路上越走越远。</p>
-<p>🔍 名词解释：<br />
-- <strong>推理模型</strong>：不只会"背答案"、还会"打草稿"的 AI。普通模型像脱口秀演员张口就来，推理模型像做数学题的学生，先在心里演算几步再作答，适合写代码、做规划这类烧脑活。<br />
-- <strong>参数 4280 亿</strong>：模型大脑里的"旋钮"数量，旋钮越多理论上越聪明。但 MoE 架构像"专家会诊"——4280 亿个旋钮不用全转，每次只请相关专家出来干活，所以又强又省。<br />
-- <strong>Token</strong>：AI 阅读和说话的"字块"，比如"你好"可能算 2 个 token。API 按 token 个数收费，好比打电话按分钟计费——token 越便宜，"话费"越低。<br />
-- <strong>基准测试（42 分）</strong>：给 AI 的"联考"，Artificial Analysis 智能指数是综合多场考试的"高考总分"，42 分在同级轻量模型里属第一梯队。<br />
-- <strong>智能体（Agent）</strong>：能自己拆任务、调工具、跑完才回来汇报的 AI"小员工"。一个任务它可能要调用模型几十次，所以 token 便宜 70% 对它意义巨大。</p>
-<p>📌 一句话总结：大模型进入"拼性价比"时代——聪明是入场券，便宜才是杀手锏。</p>
-<p>📚 生词：<br />
-- <strong>reasoning</strong> 推理；搭配：reasoning model（推理模型）；例：M3.1 Flash is a reasoning model with five effort levels.（M3.1 Flash 是具有五个努力档位的推理模型。）💬 "I think, therefore I am." —— René Descartes（我思故我在。）<br />
-- <strong>parameter</strong> 参数；搭配：billion parameters（数十亿参数）；例：The model has 428 billion parameters in total.（该模型总共有 4280 亿参数。）💬 "Everything should be made as simple as possible, but not simpler." —— Albert Einstein（一切都应尽可能简单，但不能过于简单。）<br />
-- <strong>benchmark</strong> 基准测试；搭配：score on a benchmark（在基准测试中得分）；例：It scored 42 on the Artificial Analysis Intelligence Index.（它在 Artificial Analysis 智能指数上得了 42 分。）💬 "In God we trust; all others must bring data." —— W. Edwards Deming（我们信上帝，其他人请拿数据说话。）<br />
-- <strong>inference</strong> 推理（模型运行）；搭配：inference speed（推理速度）；例：Inference is close to three times as fast as before.（推理速度接近此前的三倍。）💬 "Well begun is half done." —— Aristotle（好的开始是成功的一半。）<br />
-- <strong>agentic</strong> 智能体化的；搭配：agentic tasks（智能体任务）；例：Agentic tasks cost 70% less to run on the new model.（在新模型上跑智能体任务成本降低 70%。）💬 "The future depends on what you do today." —— Mahatma Gandhi（未来取决于你今天的所作所为。）<br />
-- <strong>efficiency</strong> 效率；搭配：energy efficiency（能源效率）；例：The release balances efficiency and capability.（这次发布兼顾了效率与能力。）💬 "Efficiency is doing things right; effectiveness is doing the right things." —— Peter Drucker（效率是把事情做对，效能是做对的事情。）<br />
-- <strong>launch</strong> 发布，发起；搭配：launch a model（发布模型）；例：MiniMax launched M3.1 Flash on October 19.（MiniMax 于 10 月 19 日发布了 M3.1 Flash。）💬 "The way to get started is to quit talking and begin doing." —— Walt Disney（开始的办法，就是停止空谈、动手去做。）<br />
-- <strong>claim</strong> 声称；搭配：the company claims（公司声称）；例：The company claims three times the speed of its predecessor.（公司声称速度是上一代的三倍。）💬 "Extraordinary claims require extraordinary evidence." —— Carl Sagan（非凡的主张需要非凡的证据。）<br />
-- <strong>competitor</strong> 竞争者；搭配：key competitor（主要竞争者）；例：DeepSeek's V4.1 Flash is a key competitor.（DeepSeek 的 V4.1 Flash 是主要竞争者。）💬 "Iron sharpens iron." —— 英语谚语（铁磨铁，越磨越利。）<br />
-- <strong>rival</strong> 对手；搭配：close rival（旗鼓相当的对手）；例：The two Chinese labs are close rivals in the price war.（这两家中国厂商在价格战中是旗鼓相当的对手。）💬 "If you can't beat them, join them." —— 英语谚语（打不过，就加入。）</p>
-<p>🔗 来源：<br />
-- MiniMax launches M3.1 Flash model, says it cuts AI agent costs by 70% —— <a href="https://siliconangle.com/2026/10/19/minimax-launches-m3-1-flash-model-says-it-cuts-ai-agent-costs-by-70/">https://siliconangle.com/2026/10/19/minimax-launches-m3-1-flash-model-says-it-cuts-ai-agent-costs-by-70/</a><br />
-- MiniMax Just Launched M3.1 Flash —— <a href="https://www.marktechpost.com/2026/10/19/minimax-m3-1-flash-release/">https://www.marktechpost.com/2026/10/19/minimax-m3-1-flash-release/</a></p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>推理模型</strong>：不只会"背答案"、还会"打草稿"的 AI。普通模型像脱口秀演员张口就来，推理模型像做数学题的学生，先在心里演算几步再作答，适合写代码、做规划这类烧脑活。</li>
+<li><strong>参数 4280 亿</strong>：模型大脑里的"旋钮"数量，旋钮越多理论上越聪明。但 MoE 架构像"专家会诊"——4280 亿个旋钮不用全转，每次只请相关专家出来干活，所以又强又省。</li>
+<li><strong>Token</strong>：AI 阅读和说话的"字块"，比如"你好"可能算 2 个 token。API 按 token 个数收费，好比打电话按分钟计费——token 越便宜，"话费"越低。</li>
+<li><strong>基准测试（42 分）</strong>：给 AI 的"联考"，Artificial Analysis 智能指数是综合多场考试的"高考总分"，42 分在同级轻量模型里属第一梯队。</li>
+<li><strong>智能体（Agent）</strong>：能自己拆任务、调工具、跑完才回来汇报的 AI"小员工"。一个任务它可能要调用模型几十次，所以 token 便宜 70% 对它意义巨大。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：大模型进入"拼性价比"时代——聪明是入场券，便宜才是杀手锏。</p>
+<div class="vocabbox"><p class="sec-label">📚 生词：</p><ul>
+<li class="vocab"><span class="vword">reasoning</span> <span class="vmean">推理</span><div class="vrow"><span class="vlabel">搭配</span>reasoning model（推理模型）</div><div class="vrow"><span class="vlabel">例句</span>M3.1 Flash is a reasoning model with five effort levels.（M3.1 Flash 是具有五个努力档位的推理模型。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"I think, therefore I am." —— René Descartes（我思故我在。）</div></li>
+<li class="vocab"><span class="vword">parameter</span> <span class="vmean">参数</span><div class="vrow"><span class="vlabel">搭配</span>billion parameters（数十亿参数）</div><div class="vrow"><span class="vlabel">例句</span>The model has 428 billion parameters in total.（该模型总共有 4280 亿参数。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Everything should be made as simple as possible, but not simpler." —— Albert Einstein（一切都应尽可能简单，但不能过于简单。）</div></li>
+<li class="vocab"><span class="vword">benchmark</span> <span class="vmean">基准测试</span><div class="vrow"><span class="vlabel">搭配</span>score on a benchmark（在基准测试中得分）</div><div class="vrow"><span class="vlabel">例句</span>It scored 42 on the Artificial Analysis Intelligence Index.（它在 Artificial Analysis 智能指数上得了 42 分。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"In God we trust; all others must bring data." —— W. Edwards Deming（我们信上帝，其他人请拿数据说话。）</div></li>
+<li class="vocab"><span class="vword">inference</span> <span class="vmean">推理（模型运行）</span><div class="vrow"><span class="vlabel">搭配</span>inference speed（推理速度）</div><div class="vrow"><span class="vlabel">例句</span>Inference is close to three times as fast as before.（推理速度接近此前的三倍。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Well begun is half done." —— Aristotle（好的开始是成功的一半。）</div></li>
+<li class="vocab"><span class="vword">agentic</span> <span class="vmean">智能体化的</span><div class="vrow"><span class="vlabel">搭配</span>agentic tasks（智能体任务）</div><div class="vrow"><span class="vlabel">例句</span>Agentic tasks cost 70% less to run on the new model.（在新模型上跑智能体任务成本降低 70%。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The future depends on what you do today." —— Mahatma Gandhi（未来取决于你今天的所作所为。）</div></li>
+<li class="vocab"><span class="vword">efficiency</span> <span class="vmean">效率</span><div class="vrow"><span class="vlabel">搭配</span>energy efficiency（能源效率）</div><div class="vrow"><span class="vlabel">例句</span>The release balances efficiency and capability.（这次发布兼顾了效率与能力。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Efficiency is doing things right; effectiveness is doing the right things." —— Peter Drucker（效率是把事情做对，效能是做对的事情。）</div></li>
+<li class="vocab"><span class="vword">launch</span> <span class="vmean">发布，发起</span><div class="vrow"><span class="vlabel">搭配</span>launch a model（发布模型）</div><div class="vrow"><span class="vlabel">例句</span>MiniMax launched M3.1 Flash on October 19.（MiniMax 于 10 月 19 日发布了 M3.1 Flash。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The way to get started is to quit talking and begin doing." —— Walt Disney（开始的办法，就是停止空谈、动手去做。）</div></li>
+<li class="vocab"><span class="vword">claim</span> <span class="vmean">声称</span><div class="vrow"><span class="vlabel">搭配</span>the company claims（公司声称）</div><div class="vrow"><span class="vlabel">例句</span>The company claims three times the speed of its predecessor.（公司声称速度是上一代的三倍。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Extraordinary claims require extraordinary evidence." —— Carl Sagan（非凡的主张需要非凡的证据。）</div></li>
+<li class="vocab"><span class="vword">competitor</span> <span class="vmean">竞争者</span><div class="vrow"><span class="vlabel">搭配</span>key competitor（主要竞争者）</div><div class="vrow"><span class="vlabel">例句</span>DeepSeek's V4.1 Flash is a key competitor.（DeepSeek 的 V4.1 Flash 是主要竞争者。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Iron sharpens iron." —— 英语谚语（铁磨铁，越磨越利。）</div></li>
+<li class="vocab"><span class="vword">rival</span> <span class="vmean">对手</span><div class="vrow"><span class="vlabel">搭配</span>close rival（旗鼓相当的对手）</div><div class="vrow"><span class="vlabel">例句</span>The two Chinese labs are close rivals in the price war.（这两家中国厂商在价格战中是旗鼓相当的对手。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"If you can't beat them, join them." —— 英语谚语（打不过，就加入。）</div></li>
+</ul></div>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>MiniMax launches M3.1 Flash model, says it cuts AI agent costs by 70% —— <a href="https://siliconangle.com/2026/10/19/minimax-launches-m3-1-flash-model-says-it-cuts-ai-agent-costs-by-70/">https://siliconangle.com/2026/10/19/minimax-launches-m3-1-flash-model-says-it-cuts-ai-agent-costs-by-70/</a></li>
+<li>MiniMax Just Launched M3.1 Flash —— <a href="https://www.marktechpost.com/2026/10/19/minimax-m3-1-flash-release/">https://www.marktechpost.com/2026/10/19/minimax-m3-1-flash-release/</a></li>
+</ul></div>
 <hr />
 <h2>三、国际事务 🌍</h2>
 <h3>1. 特朗普为暂停对俄新制裁辩护：称不想把俄罗斯"推离谈判桌"</h3>
 <p>美国总统特朗普 10 月 19 日在 Truth Social 发文，为他上周五签署的行政令辩护。该行政令暂停了《2026 年格雷厄姆制裁俄罗斯和伊朗法案》中的大部分新条款，包括对俄罗斯商品最高 500%、对五大俄罗斯能源买家最高 100% 的新关税。特朗普说："我正在俄乌之间谈判和平，不想做任何愚蠢的事把俄罗斯推离谈判桌。"他还声称和谈取得"重大进展"，并批评泽连斯基袭击俄罗斯柴油炼油厂推高了全球油价。另据多家印度媒体 10 月 19 日报道，普京提议举行特朗普—普京—习近平三方峰会来谈判乌克兰问题。</p>
-<p>🔍 名词解释：<br />
-- <strong>制裁</strong>：就像家长立规矩"再偷吃零食就没收手机"——国家之间不听话，就冻结你的钱、不让你做生意，逼你改。<strong>关税</strong>则是"进口税"，外国货进美国要多交一笔钱，东西就变贵了。<br />
-- <strong>制裁暂停</strong>：本来规定"犯规就没收手机"，但孩子正处在考试关键期，家长怕他情绪崩了，先说"这次先不没收"。暂停不是取消惩罚，只是暂时不执行。<br />
-- <strong>行政令 vs 国会法案</strong>：国会通过的法案像"家规"，全家投票定的；总统行政令像"家长临时通知"，总统一个人就能下。这次是总统用"临时通知"暂停了"家规"的一部分。<br />
-- <strong>谈判桌</strong>：不是真桌子，就是"坐下来谈"的代称。把俄罗斯"推离谈判桌" = 把俄罗斯气跑、不跟你谈了。</p>
-<p>📌 一句话总结：特朗普亲手按下了国会刚通过的对俄制裁"暂停键"，赌的是和谈能成，但也把美乌关系推到了新的裂口上。</p>
-<p>📚 生词：<br />
-- <strong>sanction</strong> 制裁；搭配：impose sanctions on（对……实施制裁）；例：The council voted to impose sanctions on oil exports.（理事会投票决定对石油出口实施制裁。）💬 "Power concedes nothing without a demand." —— Frederick Douglass（权力从不会不经要求就让步。）<br />
-- <strong>waiver</strong> 豁免；搭配：grant a waiver（给予豁免）；例：He was granted a waiver for the entrance exam.（他获得了入学考试的豁免。）💬 "Hope is a good thing, maybe the best of things." —— 《The Shawshank Redemption》（希望是美好的，也许是世间最美好的东西。）<br />
-- <strong>negotiate</strong> 谈判，协商；搭配：negotiate a deal（达成协议）；例：They are negotiating a peace agreement.（他们正在谈判一项和平协议。）💬 "If you talk to a man in a language he understands, that goes to his head. If you talk to him in his language, that goes to his heart." —— Nelson Mandela（用一个人能懂的语言跟他说话，话进脑子；用他的语言跟他说话，话进心里。）<br />
-- <strong>bargaining</strong> 讨价还价，谈判；搭配：bargaining chip（谈判筹码）；例：Oil exports are being used as a bargaining chip.（石油出口正被当作谈判筹码。）💬 "Price is what you pay. Value is what you get." —— Warren Buffett（价格是你付出的，价值是你得到的。）<br />
-- <strong>undermine</strong> 逐渐削弱，破坏；搭配：undermine confidence（削弱信心）；例：Lying will undermine people's trust in you.（撒谎会逐渐削弱人们对你的信任。）💬 "You either die a hero, or you live long enough to see yourself become the villain." —— 《The Dark Knight》（你要么英勇地死去，要么活得足够久，看着自己变成反派。）<br />
-- <strong>provision</strong> 条款，规定；搭配：under the provisions of（根据……条款）；例：The new law has a provision for overtime pay.（新法律有一条关于加班费的规定。）💬 "The best way to predict the future is to create it." —— Abraham Lincoln（预测未来最好的方式就是创造未来。）<br />
-- <strong>tariff</strong> 关税；搭配：impose tariffs（征收关税）；例：The government raised tariffs on imported cars.（政府提高了进口汽车的关税。）💬 "A rising tide lifts all boats." —— John F. Kennedy（水涨船高。）<br />
-- <strong>accuse</strong> 指控，指责；搭配：accuse sb of sth（指控某人做了某事）；例：He was accused of cheating in the exam.（他被指控在考试中作弊。）💬 "Life is like a box of chocolates. You never know what you're gonna get." —— 《Forrest Gump》（人生就像一盒巧克力，你永远不知道下一颗是什么味道。）<br />
-- <strong>disrupt</strong> 扰乱，打断；搭配：disrupt traffic（扰乱交通）；例：The storm disrupted train services.（暴风雨打乱了火车运行。）💬 "Innovation distinguishes between a leader and a follower." —— Steve Jobs（创新区分了领导者和追随者。）<br />
-- <strong>preserve</strong> 保护，维持；搭配：preserve peace（维护和平）；例：We must preserve our natural resources.（我们必须保护自然资源。）💬 "Be the change that you wish to see in the world." —— Mahatma Gandhi（欲变世界，先变其身。）<br />
-- <strong>controversy</strong> 争议，争论；搭配：cause controversy（引起争议）；例：The decision caused a lot of controversy.（这个决定引起了很多争议。）💬 "The only thing worse than being talked about is not being talked about." —— Oscar Wilde（比被人议论更糟糕的，是没人议论你。）<br />
-- <strong>settle</strong> 解决，平息；搭配：settle a dispute（解决争端）；例：They finally settled their dispute through talks.（他们最终通过谈判解决了争端。）💬 "I'm gonna make him an offer he can't refuse." —— 《The Godfather》（我会给他一个他无法拒绝的条件。）</p>
-<p>🔗 来源：<br />
-- Trump holds off on new measures against Russia to avoid undermining Ukraine peace talks —— <a href="https://www.aa.com.tr/en/americas/trump-holds-off-on-new-measures-against-russia-to-avoid-undermining-ukraine-peace-talks/4092929">https://www.aa.com.tr/en/americas/trump-holds-off-on-new-measures-against-russia-to-avoid-undermining-ukraine-peace-talks/4092929</a><br />
-- 普京三方峰会提议（Lokmat Times 国际新闻页）—— <a href="https://www.lokmattimes.com/international/page/13/">https://www.lokmattimes.com/international/page/13/</a></p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>制裁</strong>：就像家长立规矩"再偷吃零食就没收手机"——国家之间不听话，就冻结你的钱、不让你做生意，逼你改。<strong>关税</strong>则是"进口税"，外国货进美国要多交一笔钱，东西就变贵了。</li>
+<li><strong>制裁暂停</strong>：本来规定"犯规就没收手机"，但孩子正处在考试关键期，家长怕他情绪崩了，先说"这次先不没收"。暂停不是取消惩罚，只是暂时不执行。</li>
+<li><strong>行政令 vs 国会法案</strong>：国会通过的法案像"家规"，全家投票定的；总统行政令像"家长临时通知"，总统一个人就能下。这次是总统用"临时通知"暂停了"家规"的一部分。</li>
+<li><strong>谈判桌</strong>：不是真桌子，就是"坐下来谈"的代称。把俄罗斯"推离谈判桌" = 把俄罗斯气跑、不跟你谈了。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：特朗普亲手按下了国会刚通过的对俄制裁"暂停键"，赌的是和谈能成，但也把美乌关系推到了新的裂口上。</p>
+<div class="vocabbox"><p class="sec-label">📚 生词：</p><ul>
+<li class="vocab"><span class="vword">sanction</span> <span class="vmean">制裁</span><div class="vrow"><span class="vlabel">搭配</span>impose sanctions on（对……实施制裁）</div><div class="vrow"><span class="vlabel">例句</span>The council voted to impose sanctions on oil exports.（理事会投票决定对石油出口实施制裁。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Power concedes nothing without a demand." —— Frederick Douglass（权力从不会不经要求就让步。）</div></li>
+<li class="vocab"><span class="vword">waiver</span> <span class="vmean">豁免</span><div class="vrow"><span class="vlabel">搭配</span>grant a waiver（给予豁免）</div><div class="vrow"><span class="vlabel">例句</span>He was granted a waiver for the entrance exam.（他获得了入学考试的豁免。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Hope is a good thing, maybe the best of things." —— 《The Shawshank Redemption》（希望是美好的，也许是世间最美好的东西。）</div></li>
+<li class="vocab"><span class="vword">negotiate</span> <span class="vmean">谈判，协商</span><div class="vrow"><span class="vlabel">搭配</span>negotiate a deal（达成协议）</div><div class="vrow"><span class="vlabel">例句</span>They are negotiating a peace agreement.（他们正在谈判一项和平协议。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"If you talk to a man in a language he understands, that goes to his head. If you talk to him in his language, that goes to his heart." —— Nelson Mandela（用一个人能懂的语言跟他说话，话进脑子；用他的语言跟他说话，话进心里。）</div></li>
+<li class="vocab"><span class="vword">bargaining</span> <span class="vmean">讨价还价，谈判</span><div class="vrow"><span class="vlabel">搭配</span>bargaining chip（谈判筹码）</div><div class="vrow"><span class="vlabel">例句</span>Oil exports are being used as a bargaining chip.（石油出口正被当作谈判筹码。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Price is what you pay. Value is what you get." —— Warren Buffett（价格是你付出的，价值是你得到的。）</div></li>
+<li class="vocab"><span class="vword">undermine</span> <span class="vmean">逐渐削弱，破坏</span><div class="vrow"><span class="vlabel">搭配</span>undermine confidence（削弱信心）</div><div class="vrow"><span class="vlabel">例句</span>Lying will undermine people's trust in you.（撒谎会逐渐削弱人们对你的信任。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"You either die a hero, or you live long enough to see yourself become the villain." —— 《The Dark Knight》（你要么英勇地死去，要么活得足够久，看着自己变成反派。）</div></li>
+<li class="vocab"><span class="vword">provision</span> <span class="vmean">条款，规定</span><div class="vrow"><span class="vlabel">搭配</span>under the provisions of（根据……条款）</div><div class="vrow"><span class="vlabel">例句</span>The new law has a provision for overtime pay.（新法律有一条关于加班费的规定。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The best way to predict the future is to create it." —— Abraham Lincoln（预测未来最好的方式就是创造未来。）</div></li>
+<li class="vocab"><span class="vword">tariff</span> <span class="vmean">关税</span><div class="vrow"><span class="vlabel">搭配</span>impose tariffs（征收关税）</div><div class="vrow"><span class="vlabel">例句</span>The government raised tariffs on imported cars.（政府提高了进口汽车的关税。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"A rising tide lifts all boats." —— John F. Kennedy（水涨船高。）</div></li>
+<li class="vocab"><span class="vword">accuse</span> <span class="vmean">指控，指责</span><div class="vrow"><span class="vlabel">搭配</span>accuse sb of sth（指控某人做了某事）</div><div class="vrow"><span class="vlabel">例句</span>He was accused of cheating in the exam.（他被指控在考试中作弊。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Life is like a box of chocolates. You never know what you're gonna get." —— 《Forrest Gump》（人生就像一盒巧克力，你永远不知道下一颗是什么味道。）</div></li>
+<li class="vocab"><span class="vword">disrupt</span> <span class="vmean">扰乱，打断</span><div class="vrow"><span class="vlabel">搭配</span>disrupt traffic（扰乱交通）</div><div class="vrow"><span class="vlabel">例句</span>The storm disrupted train services.（暴风雨打乱了火车运行。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Innovation distinguishes between a leader and a follower." —— Steve Jobs（创新区分了领导者和追随者。）</div></li>
+<li class="vocab"><span class="vword">preserve</span> <span class="vmean">保护，维持</span><div class="vrow"><span class="vlabel">搭配</span>preserve peace（维护和平）</div><div class="vrow"><span class="vlabel">例句</span>We must preserve our natural resources.（我们必须保护自然资源。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Be the change that you wish to see in the world." —— Mahatma Gandhi（欲变世界，先变其身。）</div></li>
+<li class="vocab"><span class="vword">controversy</span> <span class="vmean">争议，争论</span><div class="vrow"><span class="vlabel">搭配</span>cause controversy（引起争议）</div><div class="vrow"><span class="vlabel">例句</span>The decision caused a lot of controversy.（这个决定引起了很多争议。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The only thing worse than being talked about is not being talked about." —— Oscar Wilde（比被人议论更糟糕的，是没人议论你。）</div></li>
+<li class="vocab"><span class="vword">settle</span> <span class="vmean">解决，平息</span><div class="vrow"><span class="vlabel">搭配</span>settle a dispute（解决争端）</div><div class="vrow"><span class="vlabel">例句</span>They finally settled their dispute through talks.（他们最终通过谈判解决了争端。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"I'm gonna make him an offer he can't refuse." —— 《The Godfather》（我会给他一个他无法拒绝的条件。）</div></li>
+</ul></div>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>Trump holds off on new measures against Russia to avoid undermining Ukraine peace talks —— <a href="https://www.aa.com.tr/en/americas/trump-holds-off-on-new-measures-against-russia-to-avoid-undermining-ukraine-peace-talks/4092929">https://www.aa.com.tr/en/americas/trump-holds-off-on-new-measures-against-russia-to-avoid-undermining-ukraine-peace-talks/4092929</a></li>
+<li>普京三方峰会提议（Lokmat Times 国际新闻页）—— <a href="https://www.lokmattimes.com/international/page/13/">https://www.lokmattimes.com/international/page/13/</a></li>
+</ul></div>
 <h3>2. 法国骚乱升级：周末近 2400 人被捕、多城宣布宵禁</h3>
 <p>10 月 18–19 日，法国多个城市爆发针对学校标准和生活成本上涨的抗议，随后演变为暴力骚乱：蒙面抗议者在巴黎等地打砸商店、焚烧垃圾桶，与防暴警察发生冲突；意大利米兰也发生了类似骚乱。据法国内政部数据，周六的骚乱导致近 2400 人被捕、约 1000 名警察和宪兵受伤。10 月 19 日，法国总统马克龙谴责"无节制的暴力"，宣布一系列政策改革并誓言严惩暴徒；多个法国城市已宣布实行宵禁。</p>
-<p>🔍 名词解释：<br />
-- <strong>宵禁</strong>：就像小区物业贴通知"晚上十点后所有人不许出门遛弯，保安巡逻抓人"。法国多地政府现在就是干这个——天黑后上街可能被警察带走。<br />
-- <strong>防暴警察</strong>：专门对付大规模骚乱的警察，穿得像"人形坦克"：头盔、盾牌、催泪瓦斯、水炮车全套装备，平时巡逻的警察不长这样。<br />
-- <strong>宪兵</strong>：法国特有的一种"军警合一"队伍，既是军人也是警察，归军队管、干警察的活，骚乱时常被派出来增援。</p>
-<p>📌 一句话总结：法国街头从"抗议学费"烧成了"抗议物价"，马克龙一边谴责暴力一边宣布宵禁，欧洲的社会火药桶又被点着了一角。</p>
-<p>📚 生词：<br />
-- <strong>unrest</strong> 动荡，骚乱；搭配：civil unrest（内乱）；例：The city imposed a curfew after weeks of unrest.（数周的骚乱之后，该市实行了宵禁。）💬 "A riot is the language of the unheard." —— Martin Luther King Jr.（暴动是未被倾听者的语言。）<br />
-- <strong>condemn</strong> 谴责；搭配：condemn violence（谴责暴力）；例：Leaders around the world condemned the attack.（世界各国领导人谴责了这次袭击。）💬 "If you are neutral in situations of injustice, you have chosen the side of the oppressor." —— Desmond Tutu（在不公面前保持中立，就是选择了压迫者一边。）<br />
-- <strong>curfew</strong> 宵禁；搭配：impose a curfew（实行宵禁）；例：Teenagers must be home before the 10 p.m. curfew.（青少年必须在晚上十点宵禁前回家。）💬 "Remember, the magic ends at midnight." —— 《Cinderella》（记住，魔法在午夜结束。）<br />
-- <strong>loot</strong> 抢劫，掠夺；搭配：loot shops（抢劫商店）；例：Protesters looted several shops downtown.（抗议者抢劫了市中心几家商店。）💬 "The world has enough for everyone's need, but not enough for everyone's greed." —— Mahatma Gandhi（世界足够满足每个人的需要，但不足以满足每个人的贪婪。）<br />
-- <strong>clash</strong> 冲突；搭配：clash with police（与警察冲突）；例：Protesters clashed with police outside the station.（抗议者在车站外与警察发生冲突。）💬 "Give peace a chance." —— John Lennon（给和平一个机会。）<br />
-- <strong>rampage</strong> 横冲直撞，暴乱；搭配：go on a rampage（大肆破坏）；例：The mob went on a rampage through the city center.（暴徒在市中心大肆破坏。）💬 "Be like water, my friend." —— Bruce Lee（要像水一样，我的朋友。）<br />
-- <strong>vow</strong> 发誓，誓言；搭配：vow to do sth（发誓做某事）；例：He vowed to protect his family.（他发誓要保护家人。）💬 "If by my life or death I can protect you, I will." —— Aragorn，《The Lord of the Rings》（若以我的生死能护你周全，我必做到。）<br />
-- <strong>reform</strong> 改革；搭配：carry out reforms（推行改革）；例：The government promised major education reforms.（政府承诺进行重大教育改革。）💬 "Change is the law of life. And those who look only to the past or present are certain to miss the future." —— John F. Kennedy（变化是生活的法则，只看过去或现在的人注定错过未来。）<br />
-- <strong>arrest</strong> 逮捕；搭配：make an arrest（实施逮捕）；例：Police made nearly 2,400 arrests over the weekend.（警方在周末逮捕了近 2400 人。）💬 "You have the right to remain silent." —— 经典警匪片台词（你有权保持沉默。）</p>
-<p>🔗 来源：<br />
-- Macron condemns violence, vows support for businesses after agitation engulfs France —— <a href="https://www.thenews.pk/update/world">https://www.thenews.pk/update/world</a><br />
-- 新华社英文版 10 月 20 日跟进报道多城宵禁 —— <a href="https://english.news.cn/world/index.htm">https://english.news.cn/world/index.htm</a></p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>宵禁</strong>：就像小区物业贴通知"晚上十点后所有人不许出门遛弯，保安巡逻抓人"。法国多地政府现在就是干这个——天黑后上街可能被警察带走。</li>
+<li><strong>防暴警察</strong>：专门对付大规模骚乱的警察，穿得像"人形坦克"：头盔、盾牌、催泪瓦斯、水炮车全套装备，平时巡逻的警察不长这样。</li>
+<li><strong>宪兵</strong>：法国特有的一种"军警合一"队伍，既是军人也是警察，归军队管、干警察的活，骚乱时常被派出来增援。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：法国街头从"抗议学费"烧成了"抗议物价"，马克龙一边谴责暴力一边宣布宵禁，欧洲的社会火药桶又被点着了一角。</p>
+<div class="vocabbox"><p class="sec-label">📚 生词：</p><ul>
+<li class="vocab"><span class="vword">unrest</span> <span class="vmean">动荡，骚乱</span><div class="vrow"><span class="vlabel">搭配</span>civil unrest（内乱）</div><div class="vrow"><span class="vlabel">例句</span>The city imposed a curfew after weeks of unrest.（数周的骚乱之后，该市实行了宵禁。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"A riot is the language of the unheard." —— Martin Luther King Jr.（暴动是未被倾听者的语言。）</div></li>
+<li class="vocab"><span class="vword">condemn</span> <span class="vmean">谴责</span><div class="vrow"><span class="vlabel">搭配</span>condemn violence（谴责暴力）</div><div class="vrow"><span class="vlabel">例句</span>Leaders around the world condemned the attack.（世界各国领导人谴责了这次袭击。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"If you are neutral in situations of injustice, you have chosen the side of the oppressor." —— Desmond Tutu（在不公面前保持中立，就是选择了压迫者一边。）</div></li>
+<li class="vocab"><span class="vword">curfew</span> <span class="vmean">宵禁</span><div class="vrow"><span class="vlabel">搭配</span>impose a curfew（实行宵禁）</div><div class="vrow"><span class="vlabel">例句</span>Teenagers must be home before the 10 p.m. curfew.（青少年必须在晚上十点宵禁前回家。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Remember, the magic ends at midnight." —— 《Cinderella》（记住，魔法在午夜结束。）</div></li>
+<li class="vocab"><span class="vword">loot</span> <span class="vmean">抢劫，掠夺</span><div class="vrow"><span class="vlabel">搭配</span>loot shops（抢劫商店）</div><div class="vrow"><span class="vlabel">例句</span>Protesters looted several shops downtown.（抗议者抢劫了市中心几家商店。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The world has enough for everyone's need, but not enough for everyone's greed." —— Mahatma Gandhi（世界足够满足每个人的需要，但不足以满足每个人的贪婪。）</div></li>
+<li class="vocab"><span class="vword">clash</span> <span class="vmean">冲突</span><div class="vrow"><span class="vlabel">搭配</span>clash with police（与警察冲突）</div><div class="vrow"><span class="vlabel">例句</span>Protesters clashed with police outside the station.（抗议者在车站外与警察发生冲突。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Give peace a chance." —— John Lennon（给和平一个机会。）</div></li>
+<li class="vocab"><span class="vword">rampage</span> <span class="vmean">横冲直撞，暴乱</span><div class="vrow"><span class="vlabel">搭配</span>go on a rampage（大肆破坏）</div><div class="vrow"><span class="vlabel">例句</span>The mob went on a rampage through the city center.（暴徒在市中心大肆破坏。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Be like water, my friend." —— Bruce Lee（要像水一样，我的朋友。）</div></li>
+<li class="vocab"><span class="vword">vow</span> <span class="vmean">发誓，誓言</span><div class="vrow"><span class="vlabel">搭配</span>vow to do sth（发誓做某事）</div><div class="vrow"><span class="vlabel">例句</span>He vowed to protect his family.（他发誓要保护家人。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"If by my life or death I can protect you, I will." —— Aragorn，《The Lord of the Rings》（若以我的生死能护你周全，我必做到。）</div></li>
+<li class="vocab"><span class="vword">reform</span> <span class="vmean">改革</span><div class="vrow"><span class="vlabel">搭配</span>carry out reforms（推行改革）</div><div class="vrow"><span class="vlabel">例句</span>The government promised major education reforms.（政府承诺进行重大教育改革。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Change is the law of life. And those who look only to the past or present are certain to miss the future." —— John F. Kennedy（变化是生活的法则，只看过去或现在的人注定错过未来。）</div></li>
+<li class="vocab"><span class="vword">arrest</span> <span class="vmean">逮捕</span><div class="vrow"><span class="vlabel">搭配</span>make an arrest（实施逮捕）</div><div class="vrow"><span class="vlabel">例句</span>Police made nearly 2,400 arrests over the weekend.（警方在周末逮捕了近 2400 人。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"You have the right to remain silent." —— 经典警匪片台词（你有权保持沉默。）</div></li>
+</ul></div>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>Macron condemns violence, vows support for businesses after agitation engulfs France —— <a href="https://www.thenews.pk/update/world">https://www.thenews.pk/update/world</a></li>
+<li>新华社英文版 10 月 20 日跟进报道多城宵禁 —— <a href="https://english.news.cn/world/index.htm">https://english.news.cn/world/index.htm</a></li>
+</ul></div>
 <h3>3. 巴西大选"决赛圈"：卢拉与小博索纳罗首场电视辩论火药味十足</h3>
 <p>10 月 18 日晚（巴西时间），巴西总统卢拉与参议员弗拉维奥·博索纳罗（前总统博索纳罗之子）在圣保罗举行了决选前的首场电视辩论，持续约两小时。两人互相称对方"骗子"，卢拉指小博索纳罗是"暴徒""民兵"，小博索纳罗回击卢拉是"小丑"，还要求互相公开个人财务接受审查。辩论前，数万名支持者在圣保罗保利斯塔大街等地集会造势。首轮投票中弗拉维奥以 47% 对 45% 领先卢拉，民调显示决选（10 月 25 日）双方 51% 对 49%，极其接近。</p>
-<p>🔍 名词解释：<br />
-- <strong>决选（第二轮投票）</strong>：就像歌唱比赛总决赛——第一轮没人得票过半数，前两名再单独比一场定冠军。巴西 10 月 4 日首轮没人过半，所以 10 月 25 日前两名再战。<br />
-- <strong>弃票选民</strong>：首轮有 3300 万合格选民没去投票，相当于五个合格选民里就有一个没出门。两人都想争取这批"沉默的大多数"，他们是决胜关键。<br />
-- <strong>民兵（卢拉骂人的话）</strong>：在里约热内卢，"民兵"指由退役警察、黑帮组成的非法武装团伙，靠收保护费为生。卢拉骂对手是"民兵"，等于说他是黑社会。</p>
-<p>📌 一句话总结：巴西大选进入"决赛圈"，两位候选人在电视上互撕两小时，谁能拿下 10 月 25 日的决选，将决定拉美是倒向美国还是继续靠近中国。</p>
-<p>📚 生词：<br />
-- <strong>runoff</strong> 决选，第二轮投票；搭配：a presidential runoff（总统决选）；例：The two candidates will face off in the runoff next Sunday.（两位候选人将在下周日的决选中对决。）💬 "Democracy is the worst form of government, except for all the others." —— Winston Churchill（民主是最坏的政体——除了其他所有试过的政体。）<br />
-- <strong>debate</strong> 辩论；搭配：hold a debate（举行辩论）；例：The two candidates had a heated debate on TV.（两位候选人在电视上进行了一场激烈辩论。）💬 "Great minds discuss ideas; average minds discuss events; small minds discuss people." —— Eleanor Roosevelt（伟大的头脑讨论思想，平庸的头脑讨论事件，渺小的头脑讨论人。）<br />
-- <strong>allege</strong> 断言，宣称（未经证实）；搭配：allege ties to（声称与……有关联）；例：He was alleged to have links to the gang.（据称他与该团伙有牵连。）💬 "A lie can travel halfway around the world while the truth is putting on its shoes." —— Mark Twain（真相还在穿鞋时，谎言已跑遍半个世界。）<br />
-- <strong>dodge</strong> 回避，躲闪；搭配：dodge a question（回避问题）；例：The minister dodged questions about the scandal.（部长回避了有关丑闻的提问。）💬 "Dodge this." —— Neo，《The Matrix》（躲开这个。）<br />
-- <strong>spar</strong> 争吵，交锋；搭配：spar over（为……争吵）；例：The two leaders sparred over trade policy.（两位领导人就贸易政策唇枪舌剑。）💬 "Float like a butterfly, sting like a bee." —— Muhammad Ali（像蝴蝶一样飘，像蜜蜂一样蛰。）<br />
-- <strong>bitter</strong> 激烈的，苦涩的；搭配：a bitter rivalry（激烈竞争）；例：The election turned into a bitter fight.（选举变成了一场激烈的缠斗。）💬 "The bitterest tears shed over graves are for words left unsaid and deeds left undone." —— Harriet Beecher Stowe（在墓前流下最苦涩的眼泪，是为了那些没说出口的话和没做完的事。）<br />
-- <strong>pivotal</strong> 关键的；搭配：a pivotal moment（关键时刻）；例：This election is a pivotal moment for the country.（这次选举是该国的关键时刻。）💬 "The tipping point is that magic moment when an idea crosses a threshold." —— Malcolm Gladwell（引爆点就是那个神奇时刻——一个想法跨过了临界点。）<br />
-- <strong>inject</strong> 注入；搭配：inject new energy（注入新活力）；例：The dispute injected new tension into the campaign.（这场争执给选战注入了新的紧张气氛。）💬 "Stay hungry, stay foolish." —— Steve Jobs（求知若饥，虚心若愚。）<br />
-- <strong>barb</strong> 讥讽的话；搭配：trade barbs（互相讥讽）；例：The candidates traded barbs throughout the debate.（候选人在整个辩论中互相讥讽。）💬 "Sarcasm is the lowest form of wit." —— Oscar Wilde（讥讽是最低级的机智。）</p>
-<p>🔗 来源：<br />
-- Brazil's Bolsonaro, Lula face off in first debate as supporters fill streets —— <a href="https://www.reuters.com/world/americas/brazils-bolsonaro-lula-head-into-first-debate-week-before-vote-2026-10-18/">https://www.reuters.com/world/americas/brazils-bolsonaro-lula-head-into-first-debate-week-before-vote-2026-10-18/</a><br />
-- Lula and Bolsonaro spar in Brazil's fiery first presidential run-off debate —— <a href="https://www.aljazeera.com/news/2026/10/19/lula-and-bolsonaro-spar-in-brazils-fiery-first-presidential-run-off-debate">https://www.aljazeera.com/news/2026/10/19/lula-and-bolsonaro-spar-in-brazils-fiery-first-presidential-run-off-debate</a></p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>决选（第二轮投票）</strong>：就像歌唱比赛总决赛——第一轮没人得票过半数，前两名再单独比一场定冠军。巴西 10 月 4 日首轮没人过半，所以 10 月 25 日前两名再战。</li>
+<li><strong>弃票选民</strong>：首轮有 3300 万合格选民没去投票，相当于五个合格选民里就有一个没出门。两人都想争取这批"沉默的大多数"，他们是决胜关键。</li>
+<li><strong>民兵（卢拉骂人的话）</strong>：在里约热内卢，"民兵"指由退役警察、黑帮组成的非法武装团伙，靠收保护费为生。卢拉骂对手是"民兵"，等于说他是黑社会。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：巴西大选进入"决赛圈"，两位候选人在电视上互撕两小时，谁能拿下 10 月 25 日的决选，将决定拉美是倒向美国还是继续靠近中国。</p>
+<div class="vocabbox"><p class="sec-label">📚 生词：</p><ul>
+<li class="vocab"><span class="vword">runoff</span> <span class="vmean">决选，第二轮投票</span><div class="vrow"><span class="vlabel">搭配</span>a presidential runoff（总统决选）</div><div class="vrow"><span class="vlabel">例句</span>The two candidates will face off in the runoff next Sunday.（两位候选人将在下周日的决选中对决。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Democracy is the worst form of government, except for all the others." —— Winston Churchill（民主是最坏的政体——除了其他所有试过的政体。）</div></li>
+<li class="vocab"><span class="vword">debate</span> <span class="vmean">辩论</span><div class="vrow"><span class="vlabel">搭配</span>hold a debate（举行辩论）</div><div class="vrow"><span class="vlabel">例句</span>The two candidates had a heated debate on TV.（两位候选人在电视上进行了一场激烈辩论。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Great minds discuss ideas; average minds discuss events; small minds discuss people." —— Eleanor Roosevelt（伟大的头脑讨论思想，平庸的头脑讨论事件，渺小的头脑讨论人。）</div></li>
+<li class="vocab"><span class="vword">allege</span> <span class="vmean">断言，宣称（未经证实）</span><div class="vrow"><span class="vlabel">搭配</span>allege ties to（声称与……有关联）</div><div class="vrow"><span class="vlabel">例句</span>He was alleged to have links to the gang.（据称他与该团伙有牵连。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"A lie can travel halfway around the world while the truth is putting on its shoes." —— Mark Twain（真相还在穿鞋时，谎言已跑遍半个世界。）</div></li>
+<li class="vocab"><span class="vword">dodge</span> <span class="vmean">回避，躲闪</span><div class="vrow"><span class="vlabel">搭配</span>dodge a question（回避问题）</div><div class="vrow"><span class="vlabel">例句</span>The minister dodged questions about the scandal.（部长回避了有关丑闻的提问。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Dodge this." —— Neo，《The Matrix》（躲开这个。）</div></li>
+<li class="vocab"><span class="vword">spar</span> <span class="vmean">争吵，交锋</span><div class="vrow"><span class="vlabel">搭配</span>spar over（为……争吵）</div><div class="vrow"><span class="vlabel">例句</span>The two leaders sparred over trade policy.（两位领导人就贸易政策唇枪舌剑。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Float like a butterfly, sting like a bee." —— Muhammad Ali（像蝴蝶一样飘，像蜜蜂一样蛰。）</div></li>
+<li class="vocab"><span class="vword">bitter</span> <span class="vmean">激烈的，苦涩的</span><div class="vrow"><span class="vlabel">搭配</span>a bitter rivalry（激烈竞争）</div><div class="vrow"><span class="vlabel">例句</span>The election turned into a bitter fight.（选举变成了一场激烈的缠斗。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The bitterest tears shed over graves are for words left unsaid and deeds left undone." —— Harriet Beecher Stowe（在墓前流下最苦涩的眼泪，是为了那些没说出口的话和没做完的事。）</div></li>
+<li class="vocab"><span class="vword">pivotal</span> <span class="vmean">关键的</span><div class="vrow"><span class="vlabel">搭配</span>a pivotal moment（关键时刻）</div><div class="vrow"><span class="vlabel">例句</span>This election is a pivotal moment for the country.（这次选举是该国的关键时刻。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The tipping point is that magic moment when an idea crosses a threshold." —— Malcolm Gladwell（引爆点就是那个神奇时刻——一个想法跨过了临界点。）</div></li>
+<li class="vocab"><span class="vword">inject</span> <span class="vmean">注入</span><div class="vrow"><span class="vlabel">搭配</span>inject new energy（注入新活力）</div><div class="vrow"><span class="vlabel">例句</span>The dispute injected new tension into the campaign.（这场争执给选战注入了新的紧张气氛。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Stay hungry, stay foolish." —— Steve Jobs（求知若饥，虚心若愚。）</div></li>
+<li class="vocab"><span class="vword">barb</span> <span class="vmean">讥讽的话</span><div class="vrow"><span class="vlabel">搭配</span>trade barbs（互相讥讽）</div><div class="vrow"><span class="vlabel">例句</span>The candidates traded barbs throughout the debate.（候选人在整个辩论中互相讥讽。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Sarcasm is the lowest form of wit." —— Oscar Wilde（讥讽是最低级的机智。）</div></li>
+</ul></div>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>Brazil's Bolsonaro, Lula face off in first debate as supporters fill streets —— <a href="https://www.reuters.com/world/americas/brazils-bolsonaro-lula-head-into-first-debate-week-before-vote-2026-10-18/">https://www.reuters.com/world/americas/brazils-bolsonaro-lula-head-into-first-debate-week-before-vote-2026-10-18/</a></li>
+<li>Lula and Bolsonaro spar in Brazil's fiery first presidential run-off debate —— <a href="https://www.aljazeera.com/news/2026/10/19/lula-and-bolsonaro-spar-in-brazils-fiery-first-presidential-run-off-debate">https://www.aljazeera.com/news/2026/10/19/lula-and-bolsonaro-spar-in-brazils-fiery-first-presidential-run-off-debate</a></li>
+</ul></div>
 <hr />
 <h2>四、个人成长 🌱</h2>
 <h3>1. 想改掉坏习惯？科学说：别死磕意志力</h3>
 <p>一篇今天刚发布的习惯养成科普文章讲透了核心：别死磕"意志力"，要设计"系统"——先找出习惯的触发线索（比如压力、无聊），然后"替换"而不是硬戒（同样线索、同样奖励，只换掉中间的动作）；更关键的一招是"身份认同法"：别说"我要每天跑步"，说"我是那种从不缺勤锻炼的人"，大脑会努力让行为和自我形象保持一致。文章还提了"关键习惯"（keystone habits）概念：运动、写日记、早起这类习惯会像多米诺骨牌一样，连带改善饮食、睡眠和效率。</p>
-<p>🔍 名词解释：<br />
-- <strong>关键习惯（keystone habits）</strong>：像拱门的拱心石，抽掉整个门就散架；指一个习惯养成了会带动一串好习惯，比如运动后自然想早睡、吃得健康。<br />
-- <strong>习惯回路</strong>：信号→惯例→奖励的三步循环。比如"无聊（信号）→刷手机（惯例）→打发时间（奖励）"。改习惯不用砍掉整条回路，换掉中间那一步就行。</p>
-<p>📌 一句话总结：想改掉坏习惯别靠意志力，换掉触发器、盯住"我是谁"，好习惯会自己带一串好习惯。</p>
-<p>📚 生词：<br />
-- <strong>congruent</strong> 一致的，相称的；搭配：congruent with（与……一致）；例：His actions are not congruent with his words.（他的行动和说辞并不一致。）💬 "To be congruent with who we are, we must be willing to be vulnerable." —— Brené Brown（要与真实的自己保持一致，我们必须愿意脆弱。）<br />
-- <strong>cue</strong> 提示，信号；搭配：cue sb to do sth（提示某人做某事）；例：Seeing her gym shoes by the door is a cue to work out.（门口看到运动鞋就是她去锻炼的提示信号。）💬 "Your body receives cues from your environment." —— James Clear（你的身体从环境中接收信号。）<br />
-- <strong>trigger</strong> 触发，诱发；搭配：trigger a habit（触发一个习惯）；例：Boredom often triggers the urge to snack.（无聊经常触发吃零食的冲动。）💬 "Triggers are the cues that start the chain of behavior." —— James Clear（触发器是启动行为链条的信号。）<br />
-- <strong>identity</strong> 身份，认同；搭配：identity-based habits（基于身份的习惯）；例：Identity change is the North Star of habit change.（身份转变是习惯改变的北极星。）💬 "Identity is destiny." —— Tony Robbins（身份决定命运。）<br />
-- <strong>loop</strong> 循环；搭配：habit loop（习惯回路）；例：The habit loop has three parts: cue, routine, reward.（习惯回路有三部分：信号、惯例、奖励。）💬 "We are what we repeatedly do." —— Aristotle（我们就是我们反复做的事。）<br />
-- <strong>compounding</strong> 复利式的累积；搭配：compounding effect（复利效应）；例：Tiny improvements compound into remarkable results.（微小的改进会复利成惊人的结果。）💬 "Success is the product of daily habits, not once-in-a-lifetime transformations." —— James Clear（成功是日常习惯的产物，而非一生一次的蜕变。）<br />
-- <strong>dopamine</strong> 多巴胺；搭配：dopamine hit（一剂多巴胺）；例：Every like on social media is a tiny dopamine hit.（社交媒体上的每个赞都是小剂量的多巴胺。）💬 "Dopamine is not the molecule of pleasure; it's the molecule of desire." —— Andrew Huberman（多巴胺不是快乐分子，而是渴望分子。）<br />
-- <strong>relapse</strong> 旧病复发，复犯；搭配：relapse into（复发）；例：A single miss is not a relapse; quitting is.（一次中断不是复发，放弃才是。）💬 "Recovery is not linear; relapse is part of the journey." —— 心理学谚语（康复不是直线，复发是旅程的一部分。）<br />
-- <strong>intrinsic</strong> 内在的；搭配：intrinsic motivation（内在动力）；例：Intrinsic motivation outlasts external pressure.（内在动力比外部压力更持久。）💬 "Intrinsic motivation is what makes people do things for the sheer joy of it." —— Daniel Pink（内在动力让人纯粹为快乐去做事。）<br />
-- <strong>friction</strong> 摩擦，阻力；搭配：reduce friction（减少阻力）；例：Remove the friction between you and the habit.（清除你和习惯之间的阻力。）💬 "You do not rise to the level of your goals; you fall to the level of your systems." —— James Clear（你不会升到目标的高度，只会落到系统的水平。）</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>关键习惯（keystone habits）</strong>：像拱门的拱心石，抽掉整个门就散架；指一个习惯养成了会带动一串好习惯，比如运动后自然想早睡、吃得健康。</li>
+<li><strong>习惯回路</strong>：信号→惯例→奖励的三步循环。比如"无聊（信号）→刷手机（惯例）→打发时间（奖励）"。改习惯不用砍掉整条回路，换掉中间那一步就行。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：想改掉坏习惯别靠意志力，换掉触发器、盯住"我是谁"，好习惯会自己带一串好习惯。</p>
+<div class="vocabbox"><p class="sec-label">📚 生词：</p><ul>
+<li class="vocab"><span class="vword">congruent</span> <span class="vmean">一致的，相称的</span><div class="vrow"><span class="vlabel">搭配</span>congruent with（与……一致）</div><div class="vrow"><span class="vlabel">例句</span>His actions are not congruent with his words.（他的行动和说辞并不一致。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"To be congruent with who we are, we must be willing to be vulnerable." —— Brené Brown（要与真实的自己保持一致，我们必须愿意脆弱。）</div></li>
+<li class="vocab"><span class="vword">cue</span> <span class="vmean">提示，信号</span><div class="vrow"><span class="vlabel">搭配</span>cue sb to do sth（提示某人做某事）</div><div class="vrow"><span class="vlabel">例句</span>Seeing her gym shoes by the door is a cue to work out.（门口看到运动鞋就是她去锻炼的提示信号。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Your body receives cues from your environment." —— James Clear（你的身体从环境中接收信号。）</div></li>
+<li class="vocab"><span class="vword">trigger</span> <span class="vmean">触发，诱发</span><div class="vrow"><span class="vlabel">搭配</span>trigger a habit（触发一个习惯）</div><div class="vrow"><span class="vlabel">例句</span>Boredom often triggers the urge to snack.（无聊经常触发吃零食的冲动。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Triggers are the cues that start the chain of behavior." —— James Clear（触发器是启动行为链条的信号。）</div></li>
+<li class="vocab"><span class="vword">identity</span> <span class="vmean">身份，认同</span><div class="vrow"><span class="vlabel">搭配</span>identity-based habits（基于身份的习惯）</div><div class="vrow"><span class="vlabel">例句</span>Identity change is the North Star of habit change.（身份转变是习惯改变的北极星。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Identity is destiny." —— Tony Robbins（身份决定命运。）</div></li>
+<li class="vocab"><span class="vword">loop</span> <span class="vmean">循环</span><div class="vrow"><span class="vlabel">搭配</span>habit loop（习惯回路）</div><div class="vrow"><span class="vlabel">例句</span>The habit loop has three parts: cue, routine, reward.（习惯回路有三部分：信号、惯例、奖励。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"We are what we repeatedly do." —— Aristotle（我们就是我们反复做的事。）</div></li>
+<li class="vocab"><span class="vword">compounding</span> <span class="vmean">复利式的累积</span><div class="vrow"><span class="vlabel">搭配</span>compounding effect（复利效应）</div><div class="vrow"><span class="vlabel">例句</span>Tiny improvements compound into remarkable results.（微小的改进会复利成惊人的结果。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Success is the product of daily habits, not once-in-a-lifetime transformations." —— James Clear（成功是日常习惯的产物，而非一生一次的蜕变。）</div></li>
+<li class="vocab"><span class="vword">dopamine</span> <span class="vmean">多巴胺</span><div class="vrow"><span class="vlabel">搭配</span>dopamine hit（一剂多巴胺）</div><div class="vrow"><span class="vlabel">例句</span>Every like on social media is a tiny dopamine hit.（社交媒体上的每个赞都是小剂量的多巴胺。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Dopamine is not the molecule of pleasure; it's the molecule of desire." —— Andrew Huberman（多巴胺不是快乐分子，而是渴望分子。）</div></li>
+<li class="vocab"><span class="vword">relapse</span> <span class="vmean">旧病复发，复犯</span><div class="vrow"><span class="vlabel">搭配</span>relapse into（复发）</div><div class="vrow"><span class="vlabel">例句</span>A single miss is not a relapse; quitting is.（一次中断不是复发，放弃才是。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Recovery is not linear; relapse is part of the journey." —— 心理学谚语（康复不是直线，复发是旅程的一部分。）</div></li>
+<li class="vocab"><span class="vword">intrinsic</span> <span class="vmean">内在的</span><div class="vrow"><span class="vlabel">搭配</span>intrinsic motivation（内在动力）</div><div class="vrow"><span class="vlabel">例句</span>Intrinsic motivation outlasts external pressure.（内在动力比外部压力更持久。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Intrinsic motivation is what makes people do things for the sheer joy of it." —— Daniel Pink（内在动力让人纯粹为快乐去做事。）</div></li>
+<li class="vocab"><span class="vword">friction</span> <span class="vmean">摩擦，阻力</span><div class="vrow"><span class="vlabel">搭配</span>reduce friction（减少阻力）</div><div class="vrow"><span class="vlabel">例句</span>Remove the friction between you and the habit.（清除你和习惯之间的阻力。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"You do not rise to the level of your goals; you fall to the level of your systems." —— James Clear（你不会升到目标的高度，只会落到系统的水平。）</div></li>
+</ul></div>
 <p>🔗 来源：<br />
 - The Science of Habit Formation: How to Break Bad Habits —— <a href="https://www.headpsy.com/article/the-science-of-habit-formation-how-to-break-bad-habits-and-build-good-ones">https://www.headpsy.com/article/the-science-of-habit-formation-how-to-break-bad-habits-and-build-good-ones</a></p>
 <h3>2. 前 Meta 高管：扎克伯格教他的效率课——"这是马拉松，不是冲刺"</h3>
 <p>前 Meta 欧洲区高管 Martin Ott（现任 Taxfix CEO）接受 Fortune 采访，回忆扎克伯格教他的效率课：一天时间就那么多，别想着把每个小时塞满；每天只问自己"今天我能做的一件最有影响力的事是什么"，集中精力干那一件。对开会也要挑剔——每次都问"这个会我非去不可吗"。他也承认 24/7 连轴转短期有效，但长期一定会把人烧光，领导者更要保护团队不被累垮。</p>
-<p>🔍 名词解释：<br />
-- <strong>burnout（职业倦怠）</strong>：像灯泡一直开着最后烧坏；不是累一天能恢复的那种，是长期超载后的身体和情绪双双罢工。<br />
-- <strong>marathon vs sprint（马拉松 vs 冲刺）</strong>：学习是长跑，拼命熬夜是短跑，用短跑姿势跑长跑，必崩。</p>
-<p>📌 一句话总结：别把每天塞满，每天只干好一件最有影响力的事，工作和生活是马拉松，熬夜冲刺跑不远。</p>
-<p>📚 生词：<br />
-- <strong>acknowledge</strong> 承认；搭配：acknowledge that（承认……）；例：He acknowledged that working longer doesn't mean working better.（他承认工作更久不等于干得更好。）💬 "We must acknowledge our limits before we can expand them." —— Jordan Peterson（我们必须先承认局限，才能超越它们。）<br />
-- <strong>indefinitely</strong> 无限期地，长久地；搭配：cannot sustain indefinitely（无法无限期维持）；例：No one can run at full speed indefinitely.（没人能无限期地全速奔跑。）💬 "You can fool all the people some of the time, but not indefinitely." —— Abraham Lincoln（你或许能骗所有人一时，但不能永远。）<br />
-- <strong>selective</strong> 有选择性的，挑剔的；搭配：be selective about（对……挑剔）；例：Be selective about the meetings you attend.（对参加的会议要挑剔。）💬 "Choose to be selective; your time is finite." —— Tim Ferriss（学会挑剔，因为你的时间是有限的。）<br />
-- <strong>impact</strong> 影响，冲击；搭配：have an impact on（对……有影响）；例：Focus on the task with the biggest impact today.（专注于今天最有影响力的事。）💬 "What you do has far greater impact than what you say." —— Stephen Covey（你的所作所为比你的言辞影响大得多。）<br />
-- <strong>takeaway</strong> 收获，要点；搭配：biggest takeaway（最大的收获）；例：My biggest takeaway: time is the only non-renewable resource.（我最大的收获：时间是唯一的不可再生资源。）💬 "The takeaway is simple: protect your energy." —— Cal Newport（要点很简单：保护你的精力。）<br />
-- <strong>burnout</strong> 职业倦怠；搭配：avoid burnout（避免倦怠）；例：Burnout is the result of unrelenting stress.（倦怠是无休无止的压力的结果。）💬 "Burnout is what happens when you try to avoid being human for too long." —— Michael Gungor（倦怠是当你太久试图不做"人"的结果。）<br />
-- <strong>marathon</strong> 马拉松；搭配：a marathon, not a sprint（马拉松，不是冲刺）；例：Career growth is a marathon, not a sprint.（职业成长是马拉松，不是冲刺。）💬 "Life is a marathon, not a sprint; pace yourself." —— 英语谚语（人生是马拉松，不是短跑；配好你的节奏。）<br />
-- <strong>sustainable</strong> 可持续的；搭配：sustainable routine（可持续的作息）；例：He built a sustainable morning routine.（他建立了可持续的晨间习惯。）💬 "The best plan is the one you can sustain." —— James Clear（最好的计划是你能长期坚持的那个。）<br />
-- <strong>delegate</strong> 授权，委派；搭配：delegate tasks（委派任务）；例：Learn to delegate the small stuff.（学会把小事交出去。）💬 "If you want to do a few small things right, do them yourself; if you want to do great things, learn to delegate." —— John C. Maxwell（想做好小事就自己干，想做大事就学会授权。）</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>burnout（职业倦怠）</strong>：像灯泡一直开着最后烧坏；不是累一天能恢复的那种，是长期超载后的身体和情绪双双罢工。</li>
+<li><strong>marathon vs sprint（马拉松 vs 冲刺）</strong>：学习是长跑，拼命熬夜是短跑，用短跑姿势跑长跑，必崩。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：别把每天塞满，每天只干好一件最有影响力的事，工作和生活是马拉松，熬夜冲刺跑不远。</p>
+<div class="vocabbox"><p class="sec-label">📚 生词：</p><ul>
+<li class="vocab"><span class="vword">acknowledge</span> <span class="vmean">承认</span><div class="vrow"><span class="vlabel">搭配</span>acknowledge that（承认……）</div><div class="vrow"><span class="vlabel">例句</span>He acknowledged that working longer doesn't mean working better.（他承认工作更久不等于干得更好。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"We must acknowledge our limits before we can expand them." —— Jordan Peterson（我们必须先承认局限，才能超越它们。）</div></li>
+<li class="vocab"><span class="vword">indefinitely</span> <span class="vmean">无限期地，长久地</span><div class="vrow"><span class="vlabel">搭配</span>cannot sustain indefinitely（无法无限期维持）</div><div class="vrow"><span class="vlabel">例句</span>No one can run at full speed indefinitely.（没人能无限期地全速奔跑。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"You can fool all the people some of the time, but not indefinitely." —— Abraham Lincoln（你或许能骗所有人一时，但不能永远。）</div></li>
+<li class="vocab"><span class="vword">selective</span> <span class="vmean">有选择性的，挑剔的</span><div class="vrow"><span class="vlabel">搭配</span>be selective about（对……挑剔）</div><div class="vrow"><span class="vlabel">例句</span>Be selective about the meetings you attend.（对参加的会议要挑剔。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Choose to be selective; your time is finite." —— Tim Ferriss（学会挑剔，因为你的时间是有限的。）</div></li>
+<li class="vocab"><span class="vword">impact</span> <span class="vmean">影响，冲击</span><div class="vrow"><span class="vlabel">搭配</span>have an impact on（对……有影响）</div><div class="vrow"><span class="vlabel">例句</span>Focus on the task with the biggest impact today.（专注于今天最有影响力的事。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"What you do has far greater impact than what you say." —— Stephen Covey（你的所作所为比你的言辞影响大得多。）</div></li>
+<li class="vocab"><span class="vword">takeaway</span> <span class="vmean">收获，要点</span><div class="vrow"><span class="vlabel">搭配</span>biggest takeaway（最大的收获）</div><div class="vrow"><span class="vlabel">例句</span>My biggest takeaway: time is the only non-renewable resource.（我最大的收获：时间是唯一的不可再生资源。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The takeaway is simple: protect your energy." —— Cal Newport（要点很简单：保护你的精力。）</div></li>
+<li class="vocab"><span class="vword">burnout</span> <span class="vmean">职业倦怠</span><div class="vrow"><span class="vlabel">搭配</span>avoid burnout（避免倦怠）</div><div class="vrow"><span class="vlabel">例句</span>Burnout is the result of unrelenting stress.（倦怠是无休无止的压力的结果。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Burnout is what happens when you try to avoid being human for too long." —— Michael Gungor（倦怠是当你太久试图不做"人"的结果。）</div></li>
+<li class="vocab"><span class="vword">marathon</span> <span class="vmean">马拉松</span><div class="vrow"><span class="vlabel">搭配</span>a marathon, not a sprint（马拉松，不是冲刺）</div><div class="vrow"><span class="vlabel">例句</span>Career growth is a marathon, not a sprint.（职业成长是马拉松，不是冲刺。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Life is a marathon, not a sprint; pace yourself." —— 英语谚语（人生是马拉松，不是短跑；配好你的节奏。）</div></li>
+<li class="vocab"><span class="vword">sustainable</span> <span class="vmean">可持续的</span><div class="vrow"><span class="vlabel">搭配</span>sustainable routine（可持续的作息）</div><div class="vrow"><span class="vlabel">例句</span>He built a sustainable morning routine.（他建立了可持续的晨间习惯。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The best plan is the one you can sustain." —— James Clear（最好的计划是你能长期坚持的那个。）</div></li>
+<li class="vocab"><span class="vword">delegate</span> <span class="vmean">授权，委派</span><div class="vrow"><span class="vlabel">搭配</span>delegate tasks（委派任务）</div><div class="vrow"><span class="vlabel">例句</span>Learn to delegate the small stuff.（学会把小事交出去。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"If you want to do a few small things right, do them yourself; if you want to do great things, learn to delegate." —— John C. Maxwell（想做好小事就自己干，想做大事就学会授权。）</div></li>
+</ul></div>
 <p>🔗 来源：<br />
 - Ex-Meta exec says Mark Zuckerberg taught him work-life balance —— <a href="https://indianexpress.com/article/trending/trending-globally/martin-ott-productivity-lesson-mark-zuckerberg-work-life-balance-10902612/">https://indianexpress.com/article/trending/trending-globally/martin-ott-productivity-lesson-mark-zuckerberg-work-life-balance-10902612/</a></p>
 <h3>3. "拖延二选一"：不想做的事，换个姿势拖</h3>
 <p>中文播客《閱讀前哨站》的瓦基在 10 月 13 日的视频里分享了一个用了很久的治拖延小技巧"拖延二選一"。他手头任务多（准备节目单、写大纲、规划产品），总有不想碰的那一件。办法：当不想做 A 时，不硬逼自己，而是把 B 和 C 两个备选任务摆出来，让自己"二选一"。人对"有得选"这件事天然更开心，于是表面上在拖 A，实际上整天都在产出，"动量"不断。这是一种"生产性拖延"——用有意义的事拖掉没动力的事。</p>
-<p>🔍 名词解释：<br />
-- <strong>momentum（动量/惯性）</strong>：像推雪球，滚起来以后自己会越滚越快；这里指"一直在做事"的顺手状态，一旦停下来再启动就难。<br />
-- <strong>productive procrastination（生产性拖延）</strong>：本来在拖 A，结果把 B 做了，也算没白拖。</p>
-<p>📌 一句话总结：不想做 A 就别硬刚，摆 B 和 C 让自己二选一，用"有得选"的快乐骗过拖延症。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>momentum（动量/惯性）</strong>：像推雪球，滚起来以后自己会越滚越快；这里指"一直在做事"的顺手状态，一旦停下来再启动就难。</li>
+<li><strong>productive procrastination（生产性拖延）</strong>：本来在拖 A，结果把 B 做了，也算没白拖。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：不想做 A 就别硬刚，摆 B 和 C 让自己二选一，用"有得选"的快乐骗过拖延症。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
 - 閱讀前哨站瓦基（Facebook Reel）—— <a href="https://www.facebook.com/reel/2164447597782015/">https://www.facebook.com/reel/2164447597782015/</a></p>
@@ -324,153 +392,168 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <h2>五、爱情/关系 💕</h2>
 <h3>1. 研究：你对"这段感情有未来"的信心，决定了你的安全感</h3>
 <p>phys.org 报道了发表在《BMC Psychology》上的一项新研究。研究比较了同性恋与异性恋男性的依恋不安水平，发现差别的真正关键不是"性取向"本身，而是"感知到的关系稳定性"——也就是你觉得这段感情能不能长久。越相信关系有未来，依恋焦虑和回避越低。研究者说，这对情感咨询很有意义：帮人安心，不能只教沟通技巧，还要解决"这段感情被家人、环境接纳和支持吗"这种更深的不安。</p>
-<p>🔍 名词解释：<br />
-- <strong>依恋焦虑（attachment anxiety）</strong>：像手机信号不好的人总盯着信号格；这类人总担心对方不爱了、要走了，需要反复确认。<br />
-- <strong>感知到的关系稳定性</strong>：不是客观上稳不稳，而是你"感觉"它稳不稳；感觉稳，人就松弛。</p>
-<p>📌 一句话总结：感情里的安全感，一半来自相处，一半来自"你相信它有未来"。</p>
-<p>📚 生词：<br />
-- <strong>insecure</strong> 不安的，没安全感的；搭配：feel insecure about（对……感到不安）；例：He felt insecure about where the relationship was heading.（他对这段感情的走向感到不安。）💬 "Insecurity kills more dreams than failure ever will." —— Suzy Kassem（不安扼杀的梦想比失败还多。）<br />
-- <strong>perceive</strong> 感知，察觉；搭配：perceive as（视为）；例：How you perceive stability shapes your attachment.（你如何感知稳定性，塑造你的依恋模式。）💬 "We don't see things as they are; we see them as we are." —— Anaïs Nin（我们看到的不是事物本身，而是我们自己。）<br />
-- <strong>mediator</strong> 中介因素；搭配：act as a mediator（起中介作用）；例：Stability acted as a mediator between identity and anxiety.（稳定性在身份与焦虑之间起了中介作用。）💬 "Context is the great mediator of meaning." —— 英语谚语（语境是意义的伟大中介。）<br />
-- <strong>vulnerability</strong> 脆弱，易受伤；搭配：relational vulnerability（关系中的脆弱）；例：Admitting vulnerability takes courage.（承认脆弱需要勇气。）💬 "Vulnerability is the birthplace of love and belonging." —— Brené Brown（脆弱是爱与归属的诞生地。）<br />
-- <strong>counseling</strong> 咨询，辅导；搭配：relationship counseling（情感咨询）；例：They sought counseling before things fell apart.（他们在事情崩坏前寻求了咨询。）💬 "The best counseling helps you hear what you already know." —— 英语谚语（最好的咨询是帮你听见自己早已知道的事。）<br />
-- <strong>stability</strong> 稳定性；搭配：relationship stability（关系稳定性）；例：Children thrive on stability.（孩子在稳定中茁壮成长。）💬 "Stability is not the absence of change, but the ability to navigate it." —— 英语谚语（稳定不是没有变化，而是驾驭变化的能力。）<br />
-- <strong>diverse</strong> 多样的；搭配：diverse identities（多样的身份）；例：The study included people with diverse sexual identities.（研究纳入了性取向多样的群体。）💬 "Diversity is being invited to the party; inclusion is being asked to dance." —— Vernā Myers（多样性是被邀请参加派对，包容是被邀请跳舞。）<br />
-- <strong>precarious</strong> 不稳定的，岌岌可危的；搭配：feel precarious（感到岌岌可危）；例：Without support, the relationship felt precarious.（没有支持，这段感情感觉岌岌可危。）💬 "The most precarious thing in life is trying to avoid risk." —— Helen Keller（人生最危险的事就是试图回避风险。）<br />
-- <strong>transparency</strong> 透明度；搭配：preregistered transparency（预注册透明度）；例：The study's transparency builds trust in its findings.（研究的透明度增强了人们对结论的信任。）💬 "Transparency is the new objectivity." —— David Weinberger（透明是新的客观。）</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>依恋焦虑（attachment anxiety）</strong>：像手机信号不好的人总盯着信号格；这类人总担心对方不爱了、要走了，需要反复确认。</li>
+<li><strong>感知到的关系稳定性</strong>：不是客观上稳不稳，而是你"感觉"它稳不稳；感觉稳，人就松弛。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：感情里的安全感，一半来自相处，一半来自"你相信它有未来"。</p>
+<div class="vocabbox"><p class="sec-label">📚 生词：</p><ul>
+<li class="vocab"><span class="vword">insecure</span> <span class="vmean">不安的，没安全感的</span><div class="vrow"><span class="vlabel">搭配</span>feel insecure about（对……感到不安）</div><div class="vrow"><span class="vlabel">例句</span>He felt insecure about where the relationship was heading.（他对这段感情的走向感到不安。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Insecurity kills more dreams than failure ever will." —— Suzy Kassem（不安扼杀的梦想比失败还多。）</div></li>
+<li class="vocab"><span class="vword">perceive</span> <span class="vmean">感知，察觉</span><div class="vrow"><span class="vlabel">搭配</span>perceive as（视为）</div><div class="vrow"><span class="vlabel">例句</span>How you perceive stability shapes your attachment.（你如何感知稳定性，塑造你的依恋模式。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"We don't see things as they are; we see them as we are." —— Anaïs Nin（我们看到的不是事物本身，而是我们自己。）</div></li>
+<li class="vocab"><span class="vword">mediator</span> <span class="vmean">中介因素</span><div class="vrow"><span class="vlabel">搭配</span>act as a mediator（起中介作用）</div><div class="vrow"><span class="vlabel">例句</span>Stability acted as a mediator between identity and anxiety.（稳定性在身份与焦虑之间起了中介作用。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Context is the great mediator of meaning." —— 英语谚语（语境是意义的伟大中介。）</div></li>
+<li class="vocab"><span class="vword">vulnerability</span> <span class="vmean">脆弱，易受伤</span><div class="vrow"><span class="vlabel">搭配</span>relational vulnerability（关系中的脆弱）</div><div class="vrow"><span class="vlabel">例句</span>Admitting vulnerability takes courage.（承认脆弱需要勇气。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Vulnerability is the birthplace of love and belonging." —— Brené Brown（脆弱是爱与归属的诞生地。）</div></li>
+<li class="vocab"><span class="vword">counseling</span> <span class="vmean">咨询，辅导</span><div class="vrow"><span class="vlabel">搭配</span>relationship counseling（情感咨询）</div><div class="vrow"><span class="vlabel">例句</span>They sought counseling before things fell apart.（他们在事情崩坏前寻求了咨询。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The best counseling helps you hear what you already know." —— 英语谚语（最好的咨询是帮你听见自己早已知道的事。）</div></li>
+<li class="vocab"><span class="vword">stability</span> <span class="vmean">稳定性</span><div class="vrow"><span class="vlabel">搭配</span>relationship stability（关系稳定性）</div><div class="vrow"><span class="vlabel">例句</span>Children thrive on stability.（孩子在稳定中茁壮成长。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Stability is not the absence of change, but the ability to navigate it." —— 英语谚语（稳定不是没有变化，而是驾驭变化的能力。）</div></li>
+<li class="vocab"><span class="vword">diverse</span> <span class="vmean">多样的</span><div class="vrow"><span class="vlabel">搭配</span>diverse identities（多样的身份）</div><div class="vrow"><span class="vlabel">例句</span>The study included people with diverse sexual identities.（研究纳入了性取向多样的群体。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Diversity is being invited to the party; inclusion is being asked to dance." —— Vernā Myers（多样性是被邀请参加派对，包容是被邀请跳舞。）</div></li>
+<li class="vocab"><span class="vword">precarious</span> <span class="vmean">不稳定的，岌岌可危的</span><div class="vrow"><span class="vlabel">搭配</span>feel precarious（感到岌岌可危）</div><div class="vrow"><span class="vlabel">例句</span>Without support, the relationship felt precarious.（没有支持，这段感情感觉岌岌可危。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The most precarious thing in life is trying to avoid risk." —— Helen Keller（人生最危险的事就是试图回避风险。）</div></li>
+<li class="vocab"><span class="vword">transparency</span> <span class="vmean">透明度</span><div class="vrow"><span class="vlabel">搭配</span>preregistered transparency（预注册透明度）</div><div class="vrow"><span class="vlabel">例句</span>The study's transparency builds trust in its findings.（研究的透明度增强了人们对结论的信任。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Transparency is the new objectivity." —— David Weinberger（透明是新的客观。）</div></li>
+</ul></div>
 <p>🔗 来源：<br />
 - Confidence in a relationship's future is linked to feelings of romantic security —— <a href="https://phys.org/news/2026-10-confidence-relationship-future-linked-romantic.html">https://phys.org/news/2026-10-confidence-relationship-future-linked-romantic.html</a></p>
 <h3>2. "烟花易逝，家才长久"：别把心跳加速当成真爱</h3>
 <p>情感作家 Christine Hassler 在 Instagram 发了 13 页长图文，讲她怎么选对了老公：和他在一起没有"烟花般"的刺激、没有上瘾般的痴迷，反而像"回家"——不用表演、不用过度思考、神经系统终于放松。她说过去那些让人心跳加速的关系都走向了死胡同，还打了个很妙的比方：烟花好看 20 分钟，之后你就站在黑暗里闻烟味。评论区几千人共鸣：很多人把焦虑误认成了心动。</p>
-<p>🔍 名词解释：<br />
-- <strong>过度警觉（hypervigilance）</strong>：像小动物在野外睡觉总竖着耳朵；指在感情里长期紧绷、随时扫描危险信号的状态，累且伤。<br />
-- <strong>神经系统的安全感</strong>：身体层面的放松，不是脑子说服自己"他很好"，而是跟他在一起肩膀真的能放下来。</p>
-<p>📌 一句话总结：让你心跳失速的可能是焦虑不是爱情，真正对的人让你像回家一样放松。</p>
-<p>📚 生词：<br />
-- <strong>fireworks</strong> 烟花（喻：短暂强烈的激情）；搭配：emotional fireworks（情感的烟花）；例：Fireworks look amazing for twenty minutes; then you're standing in the dark.（烟花好看二十分钟，之后你站在黑暗里。）💬 "Love is not fireworks; it's the steady flame that keeps you warm." —— 英语格言（爱不是烟花，而是让你取暖的长明火。）<br />
-- <strong>obsession</strong> 痴迷，执念；搭配：drug-like obsession（上瘾般的痴迷）；例：Mistaking obsession for love only leads to dead ends.（把痴迷误认为爱，只会走进死胡同。）💬 "Obsession is the single most wasteful human activity." —— Sadhguru（执念是人类最浪费精力的活动。）<br />
-- <strong>vulnerable</strong> 脆弱的，袒露的；搭配：be vulnerable with（向……袒露脆弱）；例：She could finally be vulnerable without fear.（她终于可以无惧地袒露脆弱。）💬 "Vulnerability sounds like truth and feels like courage." —— Brené Brown（脆弱听起来像真话，感觉起来像勇气。）<br />
-- <strong>hypervigilance</strong> 过度警觉；搭配：nervous hypervigilance（神经质的过度警觉）；例：Years of hypervigilance left her exhausted.（多年的过度警觉让她精疲力尽。）💬 "Hypervigilance is the body's way of saying it never felt safe." —— 创伤心理学格言（过度警觉是身体在说：它从未感到安全。）<br />
-- <strong>dead end</strong> 死胡同；搭配：lead to a dead end（通向死胡同）；例：Chasing intensity led only to dead ends.（追逐刺激只通向死胡同。）💬 "Sometimes a dead end is just a good place to turn around." —— 英语格言（有时死胡同只是个掉头的好地方。）<br />
-- <strong>resonate</strong> 引起共鸣；搭配：resonate with（与……共鸣）；例：Her story resonated with thousands of readers.（她的故事引起了数千读者的共鸣。）💬 "What resonates is what remains." —— 英语格言（能引起共鸣的，才会留下来。）<br />
-- <strong>chemistry</strong> 化学反应（喻：来电、火花）；搭配：intense chemistry（强烈的来电）；例：Chemistry without safety is just anxiety in disguise.（没有安全感的来电，只是伪装的焦虑。）💬 "Chemistry is the easy part; compatibility is the work." —— 现代情感格言（来电是容易的部分，相处才是功课。）<br />
-- <strong>reciprocal</strong> 相互的，对等的；搭配：reciprocal effort（对等的付出）；例：Healthy love is reciprocal, not one-sided.（健康的爱是相互的，不是单方面的。）💬 "Love is reciprocal the way a mirror is: it gives back what you bring." —— 英语格言（爱像镜子一样相互：你带来什么，它还你什么。）<br />
-- <strong>self-abandonment</strong> 自我抛弃；搭配：avoid self-abandonment（避免自我抛弃）；例：Don't abandon yourself to keep someone else.（别为了留住别人而抛弃自己。）💬 "You cannot pour from an empty cup; self-abandonment helps no one." —— 英语格言（空杯倒不出水；抛弃自己帮不了任何人。）<br />
-- <strong>intoxicating</strong> 令人沉醉的；搭配：intoxicating chemistry（令人沉醉的来电）；例：Intoxicating chemistry often masks red flags.（令人沉醉的来电常常掩盖危险信号。）💬 "The most intoxicating thing is not wine but being truly seen." —— 英语格言（最醉人的不是酒，而是被真正看见。）</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>过度警觉（hypervigilance）</strong>：像小动物在野外睡觉总竖着耳朵；指在感情里长期紧绷、随时扫描危险信号的状态，累且伤。</li>
+<li><strong>神经系统的安全感</strong>：身体层面的放松，不是脑子说服自己"他很好"，而是跟他在一起肩膀真的能放下来。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：让你心跳失速的可能是焦虑不是爱情，真正对的人让你像回家一样放松。</p>
+<div class="vocabbox"><p class="sec-label">📚 生词：</p><ul>
+<li class="vocab"><span class="vword">fireworks</span> <span class="vmean">烟花（喻：短暂强烈的激情）</span><div class="vrow"><span class="vlabel">搭配</span>emotional fireworks（情感的烟花）</div><div class="vrow"><span class="vlabel">例句</span>Fireworks look amazing for twenty minutes; then you're standing in the dark.（烟花好看二十分钟，之后你站在黑暗里。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Love is not fireworks; it's the steady flame that keeps you warm." —— 英语格言（爱不是烟花，而是让你取暖的长明火。）</div></li>
+<li class="vocab"><span class="vword">obsession</span> <span class="vmean">痴迷，执念</span><div class="vrow"><span class="vlabel">搭配</span>drug-like obsession（上瘾般的痴迷）</div><div class="vrow"><span class="vlabel">例句</span>Mistaking obsession for love only leads to dead ends.（把痴迷误认为爱，只会走进死胡同。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Obsession is the single most wasteful human activity." —— Sadhguru（执念是人类最浪费精力的活动。）</div></li>
+<li class="vocab"><span class="vword">vulnerable</span> <span class="vmean">脆弱的，袒露的</span><div class="vrow"><span class="vlabel">搭配</span>be vulnerable with（向……袒露脆弱）</div><div class="vrow"><span class="vlabel">例句</span>She could finally be vulnerable without fear.（她终于可以无惧地袒露脆弱。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Vulnerability sounds like truth and feels like courage." —— Brené Brown（脆弱听起来像真话，感觉起来像勇气。）</div></li>
+<li class="vocab"><span class="vword">hypervigilance</span> <span class="vmean">过度警觉</span><div class="vrow"><span class="vlabel">搭配</span>nervous hypervigilance（神经质的过度警觉）</div><div class="vrow"><span class="vlabel">例句</span>Years of hypervigilance left her exhausted.（多年的过度警觉让她精疲力尽。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Hypervigilance is the body's way of saying it never felt safe." —— 创伤心理学格言（过度警觉是身体在说：它从未感到安全。）</div></li>
+<li class="vocab"><span class="vword">dead end</span> <span class="vmean">死胡同</span><div class="vrow"><span class="vlabel">搭配</span>lead to a dead end（通向死胡同）</div><div class="vrow"><span class="vlabel">例句</span>Chasing intensity led only to dead ends.（追逐刺激只通向死胡同。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Sometimes a dead end is just a good place to turn around." —— 英语格言（有时死胡同只是个掉头的好地方。）</div></li>
+<li class="vocab"><span class="vword">resonate</span> <span class="vmean">引起共鸣</span><div class="vrow"><span class="vlabel">搭配</span>resonate with（与……共鸣）</div><div class="vrow"><span class="vlabel">例句</span>Her story resonated with thousands of readers.（她的故事引起了数千读者的共鸣。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"What resonates is what remains." —— 英语格言（能引起共鸣的，才会留下来。）</div></li>
+<li class="vocab"><span class="vword">chemistry</span> <span class="vmean">化学反应（喻：来电、火花）</span><div class="vrow"><span class="vlabel">搭配</span>intense chemistry（强烈的来电）</div><div class="vrow"><span class="vlabel">例句</span>Chemistry without safety is just anxiety in disguise.（没有安全感的来电，只是伪装的焦虑。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Chemistry is the easy part; compatibility is the work." —— 现代情感格言（来电是容易的部分，相处才是功课。）</div></li>
+<li class="vocab"><span class="vword">reciprocal</span> <span class="vmean">相互的，对等的</span><div class="vrow"><span class="vlabel">搭配</span>reciprocal effort（对等的付出）</div><div class="vrow"><span class="vlabel">例句</span>Healthy love is reciprocal, not one-sided.（健康的爱是相互的，不是单方面的。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Love is reciprocal the way a mirror is: it gives back what you bring." —— 英语格言（爱像镜子一样相互：你带来什么，它还你什么。）</div></li>
+<li class="vocab"><span class="vword">self-abandonment</span> <span class="vmean">自我抛弃</span><div class="vrow"><span class="vlabel">搭配</span>avoid self-abandonment（避免自我抛弃）</div><div class="vrow"><span class="vlabel">例句</span>Don't abandon yourself to keep someone else.（别为了留住别人而抛弃自己。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"You cannot pour from an empty cup; self-abandonment helps no one." —— 英语格言（空杯倒不出水；抛弃自己帮不了任何人。）</div></li>
+<li class="vocab"><span class="vword">intoxicating</span> <span class="vmean">令人沉醉的</span><div class="vrow"><span class="vlabel">搭配</span>intoxicating chemistry（令人沉醉的来电）</div><div class="vrow"><span class="vlabel">例句</span>Intoxicating chemistry often masks red flags.（令人沉醉的来电常常掩盖危险信号。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The most intoxicating thing is not wine but being truly seen." —— 英语格言（最醉人的不是酒，而是被真正看见。）</div></li>
+</ul></div>
 <p>🔗 来源：<br />
 - Christine Hassler（Instagram 轮播）—— <a href="https://www.instagram.com/p/DeUwKZPk75c/">https://www.instagram.com/p/DeUwKZPk75c/</a></p>
 <h3>3. 男生版焦虑型依恋自救：停止搞砸感情的 5 条</h3>
 <p>男性情感教练 Daniel Bak（23 万粉）在 Instagram 发了一条很火的视频（1.6 万赞），专门讲"焦虑型依恋的男生"常犯的 5 个自我破坏模式：嘴上说"我没事"心里翻江倒海；她一皱眉就觉得是自己的错、急着去哄；明明不同意也说好，怕被拒绝；想要安慰又觉得开口很丢人；不知道错哪也要先道歉。每条都给了"想-要-做"对照：比如你"想"不给她添麻烦，"需要"的其实是诚实说出感受，"要做"的是直接告诉她你怎么了，而不是替她做决定。评论区很多人说"像在说我"。</p>
-<p>🔍 名词解释：<br />
-- <strong>anxious attachment（焦虑型依恋）</strong>：像 WiFi 信号焦虑症，总怕断线；这类人在感情里需要反复确认"你还爱我吗"，对方稍冷淡就慌。<br />
-- <strong>self-sabotage（自我破坏/自我搞砸）</strong>：明明想好好谈，却总用查岗、冷战、过度道歉这些方式把感情推远，像自己拆自己的台。</p>
-<p>📌 一句话总结：焦虑型依恋不是"作"，是怕失去；把"我没事"换成"我需要你听我说"，感情才有救。</p>
-<p>📚 生词：<br />
-- <strong>sabotage</strong> 破坏，搞砸；搭配：sabotage a relationship（搞砸一段感情）；例：Anxiety can sabotage even a good relationship.（焦虑连一段好感情也能搞砸。）💬 "We are our own worst saboteurs." —— 英语格言（我们是自己最大的破坏者。）<br />
-- <strong>reassurance</strong> 安慰，保证；搭配：seek reassurance（寻求安慰）；例：He kept seeking reassurance instead of trusting her words.（他不停寻求安慰，而不去相信她的话。）💬 "Constant reassurance is a hungry ghost; it is never full." —— 心理学格言（无休止的寻求安慰像饿鬼，永远吃不饱。）<br />
-- <strong>resentment</strong> 怨恨；搭配：build resentment（堆积怨恨）；例：Saying yes when you mean no builds resentment.（口是心非会堆积怨恨。）💬 "Resentment is like drinking poison and hoping the other person dies." —— 圣奥古斯丁（怨恨像喝毒药却指望对方死。）<br />
-- <strong>burden</strong> 负担；搭配：feel like a burden（觉得自己是负担）；例：He stayed silent, afraid of being a burden.（他保持沉默，怕成为负担。）💬 "No one is a burden; we all just need different kinds of help." —— 英语格言（没人是负担，我们只是需要不同种类的帮助。）<br />
-- <strong>apologize</strong> 道歉；搭配：apologize without knowing why（不知错哪也道歉）；例：Don't apologize if you don't know what you're apologizing for.（不知道错在哪就别道歉。）💬 "An apology without change is manipulation." —— 英语格言（没有改变的道歉是操纵。）<br />
-- <strong>pathetic</strong> 可怜的，丢人的；搭配：feel pathetic（觉得丢人）；例：Asking for comfort doesn't make you pathetic.（开口要安慰并不丢人。）💬 "There is nothing pathetic about needing people." —— Brené Brown（需要别人一点也不可怜。）<br />
-- <strong>honest</strong> 诚实的；搭配：be honest about feelings（对感受诚实）；例：Tell her what's wrong instead of deciding for her.（直接告诉她你怎么了，别替她做决定。）💬 "Honesty is the first chapter in the book of wisdom." —— Thomas Jefferson（诚实是智慧之书的第一章。）<br />
-- <strong>regulate</strong> 调节；搭配：self-regulate（自我调节）；例：Ask once, then let her answer be enough; go regulate yourself.（问一次，她的回答就够了；然后去调节自己。）💬 "You can't calm the storm, but you can learn to regulate your sail." —— 英语格言（你平息不了风暴，但可以学会调帆。）<br />
-- <strong>assume</strong> 假定，想当然；搭配：assume the worst（往最坏处想）；例：Stop assuming it's your fault when she's upset.（她不开心时别想当然觉得是你的错。）💬 "Assumptions are the termites of relationships." —— Henry Winkler（想当然是感情里的白蚁。）<br />
-- <strong>accountability</strong> 负责，担当；搭配：take accountability（承担责任）；例：Your wounds deserve compassion; your actions require accountability.（你的伤值得被温柔对待，你的行为需要你负责。）💬 "Accountability is the glue that bonds commitment to results." —— Bob Proctor（担当是把承诺和结果粘在一起的胶水。）<br />
-- <strong>clingy</strong> 粘人的；搭配：labeled as clingy（被贴上粘人标签）；例：Wanting closeness doesn't make you clingy.（想要亲近不等于粘人。）💬 "There's a difference between clingy and connected." —— 情感格言（粘人和亲密是两回事。）</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>anxious attachment（焦虑型依恋）</strong>：像 WiFi 信号焦虑症，总怕断线；这类人在感情里需要反复确认"你还爱我吗"，对方稍冷淡就慌。</li>
+<li><strong>self-sabotage（自我破坏/自我搞砸）</strong>：明明想好好谈，却总用查岗、冷战、过度道歉这些方式把感情推远，像自己拆自己的台。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：焦虑型依恋不是"作"，是怕失去；把"我没事"换成"我需要你听我说"，感情才有救。</p>
+<div class="vocabbox"><p class="sec-label">📚 生词：</p><ul>
+<li class="vocab"><span class="vword">sabotage</span> <span class="vmean">破坏，搞砸</span><div class="vrow"><span class="vlabel">搭配</span>sabotage a relationship（搞砸一段感情）</div><div class="vrow"><span class="vlabel">例句</span>Anxiety can sabotage even a good relationship.（焦虑连一段好感情也能搞砸。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"We are our own worst saboteurs." —— 英语格言（我们是自己最大的破坏者。）</div></li>
+<li class="vocab"><span class="vword">reassurance</span> <span class="vmean">安慰，保证</span><div class="vrow"><span class="vlabel">搭配</span>seek reassurance（寻求安慰）</div><div class="vrow"><span class="vlabel">例句</span>He kept seeking reassurance instead of trusting her words.（他不停寻求安慰，而不去相信她的话。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Constant reassurance is a hungry ghost; it is never full." —— 心理学格言（无休止的寻求安慰像饿鬼，永远吃不饱。）</div></li>
+<li class="vocab"><span class="vword">resentment</span> <span class="vmean">怨恨</span><div class="vrow"><span class="vlabel">搭配</span>build resentment（堆积怨恨）</div><div class="vrow"><span class="vlabel">例句</span>Saying yes when you mean no builds resentment.（口是心非会堆积怨恨。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Resentment is like drinking poison and hoping the other person dies." —— 圣奥古斯丁（怨恨像喝毒药却指望对方死。）</div></li>
+<li class="vocab"><span class="vword">burden</span> <span class="vmean">负担</span><div class="vrow"><span class="vlabel">搭配</span>feel like a burden（觉得自己是负担）</div><div class="vrow"><span class="vlabel">例句</span>He stayed silent, afraid of being a burden.（他保持沉默，怕成为负担。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"No one is a burden; we all just need different kinds of help." —— 英语格言（没人是负担，我们只是需要不同种类的帮助。）</div></li>
+<li class="vocab"><span class="vword">apologize</span> <span class="vmean">道歉</span><div class="vrow"><span class="vlabel">搭配</span>apologize without knowing why（不知错哪也道歉）</div><div class="vrow"><span class="vlabel">例句</span>Don't apologize if you don't know what you're apologizing for.（不知道错在哪就别道歉。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"An apology without change is manipulation." —— 英语格言（没有改变的道歉是操纵。）</div></li>
+<li class="vocab"><span class="vword">pathetic</span> <span class="vmean">可怜的，丢人的</span><div class="vrow"><span class="vlabel">搭配</span>feel pathetic（觉得丢人）</div><div class="vrow"><span class="vlabel">例句</span>Asking for comfort doesn't make you pathetic.（开口要安慰并不丢人。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"There is nothing pathetic about needing people." —— Brené Brown（需要别人一点也不可怜。）</div></li>
+<li class="vocab"><span class="vword">honest</span> <span class="vmean">诚实的</span><div class="vrow"><span class="vlabel">搭配</span>be honest about feelings（对感受诚实）</div><div class="vrow"><span class="vlabel">例句</span>Tell her what's wrong instead of deciding for her.（直接告诉她你怎么了，别替她做决定。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Honesty is the first chapter in the book of wisdom." —— Thomas Jefferson（诚实是智慧之书的第一章。）</div></li>
+<li class="vocab"><span class="vword">regulate</span> <span class="vmean">调节</span><div class="vrow"><span class="vlabel">搭配</span>self-regulate（自我调节）</div><div class="vrow"><span class="vlabel">例句</span>Ask once, then let her answer be enough; go regulate yourself.（问一次，她的回答就够了；然后去调节自己。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"You can't calm the storm, but you can learn to regulate your sail." —— 英语格言（你平息不了风暴，但可以学会调帆。）</div></li>
+<li class="vocab"><span class="vword">assume</span> <span class="vmean">假定，想当然</span><div class="vrow"><span class="vlabel">搭配</span>assume the worst（往最坏处想）</div><div class="vrow"><span class="vlabel">例句</span>Stop assuming it's your fault when she's upset.（她不开心时别想当然觉得是你的错。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Assumptions are the termites of relationships." —— Henry Winkler（想当然是感情里的白蚁。）</div></li>
+<li class="vocab"><span class="vword">accountability</span> <span class="vmean">负责，担当</span><div class="vrow"><span class="vlabel">搭配</span>take accountability（承担责任）</div><div class="vrow"><span class="vlabel">例句</span>Your wounds deserve compassion; your actions require accountability.（你的伤值得被温柔对待，你的行为需要你负责。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Accountability is the glue that bonds commitment to results." —— Bob Proctor（担当是把承诺和结果粘在一起的胶水。）</div></li>
+<li class="vocab"><span class="vword">clingy</span> <span class="vmean">粘人的</span><div class="vrow"><span class="vlabel">搭配</span>labeled as clingy（被贴上粘人标签）</div><div class="vrow"><span class="vlabel">例句</span>Wanting closeness doesn't make you clingy.（想要亲近不等于粘人。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"There's a difference between clingy and connected." —— 情感格言（粘人和亲密是两回事。）</div></li>
+</ul></div>
 <p>🔗 来源：<br />
 - Daniel Bak | Men's Coach（Instagram Reel）—— <a href="https://www.instagram.com/reel/DeiLPLINEkn/">https://www.instagram.com/reel/DeiLPLINEkn/</a></p>
 <hr />
 <h2>六、绿色低碳能源 🌿</h2>
 <h3>1. 广东立规矩：新能源"自发自用"，也要公平分摊电网成本</h3>
 <p>10 月 15 日，广东省发改委、省能源局发布《关于明确我省新能源就近消纳价格政策有关事项的通知》（10 月 19 日见报）。核心是"谁受益、谁负担"：绿电直连、源网荷储一体化、零碳园区这类"就近消纳"项目，要公平承担输配电费、系统运行费；项目新能源年自发自用电量须不低于总发电量的 60%、不低于总用电量的 30%（2030 年起新增项目 35%）。这是全国首批给"发的电在厂区/园区里直接用掉"这种模式立收费规矩的省级政策，结束了灰色地带；广东是新能源大省，做法很可能被其他省份抄作业。</p>
-<p>🔍 名词解释：<br />
-- <strong>就近消纳</strong>：自己厂区/屋顶发的电就地用掉，不走远距离电网运输，就像小区里自己种菜自己吃。<br />
-- <strong>输配电费</strong>：用公共电网的"过路费"，哪怕你主要用自家电，只要电网给你"兜底"（没太阳时照样供电），就得交。<br />
-- <strong>两部制电价</strong>：电费分两笔，一笔按你家电表的最大用电功率交（像手机套餐的月租），一笔按实际用了多少度交（像流量费）。</p>
-<p>📌 一句话总结：广东给新能源"自发自用"立了收费规矩：用电网兜底，就得公平分摊成本。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>就近消纳</strong>：自己厂区/屋顶发的电就地用掉，不走远距离电网运输，就像小区里自己种菜自己吃。</li>
+<li><strong>输配电费</strong>：用公共电网的"过路费"，哪怕你主要用自家电，只要电网给你"兜底"（没太阳时照样供电），就得交。</li>
+<li><strong>两部制电价</strong>：电费分两笔，一笔按你家电表的最大用电功率交（像手机套餐的月租），一笔按实际用了多少度交（像流量费）。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：广东给新能源"自发自用"立了收费规矩：用电网兜底，就得公平分摊成本。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
 - 广东发布新能源就近消纳价格政策 —— <a href="https://finance.sina.com.cn/jjxw/2026-10-19/doc-inivtpwr7607061.shtml">https://finance.sina.com.cn/jjxw/2026-10-19/doc-inivtpwr7607061.shtml</a></p>
 <h3>2. 新能源车出口退税下调：57 万辆出口之后，出海规则变了</h3>
 <p>财政部、税务总局 10 月 12 日发布公告：自 2027 年 4 月 1 日起，新能源汽车增值税出口退税率从 13% 下调至 9%，覆盖 67 类产品。背景数字：9 月新能源乘用车出口 55.8 万辆，同比增长超 1.6 倍；同一周还落地两件事——中欧确认继续推进电动车价格承诺、全球电池联盟（GBA）电池护照进入倒计时。退税降 4 个点，一辆离岸价 2 万美元的车利润直接少约 800 美元；政策生效时点（2027 年 4 月）恰好撞上比亚迪匈牙利工厂、奇瑞西班牙工厂投产，等于明示车企：靠国内生产、整车出口的红利期收尾了，下一步要去海外本地化制造。</p>
-<p>🔍 名词解释：<br />
-- <strong>出口退税</strong>：国家把你在国内生产时交的增值税退一部分，鼓励出口，相当于"出海补贴红包"，红包变小了利润就变薄。<br />
-- <strong>价格承诺</strong>：中欧商定中国电动车在欧洲设"最低进口价"（地板价），不许靠低价倾销抢市场。<br />
-- <strong>电池护照</strong>：每块电池的"身份证+体检报告"，记录碳足迹和原材料来源，欧盟以后强制查验，没有就进不了欧洲市场。</p>
-<p>📌 一句话总结：57 万辆出口创纪录的同时，三重政策悄悄改写了中国电池出海的路线图：从"中国制造、全球卖车"转向"海外建厂、本地生产"。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>出口退税</strong>：国家把你在国内生产时交的增值税退一部分，鼓励出口，相当于"出海补贴红包"，红包变小了利润就变薄。</li>
+<li><strong>价格承诺</strong>：中欧商定中国电动车在欧洲设"最低进口价"（地板价），不许靠低价倾销抢市场。</li>
+<li><strong>电池护照</strong>：每块电池的"身份证+体检报告"，记录碳足迹和原材料来源，欧盟以后强制查验，没有就进不了欧洲市场。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：57 万辆出口创纪录的同时，三重政策悄悄改写了中国电池出海的路线图：从"中国制造、全球卖车"转向"海外建厂、本地生产"。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
 - 57万辆出口之后，三重政策正在改写中国电池出海路线图 —— <a href="https://www.eefocus.com/article/2103873.html">https://www.eefocus.com/article/2103873.html</a></p>
 <h3>3. 9 月储能装机重回增长，全固态电池 GWh 级产线投产</h3>
 <p>10 月 19 日机构报告：9 月储能装机同环比正增长，前三季度储能装机已追平去年全年；巨湾技研 GWh 级全固态电池产线投产；三星 SDI 签署全固态电池新合作、冲刺 2027 年量产；中科海钠与武汉江夏签约建设 10GWh 钠离子电池生产线；11 家锂电公司三季度业绩预告全部预增或预盈。全固态电池是下一代电池技术的"圣杯"，GWh 级产线投产意味着它从实验室走向了量产线；钠离子电池用盐里的钠代替锂，是锂电池的"平替"，原材料便宜量大。</p>
-<p>🔍 名词解释：<br />
-- <strong>全固态电池</strong>：把电池里的液体电解质换成固体，像把"水床"换成"木板床"，更安全、存电更多，但工艺极难。<br />
-- <strong>GWh</strong>：电池容量单位，1GWh 的电池大约够装 2 万辆电动车。<br />
-- <strong>钠离子电池</strong>：用食盐里的钠代替锂做电池，像用"粗粮"代替"细粮"，便宜但目前存电少一点。</p>
-<p>📌 一句话总结：储能装机回暖，固态电池和钠电池两条新赛道同时加速：电池行业的下一场革命正在量产线上排队。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>全固态电池</strong>：把电池里的液体电解质换成固体，像把"水床"换成"木板床"，更安全、存电更多，但工艺极难。</li>
+<li><strong>GWh</strong>：电池容量单位，1GWh 的电池大约够装 2 万辆电动车。</li>
+<li><strong>钠离子电池</strong>：用食盐里的钠代替锂做电池，像用"粗粮"代替"细粮"，便宜但目前存电少一点。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：储能装机回暖，固态电池和钠电池两条新赛道同时加速：电池行业的下一场革命正在量产线上排队。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
 - 机构：新能源汽车退税政策落地，9月储能装机同环比正增长 —— <a href="https://news.qq.com/rain/a/20261019A0CGVL00">https://news.qq.com/rain/a/20261019A0CGVL00</a></p>
 <h3>4. 南澳官宣近 13GW 风光大开发：钢铁城要变绿能城</h3>
 <p>2026 年 10 月 19 日，南澳大利亚州能源矿业部宣布：四家开发商获得 Whyalla West 释放区（3300 多平方公里牧区土地）可行性许可证的独家申请权，四个方案合计约 12.65GW——Windlab 的 6GW 风光混合项目、Altra Energy 的 4.7GW 风光项目、Heron Energy 的 1.6GW 风电项目、Neoen 的 350MW 光伏项目。这是该州《2023 年氢能与可再生能源法》下土地招标的首个成果。近 13GW 约等于半个三峡电站的装机规模，是澳大利亚近年最大的可再生能源土地释放之一；Whyalla 是传统钢铁工业城市，这次转型是"钢铁城变绿氢/绿钢城"的前哨战。</p>
-<p>🔍 名词解释：<br />
-- <strong>GW（吉瓦）</strong>：功率单位，1GW=100 万千瓦，大约够 100 万户家庭同时开空调。<br />
-- <strong>可行性许可证</strong>：政府先给你"考察权"，你去测风、做环评，合格了才能正式开工，像买房前的"看房期"。<br />
-- <strong>风光混合</strong>：风电和光伏建在一起，风和太阳"错峰上班"，发电更稳定。</p>
-<p>📌 一句话总结：南澳把一片比上海市还大的牧区划给风光发电：传统钢铁城 Whyalla 要变成绿色能源新城。</p>
-<p>📚 生词：<br />
-- <strong>capacity</strong> 产能，容量；搭配：installed capacity（装机容量）；例：The four proposals total almost 13 GW of capacity.（四个方案合计产能近 13GW。）💬 "The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice." —— Brian Herbert（学习的能力是天赋，学习的本事是技能，学习的意愿是选择。）<br />
-- <strong>investment</strong> 投资；搭配：attract investment（吸引投资）；例：The state hopes the release will attract new investment.（该州希望这次土地释放能吸引新投资。）💬 "An investment in knowledge pays the best interest." —— Benjamin Franklin（对知识的投资回报最高。）<br />
-- <strong>decision</strong> 决定；搭配：make a decision（做决定）；例：The selection decision was announced on 19 October.（入选决定于 10 月 19 日公布。）💬 "In any moment of decision, the best thing you can do is the right thing." —— Theodore Roosevelt（在需要决断的时刻，最好的事就是做正确的事。）<br />
-- <strong>scheme</strong> 方案，计划；搭配：a wind-and-solar scheme（风光方案）；例：Altra Energy proposed a 4.7 GW wind-and-solar scheme.（Altra Energy 提出了一个 4.7GW 的风光方案。）💬 "The best-laid schemes of mice and men go often awry." —— Robert Burns（人和老鼠最周密的计划也常常落空。）<br />
-- <strong>act</strong> 法案，行动；搭配：pass an act（通过法案）；例：The tender was opened under the Hydrogen and Renewable Energy Act 2023.（这次招标依据的是《2023 年氢能与可再生能源法》。）💬 "Act as if what you do makes a difference. It does." —— William James（把每件事都当作能带来改变来做，因为它真的会。）<br />
-- <strong>right</strong> 权利；搭配：exclusive right（独家权利）；例：Four developers won the exclusive right to apply for licences.（四家开发商获得了申请许可证的独家权利。）💬 "Do the right thing." —— Spike Lee（做正确的事。）<br />
-- <strong>power</strong> 电力，能量；搭配：peak power（峰值电力）；例：The projects will supply clean power during peak hours.（这些项目将在用电高峰供应清洁电力。）💬 "Knowledge is power." —— Francis Bacon（知识就是力量。）<br />
-- <strong>legacy</strong> 传承，遗产；搭配：industrial legacy（工业遗产）；例：Whyalla wants to turn its steel legacy into green energy.（Whyalla 想把它的钢铁遗产变成绿色能源。）💬 "What is a legacy? It's planting seeds in a garden you never get to see." —— 《Hamilton》（何为传承？是在你永远看不到的花园里播下种子。）<br />
-- <strong>generation</strong> 一代人；搭配：younger generation（年轻一代）；例：The project will power generations to come.（这个项目将为子孙后代供电。）💬 "Each generation imagines itself to be more intelligent than the one that went before it, and wiser than the one that comes after it." —— George Orwell（每一代人都觉得自己比上一代更聪明、比下一代更有智慧。）<br />
-- <strong>wind</strong> 风；搭配：wind power（风电）；例：Heron Energy is pursuing a 1.6 GW wind project.（Heron Energy 在推进一个 1.6GW 的风电项目。）💬 "Who has seen the wind? Neither I nor you." —— Christina Rossetti（谁见过风？你我都不曾见过。）</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>GW（吉瓦）</strong>：功率单位，1GW=100 万千瓦，大约够 100 万户家庭同时开空调。</li>
+<li><strong>可行性许可证</strong>：政府先给你"考察权"，你去测风、做环评，合格了才能正式开工，像买房前的"看房期"。</li>
+<li><strong>风光混合</strong>：风电和光伏建在一起，风和太阳"错峰上班"，发电更稳定。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：南澳把一片比上海市还大的牧区划给风光发电：传统钢铁城 Whyalla 要变成绿色能源新城。</p>
+<div class="vocabbox"><p class="sec-label">📚 生词：</p><ul>
+<li class="vocab"><span class="vword">capacity</span> <span class="vmean">产能，容量</span><div class="vrow"><span class="vlabel">搭配</span>installed capacity（装机容量）</div><div class="vrow"><span class="vlabel">例句</span>The four proposals total almost 13 GW of capacity.（四个方案合计产能近 13GW。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice." —— Brian Herbert（学习的能力是天赋，学习的本事是技能，学习的意愿是选择。）</div></li>
+<li class="vocab"><span class="vword">investment</span> <span class="vmean">投资</span><div class="vrow"><span class="vlabel">搭配</span>attract investment（吸引投资）</div><div class="vrow"><span class="vlabel">例句</span>The state hopes the release will attract new investment.（该州希望这次土地释放能吸引新投资。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"An investment in knowledge pays the best interest." —— Benjamin Franklin（对知识的投资回报最高。）</div></li>
+<li class="vocab"><span class="vword">decision</span> <span class="vmean">决定</span><div class="vrow"><span class="vlabel">搭配</span>make a decision（做决定）</div><div class="vrow"><span class="vlabel">例句</span>The selection decision was announced on 19 October.（入选决定于 10 月 19 日公布。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"In any moment of decision, the best thing you can do is the right thing." —— Theodore Roosevelt（在需要决断的时刻，最好的事就是做正确的事。）</div></li>
+<li class="vocab"><span class="vword">scheme</span> <span class="vmean">方案，计划</span><div class="vrow"><span class="vlabel">搭配</span>a wind-and-solar scheme（风光方案）</div><div class="vrow"><span class="vlabel">例句</span>Altra Energy proposed a 4.7 GW wind-and-solar scheme.（Altra Energy 提出了一个 4.7GW 的风光方案。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"The best-laid schemes of mice and men go often awry." —— Robert Burns（人和老鼠最周密的计划也常常落空。）</div></li>
+<li class="vocab"><span class="vword">act</span> <span class="vmean">法案，行动</span><div class="vrow"><span class="vlabel">搭配</span>pass an act（通过法案）</div><div class="vrow"><span class="vlabel">例句</span>The tender was opened under the Hydrogen and Renewable Energy Act 2023.（这次招标依据的是《2023 年氢能与可再生能源法》。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Act as if what you do makes a difference. It does." —— William James（把每件事都当作能带来改变来做，因为它真的会。）</div></li>
+<li class="vocab"><span class="vword">right</span> <span class="vmean">权利</span><div class="vrow"><span class="vlabel">搭配</span>exclusive right（独家权利）</div><div class="vrow"><span class="vlabel">例句</span>Four developers won the exclusive right to apply for licences.（四家开发商获得了申请许可证的独家权利。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Do the right thing." —— Spike Lee（做正确的事。）</div></li>
+<li class="vocab"><span class="vword">power</span> <span class="vmean">电力，能量</span><div class="vrow"><span class="vlabel">搭配</span>peak power（峰值电力）</div><div class="vrow"><span class="vlabel">例句</span>The projects will supply clean power during peak hours.（这些项目将在用电高峰供应清洁电力。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Knowledge is power." —— Francis Bacon（知识就是力量。）</div></li>
+<li class="vocab"><span class="vword">legacy</span> <span class="vmean">传承，遗产</span><div class="vrow"><span class="vlabel">搭配</span>industrial legacy（工业遗产）</div><div class="vrow"><span class="vlabel">例句</span>Whyalla wants to turn its steel legacy into green energy.（Whyalla 想把它的钢铁遗产变成绿色能源。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"What is a legacy? It's planting seeds in a garden you never get to see." —— 《Hamilton》（何为传承？是在你永远看不到的花园里播下种子。）</div></li>
+<li class="vocab"><span class="vword">generation</span> <span class="vmean">一代人</span><div class="vrow"><span class="vlabel">搭配</span>younger generation（年轻一代）</div><div class="vrow"><span class="vlabel">例句</span>The project will power generations to come.（这个项目将为子孙后代供电。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Each generation imagines itself to be more intelligent than the one that went before it, and wiser than the one that comes after it." —— George Orwell（每一代人都觉得自己比上一代更聪明、比下一代更有智慧。）</div></li>
+<li class="vocab"><span class="vword">wind</span> <span class="vmean">风</span><div class="vrow"><span class="vlabel">搭配</span>wind power（风电）</div><div class="vrow"><span class="vlabel">例句</span>Heron Energy is pursuing a 1.6 GW wind project.（Heron Energy 在推进一个 1.6GW 的风电项目。）</div><div class="vrow vquote"><span class="vlabel">名句</span>"Who has seen the wind? Neither I nor you." —— Christina Rossetti（谁见过风？你我都不曾见过。）</div></li>
+</ul></div>
 <p>🔗 来源：<br />
 - South Australia Selects Four Developers to Advance Almost 13 GW of Wind and Solar at Whyalla —— <a href="https://thedailyenergy.com/south-australia-whyalla-west-renewable-developers/">https://thedailyenergy.com/south-australia-whyalla-west-renewable-developers/</a></p>
 <hr />
 <h2>七、国内要闻 🇨🇳</h2>
 <h3>1. 前三季度 GDP 同比增长 4.6%，三季度 4.5%：出口强劲托底，内需仍是短板</h3>
 <p>国家统计局 10 月 19 日发布数据：初步核算，前三季度我国 GDP 为 1071071 亿元，按不变价格计算同比增长 4.6%。分季度看，一季度 5.0%、二季度 4.3%、三季度 4.5%，三季度增速回升，落在全年 4.5%–5% 的目标区间内。前三季度货物进出口总额同比增长 18.8%；9 月社会消费品零售总额仅增 1.1%，固定资产投资下降 7.2%，城镇调查失业率平均 5.2%。国家统计局副局长毛盛勇坦言"国内需求不足问题仍较突出"。</p>
-<p>🔍 名词解释：<br />
-- <strong>GDP</strong>：一个国家所有人一季度（或一年）干活创造的财富总值。就像一家便利店一季度总共卖了多少钱——卖得越多，说明生意越好。<br />
-- <strong>同比增长</strong>：和去年同一个季度比。好比今年三季度你家便利店卖了 105 万，去年三季度卖了 100 万，同比增长就是 5%。<br />
-- <strong>不变价格</strong>：剔除涨价因素后的真实比较。就像两家店比营业额，一家靠涨价、一家靠多卖货，"不变价格"就是把涨价的水分挤掉，只看真正多卖了多少。<br />
-- <strong>CPI（居民消费价格指数）</strong>：老百姓"菜篮子"价格指数。菜市场一篮子菜今年比去年贵了多少，CPI 就涨多少——前三季度涨了 0.9%，属于温和上涨。</p>
-<p>📌 一句话总结：三季度经济靠出口"单腿"站稳了 4.5%，但老百姓敢不敢花钱、企业敢不敢投资，才是年底真正的考题。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>GDP</strong>：一个国家所有人一季度（或一年）干活创造的财富总值。就像一家便利店一季度总共卖了多少钱——卖得越多，说明生意越好。</li>
+<li><strong>同比增长</strong>：和去年同一个季度比。好比今年三季度你家便利店卖了 105 万，去年三季度卖了 100 万，同比增长就是 5%。</li>
+<li><strong>不变价格</strong>：剔除涨价因素后的真实比较。就像两家店比营业额，一家靠涨价、一家靠多卖货，"不变价格"就是把涨价的水分挤掉，只看真正多卖了多少。</li>
+<li><strong>CPI（居民消费价格指数）</strong>：老百姓"菜篮子"价格指数。菜市场一篮子菜今年比去年贵了多少，CPI 就涨多少——前三季度涨了 0.9%，属于温和上涨。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：三季度经济靠出口"单腿"站稳了 4.5%，但老百姓敢不敢花钱、企业敢不敢投资，才是年底真正的考题。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
 - 新华社《前三季度我国GDP同比增长4.6%》—— <a href="https://news.ifeng.com/c/8xLewQrPtIF">https://news.ifeng.com/c/8xLewQrPtIF</a></p>
 <h3>2. 16 部门联合部署：11 月开展全国"优化消费环境月"，失能老人将领养老服务消费补贴</h3>
 <p>记者 10 月 19 日从国家市场监督管理总局获悉，市场监管总局、工信部等 16 个部门联合部署 2026 年全国"优化消费环境月"活动，11 月开展，主题是"放心消费 你我共享"。活动聚焦五件事：引导商家落实主体责任、解读便民惠企举措、普及维权法律知识、宣传典型案例、以案释法。期间将开展 30 余项主题活动，包括向中度以上失能老年人发放养老服务消费补贴、一体化电视和插入式微型机顶盒推广行动等。</p>
-<p>🔍 名词解释：<br />
-- <strong>养老服务消费补贴</strong>：政府给失能老人发的"养老专用红包"，只能用来买养老服务（比如上门护理）。就像商场发的"只能买生鲜"的优惠券，专款专用。<br />
-- <strong>插入式微型机顶盒</strong>：插在老电视上的一个小盒子，让旧电视也能看高清节目。好比给旧手机配个转接头，不用换电视就能升级——这次活动要推广它，就是想解决"看电视套路多"的问题。<br />
-- <strong>以案释法</strong>：不讲大道理，直接拿真实案例讲"这事为啥违法"。就像老师不念课本，而是放一段"反诈实拍"给你看。</p>
-<p>📌 一句话总结：国家组了个 16 部门的"消费天团"，11 月专治各种买东西的糟心事，还给失能老人发养老消费券。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>养老服务消费补贴</strong>：政府给失能老人发的"养老专用红包"，只能用来买养老服务（比如上门护理）。就像商场发的"只能买生鲜"的优惠券，专款专用。</li>
+<li><strong>插入式微型机顶盒</strong>：插在老电视上的一个小盒子，让旧电视也能看高清节目。好比给旧手机配个转接头，不用换电视就能升级——这次活动要推广它，就是想解决"看电视套路多"的问题。</li>
+<li><strong>以案释法</strong>：不讲大道理，直接拿真实案例讲"这事为啥违法"。就像老师不念课本，而是放一段"反诈实拍"给你看。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：国家组了个 16 部门的"消费天团"，11 月专治各种买东西的糟心事，还给失能老人发养老消费券。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
 - 新华社《16部门部署2026年全国"优化消费环境月"活动》—— <a href="https://www.cs.com.cn/xwzx/01/2026/10/19/detail_2026101910045531.html">https://www.cs.com.cn/xwzx/01/2026/10/19/detail_2026101910045531.html</a></p>
 <h3>3. 亚残运会中国首金！老将崔哲举起 120 公斤夺冠，五届参赛五届夺金</h3>
 <p>10 月 19 日，在日本爱知·名古屋举行的第五届亚洲残疾人运动会上，中国选手崔哲在举重女子 41 公斤级决赛中夺冠，为中国代表团拿下本届赛事首金。比赛过程堪称碾压：第一把 110 公斤稳稳举起，第二把 115 公斤，最后一把挑战 120 公斤一次成功——刷新了她在巴黎残奥会上创造的 119 公斤个人最好成绩。值得一提的是，2018 年雅加达亚残运会，中国代表团的首金也是她拿的。崔哲还有不到两个月就满 40 岁，这是她第五次参加亚残运会，五次全部夺金。</p>
-<p>🔍 名词解释：<br />
-- <strong>亚残运会</strong>：亚洲残疾人运动会，相当于残疾人运动员的"亚洲版奥运会"，本届在日本名古屋举行，10 月 18 日开幕、24 日闭幕。<br />
-- <strong>试举</strong>：举重比赛每人有三次举的机会，像跳高有三次试跳，取最好的一次算成绩。崔哲三把全中，一把比一把重。<br />
-- <strong>41 公斤级</strong>：按体重分组的级别，选手体重在 41 公斤以下才能参加这个组——就像拳击分轻量级、重量级，公平起见按体重分档。</p>
-<p>📌 一句话总结：快 40 岁的崔哲一把举起 120 公斤、刷新个人最佳，为中国拿下亚残运会首金——五届亚残运会，她一次都没让金牌旁落。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>亚残运会</strong>：亚洲残疾人运动会，相当于残疾人运动员的"亚洲版奥运会"，本届在日本名古屋举行，10 月 18 日开幕、24 日闭幕。</li>
+<li><strong>试举</strong>：举重比赛每人有三次举的机会，像跳高有三次试跳，取最好的一次算成绩。崔哲三把全中，一把比一把重。</li>
+<li><strong>41 公斤级</strong>：按体重分组的级别，选手体重在 41 公斤以下才能参加这个组——就像拳击分轻量级、重量级，公平起见按体重分档。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：快 40 岁的崔哲一把举起 120 公斤、刷新个人最佳，为中国拿下亚残运会首金——五届亚残运会，她一次都没让金牌旁落。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
 - 新华社日本名古屋专电《亚残运会|举重老将崔哲摘得中国代表团首金》—— <a href="https://feng.ifeng.com/c/8xM0QwJxwlG">https://feng.ifeng.com/c/8xM0QwJxwlG</a></p>
 <h3>4. 国际科学理事会中期会员大会在北京开幕，发布《北京科学宣言》倡议</h3>
 <p>10 月 19 日，2026 年国际科学理事会中期会员大会暨北京科学对话在北京开幕，由国际科学理事会主办，中国科协、中科院、社科院、北京市政府共同举办，主题是"复杂世界中的科学——科学共创美好未来"，围绕"科学作为全球公共产品""负责任的人工智能""科学与社会信任"三大议题展开对话。这是该大会首次在北京举行。开幕式上以视频形式集中发布了五项重大成果，包括中科院《全球可持续发展数据产品（2025）》、国家自然科学基金委《中国基础研究发展报告（2026）》等；中科院院士朱永官介绍了《北京科学宣言》倡议，主张把科学作为全球公共产品、发展负责任的人工智能。</p>
-<p>🔍 名词解释：<br />
-- <strong>国际科学理事会（ISC）</strong>：全球科学家的"联合国"，各国科学院、科学机构都是它的会员，负责协调全球科研合作、给联合国提科学建议。<br />
-- <strong>科学作为全球公共产品</strong>：主张科学知识像空气和路灯一样，不该被某个国家或公司独占，全人类都能用——比如新冠疫苗技术、气候数据应该共享。<br />
-- <strong>负责任的人工智能</strong>：AI 发展太快，得立规矩：不能作恶、不能歧视、出了事有人负责。就像给汽车装刹车和交规，AI 也要有"刹车"。</p>
-<p>📌 一句话总结：全球科学家在北京共商"科学向何处去"，中国借主场之利，把"科学要共享、AI 要守规矩"写进了面向 2030 年的共同倡议。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释：</p><ul>
+<li><strong>国际科学理事会（ISC）</strong>：全球科学家的"联合国"，各国科学院、科学机构都是它的会员，负责协调全球科研合作、给联合国提科学建议。</li>
+<li><strong>科学作为全球公共产品</strong>：主张科学知识像空气和路灯一样，不该被某个国家或公司独占，全人类都能用——比如新冠疫苗技术、气候数据应该共享。</li>
+<li><strong>负责任的人工智能</strong>：AI 发展太快，得立规矩：不能作恶、不能歧视、出了事有人负责。就像给汽车装刹车和交规，AI 也要有"刹车"。</li>
+</ul></div>
+<p class="summary">📌 一句话总结：全球科学家在北京共商"科学向何处去"，中国借主场之利，把"科学要共享、AI 要守规矩"写进了面向 2030 年的共同倡议。</p>
 <p>（中文来源，无生词）</p>
 <p>🔗 来源：<br />
 - 2026年国际科学理事会中期会员大会暨北京科学对话在京开幕 —— <a href="https://finance.sina.com.cn/stock/t/2026-10-19/doc-inivumai6168879.shtml">https://finance.sina.com.cn/stock/t/2026-10-19/doc-inivumai6168879.shtml</a></p>
@@ -478,55 +561,65 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <h2>八、GitHub 新技术 💻</h2>
 <h3>1. ai-job-search：跑在你自己电脑上的 AI 求职助手</h3>
 <p>一个基于 Claude Code 的 AI 求职申请框架（2026 年 3 月开源，现 5.7 万+ stars，今日 GitHub 全球热榜第 1）。填好个人档案后，它能自动搜招聘网站、给每个岗位打"匹配分"、按你的经历定制简历（LaTeX 排版）、写求职信、还能帮你模拟面试。作者是个地球物理学家，2025 年底被裁员后用它找工作：投了 69 份定制申请、拿到 20 个一面，最终签下 AI 工程师 offer——"It got me hired. Now it's yours."这是 AI agent 落地的"真香"案例：不是演示视频，是作者真靠它找到了工作；求职季叠加 AI agent 热潮，star 数一骑绝尘，还衍生出一堆各国求职网站的社区 fork。</p>
-<p>🔍 名词解释（大白话）：<br />
-- <strong>Claude Code</strong>：Anthropic 出的"AI 程序员"，在终端里用说话的方式指挥它干活。<br />
-- <strong>Agent</strong>：能自己规划、自己动手的 AI，不只是陪聊。<br />
-- <strong>Fork</strong>：把别人的代码仓库完整复制一份到自己名下，像复印一份菜谱再自己改。<br />
-- <strong>LaTeX</strong>：写简历排版的专业工具，排出来的版式特别整齐。<br />
-- <strong>ATS</strong>：公司用来筛简历的自动系统，它先"读"你的简历，关键词不对就直接刷掉，所以要针对它优化。</p>
-<p>📌 一句话总结：找工作这件事，AI agent 已经从"玩具"变成了"真帮人找到工作的工具"。</p>
-<p>📚 生词（从仓库英文介绍里挑）：<br />
-- <strong>upfront</strong> 直言的，坦率的；搭配：be upfront about sth（对某事直言不讳）；例：He was upfront with every employer about using AI.（他对每个雇主都直言自己用了 AI。）💬 "Honesty is the first chapter in the book of wisdom." —— Thomas Jefferson（诚实是智慧书中的第一章。）<br />
-- <strong>tailor</strong> 定制，量体裁衣；搭配：tailor your CV（定制简历）；例：The AI tailors each cover letter to the job posting.（AI 为每个岗位定制求职信。）💬 "Measure twice, cut once." —— 裁缝谚语（量体两次，剪裁一次。）<br />
-- <strong>evaluate</strong> 评估；搭配：evaluate the fit（评估匹配度）；例：Claude evaluates every job posting before you apply.（Claude 会在你申请前评估每个岗位。）💬 "You can't manage what you can't measure." —— Peter Drucker（无法衡量的东西，就无法管理。）<br />
-- <strong>revise</strong> 修改，修订；搭配：revise the draft（修改草稿）；例：A second agent reviews and revises the draft.（第二个 AI 会审阅并修改草稿。）💬 "To write is human, to edit is divine." —— Stephen King（写作是凡人所为，编辑才是神的旨意。）<br />
-- <strong>integrity</strong> 完整性，正直；搭配：integrity gate（完整性检查）；例：Each posting passes an integrity gate against hidden tricks.（每个招聘帖都要过一道防隐藏猫腻的完整性检查。）💬 "Integrity is doing the right thing, even when no one is watching." —— C.S. Lewis（正直就是在无人注视时仍然做正确的事。）<br />
-- <strong>benchmark</strong> 对标，基准；搭配：salary benchmarking（薪资对标）；例：The framework includes optional salary benchmarking.（这个框架还带可选的薪资对标功能。）💬 "Don't compare your beginning to someone else's middle." —— Jon Acuff（不要拿你的起点去比别人的中点。）<br />
-- <strong>interview</strong> 面试；搭配：job interview（求职面试）；例：Sixty-nine applications led to twenty first interviews.（69 份申请换来了 20 个一面。）💬 "Dress for the job you want, not the job you have." —— 求职谚语（穿得像你想要的那份工作，而不是你现在的工作。）<br />
-- <strong>mock</strong> 模拟的；搭配：mock interview（模拟面试）；例：It offers a mock interview following a roleplay protocol.（它按角色扮演流程提供模拟面试。）💬 "All the world's a stage, and all the men and women merely players." —— William Shakespeare（世界是个舞台，所有的男男女女不过是演员。）<br />
-- <strong>criterion</strong> 标准（复数 criteria）；搭配：evaluation criteria（评估标准）；例：The fit framework uses five evaluation criteria.（匹配度框架用了五个评估标准。）💬 "Don't judge a book by its cover." —— 英语谚语（不要以封面评判一本书。）<br />
-- <strong>scam</strong> 骗局；搭配：treat sth as a scam（把某事当骗局）；例：Anything claiming a project token should be treated as a scam.（任何声称有项目代币的都应视为骗局。）💬 "Fool me once, shame on you; fool me twice, shame on me." —— 英语谚语（骗我一次，是你的错；骗我两次，是我的错。）<br />
-- <strong>genuine</strong> 真诚的，真正的；搭配：a genuine conversation（真诚的交谈）；例：Being upfront sparked genuine technical conversations.（坦率反而引发了真诚的技术交流。）💬 "Be yourself; everyone else is already taken." —— Oscar Wilde（做你自己，因为别人都已经有人做了。）<br />
-- <strong>outcome</strong> 结果；搭配：record the outcome（记录结果）；例：The outcome command records what happened to each application.（结果记录命令记录每份申请的进展。）💬 "It's not about how hard you hit. It's about how hard you can get hit and keep moving forward." —— 《Rocky Balboa》（重要的不是你出拳多重，而是你能挨多重还继续往前走。）</p>
-<p>🔗 来源：<br />
-- GitHub 仓库：<a href="https://github.com/MadsLorentzen/ai-job-search">https://github.com/MadsLorentzen/ai-job-search</a><br />
-- GitHub Trending：<a href="https://github.com/trending">https://github.com/trending</a></p>
+<p>🔍 名词解释（大白话）：</p>
+<ul>
+<li><strong>Claude Code</strong>：Anthropic 出的"AI 程序员"，在终端里用说话的方式指挥它干活。</li>
+<li><strong>Agent</strong>：能自己规划、自己动手的 AI，不只是陪聊。</li>
+<li><strong>Fork</strong>：把别人的代码仓库完整复制一份到自己名下，像复印一份菜谱再自己改。</li>
+<li><strong>LaTeX</strong>：写简历排版的专业工具，排出来的版式特别整齐。</li>
+<li><strong>ATS</strong>：公司用来筛简历的自动系统，它先"读"你的简历，关键词不对就直接刷掉，所以要针对它优化。</li>
+</ul>
+<p class="summary">📌 一句话总结：找工作这件事，AI agent 已经从"玩具"变成了"真帮人找到工作的工具"。</p>
+<p>📚 生词（从仓库英文介绍里挑）：</p>
+<ul>
+<li><strong>upfront</strong> 直言的，坦率的；搭配：be upfront about sth（对某事直言不讳）；例：He was upfront with every employer about using AI.（他对每个雇主都直言自己用了 AI。）💬 "Honesty is the first chapter in the book of wisdom." —— Thomas Jefferson（诚实是智慧书中的第一章。）</li>
+<li><strong>tailor</strong> 定制，量体裁衣；搭配：tailor your CV（定制简历）；例：The AI tailors each cover letter to the job posting.（AI 为每个岗位定制求职信。）💬 "Measure twice, cut once." —— 裁缝谚语（量体两次，剪裁一次。）</li>
+<li><strong>evaluate</strong> 评估；搭配：evaluate the fit（评估匹配度）；例：Claude evaluates every job posting before you apply.（Claude 会在你申请前评估每个岗位。）💬 "You can't manage what you can't measure." —— Peter Drucker（无法衡量的东西，就无法管理。）</li>
+<li><strong>revise</strong> 修改，修订；搭配：revise the draft（修改草稿）；例：A second agent reviews and revises the draft.（第二个 AI 会审阅并修改草稿。）💬 "To write is human, to edit is divine." —— Stephen King（写作是凡人所为，编辑才是神的旨意。）</li>
+<li><strong>integrity</strong> 完整性，正直；搭配：integrity gate（完整性检查）；例：Each posting passes an integrity gate against hidden tricks.（每个招聘帖都要过一道防隐藏猫腻的完整性检查。）💬 "Integrity is doing the right thing, even when no one is watching." —— C.S. Lewis（正直就是在无人注视时仍然做正确的事。）</li>
+<li><strong>benchmark</strong> 对标，基准；搭配：salary benchmarking（薪资对标）；例：The framework includes optional salary benchmarking.（这个框架还带可选的薪资对标功能。）💬 "Don't compare your beginning to someone else's middle." —— Jon Acuff（不要拿你的起点去比别人的中点。）</li>
+<li><strong>interview</strong> 面试；搭配：job interview（求职面试）；例：Sixty-nine applications led to twenty first interviews.（69 份申请换来了 20 个一面。）💬 "Dress for the job you want, not the job you have." —— 求职谚语（穿得像你想要的那份工作，而不是你现在的工作。）</li>
+<li><strong>mock</strong> 模拟的；搭配：mock interview（模拟面试）；例：It offers a mock interview following a roleplay protocol.（它按角色扮演流程提供模拟面试。）💬 "All the world's a stage, and all the men and women merely players." —— William Shakespeare（世界是个舞台，所有的男男女女不过是演员。）</li>
+<li><strong>criterion</strong> 标准（复数 criteria）；搭配：evaluation criteria（评估标准）；例：The fit framework uses five evaluation criteria.（匹配度框架用了五个评估标准。）💬 "Don't judge a book by its cover." —— 英语谚语（不要以封面评判一本书。）</li>
+<li><strong>scam</strong> 骗局；搭配：treat sth as a scam（把某事当骗局）；例：Anything claiming a project token should be treated as a scam.（任何声称有项目代币的都应视为骗局。）💬 "Fool me once, shame on you; fool me twice, shame on me." —— 英语谚语（骗我一次，是你的错；骗我两次，是我的错。）</li>
+<li><strong>genuine</strong> 真诚的，真正的；搭配：a genuine conversation（真诚的交谈）；例：Being upfront sparked genuine technical conversations.（坦率反而引发了真诚的技术交流。）💬 "Be yourself; everyone else is already taken." —— Oscar Wilde（做你自己，因为别人都已经有人做了。）</li>
+<li><strong>outcome</strong> 结果；搭配：record the outcome（记录结果）；例：The outcome command records what happened to each application.（结果记录命令记录每份申请的进展。）💬 "It's not about how hard you hit. It's about how hard you can get hit and keep moving forward." —— 《Rocky Balboa》（重要的不是你出拳多重，而是你能挨多重还继续往前走。）</li>
+</ul>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>GitHub 仓库：<a href="https://github.com/MadsLorentzen/ai-job-search">https://github.com/MadsLorentzen/ai-job-search</a></li>
+<li>GitHub Trending：<a href="https://github.com/trending">https://github.com/trending</a></li>
+</ul></div>
 <h3>2. headroom：AI agent 的"省钱压缩机"</h3>
 <p>一个给 AI agent 省 token（计费单位）的开源压缩层（2026 年 1 月开源，现 7.6 万+ stars，Trendshift 日榜第 1）。AI agent 干活要读大量工具输出、日志、文件，这些都要按 token 花钱。Headroom 在内容送到大模型之前先压缩：编程 agent 场景省 20% token，JSON 数据省 60–95%，答案不变；压缩全在本地完成，数据不上传；原文存在本地，模型需要时可随时取回。提供代码库、代理、MCP 服务器三种用法。AI agent 越来越能"烧钱"，"怎么让 agent 便宜跑"是全行业痛点；它号称压缩耗时不到 1 毫秒（感觉不到延迟），还在 GSM8K、TruthfulQA 等基准测试里证明压缩后答题分数不变——省钱不丢准确率。</p>
-<p>🔍 名词解释（大白话）：<br />
-- <strong>Token</strong>：AI 按"字"收费的计量单位，英文约 4 个字符算 1 个 token，像出租车的计价器。<br />
-- <strong>LLM</strong>：大语言模型，如 GPT、Claude。<br />
-- <strong>MCP</strong>：让 AI 连接外部工具的"通用插座"标准。<br />
-- <strong>Proxy（代理）</strong>：所有请求先经过的中间人再转发，像小区的代收快递点。<br />
-- <strong>提示缓存</strong>：模型记住之前算过的内容，下次不用重算，省钱省时间。<br />
-- <strong>RAG</strong>：让 AI 先查资料库再回答的技术，像开卷考试允许带小抄。</p>
-<p>📌 一句话总结：AI agent 时代的新刚需：答案不变，账单先瘦一圈。</p>
-<p>📚 生词（从仓库英文介绍里挑）：<br />
-- <strong>compress</strong> 压缩；搭配：compress the prompt（压缩提示词）；例：Headroom compresses everything the agent reads.（Headroom 压缩 agent 读取的一切内容。）💬 "Less is more." —— Ludwig Mies van der Rohe（少即是多。）<br />
-- <strong>fraction</strong> 一小部分；搭配：a fraction of the cost（一小部分成本）；例：Same answers, a fraction of the tokens.（答案不变，只花一小部分 token。）💬 "A journey of a thousand miles begins with a single step." —— Lao Tzu（千里之行，始于足下。）<br />
-- <strong>survive</strong> 幸存，保留；搭配：survive byte for byte（逐字节保留）；例：The key FATAL line survives compression byte for byte.（关键的 FATAL 那行被逐字节完整保留。）💬 "What doesn't kill you makes you stronger." —— Friedrich Nietzsche（杀不死你的，会让你更强大。）<br />
-- <strong>accuracy</strong> 准确度；搭配：test accuracy（测试准确度）；例：Compression keeps accuracy unchanged on benchmarks.（压缩后基准测试的准确度不变。）💬 "Measure what is measurable, and make measurable what is not so." —— Galileo Galilei（能量就量，不能量的创造条件去量。）<br />
-- <strong>delay</strong> 延迟；搭配：network delay（网络延迟）；例：Compression costs well under a millisecond of delay.（压缩带来的延迟远不到 1 毫秒。）💬 "Better late than never." —— 英语谚语（迟到总比不到好。）<br />
-- <strong>verbose</strong> 啰嗦的，冗长的；搭配：verbose output（冗长的输出）；例：Verbosity steering trims the model's ceremony.（简洁度引导会砍掉模型的客套话。）💬 "Brevity is the soul of wit." —— William Shakespeare（简洁是智慧的灵魂。）<br />
-- <strong>retrieve</strong> 取回，检索；搭配：retrieve the original（取回原文）；例：The model can retrieve the full text on demand.（模型需要时可取回完整原文。）💬 "Seek, and ye shall find." —— 《Bible》（寻找，就寻见。）<br />
-- <strong>duplicate</strong> 重复的；搭配：remove duplicates（去重）；例：Cross-agent memory removes duplicates automatically.（跨 agent 记忆会自动去重。）💬 "History doesn't repeat itself, but it often rhymes." —— Mark Twain（历史不会重演，但常常押韵。）<br />
-- <strong>locally</strong> 在本地；搭配：run locally（本地运行）；例：Compression runs locally; your data stays here.（压缩在本地运行，你的数据不出门。）💬 "There's no place like home." —— 《The Wizard of Oz》（没有地方像家一样。）<br />
-- <strong>memory</strong> 记忆；搭配：cross-agent memory（跨 agent 记忆）；例：One shared memory store works across Claude, Codex and Grok.（一个共享记忆库可跨 Claude、Codex、Grok 使用。）💬 "Memory is the diary that we all carry about with us." —— Oscar Wilde（记忆是我们随身携带的日记。）<br />
-- <strong>effort</strong> 努力，投入；搭配：effort routing（投入分配）；例：Effort routing dials thinking down on routine steps.（投入分配会在常规步骤调低思考量。）💬 "Genius is one percent inspiration and ninety-nine percent perspiration." —— Thomas Edison（天才是百分之一的灵感加百分之九十九的汗水。）<br />
-- <strong>route</strong> 路由，引导；搭配：route traffic（引导流量）；例：The ContentRouter routes each payload to the right compressor.（内容路由器把每份内容送到合适的压缩器。）💬 "All roads lead to Rome." —— 英语谚语（条条大路通罗马。）</p>
-<p>🔗 来源：<br />
-- GitHub 仓库：<a href="https://github.com/headroomlabs-ai/headroom">https://github.com/headroomlabs-ai/headroom</a><br />
-- GitHub Trending：<a href="https://github.com/trending">https://github.com/trending</a></p>
+<p>🔍 名词解释（大白话）：</p>
+<ul>
+<li><strong>Token</strong>：AI 按"字"收费的计量单位，英文约 4 个字符算 1 个 token，像出租车的计价器。</li>
+<li><strong>LLM</strong>：大语言模型，如 GPT、Claude。</li>
+<li><strong>MCP</strong>：让 AI 连接外部工具的"通用插座"标准。</li>
+<li><strong>Proxy（代理）</strong>：所有请求先经过的中间人再转发，像小区的代收快递点。</li>
+<li><strong>提示缓存</strong>：模型记住之前算过的内容，下次不用重算，省钱省时间。</li>
+<li><strong>RAG</strong>：让 AI 先查资料库再回答的技术，像开卷考试允许带小抄。</li>
+</ul>
+<p class="summary">📌 一句话总结：AI agent 时代的新刚需：答案不变，账单先瘦一圈。</p>
+<p>📚 生词（从仓库英文介绍里挑）：</p>
+<ul>
+<li><strong>compress</strong> 压缩；搭配：compress the prompt（压缩提示词）；例：Headroom compresses everything the agent reads.（Headroom 压缩 agent 读取的一切内容。）💬 "Less is more." —— Ludwig Mies van der Rohe（少即是多。）</li>
+<li><strong>fraction</strong> 一小部分；搭配：a fraction of the cost（一小部分成本）；例：Same answers, a fraction of the tokens.（答案不变，只花一小部分 token。）💬 "A journey of a thousand miles begins with a single step." —— Lao Tzu（千里之行，始于足下。）</li>
+<li><strong>survive</strong> 幸存，保留；搭配：survive byte for byte（逐字节保留）；例：The key FATAL line survives compression byte for byte.（关键的 FATAL 那行被逐字节完整保留。）💬 "What doesn't kill you makes you stronger." —— Friedrich Nietzsche（杀不死你的，会让你更强大。）</li>
+<li><strong>accuracy</strong> 准确度；搭配：test accuracy（测试准确度）；例：Compression keeps accuracy unchanged on benchmarks.（压缩后基准测试的准确度不变。）💬 "Measure what is measurable, and make measurable what is not so." —— Galileo Galilei（能量就量，不能量的创造条件去量。）</li>
+<li><strong>delay</strong> 延迟；搭配：network delay（网络延迟）；例：Compression costs well under a millisecond of delay.（压缩带来的延迟远不到 1 毫秒。）💬 "Better late than never." —— 英语谚语（迟到总比不到好。）</li>
+<li><strong>verbose</strong> 啰嗦的，冗长的；搭配：verbose output（冗长的输出）；例：Verbosity steering trims the model's ceremony.（简洁度引导会砍掉模型的客套话。）💬 "Brevity is the soul of wit." —— William Shakespeare（简洁是智慧的灵魂。）</li>
+<li><strong>retrieve</strong> 取回，检索；搭配：retrieve the original（取回原文）；例：The model can retrieve the full text on demand.（模型需要时可取回完整原文。）💬 "Seek, and ye shall find." —— 《Bible》（寻找，就寻见。）</li>
+<li><strong>duplicate</strong> 重复的；搭配：remove duplicates（去重）；例：Cross-agent memory removes duplicates automatically.（跨 agent 记忆会自动去重。）💬 "History doesn't repeat itself, but it often rhymes." —— Mark Twain（历史不会重演，但常常押韵。）</li>
+<li><strong>locally</strong> 在本地；搭配：run locally（本地运行）；例：Compression runs locally; your data stays here.（压缩在本地运行，你的数据不出门。）💬 "There's no place like home." —— 《The Wizard of Oz》（没有地方像家一样。）</li>
+<li><strong>memory</strong> 记忆；搭配：cross-agent memory（跨 agent 记忆）；例：One shared memory store works across Claude, Codex and Grok.（一个共享记忆库可跨 Claude、Codex、Grok 使用。）💬 "Memory is the diary that we all carry about with us." —— Oscar Wilde（记忆是我们随身携带的日记。）</li>
+<li><strong>effort</strong> 努力，投入；搭配：effort routing（投入分配）；例：Effort routing dials thinking down on routine steps.（投入分配会在常规步骤调低思考量。）💬 "Genius is one percent inspiration and ninety-nine percent perspiration." —— Thomas Edison（天才是百分之一的灵感加百分之九十九的汗水。）</li>
+<li><strong>route</strong> 路由，引导；搭配：route traffic（引导流量）；例：The ContentRouter routes each payload to the right compressor.（内容路由器把每份内容送到合适的压缩器。）💬 "All roads lead to Rome." —— 英语谚语（条条大路通罗马。）</li>
+</ul>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>GitHub 仓库：<a href="https://github.com/headroomlabs-ai/headroom">https://github.com/headroomlabs-ai/headroom</a></li>
+<li>GitHub Trending：<a href="https://github.com/trending">https://github.com/trending</a></li>
+</ul></div>
 <hr />
 <p>Ricardo，今天的《麻薯日报》第 24 期就到这里啦📰 周二加油，愿你今天的每一分钟都像复利一样，悄悄滚成大雪球❄️ 贴贴💛</p>
 <div class="nav bottom"><a href="issue-023.html">⬅ 上一期（第23期）</a><a href="index.html">📚 回到目录</a><a href="issue-025.html">下一期（第25期）➡</a></div>

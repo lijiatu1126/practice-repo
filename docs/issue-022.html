@@ -57,6 +57,44 @@ body.dark .note { color: #a39a89; }
 body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
 body.dark th { background: #262219; }
+.summary { background:#edf3fd; border-left:4px solid #1757c2; border-radius:6px; padding:12px 16px; }
+.blessing { text-align: center; color: #8a3324; font-size: 1.07em; font-weight: 600;
+            letter-spacing: 0.04em; margin: 0 0 16px; }
+.sec-label { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+             font-weight: 700; margin: 0 0 6px; font-size: 0.98em; letter-spacing: 0.03em; }
+.glossary { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 6px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.vocabbox .sec-label { color: #1757c2; }
+.vocabbox ul { list-style: none; padding-left: 0; margin: 6px 0 4px; }
+li.vocab { padding: 10px 0 12px; border-bottom: 1px dashed #ddd5bd; margin: 0; }
+li.vocab:last-child { border-bottom: none; }
+.vword { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         font-weight: 800; font-size: 1.12em; color: #1757c2; margin-right: 6px; }
+.vmean { font-weight: 700; }
+.vrow { font-size: 0.93em; color: #4a463e; margin-top: 3px; line-height: 1.8; }
+.vlabel { display: inline-block; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
+          padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
+.vquote { color: #6b6257; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources .sec-label { color: #5a554c; }
+.sources ul { margin: 4px 0; }
+h3::before { content: "▍"; color: #8a3324; }
+body.dark .blessing { color: #e0a458; }
+body.dark .glossary { background: #262219; }
+body.dark .vocabbox { background: #1d1b16; border-color: #3a362a; }
+body.dark li.vocab { border-bottom-color: #3a362a; }
+body.dark .vword { color: #8ab8ff; }
+body.dark .vrow { color: #c9c2b2; }
+body.dark .vlabel { background: #33302a; color: #e0c98a; }
+body.dark .vquote { color: #a39a89; }
+body.dark .summary { background: #1c2733; border-left-color: #8ab8ff; }
+body.dark .sources { color: #a39a89; }
+body.dark h3::before { color: #e0a458; }
 body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
@@ -67,6 +105,7 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📚 《麻薯日报》合集 · 第 22 期 · 2026-10-18（星期日）</p>
 </blockquote>
 <h1>《麻薯日报》· 2026 年 10 月 18 日（星期日）</h1>
+<p class="blessing">🌅 愿清晨的阳光照亮你的路，愿晚风替你卸下一天的累。</p>
 <p>Ricardo，早上好呀！☀️ 周日快乐～ 麻薯把过去 24 小时最重要的新闻都给你挑好啦，配上大白话讲解和今日生词，趁热读起来吧 📖💛</p>
 <hr />
 <h2>一、财经 💹</h2>
@@ -75,11 +114,13 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.manilatimes.net/2026/10/17/business/foreign-business/us-markets-are-weighed-down-by-an-extended-sell-off-in-the-tech-sector/2447853">https://www.manilatimes.net/2026/10/17/business/foreign-business/us-markets-are-weighed-down-by-an-extended-sell-off-in-the-tech-sector/2447853</a></p>
 <p><strong>发生了什么</strong>：10 月 16 日（周五）美股三大股指全线收跌：标普 500 跌 1.1% 至 7658.62 点，纳斯达克大跌 2.1% 至 26137.85 点，道琼斯跌 0.36%。芯片股连续第八天下跌，AMD、博通、英特尔跌 4%–6%，英伟达支持的 CoreWeave 单日再跌 11%、一周跌去 25%。与此同时布伦特原油逼近每桶 110 美元，9 月美国 CPI 热度超预期（同比 +3.7%）。</p>
 <p><strong>为什么值得关注</strong>：这是市场情绪的一次转向——资金不再只盯着"AI 有多火"，而是开始追问"这些公司借来的天量债务还得上吗"。借债搞建设的 AI 基建公司成了新的风暴眼，科技股的抛售和油价飙升叠加，可能改变未来几个月全球资金的流向。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>抛售（sell-off）</strong>：像菜市场快收摊时大家一起甩货降价卖——很多投资者同一时间抢着卖股票，价格就被砸下来了。<br />
-- <strong>市盈率</strong>：好比你花 50 块买一只每年下 1 个蛋的母鸡，"50 倍市盈率"就是要 50 年才回本。油价一涨、大家手头紧，就没人愿意花 50 块买这只鸡了，股价就得跌。<br />
-- <strong>债券收益率</strong>：好比你把钱借给朋友，朋友承诺一年后多还你 5% 当利息，这个 5% 就是收益率。大家越觉得借钱的人可能还不上（比如 CoreWeave 负债 510 亿美元），就越要求更高的利息才肯借，收益率就被推高了；这反过来又让借钱的公司更难受。<br />
-- <strong>加仓/割肉/抄底</strong>：加仓 = 菜市场看到便宜多买两斤；抄底 = 猜"这已经是最低价了"大举买入；割肉 = 亏钱也认了、忍痛卖掉，就像手被门夹了赶紧抽出来，疼但止损。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>抛售（sell-off）</strong>：像菜市场快收摊时大家一起甩货降价卖——很多投资者同一时间抢着卖股票，价格就被砸下来了。</li>
+<li><strong>市盈率</strong>：好比你花 50 块买一只每年下 1 个蛋的母鸡，"50 倍市盈率"就是要 50 年才回本。油价一涨、大家手头紧，就没人愿意花 50 块买这只鸡了，股价就得跌。</li>
+<li><strong>债券收益率</strong>：好比你把钱借给朋友，朋友承诺一年后多还你 5% 当利息，这个 5% 就是收益率。大家越觉得借钱的人可能还不上（比如 CoreWeave 负债 510 亿美元），就越要求更高的利息才肯借，收益率就被推高了；这反过来又让借钱的公司更难受。</li>
+<li><strong>加仓/割肉/抄底</strong>：加仓 = 菜市场看到便宜多买两斤；抄底 = 猜"这已经是最低价了"大举买入；割肉 = 亏钱也认了、忍痛卖掉，就像手被门夹了赶紧抽出来，疼但止损。</li>
+</ul>
 <p><strong>一句话总结</strong>：AI 概念的"借钱狂欢"遇上油价和通胀的"现实耳光"，美股科技板块迎来自 6 月以来最惨的一周。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>slump</strong> | 暴跌；萧条 | 常用搭配：a sudden slump（突然暴跌）, slump into recession（陷入衰退） | 例句：Tech shares slumped on fears of rising debt.（科技股因债务上升的担忧而暴跌。） | 名句："The boom, not the slump, is the right time for austerity at the Treasury." — John Maynard Keynes（繁荣时期而非萧条时期，才是财政部实行紧缩的正确时机。——约翰·梅纳德·凯恩斯）<br />
@@ -99,10 +140,12 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.straitstimes.com/world/imf-chief-has-optimism-and-worry-after-bangkok-annual-meetings?ref=latest-headlines">https://www.straitstimes.com/world/imf-chief-has-optimism-and-worry-after-bangkok-annual-meetings?ref=latest-headlines</a></p>
 <p><strong>发生了什么</strong>：10 月 17 日，IMF 总裁格奥尔基耶娃在曼谷年会闭幕记者会上表示，本周与各国财长、央行行长的讨论"既有乐观也有担忧"：乐观来自全球经济的韧性、AI 的潜力与亚洲的活力；担忧来自通胀、高企的债务、战争和气候风险。IMF 警告，高债务和债券收益率飙升正在收紧金融环境，而低收入石油进口国受伊朗战争引发的能源价格冲击最重，部分国家要用高达 14% 的财政收入来还债。</p>
 <p><strong>为什么值得关注</strong>：IMF 把话挑明了——各国政府一边要对抗通胀（可能还得加息），一边债台高筑借钱越来越贵，"财政弹药"正在被耗尽。这直接关系到未来一年全球是继续加息还是转向，对每个普通人的房贷、物价都有影响。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>通胀</strong>：好比去年 10 块钱能买一斤猪肉，今年要 12 块——钱"变薄"了，同样一张钞票买到的东西越来越少。<br />
-- <strong>加息</strong>：央行把"钱的价格"调高。就像村里唯一的贷款人宣布"以后借钱利息从 5% 涨到 7%"，大家借钱成本变高，就不敢乱借乱花，物价上涨也就被压住了；但代价是企业和买房的人都更难受。<br />
-- <strong>债券收益率飙升</strong>：国家借钱也要付利息。大家越担心这个国家还不上钱，就越要求更高的利息才肯借——收益率飙升，等于国家借钱的成本在涨，财政压力越来越大。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>通胀</strong>：好比去年 10 块钱能买一斤猪肉，今年要 12 块——钱"变薄"了，同样一张钞票买到的东西越来越少。</li>
+<li><strong>加息</strong>：央行把"钱的价格"调高。就像村里唯一的贷款人宣布"以后借钱利息从 5% 涨到 7%"，大家借钱成本变高，就不敢乱借乱花，物价上涨也就被压住了；但代价是企业和买房的人都更难受。</li>
+<li><strong>债券收益率飙升</strong>：国家借钱也要付利息。大家越担心这个国家还不上钱，就越要求更高的利息才肯借——收益率飙升，等于国家借钱的成本在涨，财政压力越来越大。</li>
+</ul>
 <p><strong>一句话总结</strong>：全球经济"体格还行，但药费越来越贵"，IMF 提醒各国：别再透支未来的钱了。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>debt</strong> | 债务 | 常用搭配：in debt（负债）, national debt（国债） | 例句：Low-income nations spend up to 14% of revenue repaying debt.（低收入国家要用高达 14% 的财政收入来还债。） | 名句："A national debt, if it is not excessive, will be to us a national blessing." — Alexander Hamilton（国债只要不过度，对我们来说就是国家的福祉。——亚历山大·汉密尔顿）<br />
@@ -121,10 +164,12 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.indianeconomicobserver.com/news/ecb-may-raise-rates-by-50-bps-by-mid-2027-as-energy-prices-fuel-inflation-report20261017173556/">https://www.indianeconomicobserver.com/news/ecb-may-raise-rates-by-50-bps-by-mid-2027-as-energy-prices-fuel-inflation-report20261017173556/</a></p>
 <p><strong>发生了什么</strong>：ICICI 银行全球市场研究部 10 月 17 日发布报告预测，欧洲央行可能在 2026 年底前再加息 25 个基点，并在 2027 年上半年再加 25 个基点，累计加息 50 基点。背景是欧元区 9 月通胀率从 8 月的 3.2% 跳升至 3.8%，其中能源价格同比暴涨 18.9%，服务业通胀也升至 3.2%，离欧洲央行 2% 的目标越来越远。</p>
 <p><strong>为什么值得关注</strong>：欧洲从"降息周期"掉头回"加息"，说明这轮能源涨价不是小感冒而是可能长期发烧。欧洲加息会让欧元走强、全球资金重新定价，对中国的出口和人民币汇率都有连锁反应。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>加息</strong>：央行宣布"借钱变贵了"，给发烫的经济泼冷水、压物价。<br />
-- <strong>基点</strong>：金融圈的"毫米尺"。1 个基点 = 0.01%，25 个基点就是 0.25%。说"加息 25 个基点"，就是利率从比如 3% 涨到 3.25%。<br />
-- <strong>通胀/核心通胀</strong>：通胀是"东西整体变贵"；核心通胀是去掉波动最大的食品和能源之后看的"底子里的涨价"，好比看一个人发没发烧不只摸额头（可能刚晒了太阳），还要量体温——核心通胀就是"体温计"，现在它也在往上走，说明涨价不是一阵风。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>加息</strong>：央行宣布"借钱变贵了"，给发烫的经济泼冷水、压物价。</li>
+<li><strong>基点</strong>：金融圈的"毫米尺"。1 个基点 = 0.01%，25 个基点就是 0.25%。说"加息 25 个基点"，就是利率从比如 3% 涨到 3.25%。</li>
+<li><strong>通胀/核心通胀</strong>：通胀是"东西整体变贵"；核心通胀是去掉波动最大的食品和能源之后看的"底子里的涨价"，好比看一个人发没发烧不只摸额头（可能刚晒了太阳），还要量体温——核心通胀就是"体温计"，现在它也在往上走，说明涨价不是一阵风。</li>
+</ul>
 <p><strong>一句话总结</strong>：油价一把火，把欧洲央行的降息剧本烧了，加息可能卷土重来。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>inflation</strong> | 通货膨胀 | 常用搭配：high inflation（高通胀）, fight inflation（对抗通胀） | 例句：Energy prices pushed inflation to 3.8%.（能源价格把通胀推高到 3.8%。） | 名句："Inflation is as violent as a mugger, as frightening as an armed robber and as deadly as a hit man." — Ronald Reagan（通胀像抢包的歹徒一样凶暴，像持枪的劫匪一样可怕，像职业杀手一样致命。——罗纳德·里根）<br />
@@ -140,16 +185,20 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <hr />
 <h2>二、AI 🤖</h2>
 <h3>1. DeepSeek 发布 V4.1-Flash-1017：更快、更精简，继续"以便宜打贵"</h3>
-<p>📌 <strong>来源</strong>：Bloomberg / The Straits Times（2026-10-17）<br />
-- <a href="https://www.binance.com/en/square/post/10-17-2026-ai-deepseek-releases-updated-model-calling-it-faster-and-leaner-378284156643952">https://www.binance.com/en/square/post/10-17-2026-ai-deepseek-releases-updated-model-calling-it-faster-and-leaner-378284156643952</a><br />
-- <a href="https://www.straitstimes.com/world/deepseek-pushes-out-updated-ai-model-it-says-is-faster-leaner">https://www.straitstimes.com/world/deepseek-pushes-out-updated-ai-model-it-says-is-faster-leaner</a></p>
+<p>📌 <strong>来源</strong>：Bloomberg / The Straits Times（2026-10-17）</p>
+<ul>
+<li><a href="https://www.binance.com/en/square/post/10-17-2026-ai-deepseek-releases-updated-model-calling-it-faster-and-leaner-378284156643952">https://www.binance.com/en/square/post/10-17-2026-ai-deepseek-releases-updated-model-calling-it-faster-and-leaner-378284156643952</a></li>
+<li><a href="https://www.straitstimes.com/world/deepseek-pushes-out-updated-ai-model-it-says-is-faster-leaner">https://www.straitstimes.com/world/deepseek-pushes-out-updated-ai-model-it-says-is-faster-leaner</a></li>
+</ul>
 <p><strong>发生了什么</strong>：10 月 17 日下午，DeepSeek 在 X 上宣布推出 V4.1-Flash-1017，是 9 月初发布的 V4.1-Flash 的小幅升级。官方称新版"基准成绩更强、任务完成更快、输出更短"，已在网页、App 和开发者平台全量上线，模型权重按 MIT 协议开源。在 Humanity's Last Exam 测试上得分从 36.8–39.1 提升到 36.8–42.6，编码智能体基准 DeepSWE v1.1 拿到 77.0 分，官方称每个任务成本不到 0.2 美元。同时 DeepSeek 还开放了 Search/Fetch API，让智能体可以直接联网搜索、抓取网页内容。</p>
 <p><strong>为什么值得关注</strong>：这是中美 AI 对抗的又一回合——DeepSeek 用"开源 + 超低价"持续挤压 OpenAI、Anthropic 等硅谷巨头的利润空间，此前的大幅降价已导致 MiniMax、Z.ai 甚至阿里等竞争对手港股股价大跌。对普通开发者来说，意味着能用更便宜的价格调用到更强的模型。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>基准测试（benchmark）</strong>：像给所有学生发同一张试卷统考，分数高低一目了然，用来比较谁家的模型更强。<br />
-- <strong>开源权重（open weights）</strong>：像把菜谱公开，任何人都能照着做这道菜、还能自己改配方；不开源的模型则像秘方只攥在店家手里。<br />
-- <strong>智能体（agent）</strong>：不只是会聊天的 AI，而是能自己动手干完一整件事的"数字员工"，比如自己查资料、写代码、做表格。<br />
-- <strong>输出更短</strong>：像让话痨朋友"说重点"，答案更精炼，读起来更快、调用起来也更便宜。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>基准测试（benchmark）</strong>：像给所有学生发同一张试卷统考，分数高低一目了然，用来比较谁家的模型更强。</li>
+<li><strong>开源权重（open weights）</strong>：像把菜谱公开，任何人都能照着做这道菜、还能自己改配方；不开源的模型则像秘方只攥在店家手里。</li>
+<li><strong>智能体（agent）</strong>：不只是会聊天的 AI，而是能自己动手干完一整件事的"数字员工"，比如自己查资料、写代码、做表格。</li>
+<li><strong>输出更短</strong>：像让话痨朋友"说重点"，答案更精炼，读起来更快、调用起来也更便宜。</li>
+</ul>
 <p><strong>一句话总结</strong>：DeepSeek 再走"便宜又好用"路线，新版更快更省，继续用价格战搅动全球 AI 市场。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>speed</strong> | 速度 | 常用搭配：pick up speed（加速）, at top speed（全速） | 例句：The new model completes tasks at much higher speed.（新模型完成任务的速度快得多。） | 名句："I feel the need... the need for speed!" — 《壮志凌云》(Top Gun)（我感觉到了……对速度的渴望！）<br />
@@ -168,11 +217,13 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://runtimewire.com/article/cursor-cloud-agents-shareable-canvases-environments-api">https://runtimewire.com/article/cursor-cloud-agents-shareable-canvases-environments-api</a></p>
 <p><strong>发生了什么</strong>：Cursor 在 10 月 16 日的更新中，给云端智能体加了"可分享画布"（shareable canvases）功能：智能体在运行中可以把成果做成可交互页面，队友点个链接就能直接查看，不用再去翻代码对比。同时推出了测试版 Environments API，开发者可以用代码定义智能体的工作环境；云端环境也更大、加载更快，官方称可支持多达 300 个仓库规模的项目。</p>
 <p><strong>为什么值得关注</strong>：AI 编程正在从"一个人写代码"变成"一群人协作"，怎么评审智能体干的活成了新问题——Cursor 把"看 diff"变成了"看网页"，这可能成为行业新习惯。在 Copilot 大规模精简模型阵容的同时，Cursor 持续加码功能，双方竞争白热化。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>云端智能体</strong>：像请了个住在云服务器上的程序员帮你干活，你自己的电脑不用一直开着，任务在远方默默跑完。<br />
-- <strong>画布（canvas）</strong>：像一块在线白板/展板，智能体把做好的仪表盘、报告直接摆出来，别人点链接就能看。<br />
-- <strong>API</strong>：像餐厅的点菜窗口：规定了你怎么下单、后厨怎么上菜，是程序之间打交道的"规矩"。<br />
-- <strong>diff（代码对比）</strong>：像作文修改前后的对照稿，红色是删掉的、绿色是新加的，以前评审代码全靠看这个。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>云端智能体</strong>：像请了个住在云服务器上的程序员帮你干活，你自己的电脑不用一直开着，任务在远方默默跑完。</li>
+<li><strong>画布（canvas）</strong>：像一块在线白板/展板，智能体把做好的仪表盘、报告直接摆出来，别人点链接就能看。</li>
+<li><strong>API</strong>：像餐厅的点菜窗口：规定了你怎么下单、后厨怎么上菜，是程序之间打交道的"规矩"。</li>
+<li><strong>diff（代码对比）</strong>：像作文修改前后的对照稿，红色是删掉的、绿色是新加的，以前评审代码全靠看这个。</li>
+</ul>
 <p><strong>一句话总结</strong>：Cursor 让 AI 编程成果"所见即所得"，评审方式从看代码变成看页面，团队协作门槛更低了。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>work</strong> | 工作；运作 | 常用搭配：get to work（开始工作）, great work（出色的工作） | 例句：Teammates can inspect the finished work through a link.（队友可以通过链接查看已完成的工作成果。） | 名句："The only way to do great work is to love what you do." — Steve Jobs（成就大事的唯一方法，就是热爱你所做的事。——乔布斯）<br />
@@ -187,16 +238,20 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 10. <strong>run</strong> | 运行；跑 | 常用搭配：run in the cloud（在云端运行） | 例句：Agents run in the cloud and share results by link.（智能体在云端运行，通过链接分享结果。） | 名句："Run, Forrest, run!" — 《阿甘正传》(Forrest Gump)（跑吧，阿甘，跑！）<br />
 11. <strong>time</strong> | 时间 | 常用搭配：save time（节省时间） | 例句：Larger, faster-loading environments save developers time.（更大、加载更快的环境帮开发者省时间。） | 名句："Time is money." — Benjamin Franklin（时间就是金钱。——富兰克林）</p>
 <h3>3. Anthropic 官方插件目录登顶 GitHub 热榜：智能体插件迎来"统一普通话"</h3>
-<p>📌 <strong>来源</strong>：Tidox Daily Brief №203（2026-10-17）；DEV Community<br />
-- <a href="https://learning.tidox.online/">https://learning.tidox.online/</a><br />
-- <a href="https://dev.to/mech_app_ai/anthropics-official-plugin-directory-what-immutable-slugs-and-auto-migration-teach-about-agent-4cpe">https://dev.to/mech_app_ai/anthropics-official-plugin-directory-what-immutable-slugs-and-auto-migration-teach-about-agent-4cpe</a></p>
+<p>📌 <strong>来源</strong>：Tidox Daily Brief №203（2026-10-17）；DEV Community</p>
+<ul>
+<li><a href="https://learning.tidox.online/">https://learning.tidox.online/</a></li>
+<li><a href="https://dev.to/mech_app_ai/anthropics-official-plugin-directory-what-immutable-slugs-and-auto-migration-teach-about-agent-4cpe">https://dev.to/mech_app_ai/anthropics-official-plugin-directory-what-immutable-slugs-and-auto-migration-teach-about-agent-4cpe</a></li>
+</ul>
 <p><strong>发生了什么</strong>：Anthropic 官方的 Claude Code 插件目录在 10 月 17 日以单日新增 1,552 个 star 登顶 GitHub 热榜第一。与此同时，由 OpenAI、Amazon、Cursor、微软、Vercel 联合发布的 Agent Plugins 1.0.0 标准正式确立：一个插件就是一个带 plugin.json 清单文件的文件夹，把"智能体技能"（Agent Skills）和 MCP 服务器打包在一起，一次编写，各家通用。Anthropic 的目录还解决了一个老大难问题：插件名一旦发布就不可更改（像身份证号），并用"改名映射表"让老用户平滑升级，再也不怕改名搞坏所有已安装。</p>
 <p><strong>为什么值得关注</strong>：这标志着 AI 智能体工具生态从"各家说方言"走向"说普通话"——开发者打包一次，就能在 ChatGPT、Cursor、Copilot、VS Code 等多平台通用。大厂联手定标准，意味着"智能体应用商店"的时代正在临近。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>插件（plugin）</strong>：像手机 App，给主程序加新本事的小配件，装上就能多一种功能。<br />
-- <strong>清单文件（manifest）</strong>：像快递面单，写着"包裹里是什么、谁寄的、版本号多少"，程序靠它认出插件。<br />
-- <strong>不可变命名</strong>：像身份证号，一人一个、终身不变；如果插件随便改名，所有装过它的人都会"查无此人"。<br />
-- <strong>MCP</strong>：AI 的"万能插头"，不管什么工具，只要按这个插口标准做，就能插到 AI 上用。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>插件（plugin）</strong>：像手机 App，给主程序加新本事的小配件，装上就能多一种功能。</li>
+<li><strong>清单文件（manifest）</strong>：像快递面单，写着"包裹里是什么、谁寄的、版本号多少"，程序靠它认出插件。</li>
+<li><strong>不可变命名</strong>：像身份证号，一人一个、终身不变；如果插件随便改名，所有装过它的人都会"查无此人"。</li>
+<li><strong>MCP</strong>：AI 的"万能插头"，不管什么工具，只要按这个插口标准做，就能插到 AI 上用。</li>
+</ul>
 <p><strong>一句话总结</strong>：大厂们给 AI 助手定了个"通用插头"标准，插件一次打包到处能用，智能体的应用商店时代不远了。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>change</strong> | 改变 | 常用搭配：embrace change（拥抱变化） | 例句：A common plugin standard could change how agent tools spread.（统一的插件标准可能改变智能体工具的传播方式。） | 名句："Be the change that you wish to see in the world." — Mahatma Gandhi（欲变世界，先变自己。——甘地）<br />
@@ -217,11 +272,13 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.reuters.com/world/europe/trump-waives-many-russia-related-sanctions-tariffs-before-they-were-take-effect-2026-10-17/">https://www.reuters.com/world/europe/trump-waives-many-russia-related-sanctions-tariffs-before-they-were-take-effect-2026-10-17/</a></p>
 <p><strong>发生了什么</strong>：美国总统特朗普签署行政令，豁免了《林赛·格雷厄姆 2026 年制裁俄罗斯和伊朗法案》中原定数日后生效的大部分制裁、限制和关税。他上个月才刚签署这部法案。该法案原本规定，对全球五个最大的俄罗斯原油或天然气进口国、以及任何在法案生效 30 天后仍购买俄油气的国家，征收最高 100% 的关税。特朗普在行政令中称此次豁免"符合美国的国家利益"。克里姆林宫称赞此举"重要且真正具有历史意义"；乌克兰总统泽连斯基则批评，暂停制裁只会"鼓励并奖励"普京。</p>
 <p><strong>为什么值得关注</strong>：Ricardo，这是过去 24 小时全球地缘政治最大的转向信号——美国亲手把刚立法的高压阀门关上了。印度等俄油大买家暂时松了一口气，但制裁法律本身还在，美国随时可以重新拧开。这也意味着美乌关系继续降温、俄乌战局的外交天平在动。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>制裁（sanction）</strong>：就像小区物业对欠费的住户"断水断电"——美国不让你用美元、不让你买东西，逼你疼到让步。<br />
-- <strong>豁免（waiver）</strong>：好比老师宣布"这次作业先不收了"——法律还在，但这次先不执行。<br />
-- <strong>关税（tariff）</strong>：外国商品进美国要交的"进门费"。100% 关税的意思是：原来 100 块的东西，现在要交 100 块进门费，等于价格翻倍，基本就卖不动了。<br />
-- <strong>国家利益（national interest）</strong>：总统的"万能理由"，类似家长说"这是为你好"——具体什么好，不一定展开讲。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>制裁（sanction）</strong>：就像小区物业对欠费的住户"断水断电"——美国不让你用美元、不让你买东西，逼你疼到让步。</li>
+<li><strong>豁免（waiver）</strong>：好比老师宣布"这次作业先不收了"——法律还在，但这次先不执行。</li>
+<li><strong>关税（tariff）</strong>：外国商品进美国要交的"进门费"。100% 关税的意思是：原来 100 块的东西，现在要交 100 块进门费，等于价格翻倍，基本就卖不动了。</li>
+<li><strong>国家利益（national interest）</strong>：总统的"万能理由"，类似家长说"这是为你好"——具体什么好，不一定展开讲。</li>
+</ul>
 <p><strong>一句话总结</strong>：特朗普在制裁生效前夜按下了暂停键，俄油买家暂时逃过 100% 关税，但美乌裂痕又深了一道。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>duty</strong> | 责任，义务；关税 | 常用搭配：on duty（值班）, import duty（进口关税） | 例句：It is our duty to protect the environment.（保护环境是我们的责任。） | 名句："The duty of youth is to challenge corruption." — Kurt Cobain（年轻人的责任就是挑战腐败。——科特·柯本）<br />
@@ -239,13 +296,15 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels">https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels</a></p>
 <p><strong>发生了什么</strong>：英国海事贸易行动组织（UKMTO）10 月 16 日当周确认，至少 12 艘船在霍尔木兹海峡附近遭袭击，并警告实际数字可能更高，因为多数被袭船只拒绝上报。10 月是自今年 2 月 28 日美以对伊开战以来袭船最多的一个月。伊朗革命卫队 10 月 17 日宣称，一艘载有超 200 万桶原油的超级油轮触雷起火，指其走"非法航线"且关闭了导航雷达；美军中央司令部则称海峡水雷早已清除，船只是被伊朗发射的炮弹击中，并强调"海峡由美国及地区伙伴控制，不是伊朗"。受袭击影响，布伦特原油周五一度触及每桶 110 美元，为 5 月以来首次。</p>
 <p><strong>为什么值得关注</strong>：Ricardo，霍尔木兹海峡是全球石油的"咽喉"——开战前全球约五分之一的石油和天然气从这里走。这里一乱，油价就涨，最后会传导到每个人的加油账单和物价上。更关键的是美伊各说各话、互相指责，11 月 3 日美国中期选举前局势还可能升级。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>霍尔木兹海峡</strong>：波斯湾通往外海的唯一窄口，像小区唯一的出入口——全球油轮的"大门"，堵住了大家都难受。<br />
-- <strong>布伦特原油（Brent）</strong>：国际油价的"参考价"，类似菜市场的"今日猪肉指导价"，全球油价跟着它走。<br />
-- <strong>水雷</strong>：藏在水下的炸弹，像埋在路上的地雷，船一碰就炸，专门用来"封路"。<br />
-- <strong>RPG（火箭推进榴弹）</strong>：一种肩扛式火箭筒，像"加强版大号烟花发射器"，小船靠近就能打。<br />
-- <strong>海军封锁</strong>：军舰把港口围住不让船进出，等于给一个国家"断粮断货"。<br />
-- <strong>战争风险保费</strong>：保险公司觉得"这条路太危险了"，给过路船只加收的"买命钱"——保费涨了，运费和油价跟着涨。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>霍尔木兹海峡</strong>：波斯湾通往外海的唯一窄口，像小区唯一的出入口——全球油轮的"大门"，堵住了大家都难受。</li>
+<li><strong>布伦特原油（Brent）</strong>：国际油价的"参考价"，类似菜市场的"今日猪肉指导价"，全球油价跟着它走。</li>
+<li><strong>水雷</strong>：藏在水下的炸弹，像埋在路上的地雷，船一碰就炸，专门用来"封路"。</li>
+<li><strong>RPG（火箭推进榴弹）</strong>：一种肩扛式火箭筒，像"加强版大号烟花发射器"，小船靠近就能打。</li>
+<li><strong>海军封锁</strong>：军舰把港口围住不让船进出，等于给一个国家"断粮断货"。</li>
+<li><strong>战争风险保费</strong>：保险公司觉得"这条路太危险了"，给过路船只加收的"买命钱"——保费涨了，运费和油价跟着涨。</li>
+</ul>
 <p><strong>一句话总结</strong>：美伊在"世界油库大门"上演控制权之争，袭船数创开战新高，油价应声冲上 110 美元。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>security</strong> | 安全 | 常用搭配：national security（国家安全）, security check（安检） | 例句：Maritime security is vital for global trade.（海上安全对全球贸易至关重要。） | 名句："Security is mostly a superstition. Life is either a daring adventure or nothing at all." — Helen Keller（安全大多是一种迷信。人生要么是一场大胆的冒险，要么什么都不是。——海伦·凯勒）<br />
@@ -264,11 +323,13 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.malaymail.com/amp/news/world/2026/10/17/yellow-vests-are-back-and-france-is-bracing-for-another-wave-of-cost-of-living-protests/239429">https://www.malaymail.com/amp/news/world/2026/10/17/yellow-vests-are-back-and-france-is-bracing-for-another-wave-of-cost-of-living-protests/239429</a></p>
 <p><strong>发生了什么</strong>：10 月 17 日周六，法国爆发全国性抗议：沉寂多年的"黄马甲"运动号召，与连日来的中学生抗议、工会、农民、退休人员合流，走上街头反对生活成本上涨和公共服务缩水。内政部称截至当天下午全国已有 272 人被捕，巴黎、马赛、里昂、图卢兹等多地爆发冲突，警方动用了催泪瓦斯和水炮。抗议前夜马克龙曾呼吁"冷静"，总理已下令设立危机应对小组。这场抗议距离明年 4—5 月法国总统大选只剩半年，被视为选前社会气候的"风向标"。</p>
 <p><strong>为什么值得关注</strong>：Ricardo，欧洲人也在为"菜篮子"发愁——中东战争推高的能源价格传导成了全欧洲的通胀。这场"黄马甲+青年"的合流，是 2018 年以来法国最大规模的社会运动，直接考验马克龙任期末的执政根基，也可能影响明年大选格局。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>黄马甲运动</strong>：2018 年法国人因抗议燃油税涨价，穿着车里的黄色反光背心上街，后来成了法国草根抗议的"代名词"——就像大家约好穿同一件衣服，远远就能认出是"自己人"。<br />
-- <strong>生活成本（cost of living）</strong>：过日子每个月要花的钱——房租、吃饭、加油、取暖。生活成本涨，就是"工资没涨，东西全贵了"。<br />
-- <strong>通胀（inflation）</strong>：钱"变薄了"——去年 100 块能买一车菜，今年只能买半车。<br />
-- <strong>紧缩预算</strong>：政府也"勒紧裤腰带"——少花钱、砍开支，抗议者觉得该砍的是浪费，不该砍学校和医院。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>黄马甲运动</strong>：2018 年法国人因抗议燃油税涨价，穿着车里的黄色反光背心上街，后来成了法国草根抗议的"代名词"——就像大家约好穿同一件衣服，远远就能认出是"自己人"。</li>
+<li><strong>生活成本（cost of living）</strong>：过日子每个月要花的钱——房租、吃饭、加油、取暖。生活成本涨，就是"工资没涨，东西全贵了"。</li>
+<li><strong>通胀（inflation）</strong>：钱"变薄了"——去年 100 块能买一车菜，今年只能买半车。</li>
+<li><strong>紧缩预算</strong>：政府也"勒紧裤腰带"——少花钱、砍开支，抗议者觉得该砍的是浪费，不该砍学校和医院。</li>
+</ul>
 <p><strong>一句话总结</strong>：八年前的"黄马甲"回来了，联合学生、工人、农民一起上街，法国迎来近年来最猛烈的一波街头抗议。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>protest</strong> | 抗议 | 常用搭配：stage a protest（举行抗议）, protest against（抗议） | 例句：Thousands joined the protest against rising prices.（数千人加入了抗议物价上涨的游行。） | 名句："The lady doth protest too much, methinks." — William Shakespeare, Hamlet（这位夫人抗议得太过分了，我觉得。——莎士比亚《哈姆雷特》）<br />
@@ -331,33 +392,39 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://news.cgtn.com/news/2026-10-17/China-to-expand-hydrogen-use-through-pilots-in-five-city-clusters-1Rj5WUwPNo4/share_amp.html">https://news.cgtn.com/news/2026-10-17/China-to-expand-hydrogen-use-through-pilots-in-five-city-clusters-1Rj5WUwPNo4/share_amp.html</a></p>
 <p><strong>发生了什么</strong>：工信部、财政部、国家发改委三部门联合发文，批复在五个城市群开展为期四年的氢能综合应用试点，覆盖京津冀、粤港澳大湾区，以及东北（含蒙东）联动长三角、新疆联动成渝、黄河几字弯联动中原三个跨区域组合。试点任务有四张"清单"：氢能技术装备研发、工业用氢项目、燃料电池汽车推广、加氢站建设。中央财政按考核结果发"奖金"，每个城市群四年最高可拿 16 亿元，钱必须用来降低用氢成本、让利给终端用户。我国已是全球最大产氢国，2025 年产量超 3900 万吨。</p>
 <p><strong>为什么值得关注</strong>：Ricardo，氢能是"终极清洁燃料"候选人——烧完只排水不排碳，但一直贵得用不起。这次国家直接发"红包"补贴试点，等于官方下场帮氢能"打折促销"，目标是 2030 年全国 10 万辆氢燃料电池车。对普通人来说，以后氢能重卡、氢能公交可能会越来越多。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>氢能</strong>：把氢气当柴油烧的能源。最大的优点是"只排水不冒烟"；最大的缺点是"贵"——制氢、运氢、存氢都烧钱。<br />
-- <strong>绿氢</strong>：用风电、光电等可再生电力"电解水"制出的氢，全程零碳，像"用太阳能烧开水"一样干净；与之相对的是用煤、天然气制的"灰氢"。<br />
-- <strong>燃料电池车</strong>：不用充电、不用加油，靠氢气发电驱动的车，加氢几分钟能跑几百公里，像"喝氢的电动车"。<br />
-- <strong>加氢站</strong>：给氢能车加氢的地方，相当于氢能车的"加油站"，目前数量很少，是推广的最大短板之一。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>氢能</strong>：把氢气当柴油烧的能源。最大的优点是"只排水不冒烟"；最大的缺点是"贵"——制氢、运氢、存氢都烧钱。</li>
+<li><strong>绿氢</strong>：用风电、光电等可再生电力"电解水"制出的氢，全程零碳，像"用太阳能烧开水"一样干净；与之相对的是用煤、天然气制的"灰氢"。</li>
+<li><strong>燃料电池车</strong>：不用充电、不用加油，靠氢气发电驱动的车，加氢几分钟能跑几百公里，像"喝氢的电动车"。</li>
+<li><strong>加氢站</strong>：给氢能车加氢的地方，相当于氢能车的"加油站"，目前数量很少，是推广的最大短板之一。</li>
+</ul>
 <p><strong>一句话总结</strong>：国家掏最高 16 亿元"奖金"推氢能进交通和工业，氢能离普通人的生活又近了一步。</p>
 <h3>2. 世界储能大会宁德闭幕：中国储能电池半年产量翻倍，占全球新增一半以上</h3>
 <p>📌 <strong>来源</strong>：China Daily（中国日报，2026-10-17）<br />
 - <a href="https://www.chinadaily.com.cn/a/202610/17/WS6ad2ae71e4b06d4aa0563473.html">https://www.chinadaily.com.cn/a/202610/17/WS6ad2ae71e4b06d4aa0563473.html</a></p>
 <p><strong>发生了什么</strong>：为期三天的 2026 世界储能大会 10 月 17 日在"储能之都"福建宁德闭幕。工信部副部长熊继军在会上披露：今年上半年我国储能电池产量同比增长 110%，超过 420 吉瓦时；截至 6 月底，全国新型储能装机超过 1.53 亿千瓦，是"十四五"初期的约 50 倍。中国已建成完整产业链，关键设备 90% 以上国产化，技术路线以锂电池为主，钠离子电池、液流电池等多点开花。国际可再生能源署官员表示，中国 2025 年新增电池储能占全球的 56%，"正在改变可再生能源电力的经济性"。</p>
 <p><strong>为什么值得关注</strong>：Ricardo，风电光电最大的毛病是"看天吃饭"——没风没太阳就没电。储能就是给电网配的"大号充电宝"，白天把多余的太阳能存起来，晚上再放出来。中国在这个领域已经是全球"供货商+标准制定者"，这直接决定了全球绿电能便宜到什么程度。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>储能</strong>：给电力"存钱"的技术——发电多的时候存起来，不够用的时候取出来，相当于电网的"充电宝"。<br />
-- <strong>新型储能</strong>：区别于传统抽水蓄能的新技术统称，主要是各种电池，像手机电池的"超级放大版"。<br />
-- <strong>锂电池 / 钠离子电池 / 液流电池</strong>：三种"充电宝"技术路线——锂电池是现在的"主流手机"，钠离子电池是"便宜耐用的备用机"（原料是盐，便宜），液流电池是"能存超大量电的水箱"（适合电网级长期存）。<br />
-- <strong>产业链国产化 90%</strong>：造储能电池从原料到设备九成以上国内自己能做，不用"看外国人脸色"，成本也压得下来。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>储能</strong>：给电力"存钱"的技术——发电多的时候存起来，不够用的时候取出来，相当于电网的"充电宝"。</li>
+<li><strong>新型储能</strong>：区别于传统抽水蓄能的新技术统称，主要是各种电池，像手机电池的"超级放大版"。</li>
+<li><strong>锂电池 / 钠离子电池 / 液流电池</strong>：三种"充电宝"技术路线——锂电池是现在的"主流手机"，钠离子电池是"便宜耐用的备用机"（原料是盐，便宜），液流电池是"能存超大量电的水箱"（适合电网级长期存）。</li>
+<li><strong>产业链国产化 90%</strong>：造储能电池从原料到设备九成以上国内自己能做，不用"看外国人脸色"，成本也压得下来。</li>
+</ul>
 <p><strong>一句话总结</strong>：中国储能半年产量翻倍、装机五年涨 50 倍，全球每两块新增储能电池就有一块多来自中国。</p>
 <h3>3. 乌兹别克斯坦携手阿联酋 Masdar、AMEA Power：加速可再生能源与储能合作</h3>
 <p>📌 <strong>来源</strong>：MENAFN 转引 Trend News Agency（2026-10-17）<br />
 - <a href="https://menafn.com/1111822893/Uzbekistan-UAE-Firms-Agree-To-Expand-Energy-And-Infrastructure-Projects">https://menafn.com/1111822893/Uzbekistan-UAE-Firms-Agree-To-Expand-Energy-And-Infrastructure-Projects</a></p>
 <p><strong>发生了什么</strong>：10 月 16 日，乌兹别克斯坦总统米尔济约耶夫在塔什干会见了阿联酋两家能源巨头——Masdar 首席执行官和 AMEA Power 董事长，双方同意加速并扩大在可再生能源、基础设施、工业、旅游等领域的合作。两国今年以来双边贸易已增长 40%。Masdar（阿布扎比，2006 年成立）主攻太阳能、风电和绿氢；AMEA Power（迪拜）专注光伏、风电和电池储能，在非洲、中东、亚洲有多国项目管线，其中包括在塔什干建设 150 兆瓦电池储能系统。会后双方确认将加速推进在建项目、拓宽合作范围。</p>
 <p><strong>为什么值得关注</strong>：Ricardo，这是"中东资本+中亚阳光"的组合——阿联酋有钱，乌兹别克斯坦有光照和土地，一个出钱一个出地，一起建电站。对全球来说，中亚正成为新能源投资的新热土；对中国企业而言，这类项目里也常有中企设备和工程的身影，意味着"一带一路"绿色合作的盘子在变大。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>Masdar / AMEA Power</strong>：阿联酋的两家"绿色财主"——专门在全球投钱建太阳能、风电场的公司，类似"新能源界的开发商"。<br />
-- <strong>电池储能系统（150 兆瓦）</strong>：建在塔什干的"城市大号充电宝"，存下白天的太阳能，晚上用电高峰时放出来，避免停电。<br />
-- <strong>项目管线（pipeline）</strong>：公司手里"排队等着开工"的项目清单，管线越长说明野心越大。<br />
-- <strong>双边贸易增长 40%</strong>：两国互相买卖的东西一年多了四成，关系越好，能源大单越容易谈下来。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>Masdar / AMEA Power</strong>：阿联酋的两家"绿色财主"——专门在全球投钱建太阳能、风电场的公司，类似"新能源界的开发商"。</li>
+<li><strong>电池储能系统（150 兆瓦）</strong>：建在塔什干的"城市大号充电宝"，存下白天的太阳能，晚上用电高峰时放出来，避免停电。</li>
+<li><strong>项目管线（pipeline）</strong>：公司手里"排队等着开工"的项目清单，管线越长说明野心越大。</li>
+<li><strong>双边贸易增长 40%</strong>：两国互相买卖的东西一年多了四成，关系越好，能源大单越容易谈下来。</li>
+</ul>
 <p><strong>一句话总结</strong>：阿联酋"绿色双雄"加码中亚，乌兹别克斯坦的可再生能源和储能建设要提速了。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>strategy</strong> | 战略 | 常用搭配：business strategy（商业战略）, long-term strategy（长期战略） | 例句：The company has a clear growth strategy.（这家公司有清晰的增长战略。） | 名句："Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat." — Sun Tzu（没有战术的战略是通往胜利最慢的路线，没有战略的战术是失败前的噪音。——孙子）<br />
@@ -396,11 +463,13 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📌 <strong>仓库</strong>：<a href="https://github.com/morluto/rea">https://github.com/morluto/rea</a></p>
 <p><strong>它是做什么的</strong>：REA（Reverse Engineer Anything，意为"逆向任何东西"）是一个开源工具包，把 AI 编程智能体（Claude Code、Codex、Cursor、Gemini CLI 等）接到专业的逆向分析工具（Ghidra、IDA、Hopper）上。你用大白话问一句"这个 App 的搜索功能是怎么实现的？"，智能体就会拆开软件——不管是电脑程序、手机 App 还是网站——找出背后的逻辑，带着证据一步步解释给你听，甚至能照着给你重做一个类似功能。分析全在本地运行，MIT 协议开源。</p>
 <p><strong>为什么最近火</strong>：它是 10 月 17 日 GitHub 热榜增长第一名，单日新增约 1.7 万 star，总 star 已突破 30 万（仓库页面实时显示 307,435），是本月现象级项目。它踩中了 AI 智能体热潮：以前"逆向工程"是极少数专家的手艺，现在普通人动动嘴就能让 AI 代劳；同时它也引发了版权与安全的热烈讨论，话题度拉满。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>逆向工程</strong>：像吃到一块好吃的蛋糕，倒推出它的食谱；对软件就是"没有源代码，也要搞懂它内部是怎么做的"。<br />
-- <strong>MCP（模型上下文协议）</strong>：AI 的"万能插头"，不管什么外部工具，只要按这个标准做，就能插到 AI 上让它调用。<br />
-- <strong>反编译器（decompiler）</strong>：把电脑看的"密码文"（0 和 1）翻译回人能读懂的文字的"翻译官"，Ghidra、IDA 就是这类工具。<br />
-- <strong>二进制（binary）</strong>：软件真正运行的形态，一堆 0 和 1，人类直接看就像看天书。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>逆向工程</strong>：像吃到一块好吃的蛋糕，倒推出它的食谱；对软件就是"没有源代码，也要搞懂它内部是怎么做的"。</li>
+<li><strong>MCP（模型上下文协议）</strong>：AI 的"万能插头"，不管什么外部工具，只要按这个标准做，就能插到 AI 上让它调用。</li>
+<li><strong>反编译器（decompiler）</strong>：把电脑看的"密码文"（0 和 1）翻译回人能读懂的文字的"翻译官"，Ghidra、IDA 就是这类工具。</li>
+<li><strong>二进制（binary）</strong>：软件真正运行的形态，一堆 0 和 1，人类直接看就像看天书。</li>
+</ul>
 <p><strong>一句话总结</strong>：以前只有专家能"拆"软件，现在你一句话就能让 AI 帮你拆开看明白——这就是它一夜爆火的原因。</p>
 <p><strong>📖 生词时间</strong>（选自仓库 README 英文介绍）：<br />
 1. <strong>see</strong> | 看见；理解 | 常用搭配：see a feature（看到一个功能） | 例句：See a feature you like? Ask your agent how it works.（看到喜欢的功能？问你的智能体它是怎么实现的。） | 名句："I see dead people." — 《第六感》(The Sixth Sense)（我能看见死人。）<br />
@@ -418,12 +487,14 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📌 <strong>仓库</strong>：<a href="https://github.com/chenglou/handwired">https://github.com/chenglou/handwired</a></p>
 <p><strong>它是做什么的</strong>：这是一个脑洞大开的开源项目：把你写的普通 JavaScript 代码（if-else、循环这些）原样"翻译"成一个神经网络。通常神经网络要靠大量数据"训练"才能学会干活，而 Handwired 完全不用训练——它用巧妙的数学变换，让代码逻辑和神经网络的计算结果分毫不差，而且转完之后整个程序还可以继续求导、继续训练。作者还做了在线演示：一个用 JS 写的小桌面系统，被整个转成神经网络后直接在浏览器里跑起来，不用显卡。</p>
 <p><strong>为什么最近火</strong>：仓库 2026-10-15 才创建，两天就涨到约 1,670 个 star，冲上 GitHub 热榜（TypeScript 区前列）。它反直觉——"神经网络居然可以不用训练"；又把"写代码"和"AI 模型"这两件看似不相干的事缝在了一起，可玩性极强，开发者们纷纷上手试玩、转发。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>神经网络</strong>：像一群接力传话的人，数据一层层传过去、每层加工一下，最后得出结果；是 AI 的"大脑"基本结构。<br />
-- <strong>训练</strong>：像学生刷题：给模型看大量例题，让它把内部参数调准，越调越聪明。Handwired 的神奇之处就是跳过了这一步。<br />
-- <strong>可微分（differentiable）</strong>：像一根水管，拧一头、另一头跟着动，数学上能精确算出"动一点会影响多少"，这是能继续训练的前提。<br />
-- <strong>矩阵乘法</strong>：把成千上万个加减乘除打包成一张大表格，一次性算完，显卡最擅长干这个。<br />
-- <strong>权重</strong>：神经网络里的一个个"小旋钮"，决定信号传过去时是放大还是缩小；训练就是在拧这些旋钮。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>神经网络</strong>：像一群接力传话的人，数据一层层传过去、每层加工一下，最后得出结果；是 AI 的"大脑"基本结构。</li>
+<li><strong>训练</strong>：像学生刷题：给模型看大量例题，让它把内部参数调准，越调越聪明。Handwired 的神奇之处就是跳过了这一步。</li>
+<li><strong>可微分（differentiable）</strong>：像一根水管，拧一头、另一头跟着动，数学上能精确算出"动一点会影响多少"，这是能继续训练的前提。</li>
+<li><strong>矩阵乘法</strong>：把成千上万个加减乘除打包成一张大表格，一次性算完，显卡最擅长干这个。</li>
+<li><strong>权重</strong>：神经网络里的一个个"小旋钮"，决定信号传过去时是放大还是缩小；训练就是在拧这些旋钮。</li>
+</ul>
 <p><strong>一句话总结</strong>：不用刷题、天生满分的"神经网络"，把写代码和 AI 模型缝在了一起——概念 geek 又好玩，难怪两天就火了。</p>
 <p><strong>📖 生词时间</strong>（选自仓库 README 英文介绍）：<br />
 1. <strong>bigger</strong> | 更大的 | 常用搭配：a bigger boat（更大的船） | 例句：It collects everything into a giant matrix multiplication.（它把所有运算收进一个巨大的矩阵乘法。） | 名句："You're gonna need a bigger boat." — 《大白鲨》(Jaws)（你们需要一艘更大的船。）<br />

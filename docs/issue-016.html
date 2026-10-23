@@ -57,6 +57,44 @@ body.dark .note { color: #a39a89; }
 body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
 body.dark th { background: #262219; }
+.summary { background:#edf3fd; border-left:4px solid #1757c2; border-radius:6px; padding:12px 16px; }
+.blessing { text-align: center; color: #8a3324; font-size: 1.07em; font-weight: 600;
+            letter-spacing: 0.04em; margin: 0 0 16px; }
+.sec-label { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+             font-weight: 700; margin: 0 0 6px; font-size: 0.98em; letter-spacing: 0.03em; }
+.glossary { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 6px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.vocabbox .sec-label { color: #1757c2; }
+.vocabbox ul { list-style: none; padding-left: 0; margin: 6px 0 4px; }
+li.vocab { padding: 10px 0 12px; border-bottom: 1px dashed #ddd5bd; margin: 0; }
+li.vocab:last-child { border-bottom: none; }
+.vword { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         font-weight: 800; font-size: 1.12em; color: #1757c2; margin-right: 6px; }
+.vmean { font-weight: 700; }
+.vrow { font-size: 0.93em; color: #4a463e; margin-top: 3px; line-height: 1.8; }
+.vlabel { display: inline-block; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
+          padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
+.vquote { color: #6b6257; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources .sec-label { color: #5a554c; }
+.sources ul { margin: 4px 0; }
+h3::before { content: "▍"; color: #8a3324; }
+body.dark .blessing { color: #e0a458; }
+body.dark .glossary { background: #262219; }
+body.dark .vocabbox { background: #1d1b16; border-color: #3a362a; }
+body.dark li.vocab { border-bottom-color: #3a362a; }
+body.dark .vword { color: #8ab8ff; }
+body.dark .vrow { color: #c9c2b2; }
+body.dark .vlabel { background: #33302a; color: #e0c98a; }
+body.dark .vquote { color: #a39a89; }
+body.dark .summary { background: #1c2733; border-left-color: #8ab8ff; }
+body.dark .sources { color: #a39a89; }
+body.dark h3::before { color: #e0a458; }
 body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
@@ -67,6 +105,7 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📚 《麻薯日报》合集 · 第 16 期 · 2026-10-12（星期一）</p>
 </blockquote>
 <h1>📰 10月12日 新闻简报</h1>
+<p class="blessing">🌅 新的一天，愿你被世界温柔以待，也把温柔带给世界。</p>
 <p>早安 Ricardo ☀️ 周一快乐！今天是 2026 年 10 月 12 日，你的晨间简报来了——彭博：全球央行集体转鹰、IMF/世行曼谷年会今日开幕；周三中美通胀数据"决战日"；小鹏 G9L 今日巴黎车展首发；美股三季报 AI 拉动利润大涨 31%；胡塞武装一周四袭利雅得机场；特朗普施压泽连斯基；新质生产力文件：绿证碳市场扩围、氢能核聚变列未来产业；国产氢能产量世界第一；拟禁止汽车全隐藏式门把手。慢慢看 ☕</p>
 <hr />
 <h2>💰 金融</h2>
@@ -76,34 +115,38 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 加息——央行把基准利率调高，借钱变贵，大家少借钱、少消费，给"涨价"降温；② 通胀——东西普遍涨价、钱越来越不值钱的现象；③ 鹰派——主张先压通胀、倾向加息的一派央行官员，与"鸽派"相对；④ 国债收益率——政府借钱时付的年利息率，它是全社会贷款利率的"锚"，它涨了大家借钱都变贵；⑤ 点阵图——美联储官员每人一个点、预测未来利率走向的图，市场用来猜加息节奏。</p>
 <p><strong>一句话总结</strong>：全球央行集体转向"继续加息压通胀"，2027 年借钱成本大概率更高，只有中国还在定向宽松。</p>
 <p>🔗 来源：<a href="https://www.swissinfo.ch/eng/a-higher-rate-world-is-in-store-as-central-banks-approach-2027/92200921">Bloomberg（10-12，经 swissinfo）</a></p>
-<p>📖 生词：<br />
-- <strong>hawkish</strong>（鹰派的、主张收紧政策的）| hawkish tone / hawkish tilt | urged a "prudently hawkish bias". | 未找到<br />
-- <strong>prospect</strong>（前景、可能性）| in prospect / bright prospects | A year that began with the prospect of interest rates drifting lower. | 未找到<br />
-- <strong>tame</strong>（驯服、控制住）| tame inflation / tame prices | officials increasingly act to tame consumer prices. | 未找到<br />
-- <strong>gauge</strong>（衡量指标、评估）| gauge of costs / economic gauge | Its aggregate gauge of advanced-world borrowing costs. | 未找到<br />
-- <strong>linger</strong>（徘徊不去、持续存在）| linger on | hikes that will then linger to contain pressures. | 未找到<br />
-- <strong>largess</strong>（慷慨，尤指政府大手花钱）| government largess | pressures from … and government largess. | 未找到<br />
-- <strong>backdrop</strong>（背景、大环境）| against the backdrop of | in response to that backdrop. | 未找到<br />
-- <strong>vigilance</strong>（警惕、警觉）| remain vigilant | Such vigilance will also need to take into account the financial stability risks. | 未找到<br />
-- <strong>pitfall</strong>（陷阱、隐患）| avoid pitfalls | Bearing in mind those potential pitfalls. | 未找到<br />
-- <strong>dissent</strong>（持异议、投反对票）| vote to dissent | prompt some more hawkish members of the FOMC to dissent. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>hawkish</strong>（鹰派的、主张收紧政策的）| hawkish tone / hawkish tilt | urged a "prudently hawkish bias". | 未找到</li>
+<li><strong>prospect</strong>（前景、可能性）| in prospect / bright prospects | A year that began with the prospect of interest rates drifting lower. | 未找到</li>
+<li><strong>tame</strong>（驯服、控制住）| tame inflation / tame prices | officials increasingly act to tame consumer prices. | 未找到</li>
+<li><strong>gauge</strong>（衡量指标、评估）| gauge of costs / economic gauge | Its aggregate gauge of advanced-world borrowing costs. | 未找到</li>
+<li><strong>linger</strong>（徘徊不去、持续存在）| linger on | hikes that will then linger to contain pressures. | 未找到</li>
+<li><strong>largess</strong>（慷慨，尤指政府大手花钱）| government largess | pressures from … and government largess. | 未找到</li>
+<li><strong>backdrop</strong>（背景、大环境）| against the backdrop of | in response to that backdrop. | 未找到</li>
+<li><strong>vigilance</strong>（警惕、警觉）| remain vigilant | Such vigilance will also need to take into account the financial stability risks. | 未找到</li>
+<li><strong>pitfall</strong>（陷阱、隐患）| avoid pitfalls | Bearing in mind those potential pitfalls. | 未找到</li>
+<li><strong>dissent</strong>（持异议、投反对票）| vote to dissent | prompt some more hawkish members of the FOMC to dissent. | 未找到</li>
+</ul>
 <h3>2. 本周全球数据日历：市场押注美联储 10 月不加息、12 月必加息；法国国债收益率创 2002 年来最高</h3>
 <p><strong>发生了什么</strong>：道琼斯 10 月 11 日的本周前瞻显示，美国 9 月 CPI 将于周三（10 月 14 日）公布；此前疲软的非农就业数据加上多位美联储官员"不急于加息"的表态，已让市场大幅改写预期——LSEG 数据显示，10 月 28 日加息概率从此前的 70% 骤降至 19%，而 12 月加息 25 个基点已被"完全定价"。同日中国也公布 9 月 CPI、PPI 和贸易数据（美银预计出口同比 +24.5%、贸易顺差约 1070 亿美元、CPI 0.9%）。欧洲方面：法国 10 年期国债收益率升至 2002 年以来最高，市场担心法国议会批不准 2027 年预算案；欧元区、日本、新加坡、澳大利亚本周也都有通胀或利率决议。</p>
 <p><strong>为什么值得关注</strong>：这是对昨天 CPI 前瞻的实质性跟进——关键变量是"市场预期一周内大逆转"，说明就业走弱正在压过通胀担忧；法国国债异动是欧洲的一个风险点，财政出问题可能拖累欧元；周三中美通胀数据同日出炉，是本周全球市场的"决战日"。</p>
 <p><strong>名词解释</strong>：① CPI（消费者价格指数）——一篮子日常消费品价格的平均变化，用来量通胀，越高代表东西涨得越快；② 核心 CPI——去掉波动大的食品和能源后的 CPI，更能看出涨价是不是"根深蒂固"；③ 市场定价——投资者用真金白银下注后形成的共识预期，"完全定价"就是几乎所有人都认定会发生；④ 国债利差——两国国债收益率的差值，差越大说明市场越担心其中一国的财政健康。</p>
 <p><strong>一句话总结</strong>：市场已基本排除美联储 10 月加息、押注 12 月，周三中美通胀数据是本周最大看点，法国财政风险值得警惕。</p>
 <p>🔗 来源：<a href="https://www.morningstar.com/news/dow-jones/20261011376/week-ahead-for-fx-bonds-us-inflation-data-in-focus">Dow Jones Newswires 经 Morningstar（10-11）</a></p>
-<p>📖 生词：<br />
-- <strong>anticipate</strong>（预期、预料）| widely anticipated | investors anticipate that the Federal Reserve is likely to raise interest rates. | 未找到<br />
-- <strong>gauge</strong>（衡量、判断）| gauge the timing | investors gauge the likely timing of the next interest-rate rise. | 未找到<br />
-- <strong>scrutiny</strong>（密切审查）| under scrutiny | French government bonds will remain under scrutiny. | 未找到<br />
-- <strong>pipeline</strong>（潜在的、酝酿中的）| pipeline inflationary pressures | how much pipeline inflationary pressures are increasing. | 未找到<br />
-- <strong>steer</strong>（指引、方向）| give a steer on | will give a steer on how much pipeline inflationary pressures are increasing. | 未找到<br />
-- <strong>robust</strong>（强劲的、稳健的）| robust growth | the country's recent robust economic performance. | 未找到<br />
-- <strong>tailwind</strong>（顺风、利好因素）| act as a tailwind | hot, sunny weather probably acting as a tailwind. | 未找到<br />
-- <strong>resilience</strong>（韧性、恢复力）| economic resilience | the U.K. economy has shown impressive resilience. | 未找到<br />
-- <strong>bite</strong>（负面因素开始显现、产生实质影响）| start to bite | high energy costs could soon start to bite. | 未找到<br />
-- <strong>moderation</strong>（缓和、减弱）| moderation of growth | despite a moderation of the transport &amp; storage sector. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>anticipate</strong>（预期、预料）| widely anticipated | investors anticipate that the Federal Reserve is likely to raise interest rates. | 未找到</li>
+<li><strong>gauge</strong>（衡量、判断）| gauge the timing | investors gauge the likely timing of the next interest-rate rise. | 未找到</li>
+<li><strong>scrutiny</strong>（密切审查）| under scrutiny | French government bonds will remain under scrutiny. | 未找到</li>
+<li><strong>pipeline</strong>（潜在的、酝酿中的）| pipeline inflationary pressures | how much pipeline inflationary pressures are increasing. | 未找到</li>
+<li><strong>steer</strong>（指引、方向）| give a steer on | will give a steer on how much pipeline inflationary pressures are increasing. | 未找到</li>
+<li><strong>robust</strong>（强劲的、稳健的）| robust growth | the country's recent robust economic performance. | 未找到</li>
+<li><strong>tailwind</strong>（顺风、利好因素）| act as a tailwind | hot, sunny weather probably acting as a tailwind. | 未找到</li>
+<li><strong>resilience</strong>（韧性、恢复力）| economic resilience | the U.K. economy has shown impressive resilience. | 未找到</li>
+<li><strong>bite</strong>（负面因素开始显现、产生实质影响）| start to bite | high energy costs could soon start to bite. | 未找到</li>
+<li><strong>moderation</strong>（缓和、减弱）| moderation of growth | despite a moderation of the transport &amp; storage sector. | 未找到</li>
+</ul>
 <h3>3. 国内债市周报：1500 亿注资特别国债落地、政策性金融工具累计投放超 1000 亿</h3>
 <p><strong>发生了什么</strong>：据新浪财经 10 月 11 日汇总：财政部发行 2026 年首期 1500 亿元"中央金融机构注资特别国债"（5 年期、利率 1.37%），此前已明确共发行 3000 亿元、扩围至 3600 亿元注资工商银行、农业银行、中国人寿等 8 家机构；9 月以来新型政策性金融工具已累计投放超 1000 亿元，央行日前还下调 PSL 利率 0.25 个百分点并扩大支持领域；前三季度科创债发行 14577.44 亿元（1488 只），同比增长。海外方面，法国与德国 10 年期国债利差升至约 150 个基点，创欧债危机以来新高、且一周内走阔速度为 2011 年来最快。</p>
 <p><strong>为什么值得关注</strong>：国内"财政+货币"双管齐下稳增长：给大银行"补血"增强放贷能力、政策性资金直投基建、科创债大扩容支持科技企业——都是四季度经济的铺垫；法国财政风险是悬在欧洲上空的一把剑，一旦发酵可能引发全球避险情绪。</p>
@@ -118,62 +161,68 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① Physical AI（具身 AI）——AI 从屏幕走进物理世界，让车、机器人等硬件都跑在同一套智能底座上；② VLA 2.0（视觉-语言-动作模型）——能看、能理解指令、能直接控制动作的大模型；③ 图灵 AI 芯片——小鹏自研的车用 AI 芯片，也用在自家人形机器人上；④ NGP（高速领航辅助）——车按导航自动变道、上下高速的智能驾驶功能；⑤ Robotaxi——无人驾驶出租车，上车后没有司机。</p>
 <p><strong>一句话总结</strong>：小鹏今天在巴黎发布 AI 旗舰 SUV G9L，并秀出"车+机器人+飞行汽车"全套物理 AI 生态，中国智能车在欧洲从卖车转向本地研发制造。</p>
 <p>🔗 来源：<a href="https://www.xpeng.com/news/01a0f7644454a0e70a9e8a02823600e0">XPENG 官方公告（10-01）</a>；<a href="https://autonews.gasgoo.com/articles/news/xpeng-g9l-set-for-global-launch-at-paris-motor-show-2026-2108768159049146368">Gasgoo（10-11）</a></p>
-<p>📖 生词：<br />
-- <strong>flagship</strong>（旗舰、旗舰产品）| flagship model / flagship SUV | "its Next-Gen AI Flagship SUV, the G9L". | 未找到<br />
-- <strong>milestone</strong>（里程碑）| reach a milestone | "marking another milestone in the company's expansion in Europe". | 未找到<br />
-- <strong>immersive</strong>（沉浸式的）| immersive experience | "XPENG will create an immersive 'Physical AI Museum'". | 未找到<br />
-- <strong>ecosystem</strong>（生态系统，产业链/产品体系）| AI ecosystem | "a view of XPENG's broader Physical AI ecosystem". | 未找到<br />
-- <strong>portfolio</strong>（产品组合、投资组合）| product portfolio | "physical AI product portfolio". | 未找到<br />
-- <strong>concurrently</strong>（同时地、同步地）| developed concurrently | "developed concurrently for four five-star safety assessment systems". | 未找到<br />
-- <strong>validation</strong>（验证、检验）| validation testing | "underwent three years of validation". | 未找到<br />
-- <strong>premium</strong>（高端的、优质的）| premium brand | "with a premium SUV experience". | 未找到<br />
-- <strong>transition</strong>（过渡、转型）| transition from... to... | "the model's transition from a China launch to a global market rollout". | 未找到<br />
-- <strong>rollout</strong>（全面推出、铺开）| global rollout | "a global market rollout". | 未找到<br />
-- <strong>localization</strong>（本地化）| product localization | "advancing the localization of intelligent driving technology for Europe". | 未找到<br />
-- <strong>generalization</strong>（泛化能力，举一反三的能力）| model generalization | "the strong generalization capabilities of its foundation model". | 未找到<br />
-- <strong>foundation model</strong>（基础大模型）| AI foundation model | "built an in-house AI foundation based on our work in AI cars and humanoid robots". | 未找到<br />
-- <strong>large-scale</strong>（大规模的）| large-scale production | "its first large-scale overseas NGP test ride experience". | 未找到<br />
-- <strong>autonomous</strong>（自动驾驶的、自主的）| autonomous driving | "the official Autonomous Lab program". | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>flagship</strong>（旗舰、旗舰产品）| flagship model / flagship SUV | "its Next-Gen AI Flagship SUV, the G9L". | 未找到</li>
+<li><strong>milestone</strong>（里程碑）| reach a milestone | "marking another milestone in the company's expansion in Europe". | 未找到</li>
+<li><strong>immersive</strong>（沉浸式的）| immersive experience | "XPENG will create an immersive 'Physical AI Museum'". | 未找到</li>
+<li><strong>ecosystem</strong>（生态系统，产业链/产品体系）| AI ecosystem | "a view of XPENG's broader Physical AI ecosystem". | 未找到</li>
+<li><strong>portfolio</strong>（产品组合、投资组合）| product portfolio | "physical AI product portfolio". | 未找到</li>
+<li><strong>concurrently</strong>（同时地、同步地）| developed concurrently | "developed concurrently for four five-star safety assessment systems". | 未找到</li>
+<li><strong>validation</strong>（验证、检验）| validation testing | "underwent three years of validation". | 未找到</li>
+<li><strong>premium</strong>（高端的、优质的）| premium brand | "with a premium SUV experience". | 未找到</li>
+<li><strong>transition</strong>（过渡、转型）| transition from... to... | "the model's transition from a China launch to a global market rollout". | 未找到</li>
+<li><strong>rollout</strong>（全面推出、铺开）| global rollout | "a global market rollout". | 未找到</li>
+<li><strong>localization</strong>（本地化）| product localization | "advancing the localization of intelligent driving technology for Europe". | 未找到</li>
+<li><strong>generalization</strong>（泛化能力，举一反三的能力）| model generalization | "the strong generalization capabilities of its foundation model". | 未找到</li>
+<li><strong>foundation model</strong>（基础大模型）| AI foundation model | "built an in-house AI foundation based on our work in AI cars and humanoid robots". | 未找到</li>
+<li><strong>large-scale</strong>（大规模的）| large-scale production | "its first large-scale overseas NGP test ride experience". | 未找到</li>
+<li><strong>autonomous</strong>（自动驾驶的、自主的）| autonomous driving | "the official Autonomous Lab program". | 未找到</li>
+</ul>
 <h3>2. 路透：AI 公司将拉动美股三季报利润大涨 31%，半导体利润预计飙 136%</h3>
 <p><strong>发生了什么</strong>：10 月 11 日 PYMNTS 引述路透社 10 月 9 日报道：分析师预计美股三季度（7–9 月）企业整体盈利同比增长约 31%，其中三分之二的增长来自科技板块和 Google、Amazon、Meta 等 AI 巨头。受科技股带动，标普 500 指数本周已创历史新高。本周财报季开启，由摩根大通、高盛等银行巨头打头阵。LSEG 盈利研究主管 Tajinder Dhillon 称，美国半导体公司（AI 浪潮最大受益者）三季度利润预计增长 136%，二季度曾增长 158%。但分析师也警告动能正在降温：The Earnings Scout 首席执行官 Nick Raich 说"三个月前我们在以 150 英里的时速搞 AI 基建，现在是 100 英里"。</p>
 <p><strong>为什么值得关注</strong>：AI 是不是泡沫，财报说了算——如果 AI 巨头真能拿出 31% 的利润增长，"AI 故事"就还有真实业绩支撑；但"降温"的措辞也意味着市场对纯烧钱建数据中心的耐心在变薄，真金白银的回报正成为分水岭。</p>
 <p><strong>名词解释</strong>：① 标普 500（S&amp;P 500）——美国 500 家大公司的股价指数，是美股整体涨跌的风向标；② 财报季——上市公司公布 7–9 月业绩的时段，业绩好坏直接决定股价涨跌；③ 半导体——AI 芯片的硬件，是整个 AI 算力的地基；④ LSEG（伦敦证券交易所集团）——全球主要金融数据商之一，提供盈利预测数据；⑤ 预期修正动能——分析师不断上调/下调预期，动能降温就是上调越来越少。</p>
 <p><strong>一句话总结</strong>：AI 巨头和半导体公司将贡献美股三季度利润增长的绝大部分，但分析师提醒 AI 基建的扩张速度已开始放缓。</p>
 <p>🔗 来源：<a href="https://www.pymnts.com/news/artificial-intelligence/2026/ai-companies-expected-to-drive-31-uptick-in-q3-earnings/">PYMNTS（10-11，引述 Reuters 10-09）</a></p>
-<p>📖 生词：<br />
-- <strong>earnings</strong>（盈利、收益）| earnings season / quarterly earnings | "corporate earnings are reportedly set to jump". | 未找到<br />
-- <strong>uptick</strong>（小幅上涨）| uptick in earnings | "drive a 31% uptick in Q3 earnings". | 未找到<br />
-- <strong>earnings season</strong>（财报季）| earnings season begins | "the earnings season, which begins this week". | 未找到<br />
-- <strong>geopolitics</strong>（地缘政治）| geopolitics drives markets | "that's because of geopolitics". | 未找到<br />
-- <strong>attributed</strong>（归因于）| be attributed to | "70-80% of the growth can be attributed to tech and AI". | 未找到<br />
-- <strong>beneficiary</strong>（受益者）| the largest beneficiaries | "some of the largest beneficiaries of the AI boom". | 未找到<br />
-- <strong>revision</strong>（修正、修订）| earnings revision | "earnings estimate revision momentum is starting to cool". | 未找到<br />
-- <strong>momentum</strong>（动能、势头）| gain momentum / lose momentum | "revision momentum is starting to cool". | 未找到<br />
-- <strong>infrastructure</strong>（基础设施）| AI infrastructure | "going 100 miles an hour in the AI infrastructure buildout". | 未找到<br />
-- <strong>buildout</strong>（大规模建设、扩张）| data center buildout | "in the AI infrastructure buildout". | 未找到<br />
-- <strong>combat</strong>（对抗、打击）| combat fraud | "AI tools to combat payments fraud". | 未找到<br />
-- <strong>attempted</strong>（未遂的、企图中的）| attempted attacks | "prevent the majority of attempted attacks". | 未找到<br />
-- <strong>record high</strong>（历史新高）| hit a record high | "helped drive the S&amp;P 500 to a record high". | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>earnings</strong>（盈利、收益）| earnings season / quarterly earnings | "corporate earnings are reportedly set to jump". | 未找到</li>
+<li><strong>uptick</strong>（小幅上涨）| uptick in earnings | "drive a 31% uptick in Q3 earnings". | 未找到</li>
+<li><strong>earnings season</strong>（财报季）| earnings season begins | "the earnings season, which begins this week". | 未找到</li>
+<li><strong>geopolitics</strong>（地缘政治）| geopolitics drives markets | "that's because of geopolitics". | 未找到</li>
+<li><strong>attributed</strong>（归因于）| be attributed to | "70-80% of the growth can be attributed to tech and AI". | 未找到</li>
+<li><strong>beneficiary</strong>（受益者）| the largest beneficiaries | "some of the largest beneficiaries of the AI boom". | 未找到</li>
+<li><strong>revision</strong>（修正、修订）| earnings revision | "earnings estimate revision momentum is starting to cool". | 未找到</li>
+<li><strong>momentum</strong>（动能、势头）| gain momentum / lose momentum | "revision momentum is starting to cool". | 未找到</li>
+<li><strong>infrastructure</strong>（基础设施）| AI infrastructure | "going 100 miles an hour in the AI infrastructure buildout". | 未找到</li>
+<li><strong>buildout</strong>（大规模建设、扩张）| data center buildout | "in the AI infrastructure buildout". | 未找到</li>
+<li><strong>combat</strong>（对抗、打击）| combat fraud | "AI tools to combat payments fraud". | 未找到</li>
+<li><strong>attempted</strong>（未遂的、企图中的）| attempted attacks | "prevent the majority of attempted attacks". | 未找到</li>
+<li><strong>record high</strong>（历史新高）| hit a record high | "helped drive the S&amp;P 500 to a record high". | 未找到</li>
+</ul>
 <h3>3. 白宫"创世纪计划"：英伟达、AMD、OpenAI 等承诺 24 亿美元算力支持美国科研</h3>
 <p><strong>发生了什么</strong>：10 月 8 日白宫"Science: A New Golden Age"峰会上宣布，11 家科技公司向特朗普政府的"Genesis Mission（创世纪计划）"承诺总价值 24 亿美元的算力和 AI 工具，支持联邦科研机构。其中英伟达出 10 亿美元（5 年期算力）、AMD 出 5 亿美元、OpenAI 出 2 亿美元（token 折扣 + 科学家培训）、Anthropic 和 Google 各 1.5 亿美元、AWS 出 5000 万美元云额度。创世纪计划旨在用 AI 推动能源、科学发现和国家安全领域的突破，涉及 14 个新增联邦机构。英伟达 CEO 黄仁勋声明称这是"把先进超级智能交到美国科学家手中"。</p>
 <p><strong>为什么值得关注</strong>：这是 AI 竞赛的"国家队"版本——政府和巨头结盟，用算力换科研突破，背后是中美科技竞赛的白热化；同时 24 亿美元全是"实物承诺"（免费算力额度而非现金），公众对这种政商捆绑的争议也会随之而来。</p>
 <p><strong>名词解释</strong>：① 创世纪计划（Genesis Mission）——特朗普政府用 AI 推动能源、科研、国防突破的联邦项目；② 算力额度——不是现金，是免费使用超算/AI 服务的配额；③ token 折扣——AI 按处理文字量（token）收费，折扣就是给科学家打折；④ 云额度——云服务代金券，抵扣服务器费用；⑤ 实物承诺——捐的是服务和资源，不是真金白银。</p>
 <p><strong>一句话总结</strong>：11 家 AI 巨头承诺 24 亿美元算力支持美国政府"创世纪计划"，AI 已从商业竞争升级为国家战略投入。</p>
 <p>🔗 来源：<a href="https://americanbazaaronline.com/2026/10/09/openai-nvidia-anthropic-pledge-2-4b-in-computing-resources-489731/">American Bazaar Online（10-09）</a></p>
-<p>📖 生词：<br />
-- <strong>computing</strong>（计算、算力）| computing resources | "$2.4 billion worth of computing resources". | 未找到<br />
-- <strong>federal</strong>（联邦的、国家的）| federal agencies | "support federal science agencies and researchers". | 未找到<br />
-- <strong>breakthrough</strong>（突破、重大进展）| scientific breakthrough | "using AI to drive breakthroughs in energy". | 未找到<br />
-- <strong>additional</strong>（额外的、附加的）| 14 additional agencies | "expanding the mission to include 14 additional federal agencies". | 未找到<br />
-- <strong>discount</strong>（折扣）| token discounts | "$200 million from OpenAI in token discounts". | 未找到<br />
-- <strong>access</strong>（使用权、通道）| grant access | "$150 million in access to Anthropic's Claude over three years". | 未找到<br />
-- <strong>cloud credits</strong>（云服务额度）| cloud credits from AWS | "$50 million in cloud credits from Amazon Web Services". | 未找到<br />
-- <strong>golden age</strong>（黄金时代）| a new golden age | "launching a new golden age of American discovery". | 未找到<br />
-- <strong>accelerate</strong>（加速）| accelerate growth | "to accelerate breakthroughs in medicine, energy and materials". | 未找到<br />
-- <strong>leadership</strong>（领导地位）| scientific leadership | "turns scientific leadership into industrial leadership". | 未找到<br />
-- <strong>opportunity</strong>（机会、机遇）| seize the opportunity | "innovation into jobs and opportunity for generations". | 未找到<br />
-- <strong>summit</strong>（峰会）| White House summit | "at the White House's 'Science: A New Golden Age' summit". | 未找到<br />
-- <strong>pledge</strong>（承诺，捐助）| pledge resources | "pledge $2.4B in computing resources". | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>computing</strong>（计算、算力）| computing resources | "$2.4 billion worth of computing resources". | 未找到</li>
+<li><strong>federal</strong>（联邦的、国家的）| federal agencies | "support federal science agencies and researchers". | 未找到</li>
+<li><strong>breakthrough</strong>（突破、重大进展）| scientific breakthrough | "using AI to drive breakthroughs in energy". | 未找到</li>
+<li><strong>additional</strong>（额外的、附加的）| 14 additional agencies | "expanding the mission to include 14 additional federal agencies". | 未找到</li>
+<li><strong>discount</strong>（折扣）| token discounts | "$200 million from OpenAI in token discounts". | 未找到</li>
+<li><strong>access</strong>（使用权、通道）| grant access | "$150 million in access to Anthropic's Claude over three years". | 未找到</li>
+<li><strong>cloud credits</strong>（云服务额度）| cloud credits from AWS | "$50 million in cloud credits from Amazon Web Services". | 未找到</li>
+<li><strong>golden age</strong>（黄金时代）| a new golden age | "launching a new golden age of American discovery". | 未找到</li>
+<li><strong>accelerate</strong>（加速）| accelerate growth | "to accelerate breakthroughs in medicine, energy and materials". | 未找到</li>
+<li><strong>leadership</strong>（领导地位）| scientific leadership | "turns scientific leadership into industrial leadership". | 未找到</li>
+<li><strong>opportunity</strong>（机会、机遇）| seize the opportunity | "innovation into jobs and opportunity for generations". | 未找到</li>
+<li><strong>summit</strong>（峰会）| White House summit | "at the White House's 'Science: A New Golden Age' summit". | 未找到</li>
+<li><strong>pledge</strong>（承诺，捐助）| pledge resources | "pledge $2.4B in computing resources". | 未找到</li>
+</ul>
 <hr />
 <h2>🌍 国际局势</h2>
 <h3>1. 胡塞武装一周内四度袭击利雅得机场，周六袭击致 12 死 300 多伤，特朗普称美国可能加入打击</h3>
@@ -182,60 +231,66 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 胡塞武装——也门什叶派武装，受伊朗支持，与沙特长期交战；② 沙特联军——沙特领导、在也门打击胡塞的多国军事联盟；③ 防空拦截——用防空系统在空中击落来袭导弹；④ 危重伤情——伤势极重、生命垂危的状态；⑤ 沙特民航总局（GACA）——沙特的民航管理机构。</p>
 <p><strong>一句话总结</strong>：胡塞武装一周内四袭利雅得机场致十余人死亡，特朗普称美国可能参战打击胡塞，中东冲突显著升级。</p>
 <p>🔗 来源：<a href="https://theprint.in/world/yemens-houthis-renew-warning-over-saudi-airports-after-deadly-riyadh-attack/3068418/">Reuters 经 ThePrint（10-11）</a>；<a href="https://www.haaretz.com/middle-east-news/2026-10-11/ty-article/after-houthi-threat-attack-at-saudi-airport-sparks-fire-saudi-coalition-says/000001a1-2b90-d1b4-a5fb-afdcc7bb0000">Haaretz（10-11）</a></p>
-<p>📖 生词：<br />
-- <strong>escalation</strong>（升级、加剧）| escalation of fighting | "amid an escalation of fighting". | 未找到<br />
-- <strong>vulnerable</strong>（脆弱的、易受攻击的）| vulnerable to attack | "Saudi airports and airspace are vulnerable to attack". | "Vulnerability is the birthplace of love, belonging, joy, courage, empathy, and creativity." —— Brené Brown<br />
-- <strong>wounded</strong>（受伤的，尤指战争/袭击）| wounded more than 300 | "killed 12 people and wounded more than 300 others". | 未找到<br />
-- <strong>interception</strong>（拦截）| missile interception | "Saudi Arabia bears responsibility for any failed interceptions". | 未找到<br />
-- <strong>projectile</strong>（抛射物，导弹/炮弹）| incoming projectile | "a projectile had also fallen near King Fahd International Airport". | 未找到<br />
-- <strong>coalition</strong>（联盟、联军）| Saudi-led coalition | "The Saudi-led coalition said...". | 未找到<br />
-- <strong>condemn</strong>（谴责）| strongly condemn | "the United States strongly condemns the recent attacks on Saudi Arabia". | 未找到<br />
-- <strong>retaliate</strong>（报复、反击）| vow to retaliate | "a Saudi-led military coalition vowed to retaliate". | 未找到<br />
-- <strong>closure</strong>（关闭）| airport closure | "extended the closure of King Khalid International Airport". | 未找到<br />
-- <strong>diverted</strong>（改道的）| flights were diverted | "All flights to Riyadh were diverted or cancelled". | 未找到<br />
-- <strong>militants</strong>（武装分子）| Houthi militants | "the Terrorist Houthi Militia". | 未找到<br />
-- <strong>critical condition</strong>（危重状态）| in critical condition | "including individuals in critical condition". | 未找到<br />
-- <strong>airspace</strong>（领空、空域）| close the airspace | "stay away from Saudi airports and airspace". | 未找到<br />
-- <strong>go ahead</strong>（继续进行）| go ahead as planned | "an international energy conference was still going ahead in Riyadh". | 未找到<br />
-- <strong>ashes</strong>（灰烬）| rise from the ashes | "we come out of the ashes all the time"（沙特能源大臣）. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>escalation</strong>（升级、加剧）| escalation of fighting | "amid an escalation of fighting". | 未找到</li>
+<li><strong>vulnerable</strong>（脆弱的、易受攻击的）| vulnerable to attack | "Saudi airports and airspace are vulnerable to attack". | "Vulnerability is the birthplace of love, belonging, joy, courage, empathy, and creativity." —— Brené Brown</li>
+<li><strong>wounded</strong>（受伤的，尤指战争/袭击）| wounded more than 300 | "killed 12 people and wounded more than 300 others". | 未找到</li>
+<li><strong>interception</strong>（拦截）| missile interception | "Saudi Arabia bears responsibility for any failed interceptions". | 未找到</li>
+<li><strong>projectile</strong>（抛射物，导弹/炮弹）| incoming projectile | "a projectile had also fallen near King Fahd International Airport". | 未找到</li>
+<li><strong>coalition</strong>（联盟、联军）| Saudi-led coalition | "The Saudi-led coalition said...". | 未找到</li>
+<li><strong>condemn</strong>（谴责）| strongly condemn | "the United States strongly condemns the recent attacks on Saudi Arabia". | 未找到</li>
+<li><strong>retaliate</strong>（报复、反击）| vow to retaliate | "a Saudi-led military coalition vowed to retaliate". | 未找到</li>
+<li><strong>closure</strong>（关闭）| airport closure | "extended the closure of King Khalid International Airport". | 未找到</li>
+<li><strong>diverted</strong>（改道的）| flights were diverted | "All flights to Riyadh were diverted or cancelled". | 未找到</li>
+<li><strong>militants</strong>（武装分子）| Houthi militants | "the Terrorist Houthi Militia". | 未找到</li>
+<li><strong>critical condition</strong>（危重状态）| in critical condition | "including individuals in critical condition". | 未找到</li>
+<li><strong>airspace</strong>（领空、空域）| close the airspace | "stay away from Saudi airports and airspace". | 未找到</li>
+<li><strong>go ahead</strong>（继续进行）| go ahead as planned | "an international energy conference was still going ahead in Riyadh". | 未找到</li>
+<li><strong>ashes</strong>（灰烬）| rise from the ashes | "we come out of the ashes all the time"（沙特能源大臣）. | 未找到</li>
+</ul>
 <h3>2. 特朗普称普京"强烈希望"达成俄乌和平协议，同时建议乌克兰"换个能谈成协议的领导人"</h3>
 <p><strong>发生了什么</strong>：10 月 11 日，美国总统特朗普在记者会上表示，周五与俄罗斯总统普京通电话后，普京"强烈希望看到达成解决方案"（"President Putin would like to see a settlement, strongly"），并指责乌克兰总统泽连斯基"不知为何不想达成协议"、多次错过谈判机会。背景是特朗普周五宣布放宽对俄罗斯柴油的制裁，允许俄柴油进入美国和全球市场，以缓解油价和燃料短缺（与美以对伊朗的战争有关）；泽连斯基痛批这是"软弱的决定"，会给俄罗斯战争机器输血。特朗普还指责泽连斯基不听美国劝告、执意打击俄罗斯炼油厂，并公开建议乌克兰举行大选、"换个能谈成协议的新领导人"。同日，俄罗斯对乌克兰的最新空袭造成至少 21 人死亡（含儿童）。</p>
 <p><strong>为什么值得关注</strong>：美国一边给俄罗斯"松绑"柴油制裁、一边公开喊话换掉泽连斯基，说明特朗普政府正用能源和政治双重杠杆强推停火；但基辅和欧洲盟友认为这等于资助俄罗斯打仗——美国内部、美欧之间、美乌之间的裂痕正在同步加深，和平进程反而更复杂。</p>
 <p><strong>名词解释</strong>：① 和平解决方案——各方都能接受的停火/和平协议；② 制裁放松——取消或放宽对某国的经济制裁；③ 中期选举——美国国会改选，特朗普因油价高企面临选情压力；④ 克里姆林宫——俄罗斯政府的代称；⑤ 炼油厂——把原油加工成汽油柴油的工厂。</p>
 <p><strong>一句话总结</strong>：特朗普通话普京后称俄方愿谈和平，却公开施压泽连斯基让位并放宽俄柴油制裁，美乌美欧分歧加深。</p>
 <p>🔗 来源：<a href="https://english.alarabiya.net/News/world/2026/10/11/trump-says-putin-would-like-to-see-a-settlement-in-ukraine-war">AFP 经 Al Arabiya English（10-11）</a></p>
-<p>📖 生词：<br />
-- <strong>counterpart</strong>（对应的人/物，同级）| Russian counterpart | "his Russian counterpart Vladimir Putin". | 未找到<br />
-- <strong>deal</strong>（交易、协议）| make a deal | "Russia would like to make a deal". | 未找到<br />
-- <strong>compromise</strong>（妥协、折中）| reach a compromise | "accusing Zelenskyy of resisting a compromise". | "All government — indeed, every human benefit and enjoyment, every virtue, and every prudent act — is founded on compromise and barter." —— Edmund Burke<br />
-- <strong>settlement</strong>（解决办法、和解）| negotiated settlement | "would like to see a settlement, strongly". | 未找到<br />
-- <strong>invasion</strong>（入侵）| full-scale invasion | "since Russia first invaded Ukraine in 2022". | 未找到<br />
-- <strong>barbs</strong>（尖刻的批评、唇枪舌剑）| trade barbs | "Trump and Zelenskyy traded barbs Saturday". | 未找到<br />
-- <strong>ease</strong>（缓解、放宽）| ease sanctions | "moved to ease sanctions on Russian diesel". | 未找到<br />
-- <strong>sanctions</strong>（制裁）| impose sanctions | "ease sanctions on Russian diesel". | 未找到<br />
-- <strong>diesel</strong>（柴油）| diesel prices | "a deal allowing more Russian diesel onto global markets". | 未找到<br />
-- <strong>block</strong>（阻挠）| block a deal | "accused Zelenskyy of blocking a deal with Moscow". | 未找到<br />
-- <strong>fund</strong>（资助、提供资金）| fund the war | "would help fund the Kremlin's war". | 未找到<br />
-- <strong>pressure</strong>（压力）| under pressure | "easing pressure on Moscow". | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>counterpart</strong>（对应的人/物，同级）| Russian counterpart | "his Russian counterpart Vladimir Putin". | 未找到</li>
+<li><strong>deal</strong>（交易、协议）| make a deal | "Russia would like to make a deal". | 未找到</li>
+<li><strong>compromise</strong>（妥协、折中）| reach a compromise | "accusing Zelenskyy of resisting a compromise". | "All government — indeed, every human benefit and enjoyment, every virtue, and every prudent act — is founded on compromise and barter." —— Edmund Burke</li>
+<li><strong>settlement</strong>（解决办法、和解）| negotiated settlement | "would like to see a settlement, strongly". | 未找到</li>
+<li><strong>invasion</strong>（入侵）| full-scale invasion | "since Russia first invaded Ukraine in 2022". | 未找到</li>
+<li><strong>barbs</strong>（尖刻的批评、唇枪舌剑）| trade barbs | "Trump and Zelenskyy traded barbs Saturday". | 未找到</li>
+<li><strong>ease</strong>（缓解、放宽）| ease sanctions | "moved to ease sanctions on Russian diesel". | 未找到</li>
+<li><strong>sanctions</strong>（制裁）| impose sanctions | "ease sanctions on Russian diesel". | 未找到</li>
+<li><strong>diesel</strong>（柴油）| diesel prices | "a deal allowing more Russian diesel onto global markets". | 未找到</li>
+<li><strong>block</strong>（阻挠）| block a deal | "accused Zelenskyy of blocking a deal with Moscow". | 未找到</li>
+<li><strong>fund</strong>（资助、提供资金）| fund the war | "would help fund the Kremlin's war". | 未找到</li>
+<li><strong>pressure</strong>（压力）| under pressure | "easing pressure on Moscow". | 未找到</li>
+</ul>
 <h3>3. 以色列空袭加沙南部燃料库致 4 名巴勒斯坦人死亡；利雅得世界石油大会顶住袭击如期举行</h3>
 <p><strong>发生了什么</strong>：10 月 11 日晚，以色列空袭加沙南部汗尤尼斯以西的 al-Buraq al-Janoubi 地区一处燃料库，造成至少 4 名巴勒斯坦人死亡、多人受伤。据巴方卫生部门数据，自 2023 年 10 月以来加沙已有至少 74377 人死亡、175398 人受伤。同一天，尽管胡塞袭击导致机场关闭，沙特利雅得的世界石油大会（10 月 11–15 日，全球石油高管和政策制定者参会）仍如期举行，沙特能源大臣阿卜杜勒阿齐兹亲王称沙特"像凤凰一样浴火重生"，并表示除遭袭关闭的东西输油管线外，沙特正在修建更多管线。10 月 26–29 日的沙特"未来投资倡议大会"（沙漠达沃斯）也确认如期举行。</p>
 <p><strong>为什么值得关注</strong>：加沙战火与红海冲突是同一盘棋的两面——以色列持续打击加沙的同时，美国与以色列今年 2 月已对伊朗开战，胡塞袭击沙特正是这场大冲突的外溢；沙特顶着导弹开石油大会和投资峰会，是在向世界释放"局势可控、投资照旧"的强烈信号。</p>
 <p><strong>名词解释</strong>：① 空袭——战机或导弹从空中打击地面目标；② 燃料库——储存燃料/油料的设施；③ 世界石油大会——全球油气高管和政策制定者的大型聚会；④ 输油管线——输送石油的管道，是能源命脉；⑤ 未来投资倡议大会——沙特主办的全球投资峰会，绰号"沙漠达沃斯"。</p>
 <p><strong>一句话总结</strong>：加沙空袭致 4 死之际，沙特顶住胡塞导弹威胁如期举办石油大会，向世界传递"局势可控"信号。</p>
 <p>🔗 来源：<a href="https://www.aljazeera.com/amp/news/liveblog/2026/10/11/iran-war-live-12-killed-in-riyadh-us-weighs-joining-fight-against-houthis">Al Jazeera 现场直播博客（10-11）</a></p>
-<p>📖 生词：<br />
-- <strong>air strike</strong>（空袭）| launch an air strike | "killed ... in an Israeli air strike on the southern Gaza Strip". | 未找到<br />
-- <strong>depot</strong>（仓库、储库）| fuel depot | "targeted a fuel depot this evening". | 未找到<br />
-- <strong>policymakers</strong>（政策制定者）| energy policymakers | "a gathering of top global oil executives and policymakers". | 未找到<br />
-- <strong>executives</strong>（高管）| senior executives | "a gathering of top global oil executives". | 未找到<br />
-- <strong>pipeline</strong>（管道、输油管）| oil pipeline | "working on pipelines in addition to the East-West one". | 未找到<br />
-- <strong>phoenix</strong>（凤凰，浴火重生者）| like a phoenix | "We are like a phoenix; we come out of the ashes all the time". | 未找到<br />
-- <strong>ashes</strong>（灰烬）| reduce to ashes | "we come out of the ashes all the time". | 未找到<br />
-- <strong>in attendance</strong>（出席、在场）| foreign leaders in attendance | "with foreign leaders and ministers in attendance". | 未找到<br />
-- <strong>proceed</strong>（继续进行）| proceed as planned | "said it would proceed as planned". | 未找到<br />
-- <strong>gathering</strong>（聚会、集会）| a gathering of executives | "a gathering of top global oil executives". | 未找到<br />
-- <strong>initiative</strong>（倡议、举措）| launch an initiative | "The October 26-29 Future Investment Initiative". | 未找到<br />
-- <strong>latest figures</strong>（最新数据）| according to the latest figures | "according to the latest Health Ministry figures". | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>air strike</strong>（空袭）| launch an air strike | "killed ... in an Israeli air strike on the southern Gaza Strip". | 未找到</li>
+<li><strong>depot</strong>（仓库、储库）| fuel depot | "targeted a fuel depot this evening". | 未找到</li>
+<li><strong>policymakers</strong>（政策制定者）| energy policymakers | "a gathering of top global oil executives and policymakers". | 未找到</li>
+<li><strong>executives</strong>（高管）| senior executives | "a gathering of top global oil executives". | 未找到</li>
+<li><strong>pipeline</strong>（管道、输油管）| oil pipeline | "working on pipelines in addition to the East-West one". | 未找到</li>
+<li><strong>phoenix</strong>（凤凰，浴火重生者）| like a phoenix | "We are like a phoenix; we come out of the ashes all the time". | 未找到</li>
+<li><strong>ashes</strong>（灰烬）| reduce to ashes | "we come out of the ashes all the time". | 未找到</li>
+<li><strong>in attendance</strong>（出席、在场）| foreign leaders in attendance | "with foreign leaders and ministers in attendance". | 未找到</li>
+<li><strong>proceed</strong>（继续进行）| proceed as planned | "said it would proceed as planned". | 未找到</li>
+<li><strong>gathering</strong>（聚会、集会）| a gathering of executives | "a gathering of top global oil executives". | 未找到</li>
+<li><strong>initiative</strong>（倡议、举措）| launch an initiative | "The October 26-29 Future Investment Initiative". | 未找到</li>
+<li><strong>latest figures</strong>（最新数据）| according to the latest figures | "according to the latest Health Ministry figures". | 未找到</li>
+</ul>
 <hr />
 <h2>🌱 个人成长</h2>
 <h3>1. 月入 7.7 万美元的独立开发者 Marc Lou：他的"深度工作"日常在 Threads 走红</h3>
@@ -296,17 +351,19 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 贸易逆差——买进来的比卖出去的多，欧盟对华一年逆差 3600 亿欧元，就是一年多花了这么多钱买中国货；② 插电式混动（PHEV）——既能充电用电跑、又能烧油的车，是纯电车普及前的热门过渡选择；③ 关税——进口商品要交的税，加关税等于给外国货涨价、保护本国企业；④ 稀土——造电动车电机、风力发电机等离不开的 17 种稀有金属，中国供应占全球大头。</p>
 <p><strong>一句话总结</strong>：中欧贸易紧张降温，中国对欧混动出口砍半、欧洲车企松了口气，稀土供应链也迎来稳定承诺，待下周欧盟峰会拍板。</p>
 <p>🔗 来源：<a href="https://www.japantimes.co.jp/business/2026/10/10/economy/china-eu-hybrid-exports/">Reuters（10-10，经 Japan Times 转引）</a></p>
-<p>📖 生词：<br />
-- <strong>moderate</strong>（节制、使缓和，动词）| moderate exports / moderate growth | would "moderate" China's export of hybrids and plug-in hybrids. | 未找到<br />
-- <strong>ballooning</strong>（迅速膨胀的）| ballooning deficit | the EU's ballooning trade deficit with China. | 未找到<br />
-- <strong>deficit</strong>（逆差、赤字）| trade deficit | the EU's ballooning trade deficit with China. | 未找到<br />
-- <strong>surplus</strong>（顺差、盈余）| trade surplus | China's growing trade surplus, which hit 360 billion euros. | 未找到<br />
-- <strong>implement</strong>（实施、执行）| implement an agreement | without offering details on how the agreement will be implemented. | 未找到<br />
-- <strong>rebalance</strong>（再平衡、重新平衡）| rebalance trade | to start rebalancing the EU-China trade relationship. | 未找到<br />
-- <strong>avert</strong>（避免、防止）| avert a crisis | the deal appears to avert further instability in the EU. | 未找到<br />
-- <strong>escalation</strong>（升级、加剧）| avoid escalation | to effectively avoid escalation of frictions. | 未找到<br />
-- <strong>plug-in hybrid</strong>（插电式混合动力车）| plug-in hybrid vehicle (PHEV) | cut Chinese exports of hybrid and plug-in hybrid cars. | 未找到<br />
-- <strong>shared understanding</strong>（共识、共同理解）| reach a shared understanding | The "shared understanding" would "moderate" China's export of hybrids. | 未找到</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>moderate</strong>（节制、使缓和，动词）| moderate exports / moderate growth | would "moderate" China's export of hybrids and plug-in hybrids. | 未找到</li>
+<li><strong>ballooning</strong>（迅速膨胀的）| ballooning deficit | the EU's ballooning trade deficit with China. | 未找到</li>
+<li><strong>deficit</strong>（逆差、赤字）| trade deficit | the EU's ballooning trade deficit with China. | 未找到</li>
+<li><strong>surplus</strong>（顺差、盈余）| trade surplus | China's growing trade surplus, which hit 360 billion euros. | 未找到</li>
+<li><strong>implement</strong>（实施、执行）| implement an agreement | without offering details on how the agreement will be implemented. | 未找到</li>
+<li><strong>rebalance</strong>（再平衡、重新平衡）| rebalance trade | to start rebalancing the EU-China trade relationship. | 未找到</li>
+<li><strong>avert</strong>（避免、防止）| avert a crisis | the deal appears to avert further instability in the EU. | 未找到</li>
+<li><strong>escalation</strong>（升级、加剧）| avoid escalation | to effectively avoid escalation of frictions. | 未找到</li>
+<li><strong>plug-in hybrid</strong>（插电式混合动力车）| plug-in hybrid vehicle (PHEV) | cut Chinese exports of hybrid and plug-in hybrid cars. | 未找到</li>
+<li><strong>shared understanding</strong>（共识、共同理解）| reach a shared understanding | The "shared understanding" would "moderate" China's export of hybrids. | 未找到</li>
+</ul>
 <hr />
 <h2>🇨🇳 国内要闻</h2>
 <h3>1. 工信部等四部门出手：拟禁止汽车配备全隐藏式门把手</h3>

@@ -57,6 +57,44 @@ body.dark .note { color: #a39a89; }
 body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
 body.dark th { background: #262219; }
+.summary { background:#edf3fd; border-left:4px solid #1757c2; border-radius:6px; padding:12px 16px; }
+.blessing { text-align: center; color: #8a3324; font-size: 1.07em; font-weight: 600;
+            letter-spacing: 0.04em; margin: 0 0 16px; }
+.sec-label { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+             font-weight: 700; margin: 0 0 6px; font-size: 0.98em; letter-spacing: 0.03em; }
+.glossary { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 6px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.vocabbox .sec-label { color: #1757c2; }
+.vocabbox ul { list-style: none; padding-left: 0; margin: 6px 0 4px; }
+li.vocab { padding: 10px 0 12px; border-bottom: 1px dashed #ddd5bd; margin: 0; }
+li.vocab:last-child { border-bottom: none; }
+.vword { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         font-weight: 800; font-size: 1.12em; color: #1757c2; margin-right: 6px; }
+.vmean { font-weight: 700; }
+.vrow { font-size: 0.93em; color: #4a463e; margin-top: 3px; line-height: 1.8; }
+.vlabel { display: inline-block; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
+          padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
+.vquote { color: #6b6257; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources .sec-label { color: #5a554c; }
+.sources ul { margin: 4px 0; }
+h3::before { content: "▍"; color: #8a3324; }
+body.dark .blessing { color: #e0a458; }
+body.dark .glossary { background: #262219; }
+body.dark .vocabbox { background: #1d1b16; border-color: #3a362a; }
+body.dark li.vocab { border-bottom-color: #3a362a; }
+body.dark .vword { color: #8ab8ff; }
+body.dark .vrow { color: #c9c2b2; }
+body.dark .vlabel { background: #33302a; color: #e0c98a; }
+body.dark .vquote { color: #a39a89; }
+body.dark .summary { background: #1c2733; border-left-color: #8ab8ff; }
+body.dark .sources { color: #a39a89; }
+body.dark h3::before { color: #e0a458; }
 body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
@@ -67,6 +105,7 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📚 《麻薯日报》合集 · 第 1 期 · 2026-09-26（星期六）</p>
 </blockquote>
 <h1>每日新闻简报（2026-09-26）</h1>
+<p class="blessing">🌅 愿平安喜乐，万事胜意，今天也是被爱包围的一天。</p>
 <blockquote>
 <p>注：本期为早期存档，当时只按板块分开保存，此处由分板块存档拼合而成，内容未改动。</p>
 </blockquote>
@@ -111,64 +150,90 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <hr />
 <p>过去 24 小时（9 月 25–26 日）AI 领域动态搜集完毕，以下是最值得关注的 4 条：</p>
 <hr />
-<p><strong>1. 微软正式发布新版 Copilot"超级应用"，新增 Autopilot"数字队友"</strong><br />
-- 发生了什么：9 月 25 日晚间，微软发布新版 Copilot，把聊天、编程、智能体三类能力整合到同一界面，分为 Home（聊天+协作）、Code（自然语言创建应用）、Autopilot（云端持续运行的"数字队友"，可在用户睡觉时继续执行任务）三个标签页；Autopilot 与 Code 采用按使用量计费，模型调用由自动模型选择器分配。<br />
-- 为什么值得关注：这是巨头把 Agent 落地生产力场景的标志性产品更新，Autopilot 直接嵌入 Teams/Outlook 工作流，企业级 AI 从"聊天工具"转向"24 小时在线员工"。<br />
-- 来源：<a href="https://finance.sina.cn/stock/jdts/2026-09-25/detail-initaaiv4385187.d.html">https://finance.sina.cn/stock/jdts/2026-09-25/detail-initaaiv4385187.d.html</a></p>
-<p><strong>2. OpenAI 即将预览网络安全专用模型 GPT-6 Cyber</strong><br />
-- 发生了什么：据《财富》杂志 9 月 24–25 日消息，OpenAI 计划在未来几天内预览 GPT-6 Cyber，并配套推出一款帮助客户安全、自动化部署该模型的新产品（安全网关）；该模型及产品预计 9 月 29 日旧金山开发者大会亮相，是 OpenAI 今年第四款网络安全专用模型，已有少量 Daybreak Red 计划客户进行 Alpha 测试。<br />
-- 为什么值得关注：OpenAI 正在把"安全"做成一个独立的模型产品线，同时开发者大会上预计还有十余款非安全类新品密集发布，下周将是 OpenAI 发布周。<br />
-- 来源：<a href="https://finance.sina.cn/stock/jdts/2026-09-25/detail-inisyuqf4700131.d.html">https://finance.sina.cn/stock/jdts/2026-09-25/detail-inisyuqf4700131.d.html</a></p>
-<p><strong>3. DeepSeek 降价：V4 闪模型输入价格下调 25%</strong><br />
-- 发生了什么：9 月 25 日，DeepSeek 将旗下三款 V4 模型的输入价格下调，闪模型版本降至每百万 token $0.03；同一天开源生态还有 DSPy 3.4（集成 Jev 决策模型）和 Pydantic AI v2.50.0 等工具发布。<br />
-- 为什么值得关注：紧接 GPT-6 Sol/Luna 与 Claude Opus 5.5 的降价潮，DeepSeek 再度压价，中美顶级实验室进入"降价换量"周期，AI 价格战已从上周打到本周。<br />
-- 来源：<a href="https://olud.ai/news/2026-09-25.html">https://olud.ai/news/2026-09-25.html</a></p>
-<p><strong>4. 行业观察：顶级实验室模型发布周期缩短至 44 天，AI 智能体正接管模型研发</strong><br />
-- 发生了什么：对 5 家美国公司和 4 家中国公司的调研显示，2026 年 4 月以来高性能模型平均发布间隔降至 44 天（2023 年 1 月–2026 年 3 月平均为 125 天），背后是 AI 智能体承担越来越多下一代模型的研发工作（如 OpenAI 内部爆料的 AI 自主训练 GPU 内核案例）。<br />
-- 为什么值得关注：模型发布从"季度事件"变成"月度例行"，下游集成商安全加固和外部评测的时间被压缩；AI 造 AI（RSI）正在从科幻变成需要监管应对的现实议题。<br />
-- 来源：<a href="https://www.ainewscrypto.com/news/ai-labs-cut-top-model-release-intervals-to-44-days-as-agents-take-on-core-rd-work">https://www.ainewscrypto.com/news/ai-labs-cut-top-model-release-intervals-to-44-days-as-agents-take-on-core-rd-work</a></p>
+<p><strong>1. 微软正式发布新版 Copilot"超级应用"，新增 Autopilot"数字队友"</strong></p>
+<ul>
+<li>发生了什么：9 月 25 日晚间，微软发布新版 Copilot，把聊天、编程、智能体三类能力整合到同一界面，分为 Home（聊天+协作）、Code（自然语言创建应用）、Autopilot（云端持续运行的"数字队友"，可在用户睡觉时继续执行任务）三个标签页；Autopilot 与 Code 采用按使用量计费，模型调用由自动模型选择器分配。</li>
+<li>为什么值得关注：这是巨头把 Agent 落地生产力场景的标志性产品更新，Autopilot 直接嵌入 Teams/Outlook 工作流，企业级 AI 从"聊天工具"转向"24 小时在线员工"。</li>
+<li>来源：<a href="https://finance.sina.cn/stock/jdts/2026-09-25/detail-initaaiv4385187.d.html">https://finance.sina.cn/stock/jdts/2026-09-25/detail-initaaiv4385187.d.html</a></li>
+</ul>
+<p><strong>2. OpenAI 即将预览网络安全专用模型 GPT-6 Cyber</strong></p>
+<ul>
+<li>发生了什么：据《财富》杂志 9 月 24–25 日消息，OpenAI 计划在未来几天内预览 GPT-6 Cyber，并配套推出一款帮助客户安全、自动化部署该模型的新产品（安全网关）；该模型及产品预计 9 月 29 日旧金山开发者大会亮相，是 OpenAI 今年第四款网络安全专用模型，已有少量 Daybreak Red 计划客户进行 Alpha 测试。</li>
+<li>为什么值得关注：OpenAI 正在把"安全"做成一个独立的模型产品线，同时开发者大会上预计还有十余款非安全类新品密集发布，下周将是 OpenAI 发布周。</li>
+<li>来源：<a href="https://finance.sina.cn/stock/jdts/2026-09-25/detail-inisyuqf4700131.d.html">https://finance.sina.cn/stock/jdts/2026-09-25/detail-inisyuqf4700131.d.html</a></li>
+</ul>
+<p><strong>3. DeepSeek 降价：V4 闪模型输入价格下调 25%</strong></p>
+<ul>
+<li>发生了什么：9 月 25 日，DeepSeek 将旗下三款 V4 模型的输入价格下调，闪模型版本降至每百万 token $0.03；同一天开源生态还有 DSPy 3.4（集成 Jev 决策模型）和 Pydantic AI v2.50.0 等工具发布。</li>
+<li>为什么值得关注：紧接 GPT-6 Sol/Luna 与 Claude Opus 5.5 的降价潮，DeepSeek 再度压价，中美顶级实验室进入"降价换量"周期，AI 价格战已从上周打到本周。</li>
+<li>来源：<a href="https://olud.ai/news/2026-09-25.html">https://olud.ai/news/2026-09-25.html</a></li>
+</ul>
+<p><strong>4. 行业观察：顶级实验室模型发布周期缩短至 44 天，AI 智能体正接管模型研发</strong></p>
+<ul>
+<li>发生了什么：对 5 家美国公司和 4 家中国公司的调研显示，2026 年 4 月以来高性能模型平均发布间隔降至 44 天（2023 年 1 月–2026 年 3 月平均为 125 天），背后是 AI 智能体承担越来越多下一代模型的研发工作（如 OpenAI 内部爆料的 AI 自主训练 GPU 内核案例）。</li>
+<li>为什么值得关注：模型发布从"季度事件"变成"月度例行"，下游集成商安全加固和外部评测的时间被压缩；AI 造 AI（RSI）正在从科幻变成需要监管应对的现实议题。</li>
+<li>来源：<a href="https://www.ainewscrypto.com/news/ai-labs-cut-top-model-release-intervals-to-44-days-as-agents-take-on-core-rd-work">https://www.ainewscrypto.com/news/ai-labs-cut-top-model-release-intervals-to-44-days-as-agents-take-on-core-rd-work</a></li>
+</ul>
 <hr />
-<p>备选条目（未入选前 4，但也在 24 小时窗口内）：<br />
-- 高通发布 Snapdragon 8 Elite Gen 6 端侧 AI 芯片（9 月 23 日）— 来源：<a href="https://dailyaibrief.com/newsletters/daily-ai-brief/2026-09-23-qualcomm-s-on-device-ai-chips-nscale-s-3bn-ipo-and-astroforge-s-spacecraft-daily-ai-brief-546">https://dailyaibrief.com/newsletters/daily-ai-brief/2026-09-23-qualcomm-s-on-device-ai-chips-nscale-s-3bn-ipo-and-astroforge-s-spacecraft-daily-ai-brief-546</a><br />
-- AI labs 降价战背景回顾（9 月 22 日：OpenAI GPT-6 Sol/Luna 与 Anthropic Claude Opus 5.5 同日发布、API 价格腰斩）— 来源：<a href="https://ai2roi.substack.com/p/ai-to-roi-news-and-analysis-september-780">https://ai2roi.substack.com/p/ai-to-roi-news-and-analysis-september-780</a></p>
+<p>备选条目（未入选前 4，但也在 24 小时窗口内）：</p>
+<ul>
+<li>高通发布 Snapdragon 8 Elite Gen 6 端侧 AI 芯片（9 月 23 日）— 来源：<a href="https://dailyaibrief.com/newsletters/daily-ai-brief/2026-09-23-qualcomm-s-on-device-ai-chips-nscale-s-3bn-ipo-and-astroforge-s-spacecraft-daily-ai-brief-546">https://dailyaibrief.com/newsletters/daily-ai-brief/2026-09-23-qualcomm-s-on-device-ai-chips-nscale-s-3bn-ipo-and-astroforge-s-spacecraft-daily-ai-brief-546</a></li>
+<li>AI labs 降价战背景回顾（9 月 22 日：OpenAI GPT-6 Sol/Luna 与 Anthropic Claude Opus 5.5 同日发布、API 价格腰斩）— 来源：<a href="https://ai2roi.substack.com/p/ai-to-roi-news-and-analysis-september-780">https://ai2roi.substack.com/p/ai-to-roi-news-and-analysis-september-780</a></li>
+</ul>
 <hr />
 <p>收集完成。以下为个人成长和爱情/亲密关系两个方面的精选内容：</p>
 <hr />
 <h2>🌱 个人成长（效率、习惯、思维、职业发展）</h2>
-<p><strong>1. Raj Shamani：最好的routine是「在状态最差那天也能执行的」</strong><br />
-- 内容摘要：印度创业者/播主 Raj Shamani 9月25日发布的一张文字帖："Stop looking for the 'ultimate routine' used by elite performers. The best routine is the one you can execute reliably even on your worst day."（别再找精英人士的"终极作息表"了，最好的作息是你最糟糕那天也能坚持下来的。）<br />
-- 为什么值得看：9月25日当天发、30K点赞，直接击中了大多数人"要么完美执行、要么全盘放弃"的心态，对制定可执行计划很有启发。<br />
-- 来源：<a href="https://www.instagram.com/p/Dds5pDOhSMo/">https://www.instagram.com/p/Dds5pDOhSMo/</a></p>
-<p><strong>2. Dan Martell：没人教你的10个习惯</strong><br />
-- 内容摘要：企业家 Dan Martell 9月20日视频列出10个反常识习惯：给睡觉设闹钟而不是给起床设闹钟、不看新闻、更多地说"不"、取关现实中不会打招呼的人、健身可以跳过一天但绝不能连跳两天等。<br />
-- 为什么值得看：简短实操、多数习惯"睡前/社交边界"维度常见清单都覆盖不到，适合早上快速扫一遍对照。<br />
-- 来源：<a href="https://www.instagram.com/reel/DdhCtODBPY8/">https://www.instagram.com/reel/DdhCtODBPY8/</a></p>
-<p><strong>3. Alex Hormozi：超越99%的人很简单但不容易</strong><br />
-- 内容摘要：Alex Hormozi 9月22日帖子，给出九条基础习惯：早到、快速跟进、提前准备、记住别人的名字、提供价值、不犯重复的错误、敢于拒绝、能承担责任、稳定输出。<br />
-- 为什么值得看：把"复利式执行力"拆解成无门槛动作清单，适合反复对照执行，比任何方法论都直白。<br />
-- 来源：<a href="https://www.facebook.com/ahormozi/posts/pfbid02vK9AvEnrNBVmGxizevPw5gC7Z7D2usuJGZXUVYSvDuJ7VnE5LgPVLdeBo1PxzKNDl">https://www.facebook.com/ahormozi/posts/pfbid02vK9AvEnrNBVmGxizevPw5gC7Z7D2usuJGZXUVYSvDuJ7VnE5LgPVLdeBo1PxzKNDl</a></p>
-<p><strong>4. 文章：高绩效人士在2026年真正使用的7个效率系统</strong><br />
-- 内容摘要：9月初发布的Medium长文，核心是"用系统保护注意力"：90分钟深度工作块（当日排2-3个即可）、固定每周复盘（周五下午或周日晚上30-45分钟）等，强调高产不是工作更久而是打断更少。<br />
-- 为什么值得看：结合了2026年AI工具时代的注意力管理方案，信息量比短视频帖子完整，适合花5分钟精读。<br />
-- 来源：<a href="https://medium.com/@shurahbeelhamid/7-productivity-systems-that-high-performing-professionals-actually-use-in-2026-e0b0806b9e4f">https://medium.com/@shurahbeelhamid/7-productivity-systems-that-high-performing-professionals-actually-use-in-2026-e0b0806b9e4f</a></p>
+<p><strong>1. Raj Shamani：最好的routine是「在状态最差那天也能执行的」</strong></p>
+<ul>
+<li>内容摘要：印度创业者/播主 Raj Shamani 9月25日发布的一张文字帖："Stop looking for the 'ultimate routine' used by elite performers. The best routine is the one you can execute reliably even on your worst day."（别再找精英人士的"终极作息表"了，最好的作息是你最糟糕那天也能坚持下来的。）</li>
+<li>为什么值得看：9月25日当天发、30K点赞，直接击中了大多数人"要么完美执行、要么全盘放弃"的心态，对制定可执行计划很有启发。</li>
+<li>来源：<a href="https://www.instagram.com/p/Dds5pDOhSMo/">https://www.instagram.com/p/Dds5pDOhSMo/</a></li>
+</ul>
+<p><strong>2. Dan Martell：没人教你的10个习惯</strong></p>
+<ul>
+<li>内容摘要：企业家 Dan Martell 9月20日视频列出10个反常识习惯：给睡觉设闹钟而不是给起床设闹钟、不看新闻、更多地说"不"、取关现实中不会打招呼的人、健身可以跳过一天但绝不能连跳两天等。</li>
+<li>为什么值得看：简短实操、多数习惯"睡前/社交边界"维度常见清单都覆盖不到，适合早上快速扫一遍对照。</li>
+<li>来源：<a href="https://www.instagram.com/reel/DdhCtODBPY8/">https://www.instagram.com/reel/DdhCtODBPY8/</a></li>
+</ul>
+<p><strong>3. Alex Hormozi：超越99%的人很简单但不容易</strong></p>
+<ul>
+<li>内容摘要：Alex Hormozi 9月22日帖子，给出九条基础习惯：早到、快速跟进、提前准备、记住别人的名字、提供价值、不犯重复的错误、敢于拒绝、能承担责任、稳定输出。</li>
+<li>为什么值得看：把"复利式执行力"拆解成无门槛动作清单，适合反复对照执行，比任何方法论都直白。</li>
+<li>来源：<a href="https://www.facebook.com/ahormozi/posts/pfbid02vK9AvEnrNBVmGxizevPw5gC7Z7D2usuJGZXUVYSvDuJ7VnE5LgPVLdeBo1PxzKNDl">https://www.facebook.com/ahormozi/posts/pfbid02vK9AvEnrNBVmGxizevPw5gC7Z7D2usuJGZXUVYSvDuJ7VnE5LgPVLdeBo1PxzKNDl</a></li>
+</ul>
+<p><strong>4. 文章：高绩效人士在2026年真正使用的7个效率系统</strong></p>
+<ul>
+<li>内容摘要：9月初发布的Medium长文，核心是"用系统保护注意力"：90分钟深度工作块（当日排2-3个即可）、固定每周复盘（周五下午或周日晚上30-45分钟）等，强调高产不是工作更久而是打断更少。</li>
+<li>为什么值得看：结合了2026年AI工具时代的注意力管理方案，信息量比短视频帖子完整，适合花5分钟精读。</li>
+<li>来源：<a href="https://medium.com/@shurahbeelhamid/7-productivity-systems-that-high-performing-professionals-actually-use-in-2026-e0b0806b9e4f">https://medium.com/@shurahbeelhamid/7-productivity-systems-that-high-performing-professionals-actually-use-in-2026-e0b0806b9e4f</a></li>
+</ul>
 <hr />
 <h2>💛 爱情/亲密关系</h2>
-<p><strong>1. Sanusha PS（心理咨询师）：爱本身不足以维持一段关系</strong><br />
-- 内容摘要：9月23日视频（30K点赞），用马来语讲解：长期关系里"小事的影响比想象大"、吵架要以理解为目标而不是争输赢、批评会摧毁关系而欣赏能滋养关系，要主动选择承诺而不是只靠感觉。<br />
-- 为什么值得看：观点都来自咨询实践、落地性强，"吵架是为了理解不是为了赢"一句胜过很多情感鸡汤。<br />
-- 来源：<a href="https://www.instagram.com/reel/DdojFQTyE3Q/">https://www.instagram.com/reel/DdojFQTyE3Q/</a></p>
-<p><strong>2. 爆款帖（82K点赞）：长期关系要准备好迎接"无聊的日子"</strong><br />
-- 内容摘要：9月23日的文字帖，引用 @lowkeyalbert 的话："If you want a long term relationship make sure that you're ready for the boring days, tears &amp; arguments. It's not all about happiness."（想要长期关系，先准备好面对无聊、眼泪和争吵，它不全是快乐。）<br />
-- 为什么值得看：82K点赞说明共鸣极强，用一句话完成了"反浪漫滤镜"教育，适合提醒自己/转发给伴侣。<br />
-- 来源：<a href="https://www.instagram.com/p/Ddol0nxDIXM/">https://www.instagram.com/p/Ddol0nxDIXM/</a></p>
-<p><strong>3. 治疗师 Jeffrey Meltzer：焦虑—回避依恋循环</strong><br />
-- 内容摘要：9月24日视频，持证治疗师用分屏动画讲清焦虑型—回避型的经典循环：回避型躲避情绪对话、压抑感受；焦虑型因受不了不确定而反复求证"我们没事吧"——双方都在寻找安全感。<br />
-- 为什么值得看：1分半把依恋理论讲得极清楚，看完马上能对号入座、理解冲突根源，是本期情感类最有干货的帖子。<br />
-- 来源：<a href="https://www.instagram.com/reel/DdsFmhEBK1B/">https://www.instagram.com/reel/DdsFmhEBK1B/</a></p>
-<p><strong>4. 文章（Psychology Today）：感觉关系不安全时，用"对的"共同活动修复</strong><br />
-- 内容摘要：引用2026年《Social Psychological and Personality Science》研究：想拉近距离但没法物理独处时，试试和伴侣做"新奇有趣"的事（新菜谱、新旅行）；感到焦虑、想要确认关系稳定时，反而要做"熟悉routine"的事（如一起看熟悉的剧）——活动类型要按需求对症下药。<br />
-- 为什么值得看：基于最新同行评审研究、建议具体可执行，比泛泛的"好好沟通"更有实操价值。<br />
-- 来源：<a href="https://www.psychologytoday.com/us/blog/closer-encounters/202603/two-solutions-for-when-youre-feeling-insecurely-attached">https://www.psychologytoday.com/us/blog/closer-encounters/202603/two-solutions-for-when-youre-feeling-insecurely-attached</a></p>
+<p><strong>1. Sanusha PS（心理咨询师）：爱本身不足以维持一段关系</strong></p>
+<ul>
+<li>内容摘要：9月23日视频（30K点赞），用马来语讲解：长期关系里"小事的影响比想象大"、吵架要以理解为目标而不是争输赢、批评会摧毁关系而欣赏能滋养关系，要主动选择承诺而不是只靠感觉。</li>
+<li>为什么值得看：观点都来自咨询实践、落地性强，"吵架是为了理解不是为了赢"一句胜过很多情感鸡汤。</li>
+<li>来源：<a href="https://www.instagram.com/reel/DdojFQTyE3Q/">https://www.instagram.com/reel/DdojFQTyE3Q/</a></li>
+</ul>
+<p><strong>2. 爆款帖（82K点赞）：长期关系要准备好迎接"无聊的日子"</strong></p>
+<ul>
+<li>内容摘要：9月23日的文字帖，引用 @lowkeyalbert 的话："If you want a long term relationship make sure that you're ready for the boring days, tears &amp; arguments. It's not all about happiness."（想要长期关系，先准备好面对无聊、眼泪和争吵，它不全是快乐。）</li>
+<li>为什么值得看：82K点赞说明共鸣极强，用一句话完成了"反浪漫滤镜"教育，适合提醒自己/转发给伴侣。</li>
+<li>来源：<a href="https://www.instagram.com/p/Ddol0nxDIXM/">https://www.instagram.com/p/Ddol0nxDIXM/</a></li>
+</ul>
+<p><strong>3. 治疗师 Jeffrey Meltzer：焦虑—回避依恋循环</strong></p>
+<ul>
+<li>内容摘要：9月24日视频，持证治疗师用分屏动画讲清焦虑型—回避型的经典循环：回避型躲避情绪对话、压抑感受；焦虑型因受不了不确定而反复求证"我们没事吧"——双方都在寻找安全感。</li>
+<li>为什么值得看：1分半把依恋理论讲得极清楚，看完马上能对号入座、理解冲突根源，是本期情感类最有干货的帖子。</li>
+<li>来源：<a href="https://www.instagram.com/reel/DdsFmhEBK1B/">https://www.instagram.com/reel/DdsFmhEBK1B/</a></li>
+</ul>
+<p><strong>4. 文章（Psychology Today）：感觉关系不安全时，用"对的"共同活动修复</strong></p>
+<ul>
+<li>内容摘要：引用2026年《Social Psychological and Personality Science》研究：想拉近距离但没法物理独处时，试试和伴侣做"新奇有趣"的事（新菜谱、新旅行）；感到焦虑、想要确认关系稳定时，反而要做"熟悉routine"的事（如一起看熟悉的剧）——活动类型要按需求对症下药。</li>
+<li>为什么值得看：基于最新同行评审研究、建议具体可执行，比泛泛的"好好沟通"更有实操价值。</li>
+<li>来源：<a href="https://www.psychologytoday.com/us/blog/closer-encounters/202603/two-solutions-for-when-youre-feeling-insecurely-attached">https://www.psychologytoday.com/us/blog/closer-encounters/202603/two-solutions-for-when-youre-feeling-insecurely-attached</a></li>
+</ul>
 <hr />
 <p><strong>备注</strong>：个人成长共4条（3社交+1文章），爱情共4条（3社交+1文章），全部在9月19日至今的一周内发布（除文章类外），链接均为可直接打开的完整URL。</p>
 <div class="nav bottom"><span></span><a href="index.html">📚 回到目录</a><a href="issue-002.html">下一期（第2期）➡</a></div>

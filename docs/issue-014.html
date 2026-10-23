@@ -57,6 +57,44 @@ body.dark .note { color: #a39a89; }
 body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
 body.dark th { background: #262219; }
+.summary { background:#edf3fd; border-left:4px solid #1757c2; border-radius:6px; padding:12px 16px; }
+.blessing { text-align: center; color: #8a3324; font-size: 1.07em; font-weight: 600;
+            letter-spacing: 0.04em; margin: 0 0 16px; }
+.sec-label { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+             font-weight: 700; margin: 0 0 6px; font-size: 0.98em; letter-spacing: 0.03em; }
+.glossary { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 6px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.vocabbox .sec-label { color: #1757c2; }
+.vocabbox ul { list-style: none; padding-left: 0; margin: 6px 0 4px; }
+li.vocab { padding: 10px 0 12px; border-bottom: 1px dashed #ddd5bd; margin: 0; }
+li.vocab:last-child { border-bottom: none; }
+.vword { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         font-weight: 800; font-size: 1.12em; color: #1757c2; margin-right: 6px; }
+.vmean { font-weight: 700; }
+.vrow { font-size: 0.93em; color: #4a463e; margin-top: 3px; line-height: 1.8; }
+.vlabel { display: inline-block; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
+          padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
+.vquote { color: #6b6257; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources .sec-label { color: #5a554c; }
+.sources ul { margin: 4px 0; }
+h3::before { content: "▍"; color: #8a3324; }
+body.dark .blessing { color: #e0a458; }
+body.dark .glossary { background: #262219; }
+body.dark .vocabbox { background: #1d1b16; border-color: #3a362a; }
+body.dark li.vocab { border-bottom-color: #3a362a; }
+body.dark .vword { color: #8ab8ff; }
+body.dark .vrow { color: #c9c2b2; }
+body.dark .vlabel { background: #33302a; color: #e0c98a; }
+body.dark .vquote { color: #a39a89; }
+body.dark .summary { background: #1c2733; border-left-color: #8ab8ff; }
+body.dark .sources { color: #a39a89; }
+body.dark h3::before { color: #e0a458; }
 body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
@@ -67,6 +105,7 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📚 《麻薯日报》合集 · 第 14 期 · 2026-10-10（星期六）</p>
 </blockquote>
 <h1>📰 10月10日 新闻简报</h1>
+<p class="blessing">🌅 愿平安喜乐，万事胜意，今天也是被爱包围的一天。</p>
 <p>早安 Ricardo ☀️ 周六快乐！今天是 2026 年 10 月 10 日，你的晨间简报来了——美联储官员轮番"放鹰"、美股牛市将满四岁、Anthropic 小模型降价九成开打价格战、GPT-6 换上"智能界面"、美国制裁国际刑事法院、特朗普说中期选举前不打伊朗、隆基×蔚来在戈壁建起全球首个零碳离网换电站。国内看：中央发文挺"新质生产力"、国庆 8.26 亿人次出游、铁路发送旅客破 3 亿。慢慢看 ☕</p>
 <hr />
 <h2>💰 金融</h2>
@@ -82,34 +121,38 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 牛市——股票持续上涨的行情（涨超 20% 通常算进入牛市），和"熊市"（持续下跌）相对；② 标普 500——美国 500 家大公司的股价指数，是美股的"体温计"；③ 美债收益率——美国政府借钱的"利息"，越高说明借钱越贵，通常压制股市；④ 估值——市场给一家公司/股票定的"身价"，太贵就叫"估值过高"，容易回调；⑤ 中期选举——美国总统任期中间的国会选举（今年 11 月 3 日），结果影响政策走向，市场一般会提前紧张。</p>
 <p><strong>一句话总结</strong>：四年牛市全靠 AI 撑着，但加息和选举不确定性正在逼近，"容易的钱"已经赚完，接下来要看 AI 能不能真的赚到钱。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/legal/transactional/ai-centered-us-stock-bull-market-nears-four-year-anniversary-2026-10-09/">Reuters（10-09）</a></p>
-<p>📖 生词：<br />
-- <strong>bull market</strong>（牛市）| ride a bull market | The bull market nears its fourth anniversary. | "Bull markets are born on pessimism, grow on skepticism, mature on optimism, and die on euphoria." —— John Templeton<br />
-- <strong>anniversary</strong>（周年纪念）| mark the anniversary | October 12 marks four years since the cycle low. | "Time is the wisest counselor of all." —— Pericles<br />
-- <strong>propel</strong>（推动）| be propelled by sth. | AI spending is propelling corporate profits. | "The best way to predict the future is to create it." —— Peter Drucker<br />
-- <strong>optimism</strong>（乐观情绪）| investor optimism | Strong earnings fuel investor optimism. | "Optimism is the faith that leads to achievement." —— Helen Keller<br />
-- <strong>loom</strong>（隐现，逼近）| risks loom | Risks loom over the rally. | "Difficulties are meant to rouse, not discourage." —— William Ellery Channing<br />
-- <strong>sap</strong>（削弱，耗尽）| sap momentum | Rate hikes could sap market momentum. | 未找到<br />
-- <strong>momentum</strong>（势头）| lose momentum | The rally could lose momentum. | "Success is not final, failure is not fatal: it is the courage to continue that counts." —— Winston Churchill<br />
-- <strong>valuation</strong>（估值）| stretched valuations | Stretched AI valuations worry analysts. | "Price is what you pay. Value is what you get." —— Warren Buffett<br />
-- <strong>midterm</strong>（中期选举）| midterm elections | Volatility may rise ahead of the midterms. | 未找到<br />
-- <strong>punish</strong>（重创）| be severely punished | Any AI weakness would be severely punished. | "In the short run, the market is a voting machine but in the long run, it is a weighing machine." —— Benjamin Graham</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>bull market</strong>（牛市）| ride a bull market | The bull market nears its fourth anniversary. | "Bull markets are born on pessimism, grow on skepticism, mature on optimism, and die on euphoria." —— John Templeton</li>
+<li><strong>anniversary</strong>（周年纪念）| mark the anniversary | October 12 marks four years since the cycle low. | "Time is the wisest counselor of all." —— Pericles</li>
+<li><strong>propel</strong>（推动）| be propelled by sth. | AI spending is propelling corporate profits. | "The best way to predict the future is to create it." —— Peter Drucker</li>
+<li><strong>optimism</strong>（乐观情绪）| investor optimism | Strong earnings fuel investor optimism. | "Optimism is the faith that leads to achievement." —— Helen Keller</li>
+<li><strong>loom</strong>（隐现，逼近）| risks loom | Risks loom over the rally. | "Difficulties are meant to rouse, not discourage." —— William Ellery Channing</li>
+<li><strong>sap</strong>（削弱，耗尽）| sap momentum | Rate hikes could sap market momentum. | 未找到</li>
+<li><strong>momentum</strong>（势头）| lose momentum | The rally could lose momentum. | "Success is not final, failure is not fatal: it is the courage to continue that counts." —— Winston Churchill</li>
+<li><strong>valuation</strong>（估值）| stretched valuations | Stretched AI valuations worry analysts. | "Price is what you pay. Value is what you get." —— Warren Buffett</li>
+<li><strong>midterm</strong>（中期选举）| midterm elections | Volatility may rise ahead of the midterms. | 未找到</li>
+<li><strong>punish</strong>（重创）| be severely punished | Any AI weakness would be severely punished. | "In the short run, the market is a voting machine but in the long run, it is a weighing machine." —— Benjamin Graham</li>
+</ul>
 <h3>3. 美股基金单周净流出 51 亿美元：钱在"逃离"股票，涌向债券和货币基金</h3>
 <p><strong>发生了什么</strong>：路透引 LSEG Lipper 数据：截至 10 月 7 日的一周，美国股票基金净流出 51.1 亿美元，是 9 月 16 日以来首次单周净流出——投资者在标普 500 创下 7844 点历史新高后选择"落袋为安"。与此同时，美国债券基金单周吸金 197.8 亿美元创纪录，货币市场基金更是涌入 684.9 亿美元。导火索是债市大跌把十年期美债收益率推到 5.36%（2002 年 4 月以来最高），加上原油涨破 104 美元，通胀担忧再起。</p>
 <p><strong>为什么值得关注</strong>："聪明钱"正在用脚投票——从股票撤退、躲进债券和现金，说明机构对高利率+高油价的组合很警惕。这是判断市场情绪冷暖的"温度计"。</p>
 <p><strong>名词解释</strong>：① 资金流出/流入——钱从基金"赎回"叫流出，"申购"叫流入，反映投资者情绪；② 落袋为安——涨多了先卖掉把利润装进口袋，怕后面跌回去；③ 货币市场基金——几乎零风险的"现金停车场"，利率高时特别香；④ 避风港——市场害怕时资金躲的地方（国债、黄金、现金）；⑤ 净流出——流出减去流入后的净值，"单周净流出 51 亿"就是说这一周总体跑了 51 亿。</p>
 <p><strong>一句话总结</strong>：美股创新高后，机构反而在卖股票买债券囤现金——高利率和油价让"聪明钱"先躲为敬。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/business/us-equity-funds-witness-first-weekly-outflow-three-weeks-2026-10-09/">Reuters（10-09）</a></p>
-<p>📖 生词：<br />
-- <strong>outflow</strong>（资金流出）| capital outflows | Equity funds saw $5.11bn in outflows. | 未找到<br />
-- <strong>lock in</strong>（锁定，落袋为安）| lock in profits | Investors locked in profits during the rally. | "A bird in the hand is worth two in the bush." —— 英语谚语<br />
-- <strong>record high</strong>（历史新高）| hit a record high | The S&amp;P hit a record high of 7,844. | "Records are made to be broken." —— 英语谚语<br />
-- <strong>tumble</strong>（暴跌）| shares tumbled | Tech shares tumbled on rate fears. | "What goes up must come down." —— 英语谚语<br />
-- <strong>weigh on</strong>（拖累，打压）| weigh on sentiment | High yields weighed on sentiment. | "Heavy is the head that wears the crown." —— Shakespeare《亨利四世》<br />
-- <strong>sentiment</strong>（市场情绪）| market sentiment | Sentiment turned cautious. | "Be fearful when others are greedy, and greedy when others are fearful." —— Warren Buffett<br />
-- <strong>reverse</strong>（逆转）| reverse a trend | Money-market flows reversed sharply. | "The only constant in life is change." —— Heraclitus<br />
-- <strong>pour into</strong>（涌入）| pour money into sth. | Investors poured $68bn into money-market funds. | "Don't put all your eggs in one basket." —— 英语谚语<br />
-- <strong>safe haven</strong>（避风港）| seek safe havens | Investors sought safe havens in bonds. | "A ship in harbor is safe, but that is not what ships are built for." —— John A. Shedd<br />
-- <strong>net</strong>（净的）| net sales | Funds posted their first weekly net sales since mid-September. | "What gets measured gets managed." —— Peter Drucker</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>outflow</strong>（资金流出）| capital outflows | Equity funds saw $5.11bn in outflows. | 未找到</li>
+<li><strong>lock in</strong>（锁定，落袋为安）| lock in profits | Investors locked in profits during the rally. | "A bird in the hand is worth two in the bush." —— 英语谚语</li>
+<li><strong>record high</strong>（历史新高）| hit a record high | The S&amp;P hit a record high of 7,844. | "Records are made to be broken." —— 英语谚语</li>
+<li><strong>tumble</strong>（暴跌）| shares tumbled | Tech shares tumbled on rate fears. | "What goes up must come down." —— 英语谚语</li>
+<li><strong>weigh on</strong>（拖累，打压）| weigh on sentiment | High yields weighed on sentiment. | "Heavy is the head that wears the crown." —— Shakespeare《亨利四世》</li>
+<li><strong>sentiment</strong>（市场情绪）| market sentiment | Sentiment turned cautious. | "Be fearful when others are greedy, and greedy when others are fearful." —— Warren Buffett</li>
+<li><strong>reverse</strong>（逆转）| reverse a trend | Money-market flows reversed sharply. | "The only constant in life is change." —— Heraclitus</li>
+<li><strong>pour into</strong>（涌入）| pour money into sth. | Investors poured $68bn into money-market funds. | "Don't put all your eggs in one basket." —— 英语谚语</li>
+<li><strong>safe haven</strong>（避风港）| seek safe havens | Investors sought safe havens in bonds. | "A ship in harbor is safe, but that is not what ships are built for." —— John A. Shedd</li>
+<li><strong>net</strong>（净的）| net sales | Funds posted their first weekly net sales since mid-September. | "What gets measured gets managed." —— Peter Drucker</li>
+</ul>
 <hr />
 <h2>🤖 AI</h2>
 <h3>1. Anthropic Claude Haiku 5.5 发布：小模型降价 90%，AI 问答越来越便宜</h3>
@@ -118,51 +161,57 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① Token——AI 按"字块"计费的单位，10 万 token 约等于 7–8 万英文单词；② 推理成本——AI 每次回答问题消耗的算力成本，模型越小越便宜；③ 基准测试（Benchmark）——给模型出的"统考卷"，用来横向比较谁更强；④ API 额度——开发者调用模型的"充值余额"，按量扣费；⑤ 缓存读取——重复问类似问题时直接读"记忆"，比重新算便宜得多。</p>
 <p><strong>一句话总结</strong>：Anthropic 把小模型价格打到"骨折"，AI 的"自来水价"时代又近了一步。</p>
 <p>🔗 来源：<a href="https://www.pymnts.com/news/artificial-intelligence/2026/ai-answers-get-cheaper-as-model-choices-multiply/">PYMNTS（10-08）</a></p>
-<p>📖 生词：<br />
-- <strong>slash</strong>（大幅削减）| slash prices | Anthropic slashed prices by 90%. | "Less is more." —— Mies van der Rohe<br />
-- <strong>predecessor</strong>（前代，前任）| its predecessor | It costs a tenth of its predecessor. | "If I have seen further, it is by standing on the shoulders of giants." —— Isaac Newton<br />
-- <strong>effort level</strong>（思考强度档）| five effort levels | Users can choose among five effort levels. | "Genius is one percent inspiration and ninety-nine percent perspiration." —— Thomas Edison<br />
-- <strong>lookup</strong>（查询，查找）| data lookups | The model handles quick data lookups. | "Knowledge is power." —— Francis Bacon<br />
-- <strong>benchmark</strong>（基准测试）| beat the benchmark | It beat its rival on every benchmark. | "What gets measured gets improved." —— Peter Drucker<br />
-- <strong>outscore</strong>（得分超过）| outscore rivals | Haiku 5.5 outscored Luna 72.4% to 48.9%. | "Winning isn't everything, it's the only thing." —— Vince Lombardi<br />
-- <strong>debut</strong>（首次亮相）| make its debut | The model made its debut on Wednesday. | "Every new beginning comes from some other beginning's end." —— Seneca<br />
-- <strong>credit</strong>（额度）| API credits | Subscribers get $100–$500 in monthly credits. | "Credit is a system whereby a person who can't pay gets another person who can't pay to guarantee that he can pay." —— Charles Dickens<br />
-- <strong>cliff</strong>（悬崖，陡变点）| pricing cliff | Users flagged the 100K-token pricing cliff. | "Look before you leap." —— 英语谚语<br />
-- <strong>flagship</strong>（旗舰）| flagship model | Opus 5.5 is Anthropic's flagship model. | "A ship in harbor is safe, but that is not what ships are built for." —— John A. Shedd</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>slash</strong>（大幅削减）| slash prices | Anthropic slashed prices by 90%. | "Less is more." —— Mies van der Rohe</li>
+<li><strong>predecessor</strong>（前代，前任）| its predecessor | It costs a tenth of its predecessor. | "If I have seen further, it is by standing on the shoulders of giants." —— Isaac Newton</li>
+<li><strong>effort level</strong>（思考强度档）| five effort levels | Users can choose among five effort levels. | "Genius is one percent inspiration and ninety-nine percent perspiration." —— Thomas Edison</li>
+<li><strong>lookup</strong>（查询，查找）| data lookups | The model handles quick data lookups. | "Knowledge is power." —— Francis Bacon</li>
+<li><strong>benchmark</strong>（基准测试）| beat the benchmark | It beat its rival on every benchmark. | "What gets measured gets improved." —— Peter Drucker</li>
+<li><strong>outscore</strong>（得分超过）| outscore rivals | Haiku 5.5 outscored Luna 72.4% to 48.9%. | "Winning isn't everything, it's the only thing." —— Vince Lombardi</li>
+<li><strong>debut</strong>（首次亮相）| make its debut | The model made its debut on Wednesday. | "Every new beginning comes from some other beginning's end." —— Seneca</li>
+<li><strong>credit</strong>（额度）| API credits | Subscribers get $100–$500 in monthly credits. | "Credit is a system whereby a person who can't pay gets another person who can't pay to guarantee that he can pay." —— Charles Dickens</li>
+<li><strong>cliff</strong>（悬崖，陡变点）| pricing cliff | Users flagged the 100K-token pricing cliff. | "Look before you leap." —— 英语谚语</li>
+<li><strong>flagship</strong>（旗舰）| flagship model | Opus 5.5 is Anthropic's flagship model. | "A ship in harbor is safe, but that is not what ships are built for." —— John A. Shedd</li>
+</ul>
 <h3>2. OpenAI GPT-6 来了：回答会自动排版成卡片清单，但安全测试出现倒退</h3>
 <p><strong>发生了什么</strong>：OpenAI 在 10 月 7 日向所有人推出 GPT-6，主打"Intelligent UI"——回答不再是纯文字，会自动渲染成清单、卡片、图表甚至小工具（比如问分账直接生成计算器）。付费版用 GPT-6 Sol，免费版用 GPT-6 Luna。但系统卡片里承认：相比 GPT-5.6，自残和极端主义相关评估出现"统计显著的倒退"。Hacker News 上吐槽不少：有人觉得花里胡哨的排版"居高临下、把人当小孩"；也有人指出，这很可能是在为 OpenAI 几天前宣布的"聊天内嵌广告"铺路——版面大了，广告位才多。</p>
 <p><strong>为什么值得关注</strong>：AI 助手正在从"聊天框"变成"工作台"——以后问 AI 要的不只是答案，而是一个能直接用的小工具。但"安全倒退+广告植入"的组合也提醒我们：免费的东西，往往你在付别的账。</p>
 <p><strong>名词解释</strong>：① 智能界面（Intelligent UI）——AI 把回答自动排成可交互的卡片/清单/小工具，而不是一坨文字；② 系统卡片——AI 公司发布的"体检报告"，公开模型的能力和已知问题；③ 统计显著——不是偶然波动，而是数据上"真的变差了"；④ 聊天内嵌广告——在 AI 回答里插广告，OpenAI 新的赚钱方式；⑤ 免费版/付费版——这次免费和付费用的是不同档位的模型（Luna vs Sol），能力有差。</p>
 <p><strong>一句话总结</strong>：GPT-6 让 AI 回答"更好看更好用"，但安全分数掉了、广告要来了——好看背后有代价。</p>
 <p>🔗 来源：<a href="https://ai0.news/posts/2026-10-08-daily-digest/">ai0.news（10-08 每日 AI 摘要）</a></p>
-<p>📖 生词：<br />
-- <strong>intelligent</strong>（智能的）| intelligent UI | GPT-6 ships with an "Intelligent UI". | "The true sign of intelligence is not knowledge but imagination." —— Albert Einstein<br />
-- <strong>interactive</strong>（可交互的）| interactive layouts | Responses become interactive layouts. | 未找到<br />
-- <strong>layout</strong>（版式，布局）| card layouts | Answers render as cards and checklists. | "Design is intelligence made visible." —— Alina Wheeler<br />
-- <strong>checklist</strong>（清单）| render as checklists | Ask for a bill and get a checklist tool. | "Failing to plan is planning to fail." —— Benjamin Franklin<br />
-- <strong>acknowledge</strong>（承认）| acknowledge a problem | The system card acknowledges regressions. | "Honesty is the first chapter in the book of wisdom." —— Thomas Jefferson<br />
-- <strong>statistically significant</strong>（统计显著的）| statistically significant regressions | Safety tests showed statistically significant regressions. | "There are three kinds of lies: lies, damned lies, and statistics." —— Mark Twain<br />
-- <strong>mathematician</strong>（数学家）| real mathematicians | The results won over real mathematicians. | "Mathematics is the music of reason." —— James Joseph Sylvester<br />
-- <strong>advertising</strong>（广告）| in-chat advertising | In-chat ads may fund the new UI. | "Advertising is the art of convincing people to spend money they don't have on things they don't need." —— Will Rogers<br />
-- <strong>condescending</strong>（居高临下的）| sound condescending | Users called the output condescending. | 未找到<br />
-- <strong>makeover</strong>（改头换面）| a UI makeover | GPT-6 arrived with a UI makeover. | "A change is as good as a rest." —— 英语谚语</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>intelligent</strong>（智能的）| intelligent UI | GPT-6 ships with an "Intelligent UI". | "The true sign of intelligence is not knowledge but imagination." —— Albert Einstein</li>
+<li><strong>interactive</strong>（可交互的）| interactive layouts | Responses become interactive layouts. | 未找到</li>
+<li><strong>layout</strong>（版式，布局）| card layouts | Answers render as cards and checklists. | "Design is intelligence made visible." —— Alina Wheeler</li>
+<li><strong>checklist</strong>（清单）| render as checklists | Ask for a bill and get a checklist tool. | "Failing to plan is planning to fail." —— Benjamin Franklin</li>
+<li><strong>acknowledge</strong>（承认）| acknowledge a problem | The system card acknowledges regressions. | "Honesty is the first chapter in the book of wisdom." —— Thomas Jefferson</li>
+<li><strong>statistically significant</strong>（统计显著的）| statistically significant regressions | Safety tests showed statistically significant regressions. | "There are three kinds of lies: lies, damned lies, and statistics." —— Mark Twain</li>
+<li><strong>mathematician</strong>（数学家）| real mathematicians | The results won over real mathematicians. | "Mathematics is the music of reason." —— James Joseph Sylvester</li>
+<li><strong>advertising</strong>（广告）| in-chat advertising | In-chat ads may fund the new UI. | "Advertising is the art of convincing people to spend money they don't have on things they don't need." —— Will Rogers</li>
+<li><strong>condescending</strong>（居高临下的）| sound condescending | Users called the output condescending. | 未找到</li>
+<li><strong>makeover</strong>（改头换面）| a UI makeover | GPT-6 arrived with a UI makeover. | "A change is as good as a rest." —— 英语谚语</li>
+</ul>
 <h3>3. Mistral Large 4 开启预览：欧洲万亿参数模型的"肌肉秀"</h3>
 <p><strong>发生了什么</strong>：法国 Mistral AI 在 10 月 6 日开放旗舰模型 Mistral Large 4（代号"Le Chonk"）的公开预览：总参数 1.05 万亿、每次推理激活 490 亿，原生多模态（文字图像都能吃），在自家欧洲数据中心的 3800 块英伟达 Grace Blackwell 芯片上从零训练。目前只能通过带护栏的 API 试用，权重计划 10 月底前发布（路透称是 10 月 27 日）。第三方评测给它的"智力指数"打了 38 分、输出速度约 116 token/秒。Mistral 自称这是"欧洲主权 AI"的代表作。</p>
 <p><strong>为什么值得关注</strong>：中美之外，欧洲终于拿出了参数量级的"旗舰"——而且是开源路线（权重本月就放）。AI 竞赛正在变成"三极"：美国闭源巨头、中国开源群狼、欧洲主权路线。对开发者来说，又多了一个可本地部署的强力选项。</p>
 <p><strong>名词解释</strong>：① 参数——AI 模型的"脑细胞数量"，1 万亿参数≈非常大，越大通常越聪明也越贵；② 原生多模态——生来就能同时处理文字、图像等多种输入，不是后天"外挂"的；③ 公开预览——先放出来给大家试用，但还没正式发布；④ 开放权重——把模型的"大脑文件"公开，任何人都能下载自己部署，这是开源 AI 的核心；⑤ 主权 AI——一国/一地区自己掌控的 AI 能力，不用看美国巨头脸色。</p>
 <p><strong>一句话总结</strong>：欧洲把"万亿参数+开源"的大招摆上了台面，AI 世界从此有了第三极。</p>
 <p>🔗 来源：<a href="https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html">Local AI Zone（10 月模型更新追踪）</a></p>
-<p>📖 生词：<br />
-- <strong>preview</strong>（预览，抢先体验）| public preview | The model launched in public preview. | "The future depends on what you do today." —— Mahatma Gandhi<br />
-- <strong>parameter</strong>（参数）| 1 trillion parameters | It has 1 trillion total parameters. | "Everything should be made as simple as possible, but not simpler." —— Albert Einstein<br />
-- <strong>multimodal</strong>（多模态的）| multimodal input | The model processes multimodal input. | "I hear and I forget. I see and I remember." —— 孔子<br />
-- <strong>native</strong>（原生的，天生的）| natively multimodal | It is natively multimodal. | "Home is where the heart is." —— 英语谚语<br />
-- <strong>guardrail</strong>（护栏，防护机制）| guardrailed access | Access is a guardrailed preview API. | "Good fences make good neighbors." —— Robert Frost<br />
-- <strong>benchmark</strong>（基准测试）| beat the benchmark | It beat its rival on every benchmark. | "Comparison is the thief of joy." —— Theodore Roosevelt<br />
-- <strong>self-host</strong>（自行部署）| self-host a model | There is nothing to download or self-host yet. | "If you want something done right, do it yourself." —— 英语谚语<br />
-- <strong>datacenter</strong>（数据中心）| European datacenters | It was trained in Mistral's own European datacenters. | "The cloud is just someone else's computer." —— 科技圈名言<br />
-- <strong>roadmap</strong>（路线图）| product roadmap | A roadmap tied to fixed dates now carries risk. | "If you don't know where you're going, you'll end up someplace else." —— Yogi Berra<br />
-- <strong>speed</strong>（速度）| output speed | Output speed is about 116 tokens per second. | "Slow and steady wins the race." —— 《龟兔赛跑》</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>preview</strong>（预览，抢先体验）| public preview | The model launched in public preview. | "The future depends on what you do today." —— Mahatma Gandhi</li>
+<li><strong>parameter</strong>（参数）| 1 trillion parameters | It has 1 trillion total parameters. | "Everything should be made as simple as possible, but not simpler." —— Albert Einstein</li>
+<li><strong>multimodal</strong>（多模态的）| multimodal input | The model processes multimodal input. | "I hear and I forget. I see and I remember." —— 孔子</li>
+<li><strong>native</strong>（原生的，天生的）| natively multimodal | It is natively multimodal. | "Home is where the heart is." —— 英语谚语</li>
+<li><strong>guardrail</strong>（护栏，防护机制）| guardrailed access | Access is a guardrailed preview API. | "Good fences make good neighbors." —— Robert Frost</li>
+<li><strong>benchmark</strong>（基准测试）| beat the benchmark | It beat its rival on every benchmark. | "Comparison is the thief of joy." —— Theodore Roosevelt</li>
+<li><strong>self-host</strong>（自行部署）| self-host a model | There is nothing to download or self-host yet. | "If you want something done right, do it yourself." —— 英语谚语</li>
+<li><strong>datacenter</strong>（数据中心）| European datacenters | It was trained in Mistral's own European datacenters. | "The cloud is just someone else's computer." —— 科技圈名言</li>
+<li><strong>roadmap</strong>（路线图）| product roadmap | A roadmap tied to fixed dates now carries risk. | "If you don't know where you're going, you'll end up someplace else." —— Yogi Berra</li>
+<li><strong>speed</strong>（速度）| output speed | Output speed is about 116 tokens per second. | "Slow and steady wins the race." —— 《龟兔赛跑》</li>
+</ul>
 <hr />
 <h2>🌍 国际局势</h2>
 <h3>1. 美国宣布制裁国际刑事法院：诺奖刚颁给 ICC 前法官，附带 6 个月"宽限期"</h3>
@@ -177,34 +226,38 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 中期选举——11 月 3 日的美国国会选举，决定两党谁控制国会，打仗会影响选情；② 海上封锁——用军舰切断伊朗的海上石油/物资通道，是"不宣而战"的施压；③ 独联体峰会——前苏联国家开的地区会议，今年在土库曼斯坦办；④ 被制裁国家——俄伊都是被西方制裁最多的国家，抱团取暖；⑤ 调解——第三方出面劝和，普京这次是想在中东刷"存在感"。</p>
 <p><strong>一句话总结</strong>：特朗普为选票按下"暂停键"，普京趁机递出"调解牌"——中东停火，路还长。</p>
 <p>🔗 来源：<a href="https://english.mathrubhumi.com/news/world/putin-pezeshkian-meeting-cis-summit-middle-east-mediation-2026-y9u1np3p">Mathrubhumi English（转路透/俄新社，10-09）</a></p>
-<p>📖 生词：<br />
-- <strong>pledge</strong>（承诺，保证）| pledge to do sth. | Putin pledged to help end the conflict. | "A promise made is a debt unpaid." —— Robert Service<br />
-- <strong>mediation</strong>（调解）| offer mediation | Moscow offered mediation in the crisis. | "Peace cannot be kept by force; it can only be achieved by understanding." —— Albert Einstein<br />
-- <strong>tout</strong>（宣扬，吹捧）| tout progress | Trump touted "productive discussions". | "Actions speak louder than words." —— 英语谚语<br />
-- <strong>productive</strong>（富有成效的）| productive talks | Both sides called the talks productive. | "Nothing is particularly hard if you divide it into small jobs." —— Henry Ford<br />
-- <strong>blockade</strong>（封锁）| a naval blockade | The US blockade will remain in place. | "The supreme art of war is to subdue the enemy without fighting." —— Sun Tzu《孙子兵法》<br />
-- <strong>unilateralism</strong>（单边主义）| criticize unilateralism | Iran criticized US unilateralism. | "United we stand, divided we fall." —— Aesop<br />
-- <strong>interdependent</strong>（相互依存的）| grow interdependent | Moscow and Tehran grow interdependent. | "No man is an island." —— John Donne<br />
-- <strong>summit</strong>（峰会）| a regional summit | They met on the sidelines of a regional summit. | "When spiders' webs unite, they can tie up a lion." —— 非洲谚语<br />
-- <strong>impasse</strong>（僵局）| break the impasse | The conflict remains at an impasse. | "In the middle of difficulty lies opportunity." —— Albert Einstein<br />
-- <strong>evolution</strong>（演变，发展）| positive evolution | Putin noted a "positive evolution" in ties. | "It is not the strongest of the species that survives, but the most adaptable." —— Charles Darwin</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>pledge</strong>（承诺，保证）| pledge to do sth. | Putin pledged to help end the conflict. | "A promise made is a debt unpaid." —— Robert Service</li>
+<li><strong>mediation</strong>（调解）| offer mediation | Moscow offered mediation in the crisis. | "Peace cannot be kept by force; it can only be achieved by understanding." —— Albert Einstein</li>
+<li><strong>tout</strong>（宣扬，吹捧）| tout progress | Trump touted "productive discussions". | "Actions speak louder than words." —— 英语谚语</li>
+<li><strong>productive</strong>（富有成效的）| productive talks | Both sides called the talks productive. | "Nothing is particularly hard if you divide it into small jobs." —— Henry Ford</li>
+<li><strong>blockade</strong>（封锁）| a naval blockade | The US blockade will remain in place. | "The supreme art of war is to subdue the enemy without fighting." —— Sun Tzu《孙子兵法》</li>
+<li><strong>unilateralism</strong>（单边主义）| criticize unilateralism | Iran criticized US unilateralism. | "United we stand, divided we fall." —— Aesop</li>
+<li><strong>interdependent</strong>（相互依存的）| grow interdependent | Moscow and Tehran grow interdependent. | "No man is an island." —— John Donne</li>
+<li><strong>summit</strong>（峰会）| a regional summit | They met on the sidelines of a regional summit. | "When spiders' webs unite, they can tie up a lion." —— 非洲谚语</li>
+<li><strong>impasse</strong>（僵局）| break the impasse | The conflict remains at an impasse. | "In the middle of difficulty lies opportunity." —— Albert Einstein</li>
+<li><strong>evolution</strong>（演变，发展）| positive evolution | Putin noted a "positive evolution" in ties. | "It is not the strongest of the species that survives, but the most adaptable." —— Charles Darwin</li>
+</ul>
 <h3>3. 胡塞袭击利雅得机场致 3 死多伤，布伦特原油突破 104 美元</h3>
 <p><strong>发生了什么</strong>：沙特民航局 10 月 9 日证实：亲伊朗的胡塞武装周三袭击了利雅得机场，造成 3 人死亡、多人受伤，还损坏了一架沙特航空的飞机，机场上空冒起浓烟，多家航空公司取消飞往利雅得的航班——而几天后利雅得正要举办全球石油大佬的会议。受中东航运中断担忧影响，布伦特原油单日大涨超 5%，突破 104 美元/桶；霍尔木兹海峡附近也传出爆炸报告，这条"世界油喉"的安全警报拉满。</p>
 <p><strong>为什么值得关注</strong>：油价是"通胀之母"——原油涨，汽油、运费、食品价格全跟着涨，最后传导到每个人的钱包。机场遇袭+油价飙升，说明这轮中东冲突正在从战场烧向全球经济。</p>
 <p><strong>名词解释</strong>：① 胡塞武装——也门的亲伊朗武装，经常袭击红海商船和沙特目标；② 布伦特原油——全球油价的"基准价"，它涨=全球油价涨；③ 霍尔木兹海峡——全球约 1/5 石油贸易的必经水道，被掐住等于全球断油；④ 通胀传导——油价涨→运费涨→物价涨，一环扣一环；⑤ 避险——局势一紧张，钱就往黄金、原油、国债里躲。</p>
 <p><strong>一句话总结</strong>：中东战火烧到机场和油轮，油价破 104 美元——全球通胀警报又响了。</p>
 <p>🔗 来源：<a href="https://www.justsecurity.org/160212/early-edition-october-9-2026/">Just Security（10-09 每日早报，转路透）</a></p>
-<p>📖 生词：<br />
-- <strong>strike</strong>（袭击，打击）| carry out strikes | Strikes on the airport killed three people. | "Strike while the iron is hot." —— 英语谚语<br />
-- <strong>casualty</strong>（伤亡人员）| report casualties | The attack caused casualties. | "War is hell." —— William T. Sherman<br />
-- <strong>aviation</strong>（航空）| civil aviation | The civil aviation authority confirmed the attack. | "Once you have tasted flight, you will forever walk the earth with your eyes turned skyward." —— Leonardo da Vinci<br />
-- <strong>disrupt</strong>（扰乱，中断）| disrupt flights | Airlines canceled flights to the capital. | "The only constant in life is change." —— Heraclitus<br />
-- <strong>escalation</strong>（升级）| military escalation | The strikes mark a new escalation. | "An eye for an eye will only make the whole world blind." —— Mahatma Gandhi<br />
-- <strong>corridor</strong>（走廊，通道）| energy corridor | Fears grow around a key energy corridor. | "All roads lead to Rome." —— 英语谚语<br />
-- <strong>plead</strong>（辩护，申辩）| plead not guilty | The pair pleaded not guilty. | "Justice delayed is justice denied." —— William Gladstone<br />
-- <strong>trial</strong>（审判）| ahead of their trial | They remain in custody ahead of their trial. | "Innocent until proven guilty." —— 法律谚语<br />
-- <strong>surveillance</strong>（监视）| hostile surveillance | They were accused of hostile surveillance. | "Big Brother is watching you." —— George Orwell《1984》<br />
-- <strong>cancel</strong>（取消）| cancel flights | Airlines canceled flights to Riyadh. | "When one door closes, another opens." —— Alexander Graham Bell</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>strike</strong>（袭击，打击）| carry out strikes | Strikes on the airport killed three people. | "Strike while the iron is hot." —— 英语谚语</li>
+<li><strong>casualty</strong>（伤亡人员）| report casualties | The attack caused casualties. | "War is hell." —— William T. Sherman</li>
+<li><strong>aviation</strong>（航空）| civil aviation | The civil aviation authority confirmed the attack. | "Once you have tasted flight, you will forever walk the earth with your eyes turned skyward." —— Leonardo da Vinci</li>
+<li><strong>disrupt</strong>（扰乱，中断）| disrupt flights | Airlines canceled flights to the capital. | "The only constant in life is change." —— Heraclitus</li>
+<li><strong>escalation</strong>（升级）| military escalation | The strikes mark a new escalation. | "An eye for an eye will only make the whole world blind." —— Mahatma Gandhi</li>
+<li><strong>corridor</strong>（走廊，通道）| energy corridor | Fears grow around a key energy corridor. | "All roads lead to Rome." —— 英语谚语</li>
+<li><strong>plead</strong>（辩护，申辩）| plead not guilty | The pair pleaded not guilty. | "Justice delayed is justice denied." —— William Gladstone</li>
+<li><strong>trial</strong>（审判）| ahead of their trial | They remain in custody ahead of their trial. | "Innocent until proven guilty." —— 法律谚语</li>
+<li><strong>surveillance</strong>（监视）| hostile surveillance | They were accused of hostile surveillance. | "Big Brother is watching you." —— George Orwell《1984》</li>
+<li><strong>cancel</strong>（取消）| cancel flights | Airlines canceled flights to Riyadh. | "When one door closes, another opens." —— Alexander Graham Bell</li>
+</ul>
 <hr />
 <h2>🌱 个人成长</h2>
 <h3>1. 张忠谋的汇报课：开场 5 分钟没重点，报告会被"撕掉"</h3>
@@ -235,51 +288,57 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>名词解释</strong>：① 混合项目（Hybrid）——风电+光伏+储能建在一起，互相补短板；② 购电协议（PPA）——发电方和买电方签的长期"包销合同"，银行才敢给项目贷款；③ 电池储能（BESS）——大号"充电宝"，白天把多余的电存起来、晚上放出来；④ 股权——住友拿 49% 股份，就是项目的"二股东"；⑤ 全天候供电——24 小时不断电，风光储组合的终极卖点。</p>
 <p><strong>一句话总结</strong>：日本巨头掏钱押注印度"风光储三件套"——新能源的下半场，比的是"稳定供电"。</p>
 <p>🔗 来源：<a href="https://www.energy-storage.news/sumitomo-corporation-invests-in-hero-future-energies-solar-wind-storage-hybrid-in-karnataka-india/">Energy-Storage.news（10-06）</a></p>
-<p>📖 生词：<br />
-- <strong>invest in</strong>（投资）| invest in a project | Sumitomo invested in the hybrid project. | "The best investment you can make is in yourself." —— Warren Buffett<br />
-- <strong>stake</strong>（股份）| a 49% stake | Sumitomo will hold a 49% stake. | "Nothing ventured, nothing gained." —— 英语谚语<br />
-- <strong>acquire</strong>（收购，获得）| acquire a stake | It will acquire a 49% stake. | "The secret of getting ahead is getting started." —— Mark Twain<br />
-- <strong>surplus</strong>（过剩的，多余的）| surplus electricity | Surplus power goes to the spot market. | "Waste not, want not." —— 英语谚语<br />
-- <strong>sign</strong>（签署）| sign an agreement | The deal was signed in Delhi. | "Well begun is half done." —— Aristotle<br />
-- <strong>round-the-clock</strong>（全天候的）| round-the-clock power | It aims to provide round-the-clock electricity. | "Time and tide wait for no man." —— Geoffrey Chaucer<br />
-- <strong>partnership</strong>（合作关系）| expand the partnership | The deal expands their cooperation. | "Alone we can do so little; together we can do so much." —— Helen Keller<br />
-- <strong>commitment</strong>（承诺，投入）| show commitment | We remain firmly committed to clean power. | "Unless commitment is made, there are only promises and hopes." —— Peter Drucker<br />
-- <strong>renewable</strong>（可再生的）| renewable energy | It boosts renewable generation. | "The sun can still ripen a bunch of grapes as it always has." —— Galileo（改写）<br />
-- <strong>exchange</strong>（交易所）| power exchange market | Surplus power is sold on the power exchange. | "Fair exchange is no robbery." —— 英语谚语</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>invest in</strong>（投资）| invest in a project | Sumitomo invested in the hybrid project. | "The best investment you can make is in yourself." —— Warren Buffett</li>
+<li><strong>stake</strong>（股份）| a 49% stake | Sumitomo will hold a 49% stake. | "Nothing ventured, nothing gained." —— 英语谚语</li>
+<li><strong>acquire</strong>（收购，获得）| acquire a stake | It will acquire a 49% stake. | "The secret of getting ahead is getting started." —— Mark Twain</li>
+<li><strong>surplus</strong>（过剩的，多余的）| surplus electricity | Surplus power goes to the spot market. | "Waste not, want not." —— 英语谚语</li>
+<li><strong>sign</strong>（签署）| sign an agreement | The deal was signed in Delhi. | "Well begun is half done." —— Aristotle</li>
+<li><strong>round-the-clock</strong>（全天候的）| round-the-clock power | It aims to provide round-the-clock electricity. | "Time and tide wait for no man." —— Geoffrey Chaucer</li>
+<li><strong>partnership</strong>（合作关系）| expand the partnership | The deal expands their cooperation. | "Alone we can do so little; together we can do so much." —— Helen Keller</li>
+<li><strong>commitment</strong>（承诺，投入）| show commitment | We remain firmly committed to clean power. | "Unless commitment is made, there are only promises and hopes." —— Peter Drucker</li>
+<li><strong>renewable</strong>（可再生的）| renewable energy | It boosts renewable generation. | "The sun can still ripen a bunch of grapes as it always has." —— Galileo（改写）</li>
+<li><strong>exchange</strong>（交易所）| power exchange market | Surplus power is sold on the power exchange. | "Fair exchange is no robbery." —— 英语谚语</li>
+</ul>
 <h3>2. 隆基 × 蔚来：戈壁滩上投运全球首个零碳离网光储换电站</h3>
 <p><strong>发生了什么</strong>：10 月 9 日光伏圈消息：隆基和蔚来在连霍高速（G30）星星峡段投运了一座离网光伏+储能换电站——号称全球首个"零碳离网"换电站。位置在戈壁滩无电网覆盖区，全靠自己的光伏板和储能供电：用隆基 BLOCK 可移动电站（光伏板+支架+逆变器装进集装箱，几小时就能发电）和 OneNexus H2D 离网储能，白天发的电存起来晚上用。官方说这是给矿山、海岛、偏远基站打的样。</p>
 <p><strong>为什么值得关注</strong>：这是中国光伏+电动车"出海"的样板间——"有阳光就能建电站"，把新能源的"基建能力"变成了可复制的产品。以后跑长途，戈壁滩上也能换电了。</p>
 <p><strong>名词解释</strong>：① 离网——不接国家电网，自己发电自己用；② 换电站——蔚来的"招牌技能"：几分钟把没电的电池整块换成满电的，比充电快；③ 储能——大电池，白天存电晚上用，解决"晚上没太阳"的难题；④ 零碳——运行过程不产生二氧化碳；⑤ 可移动电站——集装箱式的"电站乐高"，拉到哪、几小时就能在哪发电。</p>
 <p><strong>一句话总结</strong>：光伏+换电+储能"三合一"开进无人区——中国新能源开始卖"解决方案"了。</p>
 <p>🔗 来源：<a href="https://taiyangnews.info/markets/china-solar-pv-news-snippets-october-9-2026">TaiyangNews（10-09 中国光伏周报）</a></p>
-<p>📖 生词：<br />
-- <strong>launch</strong>（投运，发布）| launch a station | LONGi and NIO launched the station. | "The way to get started is to quit talking and begin doing." —— Walt Disney<br />
-- <strong>deploy</strong>（部署）| deploy quickly | Power generation begins within hours of deployment. | "Action is the foundational key to all success." —— Pablo Picasso<br />
-- <strong>serve as a model</strong>（成为样板）| serve as a model for | It serves as a model for mines and islands. | "Example is not the main thing in influencing others. It is the only thing." —— Albert Schweitzer<br />
-- <strong>zero-carbon</strong>（零碳的）| zero-carbon facility | The world's first zero-carbon off-grid station. | "The best time to plant a tree was 20 years ago. The second best time is now." —— 英语谚语<br />
-- <strong>store</strong>（储存）| store electricity | It stores daytime electricity for night use. | "Save for a rainy day." —— 英语谚语<br />
-- <strong>remote</strong>（偏远的）| remote areas | A model for remote telecom stations. | "Not all those who wander are lost." —— J.R.R. Tolkien<br />
-- <strong>within hours</strong>（几小时内）| within hours | Generation starts within hours. | "Time is money." —— Benjamin Franklin<br />
-- <strong>desert</strong>（沙漠，戈壁）| in the Gobi Desert | Located in a grid-free section of the desert. | "What makes the desert beautiful is that somewhere it hides a well." —— Saint-Exupéry《小王子》<br />
-- <strong>pioneer</strong>（开创，先驱）| a pioneering project | A pioneering off-grid project. | "The people who are crazy enough to think they can change the world are the ones who do." —— Steve Jobs<br />
-- <strong>milestone</strong>（里程碑）| a milestone for | A milestone for green transport. | "A journey of a thousand miles begins with a single step." —— Laozi</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>launch</strong>（投运，发布）| launch a station | LONGi and NIO launched the station. | "The way to get started is to quit talking and begin doing." —— Walt Disney</li>
+<li><strong>deploy</strong>（部署）| deploy quickly | Power generation begins within hours of deployment. | "Action is the foundational key to all success." —— Pablo Picasso</li>
+<li><strong>serve as a model</strong>（成为样板）| serve as a model for | It serves as a model for mines and islands. | "Example is not the main thing in influencing others. It is the only thing." —— Albert Schweitzer</li>
+<li><strong>zero-carbon</strong>（零碳的）| zero-carbon facility | The world's first zero-carbon off-grid station. | "The best time to plant a tree was 20 years ago. The second best time is now." —— 英语谚语</li>
+<li><strong>store</strong>（储存）| store electricity | It stores daytime electricity for night use. | "Save for a rainy day." —— 英语谚语</li>
+<li><strong>remote</strong>（偏远的）| remote areas | A model for remote telecom stations. | "Not all those who wander are lost." —— J.R.R. Tolkien</li>
+<li><strong>within hours</strong>（几小时内）| within hours | Generation starts within hours. | "Time is money." —— Benjamin Franklin</li>
+<li><strong>desert</strong>（沙漠，戈壁）| in the Gobi Desert | Located in a grid-free section of the desert. | "What makes the desert beautiful is that somewhere it hides a well." —— Saint-Exupéry《小王子》</li>
+<li><strong>pioneer</strong>（开创，先驱）| a pioneering project | A pioneering off-grid project. | "The people who are crazy enough to think they can change the world are the ones who do." —— Steve Jobs</li>
+<li><strong>milestone</strong>（里程碑）| a milestone for | A milestone for green transport. | "A journey of a thousand miles begins with a single step." —— Laozi</li>
+</ul>
 <h3>3. 印度储能大跃进"撞墙"：三分之一项目可能"算不过账"</h3>
 <p><strong>发生了什么</strong>：10 月 8 日报道：印度政府强制要求所有新建风光项目配储能，雄心是 2030 年建成 208GWh 电池储能。但行业组织 IESA 数据显示，2018–2026 年间已有 24GWh 储能项目被取消或重新招标（占目标的 11% 以上）；政府补贴（VGF 2.0）支持的 22GWh 项目里，不少中标电价低于 2 卢比/度，而业内认为至少 2.4 卢比/度才能回本——约三分之一已招标项目"在经济上不可行"。</p>
 <p><strong>为什么值得关注</strong>：这是新能源狂飙的 B 面：政策很用力，但"地板价中标"正在制造一批"建起来就亏"的项目。中国储能产业链（电池、逆变器）深度参与印度市场，这面"镜子"也值得国内看——低价内卷，最后是谁买单？</p>
 <p><strong>名词解释</strong>：① 电池储能（BESS）——"大号充电宝"，存下中午的太阳、晚上再放出来；② 强制配储——政府规定"建光伏必须配电池"，不配不让建；③ 补贴（VGF）——政府掏钱补一部分建设费，让项目"算得过账"；④ 中标电价——谁报价低谁拿项目，报太低就"赔本赚吆喝"；⑤ 重新招标——项目黄了，推倒重来再招一次，说明上一轮"玩脱了"。</p>
 <p><strong>一句话总结</strong>：印度储能"大干快上"，但三分之一项目电价报得太低、可能根本建不起来——便宜没好货，全球都一样。</p>
 <p>🔗 来源：<a href="https://www.tradingview.com/news/moodys:76a37bf8a4903:0-india-s-battery-energy-storage-push-hits-a-viability-wall/">TradingView News（10-08）</a></p>
-<p>📖 生词：<br />
-- <strong>headwinds</strong>（逆风，阻力）| face headwinds | The transition is facing headwinds. | "Smooth seas do not make skillful sailors." —— 英语谚语<br />
-- <strong>feasible</strong>（可行的）| financially feasible | Tariffs must be feasible to attract builders. | "Whether you think you can or you think you can't, you're right." —— Henry Ford<br />
-- <strong>falter</strong>（衰退，蹒跚）| efforts falter | Storage efforts are faltering. | "Fall seven times, stand up eight." —— 日本谚语<br />
-- <strong>aggressive</strong>（激进的）| aggressive bidding | Aggressive bidding drove prices too low. | "Fortune favors the bold." —— 拉丁谚语<br />
-- <strong>scrap</strong>（取消，报废）| scrap projects | 24GWh of projects were scrapped. | "One man's trash is another man's treasure." —— 英语谚语<br />
-- <strong>mandate</strong>（强制要求）| government mandate | The government mandated storage for new projects. | "With great power comes great responsibility." —— 《蜘蛛侠》<br />
-- <strong>strain</strong>（压力）| under strain | Awarded projects are under strain. | "That which does not kill us makes us stronger." —— Nietzsche<br />
-- <strong>tariff</strong>（电价）| BESS tariff | Tariffs must reach Rs.2.4 to be viable. | "There is no free lunch." —— 经济学谚语<br />
-- <strong>subsidise</strong>（补贴）| be subsidised | Part of the cost is subsidised. | "Don't look a gift horse in the mouth." —— 英语谚语<br />
-- <strong>re-tender</strong>（重新招标）| cancel or re-tender | Projects were cancelled or re-tendered. | "If at first you don't succeed, try, try again." —— 英语谚语</p>
+<p>📖 生词：</p>
+<ul>
+<li><strong>headwinds</strong>（逆风，阻力）| face headwinds | The transition is facing headwinds. | "Smooth seas do not make skillful sailors." —— 英语谚语</li>
+<li><strong>feasible</strong>（可行的）| financially feasible | Tariffs must be feasible to attract builders. | "Whether you think you can or you think you can't, you're right." —— Henry Ford</li>
+<li><strong>falter</strong>（衰退，蹒跚）| efforts falter | Storage efforts are faltering. | "Fall seven times, stand up eight." —— 日本谚语</li>
+<li><strong>aggressive</strong>（激进的）| aggressive bidding | Aggressive bidding drove prices too low. | "Fortune favors the bold." —— 拉丁谚语</li>
+<li><strong>scrap</strong>（取消，报废）| scrap projects | 24GWh of projects were scrapped. | "One man's trash is another man's treasure." —— 英语谚语</li>
+<li><strong>mandate</strong>（强制要求）| government mandate | The government mandated storage for new projects. | "With great power comes great responsibility." —— 《蜘蛛侠》</li>
+<li><strong>strain</strong>（压力）| under strain | Awarded projects are under strain. | "That which does not kill us makes us stronger." —— Nietzsche</li>
+<li><strong>tariff</strong>（电价）| BESS tariff | Tariffs must reach Rs.2.4 to be viable. | "There is no free lunch." —— 经济学谚语</li>
+<li><strong>subsidise</strong>（补贴）| be subsidised | Part of the cost is subsidised. | "Don't look a gift horse in the mouth." —— 英语谚语</li>
+<li><strong>re-tender</strong>（重新招标）| cancel or re-tender | Projects were cancelled or re-tendered. | "If at first you don't succeed, try, try again." —— 英语谚语</li>
+</ul>
 <hr />
 <h2>🇨🇳 国内要闻</h2>
 <h3>1. 中共中央、国务院印发《关于发展新质生产力的意见》：19 项重点举措</h3>

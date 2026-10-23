@@ -57,6 +57,44 @@ body.dark .note { color: #a39a89; }
 body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
 body.dark th { background: #262219; }
+.summary { background:#edf3fd; border-left:4px solid #1757c2; border-radius:6px; padding:12px 16px; }
+.blessing { text-align: center; color: #8a3324; font-size: 1.07em; font-weight: 600;
+            letter-spacing: 0.04em; margin: 0 0 16px; }
+.sec-label { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+             font-weight: 700; margin: 0 0 6px; font-size: 0.98em; letter-spacing: 0.03em; }
+.glossary { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 6px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.vocabbox .sec-label { color: #1757c2; }
+.vocabbox ul { list-style: none; padding-left: 0; margin: 6px 0 4px; }
+li.vocab { padding: 10px 0 12px; border-bottom: 1px dashed #ddd5bd; margin: 0; }
+li.vocab:last-child { border-bottom: none; }
+.vword { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         font-weight: 800; font-size: 1.12em; color: #1757c2; margin-right: 6px; }
+.vmean { font-weight: 700; }
+.vrow { font-size: 0.93em; color: #4a463e; margin-top: 3px; line-height: 1.8; }
+.vlabel { display: inline-block; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
+          padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
+.vquote { color: #6b6257; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources .sec-label { color: #5a554c; }
+.sources ul { margin: 4px 0; }
+h3::before { content: "▍"; color: #8a3324; }
+body.dark .blessing { color: #e0a458; }
+body.dark .glossary { background: #262219; }
+body.dark .vocabbox { background: #1d1b16; border-color: #3a362a; }
+body.dark li.vocab { border-bottom-color: #3a362a; }
+body.dark .vword { color: #8ab8ff; }
+body.dark .vrow { color: #c9c2b2; }
+body.dark .vlabel { background: #33302a; color: #e0c98a; }
+body.dark .vquote { color: #a39a89; }
+body.dark .summary { background: #1c2733; border-left-color: #8ab8ff; }
+body.dark .sources { color: #a39a89; }
+body.dark h3::before { color: #e0a458; }
 body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
@@ -67,24 +105,29 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📚 《麻薯日报》合集 · 第 21 期 · 2026-10-17（星期六）</p>
 </blockquote>
 <h1>《麻薯日报》· 2026 年 10 月 17 日（星期六）</h1>
+<p class="blessing">🌅 愿你所求皆如愿，所行化坦途。</p>
 <p>Ricardo，早上好呀！☀️ 周六快乐～ 麻薯把过去 24 小时最重要的新闻都给你挑好啦，配上大白话讲解和今日生词，趁热读起来吧 📖💛</p>
 <hr />
 <h2>一、财经 💹</h2>
 <h3>1. 纳指创 6 月以来最差一周，AI 债务担忧引爆科技股抛售</h3>
-<p>📌 <strong>来源</strong>：巴伦周刊 / 华尔街日报<br />
-- <a href="https://www.barrons.com/livecoverage/stock-market-news-today-101626/card/nasdaq-suffers-worst-week-since-june-ai-fears-are-shaking-markets--L5p8fiso3hzqEf33Vv8U">https://www.barrons.com/livecoverage/stock-market-news-today-101626/card/nasdaq-suffers-worst-week-since-june-ai-fears-are-shaking-markets--L5p8fiso3hzqEf33Vv8U</a><br />
-- <a href="https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-16-2026">https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-16-2026</a></p>
+<p>📌 <strong>来源</strong>：巴伦周刊 / 华尔街日报</p>
+<ul>
+<li><a href="https://www.barrons.com/livecoverage/stock-market-news-today-101626/card/nasdaq-suffers-worst-week-since-june-ai-fears-are-shaking-markets--L5p8fiso3hzqEf33Vv8U">https://www.barrons.com/livecoverage/stock-market-news-today-101626/card/nasdaq-suffers-worst-week-since-june-ai-fears-are-shaking-markets--L5p8fiso3hzqEf33Vv8U</a></li>
+<li><a href="https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-16-2026">https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-16-2026</a></li>
+</ul>
 <p><strong>发生了什么</strong>：以科技股为主的纳斯达克指数周五再跌 2.1%，全周累计下跌 4.5%，创下 6 月以来最差单周表现，终结了此前的四连涨。标普 500 全周跌约 2%，而道琼斯指数逆势上涨 0.7%，资金明显从科技股转向医药、日用品等防御性板块。导火索是市场对 AI 基建"烧钱"的担忧：英伟达支持的 AI 云服务商 CoreWeave 股价债券双杀，半导体 ETF 更是连跌 9 天，创下二十年来最长连跌纪录。</p>
 <p><strong>为什么值得关注</strong>：这是"AI 泡沫"争论第一次真正反映在股价里——投资者开始质疑巨额借债建数据中心这条路走不走得通。下周 Meta、特斯拉将率先公布财报，成绩好坏可能决定这轮抛售是短期回调还是长期转折。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>纳斯达克 / 标普 500 / 道琼斯</strong>：美国股市的三种"榜单"。道琼斯是 30 家老牌大公司的榜，标普 500 是 500 家大公司的总榜，纳斯达克是科技公司扎堆的榜。涨跌代表对应公司群体的整体冷热。<br />
-- <strong>抛售</strong>：大家排队把股票卖掉，就像菜市场收摊前小贩急着把菜贱卖清仓，卖的人太多，价格就被踩下去。<br />
-- <strong>VIX 恐慌指数</strong>：市场的"害怕指数"/体温计，数字越高说明大家越慌。超过 20 就像发烧超过 38 度，说明市场病得不轻——周五它飙到了 20.57。<br />
-- <strong>美债收益率</strong>：美国政府借钱要付的利息。收益率下跌，往往是因为大家害怕，抢着买国债避险（买的人多、价格涨，收益率就跌），像下雨天抢伞。<br />
-- <strong>AI 泡沫</strong>：大家觉得 AI 公司未来能赚大钱，把股价推得远超实际价值，像气球吹太大，"啪"一下就爆。<br />
-- <strong>债务 / 杠杆</strong>：借钱办事。CoreWeave 借巨款建数据中心，就像贷款买房，利率一涨，每月还款压力就大——借得越多越危险。<br />
-- <strong>轮动</strong>：资金像操场上玩耍的孩子，一会儿聚在科技股这堆，一会儿跑到医药、日用品那堆，这周就是从科技跑向防御股。<br />
-- <strong>财报季</strong>：上市公司交"成绩单"的时候。Meta、特斯拉下周公布，成绩好坏直接决定股价涨跌。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>纳斯达克 / 标普 500 / 道琼斯</strong>：美国股市的三种"榜单"。道琼斯是 30 家老牌大公司的榜，标普 500 是 500 家大公司的总榜，纳斯达克是科技公司扎堆的榜。涨跌代表对应公司群体的整体冷热。</li>
+<li><strong>抛售</strong>：大家排队把股票卖掉，就像菜市场收摊前小贩急着把菜贱卖清仓，卖的人太多，价格就被踩下去。</li>
+<li><strong>VIX 恐慌指数</strong>：市场的"害怕指数"/体温计，数字越高说明大家越慌。超过 20 就像发烧超过 38 度，说明市场病得不轻——周五它飙到了 20.57。</li>
+<li><strong>美债收益率</strong>：美国政府借钱要付的利息。收益率下跌，往往是因为大家害怕，抢着买国债避险（买的人多、价格涨，收益率就跌），像下雨天抢伞。</li>
+<li><strong>AI 泡沫</strong>：大家觉得 AI 公司未来能赚大钱，把股价推得远超实际价值，像气球吹太大，"啪"一下就爆。</li>
+<li><strong>债务 / 杠杆</strong>：借钱办事。CoreWeave 借巨款建数据中心，就像贷款买房，利率一涨，每月还款压力就大——借得越多越危险。</li>
+<li><strong>轮动</strong>：资金像操场上玩耍的孩子，一会儿聚在科技股这堆，一会儿跑到医药、日用品那堆，这周就是从科技跑向防御股。</li>
+<li><strong>财报季</strong>：上市公司交"成绩单"的时候。Meta、特斯拉下周公布，成绩好坏直接决定股价涨跌。</li>
+</ul>
 <p><strong>一句话总结</strong>：市场对 AI 烧钱模式失去耐心，纳指遭遇 6 月以来最差一周，资金正逃往防御股避险。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>fall</strong> | 下跌；秋天 | 常用搭配：fall sharply（大幅下跌）, share prices fall（股价下跌） | 例句：Tech shares fell sharply on Friday.（科技股周五大幅下跌。） | 名句："The greatest glory in living lies not in never falling, but in rising every time we fall." — Nelson Mandela（活着的最大荣耀不在于永不跌倒，而在于每次跌倒后都能爬起来。——曼德拉）<br />
@@ -104,14 +147,16 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-10162026-12176848">https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-10162026-12176848</a></p>
 <p><strong>发生了什么</strong>：美国本周公布的 CPI（消费者价格指数）和 PPI（生产者价格指数）双双高于预期，显示物价压力挥之不去。美联储主席 Warsh 在曼谷 IMF 会议上拒绝"预判"本月是否加息，称"美联储已进入新篇章，不再做那种事"。市场押注随之调整：10 月底会议加息概率从 28% 降至 17%，但 12 月会议加息概率高达 89%。10 年期美债收益率一度冲高至 5.33%，周五回落至 5.09%。</p>
 <p><strong>为什么值得关注</strong>：通胀"退烧"失败意味着借钱成本可能继续走高——房贷、车贷、信用卡利息都和它挂钩。对普通人来说，这是"钱继续变毛、借钱继续变贵"的信号；对市场来说，12 月几乎板上钉钉的加息会压制股市估值。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>CPI（消费者价格指数）</strong>：老百姓"菜篮子"的价格变化。CPI 涨 = 买菜、租房、看病都变贵了，钱变"毛"了。<br />
-- <strong>PPI（生产者价格指数）</strong>：工厂出厂价的变化，是 CPI 的"先头部队"——工厂涨价，过几个月就会传到菜市场，所以先看它能预判物价走势。<br />
-- <strong>通胀</strong>：钱越来越不经花。去年 100 块能装满一购物车，今年只能装半车，就是通胀在作怪。<br />
-- <strong>加息</strong>：央行把借钱的利息调高。就像银行突然说"房贷利息从 3% 涨到 5%"，大家借钱意愿下降、花钱变少，物价就被压住——但经济也会跟着冷下来。<br />
-- <strong>美联储</strong>：美国的"中央银行"，管着美元印多少、利息多高。它一跺脚，全球市场都要抖三抖。<br />
-- <strong>CME FedWatch（利率预期）</strong>：芝加哥交易所根据期货交易算出的"加息天气预报"，比如"12 月加息概率 89%" = 市场里近 9 成人押注会加息。<br />
-- <strong>美债收益率</strong>：美国政府借钱的利息。它涨，全球借钱都变贵（房贷跟着涨）；它跌，说明大家在抢国债避险。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>CPI（消费者价格指数）</strong>：老百姓"菜篮子"的价格变化。CPI 涨 = 买菜、租房、看病都变贵了，钱变"毛"了。</li>
+<li><strong>PPI（生产者价格指数）</strong>：工厂出厂价的变化，是 CPI 的"先头部队"——工厂涨价，过几个月就会传到菜市场，所以先看它能预判物价走势。</li>
+<li><strong>通胀</strong>：钱越来越不经花。去年 100 块能装满一购物车，今年只能装半车，就是通胀在作怪。</li>
+<li><strong>加息</strong>：央行把借钱的利息调高。就像银行突然说"房贷利息从 3% 涨到 5%"，大家借钱意愿下降、花钱变少，物价就被压住——但经济也会跟着冷下来。</li>
+<li><strong>美联储</strong>：美国的"中央银行"，管着美元印多少、利息多高。它一跺脚，全球市场都要抖三抖。</li>
+<li><strong>CME FedWatch（利率预期）</strong>：芝加哥交易所根据期货交易算出的"加息天气预报"，比如"12 月加息概率 89%" = 市场里近 9 成人押注会加息。</li>
+<li><strong>美债收益率</strong>：美国政府借钱的利息。它涨，全球借钱都变贵（房贷跟着涨）；它跌，说明大家在抢国债避险。</li>
+</ul>
 <p><strong>一句话总结</strong>：通胀数据"退烧"失败，市场几乎认定美联储 12 月还要加息，借钱贵的时代还要延续。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>inflation</strong> | 通货膨胀 | 常用搭配：rising inflation（通胀上升）, fight inflation（对抗通胀） | 例句：Rising inflation means your money buys less bread.（通胀上升意味着你的钱能买的面包变少了。） | 名句："Inflation is as violent as a mugger, as frightening as an armed robber and as deadly as a hit man." — Ronald Reagan（通胀像抢劫犯一样暴力，像持枪歹徒一样可怕，像杀手一样致命。——里根）<br />
@@ -129,11 +174,13 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.barrons.com/livecoverage/stock-market-news-today-101626/card/wall-street-s-fear-gauge-flashes-red-as-stocks-tumble-oil-surges-and-tech-reels-fixHy5gPLAzio74MriHe">https://www.barrons.com/livecoverage/stock-market-news-today-101626/card/wall-street-s-fear-gauge-flashes-red-as-stocks-tumble-oil-surges-and-tech-reels-fixHy5gPLAzio74MriHe</a></p>
 <p><strong>发生了什么</strong>：布伦特原油 12 月期货周五大涨 3.7%，收于每桶约 109.9 美元，创 5 月以来最高水平。直接导火索是美国国会议员采取行动，阻止特朗普从俄罗斯进口柴油的计划——市场担心供应收紧。与此同时，恐慌指数 VIX 飙升近 25% 至 20.57，10 年期美债则创下 2 月以来表现最好的一周，收益率回落至 5.097%。</p>
 <p><strong>为什么值得关注</strong>：油价是"万物之价"——原油涨，汽油、机票、快递运费、塑料制品全跟着涨，最终还是普通人买单。油价和通胀互相点火：油越贵，上面那条"通胀难退烧"的新闻就越难解决。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>布伦特原油</strong>：国际油价的"标杆"，就像菜市场里大家都参考的那家猪肉摊的价格，全球油价跟着它走。<br />
-- <strong>原油期货</strong>：提前约定"12 月交货的油现在定价"。109 美元/桶是 12 月合约的价格，代表市场对年底油价的预期。<br />
-- <strong>避险</strong>：市场害怕时，钱会躲进"安全屋"（国债、黄金），就像下雨天大家往屋檐下躲——这就是美债这周大涨的原因。<br />
-- <strong>制裁 / 供应收紧</strong>：美国议员要拦下特朗普进口俄罗斯柴油的计划，相当于不让对手的油进自家市场。油少了，价格自然涨。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>布伦特原油</strong>：国际油价的"标杆"，就像菜市场里大家都参考的那家猪肉摊的价格，全球油价跟着它走。</li>
+<li><strong>原油期货</strong>：提前约定"12 月交货的油现在定价"。109 美元/桶是 12 月合约的价格，代表市场对年底油价的预期。</li>
+<li><strong>避险</strong>：市场害怕时，钱会躲进"安全屋"（国债、黄金），就像下雨天大家往屋檐下躲——这就是美债这周大涨的原因。</li>
+<li><strong>制裁 / 供应收紧</strong>：美国议员要拦下特朗普进口俄罗斯柴油的计划，相当于不让对手的油进自家市场。油少了，价格自然涨。</li>
+</ul>
 <p><strong>一句话总结</strong>：地缘政治搅动供应预期，油价创 5 月新高，"油贵 → 物价贵"的传导链条正在绷紧。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>energy</strong> | 能源；精力 | 常用搭配：energy prices（能源价格）, clean energy（清洁能源） | 例句：Energy prices jumped after the supply news.（供应消息传出后能源价格跳涨。） | 名句："Energy and persistence conquer all things." — Benjamin Franklin（精力与毅力能征服一切。——富兰克林）<br />
@@ -153,14 +200,16 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/">https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/</a></p>
 <p><strong>发生了什么</strong>：Palo Alto 初创公司 Elorian 在 10 月 16 日发布了首个模型 Glimpse，目前以研究预览版开放 API，聊天界面还需排队。创始人 Andrew Dai 曾是谷歌 DeepMind 研究员，核心理念是：现在的 AI"看不懂图"——它们看一眼图片就转成文字去推理，像凭记忆描述照片；而 Glimpse 会在推理中途"回头再看"，放大局部、抽视频帧、甚至跑代码测量，被称为"视觉草稿纸"。公司称只用几百张 GPU、很小的团队就训出了它，体量远小于它对标的前沿模型。</p>
 <p><strong>为什么值得关注</strong>：这挑战了"大力出奇迹"的主流路线——如果小模型靠"看得更仔细"也能接近大模型效果，AI 竞赛可能从"拼算力"转向"拼巧思"，对创业公司是重大利好。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>推理</strong>：AI"动脑筋想"的过程，不只是背答案，而是像做数学题一样一步步推。<br />
-- <strong>多模态</strong>：能同时处理文字、图片、视频等多种"感官"，像人一样又看又听。<br />
-- <strong>Token</strong>：AI 阅读时的"字块"，比如把一句话切成小块再理解。图片转 token = 把照片"翻译"成 AI 能读的文字块。<br />
-- <strong>Benchmark（基准测试）</strong>：AI 界的"统考排名"，大家做同一套卷子比分数。Glimpse 自称在部分榜单赢了，但也输给了 GPT-6 Astra。<br />
-- <strong>参数量</strong>：模型脑子里"旋钮"的数量，越多一般越聪明，但也越贵、越耗电。<br />
-- <strong>API</strong>：让别的软件调用这个模型的"外卖窗口"，不用进官网也能用。<br />
-- <strong>种子轮 / 估值</strong>：创业公司第一笔融资像给小树苗的第一桶水；Elorian 拿了 5500 万美元，估值 3 亿美元（市场觉得它值这个价，像给没上市的房子估价）。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>推理</strong>：AI"动脑筋想"的过程，不只是背答案，而是像做数学题一样一步步推。</li>
+<li><strong>多模态</strong>：能同时处理文字、图片、视频等多种"感官"，像人一样又看又听。</li>
+<li><strong>Token</strong>：AI 阅读时的"字块"，比如把一句话切成小块再理解。图片转 token = 把照片"翻译"成 AI 能读的文字块。</li>
+<li><strong>Benchmark（基准测试）</strong>：AI 界的"统考排名"，大家做同一套卷子比分数。Glimpse 自称在部分榜单赢了，但也输给了 GPT-6 Astra。</li>
+<li><strong>参数量</strong>：模型脑子里"旋钮"的数量，越多一般越聪明，但也越贵、越耗电。</li>
+<li><strong>API</strong>：让别的软件调用这个模型的"外卖窗口"，不用进官网也能用。</li>
+<li><strong>种子轮 / 估值</strong>：创业公司第一笔融资像给小树苗的第一桶水；Elorian 拿了 5500 万美元，估值 3 亿美元（市场觉得它值这个价，像给没上市的房子估价）。</li>
+</ul>
 <p><strong>一句话总结</strong>：小团队用"让 AI 反复看图"的巧思挑战巨头算力路线，AI 竞赛可能迎来思路之变。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>reason</strong> | 推理；原因 | 常用搭配：reason about（对……进行推理）, the reason for（……的原因） | 例句：The model can reason with images, not just about them.（这个模型能"用"图像推理，而不只是"谈论"图像。） | 名句："The heart has its reasons which reason knows nothing of." — Blaise Pascal（心有其理，非理所能知。——帕斯卡）<br />
@@ -180,14 +229,16 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.financialcontent.com/article/accwirecq-2026-10-16-physical-ai-lab-nature-will-unveils-natura-1-first-general-foundation-model-for-the-physical-world">https://www.financialcontent.com/article/accwirecq-2026-10-16-physical-ai-lab-nature-will-unveils-natura-1-first-general-foundation-model-for-the-physical-world</a></p>
 <p><strong>发生了什么</strong>：物理 AI 实验室 Nature Will 在 10 月 16 日发布 Natura-1，号称首个面向物理世界的通用基础模型。它是一个 500 亿参数的混合专家模型，在语言、图像、视频和动作上联合训练，预训练用了超过 100 万小时的人类第一视角视频数据。它的本事是"灵巧手控制"：能听懂指令、直接上手做精细操作，以 0.1 秒一次的控制频率把语言、视觉和多自由度动作统一起来。</p>
 <p><strong>为什么值得关注</strong>：这是 AI 从"动嘴"（聊天）走向"动手"（干活）的关键一步——如果机器人真能像人手一样灵活拧瓶盖、捏零件，工厂、家庭服务业都会被改写。这是"具身智能"赛道今年最重磅的发布之一。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>具身智能 / 物理 AI</strong>：有身体的 AI，不只动嘴聊天，还要动手拿东西、走路，像给大脑装上了一双手。<br />
-- <strong>灵巧手</strong>：像人手一样灵活的机械手，能捏针、拧瓶盖，而不是只能抓大箱子。<br />
-- <strong>混合专家模型（MoE）</strong>：模型里住着一群"专家"，接到问题只叫相关的专家起来干活，省电又快，就像医院分诊挂号。<br />
-- <strong>500 亿参数</strong>：脑容量的刻度，数字越大一般越聪明（也越烧钱）。<br />
-- <strong>零样本</strong>：没专门学过这个任务，看一眼指令就会做，像学霸裸考也能拿高分。<br />
-- <strong>预训练</strong>：正式上岗前的"九年义务教育"——先看 100 万小时人类第一视角视频，学会怎么动手。<br />
-- <strong>控制回路 100 毫秒</strong>：手眼脑配合的速度，0.1 秒反应一次，比人类眨眼（约 0.3 秒）还快。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>具身智能 / 物理 AI</strong>：有身体的 AI，不只动嘴聊天，还要动手拿东西、走路，像给大脑装上了一双手。</li>
+<li><strong>灵巧手</strong>：像人手一样灵活的机械手，能捏针、拧瓶盖，而不是只能抓大箱子。</li>
+<li><strong>混合专家模型（MoE）</strong>：模型里住着一群"专家"，接到问题只叫相关的专家起来干活，省电又快，就像医院分诊挂号。</li>
+<li><strong>500 亿参数</strong>：脑容量的刻度，数字越大一般越聪明（也越烧钱）。</li>
+<li><strong>零样本</strong>：没专门学过这个任务，看一眼指令就会做，像学霸裸考也能拿高分。</li>
+<li><strong>预训练</strong>：正式上岗前的"九年义务教育"——先看 100 万小时人类第一视角视频，学会怎么动手。</li>
+<li><strong>控制回路 100 毫秒</strong>：手眼脑配合的速度，0.1 秒反应一次，比人类眨眼（约 0.3 秒）还快。</li>
+</ul>
 <p><strong>一句话总结</strong>：AI 开始长"手"了：500 亿参数的 Natura-1 要让机器人像人手一样又听话又灵活。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>physical</strong> | 物理的；身体的 | 常用搭配：physical world（物理世界）, physical strength（体力） | 例句：Physical AI gives robots a body, not just a brain.（物理 AI 给机器人一个身体，而不只是一个大脑。） | 名句："Strength does not come from physical capacity. It comes from an indomitable will." — Mahatma Gandhi（力量并非来自身体的能力，而是来自不屈的意志。——甘地）<br />
@@ -207,12 +258,14 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://nynewscast.com/aimoga-to-launch-home-companion-robot-mobo-and-open-global-pre-orders-at-2026-chery-international-user-summit-266467/">https://nynewscast.com/aimoga-to-launch-home-companion-robot-mobo-and-open-global-pre-orders-at-2026-chery-international-user-summit-266467/</a></p>
 <p><strong>发生了什么</strong>：奇瑞旗下的机器人品牌 AiMOGA 宣布，将在 10 月 19–23 日芜湖"奇瑞国际用户生态大会"上正式展示首款家用伴侣人形机器人 Mobo，并同步开启全球预售。Mobo 搭载自研 MoAgent 系统，能把"把客厅收拾一下"这类复杂指令拆成可执行的步骤、做长期任务规划；全身 22 个自由度，能做表情、跳舞，具备空间感知和多模态交互，还能记住家庭成员的习惯偏好，官方称从设计之初就考虑了隐私保护。</p>
 <p><strong>为什么值得关注</strong>：汽车大厂纷纷跨界做机器人（把造车供应链经验搬过来），家用机器人正从"展会概念"走向"真能下单"。Mobo 是第一批面向普通家庭预售的人形机器人之一，标志着"机器人进家"开始进入消费倒计时。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>人形机器人</strong>：长得像人的机器人，有头有手有腿，目标是进家里帮忙干活、陪伴。<br />
-- <strong>22 个自由度</strong>：关节能活动的"方向数"，越多动作越灵活——能跳舞、比手势，而不是像木偶一样僵硬。<br />
-- <strong>多模态交互</strong>：又听又看又聊，综合判断，像人一样"眼观六路、耳听八方"。<br />
-- <strong>空间感知</strong>：知道自己在哪、家具在哪，走路不撞墙，像你在黑屋子里也大概知道门在哪。<br />
-- <strong>MoAgent</strong>：奇瑞给机器人装的"大脑系统"，能把大任务拆成一步步小任务，还会做长期规划。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>人形机器人</strong>：长得像人的机器人，有头有手有腿，目标是进家里帮忙干活、陪伴。</li>
+<li><strong>22 个自由度</strong>：关节能活动的"方向数"，越多动作越灵活——能跳舞、比手势，而不是像木偶一样僵硬。</li>
+<li><strong>多模态交互</strong>：又听又看又聊，综合判断，像人一样"眼观六路、耳听八方"。</li>
+<li><strong>空间感知</strong>：知道自己在哪、家具在哪，走路不撞墙，像你在黑屋子里也大概知道门在哪。</li>
+<li><strong>MoAgent</strong>：奇瑞给机器人装的"大脑系统"，能把大任务拆成一步步小任务，还会做长期规划。</li>
+</ul>
 <p><strong>一句话总结</strong>：奇瑞把造车的本事搬来造"家庭保姆"机器人，Mobo 开启全球预售，人形机器人离进家又近了一步。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>friend</strong> | 朋友 | 常用搭配：make friends（交朋友）, close friend（密友） | 例句：The robot is designed to be a friend, not just a tool.（这款机器人被设计成伙伴，而不只是一个工具。） | 名句："Keep your friends close, but your enemies closer." — The Godfather Part II（亲近朋友，更要亲近敌人。——《教父 2》）<br />
@@ -230,16 +283,20 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <hr />
 <h2>三、国际事务 🌍</h2>
 <h3>1. 泽连斯基布鲁塞尔求援 790 亿美元，欧盟声援、美乌裂痕加深</h3>
-<p>📌 <strong>来源</strong>：半岛电视台 / 南华早报<br />
-- <a href="https://www.aljazeera.com/amp/news/2026/10/16/eu-rallies-in-support-of-ukraine-amid-trump-standoff">https://www.aljazeera.com/amp/news/2026/10/16/eu-rallies-in-support-of-ukraine-amid-trump-standoff</a><br />
-- <a href="https://www.scmp.com/news/world/europe/article/3371207/zelensky-asks-eu-extra-79-billion-sustain-ukraines-war-effort">https://www.scmp.com/news/world/europe/article/3371207/zelensky-asks-eu-extra-79-billion-sustain-ukraines-war-effort</a></p>
+<p>📌 <strong>来源</strong>：半岛电视台 / 南华早报</p>
+<ul>
+<li><a href="https://www.aljazeera.com/amp/news/2026/10/16/eu-rallies-in-support-of-ukraine-amid-trump-standoff">https://www.aljazeera.com/amp/news/2026/10/16/eu-rallies-in-support-of-ukraine-amid-trump-standoff</a></li>
+<li><a href="https://www.scmp.com/news/world/europe/article/3371207/zelensky-asks-eu-extra-79-billion-sustain-ukraines-war-effort">https://www.scmp.com/news/world/europe/article/3371207/zelensky-asks-eu-extra-79-billion-sustain-ukraines-war-effort</a></li>
+</ul>
 <p><strong>发生了什么</strong>：乌克兰总统泽连斯基 10 月 16 日在布鲁塞尔欧盟峰会上发表演讲，请求欧盟明年再提供 700 亿欧元（约 790 亿美元）援助，称"明年战争将花费 1550 亿欧元，至少需要你们再出 700 亿——用于国防、武器和国家韧性"。德国总理默茨表态支持加码，欧盟峰会集体声援基辅。与此同时美乌关系急冻：特朗普称乌克兰恢复打击俄炼油厂是"disgrace（耻辱）"，说泽连斯基"比普京还难打交道"；克里姆林宫则指责乌克兰袭击俄炼油厂违背了美国推动的"能源停火"。</p>
 <p><strong>为什么值得关注</strong>：欧洲正被迫独自扛起援乌大梁——美国靠不住之后，欧盟要不要动用被冻结的 2000 亿欧元俄罗斯资产，成为撕裂欧洲内部的难题。这个冬天乌克兰的能源设施能否撑住，直接关系战争走向。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>欧盟峰会</strong>：欧盟 27 国领导人开大会商量大事，像小区业主大会，吵完得出个共同决定。<br />
-- <strong>军援</strong>：给钱给武器帮乌克兰打仗。790 亿美元约等于一个中等国家一年的全部开销。<br />
-- <strong>冻结的俄罗斯资产</strong>：存在欧洲银行里的俄罗斯央行资金（约 2000 亿欧元），开战后被"冻住"不让动。现在有人提议拿来给乌克兰花——但钱主要存在比利时，比利时怕俄罗斯报复，一直反对。<br />
-- <strong>能源停火</strong>：特朗普单方面宣布的"别炸对方能源设施"的口头约定，乌俄都没正式答应，乌克兰说自己是从新闻里才知道的——现在已经名存实亡。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>欧盟峰会</strong>：欧盟 27 国领导人开大会商量大事，像小区业主大会，吵完得出个共同决定。</li>
+<li><strong>军援</strong>：给钱给武器帮乌克兰打仗。790 亿美元约等于一个中等国家一年的全部开销。</li>
+<li><strong>冻结的俄罗斯资产</strong>：存在欧洲银行里的俄罗斯央行资金（约 2000 亿欧元），开战后被"冻住"不让动。现在有人提议拿来给乌克兰花——但钱主要存在比利时，比利时怕俄罗斯报复，一直反对。</li>
+<li><strong>能源停火</strong>：特朗普单方面宣布的"别炸对方能源设施"的口头约定，乌俄都没正式答应，乌克兰说自己是从新闻里才知道的——现在已经名存实亡。</li>
+</ul>
 <p><strong>一句话总结</strong>：美国"撂挑子"、欧洲被迫接盘，790 亿美元援乌请求撕开西方阵营的裂痕。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>enemy</strong> | 敌人 | 常用搭配：common enemy（共同的敌人）, make enemies（树敌） | 例句：Both sides see each other as the enemy.（双方都视对方为敌人。） | 名句："The enemy of my enemy is my friend." — Ancient proverb（敌人的敌人就是朋友。——古谚）<br />
@@ -259,11 +316,13 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.reuters.com/world/romania-resumes-search-seven-missing-sailors-drone-hit-ship-2026-10-16/">https://www.reuters.com/world/romania-resumes-search-seven-missing-sailors-drone-hit-ship-2026-10-16/</a></p>
 <p><strong>发生了什么</strong>：12 小时内，两艘化学品油轮在罗马尼亚黑海海岸附近接连被无人机击中。悬挂圣马力诺旗的"Wine Trader"号在罗马尼亚领海线外约 1 英里处被击中起火，12 名船员中 5 人获救、7 人失踪，罗马尼亚 10 月 16 日恢复搜救；悬挂科摩罗旗的"Yara J"号在罗马尼亚领海内被击中，船员无恙，船被拖往康斯坦察港。一名北约军方消息人士称无人机来自俄罗斯。过去 10 天，罗马尼亚和保加利亚近海已有至少 5 艘货船遇袭，23 名船员死亡或失踪。</p>
 <p><strong>为什么值得关注</strong>：战火正在烧向北约家门口的商船航线——两船都停泊在苏利纳运河口附近，那是乌克兰粮食出口的生命线。商船接连遇袭可能推高航运保险和粮食价格，最终传导到全球餐桌。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>领海</strong>：国家门口 12 海里（约 22 公里）的海域，算自家"院子"。在领海里打船，性质比在公海严重得多。<br />
-- <strong>无人机袭击</strong>：用遥控小飞机去撞船，便宜、难防，像拿弹弓打路过的货车，防不胜防。<br />
-- <strong>北约</strong>：美国 + 欧洲多国的军事同盟，信条是"打一个等于打全部"。在北约成员国（罗马尼亚）家门口打船，非常犯忌讳。<br />
-- <strong>苏利纳运河</strong>：多瑙河通往黑海的出口，是乌克兰粮食出口的"生命线"，船多、目标大，所以成了袭击重灾区。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>领海</strong>：国家门口 12 海里（约 22 公里）的海域，算自家"院子"。在领海里打船，性质比在公海严重得多。</li>
+<li><strong>无人机袭击</strong>：用遥控小飞机去撞船，便宜、难防，像拿弹弓打路过的货车，防不胜防。</li>
+<li><strong>北约</strong>：美国 + 欧洲多国的军事同盟，信条是"打一个等于打全部"。在北约成员国（罗马尼亚）家门口打船，非常犯忌讳。</li>
+<li><strong>苏利纳运河</strong>：多瑙河通往黑海的出口，是乌克兰粮食出口的"生命线"，船多、目标大，所以成了袭击重灾区。</li>
+</ul>
 <p><strong>一句话总结</strong>：俄乌战火蔓延到北约门口的商船航线，黑海正变成"危险水域"。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>strike</strong> | 袭击；罢工 | 常用搭配：drone strike（无人机袭击）, strike a deal（达成协议） | 例句：Drones struck two tankers within twelve hours.（12 小时内，无人机袭击了两艘油轮。） | 名句："Strike while the iron is hot." — English proverb（趁热打铁。——英国谚语）<br />
@@ -279,16 +338,20 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 11. <strong>survive</strong> | 幸存 | 常用搭配：survive an attack（在袭击中幸存） | 例句：Five crew members survived the drone attack.（5 名船员在无人机袭击中幸存。） | 名句："Only the paranoid survive." — Andy Grove（只有偏执狂才能生存。——安迪·格鲁夫）<br />
 12. <strong>hope</strong> | 希望 | 常用搭配：hold out hope（抱有希望）, ray of hope（一线希望） | 例句：Families hold out hope for the seven missing sailors.（家属们对 7 名失踪船员仍抱有一线希望。） | 名句："Hope is a good thing, maybe the best of things." — The Shawshank Redemption（希望是美好的，也许是世间最美好的东西。——《肖申克的救赎》）</p>
 <h3>3. 美军第三艘航母开赴中东，对伊朗施压升级</h3>
-<p>📌 <strong>来源</strong>：JFeed / NoCut News<br />
-- <a href="https://www.jfeed.com/latest-news/u-s-surges-military-assets-to-middle-east-as-regional-tensions-escalate-55237">https://www.jfeed.com/latest-news/u-s-surges-military-assets-to-middle-east-as-regional-tensions-escalate-55237</a><br />
-- <a href="https://en.nocutnews.co.kr/news/6592354">https://en.nocutnews.co.kr/news/6592354</a></p>
+<p>📌 <strong>来源</strong>：JFeed / NoCut News</p>
+<ul>
+<li><a href="https://www.jfeed.com/latest-news/u-s-surges-military-assets-to-middle-east-as-regional-tensions-escalate-55237">https://www.jfeed.com/latest-news/u-s-surges-military-assets-to-middle-east-as-regional-tensions-escalate-55237</a></li>
+<li><a href="https://en.nocutnews.co.kr/news/6592354">https://en.nocutnews.co.kr/news/6592354</a></li>
+</ul>
 <p><strong>发生了什么</strong>："罗斯福"号航母战斗群正驶往中东，预计将与已在当地的"华盛顿"号、"老布什"号会合，使美军在中东的航母战斗群达到 3 个。五角大楼同时增派约 9000–10000 名官兵，"马金岛"号两栖戒备大队（载 2200 名海军陆战队员）也在途中。背景是：胡塞武装连月袭击沙特利雅得机场（6 架飞机受损、3 人死亡），伊朗击沉商船、威胁美舰，特朗普放话"很快就会击败伊朗"，而霍尔木兹海峡控制权问题让停火谈判陷入僵局。</p>
 <p><strong>为什么值得关注</strong>：3 个航母战斗群是 2003 年伊拉克战争初期以来的最高配置——这是"秀肌肉"逼谈判，还是大战前奏，全世界都在猜。霍尔木兹海峡一旦出事，全球约 1/5 的石油运输被掐住，油价（见财经第 3 条）会再上一个台阶。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>航母战斗群</strong>：一艘航母 + 护航军舰 + 潜艇 + 几十架飞机的"海上舰队套餐"，是美国在全球"秀肌肉"的主力。<br />
-- <strong>两栖戒备大队</strong>：载着海军陆战队、能抢滩登陆的船队，约 2200 人，相当于"先头部队"。<br />
-- <strong>霍尔木兹海峡</strong>：中东石油运出来的"咽喉"，全球约 1/5 的石油从这儿走，掐住它等于掐住全球油价。<br />
-- <strong>增兵威慑</strong>：把航母开到你家门口转悠，不打你但让你紧张，逼你在谈判桌上让步——谈判的筹码先摆上桌。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>航母战斗群</strong>：一艘航母 + 护航军舰 + 潜艇 + 几十架飞机的"海上舰队套餐"，是美国在全球"秀肌肉"的主力。</li>
+<li><strong>两栖戒备大队</strong>：载着海军陆战队、能抢滩登陆的船队，约 2200 人，相当于"先头部队"。</li>
+<li><strong>霍尔木兹海峡</strong>：中东石油运出来的"咽喉"，全球约 1/5 的石油从这儿走，掐住它等于掐住全球油价。</li>
+<li><strong>增兵威慑</strong>：把航母开到你家门口转悠，不打你但让你紧张，逼你在谈判桌上让步——谈判的筹码先摆上桌。</li>
+</ul>
 <p><strong>一句话总结</strong>：美军把"伊拉克战争级"的航母阵容摆到伊朗家门口，谈判桌和战场都在倒计时。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>strategy</strong> | 战略 | 常用搭配：military strategy（军事战略）, exit strategy（退出战略） | 例句：The carrier deployment is part of a pressure strategy.（航母部署是施压战略的一部分。） | 名句："Strategy without tactics is the slowest route to victory." — Sun Tzu（无战术的战略，是通往胜利的最慢之路。——孙子）<br />
@@ -310,10 +373,12 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.instagram.com/reel/DehH68-TjC9/">https://www.instagram.com/reel/DehH68-TjC9/</a></p>
 <p><strong>发生了什么</strong>：10 月 15 日，知名播客《The Diary Of A CEO》发布了一段采访片段，主角是被称作"效率专家"的 Sahar Yousef 博士。她分享了让自己工作更快的头号秘诀：<strong>给任务定一个计时器</strong>。她解释，人类对"进度标记"极其敏感——看到时间一格格流逝，大脑会自动加速。她举例说，小孩平时坐不住，但放一首"收拾歌"、要求在歌结束前收拾好玩具，孩子立刻专注起来，因为任务有了明确的起点和终点。她建议把任务压缩进很短的时间块（比如只给 5 分钟而不是 1 小时），逼自己必须完成。</p>
 <p><strong>为什么值得关注</strong>：Ricardo 写论文、备考时总觉得"时间很多、效率很低"，这个方法几乎零成本、立刻能用：下次打开文档前先定个 25 分钟倒计时，亲测有效的"大脑加速器"。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>帕金森定律 (Parkinson's Law)</strong>：工作的量会膨胀到填满你给它的全部时间。就像给气球打气：你给它多大的袋子，它就胀多大。给自己一整天写 800 词，你会磨蹭一整天；只给 1 小时，反而 40 分钟就写完了。对普通人来说：别再"今天一定要写完论文"这种模糊目标，改成"接下来 40 分钟只写引言"，效率翻倍。<br />
-- <strong>进度标记 (markers of progress)</strong>：大脑喜欢"看到自己在前进"的信号，就像打游戏看经验条涨、跑步看公里数跳。计时器滴答走、清单被划掉，都是给大脑的"小奖励"，它尝到甜头就会更卖力。类比：菜市场买菜凑满 100 减 20，看到"还差 10 块"就忍不住再拿两颗葱——人就是会被看得见的进度推着走。<br />
-- <strong>专注冲刺 (focus sprint)</strong>：把工作切成一段段"短跑"，比如 25 分钟全力冲、5 分钟休息，而不是"坐 8 小时"。就像跑步：没人能全程冲刺跑马拉松，但分段冲刺+走路，反而全程更快。对普通人：备考、写作业都可以用"25+5"的节奏，大脑不累、产出更高。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>帕金森定律 (Parkinson's Law)</strong>：工作的量会膨胀到填满你给它的全部时间。就像给气球打气：你给它多大的袋子，它就胀多大。给自己一整天写 800 词，你会磨蹭一整天；只给 1 小时，反而 40 分钟就写完了。对普通人来说：别再"今天一定要写完论文"这种模糊目标，改成"接下来 40 分钟只写引言"，效率翻倍。</li>
+<li><strong>进度标记 (markers of progress)</strong>：大脑喜欢"看到自己在前进"的信号，就像打游戏看经验条涨、跑步看公里数跳。计时器滴答走、清单被划掉，都是给大脑的"小奖励"，它尝到甜头就会更卖力。类比：菜市场买菜凑满 100 减 20，看到"还差 10 块"就忍不住再拿两颗葱——人就是会被看得见的进度推着走。</li>
+<li><strong>专注冲刺 (focus sprint)</strong>：把工作切成一段段"短跑"，比如 25 分钟全力冲、5 分钟休息，而不是"坐 8 小时"。就像跑步：没人能全程冲刺跑马拉松，但分段冲刺+走路，反而全程更快。对普通人：备考、写作业都可以用"25+5"的节奏，大脑不累、产出更高。</li>
+</ul>
 <p><strong>一句话总结</strong>：想变快别靠意志力，靠计时器——把任务装进小时间盒里，大脑会自动提速。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>timer</strong> | 计时器 | 常用搭配：set a timer（定个计时器）、beat the timer（抢在计时器响之前） | 例句：She sets a timer for 25 minutes before starting to write.（她动笔前会定一个 25 分钟的倒计时。） | 名句："Don't watch the clock; do what it does. Keep going." — Sam Levenson（别盯着时钟看，要学它那样——一直往前走。——萨姆·莱文森）<br />
@@ -333,10 +398,12 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.threads.com/@hormozi/post/DegX9tYnFws">https://www.threads.com/@hormozi/post/DegX9tYnFws</a></p>
 <p><strong>发生了什么</strong>：10 月 15 日，知名企业家 Alex Hormozi 在 Threads 发帖称：能身体静坐、屏蔽手机通知等一切数字干扰、把注意力钉在一件事上长达 8 小时，是"成就伟大"的前提条件；做不到这一点，就别想干成大事。帖子获得大量转发讨论。</p>
 <p><strong>为什么值得关注</strong>：Ricardo 正处在"手机一响就分心"的备考期，这条帖子把"专注"从鸡汤变成了硬指标：先别谈天赋，问问自己能不能安静坐 3 小时不动手机——这是可以练出来的肌肉。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>深度工作 (deep work)</strong>：不被打断、一心只做一件烧脑的事（写作、编程、备考）。类比：就像煲汤，大火 10 分钟不如小火 2 小时——大脑也需要"小火慢炖"的连续时间才能产出高质量成果。碎片化的 10 分钟刷题，效果远不如连续 2 小时沉浸。<br />
-- <strong>前提条件 (prerequisite)</strong>：做一件事之前必须先满足的条件，就像报名驾照考试前必须先满 18 岁。Hormozi 的意思是：长时间专注不是"加分项"，而是"报名资格"——没有它，连参赛的门票都没有。<br />
-- <strong>数字干扰 (digital distractions)</strong>：手机推送、短视频、群消息这些"数字小偷"。类比：就像你正在菜市场认真挑菜，旁边有个人每 30 秒拍你一下问"看我这个瓜甜不甜"——你永远挑不到好菜。对普通人：学习时把手机扔出房间，是成本最低的效率提升。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>深度工作 (deep work)</strong>：不被打断、一心只做一件烧脑的事（写作、编程、备考）。类比：就像煲汤，大火 10 分钟不如小火 2 小时——大脑也需要"小火慢炖"的连续时间才能产出高质量成果。碎片化的 10 分钟刷题，效果远不如连续 2 小时沉浸。</li>
+<li><strong>前提条件 (prerequisite)</strong>：做一件事之前必须先满足的条件，就像报名驾照考试前必须先满 18 岁。Hormozi 的意思是：长时间专注不是"加分项"，而是"报名资格"——没有它，连参赛的门票都没有。</li>
+<li><strong>数字干扰 (digital distractions)</strong>：手机推送、短视频、群消息这些"数字小偷"。类比：就像你正在菜市场认真挑菜，旁边有个人每 30 秒拍你一下问"看我这个瓜甜不甜"——你永远挑不到好菜。对普通人：学习时把手机扔出房间，是成本最低的效率提升。</li>
+</ul>
 <p><strong>一句话总结</strong>：别再问"怎样才能成功"，先问自己：能不能 3 小时不碰手机？专注力是练出来的，不是有没有天赋的问题。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>sustain</strong> | 维持、支撑 | 常用搭配：sustain focus（维持专注）、sustain growth（维持增长） | 例句：It's hard to sustain deep focus for eight straight hours.（连续八小时保持深度专注很难。） | 名句："Success isn't always about greatness. It's about consistency." — Dwayne Johnson（成功不总是关于伟大，而是关于始终如一。——道恩·强森）<br />
@@ -356,10 +423,12 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.facebook.com/reel/1601186531786138/">https://www.facebook.com/reel/1601186531786138/</a></p>
 <p><strong>发生了什么</strong>：10 月 15 日，印度畅销作家 Chetan Bhagat（700 万+粉丝）在 Facebook 发布短视频称：永远别低估人生改变的速度——3 到 6 个月的高强度专注，就能永远改变你的人生轨迹。他建议：定一个"不合理、甚至有点吓人"的目标，保证充足睡眠，多晒太阳，拼命自我教育，保持创造性输出，追逐精通，找一份"像玩一样"的工作，培养能带来满足感的爱好。</p>
 <p><strong>为什么值得关注</strong>：Ricardo 正在备考雅思、规划留学的关键期，这条帖子正好是一剂"长期主义"强心针：别想着"逆袭要三年"，认真投入一个学期，人生真的可以拐弯。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>人生轨迹 (trajectory)</strong>：原本是物理词，指炮弹飞出去的弧线；借来形容人生的走向。类比：就像开车，方向盘只转 1 度，开 100 公里后目的地完全不同。3 个月的专注就是那"1 度"，时间越长，偏离原点的距离越大。<br />
-- <strong>不合理的目标 (unreasonable goal)</strong>：大到让自己有点害怕的目标，比如"6 个月雅思从 5.5 到 7"。类比：跳高时把杆子放得很低，你轻轻一跨就过，毫无进步；把杆子放到踮脚才能够的高度，你才会真正起跳——目标要"吓人"一点，才配得上你的潜力。<br />
-- <strong>精通 (mastery)</strong>：把一件事做到顶尖水平的状态。类比：就像打游戏从青铜打到王者，不是靠"玩得多"，而是靠"每次复盘哪里没打好"。对普通人：与其同时学 5 样东西，不如把英语这一样真正学透。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>人生轨迹 (trajectory)</strong>：原本是物理词，指炮弹飞出去的弧线；借来形容人生的走向。类比：就像开车，方向盘只转 1 度，开 100 公里后目的地完全不同。3 个月的专注就是那"1 度"，时间越长，偏离原点的距离越大。</li>
+<li><strong>不合理的目标 (unreasonable goal)</strong>：大到让自己有点害怕的目标，比如"6 个月雅思从 5.5 到 7"。类比：跳高时把杆子放得很低，你轻轻一跨就过，毫无进步；把杆子放到踮脚才能够的高度，你才会真正起跳——目标要"吓人"一点，才配得上你的潜力。</li>
+<li><strong>精通 (mastery)</strong>：把一件事做到顶尖水平的状态。类比：就像打游戏从青铜打到王者，不是靠"玩得多"，而是靠"每次复盘哪里没打好"。对普通人：与其同时学 5 样东西，不如把英语这一样真正学透。</li>
+</ul>
 <p><strong>一句话总结</strong>：别小看几个月的专注——定个吓人的目标，吃好睡好、每天进步一点点，人生真的能在半年内拐弯。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>trajectory</strong> | 轨迹、人生走向 | 常用搭配：change your trajectory（改变轨迹）、career trajectory（职业轨迹） | 例句：Six months of focus can change your life's trajectory.（六个月的专注能改变人生轨迹。） | 名句："The future depends on what you do today." — Mahatma Gandhi（未来取决于你今天做了什么。——甘地）<br />
@@ -381,10 +450,12 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://shadedintimacy.com/woman-goes-viral-sharing-hard-necessary-relationship-theory/">https://shadedintimacy.com/woman-goes-viral-sharing-hard-necessary-relationship-theory/</a></p>
 <p><strong>发生了什么</strong>：一位 TikTok 博主 Abe Froman 分享的"let them（随他们去）"理论近日爆火，单条视频播放超 460 万。这个理论源自作家 Mel Robbins 2023 年在播客中提出的练习：允许对方按自己的方式行事，不再把对方的行为看作对自己的评价。Froman 强调，人们总会按自己的需求和习惯行事，感情里唯一的平静之道，是承认你无法控制别人如何对你——放下过度思考，不再把自我价值绑在对方的行为上。约会教练 Sabrina Alexis Bendory 赞同：比如被"已读不回"，别解读成"我不值得被爱"；另一位教练 Sabrina Zohar 则质疑，认为这与其说是"理论"，不如说是对人性的基本理解。</p>
 <p><strong>为什么值得关注</strong>：Ricardo 曾为感情反复内耗，这个理论像一颗"定心丸"：对方回不回消息、爱不爱你，说明的是对方，不是你的价值——把力气收回来照顾自己，才是成年人谈感情的方式。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>"Let them"理论（随他去理论）</strong>：核心就四个字：随他去。他不回消息？随他去。她突然冷淡？随他去。不是让你冷漠，而是停止"我一定是哪里做错了"的自我审判。类比：就像天气预报说明天下雨，你不会觉得"老天针对我"，只会带伞——别人的行为也是"天气"，你能管的只有自己带不带伞。<br />
-- <strong>情感抽离 (emotional detachment)</strong>：不是不爱了，而是把"我"和"他的行为"分开。以前：他已读不回=我不够好；现在：他已读不回=他忙/他没礼貌/他不合适，跟我好不好没关系。类比：就像看球赛，你支持的队输了，你不会觉得是自己踢得差——抽离就是当自己感情的"观众"，不当"背锅的球员"。<br />
-- <strong>已读不回 (ghosting)</strong>：聊得好好的，对方突然像"鬼"一样消失、不再回复。类比：就像菜市场跟摊主讨价还价，摊主突然转身走了——尴尬的是转身走的人，不是认真讲价的你。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>"Let them"理论（随他去理论）</strong>：核心就四个字：随他去。他不回消息？随他去。她突然冷淡？随他去。不是让你冷漠，而是停止"我一定是哪里做错了"的自我审判。类比：就像天气预报说明天下雨，你不会觉得"老天针对我"，只会带伞——别人的行为也是"天气"，你能管的只有自己带不带伞。</li>
+<li><strong>情感抽离 (emotional detachment)</strong>：不是不爱了，而是把"我"和"他的行为"分开。以前：他已读不回=我不够好；现在：他已读不回=他忙/他没礼貌/他不合适，跟我好不好没关系。类比：就像看球赛，你支持的队输了，你不会觉得是自己踢得差——抽离就是当自己感情的"观众"，不当"背锅的球员"。</li>
+<li><strong>已读不回 (ghosting)</strong>：聊得好好的，对方突然像"鬼"一样消失、不再回复。类比：就像菜市场跟摊主讨价还价，摊主突然转身走了——尴尬的是转身走的人，不是认真讲价的你。</li>
+</ul>
 <p><strong>一句话总结</strong>：管不住别人的心，就管好自己的解读——"随他去"不是认输，是把自我价值从别人手里拿回来。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>detachment</strong> | 抽离、超脱 | 常用搭配：emotional detachment（情感抽离）、a sense of detachment（抽离感） | 例句：A little emotional detachment can protect your peace.（适度的情感抽离能守护你的内心平静。） | 名句："Almost everything will work again if you unplug it for a few minutes, including you." — Anne Lamott（几乎所有东西拔掉插头几分钟都会恢复正常，包括你。——安妮·拉莫特）<br />
@@ -404,10 +475,12 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.instagram.com/reel/DehmXGuh1Mr/">https://www.instagram.com/reel/DehmXGuh1Mr/</a></p>
 <p><strong>发生了什么</strong>：10 月 15 日，Sage Robbins 发布了一段她与丈夫、著名演说家 Tony Robbins 的现场对谈视频，核心信息被打在屏幕上："DON'T WAIT FOR THE OTHER PERSON. GO FIRST（别等对方，先行动）。"Sage 动情地说，伴侣能给彼此最好的礼物，就是敢于认错、说对不起、收拾残局、重新坠入爱河——而且双方都要持续这么做。Tony 回应：当一个人先这样做，另一个人"立刻就清醒了"，两人甚至会为"到底是谁的错"展开一场"有爱的争吵"。他把"都怪你"的指责和"我懂你"的连接做了对比：这就是区别所在。</p>
 <p><strong>为什么值得关注</strong>：很多感情死在"凭什么是我先低头"上。这段视频给了一个反常识的答案：先认错不是输，而是一种"以退为进"的智慧——你先软下来，对方反而硬不起来了。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>先行动 (go first)</strong>：吵架后不等对方道歉，自己先开口。类比：就像两个人挤在一座独木桥上僵持，谁都不肯退——其实只要一方侧身让一步，两个人都能过去。感情里"先让一步"的人不是认输，是那个让桥重新通车的人。<br />
-- <strong>指责 vs 连接 (blame vs connection)</strong>："都怪你"是把对方推上被告席，"我懂你"是递过去一张纸巾。前者让人想自卫，后者让人想靠近。类比：就像队友投篮没进，你喊"都怪你太菜"他下次更不敢投；你说"没事，下一球打回来"他反而越战越勇。<br />
-- <strong>有爱的争吵 (loving fight)</strong>：听起来矛盾，意思是两人抢着认错、抢着承担责任的"吵架"。类比：就像两个人抢着买单——表面在"争"，实际在"宠"。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>先行动 (go first)</strong>：吵架后不等对方道歉，自己先开口。类比：就像两个人挤在一座独木桥上僵持，谁都不肯退——其实只要一方侧身让一步，两个人都能过去。感情里"先让一步"的人不是认输，是那个让桥重新通车的人。</li>
+<li><strong>指责 vs 连接 (blame vs connection)</strong>："都怪你"是把对方推上被告席，"我懂你"是递过去一张纸巾。前者让人想自卫，后者让人想靠近。类比：就像队友投篮没进，你喊"都怪你太菜"他下次更不敢投；你说"没事，下一球打回来"他反而越战越勇。</li>
+<li><strong>有爱的争吵 (loving fight)</strong>：听起来矛盾，意思是两人抢着认错、抢着承担责任的"吵架"。类比：就像两个人抢着买单——表面在"争"，实际在"宠"。</li>
+</ul>
 <p><strong>一句话总结</strong>：感情里最高级的"赢"，是抢着先认错——你先软，对方就硬不起来了。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>initiative</strong> | 主动、倡议 | 常用搭配：take the initiative（主动采取行动）、on one's own initiative（主动地） | 例句：In love, take the initiative to apologize first.（在感情里，主动先道歉。） | 名句："The best way out is always through." — Robert Frost（走出困境的最好办法永远是穿过去。——罗伯特·弗罗斯特）<br />
@@ -427,10 +500,12 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.instagram.com/reel/DehBDAfyQLW/">https://www.instagram.com/reel/DehBDAfyQLW/</a></p>
 <p><strong>发生了什么</strong>：10 月 15 日，博主 Justin Owens（340 万粉丝）发布的一段谈话视频获 6.3 万赞。他说：有些感情并没有破裂，只是两个人从没学会"不 defensive 地沟通"——一开口就像上法庭，每个人都在构筑自己的论据、而不是倾听；脆弱一出现，心墙比言语竖得更快，因为过去的经验告诉人们"诚实会被惩罚"。他强调，伴侣不是敌人，只是两个人都同时在和"被看穿又被拒绝"的恐惧搏斗；解法不是换个人，而是两个人同时选择放下防备。</p>
 <p><strong>为什么值得关注</strong>：Ricardo 写过"没说出口"会成为遗憾——这条视频正好回答了"为什么说不出口"：不是不爱，是害怕。看懂这一点，下次想说的话就敢说了。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>脆弱 (vulnerability)</strong>：敢把真实的自己露出来，包括缺点、害怕和眼泪。很多人觉得这是"示弱"，其实恰恰相反——就像打牌时敢先亮底牌的人，才是真正有底气的人。对普通人：在喜欢的人面前承认"我有点紧张"，比装酷更能拉近距离。<br />
-- <strong>心墙/防备 (guard)</strong>：受伤后竖起来的心理盾牌，"你别靠太近，免得我受伤"。类比：就像手上起了茧，是因为以前磨破过——茧保护了你，但也让你摸不到温度。感情里适度的茧是自我保护，太厚了就谁也进不来了。<br />
-- <strong>法庭式沟通 (courtroom conversations)</strong>：吵架变成辩论赛，目标从"解决问题"变成"证明我对"。类比：就像两个人合伙开店，账算不平，一个说"你贪了"，一个说"你懒了"——店没管好，合伙先散了。其实两人都想把店开好，只是忘了彼此是队友。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>脆弱 (vulnerability)</strong>：敢把真实的自己露出来，包括缺点、害怕和眼泪。很多人觉得这是"示弱"，其实恰恰相反——就像打牌时敢先亮底牌的人，才是真正有底气的人。对普通人：在喜欢的人面前承认"我有点紧张"，比装酷更能拉近距离。</li>
+<li><strong>心墙/防备 (guard)</strong>：受伤后竖起来的心理盾牌，"你别靠太近，免得我受伤"。类比：就像手上起了茧，是因为以前磨破过——茧保护了你，但也让你摸不到温度。感情里适度的茧是自我保护，太厚了就谁也进不来了。</li>
+<li><strong>法庭式沟通 (courtroom conversations)</strong>：吵架变成辩论赛，目标从"解决问题"变成"证明我对"。类比：就像两个人合伙开店，账算不平，一个说"你贪了"，一个说"你懒了"——店没管好，合伙先散了。其实两人都想把店开好，只是忘了彼此是队友。</li>
+</ul>
 <p><strong>一句话总结</strong>：很多感情不是爱没了，是话不会说了——放下"你对我错"的法庭，两个人才能重新当队友。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>defend</strong> | 防卫、辩解 | 常用搭配：defend oneself（为自己辩解）、defend a position（捍卫立场） | 例句：In arguments, people defend instead of listening.（吵架时，人们只顾辩解，不愿倾听。） | 名句："Courage is what it takes to stand up and speak; courage is also what it takes to sit down and listen." — Winston Churchill（站起来发言需要勇气，坐下来倾听同样需要勇气。——丘吉尔）<br />
@@ -452,11 +527,13 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.ess-news.com/2026/10/16/italy-needs-50-gwh-of-new-storage-as-solar-nears-82-gw-by-2030/">https://www.ess-news.com/2026/10/16/italy-needs-50-gwh-of-new-storage-as-solar-nears-82-gw-by-2030/</a></p>
 <p><strong>发生了什么</strong>：10 月 16 日，意大利国家电网运营商 Terna 和天然气管网运营商 Snam 联合发布《2026 情景展望》：意大利光伏装机将从 2025 年底的 43.5 吉瓦飙升到 2030 年的 82.3 吉瓦，太阳能发电量将从 44 太瓦时涨到 110 太瓦时，占全国发电量的 37%。但问题也随之而来：中午阳光最强时发的电用不完，"弃光限电"将变成结构性常态。因此意大利到 2030 年需要新增 50 吉瓦时的大规模储能，把中午多余的电存起来晚上用。</p>
 <p><strong>为什么值得关注</strong>：这是全球能源转型的缩影——光伏便宜到"电多得用不完"，瓶颈从"发电"变成了"存电"。谁先解决储能，谁就掌握了新能源时代的话语权，中国的宁德时代、比亚迪正是这条赛道上的头部玩家。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>储能 (energy storage)</strong>：给电网配的"充电宝"。太阳能中午猛晚上没，风电半夜大白天小，供需对不上——储能就是在电多时存起来、电少时放出来。类比：就像你家冰箱，中午菜市场大甩卖多买点，晚上不用再跑一趟。对普通人：以后电动车、家庭储能都会更便宜，因为全世界都在抢这个"大号充电宝"。<br />
-- <strong>弃光/限电 (curtailment)</strong>：发出来的电没地方去，只能白白扔掉。类比：就像果农丰收，果子太多卖不掉、运不走，只能烂在地里——不是没果子，是"存不住、运不出"。意大利现在就是"电太多"，听起来凡尔赛，实则是电网跟不上的烦恼。<br />
-- <strong>吉瓦/吉瓦时 (GW/GWh)</strong>：吉瓦是功率单位（发电机有多"猛"），吉瓦时是电量单位（实际发了多少"电"）。类比：吉瓦像水龙头开多大，吉瓦时像水桶里接了多少水。82 吉瓦≈ 8000 万个家用电磁炉同时全开的功率；50 吉瓦时≈ 500 万辆电动车充满一次的电量。<br />
-- <strong>电网运营商 (grid operator)</strong>：负责"调度"全国电力的"交通警察"，哪里的电多往哪里送、保证不停电。类比：就像春运时的铁路调度，哪个方向人多就加开车次，电网运营商管的是"电子"的春运。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>储能 (energy storage)</strong>：给电网配的"充电宝"。太阳能中午猛晚上没，风电半夜大白天小，供需对不上——储能就是在电多时存起来、电少时放出来。类比：就像你家冰箱，中午菜市场大甩卖多买点，晚上不用再跑一趟。对普通人：以后电动车、家庭储能都会更便宜，因为全世界都在抢这个"大号充电宝"。</li>
+<li><strong>弃光/限电 (curtailment)</strong>：发出来的电没地方去，只能白白扔掉。类比：就像果农丰收，果子太多卖不掉、运不走，只能烂在地里——不是没果子，是"存不住、运不出"。意大利现在就是"电太多"，听起来凡尔赛，实则是电网跟不上的烦恼。</li>
+<li><strong>吉瓦/吉瓦时 (GW/GWh)</strong>：吉瓦是功率单位（发电机有多"猛"），吉瓦时是电量单位（实际发了多少"电"）。类比：吉瓦像水龙头开多大，吉瓦时像水桶里接了多少水。82 吉瓦≈ 8000 万个家用电磁炉同时全开的功率；50 吉瓦时≈ 500 万辆电动车充满一次的电量。</li>
+<li><strong>电网运营商 (grid operator)</strong>：负责"调度"全国电力的"交通警察"，哪里的电多往哪里送、保证不停电。类比：就像春运时的铁路调度，哪个方向人多就加开车次，电网运营商管的是"电子"的春运。</li>
+</ul>
 <p><strong>一句话总结</strong>：光伏装得太快，电网存不下——意大利的"甜蜜烦恼"说明：新能源下半场，比的是谁更会"存电"。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>storage</strong> | 储存、储能 | 常用搭配：energy storage（储能）、battery storage（电池储能） | 例句：Italy needs 50 GWh of new energy storage by 2030.（到 2030 年，意大利需要新增 50 吉瓦时的储能。） | 名句："Energy and persistence conquer all things." — Benjamin Franklin（精力和毅力征服一切。——富兰克林）<br />
@@ -476,11 +553,13 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.swissinfo.ch/eng/africa-told-to-weigh-own-needs-before-exporting-carbon-credits/92225724">https://www.swissinfo.ch/eng/africa-told-to-weigh-own-needs-before-exporting-carbon-credits/92225724</a></p>
 <p><strong>发生了什么</strong>：10 月 16 日，在卢旺达基加利举行的"非洲碳市场峰会"上，联合国气候秘书处官员 Perumal Arumugam（负责《巴黎协定》第六条碳市场规则）发出警告：非洲国家在向国外出售碳信用之前，要先掂量自己完成气候目标的成本。他说买家永远挑最便宜的项目下手——"别把容易摘的低垂果子全卖到国外"，否则未来只能花大价钱做更贵的减排项目，来完成自己承诺的"无条件"减排目标。</p>
 <p><strong>为什么值得关注</strong>：碳信用正在变成发展中国家的"新石油"——卖的是"少排的二氧化碳"。这条新闻点破了一个残酷真相：富国花小钱买非洲的便宜减排额度完成自己的 KPI，穷国却可能把最划算的减排机会拱手让人，最后自己达标反而更贵。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>碳信用 (carbon credit)</strong>：一张"少排了一吨二氧化碳"的凭证，可以买卖。类比：就像班级大扫除，老师规定每人要捡 10 斤垃圾；你捡了 15 斤，多出来的 5 斤可以"卖"给只捡了 5 斤的同学，他拿你的额度交差。对普通人：以后坐飞机、开公司都可能要买碳信用来"抵消"自己的排放，它会越来越像一种货币。<br />
-- <strong>碳市场 (carbon market)</strong>：买卖碳信用的集市，分两种：强制的（政府规定企业必须买，如欧盟 ETS）和自愿的（企业主动买来标榜环保）。类比：就像菜市场，只不过卖的不是菜，是"干净空气的份额"。联合国现在想建一个全球统一的"大菜市场"（巴黎协定第六条），让国家之间也能交易。<br />
-- <strong>无条件减排目标 (unconditional targets)</strong>：各国在《巴黎协定》下承诺"靠自己、不靠外援也要完成"的减排任务。类比：就像你跟爸妈保证"这次考试一定进前十，不靠补课、自己学"——这是底线承诺，完不成丢的是自己的脸。非洲国家如果把便宜的减排项目都卖了，这个"自己学"的目标会越来越难。<br />
-- <strong>低垂的果子 (low-hanging fruit)</strong>：比喻最容易、最便宜先做的事。类比：摘苹果先摘伸手够得着的，梯子顶上的最后摘。警告的意思是：别把"伸手够得着"的减排机会全卖给外国人，剩下爬梯子的苦活全留给自己。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>碳信用 (carbon credit)</strong>：一张"少排了一吨二氧化碳"的凭证，可以买卖。类比：就像班级大扫除，老师规定每人要捡 10 斤垃圾；你捡了 15 斤，多出来的 5 斤可以"卖"给只捡了 5 斤的同学，他拿你的额度交差。对普通人：以后坐飞机、开公司都可能要买碳信用来"抵消"自己的排放，它会越来越像一种货币。</li>
+<li><strong>碳市场 (carbon market)</strong>：买卖碳信用的集市，分两种：强制的（政府规定企业必须买，如欧盟 ETS）和自愿的（企业主动买来标榜环保）。类比：就像菜市场，只不过卖的不是菜，是"干净空气的份额"。联合国现在想建一个全球统一的"大菜市场"（巴黎协定第六条），让国家之间也能交易。</li>
+<li><strong>无条件减排目标 (unconditional targets)</strong>：各国在《巴黎协定》下承诺"靠自己、不靠外援也要完成"的减排任务。类比：就像你跟爸妈保证"这次考试一定进前十，不靠补课、自己学"——这是底线承诺，完不成丢的是自己的脸。非洲国家如果把便宜的减排项目都卖了，这个"自己学"的目标会越来越难。</li>
+<li><strong>低垂的果子 (low-hanging fruit)</strong>：比喻最容易、最便宜先做的事。类比：摘苹果先摘伸手够得着的，梯子顶上的最后摘。警告的意思是：别把"伸手够得着"的减排机会全卖给外国人，剩下爬梯子的苦活全留给自己。</li>
+</ul>
 <p><strong>一句话总结</strong>：碳信用是穷国的"新石油"，但别贱卖——把最便宜的减排额度都出口了，将来自己达标会贵得多。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>credit</strong> | 碳信用、额度 | 常用搭配：carbon credit（碳信用）、earn credits（赚取额度） | 例句：Each carbon credit represents one ton of CO₂ reduced.（每一张碳信用代表减少了一吨二氧化碳。） | 名句："The greatest threat to our planet is the belief that someone else will save it." — Robert Swan（地球最大的威胁，是相信"总会有人来拯救它"。——罗伯特·斯旺）<br />
@@ -500,11 +579,13 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://www.energylivenews.com/2026/10/16/energy-companies-call-for-reform-on-emissions-trading-system/">https://www.energylivenews.com/2026/10/16/energy-companies-call-for-reform-on-emissions-trading-system/</a></p>
 <p><strong>发生了什么</strong>：10 月 16 日，一批欧洲能源公司联名致信欧洲理事会，呼吁改革欧盟碳排放交易体系（ETS）。信中亮出成绩单：自 2005 年以来，ETS 覆盖行业的排放下降了约 50%，而欧盟经济同期增长了约 30%——证明碳定价能以划算的方式推动减排，还不耽误赚钱。企业们提出三点诉求：总量上限的下降路径要可预测；至少 50% 的碳交易收入必须再投回脱碳；外国碳信用不能替代欧盟本土的减排，钱要留在欧洲搞工业转型。</p>
 <p><strong>为什么值得关注</strong>：这是"环保 vs 赚钱"难得一致的案例：企业主动要求"管得更严、更可预测"，因为规则明确才敢投钱。对 Ricardo 的启发是：好的制度不是"管死人"，而是让所有人敢做长期投入——学习、攒钱、做项目同理。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>碳排放交易体系 ETS (Emissions Trading System)</strong>：欧盟的"排污许可证"制度：政府每年发固定数量的"碳配额"（允许排多少吨二氧化碳），企业不够用就去市场上买，多了可以卖。类比：就像班级只发 100 张"上课说话券"，想多说话就得找同学买——券越贵，大家越不敢乱说话，减排就实现了。对普通人：你买的每度电、每升油里，其实都含着一点"碳价"。<br />
-- <strong>总量上限 (cap)</strong>：政府每年发的"说话券"总数，而且一年比一年少，逼着大家总体少排。类比：就像爸妈每周给的零花钱逐年递减，你自然学会省钱——企业也一样，配额越来越少，就被逼着搞绿色转型。<br />
-- <strong>碳价 (carbon price)</strong>：一张碳配额的市场价格，排一吨二氧化碳要花多少钱。类比：就像菜市场的菜价，菜价越高你越少买——碳价越高，企业越有动力少排。对普通人：碳价涨，长期看会推高电价油价，但也会倒逼出更便宜的绿电。<br />
-- <strong>脱碳 (decarbonisation)</strong>：把生产、生活中的二氧化碳排放降下来、直至归零的过程。类比：就像给家里"戒糖"——不是一天断掉，而是循序渐进：先把可乐换成无糖，再把奶茶戒了，最后连糖都不想了。企业脱碳也是：先节能、再换绿电、最后上氢能。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>碳排放交易体系 ETS (Emissions Trading System)</strong>：欧盟的"排污许可证"制度：政府每年发固定数量的"碳配额"（允许排多少吨二氧化碳），企业不够用就去市场上买，多了可以卖。类比：就像班级只发 100 张"上课说话券"，想多说话就得找同学买——券越贵，大家越不敢乱说话，减排就实现了。对普通人：你买的每度电、每升油里，其实都含着一点"碳价"。</li>
+<li><strong>总量上限 (cap)</strong>：政府每年发的"说话券"总数，而且一年比一年少，逼着大家总体少排。类比：就像爸妈每周给的零花钱逐年递减，你自然学会省钱——企业也一样，配额越来越少，就被逼着搞绿色转型。</li>
+<li><strong>碳价 (carbon price)</strong>：一张碳配额的市场价格，排一吨二氧化碳要花多少钱。类比：就像菜市场的菜价，菜价越高你越少买——碳价越高，企业越有动力少排。对普通人：碳价涨，长期看会推高电价油价，但也会倒逼出更便宜的绿电。</li>
+<li><strong>脱碳 (decarbonisation)</strong>：把生产、生活中的二氧化碳排放降下来、直至归零的过程。类比：就像给家里"戒糖"——不是一天断掉，而是循序渐进：先把可乐换成无糖，再把奶茶戒了，最后连糖都不想了。企业脱碳也是：先节能、再换绿电、最后上氢能。</li>
+</ul>
 <p><strong>一句话总结</strong>：欧洲企业主动喊话"把碳管严一点"——规则越明确，绿色投资才越敢砸钱，这是制度设计的胜利。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>reform</strong> | 改革 | 常用搭配：call for reform（呼吁改革）、reform the system（改革体系） | 例句：Energy firms are calling for reform of the carbon trading system.（能源企业呼吁改革碳交易体系。） | 名句："Be the change that you wish to see in the world." — Mahatma Gandhi（欲变世界，先变自己。——甘地）<br />
@@ -526,34 +607,40 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 - <a href="https://news.sina.com.cn/c/xl/2026-10-16/doc-inivmiic6999053.shtml">https://news.sina.com.cn/c/xl/2026-10-16/doc-inivmiic6999053.shtml</a></p>
 <p><strong>发生了什么</strong>：10 月 16 日，习近平在内蒙古乌兰察布考察。他先察看了黄旗海湿地的生态修复情况，强调湿地保护贵在保持原生态；随后到察哈尔高新区了解"东数西算"枢纽节点建设和绿色算力产业发展，要求把算力优势转化为发展优势，并察看了当地特色农牧产品。他强调，绿色发展是高质量发展的应有之义，要坚定不移走生态优先、绿色发展之路。</p>
 <p><strong>为什么值得关注</strong>：最高层亲自为"生态优先"和"绿色算力"定调——算力网被明确为国家规划建设的"六张网"之一，意味着算力基建（数据中心、新能源配套）还会继续加码；同时释放信号：地方发展不能再走"先污染后治理"的老路。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>绿色算力</strong>：数据中心是"电老虎"，绿色算力就是让这些"电老虎"吃风电、光电这类绿电。好比家里装了太阳能板再开大功率空调——活儿照干，但电是干净的。<br />
-- <strong>"东数西算"</strong>：东部沿海数据多、电贵地贵，西部风光资源多、电便宜。把东部的数据拿到西部去计算，就像把大城市的账本拿到电费便宜的老家去算账，全国一盘棋省成本。<br />
-- <strong>生态保护红线</strong>：给大自然划的"高压线"，线内的湿地、林地碰不得、占不得，碰了就要追责。对普通人来说，就是家门口的青山绿水会被长期保护，不会被随意开发。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>绿色算力</strong>：数据中心是"电老虎"，绿色算力就是让这些"电老虎"吃风电、光电这类绿电。好比家里装了太阳能板再开大功率空调——活儿照干，但电是干净的。</li>
+<li><strong>"东数西算"</strong>：东部沿海数据多、电贵地贵，西部风光资源多、电便宜。把东部的数据拿到西部去计算，就像把大城市的账本拿到电费便宜的老家去算账，全国一盘棋省成本。</li>
+<li><strong>生态保护红线</strong>：给大自然划的"高压线"，线内的湿地、林地碰不得、占不得，碰了就要追责。对普通人来说，就是家门口的青山绿水会被长期保护，不会被随意开发。</li>
+</ul>
 <p><strong>一句话总结</strong>：最高层在内蒙古同时点了"生态"和"算力"两个题：绿水青山要守住，绿色数据中心要建起来。</p>
 <h3>2. 国务院常务会议：深化"人工智能+"行动，教师法、价格法修订草案提请审议</h3>
 <p>📌 <strong>来源</strong>：新华社（10 月 16 日，经新浪财经转载）<br />
 - <a href="https://finance.sina.com.cn/china/2026-10-16/doc-inivmprk1640385.shtml">https://finance.sina.com.cn/china/2026-10-16/doc-inivmprk1640385.shtml</a></p>
 <p><strong>发生了什么</strong>：10 月 16 日，李强主持召开国务院常务会议，听取"人工智能+"行动进展情况汇报，要求以落地应用牵引技术创新、夯实算力与数据底座、让 AI 更好转化为现实生产力，同时守牢安全底线。会议还原则通过《教师法（修订草案）》（强化教师待遇保障、减负）和《价格法（修正草案）》（治理低价无序竞争、规范平台价格竞争），决定提请全国人大常委会审议。</p>
 <p><strong>为什么值得关注</strong>：AI 政策风向从"技术突破"转向"落地赚钱、赋能实体经济"——国家要的是 AI 真正帮工厂、医院、农田干活；价格法修订则剑指"内卷式"低价竞争，以后平台靠亏本砸价挤死对手的做法会被管。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>"人工智能+"</strong>：AI 像"电"一样，接入哪个行业就给哪个行业"通电"：+医疗就是 AI 看片子，+农业就是 AI 看庄稼。国家现在要的是"通电"，不是只造发电机。<br />
-- <strong>算电协同</strong>：AI 数据中心既耗电又耗水，"算电协同"就是发电和用电打配合——把数据中心建在风光电便宜的地方。好比把耗电大的工厂开在水电站旁边，电费直接打折。<br />
-- <strong>低价无序竞争/低价倾销</strong>：菜市场有人亏本卖菜，街坊都去他那儿买，别家活不下去倒闭后，他再涨价。对普通人短期像捡便宜，长期是选择变少、质量变差，这次修法就是要管这种"先亏死对手再收割"的玩法。<br />
-- <strong>中试验证</strong>：新技术从实验室到工厂之间的"试营业"——先小批量试产，行得通再大规模铺开，像新菜谱先在小厨房试做，好吃才开连锁店。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>"人工智能+"</strong>：AI 像"电"一样，接入哪个行业就给哪个行业"通电"：+医疗就是 AI 看片子，+农业就是 AI 看庄稼。国家现在要的是"通电"，不是只造发电机。</li>
+<li><strong>算电协同</strong>：AI 数据中心既耗电又耗水，"算电协同"就是发电和用电打配合——把数据中心建在风光电便宜的地方。好比把耗电大的工厂开在水电站旁边，电费直接打折。</li>
+<li><strong>低价无序竞争/低价倾销</strong>：菜市场有人亏本卖菜，街坊都去他那儿买，别家活不下去倒闭后，他再涨价。对普通人短期像捡便宜，长期是选择变少、质量变差，这次修法就是要管这种"先亏死对手再收割"的玩法。</li>
+<li><strong>中试验证</strong>：新技术从实验室到工厂之间的"试营业"——先小批量试产，行得通再大规模铺开，像新菜谱先在小厨房试做，好吃才开连锁店。</li>
+</ul>
 <p><strong>一句话总结</strong>：国家给 AI 定了新 KPI——别只秀技术，要真正帮实体经济干活；同时出手管"亏本砸价"的内卷竞争，教师减负也提上日程。</p>
 <h3>3. 商务部、科技部拟修订技术出口目录：AI、生物医药、光伏 40 项技术纳入管理并征求意见</h3>
 <p>📌 <strong>来源</strong>：经济日报（10 月 16 日，经新浪财经转载）<br />
 - <a href="https://finance.sina.cn/2026-10-16/detail-inivmprk1610633.d.html">https://finance.sina.cn/2026-10-16/detail-inivmprk1610633.d.html</a></p>
 <p><strong>发生了什么</strong>：10 月 16 日，商务部、科技部发布公告，就修订《中国禁止出口限制出口技术目录》公开征求意见（截止 11 月 15 日）。拟增列人工智能、生物医药、光伏三个领域 40 项技术：其中 AI 占 23 项（大模型、智能体、算力集群等），拟禁止出口 14 项（如 AI 驱动的恶意代码生成技术、钙钛矿电池组件生产技术），拟限制出口 26 项。已通过开源、发论文进入公共领域的技术不管；公告发布到正式实施前，相关技术出口要先登记。</p>
 <p><strong>为什么值得关注</strong>：中国最强的几张技术牌——AI 大模型、光伏制造，第一次被系统性纳入出口管制视野。"管住少数、放开多数"：做 AI 出海、光伏出海的企业，以后卖技术、海外建厂前要先看合规边界；普通开发者用的开源模型不受影响。</p>
-<p><strong>名词解释</strong>：<br />
-- <strong>禁止/限制出口技术目录</strong>：像小区的"贵重物品出门登记表"——一般的锅碗瓢盆随便带，祖传宝贝出门得登记审批。核心技术出境，禁止类是"不许带走"，限制类是"申请批准了才能带走"。<br />
-- <strong>大模型</strong>：读过全网图书馆的"超级大脑"，ChatGPT、DeepSeek 背后的那种，什么都能聊两句。<br />
-- <strong>智能体（Agent）</strong>：不只会聊天、还会自己动手办事的"数字员工"——你说"帮我订张机票"，它自己查航班、下单、付款一条龙。<br />
-- <strong>算力集群</strong>：把成千上万块 AI 芯片拼在一起，组成一座"计算发电厂"，专门给大模型"炼脑"用。<br />
-- <strong>自动许可</strong>：合规的出口情形报备一下就能走，像小区门禁刷脸即过，不用层层审批。<br />
-- <strong>钙钛矿电池</strong>：新一代太阳能电池技术，像给太阳能板换了更高效的"皮肤"，发电更多、成本更低，是中国光伏的王牌之一。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>禁止/限制出口技术目录</strong>：像小区的"贵重物品出门登记表"——一般的锅碗瓢盆随便带，祖传宝贝出门得登记审批。核心技术出境，禁止类是"不许带走"，限制类是"申请批准了才能带走"。</li>
+<li><strong>大模型</strong>：读过全网图书馆的"超级大脑"，ChatGPT、DeepSeek 背后的那种，什么都能聊两句。</li>
+<li><strong>智能体（Agent）</strong>：不只会聊天、还会自己动手办事的"数字员工"——你说"帮我订张机票"，它自己查航班、下单、付款一条龙。</li>
+<li><strong>算力集群</strong>：把成千上万块 AI 芯片拼在一起，组成一座"计算发电厂"，专门给大模型"炼脑"用。</li>
+<li><strong>自动许可</strong>：合规的出口情形报备一下就能走，像小区门禁刷脸即过，不用层层审批。</li>
+<li><strong>钙钛矿电池</strong>：新一代太阳能电池技术，像给太阳能板换了更高效的"皮肤"，发电更多、成本更低，是中国光伏的王牌之一。</li>
+</ul>
 <p><strong>一句话总结</strong>：AI 和光伏这些"看家技术"出境以后要"先登记、再出门"，但开源分享和正常做生意不受影响——管的是核心技术外流，不是关门。</p>
 <hr />
 <h2>八、GitHub 新技术 💻</h2>
@@ -561,17 +648,19 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📌 <strong>仓库</strong>：<a href="https://github.com/debpalash/VoiceStudio">github.com/debpalash/VoiceStudio</a></p>
 <p><strong>它是做什么的</strong>：一个开源语音工具：语音克隆、语音设计、视频配音、口述听写、语音转文字、有声书制作，全部装在一个桌面软件里，支持 646 种语言（含中文），而且所有计算都在自己的电脑上完成。</p>
 <p><strong>为什么最近火</strong>：10 月 16 日单日新增约 1676 个 star，登上当天 GitHub 趋势榜前列；目前总 star 超 7.1 万、fork 近 7800，仓库有中文版 README。它把原来要按量付费订阅的 AI 配音服务（ElevenLabs）变成了免费、开源、本地运行的平替——录几分钟声音就能克隆嗓音、给视频配音、把文章变成有声书；数据不出电脑，隐私友好。对 Ricardo 这种玩语音、做视频的人来说，是个"零成本配音棚"。</p>
-<p><strong>名词解释（大白话）</strong>：<br />
-- <strong>开源</strong>：像公开菜谱——代码人人可看、可改、可免费照着做，不用交"秘方费"。<br />
-- <strong>仓库（repository）</strong>：代码住的"大仓库/货架"，一个项目一个仓库，地址就是它的门牌号。<br />
-- <strong>star</strong>：给项目点"收藏/点赞"，star 越多说明越多人觉得好用，是开源圈的"人气值"。<br />
-- <strong>fork</strong>：把别人的菜谱复印一份带回家自己改，改好了还可以分享回去。<br />
-- <strong>本地运行</strong>：饭在自己家厨房做，不点外卖——数据不上传云端，断网也能用，隐私不外泄。<br />
-- <strong>语音克隆</strong>：录几分钟你的声音，AI 学会用你的嗓音念任何文字，像请了个"声音模仿秀演员"住在电脑里。<br />
-- <strong>转录（transcription）</strong>：把说话变成文字，像课堂上那个奋笔疾书的笔记员。<br />
-- <strong>口述听写（dictation）</strong>：对着电脑说话，字自动打出来，懒人打字神器。<br />
-- <strong>ElevenLabs</strong>：国外很火的 AI 配音公司，声音逼真但按量收费；VoiceStudio 就是它的"免费本地平替"。<br />
-- <strong>PR</strong>：给原项目"交作业"——你改好了代码，打个 PR 请原作者合并，就像投稿。</p>
+<p><strong>名词解释（大白话）</strong>：</p>
+<ul>
+<li><strong>开源</strong>：像公开菜谱——代码人人可看、可改、可免费照着做，不用交"秘方费"。</li>
+<li><strong>仓库（repository）</strong>：代码住的"大仓库/货架"，一个项目一个仓库，地址就是它的门牌号。</li>
+<li><strong>star</strong>：给项目点"收藏/点赞"，star 越多说明越多人觉得好用，是开源圈的"人气值"。</li>
+<li><strong>fork</strong>：把别人的菜谱复印一份带回家自己改，改好了还可以分享回去。</li>
+<li><strong>本地运行</strong>：饭在自己家厨房做，不点外卖——数据不上传云端，断网也能用，隐私不外泄。</li>
+<li><strong>语音克隆</strong>：录几分钟你的声音，AI 学会用你的嗓音念任何文字，像请了个"声音模仿秀演员"住在电脑里。</li>
+<li><strong>转录（transcription）</strong>：把说话变成文字，像课堂上那个奋笔疾书的笔记员。</li>
+<li><strong>口述听写（dictation）</strong>：对着电脑说话，字自动打出来，懒人打字神器。</li>
+<li><strong>ElevenLabs</strong>：国外很火的 AI 配音公司，声音逼真但按量收费；VoiceStudio 就是它的"免费本地平替"。</li>
+<li><strong>PR</strong>：给原项目"交作业"——你改好了代码，打个 PR 请原作者合并，就像投稿。</li>
+</ul>
 <p><strong>一句话总结</strong>：免费开源的 AI 配音全家桶装进一台电脑：克隆声音、视频配音、做有声书全行，还不用把数据交给别人。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>alternative</strong> | 替代方案；可供选择的东西 | 常用搭配：alternative energy（替代能源）、an alternative to（……的替代品）、have no alternative（别无选择） | 例句："Cycling is a healthy alternative to driving."（骑自行车是开车之外一种健康的替代方式。） | 名句：Margaret Thatcher："There is no alternative."（别无选择。——撒切尔夫人）<br />
@@ -591,14 +680,16 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📌 <strong>仓库</strong>：<a href="https://github.com/anthropics/claude-plugins-official">github.com/anthropics/claude-plugins-official</a></p>
 <p><strong>它是做什么的</strong>：Claude 背后的公司 Anthropic 在 GitHub 上线了一个官方插件目录（claude-plugins-official），收录自家开发和社区第三方的高质量 Claude Code 插件，分"官方"和"外部"两区，装插件只需一条命令。</p>
 <p><strong>为什么最近火</strong>：该仓库登顶 2026 年 10 月 17 日 GitHub 趋势榜第一，总 star 超 4 万、fork 超 4400，采用 Apache-2.0 开源协议。这相当于给 AI 编程助手开了个"官方应用商店"——以前插件散落各处、良莠不齐，现在官方亲自下场定标准、做收录。Anthropic 亲自下场说明"智能体插件生态"是大厂下注的下一个战场；对普通用户意味着以后给 AI 加新本领会像手机装 App 一样简单。</p>
-<p><strong>名词解释（大白话）</strong>：<br />
-- <strong>插件（plugin）</strong>：像手机 App——给 AI 助手加新本领的小组件，想让它会画图、会查资料，装个插件就行。<br />
-- <strong>Claude Code</strong>：Anthropic 出的 AI 编程助手，像有个 24 小时在线的程序员搭子，帮你写代码、改 bug。<br />
-- <strong>智能体（agent）</strong>：不只会问答、还会自己定计划动手干活的 AI，像个"数字员工"。<br />
-- <strong>MCP</strong>：AI 和外部工具之间的"通用插头/翻译官"，让 AI 能连上数据库、浏览器、日历等各种工具。<br />
-- <strong>开源</strong>：代码公开，人人可看可改可免费使用，像公开菜谱。<br />
-- <strong>目录/应用商店</strong>：插件的"大超市"，分门别类摆好，官方还负责"质检"，闭眼入不踩雷。<br />
-- <strong>Apache-2.0 协议</strong>：一种很宽松的开源"使用说明书"——免费拿去用、改、商用都行，只要保留原作者署名。</p>
+<p><strong>名词解释（大白话）</strong>：</p>
+<ul>
+<li><strong>插件（plugin）</strong>：像手机 App——给 AI 助手加新本领的小组件，想让它会画图、会查资料，装个插件就行。</li>
+<li><strong>Claude Code</strong>：Anthropic 出的 AI 编程助手，像有个 24 小时在线的程序员搭子，帮你写代码、改 bug。</li>
+<li><strong>智能体（agent）</strong>：不只会问答、还会自己定计划动手干活的 AI，像个"数字员工"。</li>
+<li><strong>MCP</strong>：AI 和外部工具之间的"通用插头/翻译官"，让 AI 能连上数据库、浏览器、日历等各种工具。</li>
+<li><strong>开源</strong>：代码公开，人人可看可改可免费使用，像公开菜谱。</li>
+<li><strong>目录/应用商店</strong>：插件的"大超市"，分门别类摆好，官方还负责"质检"，闭眼入不踩雷。</li>
+<li><strong>Apache-2.0 协议</strong>：一种很宽松的开源"使用说明书"——免费拿去用、改、商用都行，只要保留原作者署名。</li>
+</ul>
 <p><strong>一句话总结</strong>：Anthropic 给自家 AI 编程助手开了"官方应用商店"，插件生态从"地摊"升级成"正规商场"，AI 助手的本领以后像装 App 一样一键 get。</p>
 <p><strong>📖 生词时间</strong>：<br />
 1. <strong>official</strong> | 官方的；正式的 | 常用搭配：official website（官网）、official statement（官方声明）、it is official（已成定局） | 例句："The official results will be announced tomorrow."（官方结果将于明天公布。） | 名句：Otto von Bismarck："Never believe anything in politics until it has been officially denied."（在政治中，任何事在被官方否认之前都不要相信。——俾斯麦）<br />

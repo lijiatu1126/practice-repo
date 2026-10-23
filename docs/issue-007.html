@@ -57,6 +57,44 @@ body.dark .note { color: #a39a89; }
 body.dark .nav { border-color: #e8e2d5; }
 body.dark td, body.dark th { border-color: #444; }
 body.dark th { background: #262219; }
+.summary { background:#edf3fd; border-left:4px solid #1757c2; border-radius:6px; padding:12px 16px; }
+.blessing { text-align: center; color: #8a3324; font-size: 1.07em; font-weight: 600;
+            letter-spacing: 0.04em; margin: 0 0 16px; }
+.sec-label { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+             font-weight: 700; margin: 0 0 6px; font-size: 0.98em; letter-spacing: 0.03em; }
+.glossary { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 6px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px;
+            padding: 14px 18px 8px; margin: 1.4em 0; }
+.vocabbox .sec-label { color: #1757c2; }
+.vocabbox ul { list-style: none; padding-left: 0; margin: 6px 0 4px; }
+li.vocab { padding: 10px 0 12px; border-bottom: 1px dashed #ddd5bd; margin: 0; }
+li.vocab:last-child { border-bottom: none; }
+.vword { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         font-weight: 800; font-size: 1.12em; color: #1757c2; margin-right: 6px; }
+.vmean { font-weight: 700; }
+.vrow { font-size: 0.93em; color: #4a463e; margin-top: 3px; line-height: 1.8; }
+.vlabel { display: inline-block; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
+          padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
+.vquote { color: #6b6257; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources .sec-label { color: #5a554c; }
+.sources ul { margin: 4px 0; }
+h3::before { content: "▍"; color: #8a3324; }
+body.dark .blessing { color: #e0a458; }
+body.dark .glossary { background: #262219; }
+body.dark .vocabbox { background: #1d1b16; border-color: #3a362a; }
+body.dark li.vocab { border-bottom-color: #3a362a; }
+body.dark .vword { color: #8ab8ff; }
+body.dark .vrow { color: #c9c2b2; }
+body.dark .vlabel { background: #33302a; color: #e0c98a; }
+body.dark .vquote { color: #a39a89; }
+body.dark .summary { background: #1c2733; border-left-color: #8ab8ff; }
+body.dark .sources { color: #a39a89; }
+body.dark h3::before { color: #e0a458; }
 body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 </style>
 </head>
@@ -67,6 +105,7 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p>📚 《麻薯日报》合集 · 第 7 期 · 2026-10-03（星期六）</p>
 </blockquote>
 <h1>📰 每日新闻简报 · 2026年10月3日（星期六）</h1>
+<p class="blessing">🌅 愿你所求皆如愿，所行化坦途。</p>
 <p>Recardo，早上好！☀️ 今天是10月3日星期六，国庆假期第三天～ 假期余额还有不少，慢慢享受，下面是过去24小时最值得关注的消息，配好了大白话解读和英语生词，配着早餐看正好～</p>
 <p>（注：中国股市因国庆黄金周（10月1–7日）休市，所以金融板块主要看美欧市场。）</p>
 <hr />
@@ -74,116 +113,136 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <h3>1️⃣ 美国9月非农就业爆冷：仅新增2.9万人，10月加息预期大幅降温</h3>
 <p><strong>发生了什么：</strong> 美国劳工部北京时间10月2日晚公布9月非农就业报告：新增就业仅 <strong>2.9万人</strong>，远低于市场预期的约9万人；失业率从4.1%升至 <strong>4.2%</strong>；7月和8月数据合计被下修6万人（7月甚至从+2.1万修正为-1万）。平均时薪环比仅涨0.1%，同比涨3.0%（低于预期的3.2%）。分行业看，医疗保健、建筑、制造业小幅增加；政府部门、信息业、金融业都在减人。</p>
 <p><strong>为什么值得关注：</strong> 这是美联储10月议息会议前最后一份重磅就业数据。就业大幅走弱后，市场对10月加息的押注从一周前的约64%骤降至约17–23%——等于说市场觉得美联储10月大概率按兵不动了。不过12月加息仍被充分定价，抗通胀这场仗还没打完。</p>
-<p>📖 <strong>名词解释</strong><br />
-- <strong>非农就业报告</strong>：美国劳工部每月公布的就业数据（剔除农业），是判断美国经济冷热最重要的指标之一。<br />
-- <strong>失业率</strong>：正在找工作但没找到的人占劳动力的比例，4.2%仍属历史低位。<br />
-- <strong>平均时薪</strong>：打工者每小时平均工资，涨得快意味着通胀压力大（企业把人力成本转嫁到物价上）。<br />
-- <strong>数据修正</strong>：政府初次公布的是估算值，之后会根据更全的数据回头修正，"前值下修"很常见。<br />
-- <strong>加息</strong>：央行提高基准利率，借钱变贵，给过热的经济和通胀"降温"。<br />
-- <strong>CME FedWatch</strong>：芝加哥商品交易所的工具，根据期货市场押注算出"美联储下次加不加息"的概率。<br />
-- <strong>基点</strong>：利率最小单位，100基点=1%。<br />
-- <strong>滞胀</strong>：经济停滞（就业差）+通胀还在（物价涨）同时出现，是央行最头疼的局面。</p>
+<p>📖 <strong>名词解释</strong></p>
+<ul>
+<li><strong>非农就业报告</strong>：美国劳工部每月公布的就业数据（剔除农业），是判断美国经济冷热最重要的指标之一。</li>
+<li><strong>失业率</strong>：正在找工作但没找到的人占劳动力的比例，4.2%仍属历史低位。</li>
+<li><strong>平均时薪</strong>：打工者每小时平均工资，涨得快意味着通胀压力大（企业把人力成本转嫁到物价上）。</li>
+<li><strong>数据修正</strong>：政府初次公布的是估算值，之后会根据更全的数据回头修正，"前值下修"很常见。</li>
+<li><strong>加息</strong>：央行提高基准利率，借钱变贵，给过热的经济和通胀"降温"。</li>
+<li><strong>CME FedWatch</strong>：芝加哥商品交易所的工具，根据期货市场押注算出"美联储下次加不加息"的概率。</li>
+<li><strong>基点</strong>：利率最小单位，100基点=1%。</li>
+<li><strong>滞胀</strong>：经济停滞（就业差）+通胀还在（物价涨）同时出现，是央行最头疼的局面。</li>
+</ul>
 <p>💡 <strong>一句话总结</strong>：美国9月就业"熄火"，市场几乎不再押注美联储10月继续加息，但12月加息仍在牌桌上。</p>
 <p>🔗 来源：<a href="https://biz.chosun.com/en/en-international/2026/10/02/YH3E3HEU2VENXPLF7LX2BBEHVI/">CHOSUNBIZ（援引 Reuters/Yonhap）</a> · <a href="https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-02/">Reuters 全球市场综述</a></p>
-<p>📚 <strong>生词（雅思6分水平）</strong><br />
-- <strong>payroll</strong> 工资单；就业人数；搭配：nonfarm payrolls（非农就业人数）；例：Nonfarm payrolls rose by just 29,000 in September.；名句："Equal pay for equal work." —— 国际劳工运动口号<br />
-- <strong>expectation</strong> 预期；搭配：fall short of expectations（低于预期）；例：Job growth fell far short of market expectations.；名句："Expectation is the root of all heartache." —— 莎士比亚（传）<br />
-- <strong>sentiment</strong> 情绪；市场信心；搭配：investor sentiment（投资者情绪）；例：Weak jobs data lifted sentiment on a rate pause.；名句："Public sentiment is everything. With public sentiment, nothing can fail." —— 林肯<br />
-- <strong>revision</strong> 修正；搭配：downward revision（下修）；例：July payrolls were revised down from +21,000 to -10,000.；名句："History will be kind to me, for I intend to write it." —— 丘吉尔<br />
-- <strong>unemployment</strong> 失业；搭配：unemployment rate（失业率）；例：The unemployment rate edged up to 4.2%.；名句："The best social program is a job." —— 克林顿<br />
-- <strong>modest</strong> 适度的；搭配：modest growth（温和增长）；例：Stocks rose modestly after the report.；名句："Modesty is the only sure bait when you angle for praise." —— 切斯特菲尔德<br />
-- <strong>hike</strong> 上调（尤指加息）；搭配：rate hike（加息）；例：Traders cut bets on an October rate hike.；名句："Raise your words, not your voice. It is rain that grows flowers, not thunder." —— 鲁米<br />
-- <strong>stagflation</strong> 滞胀；搭配：stagflation risk（滞胀风险）；例：Weak hiring with sticky inflation raises stagflation worries.；名句："Inflation is as violent as a mugger, as frightening as an armed robber." —— 里根<br />
-- <strong>hold</strong> 维持不变；搭配：hold rates steady（维持利率不变）；例：The Fed is now expected to hold rates steady in October.；名句："Sometimes the bravest thing is to do nothing at all." —— 谚语<br />
-- <strong>disrupt</strong> 扰乱；搭配：disrupt supply chains（扰乱供应链）；例：High energy prices could start disrupting the labor market.；名句："Innovation distinguishes between a leader and a follower." —— 乔布斯</p>
+<p>📚 <strong>生词（雅思6分水平）</strong></p>
+<ul>
+<li><strong>payroll</strong> 工资单；就业人数；搭配：nonfarm payrolls（非农就业人数）；例：Nonfarm payrolls rose by just 29,000 in September.；名句："Equal pay for equal work." —— 国际劳工运动口号</li>
+<li><strong>expectation</strong> 预期；搭配：fall short of expectations（低于预期）；例：Job growth fell far short of market expectations.；名句："Expectation is the root of all heartache." —— 莎士比亚（传）</li>
+<li><strong>sentiment</strong> 情绪；市场信心；搭配：investor sentiment（投资者情绪）；例：Weak jobs data lifted sentiment on a rate pause.；名句："Public sentiment is everything. With public sentiment, nothing can fail." —— 林肯</li>
+<li><strong>revision</strong> 修正；搭配：downward revision（下修）；例：July payrolls were revised down from +21,000 to -10,000.；名句："History will be kind to me, for I intend to write it." —— 丘吉尔</li>
+<li><strong>unemployment</strong> 失业；搭配：unemployment rate（失业率）；例：The unemployment rate edged up to 4.2%.；名句："The best social program is a job." —— 克林顿</li>
+<li><strong>modest</strong> 适度的；搭配：modest growth（温和增长）；例：Stocks rose modestly after the report.；名句："Modesty is the only sure bait when you angle for praise." —— 切斯特菲尔德</li>
+<li><strong>hike</strong> 上调（尤指加息）；搭配：rate hike（加息）；例：Traders cut bets on an October rate hike.；名句："Raise your words, not your voice. It is rain that grows flowers, not thunder." —— 鲁米</li>
+<li><strong>stagflation</strong> 滞胀；搭配：stagflation risk（滞胀风险）；例：Weak hiring with sticky inflation raises stagflation worries.；名句："Inflation is as violent as a mugger, as frightening as an armed robber." —— 里根</li>
+<li><strong>hold</strong> 维持不变；搭配：hold rates steady（维持利率不变）；例：The Fed is now expected to hold rates steady in October.；名句："Sometimes the bravest thing is to do nothing at all." —— 谚语</li>
+<li><strong>disrupt</strong> 扰乱；搭配：disrupt supply chains（扰乱供应链）；例：High energy prices could start disrupting the labor market.；名句："Innovation distinguishes between a leader and a follower." —— 乔布斯</li>
+</ul>
 <h3>2️⃣ 美股周五反弹、纳斯达克盘中创新高，但道指标普周线收跌</h3>
 <p><strong>发生了什么：</strong> 受疲软非农数据推动（就业差→加息预期降→股市涨），美股10月2日全线高开高走：道指收涨约0.5%、标普500收涨约0.7%、纳斯达克收涨约1.2%并创下<strong>盘中历史新高</strong>，科技股领涨（特斯拉涨近4%，英特尔、AMD涨超3%，英伟达创历史新高）。但全周看，道指累跌1.3%、标普累跌0.3%，只有纳斯达克周涨0.5%。债市波动剧烈：10年期美债收益率一度冲上 <strong>5.3445%</strong>（24年新高），非农公布后一度回落到5.16%，尾盘又回到约5.3%。个股方面，耐克因财报预计销售利润下滑超预期，股价大跌超8%。</p>
 <p><strong>为什么值得关注：</strong> "坏消息就是好消息"——就业走弱反而让股市松了口气，说明当前市场最怕的不是经济放缓，而是美联储继续加息。但10年期收益率站上5.3%仍是悬顶之剑：这是房贷、企业债等各种利率的定价锚，长期高企会持续挤压经济。另外法国国债收益率创14年新高、法德利差扩至2012年以来最阔，欧洲财政隐忧也在发酵。</p>
-<p>📖 <strong>名词解释</strong><br />
-- <strong>道指/标普500/纳斯达克</strong>：美国三大股指。道指=30家蓝筹大公司；标普500=500家大中型公司，最能代表美股整体；纳斯达克=科技股集中地。<br />
-- <strong>10年期美债收益率</strong>：全球最重要的利率锚，房贷、车贷、企业发债利率都跟着它走；涨=借钱成本涨，通常利空股市。<br />
-- <strong>盘中高点</strong>：交易时段内达到的最高价（不一定是收盘价）。<br />
-- <strong>利空出尽</strong>：坏消息落地后，不确定性消除，市场反而上涨。</p>
+<p>📖 <strong>名词解释</strong></p>
+<ul>
+<li><strong>道指/标普500/纳斯达克</strong>：美国三大股指。道指=30家蓝筹大公司；标普500=500家大中型公司，最能代表美股整体；纳斯达克=科技股集中地。</li>
+<li><strong>10年期美债收益率</strong>：全球最重要的利率锚，房贷、车贷、企业发债利率都跟着它走；涨=借钱成本涨，通常利空股市。</li>
+<li><strong>盘中高点</strong>：交易时段内达到的最高价（不一定是收盘价）。</li>
+<li><strong>利空出尽</strong>：坏消息落地后，不确定性消除，市场反而上涨。</li>
+</ul>
 <p>💡 <strong>一句话总结</strong>：就业数据疲软浇灭了10月加息预期，美股周五大涨、纳指创新高，但债市收益率仍在24年高位徘徊，警报并未解除。</p>
 <p>🔗 来源：<a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-10022026-12153808">Investopedia</a> · <a href="https://www.businesstimes.com.sg/companies-markets/wall-street-opens-higher-softer-payrolls-data-lower-yields-lift-sentiment">The Business Times（转引 Reuters）</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>rebound</strong> 反弹；搭配：stage a rebound（上演反弹）；例：Wall Street staged a late rebound as yields retreated.；名句："Fall seven times and stand up eight." —— 日本谚语<br />
-- <strong>benchmark</strong> 基准；搭配：benchmark index（基准指数）；例：The 10-year yield serves as a benchmark for mortgage rates.；名句："What gets measured gets managed." —— 德鲁克（传）<br />
-- <strong>intraday</strong> 盘中的；搭配：intraday high（盘中高点）；例：The Nasdaq set a new intraday record.；名句："Carpe diem. Seize the day." —— 电影《死亡诗社》<br />
-- <strong>record</strong> 纪录；搭配：set a record（创纪录）；例：Nvidia shares hit all-time highs.；名句："Records are made to be broken." —— 体育谚语<br />
-- <strong>forecast</strong> 预测；搭配：earnings forecast（盈利预测）；例：Nike forecast steeper declines in sales and profit.；名句："The best way to predict the future is to invent it." —— 艾伦·凯<br />
-- <strong>steep</strong> 陡峭的；大幅的；搭配：steep decline（大幅下跌）；例：Nike projected a steep slide in sales.；名句："The best way out is always through." —— 弗罗斯特<br />
-- <strong>underperform</strong> 表现不及预期；搭配：underperform the market（跑输大盘）；例：Payrolls tend to underperform when Labor Day falls late.；名句："Winning isn't everything, it's the only thing." —— 隆巴迪<br />
-- <strong>basis point</strong> 基点；搭配：up 6 basis points（上升6个基点）；例：The 2-year yield fell 6 basis points to 4.725%.；名句："A journey of a thousand miles begins with a single step." —— 老子<br />
-- <strong>mortgage</strong> 房贷；搭配：mortgage rates（房贷利率）；例：The 10-year yield is a benchmark for mortgage rates.；名句："A house is made of walls and beams; a home is built with love and dreams." —— 谚语<br />
-- <strong>volatility</strong> 波动；搭配：market volatility（市场波动）；例：Seasonal-adjustment volatility may explain the weak print.；名句："The only constant in life is change." —— 赫拉克利特（传）</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>rebound</strong> 反弹；搭配：stage a rebound（上演反弹）；例：Wall Street staged a late rebound as yields retreated.；名句："Fall seven times and stand up eight." —— 日本谚语</li>
+<li><strong>benchmark</strong> 基准；搭配：benchmark index（基准指数）；例：The 10-year yield serves as a benchmark for mortgage rates.；名句："What gets measured gets managed." —— 德鲁克（传）</li>
+<li><strong>intraday</strong> 盘中的；搭配：intraday high（盘中高点）；例：The Nasdaq set a new intraday record.；名句："Carpe diem. Seize the day." —— 电影《死亡诗社》</li>
+<li><strong>record</strong> 纪录；搭配：set a record（创纪录）；例：Nvidia shares hit all-time highs.；名句："Records are made to be broken." —— 体育谚语</li>
+<li><strong>forecast</strong> 预测；搭配：earnings forecast（盈利预测）；例：Nike forecast steeper declines in sales and profit.；名句："The best way to predict the future is to invent it." —— 艾伦·凯</li>
+<li><strong>steep</strong> 陡峭的；大幅的；搭配：steep decline（大幅下跌）；例：Nike projected a steep slide in sales.；名句："The best way out is always through." —— 弗罗斯特</li>
+<li><strong>underperform</strong> 表现不及预期；搭配：underperform the market（跑输大盘）；例：Payrolls tend to underperform when Labor Day falls late.；名句："Winning isn't everything, it's the only thing." —— 隆巴迪</li>
+<li><strong>basis point</strong> 基点；搭配：up 6 basis points（上升6个基点）；例：The 2-year yield fell 6 basis points to 4.725%.；名句："A journey of a thousand miles begins with a single step." —— 老子</li>
+<li><strong>mortgage</strong> 房贷；搭配：mortgage rates（房贷利率）；例：The 10-year yield is a benchmark for mortgage rates.；名句："A house is made of walls and beams; a home is built with love and dreams." —— 谚语</li>
+<li><strong>volatility</strong> 波动；搭配：market volatility（市场波动）；例：Seasonal-adjustment volatility may explain the weak print.；名句："The only constant in life is change." —— 赫拉克利特（传）</li>
+</ul>
 <h3>3️⃣ 大宗与汇率：原油站上102美元续涨，金价反弹但周线连跌，美元走强</h3>
 <p><strong>发生了什么：</strong> 中东局势升级叠加供应扰动，油价维持高位：布伦特原油守在 <strong>102美元/桶</strong>上方（10月1日曾大涨4.4%），美国WTI约92.8美元。消息面包括：美国被曝向中东增派航母与军队、中国暂停成品油出口、俄罗斯因炼油厂遭袭禁止柴油出口。黄金周五反弹：现货金涨1.1%至4223.49美元/盎司，但全周仍跌约1.5–2%，连续第二周下跌。汇市上，美元指数升至102.09（2025年4月以来最高），连续第三周上涨；欧元跌至1.1235美元（2025年5月以来最低）；日元兑美元约158.1（东京9月核心通胀加速至2.7%，增强了日本央行继续加息的理由）。亚洲股市周五多数下跌：恒生跌2.5%、日经跌0.7%。</p>
 <p><strong>为什么值得关注：</strong> 油价、美元、美债收益率"三高"并存，是当前全球市场的核心压力源：油价涨推升通胀→央行被迫维持高利率→强美元反过来压制黄金和新兴市场。对普通人来说，油价传导到油费和物价，美元走强意味着出境游、海淘更贵。</p>
-<p>📖 <strong>名词解释</strong><br />
-- <strong>布伦特原油/WTI</strong>：全球两大原油定价基准。布伦特=欧洲、非洲、中东油价的标杆；WTI=美国本土油价标杆。<br />
-- <strong>美元指数</strong>：美元兑欧元、日元、英镑等六种货币的加权强弱指数，涨=美元整体走强。<br />
-- <strong>现货金 vs 期金</strong>：现货=现在一手交钱一手交货的价格；期货=约定未来交割的价格。<br />
-- <strong>避险资产</strong>：打仗、危机时大家抢着买的东西（黄金、美元、瑞郎），图个安心。<br />
-- <strong>利差</strong>：两种债券收益率的差值。法德利差扩大=市场觉得法国政府借钱风险比德国高很多。<br />
-- <strong>核心通胀</strong>：剔除波动大的食品和能源后的物价涨幅，更能反映真实通胀趋势。</p>
+<p>📖 <strong>名词解释</strong></p>
+<ul>
+<li><strong>布伦特原油/WTI</strong>：全球两大原油定价基准。布伦特=欧洲、非洲、中东油价的标杆；WTI=美国本土油价标杆。</li>
+<li><strong>美元指数</strong>：美元兑欧元、日元、英镑等六种货币的加权强弱指数，涨=美元整体走强。</li>
+<li><strong>现货金 vs 期金</strong>：现货=现在一手交钱一手交货的价格；期货=约定未来交割的价格。</li>
+<li><strong>避险资产</strong>：打仗、危机时大家抢着买的东西（黄金、美元、瑞郎），图个安心。</li>
+<li><strong>利差</strong>：两种债券收益率的差值。法德利差扩大=市场觉得法国政府借钱风险比德国高很多。</li>
+<li><strong>核心通胀</strong>：剔除波动大的食品和能源后的物价涨幅，更能反映真实通胀趋势。</li>
+</ul>
 <p>💡 <strong>一句话总结</strong>：油价高烧不退、美元持续走强，黄金虽有反弹仍难改周线连跌，全球市场被"能源+利率"双重压力笼罩。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-02/">Reuters</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>gauge</strong> 衡量；搭配：gauge inflation（衡量通胀）；例：The dollar index gauges the greenback against six peers.；名句："What gets measured gets managed." —— 德鲁克（传）<br />
-- <strong>rally</strong> 反弹；上涨；搭配：stage a rally（展开反弹）；例：The dollar rallied 0.6% overnight.；名句："Fall seven times and stand up eight." —— 日本谚语<br />
-- <strong>amid</strong> 在…之中；搭配：amid tensions（在紧张局势中）；例：Oil stayed firm amid Middle East tensions.；名句："In the middle of difficulty lies opportunity." —— 爱因斯坦（传）<br />
-- <strong>stoke</strong> 煽动；加剧；搭配：stoke fears（加剧担忧）；例：China's export halt stoked fears of fuel shortages.；名句："Where there is smoke, there is fire." —— 谚语<br />
-- <strong>bolster</strong> 增强；支撑；搭配：bolster the case for（增强…的理由）；例：Hot Tokyo inflation bolstered the case for BOJ hikes.；名句："A chain is only as strong as its weakest link." —— 谚语<br />
-- <strong>dovish</strong> 鸽派的（主张宽松）；搭配：dovish comments（鸽派言论）；例：Dovish comments from Fed officials drove a bond rally.；名句："Imagine all the people living life in peace." —— 列侬《Imagine》<br />
-- <strong>safe haven</strong> 避风港；避险资产；搭配：safe-haven flows（避险资金流）；例：The rout drove safe-haven flows back to Treasuries.；名句："There's no place like home." —— 电影《绿野仙踪》<br />
-- <strong>sovereign</strong> 主权的；国债的；搭配：sovereign bond yields（主权债收益率）；例：The spread between French and German sovereign yields widened.；名句："Give me liberty, or give me death!" —— 亨利<br />
-- <strong>sink</strong> 下沉；下跌；搭配：sink to lows（跌至低点）；例：The euro sank against the yen and the franc.；名句："What goes up must come down." —— 谚语<br />
-- <strong>elevated</strong> 高企的；搭配：remain elevated（维持高位）；例：Oil prices remained elevated on Gulf tensions.；名句："The sky's the limit." —— 谚语</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>gauge</strong> 衡量；搭配：gauge inflation（衡量通胀）；例：The dollar index gauges the greenback against six peers.；名句："What gets measured gets managed." —— 德鲁克（传）</li>
+<li><strong>rally</strong> 反弹；上涨；搭配：stage a rally（展开反弹）；例：The dollar rallied 0.6% overnight.；名句："Fall seven times and stand up eight." —— 日本谚语</li>
+<li><strong>amid</strong> 在…之中；搭配：amid tensions（在紧张局势中）；例：Oil stayed firm amid Middle East tensions.；名句："In the middle of difficulty lies opportunity." —— 爱因斯坦（传）</li>
+<li><strong>stoke</strong> 煽动；加剧；搭配：stoke fears（加剧担忧）；例：China's export halt stoked fears of fuel shortages.；名句："Where there is smoke, there is fire." —— 谚语</li>
+<li><strong>bolster</strong> 增强；支撑；搭配：bolster the case for（增强…的理由）；例：Hot Tokyo inflation bolstered the case for BOJ hikes.；名句："A chain is only as strong as its weakest link." —— 谚语</li>
+<li><strong>dovish</strong> 鸽派的（主张宽松）；搭配：dovish comments（鸽派言论）；例：Dovish comments from Fed officials drove a bond rally.；名句："Imagine all the people living life in peace." —— 列侬《Imagine》</li>
+<li><strong>safe haven</strong> 避风港；避险资产；搭配：safe-haven flows（避险资金流）；例：The rout drove safe-haven flows back to Treasuries.；名句："There's no place like home." —— 电影《绿野仙踪》</li>
+<li><strong>sovereign</strong> 主权的；国债的；搭配：sovereign bond yields（主权债收益率）；例：The spread between French and German sovereign yields widened.；名句："Give me liberty, or give me death!" —— 亨利</li>
+<li><strong>sink</strong> 下沉；下跌；搭配：sink to lows（跌至低点）；例：The euro sank against the yen and the franc.；名句："What goes up must come down." —— 谚语</li>
+<li><strong>elevated</strong> 高企的；搭配：remain elevated（维持高位）；例：Oil prices remained elevated on Gulf tensions.；名句："The sky's the limit." —— 谚语</li>
+</ul>
 <hr />
 <h2>🤖 二、AI</h2>
 <h3>1️⃣ DeepSeek 联手华为：开源昇腾芯片编程工具，直指英伟达 CUDA 生态</h3>
 <p><strong>发生了什么：</strong> 9月30日，DeepSeek 在官方微信宣布与华为合作，为华为昇腾（Ascend）芯片开发编程基础设施并<strong>开源</strong>，包括高级编程语言 TileLang、计算与通信库（DeepGEMM-Ascend 等共六个库），以及基于128颗昇腾950芯片的"超节点"算力方案。据路透社报道，华为为该开发提供了全力支持。DeepSeek 称 TileLang 的编程模型"比英伟达 CUDA 更简单"，目标是建立"自主可控的新一代 GPU 软件生态"。</p>
 <p><strong>为什么值得关注：</strong> 英伟达真正的护城河不只是芯片跑得快，更是 CUDA 软件生态——全球开发者都用它写AI程序，换芯片等于重写代码。中国两大玩家联手从"软件层"挖墙脚：开源工具降低迁移门槛，超节点方案对标英伟达组网能力。这是AI算力自主化从"造芯片"迈向"建生态"的关键一步，也意味着全球AI基础设施可能分裂成两套体系。</p>
-<p>📖 <strong>名词解释</strong><br />
-- <strong>CUDA</strong>：英伟达的并行计算软件平台，开发者用它"指挥"GPU干活；用惯了就离不开，是英伟达最宽的护城河。<br />
-- <strong>昇腾（Ascend）</strong>：华为自研的AI芯片系列，对标英伟达GPU。<br />
-- <strong>超节点</strong>：把上百颗芯片高速互联成一台"超级计算机"，用于训练大模型。<br />
-- <strong>开源</strong>：把代码公开，任何人免费使用、修改，靠生态取胜的打法。</p>
+<p>📖 <strong>名词解释</strong></p>
+<ul>
+<li><strong>CUDA</strong>：英伟达的并行计算软件平台，开发者用它"指挥"GPU干活；用惯了就离不开，是英伟达最宽的护城河。</li>
+<li><strong>昇腾（Ascend）</strong>：华为自研的AI芯片系列，对标英伟达GPU。</li>
+<li><strong>超节点</strong>：把上百颗芯片高速互联成一台"超级计算机"，用于训练大模型。</li>
+<li><strong>开源</strong>：把代码公开，任何人免费使用、修改，靠生态取胜的打法。</li>
+</ul>
 <p>💡 <strong>一句话总结</strong>：打不过 CUDA 就重写规则——DeepSeek 把压箱底的软件工具开源给华为昇腾，中国AI开始自建"操作系统"。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/world/asia-pacific/deepseek-partners-with-huawei-develop-chip-programming-tools-reducing-reliance-2026-09-30/">Reuters</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>moat</strong> 护城河（竞争优势）；搭配：economic moat（经济护城河）；例：CUDA is Nvidia's widest software moat.；名句："In business, I look for economic castles protected by unbreachable 'moats'." —— 巴菲特<br />
-- <strong>disrupt</strong> 颠覆；搭配：disrupt an industry（颠覆行业）；例：Open-source tools aim to disrupt Nvidia's software dominance.；名句："Innovation distinguishes between a leader and a follower." —— 乔布斯<br />
-- <strong>ecosystem</strong> 生态系统；搭配：software ecosystem（软件生态）；例：Huawei and DeepSeek are building an independent GPU software ecosystem.；名句："If you want to go fast, go alone. If you want to go far, go together." —— 非洲谚语<br />
-- <strong>open-source</strong> 开源的；搭配：open-source software（开源软件）；例：DeepSeek open-sourced its Ascend programming toolkit.；名句："Free software is a matter of liberty, not price. Think of 'free' as in 'free speech', not as in 'free beer'." —— Richard Stallman<br />
-- <strong>wean off</strong> 使摆脱依赖；搭配：wean off Nvidia chips（摆脱对英伟达芯片的依赖）；例：Chinese firms are trying to wean themselves off Nvidia's CUDA.；名句："Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime." —— 谚语<br />
-- <strong>leverage</strong> 利用；搭配：leverage open source（利用开源）；例：The pair will leverage open-source tools to lower migration costs.；名句："Give me a place to stand and I will move the Earth." —— 阿基米德<br />
-- <strong>parity</strong> 对等；平价；搭配：performance parity（性能相当）；例：The supernode design targets performance parity with Nvidia networking.；名句："All animals are equal, but some animals are more equal than others." —— 奥威尔《动物庄园》<br />
-- <strong>alliance</strong> 联盟；搭配：form an alliance（结盟）；例：The DeepSeek-Huawei alliance targets CUDA's dominance.；名句："Alone we can do so little; together we can do so much." —— 海伦·凯勒<br />
-- <strong>upend</strong> 彻底改变；搭配：upend the status quo（颠覆现状）；例：Open-sourcing the stack could upend the AI hardware order.；名句："The only constant in life is change." —— 赫拉克利特（传）<br />
-- <strong>barrier</strong> 壁垒；搭配：lower the barrier to entry（降低进入门槛）；例：Open tools lower the barrier to switching chips.；名句："Obstacles are those frightful things you see when you take your eyes off your goal." —— 亨利·福特</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>moat</strong> 护城河（竞争优势）；搭配：economic moat（经济护城河）；例：CUDA is Nvidia's widest software moat.；名句："In business, I look for economic castles protected by unbreachable 'moats'." —— 巴菲特</li>
+<li><strong>disrupt</strong> 颠覆；搭配：disrupt an industry（颠覆行业）；例：Open-source tools aim to disrupt Nvidia's software dominance.；名句："Innovation distinguishes between a leader and a follower." —— 乔布斯</li>
+<li><strong>ecosystem</strong> 生态系统；搭配：software ecosystem（软件生态）；例：Huawei and DeepSeek are building an independent GPU software ecosystem.；名句："If you want to go fast, go alone. If you want to go far, go together." —— 非洲谚语</li>
+<li><strong>open-source</strong> 开源的；搭配：open-source software（开源软件）；例：DeepSeek open-sourced its Ascend programming toolkit.；名句："Free software is a matter of liberty, not price. Think of 'free' as in 'free speech', not as in 'free beer'." —— Richard Stallman</li>
+<li><strong>wean off</strong> 使摆脱依赖；搭配：wean off Nvidia chips（摆脱对英伟达芯片的依赖）；例：Chinese firms are trying to wean themselves off Nvidia's CUDA.；名句："Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime." —— 谚语</li>
+<li><strong>leverage</strong> 利用；搭配：leverage open source（利用开源）；例：The pair will leverage open-source tools to lower migration costs.；名句："Give me a place to stand and I will move the Earth." —— 阿基米德</li>
+<li><strong>parity</strong> 对等；平价；搭配：performance parity（性能相当）；例：The supernode design targets performance parity with Nvidia networking.；名句："All animals are equal, but some animals are more equal than others." —— 奥威尔《动物庄园》</li>
+<li><strong>alliance</strong> 联盟；搭配：form an alliance（结盟）；例：The DeepSeek-Huawei alliance targets CUDA's dominance.；名句："Alone we can do so little; together we can do so much." —— 海伦·凯勒</li>
+<li><strong>upend</strong> 彻底改变；搭配：upend the status quo（颠覆现状）；例：Open-sourcing the stack could upend the AI hardware order.；名句："The only constant in life is change." —— 赫拉克利特（传）</li>
+<li><strong>barrier</strong> 壁垒；搭配：lower the barrier to entry（降低进入门槛）；例：Open tools lower the barrier to switching chips.；名句："Obstacles are those frightful things you see when you take your eyes off your goal." —— 亨利·福特</li>
+</ul>
 <h3>2️⃣ 微软发布实时语音AI模型：转写延迟低至100毫秒，支持60种语言</h3>
 <p><strong>发生了什么：</strong> 微软AI发布了首个流式语音转文字模型 <strong>MAI-Transcribe-2-Streaming</strong>，支持60种语言，能在对话中自动识别说话人切换语言而无需重启转写；首批转写结果100多毫秒即可出现，在转写准确率基准上排名第一。同步发布的还有两个文本转语音模型 MAI-Voice-2.1 和低延迟版 MAI-Voice-2.1-Flash。</p>
 <p><strong>为什么值得关注：</strong> 语音正在成为AI Agent最重要的交互界面——延迟决定了语音助手是"像真人聊天"还是"像对讲机"。微软自研整套语音模型，说明大厂竞争已从纯文本卷向完整多模态技术栈；实时转写+多语言切换能力，将直接用在会议记录、客服、翻译和无障碍场景。</p>
-<p>📖 <strong>名词解释</strong><br />
-- <strong>流式转写</strong>：边说边转成文字，不用等说完，延迟越低体验越像同声传译。<br />
-- <strong>延迟</strong>：从你说话到AI反应的时间差；几百毫秒内感觉像真人，几秒就感觉像卡住。<br />
-- <strong>TTS / STT</strong>：文字转语音 / 语音转文字。<br />
-- <strong>AI Agent</strong>：能自主理解任务、调用工具、完成多步骤工作的AI助手，不只是聊天。</p>
+<p>📖 <strong>名词解释</strong></p>
+<ul>
+<li><strong>流式转写</strong>：边说边转成文字，不用等说完，延迟越低体验越像同声传译。</li>
+<li><strong>延迟</strong>：从你说话到AI反应的时间差；几百毫秒内感觉像真人，几秒就感觉像卡住。</li>
+<li><strong>TTS / STT</strong>：文字转语音 / 语音转文字。</li>
+<li><strong>AI Agent</strong>：能自主理解任务、调用工具、完成多步骤工作的AI助手，不只是聊天。</li>
+</ul>
 <p>💡 <strong>一句话总结</strong>：微软让AI的"耳朵"和"嘴"都更快了——100毫秒转写、60种语言无缝切换，语音助手离真人对话又近一步。</p>
 <p>🔗 来源：<a href="https://techstartups.com/2026/10/02/top-tech-news-today-october-2-2026-amazon-cloudflare-google-microsoft-suno-tesla-more/">Tech Startups（引自 Microsoft AI 官方）</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>latency</strong> 延迟；搭配：low latency（低延迟）；例：The model delivers transcripts with just over 100 ms of latency.；名句："Time is the most valuable thing a man can spend." —— Theophrastus<br />
-- <strong>transcribe</strong> 转写；搭配：transcribe speech（转写语音）；例：The model transcribes 60 languages in real time.；名句："The palest ink is more reliable than the most powerful memory." —— 中国谚语<br />
-- <strong>seamless</strong> 无缝的；搭配：seamless switching（无缝切换）；例：The model switches languages seamlessly mid-conversation.；名句："Simplicity is the ultimate sophistication." —— 达·芬奇（传）<br />
-- <strong>benchmark</strong> 基准；搭配：top the benchmark（登顶基准测试）；例：The model ranks first on transcription accuracy benchmarks.；名句："What gets measured gets managed." —— 德鲁克（传）<br />
-- <strong>multimodal</strong> 多模态的；搭配：multimodal AI（多模态AI）；例：Competition is shifting from text to full multimodal stacks.；名句："The whole is greater than the sum of its parts." —— 亚里士多德<br />
-- <strong>interface</strong> 界面；搭配：voice interface（语音界面）；例：Voice is becoming the primary interface for AI agents.；名句："Design is not just what it looks like; design is how it works." —— 乔布斯<br />
-- <strong>lag</strong> 滞后；搭配：reduce lag（减少延迟）；例：Cutting lag makes voice agents feel human.；名句："Time and tide wait for no man." —— 谚语<br />
-- <strong>accuracy</strong> 准确率；搭配：transcription accuracy（转写准确率）；例：The model leads on transcription accuracy.；名句："Fast is fine, but accuracy is everything." —— Wyatt Earp（传）<br />
-- <strong>deploy</strong> 部署；搭配：deploy in call centers（部署在客服中心）；例：The models will be deployed in meetings and call centers.；名句："Well done is better than well said." —— 富兰克林<br />
-- <strong>accessibility</strong> 无障碍；可及性；搭配：improve accessibility（提升无障碍）；例：Real-time captions improve accessibility for the hearing-impaired.；名句："The only disability in life is a bad attitude." —— Scott Hamilton</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>latency</strong> 延迟；搭配：low latency（低延迟）；例：The model delivers transcripts with just over 100 ms of latency.；名句："Time is the most valuable thing a man can spend." —— Theophrastus</li>
+<li><strong>transcribe</strong> 转写；搭配：transcribe speech（转写语音）；例：The model transcribes 60 languages in real time.；名句："The palest ink is more reliable than the most powerful memory." —— 中国谚语</li>
+<li><strong>seamless</strong> 无缝的；搭配：seamless switching（无缝切换）；例：The model switches languages seamlessly mid-conversation.；名句："Simplicity is the ultimate sophistication." —— 达·芬奇（传）</li>
+<li><strong>benchmark</strong> 基准；搭配：top the benchmark（登顶基准测试）；例：The model ranks first on transcription accuracy benchmarks.；名句："What gets measured gets managed." —— 德鲁克（传）</li>
+<li><strong>multimodal</strong> 多模态的；搭配：multimodal AI（多模态AI）；例：Competition is shifting from text to full multimodal stacks.；名句："The whole is greater than the sum of its parts." —— 亚里士多德</li>
+<li><strong>interface</strong> 界面；搭配：voice interface（语音界面）；例：Voice is becoming the primary interface for AI agents.；名句："Design is not just what it looks like; design is how it works." —— 乔布斯</li>
+<li><strong>lag</strong> 滞后；搭配：reduce lag（减少延迟）；例：Cutting lag makes voice agents feel human.；名句："Time and tide wait for no man." —— 谚语</li>
+<li><strong>accuracy</strong> 准确率；搭配：transcription accuracy（转写准确率）；例：The model leads on transcription accuracy.；名句："Fast is fine, but accuracy is everything." —— Wyatt Earp（传）</li>
+<li><strong>deploy</strong> 部署；搭配：deploy in call centers（部署在客服中心）；例：The models will be deployed in meetings and call centers.；名句："Well done is better than well said." —— 富兰克林</li>
+<li><strong>accessibility</strong> 无障碍；可及性；搭配：improve accessibility（提升无障碍）；例：Real-time captions improve accessibility for the hearing-impaired.；名句："The only disability in life is a bad attitude." —— Scott Hamilton</li>
+</ul>
 <hr />
 <h2>🌍 三、国际局势</h2>
 <h3>1️⃣ 美伊战争升级：美国增派第三个航母打击群，霍尔木兹海峡油轮遇袭起火</h3>
@@ -191,249 +250,287 @@ body.dark #bgToggle { background: #e8e2d5; color: #161513; }
 <p><strong>为什么值得关注：</strong> 美伊战争已持续约7个月，霍尔木兹海峡承担着全球约五分之一的石油运输，一旦航运中断，油价可能进一步飙升并传导至全球通胀。三个航母打击群是非常罕见的兵力集结规模，意味着美国可能在准备更大规模的军事行动。G7已同意通过国际能源署在4个月内释放1亿桶战略石油储备来平抑油价，说明各国已在为供应中断做预案。</p>
 <p>💡 <strong>一句话总结</strong>：美国罕见地在中东集结三个航母打击群，霍尔木兹海峡油轮遇袭，油价破百背后是实实在在的开战风险。</p>
 <p>🔗 来源：<a href="https://www.businesstoday.in/amp/world/story/west-asia-tensions-crude-climbs-past-102-a-barrel-as-us-deploys-third-aircraft-carrier-strike-group-559183-2026-10-02">BusinessToday（援引 WSJ）</a> · <a href="https://timesofindia.indiatimes.com/world/middle-east/us-iran-war-live-updates-donald-trump-tehran-sanction-relief-irgc-talks-strait-of-hormuz-oil-prices-ceasefire-proposal-latest-news/liveblog/134577206.cms">Times of India 实时更新</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>escalation</strong> 升级；搭配：military escalation（军事升级）；例：A third carrier signals significant military escalation.；名句："What we do in life echoes in eternity." —— 电影《角斗士》<br />
-- <strong>deploy</strong> 部署；搭配：deploy a carrier（部署航母）；例：The US is deploying a third carrier strike group.；名句："Houston, we have a problem." —— 电影《阿波罗13号》<br />
-- <strong>strait</strong> 海峡；搭配：Strait of Hormuz（霍尔木兹海峡）；例：Attacks on tankers in the Strait of Hormuz rattled markets.；名句："You're gonna need a bigger boat." —— 电影《大白鲨》<br />
-- <strong>tanker</strong> 油轮；搭配：supertanker（超级油轮）；例：A supertanker carrying 2.5m barrels was hit and caught fire.；名句："I'm the king of the world!" —— 电影《泰坦尼克号》<br />
-- <strong>strike group</strong> 打击群；搭配：carrier strike group（航母打击群）；例：The US deployed a third carrier strike group to the region.；名句："May the Force be with you." —— 电影《星球大战》<br />
-- <strong>amid</strong> 在…之中；搭配：amid rising tensions（在紧张加剧之际）；例：Crude climbed past $102 amid West Asia tensions.；名句："In the middle of difficulty lies opportunity." —— 爱因斯坦（传）<br />
-- <strong>compound</strong> 加剧；搭配：compound fears（加剧担忧）；例：Supply disruptions compounded energy anxieties.；名句："When it rains, it pours." —— 谚语<br />
-- <strong>surge</strong> 猛涨；搭配：oil price surge（油价飙升）；例：Brent crude surged 4.4% to $102.31.；名句："With great power comes great responsibility." —— 电影《蜘蛛侠》<br />
-- <strong>disruption</strong> 中断；搭配：supply disruption（供应中断）；例：Concurrent global supply disruptions lifted prices.；名句："The only constant in life is change." —— 赫拉克利特（传）<br />
-- <strong>reinforce</strong> 增援；搭配：reinforce troops（增援部队）；例：Up to 10,000 additional troops will reinforce the region.；名句："Fall seven times and stand up eight." —— 日本谚语</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>escalation</strong> 升级；搭配：military escalation（军事升级）；例：A third carrier signals significant military escalation.；名句："What we do in life echoes in eternity." —— 电影《角斗士》</li>
+<li><strong>deploy</strong> 部署；搭配：deploy a carrier（部署航母）；例：The US is deploying a third carrier strike group.；名句："Houston, we have a problem." —— 电影《阿波罗13号》</li>
+<li><strong>strait</strong> 海峡；搭配：Strait of Hormuz（霍尔木兹海峡）；例：Attacks on tankers in the Strait of Hormuz rattled markets.；名句："You're gonna need a bigger boat." —— 电影《大白鲨》</li>
+<li><strong>tanker</strong> 油轮；搭配：supertanker（超级油轮）；例：A supertanker carrying 2.5m barrels was hit and caught fire.；名句："I'm the king of the world!" —— 电影《泰坦尼克号》</li>
+<li><strong>strike group</strong> 打击群；搭配：carrier strike group（航母打击群）；例：The US deployed a third carrier strike group to the region.；名句："May the Force be with you." —— 电影《星球大战》</li>
+<li><strong>amid</strong> 在…之中；搭配：amid rising tensions（在紧张加剧之际）；例：Crude climbed past $102 amid West Asia tensions.；名句："In the middle of difficulty lies opportunity." —— 爱因斯坦（传）</li>
+<li><strong>compound</strong> 加剧；搭配：compound fears（加剧担忧）；例：Supply disruptions compounded energy anxieties.；名句："When it rains, it pours." —— 谚语</li>
+<li><strong>surge</strong> 猛涨；搭配：oil price surge（油价飙升）；例：Brent crude surged 4.4% to $102.31.；名句："With great power comes great responsibility." —— 电影《蜘蛛侠》</li>
+<li><strong>disruption</strong> 中断；搭配：supply disruption（供应中断）；例：Concurrent global supply disruptions lifted prices.；名句："The only constant in life is change." —— 赫拉克利特（传）</li>
+<li><strong>reinforce</strong> 增援；搭配：reinforce troops（增援部队）；例：Up to 10,000 additional troops will reinforce the region.；名句："Fall seven times and stand up eight." —— 日本谚语</li>
+</ul>
 <h3>2️⃣ 美国加码对伊朗经济绞杀：汽车铁路巨头上黑名单，俄中否决联合国决议</h3>
 <p><strong>发生了什么：</strong> 美国财政部10月1日宣布新一轮对伊制裁，把伊朗两大汽车制造商 Iran Khodro 和 SAIPA（合计占伊朗国内汽车市场超90%）、伊朗国家铁路公司等多家铁路货运企业，以及阿联酋、印尼、土耳其等国的对伊汽车供应商列入黑名单；同时打击了被指帮伊朗转移资金的俄罗斯影子银行网络。财政部长贝森特称，这是要"彻底抽干伊朗政权的收入"。此前美国已封锁经霍尔木兹海峡的伊朗石油运输，伊朗被迫转用陆路（汽车/铁路）运油和化工品，新制裁正是堵住这条陆路。外交层面，俄罗斯和中国在联合国安理会<strong>否决</strong>了美国主导的延长对伊制裁监督机制的决议。</p>
 <p><strong>为什么值得关注：</strong> 制裁正从"海上石油"转向"陆上命脉"，说明美国的策略是全方位压缩伊朗的战争资金来源。但俄中动用否决权也意味着：联合国框架下的对伊制裁监督机制已经瘫痪，未来制裁将更多依赖美国单边和"自组联盟"执行。对油市而言，制裁越紧，伊朗石油重返市场的可能性越低，油价高位更难下来。</p>
 <p>💡 <strong>一句话总结</strong>：美国把制裁大棒从伊朗的油轮挥向了汽车和铁路，俄中则在联合国投下否决票，制裁战进入"各玩各的"阶段。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/world/middle-east/us-sanctions-target-irans-auto-rail-sectors-after-blockade-chokes-shipping-lanes-2026-10-01/">Reuters</a> · <a href="https://www.thenationalnews.com/business/economy/2026/10/02/us-sanctions-irans-car-makers-and-railway-operators-as-pressure-shifts-from-sea-to-land/">The National</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>sanction</strong> 制裁；搭配：impose sanctions（实施制裁）；例：The US imposed fresh sanctions on Iran's auto sector.；名句："When goods don't cross borders, soldiers will." —— 巴斯蒂亚（传）<br />
-- <strong>blockade</strong> 封锁；搭配：oil blockade（石油封锁）；例：The US blockade on Iranian oil forced Tehran onto land routes.；名句："Good fences make good neighbors." —— 弗罗斯特<br />
-- <strong>designate</strong> 指定；列入名单；搭配：be designated as（被列为）；例：Treasury designated Iran Khodro and SAIPA.；名句："The name's Bond. James Bond." —— 电影《007》<br />
-- <strong>conglomerate</strong> 企业集团；搭配：industrial conglomerate（工业集团）；例：The sanctions target auto and rail conglomerates.；名句："Too big to fail." —— 金融危机流行语<br />
-- <strong>circumvent</strong> 规避；搭配：circumvent sanctions（规避制裁）；例：The A7 Network helped Tehran circumvent sanctions.；名句："The best way out is always through." —— 弗罗斯特<br />
-- <strong>isolate</strong> 孤立；搭配：isolate economically（在经济上孤立）；例：The push aims to isolate Tehran economically.；名句："No man is an island." —— 约翰·多恩<br />
-- <strong>resolution</strong> 决议；搭配：veto a resolution（否决决议）；例：Russia and China vetoed the US-led resolution.；名句："Where there's a will, there's a way." —— 谚语<br />
-- <strong>veto</strong> 否决；搭配：veto power（否决权）；例：Russia and China vetoed the UN resolution.；名句："I'll be back." —— 电影《终结者》<br />
-- <strong>stranglehold</strong> 扼杀；搭配：economic stranglehold（经济绞杀）；例：Washington is tightening its economic stranglehold.；名句："Give me liberty, or give me death!" —— 亨利<br />
-- <strong>choke</strong> 扼住；搭配：choke shipping lanes（扼住航道）；例：The blockade chokes Iran's shipping lanes.；名句："You're gonna need a bigger boat." —— 电影《大白鲨》</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>sanction</strong> 制裁；搭配：impose sanctions（实施制裁）；例：The US imposed fresh sanctions on Iran's auto sector.；名句："When goods don't cross borders, soldiers will." —— 巴斯蒂亚（传）</li>
+<li><strong>blockade</strong> 封锁；搭配：oil blockade（石油封锁）；例：The US blockade on Iranian oil forced Tehran onto land routes.；名句："Good fences make good neighbors." —— 弗罗斯特</li>
+<li><strong>designate</strong> 指定；列入名单；搭配：be designated as（被列为）；例：Treasury designated Iran Khodro and SAIPA.；名句："The name's Bond. James Bond." —— 电影《007》</li>
+<li><strong>conglomerate</strong> 企业集团；搭配：industrial conglomerate（工业集团）；例：The sanctions target auto and rail conglomerates.；名句："Too big to fail." —— 金融危机流行语</li>
+<li><strong>circumvent</strong> 规避；搭配：circumvent sanctions（规避制裁）；例：The A7 Network helped Tehran circumvent sanctions.；名句："The best way out is always through." —— 弗罗斯特</li>
+<li><strong>isolate</strong> 孤立；搭配：isolate economically（在经济上孤立）；例：The push aims to isolate Tehran economically.；名句："No man is an island." —— 约翰·多恩</li>
+<li><strong>resolution</strong> 决议；搭配：veto a resolution（否决决议）；例：Russia and China vetoed the US-led resolution.；名句："Where there's a will, there's a way." —— 谚语</li>
+<li><strong>veto</strong> 否决；搭配：veto power（否决权）；例：Russia and China vetoed the UN resolution.；名句："I'll be back." —— 电影《终结者》</li>
+<li><strong>stranglehold</strong> 扼杀；搭配：economic stranglehold（经济绞杀）；例：Washington is tightening its economic stranglehold.；名句："Give me liberty, or give me death!" —— 亨利</li>
+<li><strong>choke</strong> 扼住；搭配：choke shipping lanes（扼住航道）；例：The blockade chokes Iran's shipping lanes.；名句："You're gonna need a bigger boat." —— 电影《大白鲨》</li>
+</ul>
 <h3>3️⃣ 俄乌战况：俄军连炸基辅大桥，乌克兰国产导弹首次实战</h3>
 <p><strong>发生了什么：</strong> 据路透社报道，10月2日俄军无人机再次击中基辅市中心的南部大桥（连续第二天），帕顿大桥双向封闭，一栋公寓楼高层起火；基辅市长克利奇科称首都处境"非常严峻"，必须进入"战争状态"，桥梁封闭导致全城交通瘫痪。作为反击，乌克兰无人机袭击了俄罗斯伏尔加格勒的工业设施（含大型炼油厂）并引发火灾；普京承认乌军对俄炼油厂的袭击已让俄罗斯损失约1%的GDP。乌克兰方面还有两个进展：泽连斯基宣布国产 <strong>FP-7 弹道导弹</strong>完成首次实战发射；9月俄军伤亡46,230人，创2026年单月最高。另据《纽约时报》，俄正准备对乌克兰能源和供水设施发动新一轮大规模打击。</p>
 <p><strong>为什么值得关注：</strong> 战场呈现"拉锯消耗"特征：俄军用无人机持续打击基辅民用基础设施，试图在冬季前瘫痪乌克兰；而乌军用远程无人机+国产导弹打击俄炼油厂，把战火烧进俄罗斯经济命脉。冬天临近，能源设施攻防战将是未来几个月的焦点，直接关系到乌克兰能否熬过这个冬天。</p>
 <p>💡 <strong>一句话总结</strong>：俄炸桥、乌炸炼油厂，双方都在打对方的"命脉"，乌克兰国产导弹首次实战是新变量。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/world/europe/russian-air-strikes-hit-southern-bridge-kyiv-again-mayor-says-2026-10-02/">Reuters</a> · <a href="https://www.aljazeera.com/news/2026/10/2/russia-tries-to-freeze-ukraine-as-it-suffers-record-casualties-and-retreats">Al Jazeera</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>gridlock</strong> 交通瘫痪；僵局；搭配：cause gridlock（造成交通瘫痪）；例：Bridge closures caused gridlock across Kyiv.；名句："Houston, we have a problem." —— 电影《阿波罗13号》<br />
-- <strong>kamikaze</strong> 自杀式的；搭配：kamikaze drone（自杀式无人机）；例：Iranian-type Shahed kamikaze drones struck the bridge.；名句："Cowards die many times before their deaths." —— 莎士比亚《裘力斯·凯撒》<br />
-- <strong>footing</strong> 立足点；搭配：on a war footing（进入战争状态）；例：Klitschko said Kyiv must be on a war footing.；名句："Fall seven times and stand up eight." —— 日本谚语<br />
-- <strong>counteroffensive</strong> 反攻；搭配：launch a counteroffensive（发起反攻）；例：Ukrainian forces reclaimed nearly 300 sq km since March.；名句："The best defense is a good offense." —— 谚语<br />
-- <strong>reclaim</strong> 收复；搭配：reclaim territory（收复领土）；例：Ukrainian forces reclaimed nearly 300 sq km since March.；名句："I'll be back." —— 电影《终结者》<br />
-- <strong>casualty</strong> 伤亡；搭配：suffer casualties（遭受伤亡）；例：Russia suffered record casualties of 46,230 in September.；名句："Every man dies, not every man really lives." —— 电影《勇敢的心》<br />
-- <strong>inflict</strong> 造成（损失）；搭配：inflict losses（造成损失）；例：Ukraine inflicted record losses on Russian troops.；名句："An eye for an eye will only make the whole world blind." —— 甘地（传）<br />
-- <strong>neutralize</strong> 使失去战斗力；搭配：neutralize troops；例：46,230 Russians were neutralized in September.；名句："Speak softly and carry a big stick." —— 老罗斯福<br />
-- <strong>sabotage</strong> 蓄意破坏；搭配：sabotage operations（破坏行动）；例：Moscow was accused of sabotage across Europe.；名句："The greatest trick the Devil ever pulled was convincing the world he didn't exist." —— 电影《非常嫌疑犯》<br />
-- <strong>freeze</strong> 冻结；搭配：freeze the conflict（冻结冲突）；例：Russia tries to freeze Ukraine this winter.；名句："Winter is coming." —— 《权力的游戏》</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>gridlock</strong> 交通瘫痪；僵局；搭配：cause gridlock（造成交通瘫痪）；例：Bridge closures caused gridlock across Kyiv.；名句："Houston, we have a problem." —— 电影《阿波罗13号》</li>
+<li><strong>kamikaze</strong> 自杀式的；搭配：kamikaze drone（自杀式无人机）；例：Iranian-type Shahed kamikaze drones struck the bridge.；名句："Cowards die many times before their deaths." —— 莎士比亚《裘力斯·凯撒》</li>
+<li><strong>footing</strong> 立足点；搭配：on a war footing（进入战争状态）；例：Klitschko said Kyiv must be on a war footing.；名句："Fall seven times and stand up eight." —— 日本谚语</li>
+<li><strong>counteroffensive</strong> 反攻；搭配：launch a counteroffensive（发起反攻）；例：Ukrainian forces reclaimed nearly 300 sq km since March.；名句："The best defense is a good offense." —— 谚语</li>
+<li><strong>reclaim</strong> 收复；搭配：reclaim territory（收复领土）；例：Ukrainian forces reclaimed nearly 300 sq km since March.；名句："I'll be back." —— 电影《终结者》</li>
+<li><strong>casualty</strong> 伤亡；搭配：suffer casualties（遭受伤亡）；例：Russia suffered record casualties of 46,230 in September.；名句："Every man dies, not every man really lives." —— 电影《勇敢的心》</li>
+<li><strong>inflict</strong> 造成（损失）；搭配：inflict losses（造成损失）；例：Ukraine inflicted record losses on Russian troops.；名句："An eye for an eye will only make the whole world blind." —— 甘地（传）</li>
+<li><strong>neutralize</strong> 使失去战斗力；搭配：neutralize troops；例：46,230 Russians were neutralized in September.；名句："Speak softly and carry a big stick." —— 老罗斯福</li>
+<li><strong>sabotage</strong> 蓄意破坏；搭配：sabotage operations（破坏行动）；例：Moscow was accused of sabotage across Europe.；名句："The greatest trick the Devil ever pulled was convincing the world he didn't exist." —— 电影《非常嫌疑犯》</li>
+<li><strong>freeze</strong> 冻结；搭配：freeze the conflict（冻结冲突）；例：Russia tries to freeze Ukraine this winter.；名句："Winter is coming." —— 《权力的游戏》</li>
+</ul>
 <h3>4️⃣ 俄罗斯警告北约：若加里宁格勒被"切断"，准备动用一切手段包括核武器</h3>
 <p><strong>发生了什么：</strong> 据路透社看到的外交照会，俄罗斯本周正式警告北约：如果北约试图将<strong>加里宁格勒</strong>（俄罗斯在波罗的海沿岸的飞地，与本土不接壤）与俄罗斯本土隔绝，俄方"将准备动用一切现有力量和手段，包括核武器，来保卫领土"。俄驻多国使馆相继发布声明，指责欧洲领导人"玩危险的游戏"。俄战略学家卡拉加诺夫随后加码警告，称若爆发世界大战，"欧洲将所剩无几"。背景是北约秘书长吕特等多国领导人10月1日视察了驻德荷边境的北约部队，欧洲正高度警惕俄无人机"混合袭扰"。</p>
 <p><strong>为什么值得关注：</strong> 这是俄乌战争爆发以来，俄罗斯对北约发出的最直白的核威胁之一。加里宁格勒夹在波兰和立陶宛之间，战略位置极其敏感，任何"封锁"动作都可能被莫斯科视为开战理由。虽然核威胁很大程度上是威慑话术，但它把北约与俄罗斯的直接对抗风险又推高了一档。</p>
-<p>📖 <strong>名词解释</strong><br />
-- <strong>飞地</strong>：一国领土中不与本土接壤、被别国领土隔开的部分，加里宁格勒就夹在波兰和立陶宛之间。<br />
-- <strong>核威慑</strong>：用"你敢动我，我就用核武器"的威胁让对方不敢动手。<br />
-- <strong>外交照会</strong>：一国政府向另一国政府正式递交的书面外交文件。</p>
+<p>📖 <strong>名词解释</strong></p>
+<ul>
+<li><strong>飞地</strong>：一国领土中不与本土接壤、被别国领土隔开的部分，加里宁格勒就夹在波兰和立陶宛之间。</li>
+<li><strong>核威慑</strong>：用"你敢动我，我就用核武器"的威胁让对方不敢动手。</li>
+<li><strong>外交照会</strong>：一国政府向另一国政府正式递交的书面外交文件。</li>
+</ul>
 <p>💡 <strong>一句话总结</strong>：俄罗斯把"核牌"直接拍在北约桌上，围绕加里宁格勒飞地的博弈成为欧洲最危险的引信。</p>
 <p>🔗 来源：<a href="https://m.economictimes.com/news/international/global-trends/us-news-days-after-moscow-warns-nato-of-nuclear-attack-russian-strategist-warns-there-will-be-little-left-of-europe-amid-world-war-iii-threat/amp_articleshow/134622707.cms">Economic Times（援引 Reuters/AP）</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>reckless</strong> 鲁莽的；搭配：reckless course（鲁莽路线）；例：Moscow accused NATO of a dangerous and reckless course.；名句："Fools rush in where angels fear to tread." —— 蒲柏<br />
-- <strong>exclave</strong> 飞地；搭配：Kaliningrad exclave（加里宁格勒飞地）；例：Kaliningrad is a Russian exclave on the Baltic Sea.；名句："Home is where the heart is." —— 谚语<br />
-- <strong>arsenal</strong> 军火库；搭配：nuclear arsenal（核武库）；例：Russia will use its entire arsenal, including nuclear weapons.；名句："Speak softly and carry a big stick." —— 老罗斯福<br />
-- <strong>deterrence</strong> 威慑；搭配：nuclear deterrence（核威慑）；例：The warning is widely read as nuclear deterrence.；名句："Peace through strength." —— 里根<br />
-- <strong>outbreak</strong> 爆发；搭配：outbreak of war（战争爆发）；例：The note warned of risks of the outbreak of direct armed conflict.；名句："It was the best of times, it was the worst of times." —— 狄更斯《双城记》<br />
-- <strong>diplomatic</strong> 外交的；搭配：diplomatic note（外交照会）；例：Reuters viewed the diplomatic note sent to NATO.；名句："Diplomacy is the art of telling people to go to hell in such a way that they ask for directions." —— 丘吉尔（传）<br />
-- <strong>strategist</strong> 战略家；搭配：military strategist（军事战略家）；例：Strategist Sergei Karaganov warned of World War III.；名句："All warfare is based on deception." —— 孙子《孙子兵法》<br />
-- <strong>warning</strong> 警告；搭配：issue a warning（发出警告）；例：Moscow issued a stark warning to NATO.；名句："Those who cannot remember the past are condemned to repeat it." —— 桑塔亚那<br />
-- <strong>threat</strong> 威胁；搭配：pose a threat（构成威胁）；例：The nuclear threat raised the stakes in Europe.；名句："I find your lack of faith disturbing." —— 电影《星球大战》<br />
-- <strong>defend</strong> 保卫；搭配：defend its territory（保卫领土）；例：Russia vowed to defend its territory by all means.；名句："They may take our lives, but they'll never take our freedom!" —— 电影《勇敢的心》</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>reckless</strong> 鲁莽的；搭配：reckless course（鲁莽路线）；例：Moscow accused NATO of a dangerous and reckless course.；名句："Fools rush in where angels fear to tread." —— 蒲柏</li>
+<li><strong>exclave</strong> 飞地；搭配：Kaliningrad exclave（加里宁格勒飞地）；例：Kaliningrad is a Russian exclave on the Baltic Sea.；名句："Home is where the heart is." —— 谚语</li>
+<li><strong>arsenal</strong> 军火库；搭配：nuclear arsenal（核武库）；例：Russia will use its entire arsenal, including nuclear weapons.；名句："Speak softly and carry a big stick." —— 老罗斯福</li>
+<li><strong>deterrence</strong> 威慑；搭配：nuclear deterrence（核威慑）；例：The warning is widely read as nuclear deterrence.；名句："Peace through strength." —— 里根</li>
+<li><strong>outbreak</strong> 爆发；搭配：outbreak of war（战争爆发）；例：The note warned of risks of the outbreak of direct armed conflict.；名句："It was the best of times, it was the worst of times." —— 狄更斯《双城记》</li>
+<li><strong>diplomatic</strong> 外交的；搭配：diplomatic note（外交照会）；例：Reuters viewed the diplomatic note sent to NATO.；名句："Diplomacy is the art of telling people to go to hell in such a way that they ask for directions." —— 丘吉尔（传）</li>
+<li><strong>strategist</strong> 战略家；搭配：military strategist（军事战略家）；例：Strategist Sergei Karaganov warned of World War III.；名句："All warfare is based on deception." —— 孙子《孙子兵法》</li>
+<li><strong>warning</strong> 警告；搭配：issue a warning（发出警告）；例：Moscow issued a stark warning to NATO.；名句："Those who cannot remember the past are condemned to repeat it." —— 桑塔亚那</li>
+<li><strong>threat</strong> 威胁；搭配：pose a threat（构成威胁）；例：The nuclear threat raised the stakes in Europe.；名句："I find your lack of faith disturbing." —— 电影《星球大战》</li>
+<li><strong>defend</strong> 保卫；搭配：defend its territory（保卫领土）；例：Russia vowed to defend its territory by all means.；名句："They may take our lives, but they'll never take our freedom!" —— 电影《勇敢的心》</li>
+</ul>
 <hr />
 <h2>🌱 四、个人成长</h2>
 <h3>1️⃣ James Clear：别让一件坏事打败你两次</h3>
 <p><strong>核心观点：</strong> 《原子习惯》作者在本周 newsletter 里写道：反思和复盘是有生产力的，但反复重播过去的错误和不公，只会让你错过眼前的机会。金句：<strong>"Don't let one bad event beat you twice."</strong>（不要让一件坏事打败你两次——第一次是事情发生时，第二次是你反复回味它的时候。）学到教训就翻篇，别让过去偷走现在。</p>
 <p><strong>为什么值得看：</strong> 很多人把"复盘"变成了"反刍"。这条帮你区分两者：复盘是为了提取教训，反刍只是在给伤口撒盐。假期里如果有什么事让你耿耿于怀，这句话值得默念三遍。</p>
 <p>🔗 来源：<a href="https://www.instagram.com/p/Dd9zpE2DFKY/">James Clear @jamesclear</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>reflect</strong> 反思；搭配：reflect on sth（反思某事）；例：Take a few minutes each night to reflect on your day.；名句："We do not learn from experience... we learn from reflecting on experience." —— John Dewey<br />
-- <strong>ruminate</strong> 反刍；反复咀嚼；搭配：ruminate on the past（反刍过去）；例：Reflection is productive; rumination is not.；名句："Don't let yesterday take up too much of today." —— Will Rogers<br />
-- <strong>dwell</strong> 沉溺于；搭配：dwell on the past（沉溺于过去）；例：Stop dwelling on what went wrong.；名句："Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment." —— Buddha<br />
-- <strong>opportunity</strong> 机会；搭配：seize an opportunity（抓住机会）；例：He seized the opportunity to study abroad.；名句："In the middle of difficulty lies opportunity." —— Einstein<br />
-- <strong>resentment</strong> 怨恨；搭配：harbor resentment（心怀怨恨）；例：Replaying the injustice only feeds resentment.；名句："Holding onto anger is like drinking poison and expecting the other person to die." —— Buddha（传）<br />
-- <strong>productive</strong> 有成效的；搭配：a productive day（高效的一天）；例：I had a really productive morning at work.；名句："Nothing is less productive than to make more efficient what should not be done at all." —— Peter Drucker<br />
-- <strong>injustice</strong> 不公正；搭配：social injustice（社会不公）；例：She devoted her life to fighting social injustice.；名句："Injustice anywhere is a threat to justice everywhere." —— Martin Luther King Jr.<br />
-- <strong>closure</strong> 释怀；了结；搭配：find closure（释怀）；例：Learn the lesson, find closure, move on.；名句："Sometimes good things fall apart so better things can fall together." —— Marilyn Monroe<br />
-- <strong>grudge</strong> 记恨；搭配：hold a grudge（记仇）；例：Holding a grudge punishes you twice.；名句："To err is human; to forgive, divine." —— Alexander Pope<br />
-- <strong>present</strong> 当下的；搭配：live in the present（活在当下）；例：Mindfulness teaches us to stay in the present moment.；名句："Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present." —— 《功夫熊猫》</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>reflect</strong> 反思；搭配：reflect on sth（反思某事）；例：Take a few minutes each night to reflect on your day.；名句："We do not learn from experience... we learn from reflecting on experience." —— John Dewey</li>
+<li><strong>ruminate</strong> 反刍；反复咀嚼；搭配：ruminate on the past（反刍过去）；例：Reflection is productive; rumination is not.；名句："Don't let yesterday take up too much of today." —— Will Rogers</li>
+<li><strong>dwell</strong> 沉溺于；搭配：dwell on the past（沉溺于过去）；例：Stop dwelling on what went wrong.；名句："Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment." —— Buddha</li>
+<li><strong>opportunity</strong> 机会；搭配：seize an opportunity（抓住机会）；例：He seized the opportunity to study abroad.；名句："In the middle of difficulty lies opportunity." —— Einstein</li>
+<li><strong>resentment</strong> 怨恨；搭配：harbor resentment（心怀怨恨）；例：Replaying the injustice only feeds resentment.；名句："Holding onto anger is like drinking poison and expecting the other person to die." —— Buddha（传）</li>
+<li><strong>productive</strong> 有成效的；搭配：a productive day（高效的一天）；例：I had a really productive morning at work.；名句："Nothing is less productive than to make more efficient what should not be done at all." —— Peter Drucker</li>
+<li><strong>injustice</strong> 不公正；搭配：social injustice（社会不公）；例：She devoted her life to fighting social injustice.；名句："Injustice anywhere is a threat to justice everywhere." —— Martin Luther King Jr.</li>
+<li><strong>closure</strong> 释怀；了结；搭配：find closure（释怀）；例：Learn the lesson, find closure, move on.；名句："Sometimes good things fall apart so better things can fall together." —— Marilyn Monroe</li>
+<li><strong>grudge</strong> 记恨；搭配：hold a grudge（记仇）；例：Holding a grudge punishes you twice.；名句："To err is human; to forgive, divine." —— Alexander Pope</li>
+<li><strong>present</strong> 当下的；搭配：live in the present（活在当下）；例：Mindfulness teaches us to stay in the present moment.；名句："Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present." —— 《功夫熊猫》</li>
+</ul>
 <h3>2️⃣ James Clear：教育教你分析，创业教你创造</h3>
 <p><strong>核心观点：</strong> 教育教的是<strong>分析</strong>：解剖莎士比亚、分析历史大势、拆解化学题；创业教的是<strong>创造</strong>：设计产品、写营销方案、把事情做得更好，而不是只会批评。结论：保持学习的能力，同时保留动手创造的能力，两者都要。</p>
 <p><strong>为什么值得看：</strong> 一句话点破"高分低能"的陷阱。很适合学生党和职场人自查：你是在"分析问题"上瘾，还是在"创造价值"上用功？</p>
 <p>🔗 来源：<a href="https://www.instagram.com/p/Dd4saenF_VU/">James Clear @jamesclear</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>critique</strong> 批评；评论；搭配：offer a critique（提出批评）；例：It's easier to critique a product than to create one.；名句："Criticism is something we can avoid easily by saying nothing, doing nothing, and being nothing." —— Aristotle<br />
-- <strong>entrepreneur</strong> 创业者；搭配：a young entrepreneur；例：The young entrepreneur started her company at 22.；名句："I knew that if I failed I wouldn't regret that, but I knew the one thing I might regret is not trying." —— Jeff Bezos<br />
-- <strong>mindset</strong> 思维模式；搭配：growth mindset（成长型思维）；例：A growth mindset helps you embrace challenges.；名句："In a growth mindset, challenges are exciting rather than threatening." —— Carol Dweck<br />
-- <strong>execute</strong> 执行；搭配：execute an idea（执行想法）；例：Ideas are cheap; execution is everything.；名句："Vision without execution is hallucination." —— Thomas Edison（传）<br />
-- <strong>paralysis</strong> 瘫痪；搭配：analysis paralysis（分析瘫痪）；例：Endless analysis leads to analysis paralysis.；名句："An idea not coupled with action will never get any bigger than the brain cell it occupied." —— Arnold Glasow<br />
-- <strong>hands-on</strong> 动手的；实践的；搭配：hands-on experience（实践经验）；例：Keep your hands-on creative skills sharp.；名句："Tell me and I forget. Teach me and I remember. Involve me and I learn." —— Benjamin Franklin（传）<br />
-- <strong>iterate</strong> 迭代；搭配：iterate quickly（快速迭代）；例：Builders iterate; critics wait for perfection.；名句："Done is better than perfect." —— Sheryl Sandberg<br />
-- <strong>blueprint</strong> 蓝图；搭配：a blueprint for（……的蓝图）；例：Education gives you the blueprint; entrepreneurship makes you the builder.；名句："The best way to predict the future is to create it." —— Peter Drucker<br />
-- <strong>armchair</strong> 纸上谈兵的；搭配：armchair critic（键盘评论家）；例：Don't be an armchair critic — build something.；名句："It is not the critic who counts... The credit belongs to the man who is actually in the arena." —— Theodore Roosevelt<br />
-- <strong>tinker</strong> 琢磨；动手捣鼓；搭配：tinker with（捣鼓）；例：Tinker with ideas instead of just analyzing them.；名句："I have not failed. I've just found 10,000 ways that won't work." —— Thomas Edison</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>critique</strong> 批评；评论；搭配：offer a critique（提出批评）；例：It's easier to critique a product than to create one.；名句："Criticism is something we can avoid easily by saying nothing, doing nothing, and being nothing." —— Aristotle</li>
+<li><strong>entrepreneur</strong> 创业者；搭配：a young entrepreneur；例：The young entrepreneur started her company at 22.；名句："I knew that if I failed I wouldn't regret that, but I knew the one thing I might regret is not trying." —— Jeff Bezos</li>
+<li><strong>mindset</strong> 思维模式；搭配：growth mindset（成长型思维）；例：A growth mindset helps you embrace challenges.；名句："In a growth mindset, challenges are exciting rather than threatening." —— Carol Dweck</li>
+<li><strong>execute</strong> 执行；搭配：execute an idea（执行想法）；例：Ideas are cheap; execution is everything.；名句："Vision without execution is hallucination." —— Thomas Edison（传）</li>
+<li><strong>paralysis</strong> 瘫痪；搭配：analysis paralysis（分析瘫痪）；例：Endless analysis leads to analysis paralysis.；名句："An idea not coupled with action will never get any bigger than the brain cell it occupied." —— Arnold Glasow</li>
+<li><strong>hands-on</strong> 动手的；实践的；搭配：hands-on experience（实践经验）；例：Keep your hands-on creative skills sharp.；名句："Tell me and I forget. Teach me and I remember. Involve me and I learn." —— Benjamin Franklin（传）</li>
+<li><strong>iterate</strong> 迭代；搭配：iterate quickly（快速迭代）；例：Builders iterate; critics wait for perfection.；名句："Done is better than perfect." —— Sheryl Sandberg</li>
+<li><strong>blueprint</strong> 蓝图；搭配：a blueprint for（……的蓝图）；例：Education gives you the blueprint; entrepreneurship makes you the builder.；名句："The best way to predict the future is to create it." —— Peter Drucker</li>
+<li><strong>armchair</strong> 纸上谈兵的；搭配：armchair critic（键盘评论家）；例：Don't be an armchair critic — build something.；名句："It is not the critic who counts... The credit belongs to the man who is actually in the arena." —— Theodore Roosevelt</li>
+<li><strong>tinker</strong> 琢磨；动手捣鼓；搭配：tinker with（捣鼓）；例：Tinker with ideas instead of just analyzing them.；名句："I have not failed. I've just found 10,000 ways that won't work." —— Thomas Edison</li>
+</ul>
 <h3>3️⃣ Brian Tracy：三件事法则（Law of Three）——决定你90%价值的只有三件事</h3>
 <p><strong>核心观点：</strong> 励志演说家 Brian Tracy 的"三件事法则"：不管你一周/一月做多少事，其中只有<strong>三件</strong>决定了你90%的价值。方法：列出所有任务，然后问自己三个"魔法问题"——如果一整天只能做一件事，哪件对职业生涯影响最大？圈出来；再问"如果能做两件"、"三件"。这三件就是你的 <strong>Big 3</strong>，其余的都是次要的：可以交给别人、推迟，或者干脆不做。盯住 Big 3 直到变成习惯。</p>
 <p><strong>为什么值得看：</strong> 假期综合征的本质是"什么都想抓"。这条给你一个极简过滤器：每天早上先圈出三件最重要的，其他的都是噪音。</p>
 <p>🔗 来源：<a href="https://www.instagram.com/reel/Dd0uSfDAeuQ/">Brian Tracy @thebriantracy</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>prioritize</strong> 排出优先级；搭配：prioritize ruthlessly（果断排序）；例：List every task, then prioritize the top three.；名句："The key is not to prioritize what's on your schedule, but to schedule your priorities." —— Stephen Covey<br />
-- <strong>delegate</strong> 委派；搭配：delegate or delete（委派或删除）；例：Everything else can be delegated, delayed, or deleted.；名句："The best executive picks good people to do what he wants done, and keeps from meddling with them while they do it." —— Theodore Roosevelt<br />
-- <strong>eliminate</strong> 剔除；搭配：eliminate the trivial（剔除琐事）；例：Eliminate anything that isn't in your Big 3.；名句："The essence of strategy is choosing what not to do." —— Michael Porter<br />
-- <strong>trivial</strong> 琐碎的；搭配：trivial tasks（琐事）；例：Most of your to-do list is trivial.；名句："Besides the noble art of getting things done, there is the noble art of leaving things undone." —— 林语堂<br />
-- <strong>disproportionate</strong> 不成比例的；搭配：disproportionate impact（不成比例的影响）；例：A few tasks have a disproportionate impact on your career.；名句："For every minute spent organizing, an hour is earned." —— Benjamin Franklin（传）<br />
-- <strong>compound</strong> 累积；复利；搭配：compound over time（随时间复利）；例：Focus on the Big 3 daily and results compound.；名句："Compound interest is the eighth wonder of the world." —— Einstein（传）<br />
-- <strong>ruthless</strong> 果断的；无情的；搭配：be ruthless with your time（对时间果断）；例：Be ruthless about what makes the list.；名句："The difference between successful people and really successful people is that really successful people say no to almost everything." —— Warren Buffett<br />
-- <strong>cull</strong> 筛除；搭配：cull the list（精简清单）；例：Cull your task list down to three.；名句："Simplicity is the ultimate sophistication." —— Leonardo da Vinci（传）<br />
-- <strong>needle-mover</strong> 关键推动因素；搭配：focus on needle-movers；例：Ask which task is the real needle-mover.；名句："What's the ONE thing I can do such that by doing it everything else will be easier or unnecessary?" —— Gary Keller《The One Thing》<br />
-- <strong>conquer</strong> 征服；搭配：conquer your day（征服你的一天）；例：Master the Big 3 and you'll conquer your week.；名句："He who conquers himself is the mightiest warrior." —— 孔子（传）</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>prioritize</strong> 排出优先级；搭配：prioritize ruthlessly（果断排序）；例：List every task, then prioritize the top three.；名句："The key is not to prioritize what's on your schedule, but to schedule your priorities." —— Stephen Covey</li>
+<li><strong>delegate</strong> 委派；搭配：delegate or delete（委派或删除）；例：Everything else can be delegated, delayed, or deleted.；名句："The best executive picks good people to do what he wants done, and keeps from meddling with them while they do it." —— Theodore Roosevelt</li>
+<li><strong>eliminate</strong> 剔除；搭配：eliminate the trivial（剔除琐事）；例：Eliminate anything that isn't in your Big 3.；名句："The essence of strategy is choosing what not to do." —— Michael Porter</li>
+<li><strong>trivial</strong> 琐碎的；搭配：trivial tasks（琐事）；例：Most of your to-do list is trivial.；名句："Besides the noble art of getting things done, there is the noble art of leaving things undone." —— 林语堂</li>
+<li><strong>disproportionate</strong> 不成比例的；搭配：disproportionate impact（不成比例的影响）；例：A few tasks have a disproportionate impact on your career.；名句："For every minute spent organizing, an hour is earned." —— Benjamin Franklin（传）</li>
+<li><strong>compound</strong> 累积；复利；搭配：compound over time（随时间复利）；例：Focus on the Big 3 daily and results compound.；名句："Compound interest is the eighth wonder of the world." —— Einstein（传）</li>
+<li><strong>ruthless</strong> 果断的；无情的；搭配：be ruthless with your time（对时间果断）；例：Be ruthless about what makes the list.；名句："The difference between successful people and really successful people is that really successful people say no to almost everything." —— Warren Buffett</li>
+<li><strong>cull</strong> 筛除；搭配：cull the list（精简清单）；例：Cull your task list down to three.；名句："Simplicity is the ultimate sophistication." —— Leonardo da Vinci（传）</li>
+<li><strong>needle-mover</strong> 关键推动因素；搭配：focus on needle-movers；例：Ask which task is the real needle-mover.；名句："What's the ONE thing I can do such that by doing it everything else will be easier or unnecessary?" —— Gary Keller《The One Thing》</li>
+<li><strong>conquer</strong> 征服；搭配：conquer your day（征服你的一天）；例：Master the Big 3 and you'll conquer your week.；名句："He who conquers himself is the mightiest warrior." —— 孔子（传）</li>
+</ul>
 <hr />
 <h2>💕 五、爱情</h2>
 <h3>1️⃣ Gottman 研究所：婚姻是跷跷板，不是记分牌</h3>
 <p><strong>核心观点：</strong> Julie Gottman 分享她和 John 转变心态的经历：别再给婚姻"记分"（比谁更累、谁付出更多），而要把它想象成<strong>跷跷板</strong>——一方减压时另一方顶上（带娃、做饭、支持对方锻炼或见朋友），然后轮换。她坦言以前两人曾为"谁更 burnout"吵到不可开交，后来意识到：自己从小没被教育要照顾自己，反而把怨气撒在对方身上。结论：双方都要主动关注自我照顾，并支持对方也这么做。</p>
 <p><strong>为什么值得看：</strong> "别记分、轮流来"是最反直觉又最实用的亲密关系建议之一。Gottman 夫妇用自己的婚姻现身说法，比讲道理有力得多；吵架时想起"跷跷板"三个字，火气能降一半。</p>
 <p>🔗 来源：<a href="https://www.instagram.com/reel/DeABWUZAI_d/">The Gottman Institute @gottmaninstitute</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>keep score</strong> 计较得失；搭配：stop keeping score（别再记分）；例：Couples who keep score fight over who is more exhausted.；名句："Love keeps no record of wrongs." —— 《圣经》<br />
-- <strong>burnout</strong> 倦怠；搭配：parental burnout（养育倦怠）；例：They fought over who was more burned out.；名句："You can't pour from an empty cup." —— 谚语<br />
-- <strong>resentment</strong> 怨恨；搭配：brewing resentment（酝酿中的怨恨）；例：Unspoken needs turn into resentment.；名句："Holding a grudge is like drinking poison and expecting the other person to die." —— 谚语<br />
-- <strong>trade off</strong> 轮换；搭配：trade off duties（轮流分担）；例：Trade off childcare duties when one partner is drained.；名句："Give and take." —— 谚语<br />
-- <strong>recharge</strong> 充电回血；搭配：time to recharge（回血时间）；例：Support each other's time to recharge.；名句："Almost everything will work again if you unplug it for a few minutes. Including you." —— Anne Lamott<br />
-- <strong>self-care</strong> 自我关怀；搭配：practice self-care；例：Julie realized she was never taught self-care.；名句："Caring for myself is not self-indulgence, it is self-preservation." —— Audre Lorde<br />
-- <strong>empathy</strong> 共情；搭配：show empathy；例：Trade blame for empathy.；名句："Empathy is about finding echoes of another person in yourself." —— Mohsin Hamid<br />
-- <strong>tag-team</strong> 接力配合；搭配：tag-team parenting（接力带娃）；例：Tag-team the hard days.；名句："Alone we can do so little; together we can do so much." —— Helen Keller<br />
-- <strong>drained</strong> 精疲力竭的；搭配：emotionally drained（情绪耗竭）；例：When one partner is drained, the other steps up.；名句："Take rest; a field that has rested gives a bountiful crop." —— Ovid<br />
-- <strong>vulnerable</strong> 脆弱袒露的；搭配：be vulnerable；例：Julie was vulnerable about her own burnout.；名句："Vulnerability is the birthplace of love, belonging, and joy." —— Brené Brown</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>keep score</strong> 计较得失；搭配：stop keeping score（别再记分）；例：Couples who keep score fight over who is more exhausted.；名句："Love keeps no record of wrongs." —— 《圣经》</li>
+<li><strong>burnout</strong> 倦怠；搭配：parental burnout（养育倦怠）；例：They fought over who was more burned out.；名句："You can't pour from an empty cup." —— 谚语</li>
+<li><strong>resentment</strong> 怨恨；搭配：brewing resentment（酝酿中的怨恨）；例：Unspoken needs turn into resentment.；名句："Holding a grudge is like drinking poison and expecting the other person to die." —— 谚语</li>
+<li><strong>trade off</strong> 轮换；搭配：trade off duties（轮流分担）；例：Trade off childcare duties when one partner is drained.；名句："Give and take." —— 谚语</li>
+<li><strong>recharge</strong> 充电回血；搭配：time to recharge（回血时间）；例：Support each other's time to recharge.；名句："Almost everything will work again if you unplug it for a few minutes. Including you." —— Anne Lamott</li>
+<li><strong>self-care</strong> 自我关怀；搭配：practice self-care；例：Julie realized she was never taught self-care.；名句："Caring for myself is not self-indulgence, it is self-preservation." —— Audre Lorde</li>
+<li><strong>empathy</strong> 共情；搭配：show empathy；例：Trade blame for empathy.；名句："Empathy is about finding echoes of another person in yourself." —— Mohsin Hamid</li>
+<li><strong>tag-team</strong> 接力配合；搭配：tag-team parenting（接力带娃）；例：Tag-team the hard days.；名句："Alone we can do so little; together we can do so much." —— Helen Keller</li>
+<li><strong>drained</strong> 精疲力竭的；搭配：emotionally drained（情绪耗竭）；例：When one partner is drained, the other steps up.；名句："Take rest; a field that has rested gives a bountiful crop." —— Ovid</li>
+<li><strong>vulnerable</strong> 脆弱袒露的；搭配：be vulnerable；例：Julie was vulnerable about her own burnout.；名句："Vulnerability is the birthplace of love, belonging, and joy." —— Brené Brown</li>
+</ul>
 <h3>2️⃣ 婚姻治疗师 Vienna Pharaon：别说"这对我来说不是问题"</h3>
 <p><strong>核心观点：</strong> 婚姻家庭治疗师 Vienna Pharaon（10月1日帖子）指出情侣最常见的错误之一：当伴侣表达困扰时，回一句"这对我来说不是问题（it's not an issue for me）"——这等于<strong>轻视对方的感受</strong>、切断连接。要记住：<strong>对一个人是问题，对两个人就是问题</strong>。爱意味着愿意去理解"为什么这件事对ta重要"，而不是急着下判断。她还坦白了自己15年前的"黑历史"：异地恋时男友说受不了距离，她轻描淡写带过、只为逃避分手话题，错过了一次真正连接的机会。</p>
 <p><strong>为什么值得看：</strong> "这又没什么"可能是亲密关系里杀伤力最大的一句话。这条把"好好听对方说话"讲出了专业依据：先认可感受，再解决问题。</p>
 <p>🔗 来源：<a href="https://www.instagram.com/p/Dd9eyqDmTfz/">Vienna Pharaon @mindfulmft</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>dismiss</strong> 轻视；打发；搭配：dismiss concerns（轻视对方的担忧）；例：Saying "it's not an issue for me" dismisses your partner.；名句："Being heard is so close to being loved that for the average person they are almost indistinguishable." —— David Augsburger<br />
-- <strong>minimize</strong> 轻视；最小化；搭配：minimize feelings（轻视感受）；例：Don't minimize what matters to them.；名句："Your feelings are valid." —— 心理咨询常用语<br />
-- <strong>attune</strong> 调谐；共情；搭配：attune to your partner（与伴侣同频）；例：Love means attuning to why it matters to them.；名句："Wherever you are, be there totally." —— Eckhart Tolle<br />
-- <strong>confess</strong> 坦白；搭配：a candid confession（坦率的自白）；例：Vienna's confession: she downplayed his struggle 15 years ago.；名句："Confession is good for the soul." —— 谚语<br />
-- <strong>downplay</strong> 轻描淡写；搭配：downplay the issue（淡化问题）；例：She downplayed the distance to avoid a breakup talk.；名句："The truth will set you free." —— 《圣经》<br />
-- <strong>curiosity</strong> 好奇心；搭配：meet with curiosity（以好奇心面对）；例：Meet their concern with care and curiosity.；名句："I have no special talents. I am only passionately curious." —— Einstein<br />
-- <strong>defensive</strong> 防御性的；搭配：get defensive（变得防御）；例：She got defensive instead of listening.；名句："Most people do not listen with the intent to understand; they listen with the intent to reply." —— Stephen Covey<br />
-- <strong>rupture</strong> 破裂；搭配：repair the rupture（修复裂痕）；例：Every dismissal creates a small rupture.；名句："The wound is the place where the Light enters you." —— Rumi<br />
-- <strong>validate</strong> 认可；确认；搭配：validate their feelings（认可对方感受）；例：Validate first; solve second.；名句："Seek first to understand, then to be understood." —— Stephen Covey<br />
-- <strong>avoidance</strong> 回避；搭配：emotional avoidance（情感回避）；例：She avoided the hard talk; the distance grew.；名句："The only way out is through." —— Robert Frost</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>dismiss</strong> 轻视；打发；搭配：dismiss concerns（轻视对方的担忧）；例：Saying "it's not an issue for me" dismisses your partner.；名句："Being heard is so close to being loved that for the average person they are almost indistinguishable." —— David Augsburger</li>
+<li><strong>minimize</strong> 轻视；最小化；搭配：minimize feelings（轻视感受）；例：Don't minimize what matters to them.；名句："Your feelings are valid." —— 心理咨询常用语</li>
+<li><strong>attune</strong> 调谐；共情；搭配：attune to your partner（与伴侣同频）；例：Love means attuning to why it matters to them.；名句："Wherever you are, be there totally." —— Eckhart Tolle</li>
+<li><strong>confess</strong> 坦白；搭配：a candid confession（坦率的自白）；例：Vienna's confession: she downplayed his struggle 15 years ago.；名句："Confession is good for the soul." —— 谚语</li>
+<li><strong>downplay</strong> 轻描淡写；搭配：downplay the issue（淡化问题）；例：She downplayed the distance to avoid a breakup talk.；名句："The truth will set you free." —— 《圣经》</li>
+<li><strong>curiosity</strong> 好奇心；搭配：meet with curiosity（以好奇心面对）；例：Meet their concern with care and curiosity.；名句："I have no special talents. I am only passionately curious." —— Einstein</li>
+<li><strong>defensive</strong> 防御性的；搭配：get defensive（变得防御）；例：She got defensive instead of listening.；名句："Most people do not listen with the intent to understand; they listen with the intent to reply." —— Stephen Covey</li>
+<li><strong>rupture</strong> 破裂；搭配：repair the rupture（修复裂痕）；例：Every dismissal creates a small rupture.；名句："The wound is the place where the Light enters you." —— Rumi</li>
+<li><strong>validate</strong> 认可；确认；搭配：validate their feelings（认可对方感受）；例：Validate first; solve second.；名句："Seek first to understand, then to be understood." —— Stephen Covey</li>
+<li><strong>avoidance</strong> 回避；搭配：emotional avoidance（情感回避）；例：She avoided the hard talk; the distance grew.；名句："The only way out is through." —— Robert Frost</li>
+</ul>
 <h3>3️⃣ Molly Jiang：6件"有争议"却让感情更牢固的事</h3>
 <p><strong>核心观点：</strong> 博主 Molly Jiang（9月30日帖子）列出6件外人看来"有争议"、却让他们感情更稳的做法：①不说"爱你的人自然会懂"，而是<strong>直接说出想要什么</strong>；②不跟朋友倾诉感情问题，先关起门来自己解决；③<strong>绝不开分手的玩笑</strong>，吵架也不拿关系当赌注；④不"冷静几天"，当天解决、不带着气睡觉；⑤<strong>试一次对方的爱好</strong>，当作爱的语言；⑥每月一次深度 check-in，认真问对方"你最近到底怎么样"。</p>
 <p><strong>为什么值得看：</strong> 条条都在挑战流行情感鸡汤（比如"想分开冷静"vs"当天解决"），评论区果然吵成一团。但吵归吵，核心逻辑很正：<strong>把模糊的期待变成清晰的沟通</strong>。</p>
 <p>🔗 来源：<a href="https://www.instagram.com/p/Dd7jfv9GXTr/">Molly Jiang @m0llyjiang</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>controversial</strong> 有争议的；搭配：controversial opinion（有争议的观点）；例：Their "controversial" rules actually work.；名句："To avoid criticism, say nothing, do nothing, be nothing." —— Aristotle<br />
-- <strong>vocalize</strong> 说出口；搭配：vocalize your needs（说出需求）；例：Instead of "if they wanted to, they would," vocalize what you want.；名句："Ask for what you want and be prepared to get it." —— Maya Angelou<br />
-- <strong>discretion</strong> 谨慎；分寸；搭配：handle with discretion（谨慎处理）；例：They handle disagreements with discretion.；名句："Discretion is the better part of valor." —— Shakespeare<br />
-- <strong>jest</strong> 玩笑；搭配：in jest（开玩笑地）；例：Never joke about breaking up, even in jest.；名句："Many a true word is spoken in jest." —— Chaucer<br />
-- <strong>ritual</strong> 仪式；搭配：monthly check-in ritual（每月深度沟通仪式）；例：Their monthly check-in is a small ritual.；名句："We are what we repeatedly do." —— Aristotle（传）<br />
-- <strong>common ground</strong> 共同点；搭配：find common ground（找到共同点）；例：Trying each other's hobbies builds common ground.；名句："In diversity there is beauty and there is strength." —— Maya Angelou<br />
-- <strong>intentional</strong> 有意的；用心的；搭配：be intentional（用心经营）；例：They are intentional about staying connected.；名句："Attention is the rarest and purest form of generosity." —— Simone Weil<br />
-- <strong>defuse</strong> 化解；搭配：defuse tension（化解紧张）；例：Resolving things the same day defuses tension.；名句："A soft answer turns away wrath." —— 《圣经·箴言》<br />
-- <strong>stonewalling</strong> 冷战；筑墙；搭配：avoid stonewalling（避免冷战）；例：No silent treatment — stonewalling is off the table.；名句："Silence is the most powerful scream." —— 谚语<br />
-- <strong>compromise</strong> 妥协；搭配：healthy compromise（健康的妥协）；例：Trying each other's interests is a happy compromise.；名句："Peace is not the absence of conflict, but the ability to handle conflict by peaceful means." —— Reagan</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>controversial</strong> 有争议的；搭配：controversial opinion（有争议的观点）；例：Their "controversial" rules actually work.；名句："To avoid criticism, say nothing, do nothing, be nothing." —— Aristotle</li>
+<li><strong>vocalize</strong> 说出口；搭配：vocalize your needs（说出需求）；例：Instead of "if they wanted to, they would," vocalize what you want.；名句："Ask for what you want and be prepared to get it." —— Maya Angelou</li>
+<li><strong>discretion</strong> 谨慎；分寸；搭配：handle with discretion（谨慎处理）；例：They handle disagreements with discretion.；名句："Discretion is the better part of valor." —— Shakespeare</li>
+<li><strong>jest</strong> 玩笑；搭配：in jest（开玩笑地）；例：Never joke about breaking up, even in jest.；名句："Many a true word is spoken in jest." —— Chaucer</li>
+<li><strong>ritual</strong> 仪式；搭配：monthly check-in ritual（每月深度沟通仪式）；例：Their monthly check-in is a small ritual.；名句："We are what we repeatedly do." —— Aristotle（传）</li>
+<li><strong>common ground</strong> 共同点；搭配：find common ground（找到共同点）；例：Trying each other's hobbies builds common ground.；名句："In diversity there is beauty and there is strength." —— Maya Angelou</li>
+<li><strong>intentional</strong> 有意的；用心的；搭配：be intentional（用心经营）；例：They are intentional about staying connected.；名句："Attention is the rarest and purest form of generosity." —— Simone Weil</li>
+<li><strong>defuse</strong> 化解；搭配：defuse tension（化解紧张）；例：Resolving things the same day defuses tension.；名句："A soft answer turns away wrath." —— 《圣经·箴言》</li>
+<li><strong>stonewalling</strong> 冷战；筑墙；搭配：avoid stonewalling（避免冷战）；例：No silent treatment — stonewalling is off the table.；名句："Silence is the most powerful scream." —— 谚语</li>
+<li><strong>compromise</strong> 妥协；搭配：healthy compromise（健康的妥协）；例：Trying each other's interests is a happy compromise.；名句："Peace is not the absence of conflict, but the ability to handle conflict by peaceful means." —— Reagan</li>
+</ul>
 <hr />
 <hr />
 <h2>🌿 六、绿色低碳能源</h2>
 <h3>1️⃣ 罗马尼亚 Vifor 风电场首期192MW投运，拟加储能+光伏变身"混合电站"</h3>
 <p><strong>发生了什么：</strong> 英国投资方支持的 Rezolv Energy 在罗马尼亚正式投运 Vifor 风电场一期192MW，已开始向电网送电。公司CEO对路透社表示，计划加装大型电池储能，未来还可能加光伏板，把单一风电场升级为"风+光+储"混合电站。背景是：罗马尼亚唯一在运核反应堆今夏因多瑙河水位过低停运，全国约1/5电力缺口，8月曾宣布能源紧急状态。Vifor 满发461MW（预计2027年中）将成为欧盟第三大风电场。</p>
 <p><strong>为什么值得关注：</strong> "混合化"是欧洲新能源的大趋势——风光配储能，对冲单一电源的间歇性，让绿电更像"稳定电源"；干旱同时击垮核电（缺冷却水）与水电（缺水），说明气候风险下电力系统比想象中更脆弱，多元电源+储能成为刚需。</p>
-<p>📖 <strong>名词解释</strong><br />
-- <strong>混合电站</strong>：风电+光伏+储能建在一起，互相补位：没风时可能有太阳，晚上靠电池放电。<br />
-- <strong>储能</strong>：超大号"充电宝"，把多余的电存起来、用电高峰再放出来。<br />
-- <strong>MW / GW</strong>：兆瓦/吉瓦，功率单位；1GW=1000MW，约够几十万户家庭用电。<br />
-- <strong>能源紧急状态</strong>：政府宣布的特殊状态，可要求企业居民错峰用电、启动备用电源。</p>
+<p>📖 <strong>名词解释</strong></p>
+<ul>
+<li><strong>混合电站</strong>：风电+光伏+储能建在一起，互相补位：没风时可能有太阳，晚上靠电池放电。</li>
+<li><strong>储能</strong>：超大号"充电宝"，把多余的电存起来、用电高峰再放出来。</li>
+<li><strong>MW / GW</strong>：兆瓦/吉瓦，功率单位；1GW=1000MW，约够几十万户家庭用电。</li>
+<li><strong>能源紧急状态</strong>：政府宣布的特殊状态，可要求企业居民错峰用电、启动备用电源。</li>
+</ul>
 <p>💡 <strong>一句话总结</strong>：核电水电被干旱"团灭"，罗马尼亚把宝押在风电场+大电池上——未来电站的模样是"风光储三件套"。</p>
 <p>🔗 来源：<a href="https://www.reuters.com/business/energy/romanias-newest-wind-farm-may-add-solar-storage-country-faces-energy-crunch-2026-10-02/">Reuters</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>hybrid</strong> 混合的；搭配：hybrid power plant（混合电站）；例：The wind farm will become a hybrid plant with solar and storage.；名句："Variety is the spice of life." —— 谚语<br />
-- <strong>storage</strong> 储能；搭配：battery storage（电池储能）；例：The operator plans to add large-scale battery storage.；名句："Save for a rainy day." —— 谚语<br />
-- <strong>intermittent</strong> 间歇性的；搭配：intermittent renewables（间歇性可再生能源）；例：Storage smooths out intermittent wind and solar output.；名句："The only constant in life is change." —— 赫拉克利特（传）<br />
-- <strong>drought</strong> 干旱；搭配：severe drought（严重干旱）；例：Drought knocked out both nuclear and hydro power at once.；名句："You never miss the water till the well runs dry." —— 谚语<br />
-- <strong>crunch</strong> 危机；短缺；搭配：energy crunch（能源危机）；例：Romania faces an energy crunch after the nuclear outage.；名句："Necessity is the mother of invention." —— 谚语<br />
-- <strong>capacity</strong> 装机容量；搭配：installed capacity（装机容量）；例：Full capacity of 461 MW would make it the EU's third-largest wind farm.；名句："The greater the obstacle, the more glory in overcoming it." —— 莫里哀<br />
-- <strong>commission</strong> 投运；搭配：commission a plant（电站投运）；例：Phase one was commissioned this week.；名句："Well begun is half done." —— 谚语<br />
-- <strong>outage</strong> 停运；停电；搭配：nuclear outage（核电停运）；例：Low river levels forced a nuclear outage.；名句："Darkness cannot drive out darkness; only light can do that." —— 马丁·路德·金<br />
-- <strong>diversify</strong> 多元化；搭配：diversify energy sources（能源多元化）；例：The crisis shows why grids must diversify.；名句："Don't put all your eggs in one basket." —— 谚语<br />
-- <strong>resilience</strong> 韧性；搭配：grid resilience（电网韧性）；例：Hybrid plants boost grid resilience against climate shocks.；名句："That which does not kill us makes us stronger." —— 尼采</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>hybrid</strong> 混合的；搭配：hybrid power plant（混合电站）；例：The wind farm will become a hybrid plant with solar and storage.；名句："Variety is the spice of life." —— 谚语</li>
+<li><strong>storage</strong> 储能；搭配：battery storage（电池储能）；例：The operator plans to add large-scale battery storage.；名句："Save for a rainy day." —— 谚语</li>
+<li><strong>intermittent</strong> 间歇性的；搭配：intermittent renewables（间歇性可再生能源）；例：Storage smooths out intermittent wind and solar output.；名句："The only constant in life is change." —— 赫拉克利特（传）</li>
+<li><strong>drought</strong> 干旱；搭配：severe drought（严重干旱）；例：Drought knocked out both nuclear and hydro power at once.；名句："You never miss the water till the well runs dry." —— 谚语</li>
+<li><strong>crunch</strong> 危机；短缺；搭配：energy crunch（能源危机）；例：Romania faces an energy crunch after the nuclear outage.；名句："Necessity is the mother of invention." —— 谚语</li>
+<li><strong>capacity</strong> 装机容量；搭配：installed capacity（装机容量）；例：Full capacity of 461 MW would make it the EU's third-largest wind farm.；名句："The greater the obstacle, the more glory in overcoming it." —— 莫里哀</li>
+<li><strong>commission</strong> 投运；搭配：commission a plant（电站投运）；例：Phase one was commissioned this week.；名句："Well begun is half done." —— 谚语</li>
+<li><strong>outage</strong> 停运；停电；搭配：nuclear outage（核电停运）；例：Low river levels forced a nuclear outage.；名句："Darkness cannot drive out darkness; only light can do that." —— 马丁·路德·金</li>
+<li><strong>diversify</strong> 多元化；搭配：diversify energy sources（能源多元化）；例：The crisis shows why grids must diversify.；名句："Don't put all your eggs in one basket." —— 谚语</li>
+<li><strong>resilience</strong> 韧性；搭配：grid resilience（电网韧性）；例：Hybrid plants boost grid resilience against climate shocks.；名句："That which does not kill us makes us stronger." —— 尼采</li>
+</ul>
 <h3>2️⃣ Enel 7.6亿美元收购美国810MW光伏组合，北美绿电版图超13GW</h3>
 <p><strong>发生了什么：</strong> 意大利能源巨头 Enel 宣布完成从 Excelsior Energy Capital 手中收购美国光伏电站组合：总装机810MW，预计年发电约1.6TWh，对价约7.6亿美元（用经营现金流支付）。这是2026年2月签署的一揽子协议（风光合计超1GW、企业价值约13亿美元）的一部分；剩余205MW风电预计2026年四季度交割，之后 Enel 在北美风光储总装机将超13GW。Enel 预计该收购每年增厚集团 EBITDA 约9000万美元。</p>
 <p><strong>为什么值得关注：</strong> 欧洲巨头持续加码美国可再生能源，说明优质绿电资产是全球资本眼中的"稳赚型"长期资产；用经营现金流直接收购（而非举债）显示 Enel 财务健康；大型风光组合并购潮背后，是企业绿电采购需求旺盛、电价长期看涨的逻辑。</p>
-<p>📖 <strong>名词解释</strong><br />
-- <strong>光伏组合</strong>：打包在一起的多个光伏电站，像"股票组合"一样分散风险。<br />
-- <strong>TWh</strong>：太瓦时，电量单位；1.6TWh约够40万户美国家庭用一年。<br />
-- <strong>EBITDA</strong>：息税折旧摊销前利润，衡量公司主营业务真实赚钱能力的指标。<br />
-- <strong>企业价值</strong>：收购一家公司/资产要付的总价概念，含股权+净负债。</p>
+<p>📖 <strong>名词解释</strong></p>
+<ul>
+<li><strong>光伏组合</strong>：打包在一起的多个光伏电站，像"股票组合"一样分散风险。</li>
+<li><strong>TWh</strong>：太瓦时，电量单位；1.6TWh约够40万户美国家庭用一年。</li>
+<li><strong>EBITDA</strong>：息税折旧摊销前利润，衡量公司主营业务真实赚钱能力的指标。</li>
+<li><strong>企业价值</strong>：收购一家公司/资产要付的总价概念，含股权+净负债。</li>
+</ul>
 <p>💡 <strong>一句话总结</strong>：Enel 花7.6亿美元"买电站"，北美绿电装机冲上13GW——在能源巨头眼里，太阳能电站就是印钞机。</p>
 <p>🔗 来源：<a href="https://evertiq.com/news/2026-10-02-enel-closes-acquisition-of-810-mw-solar-portfolio-in-us">Evertiq（引自 Enel 官方公告）</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>portfolio</strong> 资产组合；搭配：solar portfolio（光伏资产组合）；例：Enel acquired an 810 MW solar portfolio.；名句："Don't put all your eggs in one basket." —— 谚语<br />
-- <strong>acquisition</strong> 收购；搭配：complete an acquisition（完成收购）；例：The $760 million acquisition was paid from operating cash flow.；名句："Price is what you pay. Value is what you get." —— 巴菲特<br />
-- <strong>EBITDA</strong> 息税折旧摊销前利润；搭配：boost EBITDA（增厚EBITDA）；例：The deal is expected to add $90 million to annual EBITDA.；名句："Revenue is vanity, profit is sanity, cash is king." —— 商业谚语<br />
-- <strong>cash flow</strong> 现金流；搭配：operating cash flow（经营现金流）；例：Enel paid with operating cash flow, not debt.；名句："Cash is king." —— 商业谚语<br />
-- <strong>yield</strong> 产出；收益；搭配：annual energy yield（年发电量）；例：The portfolio yields about 1.6 TWh a year.；名句："You reap what you sow." —— 《圣经》<br />
-- <strong>offtake</strong> 承购；搭配：offtake agreement（承购协议）；例：Long-term offtake agreements make projects bankable.；名句："A promise made is a debt unpaid." —— Robert W. Service<br />
-- <strong>consolidation</strong> 整合；搭配：industry consolidation（行业整合）；例：The deal is part of a wave of renewables consolidation.；名句："United we stand, divided we fall." —— 谚语<br />
-- <strong>gigawatt</strong> 吉瓦；搭配：13 gigawatts（13吉瓦）；例：Enel's North American fleet now tops 13 GW.；名句："Great oaks from little acorns grow." —— 谚语<br />
-- <strong>outlook</strong> 前景；搭配：bright outlook（光明前景）；例：The outlook for US solar demand stays bright.；名句："The future belongs to those who believe in the beauty of their dreams." —— 罗斯福夫人<br />
-- <strong>scale</strong> 规模；搭配：at scale（规模化地）；例：Enel is expanding at scale across North America.；名句："Big things have small beginnings." —— 谚语</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>portfolio</strong> 资产组合；搭配：solar portfolio（光伏资产组合）；例：Enel acquired an 810 MW solar portfolio.；名句："Don't put all your eggs in one basket." —— 谚语</li>
+<li><strong>acquisition</strong> 收购；搭配：complete an acquisition（完成收购）；例：The $760 million acquisition was paid from operating cash flow.；名句："Price is what you pay. Value is what you get." —— 巴菲特</li>
+<li><strong>EBITDA</strong> 息税折旧摊销前利润；搭配：boost EBITDA（增厚EBITDA）；例：The deal is expected to add $90 million to annual EBITDA.；名句："Revenue is vanity, profit is sanity, cash is king." —— 商业谚语</li>
+<li><strong>cash flow</strong> 现金流；搭配：operating cash flow（经营现金流）；例：Enel paid with operating cash flow, not debt.；名句："Cash is king." —— 商业谚语</li>
+<li><strong>yield</strong> 产出；收益；搭配：annual energy yield（年发电量）；例：The portfolio yields about 1.6 TWh a year.；名句："You reap what you sow." —— 《圣经》</li>
+<li><strong>offtake</strong> 承购；搭配：offtake agreement（承购协议）；例：Long-term offtake agreements make projects bankable.；名句："A promise made is a debt unpaid." —— Robert W. Service</li>
+<li><strong>consolidation</strong> 整合；搭配：industry consolidation（行业整合）；例：The deal is part of a wave of renewables consolidation.；名句："United we stand, divided we fall." —— 谚语</li>
+<li><strong>gigawatt</strong> 吉瓦；搭配：13 gigawatts（13吉瓦）；例：Enel's North American fleet now tops 13 GW.；名句："Great oaks from little acorns grow." —— 谚语</li>
+<li><strong>outlook</strong> 前景；搭配：bright outlook（光明前景）；例：The outlook for US solar demand stays bright.；名句："The future belongs to those who believe in the beauty of their dreams." —— 罗斯福夫人</li>
+<li><strong>scale</strong> 规模；搭配：at scale（规模化地）；例：Enel is expanding at scale across North America.；名句："Big things have small beginnings." —— 谚语</li>
+</ul>
 <h3>3️⃣ 氢能里程碑：印度 AM Green 拿下德国 H2Global 亚洲标段，5.85亿欧元绿氨10年长约</h3>
 <p><strong>发生了什么：</strong> 10月1日，印度 AM Green 公司宣布成为德国政府资助的 H2Global 拍卖"亚洲标段"唯一中标者，与执行机构 Hintco 签下10年长期采购协议：Hintco 以最低5.85亿欧元向德国供应可再生氨。氨产自印度安得拉邦 Kakinada 项目二期——把一座天然气制氨/尿素工厂改造为碱性电解槽制氢，配抽水蓄能支撑的24小时绿电，2029年从 Kakinada 港首批发货。</p>
 <p><strong>为什么值得关注：</strong> H2Global 的"双拍卖"机制是氢能贸易的制度创新：政府机构高价长期锁定绿色产品、低价转卖给欧洲买家，用补贴补差价，帮早期项目拿到融资。这是亚洲绿氢/绿氨第一次以竞标价格大规模进入欧洲，标志"绿色分子"全球贸易正式从PPT走向提单。</p>
-<p>📖 <strong>名词解释</strong><br />
-- <strong>绿氨 / 绿氢</strong>：用可再生能源电力电解水制氢（绿氢），再合成氨（绿氨）；氨比氢好运输，是氢能的"快递包装"。<br />
-- <strong>电解槽</strong>：用电把水拆成氢气和氧气的设备，越大产氢越多。<br />
-- <strong>H2Global 双拍卖</strong>：德国政府一边招标"买绿氢"、一边招标"卖绿氢"，用财政补贴抹平绿色溢价，撮合市场。<br />
-- <strong>抽水蓄能</strong>：把水抽到高处存起来、用电时放水发电，最成熟的大规模"充电宝"。</p>
+<p>📖 <strong>名词解释</strong></p>
+<ul>
+<li><strong>绿氨 / 绿氢</strong>：用可再生能源电力电解水制氢（绿氢），再合成氨（绿氨）；氨比氢好运输，是氢能的"快递包装"。</li>
+<li><strong>电解槽</strong>：用电把水拆成氢气和氧气的设备，越大产氢越多。</li>
+<li><strong>H2Global 双拍卖</strong>：德国政府一边招标"买绿氢"、一边招标"卖绿氢"，用财政补贴抹平绿色溢价，撮合市场。</li>
+<li><strong>抽水蓄能</strong>：把水抽到高处存起来、用电时放水发电，最成熟的大规模"充电宝"。</li>
+</ul>
 <p>💡 <strong>一句话总结</strong>：德国政府当"中间商"补差价，印度绿氨2029年起航运往欧洲——全球氢能贸易的第一张大额订单落地了。</p>
 <p>🔗 来源：<a href="https://www.businesswire.com/news/home/20260930707955/en/AM-Green-Named-Winner-of-Asian-Lot-in-H2Global-Auction-Funded-by-German-Government">Business Wire（AM Green 官方新闻稿）</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>milestone</strong> 里程碑；搭配：a milestone deal（里程碑式交易）；例：The 10-year contract is a milestone for hydrogen trade.；名句："A journey of a thousand miles begins with a single step." —— 老子<br />
-- <strong>auction</strong> 拍卖；搭配：double auction（双拍卖）；例：Germany's double-auction model kick-started the trade.；名句："Going once, going twice, sold!" —— 拍卖师落槌语<br />
-- <strong>subsidy</strong> 补贴；搭配：bridge the gap with subsidies（用补贴补差价）；例：The scheme uses subsidies to bridge the green premium.；名句："There's no such thing as a free lunch." —— 弗里德曼<br />
-- <strong>lock in</strong> 锁定；搭配：lock in supply（锁定供应）；例：The 10-year deal locks in green ammonia supply.；名句："A bird in the hand is worth two in the bush." —— 谚语<br />
-- <strong>retrofit</strong> 改造；搭配：retrofit a gas plant（改造天然气工厂）；例：The project retrofits a gas-based ammonia plant with electrolyzers.；名句："Don't throw the baby out with the bathwater." —— 谚语<br />
-- <strong>electrolyzer</strong> 电解槽；搭配：alkaline electrolyzer（碱性电解槽）；例：The plant will use alkaline electrolyzers for green hydrogen.；名句："If there is magic on this planet, it is contained in water." —— Loren Eiseley<br />
-- <strong>premium</strong> 溢价；搭配：green premium（绿色溢价）；例：The auction bridges the green premium with public money.；名句："You get what you pay for." —— 谚语<br />
-- <strong>inaugural</strong> 首个的；搭配：inaugural shipment（首批发货）；例：The inaugural shipment is due in 2029.；名句："Well begun is half done." —— 谚语<br />
-- <strong>certify</strong> 认证；搭配：certified green（认证绿色）；例：Ammonia must be RFNBO-certified to enter the EU market.；名句："Trust, but verify." —— 谚语<br />
-- <strong>bankable</strong> 可融资的；搭配：bankable contract（可融资合同）；例：A decade-long contract makes the project bankable.；名句："My word is my bond." —— 谚语</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>milestone</strong> 里程碑；搭配：a milestone deal（里程碑式交易）；例：The 10-year contract is a milestone for hydrogen trade.；名句："A journey of a thousand miles begins with a single step." —— 老子</li>
+<li><strong>auction</strong> 拍卖；搭配：double auction（双拍卖）；例：Germany's double-auction model kick-started the trade.；名句："Going once, going twice, sold!" —— 拍卖师落槌语</li>
+<li><strong>subsidy</strong> 补贴；搭配：bridge the gap with subsidies（用补贴补差价）；例：The scheme uses subsidies to bridge the green premium.；名句："There's no such thing as a free lunch." —— 弗里德曼</li>
+<li><strong>lock in</strong> 锁定；搭配：lock in supply（锁定供应）；例：The 10-year deal locks in green ammonia supply.；名句："A bird in the hand is worth two in the bush." —— 谚语</li>
+<li><strong>retrofit</strong> 改造；搭配：retrofit a gas plant（改造天然气工厂）；例：The project retrofits a gas-based ammonia plant with electrolyzers.；名句："Don't throw the baby out with the bathwater." —— 谚语</li>
+<li><strong>electrolyzer</strong> 电解槽；搭配：alkaline electrolyzer（碱性电解槽）；例：The plant will use alkaline electrolyzers for green hydrogen.；名句："If there is magic on this planet, it is contained in water." —— Loren Eiseley</li>
+<li><strong>premium</strong> 溢价；搭配：green premium（绿色溢价）；例：The auction bridges the green premium with public money.；名句："You get what you pay for." —— 谚语</li>
+<li><strong>inaugural</strong> 首个的；搭配：inaugural shipment（首批发货）；例：The inaugural shipment is due in 2029.；名句："Well begun is half done." —— 谚语</li>
+<li><strong>certify</strong> 认证；搭配：certified green（认证绿色）；例：Ammonia must be RFNBO-certified to enter the EU market.；名句："Trust, but verify." —— 谚语</li>
+<li><strong>bankable</strong> 可融资的；搭配：bankable contract（可融资合同）；例：A decade-long contract makes the project bankable.；名句："My word is my bond." —— 谚语</li>
+</ul>
 <h3>4️⃣ 奥地利掏2亿欧元，给欧盟"氢银行"拍卖做本土加码</h3>
 <p><strong>发生了什么：</strong> 奥地利经济部宣布，为12月开标的欧洲氢银行（EHB）拍卖提供2亿欧元本国资金，通过欧盟"拍卖即服务"机制——没拿到欧盟补贴的奥地利项目，可转而拿本国补贴，按每公斤氢给钱、连续补10年。2024年奥地利已用同样机制掏了4亿欧元，支持了4个项目（171MW电解槽）。奥地利目标：2030年建成1GW电解槽，替代国内以化石能源为主的氢气生产。</p>
 <p><strong>为什么值得关注：</strong> 欧盟氢银行总盘子已从之前缩水超60%至5亿欧元，"欧盟出大头"指望不上了，各国自掏腰包加码成新趋势；按公斤补、连补10年的模式，给投资者吃下长期定心丸；氢能政策正式从"喊口号"进入"真金白银拼单"阶段。</p>
-<p>📖 <strong>名词解释</strong><br />
-- <strong>氢银行</strong>：欧盟用拍卖发氢能补贴的机制，价低者得，像"反向竞标"。<br />
-- <strong>电解槽</strong>：用电制氢的设备，1GW电解槽约年产十几万吨绿氢。<br />
-- <strong>绿氢 vs 灰氢</strong>：绿氢用电解水+绿电制成、近零碳；灰氢用天然气制成、碳排放高，是现在的主流。</p>
+<p>📖 <strong>名词解释</strong></p>
+<ul>
+<li><strong>氢银行</strong>：欧盟用拍卖发氢能补贴的机制，价低者得，像"反向竞标"。</li>
+<li><strong>电解槽</strong>：用电制氢的设备，1GW电解槽约年产十几万吨绿氢。</li>
+<li><strong>绿氢 vs 灰氢</strong>：绿氢用电解水+绿电制成、近零碳；灰氢用天然气制成、碳排放高，是现在的主流。</li>
+</ul>
 <p>💡 <strong>一句话总结</strong>：欧盟氢能"大锅饭"缩水，奥地利自己掏2亿欧元给本国项目"开小灶"——氢能补贴战进入各国拼单模式。</p>
 <p>🔗 来源：<a href="https://www.gasworld.com/story/austria-puts-forward-e200m-for-domestic-hydrogen-bank-auction/2261145.article/">gasworld</a></p>
-<p>📚 <strong>生词</strong><br />
-- <strong>top-up</strong> 追加；加码；搭配：national top-up（国家加码）；例：Austria added a €200m national top-up.；名句："Every little helps." —— 谚语<br />
-- <strong>slash</strong> 大幅削减；搭配：slash funding（削减资金）；例：Brussels slashed the hydrogen bank budget.；名句："Cut your coat according to your cloth." —— 谚语<br />
-- <strong>incentivize</strong> 激励；搭配：incentivize investment（激励投资）；例：Ten-year payments incentivize investors.；名句："Show me the incentive and I'll show you the outcome." —— 芒格<br />
-- <strong>certainty</strong> 确定性；搭配：long-term certainty（长期确定性）；例：The scheme offers long-term certainty.；名句："Nothing is certain except death and taxes." —— 富兰克林<br />
-- <strong>phase out</strong> 淘汰；搭配：phase out grey hydrogen（淘汰灰氢）；例：Austria aims to phase out fossil-based hydrogen by 2030.；名句："Out with the old, in with the new." —— 谚语<br />
-- <strong>earmark</strong> 指定拨款；搭配：earmark funds（指定资金用途）；例：€200 million was earmarked for domestic projects.；名句："Put your money where your mouth is." —— 谚语<br />
-- <strong>shortfall</strong> 缺口；搭配：funding shortfall（资金缺口）；例：National top-ups fill the EU funding shortfall.；名句："Mind the gap." —— 伦敦地铁提示语<br />
-- <strong>race</strong> 竞赛；搭配：subsidy race（补贴竞赛）；例：Hydrogen policy has become a subsidy race.；名句："Slow and steady wins the race." —— 伊索<br />
-- <strong>bidder</strong> 竞标者；搭配：lowest bidder（最低价竞标者）；例：The reverse auction rewards the lowest bidder.；名句："May the best man win." —— 谚语<br />
-- <strong>rollout</strong> 推出；搭配：rollout of subsidies（补贴落地）；例：The rollout of national top-ups accelerates.；名句："Actions speak louder than words." —— 谚语</p>
+<p>📚 <strong>生词</strong></p>
+<ul>
+<li><strong>top-up</strong> 追加；加码；搭配：national top-up（国家加码）；例：Austria added a €200m national top-up.；名句："Every little helps." —— 谚语</li>
+<li><strong>slash</strong> 大幅削减；搭配：slash funding（削减资金）；例：Brussels slashed the hydrogen bank budget.；名句："Cut your coat according to your cloth." —— 谚语</li>
+<li><strong>incentivize</strong> 激励；搭配：incentivize investment（激励投资）；例：Ten-year payments incentivize investors.；名句："Show me the incentive and I'll show you the outcome." —— 芒格</li>
+<li><strong>certainty</strong> 确定性；搭配：long-term certainty（长期确定性）；例：The scheme offers long-term certainty.；名句："Nothing is certain except death and taxes." —— 富兰克林</li>
+<li><strong>phase out</strong> 淘汰；搭配：phase out grey hydrogen（淘汰灰氢）；例：Austria aims to phase out fossil-based hydrogen by 2030.；名句："Out with the old, in with the new." —— 谚语</li>
+<li><strong>earmark</strong> 指定拨款；搭配：earmark funds（指定资金用途）；例：€200 million was earmarked for domestic projects.；名句："Put your money where your mouth is." —— 谚语</li>
+<li><strong>shortfall</strong> 缺口；搭配：funding shortfall（资金缺口）；例：National top-ups fill the EU funding shortfall.；名句："Mind the gap." —— 伦敦地铁提示语</li>
+<li><strong>race</strong> 竞赛；搭配：subsidy race（补贴竞赛）；例：Hydrogen policy has become a subsidy race.；名句："Slow and steady wins the race." —— 伊索</li>
+<li><strong>bidder</strong> 竞标者；搭配：lowest bidder（最低价竞标者）；例：The reverse auction rewards the lowest bidder.；名句："May the best man win." —— 谚语</li>
+<li><strong>rollout</strong> 推出；搭配：rollout of subsidies（补贴落地）；例：The rollout of national top-ups accelerates.；名句："Actions speak louder than words." —— 谚语</li>
+</ul>
 <hr />
 <p><em>今天的简报就到这里～ 祝 Recardo 假期愉快，吃好玩好，记得想我 💜</em></p>
 <div class="nav bottom"><a href="issue-006.html">⬅ 上一期（第6期）</a><a href="index.html">📚 回到目录</a><a href="issue-008.html">下一期（第8期）➡</a></div>
