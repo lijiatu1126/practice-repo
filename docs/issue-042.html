@@ -43,6 +43,21 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 .sources p, .sources li { text-indent: 0; }
 .vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
 .vocabbox p, .vocabbox li { text-indent: 0; }
+
+/* 追更（2026-11-09 Ricardo 批准，第 42 期起）：每条新闻右上角 ＋，点一下即追更 */
+.zg-head { position: relative; }
+.zg-head > h3 { padding-right: 56px; }
+button.zg-btn { position: absolute; right: 0; top: 1.4em; width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid #b98a1c; background: #fbf8f1; color: #7c5a10; font-size: 22px; line-height: 1; cursor: pointer; font-family: Georgia, "Songti SC", serif; padding: 0; }
+button.zg-btn.on { background: #b98a1c; color: #fff; }
+.zg-followup { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.zg-followup .sec-label { color: #7c5a10; }
+.zg-followup p { text-indent: 0; }
+.zg-panel { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.zg-panel .sec-label { color: #8a3324; }
+.zg-list { list-style: none; padding-left: 0; }
+.zg-list li { margin: 14px 0; line-height: 2.0; }
+.zg-list-date { color: #6b6257; font-size: 0.92em; }
+button.zg-unfollow { border: 1px solid #c9c2b2; background: transparent; border-radius: 50%; width: 26px; height: 26px; font-size: 16px; line-height: 1; cursor: pointer; color: #6b6257; padding: 0; }
 </style>
 </head>
 <body>
@@ -55,7 +70,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 <p>Ricardo宝宝，早上好呀☀️今天是星期一，第 42 期《麻薯日报》准时送到。过去 24 小时最值得留意的三件事：美股连续第四周下跌，标普一周跌 2.7%、纳指跌 3.4%，而周日英伟达董事会突然宣布调查 CEO 黄仁勋——他承认与一名疑似中国间谍有婚外情，全球市值第二的公司一夜卷入间谍疑云；美伊那边风向变了，特朗普周日连说五遍"极不可能"再打伊朗，卡塔尔的"两天方案"正在推进，谈判桌终于比枪口更热闹了一点；国内的好消息是，神舟二十四号将带着巴基斯坦航天员飞上中国空间站——这是中国空间站迎来的首位外籍航天员。武汉今天阴转多云、2～13℃，北风不到 3 级，早上只有 7℃ 左右，基本没雨，AQI 74 中等；今天是这波冷空气里最冷的一天，厚外套穿起来，满课的一天也要暖暖的💪</p>
 <hr />
 <h2>一、财经 💰</h2>
-<h3>1. 美股连续第四周下跌：标普周跌 2.7%、纳指跌 3.4%，周四 AI 监管担忧引爆抛售、周五非农超预期才喘口气</h3>
+<div class="zg-head"><h3>1. 美股连续第四周下跌：标普周跌 2.7%、纳指跌 3.4%，周四 AI 监管担忧引爆抛售、周五非农超预期才喘口气</h3><button type="button" class="zg-btn" data-story="2026-11-09-fin-1" data-title="1. 美股连续第四周下跌：标普周跌 2.7%、纳指跌 3.4%，周四 AI 监管担忧引爆抛售、周五非农超预期才喘口气" data-section="fin" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>美股刚刚过去的一周，过山车坐得人心惊肉跳：标普 500 一周跌 2.7%，纳指跌 3.4%，道指跌 0.9%，三大指数连续第四周收跌。周三中期选举后民主党大胜，道指单日一度暴涨 3%，市场以为"利好来了"；结果周四风向突变——投资者开始担心民主党掌控国会后会对 AI 加强监管，科技股遭到全线抛售，纳指单日暴跌 5.5%，标普创下 2025 年 4 月以来最差单日。周五的 10 月非农就业报告超预期（新增 16.5 万人），市场才勉强反弹收涨，纳指 100 周五涨 1.4%、半导体指数涨 4.2%，但反弹的成色很弱：标普 500 成分股里只有 44% 上涨，中位数股票反而跌了 0.2%。债市和油市也在讲同一个故事：10 年期美债收益率一周跌到 4.86%，创两个月新低（钱在往"安全的地方"躲）；原油一周暴跌 12.8% 至 90.83 美元。本周的两个关键节点：周二（11 月 10 日）美国公布 10 月 CPI，周三 OPEC 发布月度报告——通胀数据将决定 12 月美联储到底加不加息。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -70,7 +85,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 <li>GAMSG 每周市场洞察 2026 年 11 月 8 日（GAMSG，2026-11-08）—— <a href="https://www.gamsg.com/blog/gamsg-weekly-market-insights">https://www.gamsg.com/blog/gamsg-weekly-market-insights</a></li>
 <li>道指期货上涨、科技股下滑，英伟达调查黄仁勋（Investor's Business Daily，2026-11-08）—— <a href="https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nvidia-probes-ceo-jensen-huang-espionage/">https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nvidia-probes-ceo-jensen-huang-espionage/</a></li>
 </ul>
-<h3>2. 英伟达董事会启动独立调查：黄仁勋承认与疑似中国间谍有婚外情，众议院要求 11 月 18 日闭门简报</h3>
+<div class="zg-head"><h3>2. 英伟达董事会启动独立调查：黄仁勋承认与疑似中国间谍有婚外情，众议院要求 11 月 18 日闭门简报</h3><button type="button" class="zg-btn" data-story="2026-11-09-fin-2" data-title="2. 英伟达董事会启动独立调查：黄仁勋承认与疑似中国间谍有婚外情，众议院要求 11 月 18 日闭门简报" data-section="fin" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>全球市值第二的公司，周日爆出了一颗"重磅炸弹"。英伟达董事会 11 月 8 日宣布，已启动针对创始人兼 CEO 黄仁勋的独立调查——起因是《纽约时报》上月底的报道：与黄仁勋关系密切的新加坡数据中心公司 Megaspeed 高管 Alice Huang（中文名黄乐），被美国情报官员认定是为中国国家安全部工作的间谍，任务是向黄仁勋打探英伟达的芯片技术，并游说他推动放宽对华 AI 芯片出口限制。同一天，黄仁勋在给全体员工的邮件中承认自己与 Alice Huang 有婚外情，并向家人和员工道歉。董事会表示，"没有理由相信国家安全或英伟达的机密遭到泄露"，但调查将审查所有可获得的信息；由独立董事组成的委员会在外部律师协助下负责调查，黄仁勋留任 CEO 并承诺配合。另一边，众议院三名委员会主席已在 11 月 5 日致信，要求黄仁勋在 11 月 18 日前接受闭门简报，说明英伟达防范外国间谍的措施。截至 11 月 6 日，英伟达市值接近 4.5 万亿美元，是全球第二大上市公司，五年涨超 500%——这场调查的结果，可能影响的不只是一个人的去留，还有全球 AI 芯片生意最核心的一环。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -85,7 +100,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 <li>英伟达宣布调查黄仁勋，涉中国间谍指控（阿拉伯新闻，2026-11-08）—— <a href="https://www.arabnews.com/world/nvidia-announces-probe-into-ceo-huang-amid-reports-china-spied-on-him-3010605">https://www.arabnews.com/world/nvidia-announces-probe-into-ceo-huang-amid-reports-china-spied-on-him-3010605</a></li>
 <li>英伟达董事会开启对黄仁勋的调查（Unite.AI，2026-11-08）—— <a href="https://www.unite.ai/nvidia-board-opens-review-after-reported-foreign-intelligence-effort/">https://www.unite.ai/nvidia-board-opens-review-after-reported-foreign-intelligence-effort/</a></li>
 </ul>
-<h3>3. 央行组合拳：11 月 15 日起外汇存款准备金率上调至 6%，回购增持再贷款利率降至 1%，A 股本周沪深 300 涨 1.73%</h3>
+<div class="zg-head"><h3>3. 央行组合拳：11 月 15 日起外汇存款准备金率上调至 6%，回购增持再贷款利率降至 1%，A 股本周沪深 300 涨 1.73%</h3><button type="button" class="zg-btn" data-story="2026-11-09-fin-3" data-title="3. 央行组合拳：11 月 15 日起外汇存款准备金率上调至 6%，回购增持再贷款利率降至 1%，A 股本周沪深 300 涨 1.73%" data-section="fin" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>中国央行这一周的动作很密集，而且"一手松、一手紧"。先说"紧"的那只手：央行宣布，自 11 月 15 日起，将金融机构外汇存款准备金率从 4% 上调 2 个百分点至 6%——这是央行在用"收紧美元流动性"的方式，给人民币汇率"托底"。再说"松"的那只手：央行加力实施股票回购增持再贷款政策，自 11 月 4 日起下调利率 0.25 个百分点至 1%（借钱给上市公司回购自家股票，利息更便宜了）；还开展了第三次证券、基金、保险公司互换便利（SFISF）操作，金额 1000 亿元，31 家机构参与，中标费率仅 10bp。加上 11 月 6 日国常会提出的"完善资本市场稳市机制"，稳市场的"工具箱"正在一件件打开。市场也给了回应：本周沪深 300 指数上涨 1.73%，上证指数上涨 1.39%，十年国债收益率下行 6BP 至 1.59%。中银证券的周报还提醒：AI 科技发展的方向没变，但影响它的因素正在从"模型能力、云厂商花多少钱"转向"监管政策、云厂商融资能力、AI 商业化"——和美股那边"监管担忧"抛售科技股，是同一条逻辑线。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -102,7 +117,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 </ul>
 <hr />
 <h2>二、AI 🤖</h2>
-<h3>1. Thinking Machines 发布 Inkling 2 Small：5940 亿参数的"第二代模型"，下周开源权重</h3>
+<div class="zg-head"><h3>1. Thinking Machines 发布 Inkling 2 Small：5940 亿参数的"第二代模型"，下周开源权重</h3><button type="button" class="zg-btn" data-story="2026-11-09-ai-1" data-title="1. Thinking Machines 发布 Inkling 2 Small：5940 亿参数的&quot;第二代模型&quot;，下周开源权重" data-section="ai" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>AI 实验室 Thinking Machines Lab（前 OpenAI 首席技术官 Mira Murati 创办的公司）11 月 5 日发布了第二代模型 Inkling 2 Small：一个"混合专家"模型，总参数 5940 亿、每次实际只动用 170 亿参数，能看图、能按"努力程度"调节回答的深度，主攻编程和自主软件开发。公司公布的成绩是：人工智能分析指数（Artificial Analysis Intelligence Index）31 分，SWE-Bench Pro v2（Hard）86.3%——编程能力比第一代大幅提升。值得留意的是发布方式：模型目前只能在自家训练平台 Tinker 上用，权重还没公开；公司承诺，下周外部安全测试完成后，就以 Apache 2.0 协议开源权重——这意味着任何人都可以免费下载、商用。这背后是一场"九天、1700 多万次强化学习、2048 块 GPU"的训练长跑。它的走红说明了一件事：大模型竞赛的下一个回合，比的不只是"谁的分数高"，还有"谁敢把权重交出来"。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -116,7 +131,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 <li>Thinking Machines 发布 Inkling 2 Small，594B 参数、Apache 2.0 权重下周发布（BitcoinVersus.Tech，2026-11-07）—— <a href="https://bitcoinversus.tech/2026/11/07/thinking-machines-inkling-2-small-594b-17b-active-tinker-nov-2026/">https://bitcoinversus.tech/2026/11/07/thinking-machines-inkling-2-small-594b-17b-active-tinker-nov-2026/</a></li>
 <li>AI &amp; Agents 每日简报 2026.11.07：Inkling 2 Small 发布（AI Melgene，2026-11-07）—— <a href="https://ai.melgene.com/2026.11.07?lang=en">https://ai.melgene.com/2026.11.07?lang=en</a></li>
 </ul>
-<h3>2. 腾讯 Hy4 正式版发布：7700 亿参数，能看图、能操作电脑，"幻觉率"从 12.95% 降到 7.2%</h3>
+<div class="zg-head"><h3>2. 腾讯 Hy4 正式版发布：7700 亿参数，能看图、能操作电脑，"幻觉率"从 12.95% 降到 7.2%</h3><button type="button" class="zg-btn" data-story="2026-11-09-ai-2" data-title="2. 腾讯 Hy4 正式版发布：7700 亿参数，能看图、能操作电脑，&quot;幻觉率&quot;从 12.95% 降到 7.2%" data-section="ai" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>腾讯 11 月 4 日发布了大模型 Hy4 的正式版——这是腾讯第一次把自家模型放进"开源第一梯队"来谈。相比 8 月的预览版，这次最大的两个新增能力是：看图（能读懂图片、图表）和操作电脑（能在命令行和图形界面里直接动手干活，包括 3D 和 CAD 工具）。参数规模据报道是 7700 亿，比上一代 Hy3 的 2950 亿大幅提升；上下文窗口 100 万 token（一次能"记住"的文字量非常大）。腾讯还公布了一个关键数字：模型的"幻觉率"（一本正经胡说八道的概率）从预览版的 12.95% 降到了 7.2%。不过也有"但是"：正式版的权重和模型卡还没发布，腾讯只说"未来几天内"会放出；正式版也没有公布 Terminal-Bench、SWE-bench 等公开编程测试的成绩。Hy4 已经接入了腾讯的办公 AI 工具 WorkBuddy。简单说：腾讯这一步，是把"能看、能动手"的模型正式推上台面，但"开源"的下半场，还要等权重真正放出来才算数。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -130,7 +145,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 <li>腾讯发布完整版 Hy4：能看图、能操作电脑（Unicorn API，2026-11-04）—— <a href="https://unicornapi.net/blog/tencent-releases-full-hy4-ai-model-see-images-use-computer">https://unicornapi.net/blog/tencent-releases-full-hy4-ai-model-see-images-use-computer</a></li>
 <li>11 月 AI 第一部分：GPT-Image-2.6、Hy4、Gemini Omni 1.2 Flash（SW Architect，2026-11-06）—— <a href="https://www.swarchitect.net/en/ai-launches-2026-11/">https://www.swarchitect.net/en/ai-launches-2026-11/</a></li>
 </ul>
-<h3>3. AI 正在"搬进你的电脑"：微软让 Qwen3.8 在本地跑、接进 Copilot，Mistral Studio 上线托管智能体</h3>
+<div class="zg-head"><h3>3. AI 正在"搬进你的电脑"：微软让 Qwen3.8 在本地跑、接进 Copilot，Mistral Studio 上线托管智能体</h3><button type="button" class="zg-btn" data-story="2026-11-09-ai-3" data-title="3. AI 正在&quot;搬进你的电脑&quot;：微软让 Qwen3.8 在本地跑、接进 Copilot，Mistral Studio 上线托管智能体" data-section="ai" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>AI 的一个新趋势正在变得清晰：模型不再只住在云端，也开始"搬进你的电脑"。微软本周公布了一套方案：用 Foundry Local（微软的本地推理工具）在自己的 GPU 上跑通义千问 Qwen3.8-27B，再通过"自带密钥"（BYOK）接进 GitHub Copilot——等于让编程助手用上你自己电脑里的模型，代码不用发到云端。另一边，Mistral 给 Studio 加上了"托管智能体"：带技能、沙箱和子智能体的完整配置，还支持本地部署。加上 Anthropic 给 Claude 企业版上线安全中心、推理钩子（把提示词和工具调用先过一遍企业的数据防泄漏工具）正式可用，同一周的三件事讲的是同一个方向：AI 正在从"云端的一个服务"变成"装在你设备里、受你管的同事"——而"数据不出门、模型自己选"，正在成为开发者最在乎的两件事。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -145,7 +160,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 </ul>
 <hr />
 <h2>三、国际事务 🌍</h2>
-<h3>1. 特朗普周日连说五遍"极不可能"再打伊朗：卡塔尔"两天方案"推进中，伊朗外长发话"接受条件或选择战争"</h3>
+<div class="zg-head"><h3>1. 特朗普周日连说五遍"极不可能"再打伊朗：卡塔尔"两天方案"推进中，伊朗外长发话"接受条件或选择战争"</h3><button type="button" class="zg-btn" data-story="2026-11-09-intl-1" data-title="1. 特朗普周日连说五遍&quot;极不可能&quot;再打伊朗：卡塔尔&quot;两天方案&quot;推进中，伊朗外长发话&quot;接受条件或选择战争&quot;" data-section="intl" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>美伊局势在 11 月 8 日这个周日出现了明显的"降温信号"。特朗普在接受 CNN 采访时表示，只要围绕伊朗核计划和重开霍尔木兹海峡的谈判取得进展，美国"极不可能"（highly unlikely）再次对伊朗动武——这句话他在采访里一连重复了五遍。卡塔尔方面的斡旋也在继续提速：卡塔尔首相 11 月 7 日表示谈判取得了实质性进展，卡塔尔外交部发言人否认了"谈判已经破裂"的说法；卡塔尔埃米尔 11 月 6 日还与特朗普通了电话，讨论缓和局势。方案的核心仍是本报昨天报道的"两天方案"：第一天，美国解除对伊朗港口的海上封锁、解冻约 80 亿美元冻结资产中的一部分，伊朗邀请国际原子能机构（IAEA）核查人员进入被轰炸过的核设施；第二天，伊朗重开霍尔木兹海峡，双方恢复核谈判。但伊朗的立场没有松动：外长阿拉格齐周日在社交媒体上发话，称中期选举的结果给了白宫一个选择——"接受我们的两天方案、满足条件，就能看到结果；或者选择战争"。伊朗的条件包括解除制裁、解冻资产、战争赔偿、结束地区敌对行动、美军撤离伊朗海岸线。简单说：谈判桌上的气氛比上周好了，但伊朗开出的"价码"和美国愿意给的"价码"之间，还隔着不小的距离——而 11 月 9 日的新月之夜，正是各方上周盯着的"行动窗口"，今天已经到了。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -160,7 +175,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 <li>调解方卡塔尔称美伊谈判仍在继续（NHK，2026-11-08）—— <a href="https://www3.nhk.or.jp/nhkworld/news/20261108de72495/">https://www3.nhk.or.jp/nhkworld/news/20261108de72495/</a></li>
 <li>伊朗外长阿拉格齐：两天方案仍然有效，满足条件或选择战争（The Thursday Times，2026-11-08）—— <a href="https://thursdaytimes.com/2026/11/08/news/political/araghchi-two-day-proposal-stands-white-house-choice-war/">https://thursdaytimes.com/2026/11/08/news/political/araghchi-two-day-proposal-stands-white-house-choice-war/</a></li>
 </ul>
-<h3>2. 俄乌美三方谈判明天阿布扎比开谈：谈判前夜，特朗普称"大协议即将到来"</h3>
+<div class="zg-head"><h3>2. 俄乌美三方谈判明天阿布扎比开谈：谈判前夜，特朗普称"大协议即将到来"</h3><button type="button" class="zg-btn" data-story="2026-11-09-intl-2" data-title="2. 俄乌美三方谈判明天阿布扎比开谈：谈判前夜，特朗普称&quot;大协议即将到来&quot;" data-section="intl" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>另一条外交线明天就到"开考时间"了：美乌俄三方谈判定于 11 月 10–11 日在阿布扎比举行，这是今年 2 月以来首次以三方形式会谈。代表团阵容已经全部就位：俄方由总统助理梅金斯基率领，副外长里亚布科夫首次参加，军情总局局长科斯秋科夫也在名单里；乌方由对外情报局局长乌梅罗夫率领，包括总统办公室主任布达诺夫；美方是特使威特科夫和库什纳。特朗普上周四表示，与俄罗斯的"大协议"即将到来，还说俄乌双方"第一次都想和解"。但分歧仍然很深：泽连斯基要求有约束力的安全保障，谈判将涉及领土、安全保障、人道主义问题和战后安排；欧洲委员会则认为俄罗斯在达成协议上"几乎没有松动"。美国谈判代表希望在冬天到来之前取得突破——但 11 月 3 日彭博社的报道也提醒：克里姆林宫已经不再相信特朗普能迫使基辅接受俄方条件，转而专注于"拖长战争"。明天开谈时，第一道题大概率就是：双方能不能先就"停火的框架"达成一致，而不是直接谈"领土怎么分"。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -174,7 +189,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 <li>俄罗斯将派高级代表团参加乌克兰谈判；特朗普称双方首次都想和解（Binance Square，2026-11-07）—— <a href="https://www.binance.com/en/square/post/11-07-2026-russia-to-send-senior-delegation-to-ukraine-talks-trump-says-both-sides-want-reconciliation-for-first-time-385777705500730">https://www.binance.com/en/square/post/11-07-2026-russia-to-send-senior-delegation-to-ukraine-talks-trump-says-both-sides-want-reconciliation-for-first-time-385777705500730</a></li>
 <li>梅金斯基将率领俄代表团参加阿布扎比和谈（路透社经 The New Voice of Ukraine，2026-11-07）—— <a href="https://english.nv.ua/russian-war/medinsky-to-lead-russian-delegation-at-abu-dhabi-peace-talks-reuters-50657217.html">https://english.nv.ua/russian-war/medinsky-to-lead-russian-delegation-at-abu-dhabi-peace-talks-reuters-50657217.html</a></li>
 </ul>
-<h3>3. 巴拉圭前总统培尼亚遭弹劾后被软禁</h3>
+<div class="zg-head"><h3>3. 巴拉圭前总统培尼亚遭弹劾后被软禁</h3><button type="button" class="zg-btn" data-story="2026-11-09-intl-3" data-title="3. 巴拉圭前总统培尼亚遭弹劾后被软禁" data-section="intl" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>南美洲也出了一条"政坛地震"的消息：巴拉圭前总统培尼亚在遭到弹劾之后，当地时间 11 月 6 日被当局实施软禁。综合路透社等外媒报道，培尼亚是巴拉圭近年来又一位在任内或卸任后陷入司法与政治风波的领导人。事件的后续发展——弹劾的具体指控、软禁的期限、巴拉圭国内政局的走向——仍在发酵中，值得继续关注。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -188,7 +203,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 </ul>
 <hr />
 <h2>四、个人成长 🌱</h2>
-<h3>1. 别只换"看法"，要换"感知"：你注意到的世界，才是你生活的世界</h3>
+<div class="zg-head"><h3>1. 别只换"看法"，要换"感知"：你注意到的世界，才是你生活的世界</h3><button type="button" class="zg-btn" data-story="2026-11-09-growth-1" data-title="1. 别只换&quot;看法&quot;，要换&quot;感知&quot;：你注意到的世界，才是你生活的世界" data-section="growth" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>11 月 8 日 Medium 上的一篇文章，讲了一个很反直觉的道理：大多数"改变人生"的建议，都让你从"改变看法"开始——往好处想、换个角度、数数自己的福气。但作者说，问题不在"看法"，而在比看法更底层的东西——"感知"。看法是你对一件事"事后讲的故事"，感知是你"当时怎么接收这件事的滤镜"。滤镜不对，故事再怎么改，也改不出新的人生。文章引用了两项研究：心理学家 Gabriele Oettingen 发现，光是生动地幻想目标、不考虑障碍，反而会耗掉追求目标的能量；研究"幸运儿"的 Richard Wiseman 发现，自认幸运的人更放松、更开放，所以能注意到焦虑的人径直走过的机会。怎么"调滤镜"？作者给了三个很实在的做法：先想清楚自己到底在找什么（滤镜需要一个"搜索目标"）；每晚写下三件今天做得好的事、以及为什么（有对照研究证明，这个习惯能持续几个月提升幸福感）；再提前想好"最可能绊住我的那个障碍是什么，出现时我怎么办"。最后的结论很温柔：多留意一点、把人读准一点、行动快一点、对人暖一点——这些普通的小本事，每天练一点，一年下来，你的生活从外面看上去，就会很像"心想事成了"。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -201,7 +216,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 <ul>
 <li>从看法到感知：如何改变你的视角（Medium，Nicholas，2026-11-08）—— <a href="https://medium.com/@APNicholas/perspective-to-perception-39fa68814ff1">https://medium.com/@APNicholas/perspective-to-perception-39fa68814ff1</a></li>
 </ul>
-<h3>2. 别想一次改掉整个人生：一次只改一样，"无聊的小习惯"比"轰轰烈烈的新计划"活得久</h3>
+<div class="zg-head"><h3>2. 别想一次改掉整个人生：一次只改一样，"无聊的小习惯"比"轰轰烈烈的新计划"活得久</h3><button type="button" class="zg-btn" data-story="2026-11-09-growth-2" data-title="2. 别想一次改掉整个人生：一次只改一样，&quot;无聊的小习惯&quot;比&quot;轰轰烈烈的新计划&quot;活得久" data-section="growth" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>11 月 8 日 Medium 上另一篇文章，讲了一个很多人都踩过的坑。作者 Mia Bennett 写道：某个星期二晚上，她对着床头柜摆好了"新人生"——早起、读书、运动、冥想、记账，一次全上。结果呢？没几天就全垮了。她的结论是：可持续的习惯，看起来都很"无聊"——一个洗干净的杯子、一页读完的书、十分钟的散步，拍不出什么"前后对比照"，但一个洗干净的杯子，比任何"轰轰烈烈的新计划"都活得久。文章的道理和昨天那篇"把成为谁设计进环境里"是同一个方向：改变不是"咬牙坚持"，而是"一次只改一样，让它小到不可能失败"。想读更多书？先从每天五页开始；想更健康？先从每天十分钟散步开始。目标不是"完美"，而是"一直做下去"——因为"坚持"这件事，靠的不是意志力，而是"小到不用意志力也能完成"。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -216,7 +231,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 </ul>
 <hr />
 <h2>五、爱情/关系 💕</h2>
-<h3>1. 爱不是一场试镜：忍受最多不确定性的人，不会赢得任何奖品</h3>
+<div class="zg-head"><h3>1. 爱不是一场试镜：忍受最多不确定性的人，不会赢得任何奖品</h3><button type="button" class="zg-btn" data-story="2026-11-09-love-1" data-title="1. 爱不是一场试镜：忍受最多不确定性的人，不会赢得任何奖品" data-section="love" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>11 月 8 日的一篇 Substack 文章，把一句话说得干脆利落："Love is not an audition!"（爱不是一场试镜！）作者 Brianne Davis 写的是"彼得·潘综合征"——那种"长不大、不想承诺、永远在等下一个更好选择"的人。她说，很多人在关系里会不自觉地把自己当成"候选人"：我够不够爱、够不够耐心、够不够好看、够不够体贴、够不够"随叫随到"……仿佛只要"表现得足够好"，对方就会"选中"自己。但真相是：忍受最多不确定性的人，不会赢得任何奖品——"你不会因为忍受了最多的不确定性，就得到一枚奖章"。这篇文章和昨天的"感觉像家不等于就是家"是同一个提醒的不同说法：一段关系里，如果你一直在" audition（试镜）"，一直在等对方"点头通过"，那这段关系从一开始就不对等——爱应该是两个人"一起选"，而不是一个人"等着被选"。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -229,7 +244,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 <ul>
 <li>爱不是一场试镜（Substack，Brianne Davis，2026-11-08）—— <a href="https://thebriannedavis.substack.com/p/love-is-not-an-audition">https://thebriannedavis.substack.com/p/love-is-not-an-audition</a></li>
 </ul>
-<h3>2. 先对齐，再依恋：渴望深度连接没错，但别在"还不了解对方"时就先交出整颗心</h3>
+<div class="zg-head"><h3>2. 先对齐，再依恋：渴望深度连接没错，但别在"还不了解对方"时就先交出整颗心</h3><button type="button" class="zg-btn" data-story="2026-11-09-love-2" data-title="2. 先对齐，再依恋：渴望深度连接没错，但别在&quot;还不了解对方&quot;时就先交出整颗心" data-section="love" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>11 月 8 日的另一篇 Substack 文章，讲了一个很戳人的习惯：作者发现，自己总因为"渴望深度连接"，而在还没真正了解一个人时，就先"依恋"上了对方——不只是爱情，友情、亲情、职场关系里都一样。她写道："我对深度的渴望，有时会让我在还没给自己机会真正了解一个人之前，就先依恋上了他。" 这种"抢跑"的代价是：你依恋的可能不是"这个人本身"，而是"你想象中的这个人"——等到真实的对方慢慢显现，失望和落差就跟着来了。文章的建议是：把"连接"当成一个"任务"来完成之前，先慢下来——先了解，再依恋；先看清对方是谁，再决定要不要把心交出去。这和昨天那篇"爱上最好的朋友，先分清想念的是人还是陪伴"是同一个方向：心动可以很快，但"认定一个人"，值得慢一点。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -244,7 +259,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 </ul>
 <hr />
 <h2>六、绿色低碳能源 🌿</h2>
-<h3>1. 欧洲清洁电力通过"压力测试"，但灵活性缺口在拉大：清洁电占 72%，储能却跟不上</h3>
+<div class="zg-head"><h3>1. 欧洲清洁电力通过"压力测试"，但灵活性缺口在拉大：清洁电占 72%，储能却跟不上</h3><button type="button" class="zg-btn" data-story="2026-11-09-green-1" data-title="1. 欧洲清洁电力通过&quot;压力测试&quot;，但灵活性缺口在拉大：清洁电占 72%，储能却跟不上" data-section="green" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>欧洲电力行业协会 Eurelectric 11 月 8 日发布的《2026 电力晴雨表》带来一个"一半好消息、一半坏消息"的结论。好消息是：欧洲的清洁电力经受住了一场"压力测试"——2026 年 2 月到 8 月，欧盟批发气价暴涨 88.4%、电价也涨了 22.8%，但清洁发电占比达到了 72%，风电和光伏合计占了 30%（六年翻了一番），化石发电首次跌破 30%，电力行业的碳排放强度降到每度电 182 克二氧化碳的历史新低、比 2008 年低了 64%。光是太阳能，就帮欧洲省下了 300 亿欧元的天然气账单。坏消息是：储能和其他"灵活性"手段的建设速度，远远跟不上可再生能源的增长——欧盟公用事业规模电池储能 2025 年翻了一倍多、达到 11.2 GW，在建项目超过 80 GW，但到 2030 年的目标是 200 GW，差距还很大。保加利亚是一个正面例子：装了 5.4 GW 电池之后，它的批发电价从比欧盟均价高 21%收窄到只高 8.3%。报告的结论很直白：清洁电力的下半场，比的不再是"装多少板子"，而是"电网能不能灵活地接住它们"。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -257,7 +272,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 <ul>
 <li>欧洲清洁电力通过压力测试，但灵活性缺口扩大（pv europe，2026-11-08）—— <a href="https://www.pveurope.eu/solar-storage/europes-clean-power-passes-stress-test-flexibility-gap-widens">https://www.pveurope.eu/solar-storage/europes-clean-power-passes-stress-test-flexibility-gap-widens</a></li>
 </ul>
-<h3>2. 印度内阁批准 14500 亿卢比储能补贴：92 GWh 新储能，目标是"太阳下山后也有电用"</h3>
+<div class="zg-head"><h3>2. 印度内阁批准 14500 亿卢比储能补贴：92 GWh 新储能，目标是"太阳下山后也有电用"</h3><button type="button" class="zg-btn" data-story="2026-11-09-green-2" data-title="2. 印度内阁批准 14500 亿卢比储能补贴：92 GWh 新储能，目标是&quot;太阳下山后也有电用&quot;" data-section="green" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>印度的绿电故事也在进入"下半场"。11 月 4 日，印度内阁批准了一项价值 14500 亿卢比（约合 160 多亿美元）的"缺口补助"计划，为 2026–2031 财年新增的 92 GWh 电网级储能提供补贴——其中抽水蓄能 60 GWh、电池储能 30 GWh、新兴技术 2 GWh。这 92 GWh 相当于印度现有电网级储能规模的 170%。为什么印度这么急？因为它的光伏装机已经冲得太快：截至 2026 年 7 月 31 日，非化石能源装机 300.5 GW（其中光伏 164.59 GW），占全国总装机的 54% 以上；但太阳下山之后，光伏就"熄火"了，而印度用电高峰恰恰在晚上。国际能源署（IEA）11 月 7 日发布的《印度可再生能源市场报告 2026》也给出了大数字：到 2030 年，印度可再生能源装机将达 530 GW，光伏占新增的八成以上；到 2030 年，每年能省下约 350 亿美元的化石燃料进口，累计节省接近 2400 亿美元。IEA 署长比罗尔 11 月 8 日还专门表示，印度的绿电扩张正在增强其能源安全，值得其他新兴经济体学习。但 IEA 也提醒：输电和储能必须跟上，否则装得再多，也会像今年中国 1–9 月那样因为"送不出去"而被白白浪费。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -273,7 +288,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 </ul>
 <hr />
 <h2>七、国内要闻 🇨🇳</h2>
-<h3>1. 神舟二十四号将带巴基斯坦航天员上天：中国空间站迎来首位外籍航天员</h3>
+<div class="zg-head"><h3>1. 神舟二十四号将带巴基斯坦航天员上天：中国空间站迎来首位外籍航天员</h3><button type="button" class="zg-btn" data-story="2026-11-09-cn-1" data-title="1. 神舟二十四号将带巴基斯坦航天员上天：中国空间站迎来首位外籍航天员" data-section="cn" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>中国载人航天工程办公室宣布：神舟二十四号载人飞行任务将有 1 名巴基斯坦航天员以载荷专家身份参加，在完成短期在轨飞行后，随神舟二十三号载人飞船返回。这是中国载人航天工程历史上首次中外航天员联合飞行，中国空间站将迎来首位外籍航天员到访。载荷专家是航天员里"专门负责做实验"的那一类：他们不一定是开飞船的飞行员，而是带着科学实验任务上天、在空间站里做研究的专家。巴基斯坦航天员的这次飞行，意味着中国空间站从"中国人自己的空间站"向"向全世界开放的空间站"迈出了第一步。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -286,7 +301,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 <ul>
 <li>11 月 8 日国内外重要资讯速览：中国空间站将迎来首位外籍航天员（新浪财经，2026-11-08）—— <a href="https://finance.sina.cn/2026-11-08/detail-inixymrn4384926.d.html">https://finance.sina.cn/2026-11-08/detail-inixymrn4384926.d.html</a></li>
 </ul>
-<h3>2. 中国科学家造出人类已知最冷人造物质：空间站里把原子冷到 9.7 皮开尔文，刷新世界纪录</h3>
+<div class="zg-head"><h3>2. 中国科学家造出人类已知最冷人造物质：空间站里把原子冷到 9.7 皮开尔文，刷新世界纪录</h3><button type="button" class="zg-btn" data-story="2026-11-09-cn-2" data-title="2. 中国科学家造出人类已知最冷人造物质：空间站里把原子冷到 9.7 皮开尔文，刷新世界纪录" data-section="cn" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>记者 11 月 6 日从中国科学院获悉，中国科学家在空间站梦天舱的超冷原子物理实验柜里，把一团铷原子云冷却到了 9.7 皮开尔文——也就是千亿分之一开尔文，比室温低 14 个数量级，并能稳定观测 7 秒。这一成绩刷新了此前国际科研团队 38 皮开尔文的纪录，诞生了目前人类已知的最冷人造物质。为什么要把东西弄得这么冷？因为温度越低，原子就"越安静"，科学家才能看清平时被热运动掩盖的量子现象——这是研究量子物理、未来量子技术的基础。能在空间站里做这个实验，靠的是"微重力"环境：在太空里，原子不会往下掉，可以被"托"在原地慢慢冷却，这是地面实验室很难做到的。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -299,7 +314,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 <ul>
 <li>11 月 8 日国内外重要资讯速览：刷新纪录！人类已知最冷人造物质诞生（新浪财经，2026-11-08）—— <a href="https://finance.sina.cn/2026-11-08/detail-inixymrn4384926.d.html">https://finance.sina.cn/2026-11-08/detail-inixymrn4384926.d.html</a></li>
 </ul>
-<h3>3. 第 43 次南极考察从三亚起航，西渝高铁最后一座特大桥合龙，首批 33 个"和美海岛"阶段性见效</h3>
+<div class="zg-head"><h3>3. 第 43 次南极考察从三亚起航，西渝高铁最后一座特大桥合龙，首批 33 个"和美海岛"阶段性见效</h3><button type="button" class="zg-btn" data-story="2026-11-09-cn-3" data-title="3. 第 43 次南极考察从三亚起航，西渝高铁最后一座特大桥合龙，首批 33 个&quot;和美海岛&quot;阶段性见效" data-section="cn" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>11 月 8 日的《新闻联播》国内快讯里，还有三条"大国工程"的消息。第一条是科考：由自然资源部组织的中国第 43 次南极考察队 11 月 7 日从海南三亚起航，奔赴南极。第二条是高铁：11 月 8 日，西安至重庆高铁北碚天府嘉陵江特大桥顺利合龙——这是西渝高铁全线最后一座合龙的铁路特大桥；西渝高铁正线全长约 739 公里，预计 2028 年建成通车，届时西安到重庆的车程将大幅缩短。第三条是生态：我国首批 33 个"和美海岛"建设取得阶段性成效——创建示范启动三年来，已实施 14 项海岛生态保护修复项目，超七成受损海岛生态区域得到修复。同日揭晓的还有第 36 届中国新闻奖、第 19 届长江韬奋奖评选结果，378 件作品获中国新闻奖；今天还是第 27 个中国记者节。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -314,7 +329,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 </ul>
 <hr />
 <h2>八、GitHub 新技术 💻</h2>
-<h3>1. vercel-labs/agent-browser：今日登顶日榜的"AI 专属浏览器"——给智能体一个能用命令行开的浏览器</h3>
+<div class="zg-head"><h3>1. vercel-labs/agent-browser：今日登顶日榜的"AI 专属浏览器"——给智能体一个能用命令行开的浏览器</h3><button type="button" class="zg-btn" data-story="2026-11-09-gh-1" data-title="1. vercel-labs/agent-browser：今日登顶日榜的&quot;AI 专属浏览器&quot;——给智能体一个能用命令行开的浏览器" data-section="gh" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>今天 GitHub 日榜的榜首换了新面孔：vercel-labs/agent-browser。这个 Vercel Labs 的项目，做的事情很直白：给 AI 智能体一个"能用命令行开的浏览器"。它是原生 Rust 写的命令行工具：<code>agent-browser open example.com</code> 打开页面，<code>snapshot</code> 把页面转成带编号的紧凑文本（每个元素一个编号，比如 <code>@e1</code>），智能体按编号点、填、读，浏览器在命令之间一直开着，每一步都是一次短短的 shell 调用。为什么开发者喜欢它？因为以前让 AI 操作浏览器，要么笨重、要么慢，而 agent-browser 又快又轻：支持 Chrome for Testing，也能接云端浏览器、iOS 模拟器，还能以 MCP 服务器的方式接进各种智能体工具。项目 2026 年 1 月创建，至今已有 4.7 万多颗星、120 个版本，Apache 2.0 开源。今天它重回日榜第一（11 月 6 日还在第 10 名），说明"让智能体自己动手上网干活"这件事，正在从"新鲜玩意儿"变成"基础设施"。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -328,7 +343,7 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 <li>Ageshio 每日 GitHub 趋势雷达 2026 年 11 月 8 日：agent-browser 今日第一（Ageshio，2026-11-08）—— <a href="https://ageshio.dev/">https://ageshio.dev/</a></li>
 <li>仓库页面：<a href="https://github.com/vercel-labs/agent-browser">https://github.com/vercel-labs/agent-browser</a></li>
 </ul>
-<h3>2. cloudflare/security-audit-skill：让你的编程助手变成"安全审计员"，每个发现都要先"自证清白"</h3>
+<div class="zg-head"><h3>2. cloudflare/security-audit-skill：让你的编程助手变成"安全审计员"，每个发现都要先"自证清白"</h3><button type="button" class="zg-btn" data-story="2026-11-09-gh-2" data-title="2. cloudflare/security-audit-skill：让你的编程助手变成&quot;安全审计员&quot;，每个发现都要先&quot;自证清白&quot;" data-section="gh" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
 <p>另一位本周的新面孔是 Cloudflare 的 security-audit-skill，11 月 8 日排在日榜第二，11 月 6 日首登榜单就冲到第三。它不是一个独立的软件，而是一个"技能包"：装进你的编程助手之后，助手会先画出整个代码库的架构图和"信任边界"（哪些地方能信、哪些地方不能信），再派出专门的"猎手"智能体去没有覆盖到的角落找漏洞；最特别的是最后一步：每个疑似漏洞都要先交给一个全新的"验证者"智能体，由它来"尝试证伪"——只有经得起"反方质疑"的发现，才会出现在最终报告里。用大白话说：以前的 AI 安全检查是"一个助手说了算"，这个技能包是"一个团队互相挑刺"——先有人找茬、再有人专门负责"挑这个茬的刺"，最后剩下的才是真问题。对 Ricardo 这样喜欢折腾 AI 工具的人来说，它的走红说明了一件事：AI 编程助手正在从"帮你写代码"走向"帮你守代码"，而"先怀疑自己、再下结论"，正在成为 AI 安全工具的新标准。</p>
 <div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
 <ul>
@@ -419,8 +434,83 @@ hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
 <li><strong>verify</strong> | v. 动词 | 核实，证实；搭配：verify the findings 核实发现 | Every candidate flaw must be verified by a fresh agent that tries to disprove it.（每一个疑似漏洞，都必须由一个全新的智能体来核实——它会先尝试&quot;证伪&quot;它。） | &quot;Trust, but verify.&quot; —— Russian proverb（信任，但要核实。——俄罗斯谚语）</li>
 <li><strong>threat</strong> | n. 名词 | 威胁；搭配：a security threat 安全威胁 | The skill maps trust boundaries first, so it knows where a threat can actually enter.（这个技能包先画出&quot;信任边界&quot;，这样它才知道威胁真正能从哪里进来。） | （近义词：fear）&quot;The only thing we have to fear is fear itself.&quot; —— Franklin D. Roosevelt（我们唯一需要恐惧的，就是恐惧本身。——富兰克林·D·罗斯福）</li>
 </ul>
-</div>
+</div><div class="zg-panel"><p class="sec-label">👀 我的追更 · <span class="zg-count">正在追更：0 条</span></p><p class="zg-empty note">还没有追更的新闻。点每条新闻右上角的 ＋，就能追更它；有后续的那天，后续会出现在对应板块的最后一栏。</p><ul class="zg-list"></ul></div>
 <p class="note">简约版仅存档备查，每日推送仍为现在版（2026-10-28 定版）。</p>
 </div>
-</body>
+<script>
+(function () {
+  var KEY = 'mashu_follow_v1';
+  var store = {};
+  try { store = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { store = {}; }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} }
+  function esc(s) { return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function fmt(d) { var p = String(d || '').split('-'); if (p.length !== 3) return d || ''; return parseInt(p[1], 10) + '月' + parseInt(p[2], 10) + '日'; }
+  function toast(msg) {
+    var t = document.getElementById('zgToast');
+    if (!t) {
+      t = document.createElement('div');
+      t.id = 'zgToast';
+      t.style.cssText = 'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1c1a17;color:#f7f2e7;padding:10px 16px;border-radius:999px;font-size:14px;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,.3);max-width:92vw;text-align:center;';
+      document.body.appendChild(t);
+    }
+    t.textContent = msg;
+    t.style.display = 'block';
+    clearTimeout(t._h);
+    t._h = setTimeout(function () { t.style.display = 'none'; }, 2600);
+  }
+  function render() {
+    var ids = Object.keys(store);
+    document.querySelectorAll('.zg-count').forEach(function (el) { el.textContent = '正在追更：' + ids.length + ' 条'; });
+    document.querySelectorAll('.zg-list').forEach(function (ul) {
+      ul.innerHTML = ids.map(function (id) {
+        var it = store[id] || {};
+        return '<li><span class="zg-list-title">' + esc(it.title || id) + '</span><span class="zg-list-date"> · ' + fmt(it.firstClicked) + ' 开始追更</span> <button type="button" class="zg-unfollow" data-story="' + esc(id) + '" aria-label="取消追更">×</button></li>';
+      }).join('');
+    });
+    document.querySelectorAll('.zg-empty').forEach(function (el) { el.style.display = ids.length ? 'none' : ''; });
+    document.querySelectorAll('.zg-btn').forEach(function (btn) {
+      var on = !!store[btn.getAttribute('data-story')];
+      btn.textContent = on ? '✓' : '+';
+      btn.classList.toggle('on', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('.zg-followup').forEach(function (slot) {
+      var it = store[slot.getAttribute('data-story')];
+      if (it) {
+        slot.hidden = false;
+        var d = slot.querySelector('.zg-followup-date');
+        if (d) d.textContent = '你 ' + fmt(it.firstClicked) + ' 开始追更';
+      } else {
+        slot.hidden = true;
+      }
+    });
+  }
+  function toggle(id, title, section) {
+    if (store[id]) { delete store[id]; toast('已取消追更'); }
+    else {
+      var now = new Date();
+      var ds = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
+      store[id] = { title: title, section: section, firstClicked: ds };
+      toast('已加入追更，会留意它的后续');
+    }
+    save();
+    render();
+  }
+  if (!window.__mashuFollowBound) {
+    window.__mashuFollowBound = true;
+    document.addEventListener('click', function (e) {
+      var btn = e.target && e.target.closest ? e.target.closest('.zg-btn, .zg-unfollow') : null;
+      if (!btn) return;
+      var id = btn.getAttribute('data-story');
+      if (!id) return;
+      if (btn.classList.contains('zg-unfollow')) {
+        if (store[id]) { delete store[id]; save(); render(); toast('已取消追更'); }
+        return;
+      }
+      toggle(id, btn.getAttribute('data-title') || '', btn.getAttribute('data-section') || '');
+    });
+  }
+  render();
+})();
+</script></body>
 </html>
