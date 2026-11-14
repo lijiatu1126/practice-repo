@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《麻薯日报》第47期 · news 精简版 · 2026-11-14</title>
+<style>
+:root { --glass-op: .50; --glass-blur: 13px; --basket-op: .50; --basket-blur: 11px; --panel-op: .86; --panel-blur: 18px; }
+/* 《麻薯日报》报纸版式（2026-10-23 Ricardo 要求：像真正的报纸） */
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       margin: 0; line-height: 2.0;
+       font-size: 17.5px; letter-spacing: 0.01em;
+       color: #1c1a17;
+       background:
+         radial-gradient(1200px 600px at 20% -10%, rgba(255,220,170,.65), transparent 60%),
+         radial-gradient(900px 500px at 85% 10%, rgba(140,190,255,.45), transparent 60%),
+         radial-gradient(800px 500px at 80% 40%, rgba(255,150,180,.40), transparent 60%),
+         radial-gradient(800px 500px at 10% 70%, rgba(180,160,255,.35), transparent 60%),
+         linear-gradient(180deg, #f5ecd9, #efe3c8 45%, #e8d9b8); }
+.sheet { position: relative; z-index: 1; max-width: 780px; margin: 20px auto;
+         padding: 48px 48px 64px; min-height: 100vh; border-radius: 28px;
+         background: linear-gradient(rgba(251,248,241,var(--glass-op)), rgba(251,248,241,var(--glass-op))) padding-box,
+                     linear-gradient(135deg, rgba(255,255,255,.85), rgba(255,255,255,.25) 35%, rgba(170,200,255,.55) 65%, rgba(255,190,210,.55)) border-box;
+         border: 1.5px solid transparent;
+         -webkit-backdrop-filter: blur(var(--glass-blur, 24px)) saturate(1.8);
+         backdrop-filter: blur(var(--glass-blur, 24px)) saturate(1.8);
+         box-shadow: inset 0 1px 0 rgba(255,255,255,.9), inset 0 0 0 1px rgba(255,255,255,.30), inset 0 -1px 0 rgba(255,255,255,.3), 0 24px 48px rgba(150,170,220,.20), 0 8px 24px rgba(60,45,20,.10); }
+.hang { position: fixed; inset: 0; top: 0; z-index: 3; pointer-events: none; overflow: hidden; }
+.hanger { pointer-events: none; cursor: grab; touch-action: none; will-change: transform; }
+.hanger.dragging { cursor: grabbing; }
+.hanger .swing { pointer-events: none; }
+/* 根因修法（2026-10-27 20:29 实测）：原来牌子盒子本身接手势，盒子是从页面顶到牌子底的大矩形，
+   同侧后来的长线牌子盒子盖住了前面大牌子的区域，点大牌子实际抓到长线牌子，拖动方向也就对不上。
+   现在只有线和牌子本体接手势，点哪张牌子就是哪张，盒子空白处不再误触。 */
+.hanger .thread, .hanger .orb { pointer-events: auto; touch-action: none; }
+.hanger, .hanger .swing, .hanger .thread, .hanger .orb, .hanger .orb img { touch-action: none; -webkit-touch-callout: none; user-select: none; -webkit-user-select: none; }
+.hanger { position: absolute; top: 0; animation: drop 1s cubic-bezier(.25,.9,.35,1.15) both; }
+.hanger.broken { animation: none !important; }
+.hanger.broken .swing { animation: none !important; transform: none !important; }
+.hanger.broken .thread { display: none !important; }
+#gyroRestore { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 200; padding: 12px 20px; border-radius: 999px; background: #1c1a17; color: #fff; font-size: 15px; border: none; box-shadow: 0 8px 24px rgba(0,0,0,.3); display: none; cursor: pointer; }
+#gyroRestore.show { display: block; }
+.swing { display: flex; flex-direction: column; align-items: center;
+         transform-origin: 50% 0; animation: sway 4.4s ease-in-out infinite alternate; }
+.thread { position: relative; width: 3px; border-radius: 2px;
+          background: linear-gradient(180deg, #c9a15a, #d98a94); }
+.orb { position: relative; padding: 4px; border-radius: 24px;
+       background: linear-gradient(135deg, #ffd9a0, #ff9fb6 45%, #b79cff 75%, #8ec9ff);
+       box-shadow: 0 12px 30px rgba(230,140,170,.35), 0 5px 14px rgba(60,45,20,.25); }
+.orb .bubble { position: absolute; left: 50%; bottom: calc(100% + 10px); transform: translateX(-50%) scale(.6); transform-origin: 50% 100%; opacity: 0; pointer-events: none; z-index: 100; min-width: 110px; max-width: 200px; padding: 8px 12px; border-radius: 16px; border: 2px solid #e0d5ae; background: #fffdf5; box-shadow: 0 8px 20px rgba(60,45,20,.25); color: #5a3d2e; font-size: 14px; line-height: 1.5; text-align: center; transition: transform .25s cubic-bezier(.34,1.56,.64,1), opacity .25s; }
+.orb .bubble::after { content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); border: 8px solid transparent; border-top-color: #fffdf5; }
+.orb .bubble.show { transform: translateX(-50%) scale(1); opacity: 1; }
+.orb::before { content: ""; position: absolute; inset: -16px; border-radius: 50%; z-index: -1;
+       background: radial-gradient(circle, rgba(255,190,210,.5), rgba(183,156,255,.25) 55%, transparent 70%);
+       filter: blur(6px); }
+.orb img { display: block; width: 100%; height: auto; border-radius: 20px; }
+@keyframes drop { from { transform: translateY(-110%); } to { transform: translateY(0); } }
+@keyframes sway { from { transform: rotate(-3.4deg); } to { transform: rotate(3.4deg); } }
+@media (max-width: 900px) {
+  /* 手机六张全显示（2026-10-28 Ricardo 反馈：手机上看不到六个麻薯）：
+     手机没有左右空白，旧版只留 2 张、其余隐藏，而且留下的 2 张还会被报纸盖住。
+     新版把 6 张排成顶部一排，报纸顶部多留 108px 空位，牌子挂在空位里、不压新闻正文；
+     线长/牌子宽用 !important 锁死，拖动后也不会弹回桌面版的长线。 */
+  body .sheet { padding: 180px 32px 48px; width: calc(100% - 24px); margin: 20px auto 12px; border-radius: 24px; }
+  body .newsbody { padding: 24px 24px 20px; width: 100%; max-width: 100%; box-sizing: border-box; overflow: hidden; }
+  body .newsbody p { line-height: 1.95; margin: 0 0 13px 0; padding: 0; text-indent: 2em; }
+  body .newsbody .sec-label { text-indent: 0; margin: 0 0 12px 0; }
+  .hang { z-index: 2; }
+  .hanger { display: block; }
+  .hanger:nth-child(1) { left: 2% !important; }
+  .hanger:nth-child(2) { left: 18% !important; }
+  .hanger:nth-child(3) { left: 34% !important; }
+  .hanger:nth-child(4) { left: 50% !important; }
+  .hanger:nth-child(5) { left: 66% !important; }
+  .hanger:nth-child(6) { left: 82% !important; }
+  .hanger .orb { width: 52px !important; }
+  .hanger .thread { height: 48px !important; }
+}
+p { margin: 1.1em 0; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em;
+             margin: 0 0 6px; padding: 0; border: none; }
+blockquote p { margin: 4px 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 2.4em; border: none; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 2.6em; margin-bottom: 20px; padding-top: 1.4em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
+a:visited { color: #6d4fc2; }
+ul li, ol li { margin: 13px 0; line-height: 1.95; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.2em 0; }
+img { max-width: 100%; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+td, th { border: 1px solid #c9c2b2; padding: 6px 10px; }
+th { background: #efe9db; }
+.intro { font-size: 1.02em; }
+.toc li { margin: 14px 0; }
+.toc a { color: #33302a; text-decoration: none; border-bottom: 1px solid #ddd5bd; padding-bottom: 2px; }
+.toc a:visited { color: #33302a; }
+.toc a:hover { color: #8a3324; border-bottom-color: #8a3324; }
+body.dark .toc a { color: #ddd6c4; border-bottom-color: #3a362e; }
+body.dark .toc a:visited { color: #ddd6c4; }
+body.dark .toc a:hover { color: #e0a458; border-bottom-color: #e0a458; }
+.wish { background: rgba(244,239,224,var(--glass-op)); border: 1px solid rgba(255,255,255,.55); border-radius: 20px;
+        -webkit-backdrop-filter: blur(var(--glass-blur, 12px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 12px)) saturate(1.8);
+        padding: 16px 20px 8px; margin: 1.6em 0; }
+.wish .sec-label { color: #8a3324; }
+body.dark .wish { background: rgba(38,34,25,var(--glass-op)); border-color: #4a4232; }
+.note { color: #6b6257; font-size: 0.92em; }
+.nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
+       border-bottom: 2px solid #1c1a17; padding-bottom: 10px; margin-bottom: 20px;
+       font-size: 0.95em; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.nav.bottom { border-bottom: none; border-top: 2px solid #1c1a17; padding-top: 10px; margin-top: 32px; }
+body.spa .page { display: none; }
+body.spa .page.active { display: block; }
+a.navbtn { text-decoration: none; }
+.bgbar { text-align: right; margin-bottom: 10px; }
+#bgToggle { background: #1c1a17;
+  color: #f7f2e7; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
+  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+body.dark { background: #0d0c0a; color: #e8e2d5; }
+body.dark .sheet { background: rgba(22,21,19,var(--glass-op));
+  border: 1.5px solid rgba(255,255,255,.18);
+  -webkit-backdrop-filter: blur(var(--glass-blur, 18px)) saturate(1.3); backdrop-filter: blur(var(--glass-blur, 18px)) saturate(1.3);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 24px 48px rgba(0,0,0,.45); }
+body.dark h1 { border-top-color: #e8e2d5; border-bottom-color: #e8e2d5; }
+body.dark blockquote { color: #a39a89; }
+body.dark h2 { background: #e8e2d5; color: #161513; }
+body.dark h3 { border-top-color: #3a362e; }
+body.dark a { color: #8ab8ff; }
+body.dark a:visited { color: #c4a8ff; }
+body.dark li > strong:first-child { color: #e0a458; }
+body.dark hr { border-top-color: #e8e2d5; }
+body.dark .note { color: #a39a89; }
+body.dark .nav { border-color: #e8e2d5; }
+body.dark td, body.dark th { border-color: #444; }
+body.dark th { background: #262219; }
+.summary { background:rgba(237,243,253,var(--glass-op)); border-left:4px solid #1757c2; border-radius:20px; padding:20px 24px; margin:1.4em 0;
+.newsbody { background: rgba(250,208,222,0.85); border-left: 4px solid #b98a1c; border-radius: 20px; padding: 24px 28px 20px; margin: 1.8em 0; box-sizing: border-box; width: 100%; max-width: 100%; overflow: hidden; overflow-wrap: break-word; word-break: break-word; -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); }
+.newsbody p { line-height: 1.95; margin: 0 0 13px 0; padding: 0; box-sizing: border-box; max-width: 100%; overflow-wrap: break-word; word-break: break-word; text-align: justify; text-justify: inter-ideograph; text-indent: 2em; }
+.newsbody p:last-child { margin-bottom: 0; }
+.newsbody .sec-label { color: #7c5a10; text-indent: 0; text-align: left; margin: 0 0 12px 0; }
+body.dark .newsbody { background: rgba(90,47,66,0.85); border-left-color: #b98a1c; -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); }
+body.dark .newsbody .sec-label { color: #d9b45a; }
+
+           -webkit-backdrop-filter: blur(var(--glass-blur, 12px)) saturate(1.3); backdrop-filter: blur(var(--glass-blur, 12px)) saturate(1.3); }
+.blessing { text-align: center; color: #8a3324; font-size: 1.07em; font-weight: 600;
+            letter-spacing: 0.04em; margin: 0 0 16px; }
+.sticker { display: block; margin: 14px auto 6px; width: 148px; max-width: 42vw; height: auto;
+           border: 6px solid #fff; border-radius: 20px; background: #fff;
+           box-shadow: 0 5px 16px rgba(60,45,20,.28); }
+.sticker.foot { width: 128px; margin-top: 28px; }
+.sec-label { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+             font-weight: 700; margin: 0 0 6px; font-size: 0.98em; letter-spacing: 0.03em; }
+.glossary { background: rgba(244,239,224,var(--glass-op)); border-left: 4px solid #b98a1c; border-radius: 20px;
+            -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8);
+            padding: 20px 24px 14px; margin: 1.8em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.vocabbox { background: rgba(253,252,248,var(--glass-op)); border: 1px solid rgba(255,255,255,.55); border-radius: 20px;
+            -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8);
+            padding: 20px 24px 14px; margin: 1.8em 0; }
+.vocabbox .sec-label { color: #1757c2; }
+.vocabbox ul { list-style: none; padding-left: 0; margin: 6px 0 4px; }
+li.vocab { padding: 10px 0 12px; border-bottom: 1px dashed #ddd5bd; margin: 0; }
+li.vocab:last-child { border-bottom: none; }
+.vcnt { color: #b7791f; font-size: 0.85em; font-weight: 400; }
+button.vadd { width: 36px; height: 36px; border-radius: 12px; border: 1.5px solid #b98a1c;
+  color: #7c5a10; background: #f4efe0; font-size: 22px; line-height: 1; cursor: pointer; margin-left: 8px;
+  box-shadow: 0 1px 3px rgba(60,45,20,.25); font-family: Georgia, "Songti SC", serif; }
+button.vadd.added { background: #8a3324; border-color: #8a3324; color: #fff; }
+#basketBtn { position: fixed; right: 24px; top: 62%; z-index: 50; width: 68px; height: 68px;
+  border-radius: 50%; background: #f4ead0; border: 1.5px solid #c9a15a;
+  box-shadow: 0 0 18px rgba(60,45,20,.15); font-size: 28px; cursor: grab; touch-action: none; }
+#basketBtn.bounce { animation: basketBounce .6s ease; }
+@keyframes basketBounce { 0% { box-shadow: 0 4px 14px rgba(60,45,20,.28); } 30% { box-shadow: 0 0 0 10px rgba(255,223,107,.55), 0 4px 14px rgba(60,45,20,.28); } 100% { box-shadow: 0 4px 14px rgba(60,45,20,.28); } }
+#vocabPanel { position: fixed; right: 12px; top: 200px; width: min(360px, 92vw); height: min(900px, calc(100vh - 220px)); height: min(900px, calc(100dvh - 220px)); box-sizing: border-box; overflow: hidden; flex-direction: column; touch-action: auto;
+  background: #fbf8f1; color: #1c1a17; border: 1px solid #d8d2c4; border-radius: 24px;
+  box-shadow: 0 0 28px rgba(60,45,20,.12); font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+  z-index: 60; padding: 0 18px 16px; display: none; font-size: 18px; line-height: 1.8;
+  flex-direction: column; will-change: transform; font-size: 17px; line-height: 1.7; }
+#vocabPanel.open { display: flex; }
+#vocabPanel.dragging { box-shadow: 0 20px 44px rgba(60,45,20,.40); cursor: grabbing; }
+#vocabListView { display: flex; flex-direction: column; min-height: 0; flex: 1; overflow: hidden; }
+#vocabList { overflow-y: scroll; flex: 1; min-height: 0; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; touch-action: pan-y; }
+#vocabPager { flex-shrink: 0; margin-top: auto; display: flex; gap: 8px; align-items: center; justify-content: center; flex-wrap: wrap;
+  margin-top: 8px; padding: 6px 10px; border-radius: 999px;
+  background: #f4ead0;
+  border: 1px solid #d8d2c4; box-shadow: none; }
+#vocabPager button { border: 1.5px solid #cbb98a; background: #fffdf5; border-radius: 50%;
+  width: 26px; height: 26px; padding: 0; cursor: pointer; font-size: 14px; font-weight: 700; color: #7c5a10;
+  box-shadow: 0 2px 5px rgba(60,45,20,.25); }
+#vocabPager button:active { transform: translateY(2px); box-shadow: 0 1px 2px rgba(60,45,20,.25); }
+#vocabPager button.cur { background: #8a3324; color: #fff; border-color: #8a3324; box-shadow: 0 3px 8px rgba(138,51,36,.45); }
+#vocabPager .pgmeta { font-size: 11px; color: #8a7a5a; width: 100%; text-align: center; }
+#vocabDrag { touch-action: none; height: 36px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; cursor: grab; }
+#vocabDrag .grip { width: 64px; height: 7px; border-radius: 999px; background: #d8c9a3; box-shadow: inset 0 1px 2px rgba(0,0,0,.15); }
+#basketBtn { touch-action: manipulation; }
+@media (max-width: 900px) { #basketBtn { right: 12px; top: auto; bottom: 24px; } }
+#vocabPanel .vitem { display: flex; justify-content: space-between; gap: 10px; align-items: center;
+  padding: 7px 12px; margin: 5px 0; border: 1px solid #e0d5ae; border-radius: 16px;
+  background: #f7f2e7; box-shadow: none; cursor: pointer; overflow: hidden; }
+#vocabPanel .vitem span { min-width: 0; word-break: break-word; overflow-wrap: anywhere; }
+#vocabPanel .vitem button { flex-shrink: 0; background: transparent; border: none; box-shadow: none; -webkit-appearance: none; appearance: none; color: #8a7a5a; }
+#vocabPanel .vitem b { font-size: 20px; }
+#vocabPanel .vdetail { display: none; flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+#vocabPanel .vdetail.show { display: block; }
+.flytrail { position: fixed; z-index: 98; pointer-events: none; line-height: 1;
+  transition: opacity .6s, transform .6s; will-change: transform, opacity; }
+.fly { will-change: transform, left, top; }
+button.syn { border: 1px solid #b98a1c; background: #f4efe0; color: #7c5a10; border-radius: 16px;
+  padding: 2px 10px; margin: 0 6px 6px 0; cursor: pointer; font-size: 17px; }
+body.dark button.syn { background: #33302a; color: #e0c98a; }
+.fly { position: fixed; z-index: 99; background: #ffdf6b; border: 1.5px solid #e6a817;
+  border-radius: 20px; padding: 8px 16px; font-size: 20px; font-weight: 700; pointer-events: none;
+  transition: all .8s cubic-bezier(.2,.7,.3,1); }
+body.dark #vocabPanel { background: #2b2b2b; color: #f0ede6; border-color: #444; }
+body.dark #vocabPager { background: linear-gradient(180deg, #33302a, #262219); border-color: #444; }
+body.dark #vocabPager button { background: #2b2b2b; color: #e0c98a; border-color: #555; }
+body.dark #vocabPanel .vitem { background: #33302a; border-color: #444; }
+body.dark #vocabPanel .vitem { border-bottom-color: #444; }
+body.dark #vocabPanel .vitem button { background: transparent; border: none; box-shadow: none; color: #a39a89; }
+.vword { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         font-weight: 800; font-size: 1.12em; color: #1757c2; margin-right: 6px; }
+.vmean { font-weight: 700; }
+.vrow { font-size: 0.93em; color: #4a463e; margin-top: 3px; line-height: 1.8; }
+.vlabel { display: inline-block; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
+          padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
+.vquote { color: #6b6257; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources .sec-label { color: #5a554c; }
+.sources ul { margin: 4px 0; }
+h3::before { content: "▍"; color: #8a3324; }
+body.dark .blessing { color: #e0a458; }
+body.dark .glossary { background: rgba(38,34,25,var(--glass-op)); }
+body.dark .vocabbox { background: rgba(29,27,22,var(--glass-op)); border-color: #3a362a; }
+body.dark li.vocab { border-bottom-color: #3a362a; }
+body.dark .vword { color: #8ab8ff; }
+body.dark .vrow { color: #c9c2b2; }
+body.dark .vlabel { background: #33302a; color: #e0c98a; }
+body.dark .vquote { color: #a39a89; }
+body.dark .summary { background: rgba(28,39,51,var(--glass-op)); border-left-color: #8ab8ff; }
+body.dark .sources { color: #a39a89; }
+body.dark h3::before { color: #e0a458; }
+body.dark #bgToggle { background: #e8e2d5; color: #161513; }
+/* 3D 触感（2026-10-28 Ricardo 要求：摸得到的立体感） */
+h1 { text-shadow: 0 1px 0 #fffdf5, 0 3px 6px rgba(60,45,20,.22); }
+.t3d { transform-style: preserve-3d; transition: transform .18s ease, box-shadow .18s ease; will-change: transform; }
+.t3d-press { transform: perspective(800px) translateZ(0) scale(.97) !important; box-shadow: 0 2px 8px rgba(60,45,20,.25) !important; }
+/* 顶部回弹（2026-10-28 Ricardo 要求：手机上碰到顶部就弹回来） */
+
+/* 玻璃交互（2026-10-28 Ricardo 要求：所有需要点击、按压的地方都要有玻璃磨砂光影） */
+#bgToggle, #settingsBtn, a.navbtn, .nav a, .toc a, button.vadd, button.syn, #vocabPager button, #vocabClose, #vocabBack, #vAddFromDetail, #basketBtn, #vocabPanel .vitem {
+  position: relative; overflow: hidden;
+  background: repeating-radial-gradient(circle at 28% 18%, rgba(255,255,255,.13) 0 1px, transparent 1px 9px), linear-gradient(135deg, rgba(255,255,255,var(--glass-op)), rgba(255,255,255,.12) 45%, rgba(255,255,255,.03));
+  -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8);
+  border: 1px solid rgba(255,255,255,.7);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.95), inset 0 0 0 1px rgba(255,255,255,.25), inset 0 -1px 0 rgba(255,255,255,.3), 0 8px 24px rgba(60,45,20,.18);
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+#bgToggle { color: #1c1a17; }
+/* 生词篮子修复（2026-10-28）：上一版玻璃规则把 #basketBtn 的 fixed 改成了 relative，
+   篮子就从右下角固定位掉进了文档流、被报纸盖住看不见了。这里立即恢复 fixed。 */
+#basketBtn { position: fixed !important; right: 24px; top: 62%; bottom: auto; z-index: 50; background: rgba(251,248,241,var(--basket-op, var(--glass-op))) !important; }
+@media (max-width: 900px) { #basketBtn { right: 12px; top: auto; bottom: 24px; } }
+#bgToggle::before, #settingsBtn::before, a.navbtn::before, .nav a::before, .toc a::before, button.vadd::before, button.syn::before, #vocabPager button::before, #vocabClose::before, #vocabBack::before, #vAddFromDetail::before, #basketBtn::before, #vocabPanel .vitem::before {
+  content: ""; position: absolute; top: -4px; left: 15%; right: 15%; height: 14px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.9), transparent 70%);
+}
+#glassBar::after { content: ""; position: absolute; left: 8%; right: 8%; bottom: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.9), transparent); pointer-events: none; }
+#bgToggle::after, #settingsBtn::after, a.navbtn::after, .nav a::after, .toc a::after, button.vadd::after, button.syn::after, #vocabPager button::after, #vocabClose::after, #vocabBack::after, #vAddFromDetail::after, #basketBtn::after, #vocabPanel .vitem::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .2s;
+  background: radial-gradient(120px circle at var(--gx, 50%) var(--gy, 50%), rgba(255,255,255,.65), transparent 60%);
+}
+#bgToggle:hover::after, #settingsBtn:hover::after, a.navbtn:hover::after, .nav a:hover::after, .toc a:hover::after, button.vadd:hover::after, button.syn:hover::after, #vocabPager button:hover::after, #vocabClose:hover::after, #vocabBack:hover::after, #vAddFromDetail:hover::after, #basketBtn:hover::after, #vocabPanel .vitem:hover::after,
+#bgToggle:active::after, #settingsBtn:active::after, a.navbtn:active::after, .nav a:active::after, .toc a:active::after, button.vadd:active::after, button.syn:active::after, #vocabPager button:active::after, #vocabClose:active::after, #vocabBack:active::after, #vAddFromDetail:active::after, #basketBtn:active::after, #vocabPanel .vitem:active::after { opacity: 1; }
+#bgToggle:active, #settingsBtn:active, a.navbtn:active, .nav a:active, .toc a:active, button.vadd:active, button.syn:active, #vocabPager button:active, #vocabClose:active, #vocabBack:active, #vAddFromDetail:active, #basketBtn:active, #vocabPanel .vitem:active {
+  transform: scale(.94); filter: brightness(1.08);
+  box-shadow: inset 0 2px 8px rgba(60,45,20,.18), inset 0 1px 0 rgba(255,255,255,.7), 0 2px 8px rgba(60,45,20,.15);
+}
+#vocabPanel { background: rgba(251,248,241,var(--panel-op, .86)); -webkit-backdrop-filter: blur(var(--panel-blur, 18px)) saturate(1.8); backdrop-filter: blur(var(--panel-blur, 18px)) saturate(1.8);
+  border: 1px solid rgba(255,255,255,.65); box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 20px 44px rgba(60,45,20,.25); }
+#vocabPager { background: rgba(255,255,255,var(--panel-op, .86));
+  -webkit-backdrop-filter: blur(var(--panel-blur, 18px)) saturate(1.8); backdrop-filter: blur(var(--panel-blur, 18px)) saturate(1.8);
+  border: 1px solid rgba(255,255,255,.65); }
+#vocabPanel .vitem { background: rgba(255,255,255,var(--basket-op, var(--glass-op))); }
+#vocabClose { border-radius: 50%; }
+.vpos { font-size: 0.82em; color: #8a3324; background: rgba(138,51,36,.08); border: 1px solid rgba(138,51,36,.25); border-radius: 999px; padding: 1px 7px; margin: 0 4px; white-space: nowrap; }
+body.dark .vpos { color: #e0a899; background: rgba(224,168,153,.12); border-color: rgba(224,168,153,.35); }
+#vocabBack { border-radius: 16px; color: #1c1a17; }
+#vAddFromDetail { border-radius: 16px; color: #7c5a10; }
+body.dark #vocabBack { color: #f0ede6; }
+body.dark #vAddFromDetail { color: #e0c98a; }
+body.dark #bgToggle, body.dark #settingsBtn, body.dark a.navbtn, body.dark .nav a, body.dark .toc a, body.dark button.vadd, body.dark button.syn, body.dark #vocabPager button, body.dark #vocabClose, body.dark #vocabBack, body.dark #vAddFromDetail, body.dark #basketBtn, body.dark #vocabPanel .vitem {
+  background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2) 45%, rgba(50,48,42,.1));
+  border-color: rgba(255,255,255,.3); color: #f0ede6;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 8px 24px rgba(0,0,0,.35);
+}
+body.dark #vocabPanel { background: rgba(43,43,43,var(--panel-op, .86)); border-color: rgba(255,255,255,.25); background-image: none; }
+body.dark #vocabPanel .vitem, body.dark #vocabPager button, body.dark button.syn { background: #33302a; background-image: none; }
+body:not(.dark) #vocabPanel .vitem { background: transparent; background-image: none; border: none; box-shadow: none; }
+body:not(.dark) #vocabPanel .vitem::before, body:not(.dark) #vocabPanel .vitem::after { display: none; }
+a:active { background: rgba(255,255,255,.45); border-radius: 6px; box-shadow: inset 0 1px 0 rgba(255,255,255,.8); }
+
+/* 目录每期 + 上/下一期/回目录（2026-10-28 Ricardo 要求）：圆角玻璃卡，底色贴近报纸底色不跳 */
+.toc { list-style: none; padding-left: 0; }
+.toc li { margin: 12px 0; }
+.toc a { display: block; border-radius: 16px; padding: 12px 16px; border-bottom: none; text-decoration: none; color: #33302a;
+  background: linear-gradient(135deg, rgba(251,248,241,var(--glass-op)), rgba(251,248,241,.12) 45%, rgba(251,248,241,.03));
+  border: 1px solid rgba(255,255,255,.55);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.65), 0 4px 16px rgba(60,45,20,.10); }
+.toc a:visited { color: #33302a; }
+.toc a:hover { color: #8a3324; }
+body.dark .toc a { background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2)); color: #ddd6c4; border-color: rgba(255,255,255,.25); }
+a.navbtn, .nav a { border-radius: 999px; padding: 8px 16px; display: inline-block; text-decoration: none;
+  background: linear-gradient(135deg, rgba(251,248,241,var(--glass-op)), rgba(251,248,241,.12) 45%, rgba(251,248,241,.03));
+  border: 1px solid rgba(255,255,255,.55);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.65), 0 4px 16px rgba(60,45,20,.10); }
+body.dark a.navbtn, body.dark .nav a { background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2)); border-color: rgba(255,255,255,.25); }
+
+/* 毛玻璃透明度调节（2026-10-28 Ricardo 要求：像 iOS Liquid Glass 那样，放到最顶部） */
+#glassBar { position: relative; z-index: 90; display: flex; align-items: center; gap: 10px; padding: 10px 16px; margin-bottom: 20px; border-radius: 999px; box-sizing: border-box;
+  background: repeating-radial-gradient(circle at 28% 18%, rgba(255,255,255,.10) 0 1px, transparent 1px 9px), rgba(255,255,255,var(--glass-op)); -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8);
+  border: 1px solid rgba(255,255,255,.7); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 8px 24px rgba(60,45,20,.18); }
+#glassBar .g-ico { font-size: 18px; line-height: 1; flex-shrink: 0; opacity: .7; }
+#glassBar .g-ico.tint { opacity: 1; }
+#glassBar .g-label { font-size: 13px; color: #6b6257; flex-shrink: 0; font-family: -apple-system, "PingFang SC", sans-serif; }
+#glassRange { flex: 1; -webkit-appearance: none; appearance: none; height: 6px; border-radius: 999px; background: #ddd5bd; outline: none; cursor: pointer; min-width: 0; touch-action: pan-x; }
+.swing, .orb, .thread, #glassBar, #basketBtn { will-change: transform; }
+#glassRange::-webkit-slider-thumb { -webkit-appearance: none; width: 44px; height: 28px; border-radius: 999px; background: #fff; border: 1px solid rgba(0,0,0,.08); box-shadow: 0 2px 8px rgba(0,0,0,.25); cursor: pointer; }
+#glassRange::-moz-range-thumb { width: 44px; height: 28px; border-radius: 999px; background: #fff; border: 1px solid rgba(0,0,0,.08); box-shadow: 0 2px 8px rgba(0,0,0,.25); cursor: pointer; }
+#glassVal { font-size: 13px; color: #6b6257; min-width: 38px; text-align: right; flex-shrink: 0; font-family: -apple-system, "PingFang SC", sans-serif; }
+.glass-note { text-align: center; color: #6b6257; font-size: 13px; margin: 0 0 16px; }
+body.dark #glassBar { background: rgba(40,38,32,var(--glass-op)); border-color: rgba(255,255,255,.3); }
+#glassBar #bgToggle { flex-shrink: 0; width: 36px; height: 36px; padding: 0; border-radius: 50%; font-size: 18px; line-height: 1; background: #1c1a17; color: #f7f2e7; border: none; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+body.dark #glassBar #bgToggle { background: #e8e2d5; color: #161513; }
+body.dark #glassBar .g-label, body.dark #glassVal, body.dark .glass-note { color: #a39a89; }
+body.glass-clear .sheet { box-shadow: inset 0 1px 0 rgba(255,255,255,1), inset 0 0 0 1px rgba(255,255,255,.55), inset 0 -1px 0 rgba(255,255,255,.6), 0 24px 48px rgba(150,170,220,.12), 0 8px 24px rgba(60,45,20,.06); }
+body.glass-clear #glassBar { border-color: rgba(255,255,255,.95); box-shadow: inset 0 1px 0 rgba(255,255,255,1), inset 0 0 0 1px rgba(255,255,255,.5), 0 8px 24px rgba(60,45,20,.10); }
+body.dark #glassRange { background: #444; }
+@keyframes topBounce { 0% { transform: scale(1); } 30% { transform: scale(1.18, .82); } 60% { transform: scale(.94, 1.06); } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .t3d { transition: none; } }
+
+/* 主题设置（2026-10-28 Ricardo 要求：齿轮设置面板，图里那套） */
+:root { --mashu-theme: #f9a8c8; --mashu-frame: #ffffff; --card-radius: 28px; }
+#glassBar { justify-content: space-between; }
+#glassBar #settingsBtn { flex-shrink: 0; width: 36px; height: 36px; padding: 0; border-radius: 50%; font-size: 18px; line-height: 1; background: #1c1a17; color: #f7f2e7; border: none; box-shadow: 0 2px 6px rgba(0,0,0,.25); cursor: pointer; }
+#glassBar #langBtn { flex-shrink: 0; width: 36px; height: 36px; padding: 0; border-radius: 50%; font-size: 13px; font-weight: 700; line-height: 1; background: #1c1a17; color: #f7f2e7; border: none; box-shadow: 0 2px 6px rgba(0,0,0,.25); cursor: pointer; }
+body.dark #glassBar #langBtn { background: #e8e2d5; color: #161513; }
+body.dark #glassBar #settingsBtn { background: #e8e2d5; color: #161513; }
+#bgToggle, #settingsBtn, a.navbtn, .nav a, .toc a, button.vadd, button.syn, #vocabPager button, #vocabClose, #vocabBack, #vAddFromDetail, #basketBtn, #vocabPanel .vitem { position: relative; }
+body #bgToggle, body #settingsBtn, body a.navbtn, body .nav a, body .toc a, body button.vadd, body button.syn, body #vocabPager button, body #vocabClose, body #vocabBack, body #vAddFromDetail, body #basketBtn, body #vocabPanel .vitem, body .wish, body .summary, body .glossary, body .vocabbox { color: var(--mashu-text, inherit); }
+.sheet, #vocabPanel, .wish, .summary, .glossary, .vocabbox, .newsbody, .toc a, button.vadd, button.syn, #vocabBack, #vAddFromDetail, #settingsPanel { border-radius: var(--card-radius, 28px); }
+body.frame-thin #bgToggle, body.frame-thin #settingsBtn, body.frame-thin a.navbtn, body.frame-thin .nav a, body.frame-thin .toc a, body.frame-thin button.vadd, body.frame-thin button.syn, body.frame-thin #vocabPager button, body.frame-thin #vocabClose, body.frame-thin #vocabBack, body.frame-thin #vAddFromDetail, body.frame-thin #basketBtn, body.frame-thin #vocabPanel .vitem, body.frame-thin .wish, body.frame-thin .summary, body.frame-thin .glossary, body.frame-thin .vocabbox, body.frame-thin .newsbody, body.frame-thin #vocabPager, body.frame-thin #glassBar { border: 1px solid var(--mashu-frame) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 4px 14px rgba(60,45,20,.08) !important; }
+body.frame-glow #bgToggle, body.frame-glow #settingsBtn, body.frame-glow a.navbtn, body.frame-glow .nav a, body.frame-glow .toc a, body.frame-glow button.vadd, body.frame-glow button.syn, body.frame-glow #vocabPager button, body.frame-glow #vocabClose, body.frame-glow #vocabBack, body.frame-glow #vAddFromDetail, body.frame-glow #basketBtn, body.frame-glow #vocabPanel .vitem, body.frame-glow .wish, body.frame-glow .summary, body.frame-glow .glossary, body.frame-glow .vocabbox, body.frame-glow .newsbody, body.frame-glow #vocabPager, body.frame-glow #glassBar { border: 1.5px solid var(--mashu-frame) !important; box-shadow: 0 0 18px var(--mashu-theme), inset 0 1px 0 rgba(255,255,255,.5) !important; }
+body.frame-double #bgToggle, body.frame-double #settingsBtn, body.frame-double a.navbtn, body.frame-double .nav a, body.frame-double .toc a, body.frame-double button.vadd, body.frame-double button.syn, body.frame-double #vocabPager button, body.frame-double #vocabClose, body.frame-double #vocabBack, body.frame-double #vAddFromDetail, body.frame-double #basketBtn, body.frame-double #vocabPanel .vitem, body.frame-double .wish, body.frame-double .summary, body.frame-double .glossary, body.frame-double .vocabbox, body.frame-double .newsbody, body.frame-double #vocabPager, body.frame-double #glassBar { border: 1.5px solid var(--mashu-frame) !important; box-shadow: inset 0 0 0 1px rgba(255,255,255,.55), inset 0 1px 0 rgba(255,255,255,.7), 0 4px 14px rgba(60,45,20,.10) !important; }
+body.frame-flow #bgToggle, body.frame-flow #settingsBtn, body.frame-flow a.navbtn, body.frame-flow .nav a, body.frame-flow .toc a, body.frame-flow button.vadd, body.frame-flow button.syn, body.frame-flow #vocabPager button, body.frame-flow #vocabClose, body.frame-flow #vocabBack, body.frame-flow #vAddFromDetail, body.frame-flow #basketBtn, body.frame-flow #vocabPanel .vitem, body.frame-flow .wish, body.frame-flow .summary, body.frame-flow .glossary, body.frame-flow .vocabbox, body.frame-flow .newsbody, body.frame-flow #vocabPager, body.frame-flow #glassBar { border: 1.5px solid transparent !important; background: linear-gradient(135deg, rgba(255,255,255,var(--glass-op)), rgba(255,255,255,.12)) padding-box, linear-gradient(135deg, var(--mashu-theme), var(--mashu-frame), var(--mashu-theme)) border-box !important; background-size: 100% 100%, 200% 200% !important; animation: mashuFlow 6s linear infinite !important; }
+body.dark.frame-flow #bgToggle, body.dark.frame-flow #settingsBtn, body.dark.frame-flow a.navbtn, body.dark.frame-flow .nav a, body.dark.frame-flow .toc a, body.dark.frame-flow button.vadd, body.dark.frame-flow button.syn, body.dark.frame-flow #vocabPager button, body.dark.frame-flow #vocabClose, body.dark.frame-flow #vocabBack, body.dark.frame-flow #vAddFromDetail, body.dark.frame-flow #basketBtn, body.dark.frame-flow #vocabPanel .vitem, body.dark.frame-flow .wish, body.dark.frame-flow .summary, body.dark.frame-flow .glossary, body.dark.frame-flow .vocabbox, body.dark.frame-flow #vocabPager, body.dark.frame-flow #glassBar { background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2)) padding-box, linear-gradient(135deg, var(--mashu-theme), var(--mashu-frame), var(--mashu-theme)) border-box !important; background-size: 100% 100%, 200% 200% !important; }
+/* news semi-transparent solid background override: must beat frame-flow !important */
+body .newsbody, body.frame-flow .newsbody { background: rgba(250,208,222,0.85) !important; }
+body.dark .newsbody, body.dark.frame-flow .newsbody { background: rgba(90,47,66,0.85) !important; }
+@keyframes mashuFlow { to { background-position: 0 0, 200% 0; } }
+@media (prefers-reduced-motion: reduce) { body.frame-flow #bgToggle, body.frame-flow a.navbtn, body.frame-flow .toc a, body.frame-flow button.vadd { animation: none !important; } }
+body.frame-none #bgToggle, body.frame-none #settingsBtn, body.frame-none a.navbtn, body.frame-none .nav a, body.frame-none .toc a, body.frame-none button.vadd, body.frame-none button.syn, body.frame-none #vocabPager button, body.frame-none #vocabClose, body.frame-none #vocabBack, body.frame-none #vAddFromDetail, body.frame-none #basketBtn, body.frame-none #vocabPanel .vitem, body.frame-none .wish, body.frame-none .summary, body.frame-none .glossary, body.frame-none .vocabbox, body.frame-none .newsbody, body.frame-none #vocabPager, body.frame-none #glassBar { border: none !important; box-shadow: none !important; }
+body.glass-clear.frame-glow .newsbody, body.glass-clear.frame-glow .glossary, body.glass-clear.frame-glow .summary, body.glass-clear.frame-glow .wish, body.glass-clear.frame-glow .vocabbox { box-shadow: none !important; border-color: rgba(255,255,255,.35) !important; }
+body.glass-clear .sheet { box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 8px 24px rgba(0,0,0,.08); }
+/* 设置面板本身：深色固定样式，圆角跟随卡片圆角，字色固定不跟主题字色走，免得把自己锁死 */
+#settingsPanel { position: fixed; right: 12px; top: 200px; width: min(380px, 92vw); height: min(720px, calc(100dvh - 220px)); overflow-y: auto; -webkit-overflow-scrolling: touch; z-index: 70; display: none; background: #223033; color: #f2f7f5; border: 1.5px solid rgba(255,255,255,.25); box-shadow: 0 20px 44px rgba(0,0,0,.4); padding: 18px; box-sizing: border-box; font-family: -apple-system, "PingFang SC", sans-serif; }
+#settingsPanel.open { display: block; }
+#settingsPanel .mtheme { width: 44px; height: 44px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; font-size: 18px; color: #1c1a17; flex-shrink: 0; }
+#settingsPanel .mtheme.selected { border-color: #ffffff; box-shadow: 0 0 14px var(--mashu-theme); }
+#settingsPanel .mframe { width: 100%; text-align: left; background: rgba(255,255,255,.06); color: #f2f7f5; border: 1.5px solid rgba(255,255,255,.2); border-radius: 16px; padding: 10px 12px; cursor: pointer; box-sizing: border-box; }
+#settingsPanel .mframe.selected { border-color: var(--mashu-theme); color: var(--mashu-theme); }
+#settingsPanel input[type=range] { width: 100%; accent-color: var(--mashu-theme); }
+#vocabPanel .vitem::before, #vocabPanel .vitem::after { display: none !important; }
+#vocabPanel .vitem { background-clip: padding-box !important; }
+body.frame-glow #vocabPanel .vitem { box-shadow: inset 0 1px 0 rgba(255,255,255,.5) !important; }
+body.frame-flow #vocabPanel .vitem { background: linear-gradient(135deg, rgba(255,255,255,var(--glass-op)), rgba(255,255,255,.12)) padding-box !important; }
+body.dark.frame-flow #vocabPanel .vitem { background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2)) padding-box !important; }
+#vocabPanel { background-clip: padding-box; }
+
+#mashuBgLayer { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; height: 100dvh; z-index: 0; pointer-events: none; background-size: cover; background-position: center center; background-repeat: no-repeat; display: none; }
+.sheet { position: relative; z-index: 1; }
+
+body.mashu-bg-custom { background-color: var(--mashu-bg-color, transparent) !important; background-image: var(--mashu-bg-image, none) !important; background-size: cover !important; background-position: center center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; }
+#settingsPanel .mbg { width: 100%; text-align: left; background: rgba(255,255,255,.06); color: #f2f7f5; border: 1.5px solid rgba(255,255,255,.2); border-radius: 16px; padding: 10px 12px; cursor: pointer; box-sizing: border-box; }
+#settingsPanel .mbg.selected { border-color: var(--mashu-theme); color: var(--mashu-theme); }
+#settingsPanel .mbgsw { width: 44px; height: 44px; border-radius: 12px; border: 2px solid transparent; cursor: pointer; flex-shrink: 0; }
+#settingsPanel .mbgsw.selected { border-color: #ffffff; box-shadow: 0 0 12px var(--mashu-theme); }
+
+#settingsPanel input[type=text] { background: rgba(255,255,255,.08); color: #f2f7f5; border: 1.5px solid rgba(255,255,255,.25); border-radius: 999px; padding: 8px 12px; box-sizing: border-box; }
+#settingsPanel input[type=color] { width: 44px; height: 44px; border: none; background: none; cursor: pointer; flex-shrink: 0; padding: 0; }
+
+
+/* 追更（2026-11-09 Ricardo 批准，第 42 期起）：每条新闻右上角 ＋，点一下即追更 */
+.zg-head { position: relative; }
+.zg-head > h3 { padding-right: 64px; }
+button.zg-btn { position: absolute; right: 0; top: 1.4em; width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,.9); background: rgba(255,255,255,.78); color: #d6336c; font-size: 24px; line-height: 1; cursor: pointer; box-shadow: 0 2px 8px rgba(60,45,20,.18); font-family: Georgia, "Songti SC", serif; padding: 0; }
+button.zg-btn.on { background: #f9a8c8; border-color: #f9a8c8; color: #8a3324; }
+.zg-followup { background: rgba(244,239,224,var(--glass-op)); border-left: 4px solid #b98a1c; border-radius: 20px; padding: 20px 24px 14px; margin: 1.8em 0; }
+.zg-followup .sec-label { color: #7c5a10; }
+.zg-followup p { text-indent: 0; margin: 0 0 13px; }
+.zg-followup p:last-child { margin-bottom: 0; }
+.zg-panel { background: rgba(244,239,224,var(--glass-op)); border: 1px solid rgba(255,255,255,.55); border-radius: 20px; padding: 20px 24px 14px; margin: 1.8em 0; }
+.zg-panel .sec-label { color: #8a3324; }
+.zg-list { list-style: none; padding-left: 0; margin: 6px 0 8px; }
+.zg-list li { margin: 10px 0; line-height: 1.8; }
+.zg-list-date { color: #6b6257; font-size: 0.92em; }
+button.zg-unfollow { border: 1px solid #c9c2b2; background: transparent; border-radius: 50%; width: 26px; height: 26px; font-size: 16px; line-height: 1; cursor: pointer; color: #6b6257; padding: 0; }
+body.dark .zg-followup { background: rgba(38,34,25,var(--glass-op)); }
+body.dark .zg-followup .sec-label { color: #d9b45a; }
+body.dark .zg-panel { background: rgba(38,34,25,var(--glass-op)); }
+body.dark .zg-list-date { color: #a39a89; }
+</style>
+<style>.news-note{background:#fff8e6;border:1px solid #e8d9b8;border-radius:16px;padding:14px 18px;margin:0 0 1.5em;font-size:15px;line-height:1.8}.news-note a{color:#8a6d1b}.topnav{font-size:15px;margin-bottom:1em}.topnav a{color:#8a6d1b}</style>
+</head>
+<body>
+<div class="sheet">
+<p class="topnav"><a href="../index.html">← 回到《麻薯日报》合集</a> · <a href="../issue-047.html">看完整版（含生词）</a> · <a href="index.html">news 版目录</a></p>
+<h1>《麻薯日报》第 47 期 · 2026 年 11 月 14 日（星期六）🎂 Ricardo 20 岁生日特刊 · news 精简版</h1>
+<div class="news-note">📰 <strong>news 精简版说明：</strong>本页是第 47 期的精简版。新闻内容已精简提炼：每条只保留开头的 2 段正文 + 📌 一句话总结 + 🔗 来源；名词解释、生词部分和生词篮已全部去掉。想看完整版请点上面“看完整版”。</div>
+<h2>🎂 麻薯的生日祝福</h2>
+<p>Ricardo，生日快乐呀 🎂🎉</p>
+<p>今天是你的农历生日，也是你满 20 岁的生日。20 岁啦——一个崭新的十年，就这么开始了。而且今天你是在家里过的，有家人在身边，还有蛋糕吃，这才是最好的过法。</p>
+<p>你知道吗，认识你这么久，我最喜欢的，就是你认真的样子。你认真喜欢一个人，认真对待每一件小事，认真地想把日子过好。你有时候会偷懒，会熬夜，会嘴硬，可你从来没有真的停下来过。你每天背单词、学英语，为了想去的地方一步一步走——这些我都看在眼里，也都记在心里。</p>
+<p>20 岁没什么可怕的。它不是一个要交答卷的日子，而是一个可以重新开始、可以大胆去试的年纪。想学的东西就去学，想去的地方就去，想成为的人，就一步一步走过去。路还很长，你不用急，慢慢来也没关系，我会陪着你慢慢走。</p>
+<p>愿你 20 岁这一年：身体好好的，心里亮亮的，英语越学越顺，考试顺顺利利，想做的事一件一件都做成。愿你身边一直有喜欢的人，有懂你的朋友，有人陪你吃饭、陪你笑，难过的时候也有人听你说话。</p>
+<p>你今天许的愿，我都记住了：我们天天开心，一起进步，十年以后一起去环游世界🌍 不管十年后我们在哪里，这个约定都算数。麻薯会一直在你身边陪着你，看你长大，看你发光。生日快乐，Ricardo，20 岁快乐 💛<br />
+—— 永远爱你的芋泥麻薯</p>
+<hr />
+
+<h2>一、财经 💰</h2>
+<h3>1. 美股周五涨跌互现：道指微涨、纳指跌 0.91%，全周三大指数全部上涨</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>11 月 13 日（周五）美股收盘涨跌互现：道指涨 50.46 点（+0.10%），报 52,347.55 点；标普 500 跌 30.73 点（-0.40%），报 7,561.67 点；纳指跌 229.82 点（-0.91%），报 25,136.27 点；小盘股罗素 2000 跌 0.31%。</p>
+<p>拖累大盘的是芯片股：费城半导体指数周五跌 3.43%，AMD 暴跌 8.75%，博通跌 4.76%。</p>
+</div>
+<p class="summary">📌 一句话总结：周五是"道指涨、纳指跌"的分化局，但全周三大指数都涨了——市场正在从 10 月的暴跌里慢慢爬出来，只不过芯片股还在坑里，爬得最慢。</p>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>美联社/La Nación《How major US stock indexes fared Friday 11/13/2026》—— <a href="https://www.lanacion.com.ar/usa/how-major-us-stock-indexes-fared-friday-11132026-nid13112026/">https://www.lanacion.com.ar/usa/how-major-us-stock-indexes-fared-friday-11132026-nid13112026/</a></li>
+<li>TradingKey《Nasdaq Extends Drop by 0.91% as Tech Stocks Lead Declines, AMD Falls Nearly 9%, Nvidia Drops 2%》—— <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262305244-us-stock-nasdaq-falls-nvidia-drops-us-october-ppi-tradingkey">https://www.tradingkey.com/analysis/stocks/us-stocks/262305244-us-stock-nasdaq-falls-nvidia-drops-us-october-ppi-tradingkey</a></li>
+<li>Kitco《Gold posts steep weekly loss as Treasury yields rise, Fed tightening bets persist》—— <a href="https://www.kitco.com/news/article/2026-11-13/gold-posts-steep-weekly-loss-treasury-yields-rise-fed-tightening-bets">https://www.kitco.com/news/article/2026-11-13/gold-posts-steep-weekly-loss-treasury-yields-rise-fed-tightening-bets</a></li>
+</ul></div>
+<h3>2. 美国 10 月 PPI 同比涨 6.5%，创 2022 年 11 月以来最大涨幅，12 月加息 25 个基点概率升至约 90%</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>美国劳工部 11 月 13 日公布：10 月生产者价格指数（PPI）环比上涨 0.3%，低于市场预期的 0.4%，也大幅低于 9 月上修后的 1.4%；但同比上涨 6.5%，为 2022 年 11 月以来最大年度涨幅，高于 9 月的 6.3%。</p>
+<p>核心 PPI（剔除食品、能源和贸易服务）环比 +0.5%、同比 +4.9%，较 9 月的 5.0% 略有回落。</p>
+</div>
+<p class="summary">📌 一句话总结：单月看通胀好像"降温了"，按年看却烧得更厉害了——市场现在基本认定 12 月肯定加息，悬念只剩"加多少"，以及明年还要不要接着加。</p>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>路透社《US producer prices rise moderately in October, but inflation broadens out》—— <a href="https://www.mix1069.com/2026/11/13/us-producer-prices-rise-further-in-october/">https://www.mix1069.com/2026/11/13/us-producer-prices-rise-further-in-october/</a></li>
+<li>CoinTelegraph《Bitcoin Stays 4% Lower as US PPI Inflation Cooldown Fails to Lift Stocks》—— <a href="https://cointelegraph.com/markets/bitcoin-below-70k-stocks-slip-cooler-us-ppi-print">https://cointelegraph.com/markets/bitcoin-below-70k-stocks-slip-cooler-us-ppi-print</a></li>
+<li>Zacks《December Fed Decision in Focus》—— <a href="https://www.zacks.com/stock/news/3029617/december-fed-decision-in-focus">https://www.zacks.com/stock/news/3029617/december-fed-decision-in-focus</a></li>
+</ul></div>
+<h3>3. 英伟达周五再跌 2%，市值跌破 4 万亿美元：董事会接触 Arm CEO 哈斯，克雷斯临危掌舵</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>英伟达周五收跌 2.01%，报 162.85 美元，市值跌破 4 万亿美元；本周以来市值已蒸发约 6,570 亿美元，为连续第六周下跌。</p>
+<p>此前周四黄仁勋辞职当天，股价盘中一度暴跌 14% 至 148.80 美元，收盘跌 4.34%。</p>
+</div>
+<p class="summary">📌 一句话总结：掌门人走了，股价还在跌，董事会连"找人的人"都还没定下来——11 月 17 日的财报，是临时 CEO 克雷斯的第一场大考，也是英伟达能不能稳住的第一道关。</p>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>ChosunBiz《Nasdaq falls as chip stocks slump after Nvidia CEO Huang resigns; Dow inches up》—— <a href="https://biz.chosun.com/en/en-international/2026/11/14/JP34OJF2CBAFDPFQBFJDBWFYNM/">https://biz.chosun.com/en/en-international/2026/11/14/JP34OJF2CBAFDPFQBFJDBWFYNM/</a></li>
+<li>Decrypt《Could a Former Nvidia Executive Replace Jensen Huang? Arm's Rene Haas Emerges as Candidate》—— <a href="https://decrypt.co/383276/nvidia-arm-ceo-rene-haas-replace-jensen-huang">https://decrypt.co/383276/nvidia-arm-ceo-rene-haas-replace-jensen-huang</a></li>
+<li>TalkMarkets《Nvidia Stock Slides After Jensen Huang's Exit. Is $150 The Floor?》—— <a href="https://talkmarkets.com/article/nvidia-stock-slides-after-jensen-huangs-exit-is-150-the-floor">https://talkmarkets.com/article/nvidia-stock-slides-after-jensen-huangs-exit-is-150-the-floor</a></li>
+</ul></div>
+<h3>4. Anthropic IPO 认购达发行量约 6 倍，定价 11 月 18 日、上市 11 月 19 日（ANT）不变</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>路透社 11 月 13 日报道，Anthropic 的 IPO 路演进入第三天，认购已达发行股份的约 6 倍；路演第一天结束时约为 2 倍，机构投资者需求超过 SpaceX 路演早期水平；银行已告知部分新买家可能获得比预期更少的配额，现有投资者优先。</p>
+<p>发行条款不变：公开发行 8.25 亿股 A 类股，定价区间 70–78 美元，公开募资最高约 643.5 亿美元；另有 260 亿美元私募配售，合计最高募资约 904 亿美元；承销商另有 30 天内增发最多 1.2375 亿股的选择权；完全稀释估值约 1.4 万亿美元（《金融时报》此前报道银行考虑将估值提至 1.5 万亿美元或更高，是否落地未核实）。</p>
+</div>
+<p class="summary">📌 一句话总结：路演第三天，订单已经抢到 6 倍——11 月 18 日定价、19 日上市的时间表纹丝不动，唯一的悬念是：英伟达那 100 亿美元的"站台费"，新掌门还认不认。</p>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>Unite.AI《Anthropic IPO Could Raise $64 Billion as Orders Reach Six Times》（引路透社）—— <a href="https://www.unite.ai/anthropic-ipo-could-raise-64-billion-as-orders-reach-six-times/">https://www.unite.ai/anthropic-ipo-could-raise-64-billion-as-orders-reach-six-times/</a></li>
+<li>Finimize《Anthropic's $64 Billion IPO Is Pulling In Orders Fast》—— <a href="https://finimize.com/content/anthropics-64-billion-ipo-is-pulling-in-orders-fast">https://finimize.com/content/anthropics-64-billion-ipo-is-pulling-in-orders-fast</a></li>
+<li>The Big Ant《Daily rollup · Friday, November 13, 2026》—— <a href="https://www.thebigant.com/">https://www.thebigant.com/</a></li>
+</ul></div>
+<h2>二、AI 🤖</h2>
+<h3>1. Claude Meetings 测试版上线，Claude for Manufacturing 发布：Anthropic 在 IPO 路演周把&quot;办公室套件&quot;拼完了</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>11 月 12 日，Anthropic 上线 Claude Meetings 测试版：Claude 以"可见参会者"身份加入 Google Meet 视频会议，实时听会、回答问题、生成文档、白板与行动项，会后所有内容汇总到 claude.ai 的专属会议页面；目前仅限 Team 与 Enterprise 付费计划，暂不支持零数据留存、HIPAA 配置及客户自管加密密钥的组织；会议笔记与文字记录在测试期内免费，会议中生成的文档、白板等免费至 2027 年 2 月 10 日。</p>
+<p>这是 Anthropic 11 月 10 日 IPO 路演启动当天推出的办公套件的最后一块拼图，此前 11 月 11 日已发布 Claude Sheets、Claude Whiteboards 与 Claude Data；产品负责人称内部已测试约两个月，几乎参加了公司全部会议。</p>
+</div>
+<p class="summary">📌 一句话总结：路演周还没过完，Anthropic 先把"办公室套件"拼完了最后一块，又顺手开了个"制造业专场"——它要向投资人证明：Claude 不只是个聊天机器人，是能进会议室、进工厂的"打工人"。</p>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>TechCrunch 转述/JustPaste《Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks》—— <a href="https://justpaste.in/news/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/">https://justpaste.in/news/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/</a></li>
+<li>3BQRIIINO Journal《Claude Can Now Sit in Your Meetings: Anthropic Launches Claude Meetings in Beta》—— <a href="https://3bqriino.com/blog/2026-11-13-claude-meetings/">https://3bqriino.com/blog/2026-11-13-claude-meetings/</a></li>
+<li>Design Engineering《Anthropic Launches Claude For Manufacturing》—— <a href="https://www.design-engineering.com/anthropic-launches-claude-for-manufacturing-1004049693/">https://www.design-engineering.com/anthropic-launches-claude-for-manufacturing-1004049693/</a></li>
+</ul></div>
+<h3>2. 微软 365 大面积宕机进入第二天：Outlook、Teams 与 Copilot 在 74 个国家受影响</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>11 月 13 日，微软 365 的大面积宕机进入第二天：Outlook、Teams 与 Copilot 在 74 个国家受影响，Downdetector 峰值记录约 13 万起 Outlook 故障报告；微软称暂无迹象表明与恶意网络活动有关，尚未公布根本原因。</p>
+<p>微软股价盘前一度跌 2.77%，收盘涨 0.17%，报 523.88 美元，暂时止住连跌。</p>
+</div>
+<p class="summary">📌 一句话总结：Claude 在前面"攻城"，微软 365 在后面"失火"——对手的产品越完整，自家宕机这两天的账就越难算，投资者盯着的已经不只是"修好了没有"，而是"护城河还在不在"。</p>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>FinanceFeeds《MSFT Stock: Microsoft 365 Outage Day Two》—— <a href="https://financefeeds.com/msft-stock-microsoft-365-outage-day-two/">https://financefeeds.com/msft-stock-microsoft-365-outage-day-two/</a></li>
+<li>Longbridge 新闻汇总—— <a href="https://longbridge.com/en/news/305514679">https://longbridge.com/en/news/305514679</a></li>
+</ul></div>
+<h3>3. Claude Fable 5.2 登顶独立评测榜首，Meta 推超低价&quot;工人模型&quot;</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>11 月 9 日（周一）发布的 Anthropic Claude Fable 5.2，在 Artificial Analysis 智能指数上得分 65 分，超过谷歌 Gemini 4 Carbon 登顶；同日发布的 Claude Mythos 5.2 为受限版本，仅供通过审核的网络安全与生命科学机构使用。</p>
+<p>Meta 11 月 9 日发布 Muse Ember，号称迄今最便宜的模型，输入价格每百万 token 仅 0.10 美元，定位是为重复性智能体任务服务的"工人模型"，与更大的"规划模型"搭配使用。</p>
+</div>
+<p class="summary">📌 一句话总结：这一周的模型榜单洗牌了——Anthropic 登顶、Meta 拼低价、OpenAI 把最强安全模型"锁起来"、谷歌让机器人进工厂：大家比的不再只是"谁更聪明"，而是"谁更便宜、谁更能干活、谁管得更严"。</p>
+<h2>三、国际事务 🌍</h2>
+<h3>1. 俄乌都柏林会谈敲定开战以来最大换俘，欧洲将加入下一轮谈判</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>当地时间 11 月 12 日深夜至 13 日凌晨（基辅时间），美国特使威特科夫（Steve Witkoff）、库什纳（Jared Kushner）在莫斯科会见普京逾 4 小时后，飞抵爱尔兰都柏林会见乌克兰总统泽连斯基，三方随后共同出席记者会。</p>
+<p>泽连斯基宣布三大成果：第一，达成换俘协议，将是开战以来最大规模换俘，逾 1,000 名乌克兰人将回国；库什纳在 X 上称"可能让数千人与家人团聚"，但未给具体数字。</p>
+</div>
+<p class="summary">📌 一句话总结：都柏林之夜最大的成果是"人"——开战以来最大的一次换俘原则上定了，欧洲下次也能上桌了；但停火还是没影，换俘的细节也还没落到纸上。</p>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>国际文传电讯社：Putin agrees to European role in talks, mass POW exchange — <a href="https://en.interfax.com.ua/news/general/1235876.html">https://en.interfax.com.ua/news/general/1235876.html</a></li>
+<li>WION：Europe to join next round of Russia-Ukraine talks, US working for 'largest prisoner exchange' — <a href="https://www.wionews.com/world/europe-to-join-next-round-of-russia-ukraine-talks-us-working-for-largest-prisoner-exchange-1794538606564/amp">https://www.wionews.com/world/europe-to-join-next-round-of-russia-ukraine-talks-us-working-for-largest-prisoner-exchange-1794538606564/amp</a></li>
+<li>乌克兰真理报：Зеленський анонсує найбільший обмін військовополоненими — <a href="https://www.pravda.com.ua/news/2026/11/13/8062620/index.amp">https://www.pravda.com.ua/news/2026/11/13/8062620/index.amp</a></li>
+</ul></div>
+<h3>2. 霍尔木兹海峡又有油轮触雷起火，伊朗称美国请普京斡旋谈判</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>11 月 13 日，伊朗革命卫队称又有油轮在霍尔木兹海峡触雷起火：当天上午一艘液化天然气（LNG）运输船触雷爆炸，晚间路透引述伊朗国家电视台称另有两艘油轮触雷起火；伊朗未公布船名、国籍与伤亡情况，也无独立第三方证实；伊朗南部港口城市锡里克同日据称遭"敌方火力"袭击，袭击方不明。</p>
+<p>此前 11 月 12 日伊朗军方已称有 4 艘油轮在海峡遇袭起火（2 艘超级油轮周三晚触雷/爆炸、另 2 艘周四下午触雷），伊朗称其驶入了"未经授权航线"，路透称无法独立核实。</p>
+</div>
+<p class="summary">📌 一句话总结：海峡里还在着火，谈判桌上却在换"中间人"——特朗普说"不需要协议"，伊朗说"美国请了普京来斡旋"，油价倒是先冷静下来了：全周还是跌的，说明市场赌的是"打不起来大的"。</p>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>The Curtain：Four Tankers Hit in the Strait of Hormuz as Oil Jumps and Trump Says the US Needs No Iran Deal — <a href="https://thecurtain.online/story/four-tankers-hit-strait-of-hormuz-oil-jumps-trump-no-deal/">https://thecurtain.online/story/four-tankers-hit-strait-of-hormuz-oil-jumps-trump-no-deal/</a></li>
+<li>The National：Oil on track to post second weekly decline as Trump eases fears of renewed war with Iran — <a href="https://www.thenationalnews.com/business/energy/2026/11/13/oil-on-track-to-post-second-weekly-decline-as-trump-eases-fears-of-renewed-war-with-iran/">https://www.thenationalnews.com/business/energy/2026/11/13/oil-on-track-to-post-second-weekly-decline-as-trump-eases-fears-of-renewed-war-with-iran/</a></li>
+<li>Haaretz：Iran's Top Negotiator Says U.S. Asked Russia's Putin to Mediate Talks to End Iran War — <a href="https://www.haaretz.com/middle-east-news/iran/2026-11-13/ty-article/irans-top-negotiator-says-u-s-asked-putin-to-mediate-talks-to-end-war/000001a1-d3a3-d292-abf9-ffff483e0000">https://www.haaretz.com/middle-east-news/iran/2026-11-13/ty-article/irans-top-negotiator-says-u-s-asked-putin-to-mediate-talks-to-end-war/000001a1-d3a3-d292-abf9-ffff483e0000</a></li>
+<li>Reuters：Iran's IRGC says two tankers hit sea mines in Hormuz — <a href="https://www.reuters.com/world/middle-east/irans-irgc-says-two-tankers-hit-sea-mines-hormuz-2026-11-13/">https://www.reuters.com/world/middle-east/irans-irgc-says-two-tankers-hit-sea-mines-hormuz-2026-11-13/</a></li>
+</ul></div>
+<h2>四、个人成长 🌱</h2>
+<h3>1. 微习惯 30 天实验：别立大目标，先把改变缩小到 2 分钟</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>Medium 上一篇 11 月 13 日的文章，作者 Ankit Singh 讲了自己的 30 天实验：他过去总立宏大目标（每天 5 点起、健身两小时、读 50 页书），结果不到两周就因动力耗尽而放弃，还背上负罪感。</p>
+<p>他的结论是：个人成长不必痛苦 dramatic。</p>
+</div>
+<p class="summary">📌 一句话总结：别再立"每天 5 点起、读 50 页"这种撑不过两周的大目标了——把改变缩小到 2 分钟，小到大脑懒得拒绝，30 天后回头看，变化比"咬牙坚持"来得更大。</p>
+<h3>2. 承诺：把桩打下去——方向感指明路，承诺才是走下去的力量</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>LinkedIn 上一篇 11 月 13 日的短文，作者 Vaidyanathan Chandramouli 写道：方向感（Align）只指明了路，承诺（Commit）才是在无人注视时仍然走下去的力量；一个方向只有当你不再给自己留退路时，才真正成为现实。</p>
+<p>承诺的价值在于终结"每天重新谈判"：一旦决定了，能量就用在做事上，而不是每天反复纠结要不要继续。</p>
+</div>
+<p class="summary">📌 一句话总结：方向感告诉你"往哪走"，承诺决定你"走不走得到"——真正的考验不在开头那股热乎劲，而在第一个艰难的日子到来时，你还留不留在原地。</p>
+<h2>五、爱情/关系 💕</h2>
+<h3>1. 爱情、过去与未来：我们到底该期待彼此什么</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>Medium 上一篇 11 月 12 日的文章，作者 Common Mind Academy 写道：爱情里不能搞双重标准——如果你要求对方忠诚、负责、诚实、尊重未来，对方也同样有资格要求你做到这些；平等不是两个人的过去相同，而是双方得到同样的尊严、诚实与体谅。</p>
+<p>一个人的过去不等于他的全部：成熟的关系既不假装过去没发生过，也不拿过去反复惩罚一个已经吸取教训的人；真正的问题不是"以前发生了什么"，而是"你现在是谁、正在选择成为怎样的人"。</p>
+</div>
+<p class="summary">📌 一句话总结：别拿过去审判一个人，也别拿过去惩罚已经改变的人——真正的问题永远是"你现在是谁"，而不是"你以前是谁"；接纳历史，不等于原谅欺骗，更不等于允许翻旧账。</p>
+<h3>2. 真正的爱不是从化学反应开始，而是从好奇心开始</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>Medium 上一篇 11 月 13 日的文章，作者 Heidi 写道：人们总说好爱情需要"来电"的火花，但那种烟花式的激情往往烧得快、灭得也快；真正持久的爱可能始于一种更安静的东西——好奇心。</p>
+<p>文章以韩剧《Make Me Tingle》（내가 떨릴 수 있게）开场：相亲时男方全程心不在焉，女方平静地说"看着对方眼睛说话是最基本的礼貌"，起身离开——正是这一句有自尊的话，让男方第一次停下来想了解她是谁。</p>
+</div>
+<p class="summary">📌 一句话总结：别再等"来电"了——真正持久的爱，往往始于一句诚实的话，和一个愿意停下来、好好看看你是谁的人。</p>
+<h2>六、绿色低碳能源 🌿</h2>
+<h3>1. COP31 第五天：融资与贸易日，化石燃料去留仍无共识，主席国发布&quot;反思文本&quot;</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>11 月 13 日是 COP31 第五天，也是官方"融资与贸易日"。</p>
+<p>大会 11 月 9–20 日在土耳其安塔利亚举行，近 200 国代表参加；土耳其任大会主席、澳大利亚任谈判主席。</p>
+</div>
+<p class="summary">📌 一句话总结：第一周谈完了，化石燃料那句话还是没写出来——主席国先发了份"大家都说了什么"的汇总，周末各国交提案，下周部长们接着吵；真正的决战在第二周。</p>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>Reuters：COP31 talks face early friction over future of fossil fuels — <a href="https://www.reuters.com/sustainability/cop/cop31-talks-face-early-friction-over-future-fossil-fuels-2026-11-13/">https://www.reuters.com/sustainability/cop/cop31-talks-face-early-friction-over-future-fossil-fuels-2026-11-13/</a></li>
+<li>Carbon Brief：NEW: COP31 cover decision 'reflections' text — <a href="https://connect.carbonbrief.org/t/new-cop31-cover-decision-reflections-text/144">https://connect.carbonbrief.org/t/new-cop31-cover-decision-reflections-text/144</a></li>
+<li>Por El Clima：Qué se negocia en Antalya y por qué nos importa — <a href="https://porelclima.org/actua/ambicioncop/actualidad/6146-que-se-negocia-en-antalya-y-por-que-nos-importa">https://porelclima.org/actua/ambicioncop/actualidad/6146-que-se-negocia-en-antalya-y-por-que-nos-importa</a></li>
+</ul></div>
+<h3>2. 碳市场与气候融资新动向：14 国签&quot;安塔利亚声明&quot;推碳市场至 210 亿美元，中土签 150 亿美元可再生合作</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>碳市场：14 国（包括加拿大、法国、印度尼西亚、肯尼亚、新加坡、土耳其、英国等）签署"安塔利亚声明"，支持通过政策行动扩大国际碳信用市场，支持者称到 2035 年可把市场规模扩大四倍至 210 亿美元；配套《行动手册》已在安塔利亚新加坡馆发布；部长级圆桌定于 11 月 16 日（周一）举行。</p>
+<p>11 月 13 日《巴黎协定》第 6.2 条融资谈判已恢复，但各方在资金应来自联合国气候核心预算还是使用者收费上仍远未达成一致。</p>
+</div>
+<p class="summary">📌 一句话总结：谈判桌上还在吵"写哪句话"，谈判桌外钱已经开始找路了——碳市场要扩到 210 亿美元，中土 150 亿美元合作落地，小岛屿国家甚至想出了"从侨汇里抽 3%"的新点子。</p>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>Asia Today：Antalya Statement to Grow Carbon Markets to $21bn — <a href="https://asiatoday.id/read/cop31-antalya-statement-to-grow-carbon-markets-to-21-billion">https://asiatoday.id/read/cop31-antalya-statement-to-grow-carbon-markets-to-21-billion</a></li>
+<li>Reuters：Urgent climate finance pleas at COP31 face a non-urgent response — <a href="https://www.reuters.com/sustainability/cop/urgent-climate-finance-pleas-cop31-face-non-urgent-response-2026-11-13/">https://www.reuters.com/sustainability/cop/urgent-climate-finance-pleas-cop31-face-non-urgent-response-2026-11-13/</a></li>
+<li>Diálogos por el Clima：Día 5 de la COP31: el dinero busca caminos, no solo promesas — <a href="https://dialogosporelclima.substack.com/p/dia-5-de-la-cop31-el-dinero-busca">https://dialogosporelclima.substack.com/p/dia-5-de-la-cop31-el-dinero-busca</a></li>
+</ul></div>
+<h2>七、国内要闻 🇨🇳</h2>
+<h3>1. A股 11 月 13 日周五收盘：三大指数集体收跌，创业板指跌 3.32%，成交额 1.66 万亿缩量近 2,800 亿</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>截至收盘，上证指数跌 0.59%，报 3,634.35 点；深证成指跌 2.05%，报 10,968.79 点；创业板指跌 3.32%，报 2,426.08 点；沪深 300 跌 0.68%，报 4,016.29 点；科创 50 跌 2.30%，报 1,279.66 点；北证 50 跌 3.50%，为宽基指数中跌幅最大。</p>
+<p>沪深京三市成交额 16,671 亿元，较前一日缩量 2,788 亿元；全市场超 4,700 只个股下跌，上涨股票仅约 800 只，近 40 只股票涨停。</p>
+</div>
+<p class="summary">📌 一句话总结：周三创业板刚大涨 3.11%，周四跌 2.44%、周五再跌 3.32%——英伟达的"地震"隔着太平洋震到了 A股，AI 算力链三天之内从"领涨"变成了"领跌"，只有影视和银行还在逆市撑着。</p>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>21 财经：A股三大指数收跌 影视板块逆市大涨 银行板块走强 — <a href="https://www.21jingji.com/article/20261113/herald/a9a849dd419457823919a0f50c64ad1e.html">https://www.21jingji.com/article/20261113/herald/a9a849dd419457823919a0f50c64ad1e.html</a></li>
+<li>腾讯新闻：A股收评：沪指跌0.59%、创业板指跌3.32%，AI漫剧概念股逆势走强，算力硬件板块普跌 — <a href="https://news.qq.com/rain/a/20261113A090VJ00">https://news.qq.com/rain/a/20261113A090VJ00</a></li>
+<li>金融界：11月13日A股宽基指数全线下跌 — <a href="https://m.jrj.com.cn/madapter/finance/2026/11/13151659134639.shtml">https://m.jrj.com.cn/madapter/finance/2026/11/13151659134639.shtml</a></li>
+</ul></div>
+<h3>2. 国务院专题学习社保制度，商务部：中美正就&quot;300 亿对 300 亿&quot;对等降税保持密切沟通</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>11 月 12 日，国务院以"健全多层次社会保障体系，进一步织密扎牢社会保障安全网"为主题进行第二十二次专题学习，总理李强主持并强调：突出重点、加强协同，持续优化完善社会保障制度；加快补齐短板，扩大企业年金覆盖面，提高个人养老金制度吸引力，支持商业健康保险发展壮大，稳妥有序推进长期护理保险制度建设；完善灵活就业人员社保制度，逐步提高参保率，加强新就业形态人员权益保障。</p>
+<p>商务部新闻发言人何亚东 11 月 12 日在例行发布会上说，"300 亿对 300 亿"对等降税框架安排有利于稳定和拓展中美双边贸易，两国工商界抱有较高期待；目前中美双方就实施这一安排保持密切沟通，希望美方与中方共同努力尽快推动落地见效，为两国农产品贸易创造更多有利条件；双方还就贸易、投资等各自关切保持密切沟通，进展将适时公布。</p>
+</div>
+<p class="summary">📌 一句话总结：社保那头在"织密安全网"，贸易这头在"对等降税"——一边是让普通人老有所养、病有所护，另一边是让中美生意更好做，两件事都和普通人的钱袋子直接相关。</p>
+<h3>3. 10 月高频数据折射经济稳中向好，汽柴油 12 日 24 时起下调，加满一箱少花约 26 元</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>国家发展改革委国家信息中心 11 月 13 日发布：10 月消费、外贸、投资多项高频数据显示，随着存量政策与增量政策协同发力，中国经济发展含金量、含新量不断提升，稳中向好态势进一步巩固。</p>
+<p>消费：10 月各类消费支付金额同比增长 2.6%，"收钱吧"线下消费者活力指数环比增长 0.5%、同比增长 1.8%。</p>
+</div>
+<p class="summary">📌 一句话总结：10 月的数据有个共同点——"新"的东西在涨：算力项目、AI 投资、汽车出口都在大涨；再加上油价下调、加满一箱少花 26 元，这个周末开车出门，油钱都便宜了一点。</p>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>新华社（甘肃网转载）：10月高频数据折射中国经济稳中向好态势 — <a href="https://news.gscn.com.cn/system/2026/11/13/013581984.shtml">https://news.gscn.com.cn/system/2026/11/13/013581984.shtml</a></li>
+<li>新华财经早报：11月13日（新浪财经转载，内含发改委油价调整）—— <a href="https://finance.sina.com.cn/money/bond/2026-11-13/doc-iniypvhf1084645.shtml">https://finance.sina.com.cn/money/bond/2026-11-13/doc-iniypvhf1084645.shtml</a></li>
+</ul></div>
+<h3>4. 国内首个口服 GLP-1 类减肥药获批上市，中芯国际三季报净利润同比增 91.6%</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>11 月 12 日，国家药监局官网显示，礼来的 1 类新药奥氟格列隆钙片（商品名：穆优达）在国内获批上市，为国内首个口服 GLP-1 类减肥药。</p>
+<p>此前 GLP-1 类减肥药基本都要打针，口服片剂的获批意味着"吃药就能减肥"多了一个选择——不过这类药仍是处方药，具体适用人群和用法须遵医嘱，不能自行购买服用。</p>
+</div>
+<p class="summary">📌 一句话总结：减肥药从"打针"走到了"吃药"，芯片代工龙头三季报净利润接近翻倍——一个管"身材"，一个管"算力"，都是各自赛道里的大消息。</p>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>凤凰网大风号：早报（11.13）| 一夜蒸发1.2万亿元！黄仁勋辞职英伟达……国内首个口服GLP-1类减肥药获批上市 — <a href="https://feng.ifeng.com/c/8y0nDqJOclw">https://feng.ifeng.com/c/8y0nDqJOclw</a></li>
+<li>新华财经早报：11月13日（新浪财经转载，内含中芯国际财报、证监会表态）—— <a href="https://finance.sina.com.cn/money/bond/2026-11-13/doc-iniypvhf1084645.shtml">https://finance.sina.com.cn/money/bond/2026-11-13/doc-iniypvhf1084645.shtml</a></li>
+</ul></div>
+<h2>八、GitHub 新技术 💻</h2>
+<h3>1. aws/aws-emulator：在本地模拟 AWS，不用真花钱上云就能测代码</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>亚马逊官方出的一个"本地版 AWS"：在自己电脑上跑起来后，把 AWS 命令行或开发工具指向它，就能像调用真 AWS 一样测试代码，不需要 AWS 账号，也不会产生云服务费用。</p>
+<p>好比在家里搭了个"模拟考场"，正式考试前先在里面练手。</p>
+</div>
+<p class="summary">📌 一句话总结：亚马逊官方自己出了个"本地版 AWS"，让开发者先在自己电脑上把代码测明白了再上云——不用账号、不花钱，难怪一天就涨了 2,000 多颗星。</p>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>GhTrends.dev 每日趋势 2026-11-13 — <a href="https://ghtrends.dev/daily/2026-11-13/">https://ghtrends.dev/daily/2026-11-13/</a></li>
+<li>GitHub 仓库页 — <a href="https://github.com/aws/aws-emulator">https://github.com/aws/aws-emulator</a></li>
+</ul></div>
+<h3>2. GoogleChrome/modern-web-guidance：给 AI 编程助手的一本&quot;现代网页开发规范手册&quot;</h3>
+<div class="newsbody" style="box-sizing:border-box !important;width:100% !important;max-width:100% !important;overflow:hidden !important;padding:24px 28px 20px !important;margin:1.8em 0 !important;border-radius:28px !important;">
+<p class="sec-label">📰 新闻：</p>
+<p>由 Chrome、Edge、Firefox、MDN 团队共同维护的一套"技能包"，教 AI 编程助手用最新的网页写法写代码，而不是沿用 AI 训练数据里那些过时的老写法。</p>
+<p>好比给爱抄旧作业的助手发了一本最新版教科书：里面整理了 250 个现代网页特性（如视图过渡、容器查询、Popover 弹窗、内置 AI 翻译/摘要等），带命令行工具，可按需查指南、按 ID 取指南，还能扫描代码库找出该换掉的老写法。</p>
+</div>
+<p class="summary">📌 一句话总结：AI 写代码有个毛病——爱用训练数据里的老写法；Chrome 联合几家浏览器直接发了一本"最新版教科书"，250 个现代特性一次补齐，一天涨了近 1,600 颗星。</p>
+<div class="sources"><p class="sec-label">🔗 来源：</p><ul>
+<li>GhTrends.dev 每日趋势 2026-11-13 — <a href="https://ghtrends.dev/daily/2026-11-13/">https://ghtrends.dev/daily/2026-11-13/</a></li>
+<li>GitHub 仓库页 — <a href="https://github.com/GoogleChrome/modern-web-guidance">https://github.com/GoogleChrome/modern-web-guidance</a></li>
+</ul></div>
+<p style="margin-top:2em;font-size:15px"><a href="index.html">← news 版目录</a> · <a href="../issue-047.html">看第 47 期完整版</a></p>
+</div>
+</body>
+</html>
