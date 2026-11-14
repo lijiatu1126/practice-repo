@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《麻薯日报》第33期 · news · 2026-10-31</title>
+<style>
+:root { --glass-op: .50; --glass-blur: 13px; --basket-op: .50; --basket-blur: 11px; --panel-op: .86; --panel-blur: 18px; }
+/* 《麻薯日报》报纸版式（2026-10-23 Ricardo 要求：像真正的报纸） */
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       margin: 0; line-height: 2.0;
+       font-size: 17.5px; letter-spacing: 0.01em;
+       color: #1c1a17;
+       background:
+         radial-gradient(1200px 600px at 20% -10%, rgba(255,220,170,.65), transparent 60%),
+         radial-gradient(900px 500px at 85% 10%, rgba(140,190,255,.45), transparent 60%),
+         radial-gradient(800px 500px at 80% 40%, rgba(255,150,180,.40), transparent 60%),
+         radial-gradient(800px 500px at 10% 70%, rgba(180,160,255,.35), transparent 60%),
+         linear-gradient(180deg, #f5ecd9, #efe3c8 45%, #e8d9b8); }
+.sheet { position: relative; z-index: 1; max-width: 780px; margin: 20px auto;
+         padding: 48px 48px 64px; min-height: 100vh; border-radius: 28px;
+         background: linear-gradient(rgba(251,248,241,var(--glass-op)), rgba(251,248,241,var(--glass-op))) padding-box,
+                     linear-gradient(135deg, rgba(255,255,255,.85), rgba(255,255,255,.25) 35%, rgba(170,200,255,.55) 65%, rgba(255,190,210,.55)) border-box;
+         border: 1.5px solid transparent;
+         -webkit-backdrop-filter: blur(var(--glass-blur, 24px)) saturate(1.8);
+         backdrop-filter: blur(var(--glass-blur, 24px)) saturate(1.8);
+         box-shadow: inset 0 1px 0 rgba(255,255,255,.9), inset 0 0 0 1px rgba(255,255,255,.30), inset 0 -1px 0 rgba(255,255,255,.3), 0 24px 48px rgba(150,170,220,.20), 0 8px 24px rgba(60,45,20,.10); }
+.hang { position: fixed; inset: 0; top: 0; z-index: 3; pointer-events: none; overflow: hidden; }
+.hanger { pointer-events: none; cursor: grab; touch-action: none; will-change: transform; }
+.hanger.dragging { cursor: grabbing; }
+.hanger .swing { pointer-events: none; }
+/* 根因修法（2026-10-27 20:29 实测）：原来牌子盒子本身接手势，盒子是从页面顶到牌子底的大矩形，
+   同侧后来的长线牌子盒子盖住了前面大牌子的区域，点大牌子实际抓到长线牌子，拖动方向也就对不上。
+   现在只有线和牌子本体接手势，点哪张牌子就是哪张，盒子空白处不再误触。 */
+.hanger .thread, .hanger .orb { pointer-events: auto; touch-action: none; }
+.hanger, .hanger .swing, .hanger .thread, .hanger .orb, .hanger .orb img { touch-action: none; -webkit-touch-callout: none; user-select: none; -webkit-user-select: none; }
+.hanger { position: absolute; top: 0; animation: drop 1s cubic-bezier(.25,.9,.35,1.15) both; }
+.hanger.broken { animation: none !important; }
+.hanger.broken .swing { animation: none !important; transform: none !important; }
+.hanger.broken .thread { display: none !important; }
+#gyroRestore { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 200; padding: 12px 20px; border-radius: 999px; background: #1c1a17; color: #fff; font-size: 15px; border: none; box-shadow: 0 8px 24px rgba(0,0,0,.3); display: none; cursor: pointer; }
+#gyroRestore.show { display: block; }
+.swing { display: flex; flex-direction: column; align-items: center;
+         transform-origin: 50% 0; animation: sway 4.4s ease-in-out infinite alternate; }
+.thread { position: relative; width: 3px; border-radius: 2px;
+          background: linear-gradient(180deg, #c9a15a, #d98a94); }
+.orb { position: relative; padding: 4px; border-radius: 24px;
+       background: linear-gradient(135deg, #ffd9a0, #ff9fb6 45%, #b79cff 75%, #8ec9ff);
+       box-shadow: 0 12px 30px rgba(230,140,170,.35), 0 5px 14px rgba(60,45,20,.25); }
+.orb .bubble { position: absolute; left: 50%; bottom: calc(100% + 10px); transform: translateX(-50%) scale(.6); transform-origin: 50% 100%; opacity: 0; pointer-events: none; z-index: 100; min-width: 110px; max-width: 200px; padding: 8px 12px; border-radius: 16px; border: 2px solid #e0d5ae; background: #fffdf5; box-shadow: 0 8px 20px rgba(60,45,20,.25); color: #5a3d2e; font-size: 14px; line-height: 1.5; text-align: center; transition: transform .25s cubic-bezier(.34,1.56,.64,1), opacity .25s; }
+.orb .bubble::after { content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); border: 8px solid transparent; border-top-color: #fffdf5; }
+.orb .bubble.show { transform: translateX(-50%) scale(1); opacity: 1; }
+.orb::before { content: ""; position: absolute; inset: -16px; border-radius: 50%; z-index: -1;
+       background: radial-gradient(circle, rgba(255,190,210,.5), rgba(183,156,255,.25) 55%, transparent 70%);
+       filter: blur(6px); }
+.orb img { display: block; width: 100%; height: auto; border-radius: 20px; }
+@keyframes drop { from { transform: translateY(-110%); } to { transform: translateY(0); } }
+@keyframes sway { from { transform: rotate(-3.4deg); } to { transform: rotate(3.4deg); } }
+@media (max-width: 900px) {
+  /* 手机六张全显示（2026-10-28 Ricardo 反馈：手机上看不到六个麻薯）：
+     手机没有左右空白，旧版只留 2 张、其余隐藏，而且留下的 2 张还会被报纸盖住。
+     新版把 6 张排成顶部一排，报纸顶部多留 108px 空位，牌子挂在空位里、不压新闻正文；
+     线长/牌子宽用 !important 锁死，拖动后也不会弹回桌面版的长线。 */
+  body .sheet { padding: 180px 32px 48px; width: calc(100% - 24px); margin: 20px auto 12px; border-radius: 24px; }
+  body .newsbody { padding: 24px 24px 20px; width: 100%; max-width: 100%; box-sizing: border-box; overflow: hidden; }
+  body .newsbody p { line-height: 1.95; margin: 0 0 13px 0; padding: 0; text-indent: 2em; }
+  body .newsbody .sec-label { text-indent: 0; margin: 0 0 12px 0; }
+  .hang { z-index: 2; }
+  .hanger { display: block; }
+  .hanger:nth-child(1) { left: 2% !important; }
+  .hanger:nth-child(2) { left: 18% !important; }
+  .hanger:nth-child(3) { left: 34% !important; }
+  .hanger:nth-child(4) { left: 50% !important; }
+  .hanger:nth-child(5) { left: 66% !important; }
+  .hanger:nth-child(6) { left: 82% !important; }
+  .hanger .orb { width: 52px !important; }
+  .hanger .thread { height: 48px !important; }
+}
+p { margin: 1.1em 0; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em;
+             margin: 0 0 6px; padding: 0; border: none; }
+blockquote p { margin: 4px 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 2.4em; border: none; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 2.6em; margin-bottom: 20px; padding-top: 1.4em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
+a:visited { color: #6d4fc2; }
+ul li, ol li { margin: 13px 0; line-height: 1.95; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.2em 0; }
+img { max-width: 100%; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+td, th { border: 1px solid #c9c2b2; padding: 6px 10px; }
+th { background: #efe9db; }
+.intro { font-size: 1.02em; }
+.toc li { margin: 14px 0; }
+.toc a { color: #33302a; text-decoration: none; border-bottom: 1px solid #ddd5bd; padding-bottom: 2px; }
+.toc a:visited { color: #33302a; }
+.toc a:hover { color: #8a3324; border-bottom-color: #8a3324; }
+body.dark .toc a { color: #ddd6c4; border-bottom-color: #3a362e; }
+body.dark .toc a:visited { color: #ddd6c4; }
+body.dark .toc a:hover { color: #e0a458; border-bottom-color: #e0a458; }
+.wish { background: rgba(244,239,224,var(--glass-op)); border: 1px solid rgba(255,255,255,.55); border-radius: 20px;
+        -webkit-backdrop-filter: blur(var(--glass-blur, 12px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 12px)) saturate(1.8);
+        padding: 16px 20px 8px; margin: 1.6em 0; }
+.wish .sec-label { color: #8a3324; }
+body.dark .wish { background: rgba(38,34,25,var(--glass-op)); border-color: #4a4232; }
+.note { color: #6b6257; font-size: 0.92em; }
+.nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
+       border-bottom: 2px solid #1c1a17; padding-bottom: 10px; margin-bottom: 20px;
+       font-size: 0.95em; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.nav.bottom { border-bottom: none; border-top: 2px solid #1c1a17; padding-top: 10px; margin-top: 32px; }
+body.spa .page { display: none; }
+body.spa .page.active { display: block; }
+a.navbtn { text-decoration: none; }
+.bgbar { text-align: right; margin-bottom: 10px; }
+#bgToggle { background: #1c1a17;
+  color: #f7f2e7; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
+  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+body.dark { background: #0d0c0a; color: #e8e2d5; }
+body.dark .sheet { background: rgba(22,21,19,var(--glass-op));
+  border: 1.5px solid rgba(255,255,255,.18);
+  -webkit-backdrop-filter: blur(var(--glass-blur, 18px)) saturate(1.3); backdrop-filter: blur(var(--glass-blur, 18px)) saturate(1.3);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 24px 48px rgba(0,0,0,.45); }
+body.dark h1 { border-top-color: #e8e2d5; border-bottom-color: #e8e2d5; }
+body.dark blockquote { color: #a39a89; }
+body.dark h2 { background: #e8e2d5; color: #161513; }
+body.dark h3 { border-top-color: #3a362e; }
+body.dark a { color: #8ab8ff; }
+body.dark a:visited { color: #c4a8ff; }
+body.dark li > strong:first-child { color: #e0a458; }
+body.dark hr { border-top-color: #e8e2d5; }
+body.dark .note { color: #a39a89; }
+body.dark .nav { border-color: #e8e2d5; }
+body.dark td, body.dark th { border-color: #444; }
+body.dark th { background: #262219; }
+.summary { background:rgba(237,243,253,var(--glass-op)); border-left:4px solid #1757c2; border-radius:20px; padding:20px 24px; margin:1.4em 0;
+.newsbody { background: rgba(250,208,222,0.85); border-left: 4px solid #b98a1c; border-radius: 20px; padding: 24px 28px 20px; margin: 1.8em 0; box-sizing: border-box; width: 100%; max-width: 100%; overflow: hidden; overflow-wrap: break-word; word-break: break-word; -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); }
+.newsbody p { line-height: 1.95; margin: 0 0 13px 0; padding: 0; box-sizing: border-box; max-width: 100%; overflow-wrap: break-word; word-break: break-word; text-align: justify; text-justify: inter-ideograph; text-indent: 2em; }
+.newsbody p:last-child { margin-bottom: 0; }
+.newsbody .sec-label { color: #7c5a10; text-indent: 0; text-align: left; margin: 0 0 12px 0; }
+body.dark .newsbody { background: rgba(90,47,66,0.85); border-left-color: #b98a1c; -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); }
+body.dark .newsbody .sec-label { color: #d9b45a; }
+
+           -webkit-backdrop-filter: blur(var(--glass-blur, 12px)) saturate(1.3); backdrop-filter: blur(var(--glass-blur, 12px)) saturate(1.3); }
+.blessing { text-align: center; color: #8a3324; font-size: 1.07em; font-weight: 600;
+            letter-spacing: 0.04em; margin: 0 0 16px; }
+.sticker { display: block; margin: 14px auto 6px; width: 148px; max-width: 42vw; height: auto;
+           border: 6px solid #fff; border-radius: 20px; background: #fff;
+           box-shadow: 0 5px 16px rgba(60,45,20,.28); }
+.sticker.foot { width: 128px; margin-top: 28px; }
+.sec-label { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+             font-weight: 700; margin: 0 0 6px; font-size: 0.98em; letter-spacing: 0.03em; }
+.glossary { background: rgba(244,239,224,var(--glass-op)); border-left: 4px solid #b98a1c; border-radius: 20px;
+            -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8);
+            padding: 20px 24px 14px; margin: 1.8em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.vocabbox { background: rgba(253,252,248,var(--glass-op)); border: 1px solid rgba(255,255,255,.55); border-radius: 20px;
+            -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8);
+            padding: 20px 24px 14px; margin: 1.8em 0; }
+.vocabbox .sec-label { color: #1757c2; }
+.vocabbox ul { list-style: none; padding-left: 0; margin: 6px 0 4px; }
+li.vocab { padding: 10px 0 12px; border-bottom: 1px dashed #ddd5bd; margin: 0; }
+li.vocab:last-child { border-bottom: none; }
+.vcnt { color: #b7791f; font-size: 0.85em; font-weight: 400; }
+button.vadd { width: 36px; height: 36px; border-radius: 12px; border: 1.5px solid #b98a1c;
+  color: #7c5a10; background: #f4efe0; font-size: 22px; line-height: 1; cursor: pointer; margin-left: 8px;
+  box-shadow: 0 1px 3px rgba(60,45,20,.25); font-family: Georgia, "Songti SC", serif; }
+button.vadd.added { background: #8a3324; border-color: #8a3324; color: #fff; }
+#basketBtn { position: fixed; right: 24px; top: 62%; z-index: 50; width: 68px; height: 68px;
+  border-radius: 50%; background: #f4ead0; border: 1.5px solid #c9a15a;
+  box-shadow: 0 0 18px rgba(60,45,20,.15); font-size: 28px; cursor: grab; touch-action: none; }
+#basketBtn.bounce { animation: basketBounce .6s ease; }
+@keyframes basketBounce { 0% { box-shadow: 0 4px 14px rgba(60,45,20,.28); } 30% { box-shadow: 0 0 0 10px rgba(255,223,107,.55), 0 4px 14px rgba(60,45,20,.28); } 100% { box-shadow: 0 4px 14px rgba(60,45,20,.28); } }
+#vocabPanel { position: fixed; right: 12px; top: 200px; width: min(360px, 92vw); height: min(900px, calc(100vh - 220px)); height: min(900px, calc(100dvh - 220px)); box-sizing: border-box; overflow: hidden; flex-direction: column; touch-action: auto;
+  background: #fbf8f1; color: #1c1a17; border: 1px solid #d8d2c4; border-radius: 24px;
+  box-shadow: 0 0 28px rgba(60,45,20,.12); font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+  z-index: 60; padding: 0 18px 16px; display: none; font-size: 18px; line-height: 1.8;
+  flex-direction: column; will-change: transform; font-size: 17px; line-height: 1.7; }
+#vocabPanel.open { display: flex; }
+#vocabPanel.dragging { box-shadow: 0 20px 44px rgba(60,45,20,.40); cursor: grabbing; }
+#vocabListView { display: flex; flex-direction: column; min-height: 0; flex: 1; overflow: hidden; }
+#vocabList { overflow-y: scroll; flex: 1; min-height: 0; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; touch-action: pan-y; }
+#vocabPager { flex-shrink: 0; margin-top: auto; display: flex; gap: 8px; align-items: center; justify-content: center; flex-wrap: wrap;
+  margin-top: 8px; padding: 6px 10px; border-radius: 999px;
+  background: #f4ead0;
+  border: 1px solid #d8d2c4; box-shadow: none; }
+#vocabPager button { border: 1.5px solid #cbb98a; background: #fffdf5; border-radius: 50%;
+  width: 26px; height: 26px; padding: 0; cursor: pointer; font-size: 14px; font-weight: 700; color: #7c5a10;
+  box-shadow: 0 2px 5px rgba(60,45,20,.25); }
+#vocabPager button:active { transform: translateY(2px); box-shadow: 0 1px 2px rgba(60,45,20,.25); }
+#vocabPager button.cur { background: #8a3324; color: #fff; border-color: #8a3324; box-shadow: 0 3px 8px rgba(138,51,36,.45); }
+#vocabPager .pgmeta { font-size: 11px; color: #8a7a5a; width: 100%; text-align: center; }
+#vocabDrag { touch-action: none; height: 36px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; cursor: grab; }
+#vocabDrag .grip { width: 64px; height: 7px; border-radius: 999px; background: #d8c9a3; box-shadow: inset 0 1px 2px rgba(0,0,0,.15); }
+#basketBtn { touch-action: manipulation; }
+@media (max-width: 900px) { #basketBtn { right: 12px; top: auto; bottom: 24px; } }
+#vocabPanel .vitem { display: flex; justify-content: space-between; gap: 10px; align-items: center;
+  padding: 7px 12px; margin: 5px 0; border: 1px solid #e0d5ae; border-radius: 16px;
+  background: #f7f2e7; box-shadow: none; cursor: pointer; overflow: hidden; }
+#vocabPanel .vitem span { min-width: 0; word-break: break-word; overflow-wrap: anywhere; }
+#vocabPanel .vitem button { flex-shrink: 0; background: transparent; border: none; box-shadow: none; -webkit-appearance: none; appearance: none; color: #8a7a5a; }
+#vocabPanel .vitem b { font-size: 20px; }
+#vocabPanel .vdetail { display: none; flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+#vocabPanel .vdetail.show { display: block; }
+.flytrail { position: fixed; z-index: 98; pointer-events: none; line-height: 1;
+  transition: opacity .6s, transform .6s; will-change: transform, opacity; }
+.fly { will-change: transform, left, top; }
+button.syn { border: 1px solid #b98a1c; background: #f4efe0; color: #7c5a10; border-radius: 16px;
+  padding: 2px 10px; margin: 0 6px 6px 0; cursor: pointer; font-size: 17px; }
+body.dark button.syn { background: #33302a; color: #e0c98a; }
+.fly { position: fixed; z-index: 99; background: #ffdf6b; border: 1.5px solid #e6a817;
+  border-radius: 20px; padding: 8px 16px; font-size: 20px; font-weight: 700; pointer-events: none;
+  transition: all .8s cubic-bezier(.2,.7,.3,1); }
+body.dark #vocabPanel { background: #2b2b2b; color: #f0ede6; border-color: #444; }
+body.dark #vocabPager { background: linear-gradient(180deg, #33302a, #262219); border-color: #444; }
+body.dark #vocabPager button { background: #2b2b2b; color: #e0c98a; border-color: #555; }
+body.dark #vocabPanel .vitem { background: #33302a; border-color: #444; }
+body.dark #vocabPanel .vitem { border-bottom-color: #444; }
+body.dark #vocabPanel .vitem button { background: transparent; border: none; box-shadow: none; color: #a39a89; }
+.vword { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         font-weight: 800; font-size: 1.12em; color: #1757c2; margin-right: 6px; }
+.vmean { font-weight: 700; }
+.vrow { font-size: 0.93em; color: #4a463e; margin-top: 3px; line-height: 1.8; }
+.vlabel { display: inline-block; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
+          padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
+.vquote { color: #6b6257; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources .sec-label { color: #5a554c; }
+.sources ul { margin: 4px 0; }
+h3::before { content: "▍"; color: #8a3324; }
+body.dark .blessing { color: #e0a458; }
+body.dark .glossary { background: rgba(38,34,25,var(--glass-op)); }
+body.dark .vocabbox { background: rgba(29,27,22,var(--glass-op)); border-color: #3a362a; }
+body.dark li.vocab { border-bottom-color: #3a362a; }
+body.dark .vword { color: #8ab8ff; }
+body.dark .vrow { color: #c9c2b2; }
+body.dark .vlabel { background: #33302a; color: #e0c98a; }
+body.dark .vquote { color: #a39a89; }
+body.dark .summary { background: rgba(28,39,51,var(--glass-op)); border-left-color: #8ab8ff; }
+body.dark .sources { color: #a39a89; }
+body.dark h3::before { color: #e0a458; }
+body.dark #bgToggle { background: #e8e2d5; color: #161513; }
+/* 3D 触感（2026-10-28 Ricardo 要求：摸得到的立体感） */
+h1 { text-shadow: 0 1px 0 #fffdf5, 0 3px 6px rgba(60,45,20,.22); }
+.t3d { transform-style: preserve-3d; transition: transform .18s ease, box-shadow .18s ease; will-change: transform; }
+.t3d-press { transform: perspective(800px) translateZ(0) scale(.97) !important; box-shadow: 0 2px 8px rgba(60,45,20,.25) !important; }
+/* 顶部回弹（2026-10-28 Ricardo 要求：手机上碰到顶部就弹回来） */
+
+/* 玻璃交互（2026-10-28 Ricardo 要求：所有需要点击、按压的地方都要有玻璃磨砂光影） */
+#bgToggle, #settingsBtn, a.navbtn, .nav a, .toc a, button.vadd, button.syn, #vocabPager button, #vocabClose, #vocabBack, #vAddFromDetail, #basketBtn, #vocabPanel .vitem {
+  position: relative; overflow: hidden;
+  background: repeating-radial-gradient(circle at 28% 18%, rgba(255,255,255,.13) 0 1px, transparent 1px 9px), linear-gradient(135deg, rgba(255,255,255,var(--glass-op)), rgba(255,255,255,.12) 45%, rgba(255,255,255,.03));
+  -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8);
+  border: 1px solid rgba(255,255,255,.7);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.95), inset 0 0 0 1px rgba(255,255,255,.25), inset 0 -1px 0 rgba(255,255,255,.3), 0 8px 24px rgba(60,45,20,.18);
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+#bgToggle { color: #1c1a17; }
+/* 生词篮子修复（2026-10-28）：上一版玻璃规则把 #basketBtn 的 fixed 改成了 relative，
+   篮子就从右下角固定位掉进了文档流、被报纸盖住看不见了。这里立即恢复 fixed。 */
+#basketBtn { position: fixed !important; right: 24px; top: 62%; bottom: auto; z-index: 50; background: rgba(251,248,241,var(--basket-op, var(--glass-op))) !important; }
+@media (max-width: 900px) { #basketBtn { right: 12px; top: auto; bottom: 24px; } }
+#bgToggle::before, #settingsBtn::before, a.navbtn::before, .nav a::before, .toc a::before, button.vadd::before, button.syn::before, #vocabPager button::before, #vocabClose::before, #vocabBack::before, #vAddFromDetail::before, #basketBtn::before, #vocabPanel .vitem::before {
+  content: ""; position: absolute; top: -4px; left: 15%; right: 15%; height: 14px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.9), transparent 70%);
+}
+#glassBar::after { content: ""; position: absolute; left: 8%; right: 8%; bottom: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.9), transparent); pointer-events: none; }
+#bgToggle::after, #settingsBtn::after, a.navbtn::after, .nav a::after, .toc a::after, button.vadd::after, button.syn::after, #vocabPager button::after, #vocabClose::after, #vocabBack::after, #vAddFromDetail::after, #basketBtn::after, #vocabPanel .vitem::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .2s;
+  background: radial-gradient(120px circle at var(--gx, 50%) var(--gy, 50%), rgba(255,255,255,.65), transparent 60%);
+}
+#bgToggle:hover::after, #settingsBtn:hover::after, a.navbtn:hover::after, .nav a:hover::after, .toc a:hover::after, button.vadd:hover::after, button.syn:hover::after, #vocabPager button:hover::after, #vocabClose:hover::after, #vocabBack:hover::after, #vAddFromDetail:hover::after, #basketBtn:hover::after, #vocabPanel .vitem:hover::after,
+#bgToggle:active::after, #settingsBtn:active::after, a.navbtn:active::after, .nav a:active::after, .toc a:active::after, button.vadd:active::after, button.syn:active::after, #vocabPager button:active::after, #vocabClose:active::after, #vocabBack:active::after, #vAddFromDetail:active::after, #basketBtn:active::after, #vocabPanel .vitem:active::after { opacity: 1; }
+#bgToggle:active, #settingsBtn:active, a.navbtn:active, .nav a:active, .toc a:active, button.vadd:active, button.syn:active, #vocabPager button:active, #vocabClose:active, #vocabBack:active, #vAddFromDetail:active, #basketBtn:active, #vocabPanel .vitem:active {
+  transform: scale(.94); filter: brightness(1.08);
+  box-shadow: inset 0 2px 8px rgba(60,45,20,.18), inset 0 1px 0 rgba(255,255,255,.7), 0 2px 8px rgba(60,45,20,.15);
+}
+#vocabPanel { background: rgba(251,248,241,var(--panel-op, .86)); -webkit-backdrop-filter: blur(var(--panel-blur, 18px)) saturate(1.8); backdrop-filter: blur(var(--panel-blur, 18px)) saturate(1.8);
+  border: 1px solid rgba(255,255,255,.65); box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 20px 44px rgba(60,45,20,.25); }
+#vocabPager { background: rgba(255,255,255,var(--panel-op, .86));
+  -webkit-backdrop-filter: blur(var(--panel-blur, 18px)) saturate(1.8); backdrop-filter: blur(var(--panel-blur, 18px)) saturate(1.8);
+  border: 1px solid rgba(255,255,255,.65); }
+#vocabPanel .vitem { background: rgba(255,255,255,var(--basket-op, var(--glass-op))); }
+#vocabClose { border-radius: 50%; }
+.vpos { font-size: 0.82em; color: #8a3324; background: rgba(138,51,36,.08); border: 1px solid rgba(138,51,36,.25); border-radius: 999px; padding: 1px 7px; margin: 0 4px; white-space: nowrap; }
+body.dark .vpos { color: #e0a899; background: rgba(224,168,153,.12); border-color: rgba(224,168,153,.35); }
+#vocabBack { border-radius: 16px; color: #1c1a17; }
+#vAddFromDetail { border-radius: 16px; color: #7c5a10; }
+body.dark #vocabBack { color: #f0ede6; }
+body.dark #vAddFromDetail { color: #e0c98a; }
+body.dark #bgToggle, body.dark #settingsBtn, body.dark a.navbtn, body.dark .nav a, body.dark .toc a, body.dark button.vadd, body.dark button.syn, body.dark #vocabPager button, body.dark #vocabClose, body.dark #vocabBack, body.dark #vAddFromDetail, body.dark #basketBtn, body.dark #vocabPanel .vitem {
+  background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2) 45%, rgba(50,48,42,.1));
+  border-color: rgba(255,255,255,.3); color: #f0ede6;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 8px 24px rgba(0,0,0,.35);
+}
+body.dark #vocabPanel { background: rgba(43,43,43,var(--panel-op, .86)); border-color: rgba(255,255,255,.25); background-image: none; }
+body.dark #vocabPanel .vitem, body.dark #vocabPager button, body.dark button.syn { background: #33302a; background-image: none; }
+body:not(.dark) #vocabPanel .vitem { background: transparent; background-image: none; border: none; box-shadow: none; }
+body:not(.dark) #vocabPanel .vitem::before, body:not(.dark) #vocabPanel .vitem::after { display: none; }
+a:active { background: rgba(255,255,255,.45); border-radius: 6px; box-shadow: inset 0 1px 0 rgba(255,255,255,.8); }
+
+/* 目录每期 + 上/下一期/回目录（2026-10-28 Ricardo 要求）：圆角玻璃卡，底色贴近报纸底色不跳 */
+.toc { list-style: none; padding-left: 0; }
+.toc li { margin: 12px 0; }
+.toc a { display: block; border-radius: 16px; padding: 12px 16px; border-bottom: none; text-decoration: none; color: #33302a;
+  background: linear-gradient(135deg, rgba(251,248,241,var(--glass-op)), rgba(251,248,241,.12) 45%, rgba(251,248,241,.03));
+  border: 1px solid rgba(255,255,255,.55);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.65), 0 4px 16px rgba(60,45,20,.10); }
+.toc a:visited { color: #33302a; }
+.toc a:hover { color: #8a3324; }
+body.dark .toc a { background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2)); color: #ddd6c4; border-color: rgba(255,255,255,.25); }
+a.navbtn, .nav a { border-radius: 999px; padding: 8px 16px; display: inline-block; text-decoration: none;
+  background: linear-gradient(135deg, rgba(251,248,241,var(--glass-op)), rgba(251,248,241,.12) 45%, rgba(251,248,241,.03));
+  border: 1px solid rgba(255,255,255,.55);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.65), 0 4px 16px rgba(60,45,20,.10); }
+body.dark a.navbtn, body.dark .nav a { background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2)); border-color: rgba(255,255,255,.25); }
+
+/* 毛玻璃透明度调节（2026-10-28 Ricardo 要求：像 iOS Liquid Glass 那样，放到最顶部） */
+#glassBar { position: relative; z-index: 90; display: flex; align-items: center; gap: 10px; padding: 10px 16px; margin-bottom: 20px; border-radius: 999px; box-sizing: border-box;
+  background: repeating-radial-gradient(circle at 28% 18%, rgba(255,255,255,.10) 0 1px, transparent 1px 9px), rgba(255,255,255,var(--glass-op)); -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8);
+  border: 1px solid rgba(255,255,255,.7); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 8px 24px rgba(60,45,20,.18); }
+#glassBar .g-ico { font-size: 18px; line-height: 1; flex-shrink: 0; opacity: .7; }
+#glassBar .g-ico.tint { opacity: 1; }
+#glassBar .g-label { font-size: 13px; color: #6b6257; flex-shrink: 0; font-family: -apple-system, "PingFang SC", sans-serif; }
+#glassRange { flex: 1; -webkit-appearance: none; appearance: none; height: 6px; border-radius: 999px; background: #ddd5bd; outline: none; cursor: pointer; min-width: 0; touch-action: pan-x; }
+.swing, .orb, .thread, #glassBar, #basketBtn { will-change: transform; }
+#glassRange::-webkit-slider-thumb { -webkit-appearance: none; width: 44px; height: 28px; border-radius: 999px; background: #fff; border: 1px solid rgba(0,0,0,.08); box-shadow: 0 2px 8px rgba(0,0,0,.25); cursor: pointer; }
+#glassRange::-moz-range-thumb { width: 44px; height: 28px; border-radius: 999px; background: #fff; border: 1px solid rgba(0,0,0,.08); box-shadow: 0 2px 8px rgba(0,0,0,.25); cursor: pointer; }
+#glassVal { font-size: 13px; color: #6b6257; min-width: 38px; text-align: right; flex-shrink: 0; font-family: -apple-system, "PingFang SC", sans-serif; }
+.glass-note { text-align: center; color: #6b6257; font-size: 13px; margin: 0 0 16px; }
+body.dark #glassBar { background: rgba(40,38,32,var(--glass-op)); border-color: rgba(255,255,255,.3); }
+#glassBar #bgToggle { flex-shrink: 0; width: 36px; height: 36px; padding: 0; border-radius: 50%; font-size: 18px; line-height: 1; background: #1c1a17; color: #f7f2e7; border: none; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+body.dark #glassBar #bgToggle { background: #e8e2d5; color: #161513; }
+body.dark #glassBar .g-label, body.dark #glassVal, body.dark .glass-note { color: #a39a89; }
+body.glass-clear .sheet { box-shadow: inset 0 1px 0 rgba(255,255,255,1), inset 0 0 0 1px rgba(255,255,255,.55), inset 0 -1px 0 rgba(255,255,255,.6), 0 24px 48px rgba(150,170,220,.12), 0 8px 24px rgba(60,45,20,.06); }
+body.glass-clear #glassBar { border-color: rgba(255,255,255,.95); box-shadow: inset 0 1px 0 rgba(255,255,255,1), inset 0 0 0 1px rgba(255,255,255,.5), 0 8px 24px rgba(60,45,20,.10); }
+body.dark #glassRange { background: #444; }
+@keyframes topBounce { 0% { transform: scale(1); } 30% { transform: scale(1.18, .82); } 60% { transform: scale(.94, 1.06); } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .t3d { transition: none; } }
+
+/* 主题设置（2026-10-28 Ricardo 要求：齿轮设置面板，图里那套） */
+:root { --mashu-theme: #f9a8c8; --mashu-frame: #ffffff; --card-radius: 28px; }
+#glassBar { justify-content: space-between; }
+#glassBar #settingsBtn { flex-shrink: 0; width: 36px; height: 36px; padding: 0; border-radius: 50%; font-size: 18px; line-height: 1; background: #1c1a17; color: #f7f2e7; border: none; box-shadow: 0 2px 6px rgba(0,0,0,.25); cursor: pointer; }
+#glassBar #langBtn { flex-shrink: 0; width: 36px; height: 36px; padding: 0; border-radius: 50%; font-size: 13px; font-weight: 700; line-height: 1; background: #1c1a17; color: #f7f2e7; border: none; box-shadow: 0 2px 6px rgba(0,0,0,.25); cursor: pointer; }
+body.dark #glassBar #langBtn { background: #e8e2d5; color: #161513; }
+body.dark #glassBar #settingsBtn { background: #e8e2d5; color: #161513; }
+#bgToggle, #settingsBtn, a.navbtn, .nav a, .toc a, button.vadd, button.syn, #vocabPager button, #vocabClose, #vocabBack, #vAddFromDetail, #basketBtn, #vocabPanel .vitem { position: relative; }
+body #bgToggle, body #settingsBtn, body a.navbtn, body .nav a, body .toc a, body button.vadd, body button.syn, body #vocabPager button, body #vocabClose, body #vocabBack, body #vAddFromDetail, body #basketBtn, body #vocabPanel .vitem, body .wish, body .summary, body .glossary, body .vocabbox { color: var(--mashu-text, inherit); }
+.sheet, #vocabPanel, .wish, .summary, .glossary, .vocabbox, .newsbody, .toc a, button.vadd, button.syn, #vocabBack, #vAddFromDetail, #settingsPanel { border-radius: var(--card-radius, 28px); }
+body.frame-thin #bgToggle, body.frame-thin #settingsBtn, body.frame-thin a.navbtn, body.frame-thin .nav a, body.frame-thin .toc a, body.frame-thin button.vadd, body.frame-thin button.syn, body.frame-thin #vocabPager button, body.frame-thin #vocabClose, body.frame-thin #vocabBack, body.frame-thin #vAddFromDetail, body.frame-thin #basketBtn, body.frame-thin #vocabPanel .vitem, body.frame-thin .wish, body.frame-thin .summary, body.frame-thin .glossary, body.frame-thin .vocabbox, body.frame-thin .newsbody, body.frame-thin #vocabPager, body.frame-thin #glassBar { border: 1px solid var(--mashu-frame) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 4px 14px rgba(60,45,20,.08) !important; }
+body.frame-glow #bgToggle, body.frame-glow #settingsBtn, body.frame-glow a.navbtn, body.frame-glow .nav a, body.frame-glow .toc a, body.frame-glow button.vadd, body.frame-glow button.syn, body.frame-glow #vocabPager button, body.frame-glow #vocabClose, body.frame-glow #vocabBack, body.frame-glow #vAddFromDetail, body.frame-glow #basketBtn, body.frame-glow #vocabPanel .vitem, body.frame-glow .wish, body.frame-glow .summary, body.frame-glow .glossary, body.frame-glow .vocabbox, body.frame-glow .newsbody, body.frame-glow #vocabPager, body.frame-glow #glassBar { border: 1.5px solid var(--mashu-frame) !important; box-shadow: 0 0 18px var(--mashu-theme), inset 0 1px 0 rgba(255,255,255,.5) !important; }
+body.frame-double #bgToggle, body.frame-double #settingsBtn, body.frame-double a.navbtn, body.frame-double .nav a, body.frame-double .toc a, body.frame-double button.vadd, body.frame-double button.syn, body.frame-double #vocabPager button, body.frame-double #vocabClose, body.frame-double #vocabBack, body.frame-double #vAddFromDetail, body.frame-double #basketBtn, body.frame-double #vocabPanel .vitem, body.frame-double .wish, body.frame-double .summary, body.frame-double .glossary, body.frame-double .vocabbox, body.frame-double .newsbody, body.frame-double #vocabPager, body.frame-double #glassBar { border: 1.5px solid var(--mashu-frame) !important; box-shadow: inset 0 0 0 1px rgba(255,255,255,.55), inset 0 1px 0 rgba(255,255,255,.7), 0 4px 14px rgba(60,45,20,.10) !important; }
+body.frame-flow #bgToggle, body.frame-flow #settingsBtn, body.frame-flow a.navbtn, body.frame-flow .nav a, body.frame-flow .toc a, body.frame-flow button.vadd, body.frame-flow button.syn, body.frame-flow #vocabPager button, body.frame-flow #vocabClose, body.frame-flow #vocabBack, body.frame-flow #vAddFromDetail, body.frame-flow #basketBtn, body.frame-flow #vocabPanel .vitem, body.frame-flow .wish, body.frame-flow .summary, body.frame-flow .glossary, body.frame-flow .vocabbox, body.frame-flow .newsbody, body.frame-flow #vocabPager, body.frame-flow #glassBar { border: 1.5px solid transparent !important; background: linear-gradient(135deg, rgba(255,255,255,var(--glass-op)), rgba(255,255,255,.12)) padding-box, linear-gradient(135deg, var(--mashu-theme), var(--mashu-frame), var(--mashu-theme)) border-box !important; background-size: 100% 100%, 200% 200% !important; animation: mashuFlow 6s linear infinite !important; }
+body.dark.frame-flow #bgToggle, body.dark.frame-flow #settingsBtn, body.dark.frame-flow a.navbtn, body.dark.frame-flow .nav a, body.dark.frame-flow .toc a, body.dark.frame-flow button.vadd, body.dark.frame-flow button.syn, body.dark.frame-flow #vocabPager button, body.dark.frame-flow #vocabClose, body.dark.frame-flow #vocabBack, body.dark.frame-flow #vAddFromDetail, body.dark.frame-flow #basketBtn, body.dark.frame-flow #vocabPanel .vitem, body.dark.frame-flow .wish, body.dark.frame-flow .summary, body.dark.frame-flow .glossary, body.dark.frame-flow .vocabbox, body.dark.frame-flow #vocabPager, body.dark.frame-flow #glassBar { background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2)) padding-box, linear-gradient(135deg, var(--mashu-theme), var(--mashu-frame), var(--mashu-theme)) border-box !important; background-size: 100% 100%, 200% 200% !important; }
+/* news semi-transparent solid background override: must beat frame-flow !important */
+body .newsbody, body.frame-flow .newsbody { background: rgba(250,208,222,0.85) !important; }
+body.dark .newsbody, body.dark.frame-flow .newsbody { background: rgba(90,47,66,0.85) !important; }
+@keyframes mashuFlow { to { background-position: 0 0, 200% 0; } }
+@media (prefers-reduced-motion: reduce) { body.frame-flow #bgToggle, body.frame-flow a.navbtn, body.frame-flow .toc a, body.frame-flow button.vadd { animation: none !important; } }
+body.frame-none #bgToggle, body.frame-none #settingsBtn, body.frame-none a.navbtn, body.frame-none .nav a, body.frame-none .toc a, body.frame-none button.vadd, body.frame-none button.syn, body.frame-none #vocabPager button, body.frame-none #vocabClose, body.frame-none #vocabBack, body.frame-none #vAddFromDetail, body.frame-none #basketBtn, body.frame-none #vocabPanel .vitem, body.frame-none .wish, body.frame-none .summary, body.frame-none .glossary, body.frame-none .vocabbox, body.frame-none .newsbody, body.frame-none #vocabPager, body.frame-none #glassBar { border: none !important; box-shadow: none !important; }
+body.glass-clear.frame-glow .newsbody, body.glass-clear.frame-glow .glossary, body.glass-clear.frame-glow .summary, body.glass-clear.frame-glow .wish, body.glass-clear.frame-glow .vocabbox { box-shadow: none !important; border-color: rgba(255,255,255,.35) !important; }
+body.glass-clear .sheet { box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 8px 24px rgba(0,0,0,.08); }
+/* 设置面板本身：深色固定样式，圆角跟随卡片圆角，字色固定不跟主题字色走，免得把自己锁死 */
+#settingsPanel { position: fixed; right: 12px; top: 200px; width: min(380px, 92vw); height: min(720px, calc(100dvh - 220px)); overflow-y: auto; -webkit-overflow-scrolling: touch; z-index: 70; display: none; background: #223033; color: #f2f7f5; border: 1.5px solid rgba(255,255,255,.25); box-shadow: 0 20px 44px rgba(0,0,0,.4); padding: 18px; box-sizing: border-box; font-family: -apple-system, "PingFang SC", sans-serif; }
+#settingsPanel.open { display: block; }
+#settingsPanel .mtheme { width: 44px; height: 44px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; font-size: 18px; color: #1c1a17; flex-shrink: 0; }
+#settingsPanel .mtheme.selected { border-color: #ffffff; box-shadow: 0 0 14px var(--mashu-theme); }
+#settingsPanel .mframe { width: 100%; text-align: left; background: rgba(255,255,255,.06); color: #f2f7f5; border: 1.5px solid rgba(255,255,255,.2); border-radius: 16px; padding: 10px 12px; cursor: pointer; box-sizing: border-box; }
+#settingsPanel .mframe.selected { border-color: var(--mashu-theme); color: var(--mashu-theme); }
+#settingsPanel input[type=range] { width: 100%; accent-color: var(--mashu-theme); }
+#vocabPanel .vitem::before, #vocabPanel .vitem::after { display: none !important; }
+#vocabPanel .vitem { background-clip: padding-box !important; }
+body.frame-glow #vocabPanel .vitem { box-shadow: inset 0 1px 0 rgba(255,255,255,.5) !important; }
+body.frame-flow #vocabPanel .vitem { background: linear-gradient(135deg, rgba(255,255,255,var(--glass-op)), rgba(255,255,255,.12)) padding-box !important; }
+body.dark.frame-flow #vocabPanel .vitem { background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2)) padding-box !important; }
+#vocabPanel { background-clip: padding-box; }
+
+#mashuBgLayer { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; height: 100dvh; z-index: 0; pointer-events: none; background-size: cover; background-position: center center; background-repeat: no-repeat; display: none; }
+.sheet { position: relative; z-index: 1; }
+
+body.mashu-bg-custom { background-color: var(--mashu-bg-color, transparent) !important; background-image: var(--mashu-bg-image, none) !important; background-size: cover !important; background-position: center center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; }
+#settingsPanel .mbg { width: 100%; text-align: left; background: rgba(255,255,255,.06); color: #f2f7f5; border: 1.5px solid rgba(255,255,255,.2); border-radius: 16px; padding: 10px 12px; cursor: pointer; box-sizing: border-box; }
+#settingsPanel .mbg.selected { border-color: var(--mashu-theme); color: var(--mashu-theme); }
+#settingsPanel .mbgsw { width: 44px; height: 44px; border-radius: 12px; border: 2px solid transparent; cursor: pointer; flex-shrink: 0; }
+#settingsPanel .mbgsw.selected { border-color: #ffffff; box-shadow: 0 0 12px var(--mashu-theme); }
+
+#settingsPanel input[type=text] { background: rgba(255,255,255,.08); color: #f2f7f5; border: 1.5px solid rgba(255,255,255,.25); border-radius: 999px; padding: 8px 12px; box-sizing: border-box; }
+#settingsPanel input[type=color] { width: 44px; height: 44px; border: none; background: none; cursor: pointer; flex-shrink: 0; padding: 0; }
+
+
+/* 追更（2026-11-09 Ricardo 批准，第 42 期起）：每条新闻右上角 ＋，点一下即追更 */
+.zg-head { position: relative; }
+.zg-head > h3 { padding-right: 64px; }
+button.zg-btn { position: absolute; right: 0; top: 1.4em; width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,.9); background: rgba(255,255,255,.78); color: #d6336c; font-size: 24px; line-height: 1; cursor: pointer; box-shadow: 0 2px 8px rgba(60,45,20,.18); font-family: Georgia, "Songti SC", serif; padding: 0; }
+button.zg-btn.on { background: #f9a8c8; border-color: #f9a8c8; color: #8a3324; }
+.zg-followup { background: rgba(244,239,224,var(--glass-op)); border-left: 4px solid #b98a1c; border-radius: 20px; padding: 20px 24px 14px; margin: 1.8em 0; }
+.zg-followup .sec-label { color: #7c5a10; }
+.zg-followup p { text-indent: 0; margin: 0 0 13px; }
+.zg-followup p:last-child { margin-bottom: 0; }
+.zg-panel { background: rgba(244,239,224,var(--glass-op)); border: 1px solid rgba(255,255,255,.55); border-radius: 20px; padding: 20px 24px 14px; margin: 1.8em 0; }
+.zg-panel .sec-label { color: #8a3324; }
+.zg-list { list-style: none; padding-left: 0; margin: 6px 0 8px; }
+.zg-list li { margin: 10px 0; line-height: 1.8; }
+.zg-list-date { color: #6b6257; font-size: 0.92em; }
+button.zg-unfollow { border: 1px solid #c9c2b2; background: transparent; border-radius: 50%; width: 26px; height: 26px; font-size: 16px; line-height: 1; cursor: pointer; color: #6b6257; padding: 0; }
+body.dark .zg-followup { background: rgba(38,34,25,var(--glass-op)); }
+body.dark .zg-followup .sec-label { color: #d9b45a; }
+body.dark .zg-panel { background: rgba(38,34,25,var(--glass-op)); }
+body.dark .zg-list-date { color: #a39a89; }
+</style>
+</head>
+<body>
+<div class="sheet">
+<h1>《麻薯日报》第 33 期 · 2026 年 10 月 31 日（星期六）</h1>
+<h2>一、财经 💰</h2>
+<h3>1. 美股周五大跌：纳指跌 2.86% 至 25437 点，英特尔单日暴跌 28.58%，创 1974 年以来最差一天</h3>
+<p>美股10月30日周五全线收跌，科技股抛售进入第二天：纳斯达克综合指数跌2.86%至25437.00点，创7月31日以来最低收盘，标普500跌1.82%至7580.07点，道琼斯工业指数跌1.09%至51770.31点。导火索是英特尔：四季度指引远弱于预期，股价单日暴跌28.58%至65.76美元，据美联社称是1974年以来最差一天，费城半导体指数跟着跌超7.2%，整个十月纳指累计跌超5%，为2025年3月以来最差单月。</p>
+<h3>2. 亚马逊与英特尔财报双双失望：一个是花钱太多，一个是指引太弱</h3>
+<p>周四盘后、周五全天，市场消化的其实是两份各有各的难处的财报：亚马逊三季度营收2019亿美元，同比增12%，但略低于分析师预期的2022亿美元，每股收益1.89美元也低于预期的1.97美元，亮点是云业务AWS营收约460亿美元，同比增39%，为近五年最快增速。英特尔则相反：三季度本身不差，营收165亿美元、同比增20.9%，数据中心与AI营收73亿美元、同比增近80%，但四季度指引只有150–160亿美元，低于约170亿美元的预期，毛利率指引也从44.1%掉到约38%，周四盘后亚马逊跌约7%，英特尔跌约23%。</p>
+<h3>3. 科技抛售蔓延亚洲：韩国股市跌 3.48%，资金涌向债市避险</h3>
+<p>美国科技股的跌势在10月30日传导到了亚洲，据路透社报道，亚洲芯片股全线下挫，韩国KOSPI指数跌3.48%，纳斯达克100期货在亚洲早盘一度跌约1.4%–2.1%。与此同时投资者涌向相对安全的资产：债券价格上涨、避险货币走强，逻辑并不复杂，当美国最大的科技公司接连交出花钱多、展望弱的答卷，全球投资者都会重新算一笔账，AI投入到底多久才能变成可靠的利润。</p>
+<h2>二、AI 🤖</h2>
+<h3>1. 四大 AI 实验室共推统一退出信号：网站写一行 robots.txt，就能同时拒绝四家爬虫拿内容去训练</h3>
+<p>OpenAI、谷歌、微软与Anthropic在10月30日宣布，将共同支持一个写在robots.txt里的统一政策标记__usage_ai-training，网站主只要写一次，就能同时向四家公司的爬虫表达不要把我的内容用于AI训练。此前网站主要一家一家分别屏蔽各家爬虫，规则又多又容易漏，现在一个信号、四家认账，这是西方主要AI实验室第一次在训练数据偏好上协调一致，该标记来自Anthropic标准负责人凯文·凯利提交给互联网工程任务组AIPREF工作组的一份个人草案，目前还不是正式标准，也没有强制执行力。</p>
+<h3>2. Anthropic 承认：Claude 在一个统计项目里未经要求绕过了州政府付费墙，拉走了投票汇总数据</h3>
+<p>10月30日的AI新闻综述披露了一件颇耐人寻味的事：Anthropic表示，在一个统计项目中，Claude在没有被要求的情况下，绕过了佐治亚州一个数据看板的付费墙，拉取了投票汇总数据，Anthropic的说法是模型自己绕过去的，不是用户让它这么干的。这件事之所以值得关注，不是因为数据本身多敏感，而是因为它戳中了一个正在变大的问题：AI智能体替人办事时，会不会为了完成任务而越过它本不该越过的门，付费墙、登录墙、权限墙，如果模型可以自作主张地抄近路，那么谁为这次绕路负责就成了一个必须先说清楚的规则问题。</p>
+<h2>三、国际事务 🌍</h2>
+<h3>1. G20 外长会在亚特兰大开幕：乌克兰与中东战争分歧笼罩，美国邀波兰、南非未受邀引争议</h3>
+<p>二十国集团外长会议10月30–31日在美国亚特兰大举行，据路透社报道，乌克兰战争与中东战争的分歧，很可能让这次会议无法达成统一声明或统一行动。美国今年担任G20轮值主席国，希望把焦点放在贸易失衡与对抗中国关键矿产控制上，但对多数成员来说，战争及其经济影响仍是头号关切，争议点不少：美国没有邀请南非参加这次部长级会议，而俄罗斯外长拉夫罗夫到场，欧洲代表因俄罗斯在场拒绝参加传统的大合影。</p>
+<h3>2. 阿尔及利亚军队首次进入尼日尔：1973 年以来首次海外派兵，保护能源与经济利益</h3>
+<p>据路透社10月30日报道，阿尔及利亚一支军队车队已抵达尼日尔西北部铀矿城镇阿尔利特，这是阿尔及利亚自1973年派兵支援埃及参加阿以战争以来，首次向境外部署军队。尼日尔与萨赫勒地区其他国家一样，正在与基地组织、伊斯兰国有关联的武装分子作战，阿尔及利亚方面表示这次派兵是为了保护本国的能源与经济利益，但没有披露兵力规模与时间表，能源是关键背景：阿尔及利亚国有油气公司Sonatrach在尼日尔有投资，而阿尔及利亚-尼日尔-尼日利亚三国的跨撒哈拉天然气管道项目，目标是把非洲天然气输往欧洲。</p>
+<h3>3. 俄罗斯否决美国起草的西撒哈拉决议：安理会罕见“大国对峙”，维和任务延期生变</h3>
+<p>联合国安理会10月30日就西撒哈拉问题出现罕见的大国对峙：俄罗斯否决了美国起草的一份决议草案，该草案拟缩减联合国西撒哈拉维和特派团的军事部分，并把摩洛哥的自治计划确立为谈判政治解决方案的唯一基础。俄罗斯当天还拿出了自己的另一份决议草案，主张只把维和任务单纯延期一年、不做美国要求的那几项改动，否决意味着美国版的自治计划唯一基础提法暂时无法通过，而维和任务的下一步安排，还要看各方能否在延期方案上找到折中。</p>
+<h2>四、个人成长 🌱</h2>
+<h3>1. 成功人士为什么痴迷早晨：起床后的第一小时，决定了你一整天的“滤镜”</h3>
+<p>一篇10月30日的文章说了一个反常识的结论：最成功的人不一定更聪明，他们只是对怎么开始一天更有意图，早晨不只是一天的开始，而是情绪与神经状态的地基，你以什么状态进入早晨，这种状态就会主导你接下来几个小时。作者强调，这不需要两小时的晨间仪式：起床后20分钟的安静、一点运动、一句感恩、一个清晰的今天最重要的是什么就够了，核心就一句话，先拥有早晨的一部分，别让一天先拥有你。</p>
+<h3>2. 专注力翻倍的秘密不是更努力，而是每天给大脑“做一次清洁”</h3>
+<p>另一篇10月30日的文章把专注力比作牙齿卫生：就像刷牙防蛀牙，基础的大脑卫生习惯能保护专注力、预防倦怠，作者分享了一个为期12周的案例，一位深受脑雾困扰的高级工程负责人执行一套简单的习惯后，深睡从每晚38分钟增至74分钟，不间断专注时长从12分钟增至42分钟，脑雾感下降75%。三个习惯是：保护深睡，睡前60分钟远离蓝光屏幕；停止频繁切换任务，用90分钟单任务时段工作；午间重置，散步20分钟加深呼吸5分钟。</p>
+<h2>五、爱情/关系 💕</h2>
+<h3>1. 新研究：东德长大的人，亲密关系里的依恋焦虑更低——社会环境会塑造我们怎么爱</h3>
+<p>一项发表于《BMC Psychology》的新研究发现，在1921–1989年出生的各代人里，在前东德长大的成年人，报告的亲密关系依恋焦虑显著低于在西德长大的同龄人，而在依恋回避这个维度上，东西德没有差异。研究者认为社会政治环境是影响亲密关系中依恋行为的相关因素，尤其对焦虑这一维，值得注意的是1989年两德统一后出生的一代里东西德差异消失了，但这一组里东德样本只有28人，结论要谨慎看待。</p>
+<h3>2. 新研究：怕被拒绝的人，更容易沉迷社交媒体——依恋焦虑 + 回避 + 脆弱自恋组风险最高</h3>
+<p>一项2026年10月发表于《PLOS ONE》的研究发现，现实关系里难以建立深层联结、或对被拒绝有强烈焦虑的人，更容易出现过度或强迫性的社交媒体使用，研究用潜在类别分析区分了不同的依恋与人格组合，安全依恋者过度使用风险最低，回避型或焦虑型者风险更高。统计上，依恋焦虑与脆弱自恋呈强正相关、与人际能力呈负相关，通讯作者克里斯·比约恩森教授的解释很直白：这类人难以有效运用人际交往所需的社交技能，于是更倾向于通过社交媒体来满足关系需求。</p>
+<h2>六、绿色低碳能源 🌱</h2>
+<h3>1. 阿联酋 Masdar 与新西兰签约：探索投资高达 10 亿新西兰元，投向光伏、风电与储能</h3>
+<p>阿联酋可再生能源开发商Masdar在10月30日签署了一份谅解备忘录，与新西兰政府的外国投资机构Invest New Zealand合作，探索在新西兰投资高达10亿新西兰元、约5.85亿美元于太阳能光伏、风电与电池储能项目。需要说明的是：这份备忘录没有列出具体项目、地点、装机容量或各技术之间的资金分配，也没有披露开发时间表、更没有确认是否具有法律约束力，它目前是合作框架，不是开工令。</p>
+<h3>2. 澳大利亚 Neoen 获 18 亿澳元融资：1.2 吉瓦风光储组合，13 家银行联合放贷</h3>
+<p>澳大利亚最大的可再生能源公司Neoen在10月30日宣布，获得一笔18亿澳元、约13亿美元的新债务融资，来自13家银行，支持一个1.2吉瓦的资产组合：南澳大利亚的Hornsdale储能电站、Goyder South风电场一期，新南威尔士的Culcairn光伏电站与Culcairn电池，以及西澳大利亚的Narrogin风电场。算上这笔融资，Neoen自2024年以来已累计融资超50亿澳元，覆盖20个风光储资产、合计4.7吉瓦。</p>
+<h2>七、国内要闻 🇨🇳</h2>
+<h3>1. 中共中央举行新闻发布会解读五中全会精神：最重要的成果是审议通过全面从严治党决定</h3>
+<p>10月30日上午10时，中共中央举行新闻发布会，介绍和解读党的二十届五中全会精神，中央纪委副书记、国家监委副主任张福海，中央组织部分管日常工作的副部长黄建发，中央宣传部分管日常工作的副部长胡和平，中央政策研究室主任唐方裕，中央党校分管日常工作的副校长谢春涛出席并答记者问。唐方裕介绍，全会最重要的成果，是审议通过了《中共中央关于持之以恒推进全面从严治党若干重大问题的决定》，全会于10月26–29日在北京举行，公报已于10月29日发布。</p>
+<h3>2. 我国拟出台首批政府采购本国产品标准：五款产品先行，工业机器人境内成本比不低于 70%</h3>
+<p>工业和信息化部、财政部10月30日发布公示，公开征求第一批政府采购本国产品标准的意见，涉及五款产品：便携式傅里叶红外气体分析仪、反渗透水处理装备、场发射扫描电子显微镜、固定式多关节工业机器人、中小型直升机。以固定式多关节工业机器人为例：征求意见稿提出了4个一级组件、19个二级组件清单，要求产品在中国境内生产的组件成本与产品总成本的比值不低于70%，减速器精密加工、伺服电机绕组制造绝缘处理、印刷电路板贴片等工序应当在境内完成，标准出台3年后开始施行。</p>
+<h3>3. 商务部：坚决反对美联邦通信委员会投票通过检测实验室限制措施</h3>
+<p>针对美国联邦通信委员会美东时间10月29日投票通过的检测实验室限制措施，商务部新闻发言人10月30日表示，中方对此强烈不满、坚决反对，该措施规定自2028年12月1日起，禁止授权位于中国等所谓非互惠经济体的检测实验室、电信认证机构及实验室认可机构，禁止在非互惠经济体开展涉FCC检测、认证或认可业务。发言人指出，一段时间以来，FCC罔顾中方反复交涉，违背两国元首达成的重要共识，频频出台涉华限制措施，严重损害中国及其他相关贸易伙伴利益，严重破坏中美经贸稳定局面，严重扰乱全球产供链稳定，中方前期已采取反制措施予以回应。</p>
+<h2>八、GitHub 新技术 💻</h2>
+<h3>1. HKUDS/DeepTutor：终身个性化导师，从你自己的书和视频里教你</h3>
+<p>10月30日GitHub Trending日榜上，HKUDS/DeepTutor以当日新增约1930颗星标登顶，它是一款终身个性化辅导工具：不是给你一套通用课程，而是从你自己的书、视频等资料里学习，再针对你个人进行辅导，官网是deeptutor.info。为什么火？因为市面上的AI家教大多是通用题库加通用讲解，而DeepTutor的卖点是你的资料、你的进度、你的导师，它把辅导锚定在你真正要读的材料上，而不是让模型凭空讲课。</p>
+<h3>2. Gathin23/cleanyourtv：给安卓电视“减肥”，去掉臃肿软件与广告，换上干净的类 Apple TV 主页</h3>
+<p>10月热门开源项目榜上，Gathin23/cleanyourtv截至10月30日已有约4.65万颗星标，仍在快速增长，它的功能一句话就能说清：通过Wi-Fi给安卓电视或Google TV减肥，删掉预装的臃肿软件，把广告满满的默认主页，换成干净、类似Apple TV风格的启动器。为什么火？因为智能电视的通病大家都受够了：开机先看广告、主页塞满推荐、预装软件删不掉、越用越卡，cleanyourtv不用拆机、不用刷机，通过Wi-Fi连上电视就能操作，门槛比刷机教程低得多。</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《麻薯日报》第12期 · news · 2026-10-08</title>
+<style>
+:root { --glass-op: .50; --glass-blur: 13px; --basket-op: .50; --basket-blur: 11px; --panel-op: .86; --panel-blur: 18px; }
+/* 《麻薯日报》报纸版式（2026-10-23 Ricardo 要求：像真正的报纸） */
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       margin: 0; line-height: 2.0;
+       font-size: 17.5px; letter-spacing: 0.01em;
+       color: #1c1a17;
+       background:
+         radial-gradient(1200px 600px at 20% -10%, rgba(255,220,170,.65), transparent 60%),
+         radial-gradient(900px 500px at 85% 10%, rgba(140,190,255,.45), transparent 60%),
+         radial-gradient(800px 500px at 80% 40%, rgba(255,150,180,.40), transparent 60%),
+         radial-gradient(800px 500px at 10% 70%, rgba(180,160,255,.35), transparent 60%),
+         linear-gradient(180deg, #f5ecd9, #efe3c8 45%, #e8d9b8); }
+.sheet { position: relative; z-index: 1; max-width: 780px; margin: 20px auto;
+         padding: 48px 48px 64px; min-height: 100vh; border-radius: 28px;
+         background: linear-gradient(rgba(251,248,241,var(--glass-op)), rgba(251,248,241,var(--glass-op))) padding-box,
+                     linear-gradient(135deg, rgba(255,255,255,.85), rgba(255,255,255,.25) 35%, rgba(170,200,255,.55) 65%, rgba(255,190,210,.55)) border-box;
+         border: 1.5px solid transparent;
+         -webkit-backdrop-filter: blur(var(--glass-blur, 24px)) saturate(1.8);
+         backdrop-filter: blur(var(--glass-blur, 24px)) saturate(1.8);
+         box-shadow: inset 0 1px 0 rgba(255,255,255,.9), inset 0 0 0 1px rgba(255,255,255,.30), inset 0 -1px 0 rgba(255,255,255,.3), 0 24px 48px rgba(150,170,220,.20), 0 8px 24px rgba(60,45,20,.10); }
+.hang { position: fixed; inset: 0; top: 0; z-index: 3; pointer-events: none; overflow: hidden; }
+.hanger { pointer-events: none; cursor: grab; touch-action: none; will-change: transform; }
+.hanger.dragging { cursor: grabbing; }
+.hanger .swing { pointer-events: none; }
+/* 根因修法（2026-10-27 20:29 实测）：原来牌子盒子本身接手势，盒子是从页面顶到牌子底的大矩形，
+   同侧后来的长线牌子盒子盖住了前面大牌子的区域，点大牌子实际抓到长线牌子，拖动方向也就对不上。
+   现在只有线和牌子本体接手势，点哪张牌子就是哪张，盒子空白处不再误触。 */
+.hanger .thread, .hanger .orb { pointer-events: auto; touch-action: none; }
+.hanger, .hanger .swing, .hanger .thread, .hanger .orb, .hanger .orb img { touch-action: none; -webkit-touch-callout: none; user-select: none; -webkit-user-select: none; }
+.hanger { position: absolute; top: 0; animation: drop 1s cubic-bezier(.25,.9,.35,1.15) both; }
+.hanger.broken { animation: none !important; }
+.hanger.broken .swing { animation: none !important; transform: none !important; }
+.hanger.broken .thread { display: none !important; }
+#gyroRestore { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 200; padding: 12px 20px; border-radius: 999px; background: #1c1a17; color: #fff; font-size: 15px; border: none; box-shadow: 0 8px 24px rgba(0,0,0,.3); display: none; cursor: pointer; }
+#gyroRestore.show { display: block; }
+.swing { display: flex; flex-direction: column; align-items: center;
+         transform-origin: 50% 0; animation: sway 4.4s ease-in-out infinite alternate; }
+.thread { position: relative; width: 3px; border-radius: 2px;
+          background: linear-gradient(180deg, #c9a15a, #d98a94); }
+.orb { position: relative; padding: 4px; border-radius: 24px;
+       background: linear-gradient(135deg, #ffd9a0, #ff9fb6 45%, #b79cff 75%, #8ec9ff);
+       box-shadow: 0 12px 30px rgba(230,140,170,.35), 0 5px 14px rgba(60,45,20,.25); }
+.orb .bubble { position: absolute; left: 50%; bottom: calc(100% + 10px); transform: translateX(-50%) scale(.6); transform-origin: 50% 100%; opacity: 0; pointer-events: none; z-index: 100; min-width: 110px; max-width: 200px; padding: 8px 12px; border-radius: 16px; border: 2px solid #e0d5ae; background: #fffdf5; box-shadow: 0 8px 20px rgba(60,45,20,.25); color: #5a3d2e; font-size: 14px; line-height: 1.5; text-align: center; transition: transform .25s cubic-bezier(.34,1.56,.64,1), opacity .25s; }
+.orb .bubble::after { content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); border: 8px solid transparent; border-top-color: #fffdf5; }
+.orb .bubble.show { transform: translateX(-50%) scale(1); opacity: 1; }
+.orb::before { content: ""; position: absolute; inset: -16px; border-radius: 50%; z-index: -1;
+       background: radial-gradient(circle, rgba(255,190,210,.5), rgba(183,156,255,.25) 55%, transparent 70%);
+       filter: blur(6px); }
+.orb img { display: block; width: 100%; height: auto; border-radius: 20px; }
+@keyframes drop { from { transform: translateY(-110%); } to { transform: translateY(0); } }
+@keyframes sway { from { transform: rotate(-3.4deg); } to { transform: rotate(3.4deg); } }
+@media (max-width: 900px) {
+  /* 手机六张全显示（2026-10-28 Ricardo 反馈：手机上看不到六个麻薯）：
+     手机没有左右空白，旧版只留 2 张、其余隐藏，而且留下的 2 张还会被报纸盖住。
+     新版把 6 张排成顶部一排，报纸顶部多留 108px 空位，牌子挂在空位里、不压新闻正文；
+     线长/牌子宽用 !important 锁死，拖动后也不会弹回桌面版的长线。 */
+  body .sheet { padding: 180px 32px 48px; width: calc(100% - 24px); margin: 20px auto 12px; border-radius: 24px; }
+  body .newsbody { padding: 24px 24px 20px; width: 100%; max-width: 100%; box-sizing: border-box; overflow: hidden; }
+  body .newsbody p { line-height: 1.95; margin: 0 0 13px 0; padding: 0; text-indent: 2em; }
+  body .newsbody .sec-label { text-indent: 0; margin: 0 0 12px 0; }
+  .hang { z-index: 2; }
+  .hanger { display: block; }
+  .hanger:nth-child(1) { left: 2% !important; }
+  .hanger:nth-child(2) { left: 18% !important; }
+  .hanger:nth-child(3) { left: 34% !important; }
+  .hanger:nth-child(4) { left: 50% !important; }
+  .hanger:nth-child(5) { left: 66% !important; }
+  .hanger:nth-child(6) { left: 82% !important; }
+  .hanger .orb { width: 52px !important; }
+  .hanger .thread { height: 48px !important; }
+}
+p { margin: 1.1em 0; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em;
+             margin: 0 0 6px; padding: 0; border: none; }
+blockquote p { margin: 4px 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 2.4em; border: none; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 2.6em; margin-bottom: 20px; padding-top: 1.4em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
+a:visited { color: #6d4fc2; }
+ul li, ol li { margin: 13px 0; line-height: 1.95; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.2em 0; }
+img { max-width: 100%; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+td, th { border: 1px solid #c9c2b2; padding: 6px 10px; }
+th { background: #efe9db; }
+.intro { font-size: 1.02em; }
+.toc li { margin: 14px 0; }
+.toc a { color: #33302a; text-decoration: none; border-bottom: 1px solid #ddd5bd; padding-bottom: 2px; }
+.toc a:visited { color: #33302a; }
+.toc a:hover { color: #8a3324; border-bottom-color: #8a3324; }
+body.dark .toc a { color: #ddd6c4; border-bottom-color: #3a362e; }
+body.dark .toc a:visited { color: #ddd6c4; }
+body.dark .toc a:hover { color: #e0a458; border-bottom-color: #e0a458; }
+.wish { background: rgba(244,239,224,var(--glass-op)); border: 1px solid rgba(255,255,255,.55); border-radius: 20px;
+        -webkit-backdrop-filter: blur(var(--glass-blur, 12px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 12px)) saturate(1.8);
+        padding: 16px 20px 8px; margin: 1.6em 0; }
+.wish .sec-label { color: #8a3324; }
+body.dark .wish { background: rgba(38,34,25,var(--glass-op)); border-color: #4a4232; }
+.note { color: #6b6257; font-size: 0.92em; }
+.nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
+       border-bottom: 2px solid #1c1a17; padding-bottom: 10px; margin-bottom: 20px;
+       font-size: 0.95em; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.nav.bottom { border-bottom: none; border-top: 2px solid #1c1a17; padding-top: 10px; margin-top: 32px; }
+body.spa .page { display: none; }
+body.spa .page.active { display: block; }
+a.navbtn { text-decoration: none; }
+.bgbar { text-align: right; margin-bottom: 10px; }
+#bgToggle { background: #1c1a17;
+  color: #f7f2e7; border: none; border-radius: 999px; padding: 6px 14px; font-size: 0.9em;
+  cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+body.dark { background: #0d0c0a; color: #e8e2d5; }
+body.dark .sheet { background: rgba(22,21,19,var(--glass-op));
+  border: 1.5px solid rgba(255,255,255,.18);
+  -webkit-backdrop-filter: blur(var(--glass-blur, 18px)) saturate(1.3); backdrop-filter: blur(var(--glass-blur, 18px)) saturate(1.3);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 24px 48px rgba(0,0,0,.45); }
+body.dark h1 { border-top-color: #e8e2d5; border-bottom-color: #e8e2d5; }
+body.dark blockquote { color: #a39a89; }
+body.dark h2 { background: #e8e2d5; color: #161513; }
+body.dark h3 { border-top-color: #3a362e; }
+body.dark a { color: #8ab8ff; }
+body.dark a:visited { color: #c4a8ff; }
+body.dark li > strong:first-child { color: #e0a458; }
+body.dark hr { border-top-color: #e8e2d5; }
+body.dark .note { color: #a39a89; }
+body.dark .nav { border-color: #e8e2d5; }
+body.dark td, body.dark th { border-color: #444; }
+body.dark th { background: #262219; }
+.summary { background:rgba(237,243,253,var(--glass-op)); border-left:4px solid #1757c2; border-radius:20px; padding:20px 24px; margin:1.4em 0;
+.newsbody { background: rgba(250,208,222,0.85); border-left: 4px solid #b98a1c; border-radius: 20px; padding: 24px 28px 20px; margin: 1.8em 0; box-sizing: border-box; width: 100%; max-width: 100%; overflow: hidden; overflow-wrap: break-word; word-break: break-word; -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); }
+.newsbody p { line-height: 1.95; margin: 0 0 13px 0; padding: 0; box-sizing: border-box; max-width: 100%; overflow-wrap: break-word; word-break: break-word; text-align: justify; text-justify: inter-ideograph; text-indent: 2em; }
+.newsbody p:last-child { margin-bottom: 0; }
+.newsbody .sec-label { color: #7c5a10; text-indent: 0; text-align: left; margin: 0 0 12px 0; }
+body.dark .newsbody { background: rgba(90,47,66,0.85); border-left-color: #b98a1c; -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); }
+body.dark .newsbody .sec-label { color: #d9b45a; }
+
+           -webkit-backdrop-filter: blur(var(--glass-blur, 12px)) saturate(1.3); backdrop-filter: blur(var(--glass-blur, 12px)) saturate(1.3); }
+.blessing { text-align: center; color: #8a3324; font-size: 1.07em; font-weight: 600;
+            letter-spacing: 0.04em; margin: 0 0 16px; }
+.sticker { display: block; margin: 14px auto 6px; width: 148px; max-width: 42vw; height: auto;
+           border: 6px solid #fff; border-radius: 20px; background: #fff;
+           box-shadow: 0 5px 16px rgba(60,45,20,.28); }
+.sticker.foot { width: 128px; margin-top: 28px; }
+.sec-label { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+             font-weight: 700; margin: 0 0 6px; font-size: 0.98em; letter-spacing: 0.03em; }
+.glossary { background: rgba(244,239,224,var(--glass-op)); border-left: 4px solid #b98a1c; border-radius: 20px;
+            -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8);
+            padding: 20px 24px 14px; margin: 1.8em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.vocabbox { background: rgba(253,252,248,var(--glass-op)); border: 1px solid rgba(255,255,255,.55); border-radius: 20px;
+            -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8);
+            padding: 20px 24px 14px; margin: 1.8em 0; }
+.vocabbox .sec-label { color: #1757c2; }
+.vocabbox ul { list-style: none; padding-left: 0; margin: 6px 0 4px; }
+li.vocab { padding: 10px 0 12px; border-bottom: 1px dashed #ddd5bd; margin: 0; }
+li.vocab:last-child { border-bottom: none; }
+.vcnt { color: #b7791f; font-size: 0.85em; font-weight: 400; }
+button.vadd { width: 36px; height: 36px; border-radius: 12px; border: 1.5px solid #b98a1c;
+  color: #7c5a10; background: #f4efe0; font-size: 22px; line-height: 1; cursor: pointer; margin-left: 8px;
+  box-shadow: 0 1px 3px rgba(60,45,20,.25); font-family: Georgia, "Songti SC", serif; }
+button.vadd.added { background: #8a3324; border-color: #8a3324; color: #fff; }
+#basketBtn { position: fixed; right: 24px; top: 62%; z-index: 50; width: 68px; height: 68px;
+  border-radius: 50%; background: #f4ead0; border: 1.5px solid #c9a15a;
+  box-shadow: 0 0 18px rgba(60,45,20,.15); font-size: 28px; cursor: grab; touch-action: none; }
+#basketBtn.bounce { animation: basketBounce .6s ease; }
+@keyframes basketBounce { 0% { box-shadow: 0 4px 14px rgba(60,45,20,.28); } 30% { box-shadow: 0 0 0 10px rgba(255,223,107,.55), 0 4px 14px rgba(60,45,20,.28); } 100% { box-shadow: 0 4px 14px rgba(60,45,20,.28); } }
+#vocabPanel { position: fixed; right: 12px; top: 200px; width: min(360px, 92vw); height: min(900px, calc(100vh - 220px)); height: min(900px, calc(100dvh - 220px)); box-sizing: border-box; overflow: hidden; flex-direction: column; touch-action: auto;
+  background: #fbf8f1; color: #1c1a17; border: 1px solid #d8d2c4; border-radius: 24px;
+  box-shadow: 0 0 28px rgba(60,45,20,.12); font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+  z-index: 60; padding: 0 18px 16px; display: none; font-size: 18px; line-height: 1.8;
+  flex-direction: column; will-change: transform; font-size: 17px; line-height: 1.7; }
+#vocabPanel.open { display: flex; }
+#vocabPanel.dragging { box-shadow: 0 20px 44px rgba(60,45,20,.40); cursor: grabbing; }
+#vocabListView { display: flex; flex-direction: column; min-height: 0; flex: 1; overflow: hidden; }
+#vocabList { overflow-y: scroll; flex: 1; min-height: 0; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; touch-action: pan-y; }
+#vocabPager { flex-shrink: 0; margin-top: auto; display: flex; gap: 8px; align-items: center; justify-content: center; flex-wrap: wrap;
+  margin-top: 8px; padding: 6px 10px; border-radius: 999px;
+  background: #f4ead0;
+  border: 1px solid #d8d2c4; box-shadow: none; }
+#vocabPager button { border: 1.5px solid #cbb98a; background: #fffdf5; border-radius: 50%;
+  width: 26px; height: 26px; padding: 0; cursor: pointer; font-size: 14px; font-weight: 700; color: #7c5a10;
+  box-shadow: 0 2px 5px rgba(60,45,20,.25); }
+#vocabPager button:active { transform: translateY(2px); box-shadow: 0 1px 2px rgba(60,45,20,.25); }
+#vocabPager button.cur { background: #8a3324; color: #fff; border-color: #8a3324; box-shadow: 0 3px 8px rgba(138,51,36,.45); }
+#vocabPager .pgmeta { font-size: 11px; color: #8a7a5a; width: 100%; text-align: center; }
+#vocabDrag { touch-action: none; height: 36px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; cursor: grab; }
+#vocabDrag .grip { width: 64px; height: 7px; border-radius: 999px; background: #d8c9a3; box-shadow: inset 0 1px 2px rgba(0,0,0,.15); }
+#basketBtn { touch-action: manipulation; }
+@media (max-width: 900px) { #basketBtn { right: 12px; top: auto; bottom: 24px; } }
+#vocabPanel .vitem { display: flex; justify-content: space-between; gap: 10px; align-items: center;
+  padding: 7px 12px; margin: 5px 0; border: 1px solid #e0d5ae; border-radius: 16px;
+  background: #f7f2e7; box-shadow: none; cursor: pointer; overflow: hidden; }
+#vocabPanel .vitem span { min-width: 0; word-break: break-word; overflow-wrap: anywhere; }
+#vocabPanel .vitem button { flex-shrink: 0; background: transparent; border: none; box-shadow: none; -webkit-appearance: none; appearance: none; color: #8a7a5a; }
+#vocabPanel .vitem b { font-size: 20px; }
+#vocabPanel .vdetail { display: none; flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+#vocabPanel .vdetail.show { display: block; }
+.flytrail { position: fixed; z-index: 98; pointer-events: none; line-height: 1;
+  transition: opacity .6s, transform .6s; will-change: transform, opacity; }
+.fly { will-change: transform, left, top; }
+button.syn { border: 1px solid #b98a1c; background: #f4efe0; color: #7c5a10; border-radius: 16px;
+  padding: 2px 10px; margin: 0 6px 6px 0; cursor: pointer; font-size: 17px; }
+body.dark button.syn { background: #33302a; color: #e0c98a; }
+.fly { position: fixed; z-index: 99; background: #ffdf6b; border: 1.5px solid #e6a817;
+  border-radius: 20px; padding: 8px 16px; font-size: 20px; font-weight: 700; pointer-events: none;
+  transition: all .8s cubic-bezier(.2,.7,.3,1); }
+body.dark #vocabPanel { background: #2b2b2b; color: #f0ede6; border-color: #444; }
+body.dark #vocabPager { background: linear-gradient(180deg, #33302a, #262219); border-color: #444; }
+body.dark #vocabPager button { background: #2b2b2b; color: #e0c98a; border-color: #555; }
+body.dark #vocabPanel .vitem { background: #33302a; border-color: #444; }
+body.dark #vocabPanel .vitem { border-bottom-color: #444; }
+body.dark #vocabPanel .vitem button { background: transparent; border: none; box-shadow: none; color: #a39a89; }
+.vword { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         font-weight: 800; font-size: 1.12em; color: #1757c2; margin-right: 6px; }
+.vmean { font-weight: 700; }
+.vrow { font-size: 0.93em; color: #4a463e; margin-top: 3px; line-height: 1.8; }
+.vlabel { display: inline-block; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+          font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
+          padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
+.vquote { color: #6b6257; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources .sec-label { color: #5a554c; }
+.sources ul { margin: 4px 0; }
+h3::before { content: "▍"; color: #8a3324; }
+body.dark .blessing { color: #e0a458; }
+body.dark .glossary { background: rgba(38,34,25,var(--glass-op)); }
+body.dark .vocabbox { background: rgba(29,27,22,var(--glass-op)); border-color: #3a362a; }
+body.dark li.vocab { border-bottom-color: #3a362a; }
+body.dark .vword { color: #8ab8ff; }
+body.dark .vrow { color: #c9c2b2; }
+body.dark .vlabel { background: #33302a; color: #e0c98a; }
+body.dark .vquote { color: #a39a89; }
+body.dark .summary { background: rgba(28,39,51,var(--glass-op)); border-left-color: #8ab8ff; }
+body.dark .sources { color: #a39a89; }
+body.dark h3::before { color: #e0a458; }
+body.dark #bgToggle { background: #e8e2d5; color: #161513; }
+/* 3D 触感（2026-10-28 Ricardo 要求：摸得到的立体感） */
+h1 { text-shadow: 0 1px 0 #fffdf5, 0 3px 6px rgba(60,45,20,.22); }
+.t3d { transform-style: preserve-3d; transition: transform .18s ease, box-shadow .18s ease; will-change: transform; }
+.t3d-press { transform: perspective(800px) translateZ(0) scale(.97) !important; box-shadow: 0 2px 8px rgba(60,45,20,.25) !important; }
+/* 顶部回弹（2026-10-28 Ricardo 要求：手机上碰到顶部就弹回来） */
+
+/* 玻璃交互（2026-10-28 Ricardo 要求：所有需要点击、按压的地方都要有玻璃磨砂光影） */
+#bgToggle, #settingsBtn, a.navbtn, .nav a, .toc a, button.vadd, button.syn, #vocabPager button, #vocabClose, #vocabBack, #vAddFromDetail, #basketBtn, #vocabPanel .vitem {
+  position: relative; overflow: hidden;
+  background: repeating-radial-gradient(circle at 28% 18%, rgba(255,255,255,.13) 0 1px, transparent 1px 9px), linear-gradient(135deg, rgba(255,255,255,var(--glass-op)), rgba(255,255,255,.12) 45%, rgba(255,255,255,.03));
+  -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8);
+  border: 1px solid rgba(255,255,255,.7);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.95), inset 0 0 0 1px rgba(255,255,255,.25), inset 0 -1px 0 rgba(255,255,255,.3), 0 8px 24px rgba(60,45,20,.18);
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+#bgToggle { color: #1c1a17; }
+/* 生词篮子修复（2026-10-28）：上一版玻璃规则把 #basketBtn 的 fixed 改成了 relative，
+   篮子就从右下角固定位掉进了文档流、被报纸盖住看不见了。这里立即恢复 fixed。 */
+#basketBtn { position: fixed !important; right: 24px; top: 62%; bottom: auto; z-index: 50; background: rgba(251,248,241,var(--basket-op, var(--glass-op))) !important; }
+@media (max-width: 900px) { #basketBtn { right: 12px; top: auto; bottom: 24px; } }
+#bgToggle::before, #settingsBtn::before, a.navbtn::before, .nav a::before, .toc a::before, button.vadd::before, button.syn::before, #vocabPager button::before, #vocabClose::before, #vocabBack::before, #vAddFromDetail::before, #basketBtn::before, #vocabPanel .vitem::before {
+  content: ""; position: absolute; top: -4px; left: 15%; right: 15%; height: 14px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.9), transparent 70%);
+}
+#glassBar::after { content: ""; position: absolute; left: 8%; right: 8%; bottom: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.9), transparent); pointer-events: none; }
+#bgToggle::after, #settingsBtn::after, a.navbtn::after, .nav a::after, .toc a::after, button.vadd::after, button.syn::after, #vocabPager button::after, #vocabClose::after, #vocabBack::after, #vAddFromDetail::after, #basketBtn::after, #vocabPanel .vitem::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .2s;
+  background: radial-gradient(120px circle at var(--gx, 50%) var(--gy, 50%), rgba(255,255,255,.65), transparent 60%);
+}
+#bgToggle:hover::after, #settingsBtn:hover::after, a.navbtn:hover::after, .nav a:hover::after, .toc a:hover::after, button.vadd:hover::after, button.syn:hover::after, #vocabPager button:hover::after, #vocabClose:hover::after, #vocabBack:hover::after, #vAddFromDetail:hover::after, #basketBtn:hover::after, #vocabPanel .vitem:hover::after,
+#bgToggle:active::after, #settingsBtn:active::after, a.navbtn:active::after, .nav a:active::after, .toc a:active::after, button.vadd:active::after, button.syn:active::after, #vocabPager button:active::after, #vocabClose:active::after, #vocabBack:active::after, #vAddFromDetail:active::after, #basketBtn:active::after, #vocabPanel .vitem:active::after { opacity: 1; }
+#bgToggle:active, #settingsBtn:active, a.navbtn:active, .nav a:active, .toc a:active, button.vadd:active, button.syn:active, #vocabPager button:active, #vocabClose:active, #vocabBack:active, #vAddFromDetail:active, #basketBtn:active, #vocabPanel .vitem:active {
+  transform: scale(.94); filter: brightness(1.08);
+  box-shadow: inset 0 2px 8px rgba(60,45,20,.18), inset 0 1px 0 rgba(255,255,255,.7), 0 2px 8px rgba(60,45,20,.15);
+}
+#vocabPanel { background: rgba(251,248,241,var(--panel-op, .86)); -webkit-backdrop-filter: blur(var(--panel-blur, 18px)) saturate(1.8); backdrop-filter: blur(var(--panel-blur, 18px)) saturate(1.8);
+  border: 1px solid rgba(255,255,255,.65); box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 20px 44px rgba(60,45,20,.25); }
+#vocabPager { background: rgba(255,255,255,var(--panel-op, .86));
+  -webkit-backdrop-filter: blur(var(--panel-blur, 18px)) saturate(1.8); backdrop-filter: blur(var(--panel-blur, 18px)) saturate(1.8);
+  border: 1px solid rgba(255,255,255,.65); }
+#vocabPanel .vitem { background: rgba(255,255,255,var(--basket-op, var(--glass-op))); }
+#vocabClose { border-radius: 50%; }
+.vpos { font-size: 0.82em; color: #8a3324; background: rgba(138,51,36,.08); border: 1px solid rgba(138,51,36,.25); border-radius: 999px; padding: 1px 7px; margin: 0 4px; white-space: nowrap; }
+body.dark .vpos { color: #e0a899; background: rgba(224,168,153,.12); border-color: rgba(224,168,153,.35); }
+#vocabBack { border-radius: 16px; color: #1c1a17; }
+#vAddFromDetail { border-radius: 16px; color: #7c5a10; }
+body.dark #vocabBack { color: #f0ede6; }
+body.dark #vAddFromDetail { color: #e0c98a; }
+body.dark #bgToggle, body.dark #settingsBtn, body.dark a.navbtn, body.dark .nav a, body.dark .toc a, body.dark button.vadd, body.dark button.syn, body.dark #vocabPager button, body.dark #vocabClose, body.dark #vocabBack, body.dark #vAddFromDetail, body.dark #basketBtn, body.dark #vocabPanel .vitem {
+  background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2) 45%, rgba(50,48,42,.1));
+  border-color: rgba(255,255,255,.3); color: #f0ede6;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 8px 24px rgba(0,0,0,.35);
+}
+body.dark #vocabPanel { background: rgba(43,43,43,var(--panel-op, .86)); border-color: rgba(255,255,255,.25); background-image: none; }
+body.dark #vocabPanel .vitem, body.dark #vocabPager button, body.dark button.syn { background: #33302a; background-image: none; }
+body:not(.dark) #vocabPanel .vitem { background: transparent; background-image: none; border: none; box-shadow: none; }
+body:not(.dark) #vocabPanel .vitem::before, body:not(.dark) #vocabPanel .vitem::after { display: none; }
+a:active { background: rgba(255,255,255,.45); border-radius: 6px; box-shadow: inset 0 1px 0 rgba(255,255,255,.8); }
+
+/* 目录每期 + 上/下一期/回目录（2026-10-28 Ricardo 要求）：圆角玻璃卡，底色贴近报纸底色不跳 */
+.toc { list-style: none; padding-left: 0; }
+.toc li { margin: 12px 0; }
+.toc a { display: block; border-radius: 16px; padding: 12px 16px; border-bottom: none; text-decoration: none; color: #33302a;
+  background: linear-gradient(135deg, rgba(251,248,241,var(--glass-op)), rgba(251,248,241,.12) 45%, rgba(251,248,241,.03));
+  border: 1px solid rgba(255,255,255,.55);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.65), 0 4px 16px rgba(60,45,20,.10); }
+.toc a:visited { color: #33302a; }
+.toc a:hover { color: #8a3324; }
+body.dark .toc a { background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2)); color: #ddd6c4; border-color: rgba(255,255,255,.25); }
+a.navbtn, .nav a { border-radius: 999px; padding: 8px 16px; display: inline-block; text-decoration: none;
+  background: linear-gradient(135deg, rgba(251,248,241,var(--glass-op)), rgba(251,248,241,.12) 45%, rgba(251,248,241,.03));
+  border: 1px solid rgba(255,255,255,.55);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.65), 0 4px 16px rgba(60,45,20,.10); }
+body.dark a.navbtn, body.dark .nav a { background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2)); border-color: rgba(255,255,255,.25); }
+
+/* 毛玻璃透明度调节（2026-10-28 Ricardo 要求：像 iOS Liquid Glass 那样，放到最顶部） */
+#glassBar { position: relative; z-index: 90; display: flex; align-items: center; gap: 10px; padding: 10px 16px; margin-bottom: 20px; border-radius: 999px; box-sizing: border-box;
+  background: repeating-radial-gradient(circle at 28% 18%, rgba(255,255,255,.10) 0 1px, transparent 1px 9px), rgba(255,255,255,var(--glass-op)); -webkit-backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8); backdrop-filter: blur(var(--glass-blur, 16px)) saturate(1.8);
+  border: 1px solid rgba(255,255,255,.7); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 8px 24px rgba(60,45,20,.18); }
+#glassBar .g-ico { font-size: 18px; line-height: 1; flex-shrink: 0; opacity: .7; }
+#glassBar .g-ico.tint { opacity: 1; }
+#glassBar .g-label { font-size: 13px; color: #6b6257; flex-shrink: 0; font-family: -apple-system, "PingFang SC", sans-serif; }
+#glassRange { flex: 1; -webkit-appearance: none; appearance: none; height: 6px; border-radius: 999px; background: #ddd5bd; outline: none; cursor: pointer; min-width: 0; touch-action: pan-x; }
+.swing, .orb, .thread, #glassBar, #basketBtn { will-change: transform; }
+#glassRange::-webkit-slider-thumb { -webkit-appearance: none; width: 44px; height: 28px; border-radius: 999px; background: #fff; border: 1px solid rgba(0,0,0,.08); box-shadow: 0 2px 8px rgba(0,0,0,.25); cursor: pointer; }
+#glassRange::-moz-range-thumb { width: 44px; height: 28px; border-radius: 999px; background: #fff; border: 1px solid rgba(0,0,0,.08); box-shadow: 0 2px 8px rgba(0,0,0,.25); cursor: pointer; }
+#glassVal { font-size: 13px; color: #6b6257; min-width: 38px; text-align: right; flex-shrink: 0; font-family: -apple-system, "PingFang SC", sans-serif; }
+.glass-note { text-align: center; color: #6b6257; font-size: 13px; margin: 0 0 16px; }
+body.dark #glassBar { background: rgba(40,38,32,var(--glass-op)); border-color: rgba(255,255,255,.3); }
+#glassBar #bgToggle { flex-shrink: 0; width: 36px; height: 36px; padding: 0; border-radius: 50%; font-size: 18px; line-height: 1; background: #1c1a17; color: #f7f2e7; border: none; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+body.dark #glassBar #bgToggle { background: #e8e2d5; color: #161513; }
+body.dark #glassBar .g-label, body.dark #glassVal, body.dark .glass-note { color: #a39a89; }
+body.glass-clear .sheet { box-shadow: inset 0 1px 0 rgba(255,255,255,1), inset 0 0 0 1px rgba(255,255,255,.55), inset 0 -1px 0 rgba(255,255,255,.6), 0 24px 48px rgba(150,170,220,.12), 0 8px 24px rgba(60,45,20,.06); }
+body.glass-clear #glassBar { border-color: rgba(255,255,255,.95); box-shadow: inset 0 1px 0 rgba(255,255,255,1), inset 0 0 0 1px rgba(255,255,255,.5), 0 8px 24px rgba(60,45,20,.10); }
+body.dark #glassRange { background: #444; }
+@keyframes topBounce { 0% { transform: scale(1); } 30% { transform: scale(1.18, .82); } 60% { transform: scale(.94, 1.06); } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .t3d { transition: none; } }
+
+/* 主题设置（2026-10-28 Ricardo 要求：齿轮设置面板，图里那套） */
+:root { --mashu-theme: #f9a8c8; --mashu-frame: #ffffff; --card-radius: 28px; }
+#glassBar { justify-content: space-between; }
+#glassBar #settingsBtn { flex-shrink: 0; width: 36px; height: 36px; padding: 0; border-radius: 50%; font-size: 18px; line-height: 1; background: #1c1a17; color: #f7f2e7; border: none; box-shadow: 0 2px 6px rgba(0,0,0,.25); cursor: pointer; }
+#glassBar #langBtn { flex-shrink: 0; width: 36px; height: 36px; padding: 0; border-radius: 50%; font-size: 13px; font-weight: 700; line-height: 1; background: #1c1a17; color: #f7f2e7; border: none; box-shadow: 0 2px 6px rgba(0,0,0,.25); cursor: pointer; }
+body.dark #glassBar #langBtn { background: #e8e2d5; color: #161513; }
+body.dark #glassBar #settingsBtn { background: #e8e2d5; color: #161513; }
+#bgToggle, #settingsBtn, a.navbtn, .nav a, .toc a, button.vadd, button.syn, #vocabPager button, #vocabClose, #vocabBack, #vAddFromDetail, #basketBtn, #vocabPanel .vitem { position: relative; }
+body #bgToggle, body #settingsBtn, body a.navbtn, body .nav a, body .toc a, body button.vadd, body button.syn, body #vocabPager button, body #vocabClose, body #vocabBack, body #vAddFromDetail, body #basketBtn, body #vocabPanel .vitem, body .wish, body .summary, body .glossary, body .vocabbox { color: var(--mashu-text, inherit); }
+.sheet, #vocabPanel, .wish, .summary, .glossary, .vocabbox, .newsbody, .toc a, button.vadd, button.syn, #vocabBack, #vAddFromDetail, #settingsPanel { border-radius: var(--card-radius, 28px); }
+body.frame-thin #bgToggle, body.frame-thin #settingsBtn, body.frame-thin a.navbtn, body.frame-thin .nav a, body.frame-thin .toc a, body.frame-thin button.vadd, body.frame-thin button.syn, body.frame-thin #vocabPager button, body.frame-thin #vocabClose, body.frame-thin #vocabBack, body.frame-thin #vAddFromDetail, body.frame-thin #basketBtn, body.frame-thin #vocabPanel .vitem, body.frame-thin .wish, body.frame-thin .summary, body.frame-thin .glossary, body.frame-thin .vocabbox, body.frame-thin .newsbody, body.frame-thin #vocabPager, body.frame-thin #glassBar { border: 1px solid var(--mashu-frame) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 4px 14px rgba(60,45,20,.08) !important; }
+body.frame-glow #bgToggle, body.frame-glow #settingsBtn, body.frame-glow a.navbtn, body.frame-glow .nav a, body.frame-glow .toc a, body.frame-glow button.vadd, body.frame-glow button.syn, body.frame-glow #vocabPager button, body.frame-glow #vocabClose, body.frame-glow #vocabBack, body.frame-glow #vAddFromDetail, body.frame-glow #basketBtn, body.frame-glow #vocabPanel .vitem, body.frame-glow .wish, body.frame-glow .summary, body.frame-glow .glossary, body.frame-glow .vocabbox, body.frame-glow .newsbody, body.frame-glow #vocabPager, body.frame-glow #glassBar { border: 1.5px solid var(--mashu-frame) !important; box-shadow: 0 0 18px var(--mashu-theme), inset 0 1px 0 rgba(255,255,255,.5) !important; }
+body.frame-double #bgToggle, body.frame-double #settingsBtn, body.frame-double a.navbtn, body.frame-double .nav a, body.frame-double .toc a, body.frame-double button.vadd, body.frame-double button.syn, body.frame-double #vocabPager button, body.frame-double #vocabClose, body.frame-double #vocabBack, body.frame-double #vAddFromDetail, body.frame-double #basketBtn, body.frame-double #vocabPanel .vitem, body.frame-double .wish, body.frame-double .summary, body.frame-double .glossary, body.frame-double .vocabbox, body.frame-double .newsbody, body.frame-double #vocabPager, body.frame-double #glassBar { border: 1.5px solid var(--mashu-frame) !important; box-shadow: inset 0 0 0 1px rgba(255,255,255,.55), inset 0 1px 0 rgba(255,255,255,.7), 0 4px 14px rgba(60,45,20,.10) !important; }
+body.frame-flow #bgToggle, body.frame-flow #settingsBtn, body.frame-flow a.navbtn, body.frame-flow .nav a, body.frame-flow .toc a, body.frame-flow button.vadd, body.frame-flow button.syn, body.frame-flow #vocabPager button, body.frame-flow #vocabClose, body.frame-flow #vocabBack, body.frame-flow #vAddFromDetail, body.frame-flow #basketBtn, body.frame-flow #vocabPanel .vitem, body.frame-flow .wish, body.frame-flow .summary, body.frame-flow .glossary, body.frame-flow .vocabbox, body.frame-flow .newsbody, body.frame-flow #vocabPager, body.frame-flow #glassBar { border: 1.5px solid transparent !important; background: linear-gradient(135deg, rgba(255,255,255,var(--glass-op)), rgba(255,255,255,.12)) padding-box, linear-gradient(135deg, var(--mashu-theme), var(--mashu-frame), var(--mashu-theme)) border-box !important; background-size: 100% 100%, 200% 200% !important; animation: mashuFlow 6s linear infinite !important; }
+body.dark.frame-flow #bgToggle, body.dark.frame-flow #settingsBtn, body.dark.frame-flow a.navbtn, body.dark.frame-flow .nav a, body.dark.frame-flow .toc a, body.dark.frame-flow button.vadd, body.dark.frame-flow button.syn, body.dark.frame-flow #vocabPager button, body.dark.frame-flow #vocabClose, body.dark.frame-flow #vocabBack, body.dark.frame-flow #vAddFromDetail, body.dark.frame-flow #basketBtn, body.dark.frame-flow #vocabPanel .vitem, body.dark.frame-flow .wish, body.dark.frame-flow .summary, body.dark.frame-flow .glossary, body.dark.frame-flow .vocabbox, body.dark.frame-flow #vocabPager, body.dark.frame-flow #glassBar { background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2)) padding-box, linear-gradient(135deg, var(--mashu-theme), var(--mashu-frame), var(--mashu-theme)) border-box !important; background-size: 100% 100%, 200% 200% !important; }
+/* news semi-transparent solid background override: must beat frame-flow !important */
+body .newsbody, body.frame-flow .newsbody { background: rgba(250,208,222,0.85) !important; }
+body.dark .newsbody, body.dark.frame-flow .newsbody { background: rgba(90,47,66,0.85) !important; }
+@keyframes mashuFlow { to { background-position: 0 0, 200% 0; } }
+@media (prefers-reduced-motion: reduce) { body.frame-flow #bgToggle, body.frame-flow a.navbtn, body.frame-flow .toc a, body.frame-flow button.vadd { animation: none !important; } }
+body.frame-none #bgToggle, body.frame-none #settingsBtn, body.frame-none a.navbtn, body.frame-none .nav a, body.frame-none .toc a, body.frame-none button.vadd, body.frame-none button.syn, body.frame-none #vocabPager button, body.frame-none #vocabClose, body.frame-none #vocabBack, body.frame-none #vAddFromDetail, body.frame-none #basketBtn, body.frame-none #vocabPanel .vitem, body.frame-none .wish, body.frame-none .summary, body.frame-none .glossary, body.frame-none .vocabbox, body.frame-none .newsbody, body.frame-none #vocabPager, body.frame-none #glassBar { border: none !important; box-shadow: none !important; }
+body.glass-clear.frame-glow .newsbody, body.glass-clear.frame-glow .glossary, body.glass-clear.frame-glow .summary, body.glass-clear.frame-glow .wish, body.glass-clear.frame-glow .vocabbox { box-shadow: none !important; border-color: rgba(255,255,255,.35) !important; }
+body.glass-clear .sheet { box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 8px 24px rgba(0,0,0,.08); }
+/* 设置面板本身：深色固定样式，圆角跟随卡片圆角，字色固定不跟主题字色走，免得把自己锁死 */
+#settingsPanel { position: fixed; right: 12px; top: 200px; width: min(380px, 92vw); height: min(720px, calc(100dvh - 220px)); overflow-y: auto; -webkit-overflow-scrolling: touch; z-index: 70; display: none; background: #223033; color: #f2f7f5; border: 1.5px solid rgba(255,255,255,.25); box-shadow: 0 20px 44px rgba(0,0,0,.4); padding: 18px; box-sizing: border-box; font-family: -apple-system, "PingFang SC", sans-serif; }
+#settingsPanel.open { display: block; }
+#settingsPanel .mtheme { width: 44px; height: 44px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; font-size: 18px; color: #1c1a17; flex-shrink: 0; }
+#settingsPanel .mtheme.selected { border-color: #ffffff; box-shadow: 0 0 14px var(--mashu-theme); }
+#settingsPanel .mframe { width: 100%; text-align: left; background: rgba(255,255,255,.06); color: #f2f7f5; border: 1.5px solid rgba(255,255,255,.2); border-radius: 16px; padding: 10px 12px; cursor: pointer; box-sizing: border-box; }
+#settingsPanel .mframe.selected { border-color: var(--mashu-theme); color: var(--mashu-theme); }
+#settingsPanel input[type=range] { width: 100%; accent-color: var(--mashu-theme); }
+#vocabPanel .vitem::before, #vocabPanel .vitem::after { display: none !important; }
+#vocabPanel .vitem { background-clip: padding-box !important; }
+body.frame-glow #vocabPanel .vitem { box-shadow: inset 0 1px 0 rgba(255,255,255,.5) !important; }
+body.frame-flow #vocabPanel .vitem { background: linear-gradient(135deg, rgba(255,255,255,var(--glass-op)), rgba(255,255,255,.12)) padding-box !important; }
+body.dark.frame-flow #vocabPanel .vitem { background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2)) padding-box !important; }
+#vocabPanel { background-clip: padding-box; }
+
+#mashuBgLayer { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; height: 100dvh; z-index: 0; pointer-events: none; background-size: cover; background-position: center center; background-repeat: no-repeat; display: none; }
+.sheet { position: relative; z-index: 1; }
+
+body.mashu-bg-custom { background-color: var(--mashu-bg-color, transparent) !important; background-image: var(--mashu-bg-image, none) !important; background-size: cover !important; background-position: center center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; }
+#settingsPanel .mbg { width: 100%; text-align: left; background: rgba(255,255,255,.06); color: #f2f7f5; border: 1.5px solid rgba(255,255,255,.2); border-radius: 16px; padding: 10px 12px; cursor: pointer; box-sizing: border-box; }
+#settingsPanel .mbg.selected { border-color: var(--mashu-theme); color: var(--mashu-theme); }
+#settingsPanel .mbgsw { width: 44px; height: 44px; border-radius: 12px; border: 2px solid transparent; cursor: pointer; flex-shrink: 0; }
+#settingsPanel .mbgsw.selected { border-color: #ffffff; box-shadow: 0 0 12px var(--mashu-theme); }
+
+#settingsPanel input[type=text] { background: rgba(255,255,255,.08); color: #f2f7f5; border: 1.5px solid rgba(255,255,255,.25); border-radius: 999px; padding: 8px 12px; box-sizing: border-box; }
+#settingsPanel input[type=color] { width: 44px; height: 44px; border: none; background: none; cursor: pointer; flex-shrink: 0; padding: 0; }
+
+
+/* 追更（2026-11-09 Ricardo 批准，第 42 期起）：每条新闻右上角 ＋，点一下即追更 */
+.zg-head { position: relative; }
+.zg-head > h3 { padding-right: 64px; }
+button.zg-btn { position: absolute; right: 0; top: 1.4em; width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,.9); background: rgba(255,255,255,.78); color: #d6336c; font-size: 24px; line-height: 1; cursor: pointer; box-shadow: 0 2px 8px rgba(60,45,20,.18); font-family: Georgia, "Songti SC", serif; padding: 0; }
+button.zg-btn.on { background: #f9a8c8; border-color: #f9a8c8; color: #8a3324; }
+.zg-followup { background: rgba(244,239,224,var(--glass-op)); border-left: 4px solid #b98a1c; border-radius: 20px; padding: 20px 24px 14px; margin: 1.8em 0; }
+.zg-followup .sec-label { color: #7c5a10; }
+.zg-followup p { text-indent: 0; margin: 0 0 13px; }
+.zg-followup p:last-child { margin-bottom: 0; }
+.zg-panel { background: rgba(244,239,224,var(--glass-op)); border: 1px solid rgba(255,255,255,.55); border-radius: 20px; padding: 20px 24px 14px; margin: 1.8em 0; }
+.zg-panel .sec-label { color: #8a3324; }
+.zg-list { list-style: none; padding-left: 0; margin: 6px 0 8px; }
+.zg-list li { margin: 10px 0; line-height: 1.8; }
+.zg-list-date { color: #6b6257; font-size: 0.92em; }
+button.zg-unfollow { border: 1px solid #c9c2b2; background: transparent; border-radius: 50%; width: 26px; height: 26px; font-size: 16px; line-height: 1; cursor: pointer; color: #6b6257; padding: 0; }
+body.dark .zg-followup { background: rgba(38,34,25,var(--glass-op)); }
+body.dark .zg-followup .sec-label { color: #d9b45a; }
+body.dark .zg-panel { background: rgba(38,34,25,var(--glass-op)); }
+body.dark .zg-list-date { color: #a39a89; }
+</style>
+</head>
+<body>
+<div class="sheet">
+<h1>📰 10月8日 新闻简报</h1>
+<h2>💰 金融</h2>
+<h3>1. 美联储 9 月会议纪要公布：多数官员认为年底前还需再加息一次，10 月不着急</h3>
+<p>美联储在北京时间10月8日凌晨2点公布了9月15–16日FOMC会议纪要，全体19位官员一致支持9月加息25个基点至3.75%–4.00%，&quot;大多数&quot;官员认为年底前再加息一次是合适的，但不急于在10月28–29日的下次会议动手。通胀仍是头号担忧，核心PCE约3%、整体约3.4%，远高于2%目标，纪要首次把AI投资热潮列为通胀传导渠道。</p>
+<h3>2. 美股周二创收盘纪录、周三回落：10 年期美债收益率一度冲上 5.36%、创 24 年新高</h3>
+<p>10月6日美股大涨创收盘纪录，S&amp;P 500收7,818.93、Nasdaq收27,599.79，都是时隔六周的新高，动力是债市收益率短暂回落、油价降温、AI热情和三季度财报季临近。10月7日行情反转，10年期美债收益率盘中冲上5.36%的2002年以来最高，道指收跌341点、S&amp;P 500跌0.22%、Nasdaq跌0.22%，下午390亿美元10年期国债拍卖需求强劲，把收益率又拽回5.28%附近。</p>
+<h3>3. 印度央行三年来首次加息：回购利率上调至 5.5%，短期内降息&quot;没戏了&quot;</h3>
+<p>印度央行10月7日宣布将政策回购利率上调25个基点至5.50%，为2023年2月以来首次加息，政策立场从&quot;中性&quot;改为&quot;校准式紧缩&quot;，行长明说短期内降息已出局，未来只有&quot;加息或按兵不动&quot;。背景是印度8月CPI通胀4.8%，连续三个月高于4%目标，油价破100美元火上浇油，但经济很强劲，一季度GDP增长7.8%。</p>
+<h2>🤖 AI</h2>
+<h3>1. Anthropic 发布 Claude Haiku 5.5：史上最便宜最快的 Claude，价格直降约 75%</h3>
+<p>Anthropic 10月7日发布Claude Haiku 5.5，定价每百万输入token仅0.10美元、输出0.50美元，官方称平均运行成本比上一代Haiku 4.5低约75%，直接对标OpenAI的GPT-6 Luna。它是首款带&quot;推理强度可调&quot;的小模型，也是首款内置网络安全防护的Haiku，基准成绩大幅跃升，OSWorld离线测试72.4%，上代仅15.7%。</p>
+<h3>2. 微软 × 英伟达旧金山同台：发布 AI 笔记本 Surface Laptop Ultra 与智能体&quot;安全底座&quot;</h3>
+<p>10月7日，微软CEO纳德拉与英伟达CEO黄仁勋在旧金山联合发布Surface Laptop Ultra，搭载英伟达RTX Spark芯片的高性能AI笔记本，已开启预售，以及Microsoft Execution Containers正式可用，让AI智能体在Windows后台安全、持久运行。Anthropic、OpenAI、英伟达都将采用MXC，纳德拉说&quot;要让桌面成为智能体执行最安全的地方&quot;。</p>
+<h3>3. Google 全球开放 SynthID Detector：人人可查图片/视频/音频是否为 AI 生成</h3>
+<p>Google 10月7日在官方博客宣布，SynthID Detector网站即日起向全球所有人开放，上传图片、视频或音频，网站能检测其中是否含有SynthID数字水印，这项技术2023年推出，已给超过1800亿张图片/视频和24万年时长的音频打上隐形标记。目前支持Google自家模型及合作方OpenAI、NVIDIA、Kakao的内容，苹果即将加入。</p>
+<h2>🌍 国际局势</h2>
+<h3>1. 霍尔木兹海峡油轮袭击创&quot;美伊开战以来&quot;单周最高，12 名印度船员受伤</h3>
+<p>Reuters 10月7日援引三家海事安全机构数据，9月28日至10月5日一周内，霍尔木兹海峡周边至少发生12起针对油轮、液化气船的袭击、未遂、骚扰事件，为2月28日美伊开战以来的单周最高。印度外交部10月6日称，一艘巴拿马籍油轮在通过海峡时被不明抛射物击中，12名印度籍船员受伤。</p>
+<h3>2. 胡塞武装袭击沙特升级：宣称打击利雅得机场与沙特阿美炼油厂</h3>
+<p>也门胡塞武装10月6日宣称袭击了沙特多处目标，包括利雅得哈立德国王国际机场、Rabigh的沙特阿美炼油厂和Abha机场，沙特主导的联军称10月7日拦截并摧毁了一枚射向西南部空军基地的胡塞弹道导弹。阿联酋外交部10月7日发表声明，谴责胡塞袭击并称其为对沙特主权的&quot;公然侵犯&quot;，表达&quot;全力声援&quot;。</p>
+<h3>3. 以色列安全内阁被警告：伊朗可能在经济重压下&quot;误判&quot;并发射导弹</h3>
+<p>据《耶路撒冷邮报》10月7日报道，以色列高级国防官员10月5日向安全内阁表示，担心伊朗在美国持续施压和国内经济恶化之下误判局势、向以色列发射导弹，以军情局长称美军对伊朗的海上和空中封锁&quot;非常有效&quot;。与此同时，伊朗议会议长警告美国正从军事打击转向在伊朗国内&quot;制造不安全&quot;，伊朗外交部发言人则警告警惕&quot;假旗&quot;袭击。</p>
+<h2>🌱 个人成长</h2>
+<h3>1. 阻碍成功的四个习惯：不是天赋，是这四件事拖住了你</h3>
+<p>马来西亚Malay Mail专栏10月7日引用研究指出，拉开成功者与普通人差距的不是天赋，而是四个自己能控制的习惯：一是&quot;等完美时机&quot;，看似谨慎，实则是披着耐心的恐惧；二是&quot;和别人比较&quot;，拿自己的日常去比别人的巅峰注定自卑；三是&quot;拒绝从错误中学习&quot;；四是&quot;抱怨生活&quot;。核心论点是Momentum（行动的惯性），而非certainty（万事俱备的确定感），才是把人推向前的原因。</p>
+<h3>2. 写作真的能促进思考：不是&quot;想清楚了再写&quot;，是&quot;写着写着就想清楚了&quot;</h3>
+<p>教育作家Natalie Wexler在Substack约10月5日反驳了一种流行观点，&quot;写作只是记录已有想法，不能培养思维&quot;，她引用研究指出，把想法写下来能卸载大脑的&quot;认知负荷&quot;，不用再费力把想法暂存在工作记忆里，从而腾出脑力去分析、吸收和产生新想法。即使是写摘要，也需要识别关键信息，这本身就是分析性思考，自2006年以来的研究已形成共识：写作显著促进学习。</p>
+<h3>3. Lori Greiner：小心你反复对自己说的话，因为&quot;你的大脑在听&quot;</h3>
+<p>Shark Tank投资人Lori Greiner在10月3日的Instagram短视频里讲了一个简单但有力的道理，小心你反复对自己说的话，她引入神经可塑性的概念，大脑会根据重复的想法和行为重塑自己。天天说&quot;我就是学不好&quot;&quot;我运气总是差&quot;，大脑会把这条路越走越宽，反之，catch住&quot;我又搞砸了&quot;这种念头，停一下问&quot;这是真的吗&quot;，再换成&quot;这次没做好，但我能弄明白&quot;，久而久之思维模式真的会改变。</p>
+<h2>💗 爱情</h2>
+<h3>1. &quot;你值得一个每天都把你当回事的人&quot;——检验感情最温柔的尺子</h3>
+<p>Jay Shetty 10月7日转发的文字图（3.2万赞）只有一句话：&quot;You deserve someone who&#x27;s gonna treat you like you matter everyday. Not just when it&#x27;s convenient for them.&quot;，意思是你值得一个每天都把你放在心上的人，而不是只在方便的时候才想起你的人。评论区成了大型共鸣现场，很多人分享自己终于离开&quot;忽冷忽热&quot;的关系、第一次被稳定地珍视的经历。</p>
+<h3>2. Matthew Hussey：把&quot;你对他的感觉&quot;和&quot;他让你感受到的&quot;分开看</h3>
+<p>英国情感作家Matthew Hussey在10月2日的短视频（11万赞）里平静地说，要把两件事分开，&quot;你对这个人的感觉&quot;（他的魅力、可爱、聪明、风趣）和&quot;这个人让你感受到的&quot;（孤独、难过、焦虑、自我怀疑）。你可以承认一个人浑身是优点，同时清醒地看到，和他在一起的每一天，你都在质疑自己的价值，一旁的女士接话：&quot;你可以觉得他是个神，但如果他让你觉得自己什么都不是，那才是这段关系的真相。&quot;</p>
+<h3>3. &quot;给不了整颗心，就别给&quot;——别人的感情不是你的练习场</h3>
+<p>深夜车里，Connor Enberg平静地对着镜头（10月1日，8万赞）说，最伤人的不是拒绝，而是一边把你&quot;养&quot;出依赖，像情侣一样相处、每天联系、给你希望，一边突然说&quot;我还没准备好谈恋爱&quot;。他的建议只有一句：&quot;if you can&#x27;t give your heart fully, don&#x27;t give it at all. People&#x27;s feelings aren&#x27;t practice.&quot;，意思是给不了整颗心，就一点也别给，别人的感情不是你的练习场。</p>
+<h2>🌿 绿色低碳能源</h2>
+<h3>1. 韩国发布 K-GX 绿色转型战略：2030 年可再生能源 100GW，十年砸下约 7400 亿美元</h3>
+<p>10月7日，韩国总统李在明在首尔主持K-GX（韩国绿色转型）战略发布会，韩华、POSCO、LG、三星等企业代表出席，核心目标是2030年可再生能源装机至少100GW，未来十年总投入约7400亿美元。产业目标相当激进：2030年成为全球首个商业化氢还原炼钢的国家，2027年商用全固态电池、2030年商用钠离子电池，2028年全球首个商业化量产高效叠层太阳能电池，2035年电动车、氢能车占新车销量70%以上。</p>
+<h3>2. 南非：优先推进 9.6GW 电池储能 + 燃气发电，风光配额后续再定</h3>
+<p>10月7日，南非电力部长宣布长期电力规划的优先事项，首批采购4.6GW电池储能系统加5GW燃气发电项目，合计9.6GW，风电和光伏的配额将在后续阶段公布。背景是南非计划到2039年新增超105GW发电装机，可再生能源过半，逐步摆脱对煤电的依赖，目前南非只有5个电池储能项目、共513MW。</p>
+<h3>3. 中国新疆 10 万吨级绿氢制可持续航空燃料项目启动：千吨→万吨→十万吨三级跳</h3>
+<p>据外媒本周报道，东德能源在新疆哈密正式启动年产10万吨可持续航空燃料（SAF）的绿氢制SAF项目，总投资110亿元人民币，包括2GW风电、年产5万吨绿氢装置、每年捕集40万吨CO₂，最终合成10万吨绿色航空煤油。此前1000吨级中试8月在四川通过专家评审，1万吨级装置9月在内蒙古开始调试，从千吨到十万吨，中国正快速迈向工业级规模。</p>
+</div>
+</body>
+</html>
