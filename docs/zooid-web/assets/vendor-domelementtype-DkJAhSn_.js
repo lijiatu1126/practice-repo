@@ -1,0 +1,1 @@
+var t;(function(o){o.Root="root",o.Text="text",o.Directive="directive",o.Comment="comment",o.Script="script",o.Style="style",o.Tag="tag",o.CDATA="cdata",o.Doctype="doctype"})(t||(t={}));function c(o){return o.type===t.Tag||o.type===t.Script||o.type===t.Style}t.Root;t.Text;t.Directive;t.Comment;t.Script;t.Style;t.Tag;t.CDATA;t.Doctype;export{t as E,c as i};

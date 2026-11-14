@@ -1,0 +1,1 @@
+import{j as t}from"./vendor-react-Bvg8hCqY.js";import{d as i}from"./vendor--emoji-mart-data-WqEP61LF.js";import{$ as r}from"./vendor--emoji-mart-react-CDPHqI_M.js";import"./vendor-emoji-mart-D7JTZNgJ.js";function p({onPick:o}){return t.jsx(r,{data:i,onEmojiSelect:e=>o(e.native),autoFocus:!0,previewPosition:"none",skinTonePosition:"none"})}export{p as default};
