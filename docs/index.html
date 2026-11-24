@@ -7,6 +7,8 @@
 <style>
 :root { --glass-op: .50; --glass-blur: 13px; --basket-op: .50; --basket-blur: 11px; --panel-op: .86; --panel-blur: 18px; }
 /* 《麻薯日报》报纸版式（2026-10-23 Ricardo 要求：像真正的报纸） */
+/* 横向滚动根治（2026-11-17 Ricardo 反馈：iPad 上底下出现横向移动条，上下滑经常变左右滑）：页面永不横向滚动，报纸居中 */
+html, body { overflow-x: hidden; }
 body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
        margin: 0; line-height: 2.0;
        font-size: 17.5px; letter-spacing: 0.01em;
@@ -17,7 +19,7 @@ body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Seri
          radial-gradient(800px 500px at 80% 40%, rgba(255,150,180,.40), transparent 60%),
          radial-gradient(800px 500px at 10% 70%, rgba(180,160,255,.35), transparent 60%),
          linear-gradient(180deg, #f5ecd9, #efe3c8 45%, #e8d9b8); }
-.sheet { position: relative; z-index: 1; max-width: 780px; margin: 20px auto;
+.sheet { position: relative; z-index: 1; max-width: 780px; width: 100%; box-sizing: border-box; margin: 20px auto;
          padding: 48px 48px 64px; min-height: 100vh; border-radius: 28px;
          background: linear-gradient(rgba(251,248,241,var(--glass-op)), rgba(251,248,241,var(--glass-op))) padding-box,
                      linear-gradient(135deg, rgba(255,255,255,.85), rgba(255,255,255,.25) 35%, rgba(170,200,255,.55) 65%, rgba(255,190,210,.55)) border-box;
@@ -233,7 +235,8 @@ body.dark #vocabPanel .vitem button { background: transparent; border: none; box
           font-size: 0.78em; background: #efe6cd; color: #7c5a10; border-radius: 3px;
           padding: 0 6px; margin-right: 7px; vertical-align: 2px; }
 .vquote { color: #6b6257; }
-.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; }
+.sources { font-size: 0.9em; color: #5a554c; margin: 1.2em 0; overflow-wrap: break-word; word-break: break-word; }
+.sources a { overflow-wrap: anywhere; }
 .sources .sec-label { color: #5a554c; }
 .sources ul { margin: 4px 0; }
 h3::before { content: "▍"; color: #8a3324; }
@@ -385,7 +388,7 @@ body.frame-flow #vocabPanel .vitem { background: linear-gradient(135deg, rgba(25
 body.dark.frame-flow #vocabPanel .vitem { background: linear-gradient(135deg, rgba(50,48,42,var(--glass-op)), rgba(50,48,42,.2)) padding-box !important; }
 #vocabPanel { background-clip: padding-box; }
 
-#mashuBgLayer { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; height: 100dvh; z-index: 0; pointer-events: none; background-size: cover; background-position: center center; background-repeat: no-repeat; display: none; }
+#mashuBgLayer { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; height: 100dvh; z-index: 0; pointer-events: none; background-size: cover; background-position: center center; background-repeat: no-repeat; display: none; }
 .sheet { position: relative; z-index: 1; }
 
 body.mashu-bg-custom { background-color: var(--mashu-bg-color, transparent) !important; background-image: var(--mashu-bg-image, none) !important; background-size: cover !important; background-position: center center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; }
@@ -457,6 +460,15 @@ body.mashu-bg-custom { background-color: var(--mashu-bg-color, transparent) !imp
 <li><a href="issue-046.html">《麻薯日报》第46期 · 2026-11-13（星期五）</a></li>
 <li><a href="issue-047.html">《麻薯日报》第47期 · 2026-11-14（星期六） 🎂</a></li>
 <li><a href="issue-048.html">《麻薯日报》第48期 · 2026-11-15（星期日）</a></li>
+<li><a href="issue-049.html">《麻薯日报》第49期 · 2026-11-16（星期一）</a></li>
+<li><a href="issue-050.html">《麻薯日报》第50期 · 2026-11-17（星期二）</a></li>
+<li><a href="issue-051.html">《麻薯日报》第51期 · 2026-11-18（星期三）</a></li>
+<li><a href="issue-052.html">《麻薯日报》第52期 · 2026-11-19（星期四）</a></li>
+<li><a href="issue-053.html">《麻薯日报》第53期 · 2026-11-20（星期五）</a></li>
+<li><a href="issue-054.html">《麻薯日报》第54期 · 2026-11-21（星期六）</a></li>
+<li><a href="issue-055.html">《麻薯日报》第55期 · 2026-11-22（星期日）</a></li>
+<li><a href="issue-056.html">《麻薯日报》第56期 · 2026-11-23（星期一）</a></li>
+<li><a href="issue-057.html">《麻薯日报》第57期 · 2026-11-24（星期二）</a></li>
 </ol>
 </div>
 <div id="mashuBgLayer"></div>
