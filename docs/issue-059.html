@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《麻薯日报》第59期 · 2026-11-26</title>
+<style>
+/* 横向滚动根治（2026-11-17 与丰富版同修）：页面永不横向滚动，报纸居中 */
+html, body { overflow-x: hidden; }
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       margin: 0; line-height: 2.15; font-size: 17.5px; letter-spacing: 0.01em;
+       color: #1c1a17; background: #f0e8d5; }
+.sheet { max-width: 720px; width: 100%; box-sizing: border-box; margin: 0 auto; background: #fbf8f1;
+         padding: 36px 26px 56px; min-height: 100vh;
+         box-shadow: 0 0 28px rgba(60,45,20,.10); }
+p { margin: 0 0 1.5em; text-align: justify; text-indent: 2em; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em; margin: 0 0 6px; padding: 0; border: none; text-indent: 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 3.2em; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 3em; padding-top: 1.4em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
+a:visited { color: #6d4fc2; }
+ul li, ol li { margin: 20px 0; line-height: 2.0; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
+.note { color: #6b6257; font-size: 0.92em; text-align: center; text-indent: 0; }
+.sec-label { text-indent: 0; margin: 0 0 12px; font-weight: 700; text-align: left; }
+/* 丰富版同款分块：名词解释金边卡片、一句话总结红边卡片、来源灰色虚线区 */
+.glossary { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.glossary p, .glossary li { text-indent: 0; }
+.summary { background: #f6f1e3; border-left: 4px solid #8a3324; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.summary .sec-label { color: #8a3324; }
+.summary p { text-indent: 0; }
+.sources { border-top: 1px dashed #c9c2b2; padding: 18px 4px 4px; margin: 2em 0; }
+.sources .sec-label { color: #6b6257; font-size: 0.92em; }
+.sources ul { margin: 6px 0 8px; }
+.sources li { font-size: 0.88em; color: #6b6257; margin: 14px 0; line-height: 1.9; word-break: break-all; }
+.sources p, .sources li { text-indent: 0; }
+.vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.vocabbox p, .vocabbox li { text-indent: 0; }
+
+/* 追更（2026-11-09 Ricardo 批准，第 42 期起）：每条新闻右上角 ＋，点一下即追更 */
+.zg-head { position: relative; }
+.zg-head > h3 { padding-right: 56px; }
+button.zg-btn { position: absolute; right: 0; top: 1.4em; width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid #b98a1c; background: #fbf8f1; color: #7c5a10; font-size: 22px; line-height: 1; cursor: pointer; font-family: Georgia, "Songti SC", serif; padding: 0; }
+button.zg-btn.on { background: #b98a1c; color: #fff; }
+.zg-followup { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.zg-followup .sec-label { color: #7c5a10; }
+.zg-followup p { text-indent: 0; }
+.zg-panel { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.zg-panel .sec-label { color: #8a3324; }
+.zg-list { list-style: none; padding-left: 0; }
+.zg-list li { margin: 14px 0; line-height: 2.0; }
+.zg-list-date { color: #6b6257; font-size: 0.92em; }
+button.zg-unfollow { border: 1px solid #c9c2b2; background: transparent; border-radius: 50%; width: 26px; height: 26px; font-size: 16px; line-height: 1; cursor: pointer; color: #6b6257; padding: 0; }
+</style>
+</head>
+<body>
+<div class="sheet">
+<p class="note">简约版 · 2026-10-23 报纸版式重排（非第 025 期原件；无齿轮、无陀螺仪、无 v24 粉新闻框）</p>
+<h1>《麻薯日报》第 59 期 · 2026 年 11 月 26 日（星期四）🎂 Ricardo 20 岁生日特刊</h1>
+<blockquote>
+<p>🎂 今天是 Ricardo 的阳历 20 岁生日！2006 年 11 月 26 日出生的你，今天正式满 20 岁啦——从少年到青年，愿新的一岁里，梦想都敢想、路都敢走，生日快乐！</p>
+<p>"Everything you've ever wanted is on the other side of fear." —— George Addair（你想要的一切，都在恐惧的另一边。——乔治·阿代尔）</p>
+</blockquote>
+<p>Ricardo，早上好呀☀️今天是星期四，也是你的阳历 20 岁生日🎂第 59 期《麻薯日报》准时送到——过去 24 小时最值得留意的三件事：美股周三上演史诗级日内大逆转，道指盘中一度跌超 1100 点、收盘却翻红站上 5 万点；美国 10 月通胀升至 3.8%、三季度 GDP 上修至 4.3%，经济"又热又胀"；美国贸易代表办公室正式公布对 14 个贸易伙伴加征关税的提案，越南最高 35%。武汉今天晴，8～20℃，无雨，AQI 144 对敏感人群不太友好，出门可以戴个口罩😷今天只有上午一节雅思读写 2（9:50–12:15，J5-209），下午没课——生日这天，好好过！</p>
+<hr />
+<h2>一、财经 💰</h2>
+<div class="zg-head"><h3>1. 美股 11 月 25 日上演史诗级日内大逆转，道指收涨、纳指标普收跌，今天感恩节休市</h3><button type="button" class="zg-btn" data-story="2026-11-26-fin-1" data-title="1. 美股 11 月 25 日上演史诗级日内大逆转，道指收涨、纳指标普收跌，今天感恩节休市" data-section="fin" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>2026 年 11 月 25 日（星期三）美股盘中一度暴跌：道指最多跌约 1105 点，标普 500 最多跌超 3%，纳指最多跌 4.6%–4.7%，费城半导体指数盘中最多跌近 8%——AI 股抛售加剧、通胀超预期、新关税提案三重利空一起砸下来。但尾盘抄底资金进场，大幅收复失地。收盘：道琼斯工业平均指数涨 164.25 点（+0.33%），报 50182.95 点，连续第二个交易日收在 5 万点上方；标普 500 跌 18.31 点（-0.25%），报 7182.78 点；纳斯达克综合指数跌 147.73 点（-0.62%），报 23585.80 点；小盘股罗素 2000 逆势涨 0.71%。个股上英伟达跌约 4%。纳指 100 盘中一度较历史收盘高点跌 20%，触及熊市区间，收盘跌 0.64%，报 26046.90 点。</p>
+<p>今天（11 月 26 日星期四）美股因感恩节全天休市，明天（11 月 27 日星期五）提前至美东时间 13:00 收盘。感恩节后市场将直接面对 12 月 4 日非农就业报告和 12 月 8–9 日美联储议息会议，11 月 25 日的数据将主导这段时间的定价。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"日内大逆转"</strong>：一天之内行情先大跌、后又大涨回来，像坐过山车先冲下坡、又被拉回高处。周三美股就是上午看着要崩盘、收盘却只跌了一点，道指甚至翻红了——说明有人在低位大举"接盘"。</li>
+<li><strong>"抄底"</strong>：在价格跌了很多之后买入，赌它会涨回去。好比商场大甩卖时冲进去抢货——便宜是便宜，但也可能"越抄越跌"，抄在半山腰。</li>
+<li><strong>"熊市区间"</strong>：一只指数从高点跌了 20% 以上，就被认为进入了"熊市"（长期下跌的市场）。纳指 100 盘中一度触及这条线，相当于一只脚已经踩进了熊市的门槛。</li>
+<li><strong>"感恩节休市"</strong>：感恩节是美国最重要的节日之一，美股全天不开门。节后那个周五也只开半天，参与的人少、钱也少，价格容易被小单子带得忽上忽下。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>今年以来波动最大的一天——上午三重利空把市场砸下去，尾盘抄底资金又把它捞回来一半；道指守住 5 万点，但纳指离熊市只差一步，感恩节后的非农和议息会议才是真正的考验。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Investopedia《Markets News, Nov. 25, 2026》—— <a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-nasdaq-11252026-12279355">https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-nasdaq-11252026-12279355</a></li>
+<li>Reuters（via LA Post）—— <a href="https://www.lapost.com/content/nasdaq-futures-slide-over-2-on-fresh-us-tariff-concerns-inflation-data-in-focus">https://www.lapost.com/content/nasdaq-futures-slide-over-2-on-fresh-us-tariff-concerns-inflation-data-in-focus</a></li>
+</ul>
+<div class="zg-head"><h3>2. 美国 10 月 PCE 通胀升至 3.8%，三季度 GDP 二次估值大幅上修至 4.3%</h3><button type="button" class="zg-btn" data-story="2026-11-26-fin-2" data-title="2. 美国 10 月 PCE 通胀升至 3.8%，三季度 GDP 二次估值大幅上修至 4.3%" data-section="fin" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>美国商务部经济分析局 11 月 25 日美东时间 8:30 公布：10 月个人消费支出（PCE）物价指数环比涨 0.3%，同比涨 3.8%（9 月为 3.6%），符合预期；剔除食品和能源的核心 PCE 环比涨 0.3%，同比涨 3.3%（9 月为 3.1%，路透调查预期为 3.2%），为 2023 年 11 月以来最大同比涨幅。同日公布的三季度 GDP 二次估值：按年率增长 4.3%，较初值 3.4% 大幅上修 0.9 个百分点，高于路透调查预期的 3.5%，为三年来最快增速；二季度为 2.2%。其中消费支出增速由初值 3.8% 上修至 4.2%，企业设备投资增速达 21.8%，民间国内最终购买增长 5.8%。个人收入 10 月环比增长 0.7%，可支配收入增长 0.8%；消费支出环比增长 0.3%（9 月上修后为 0.6%）；储蓄率为 4.1%。</p>
+<p>经济"又热又胀"——增长超预期强劲，但通胀离美联储 2% 的目标反而更远。数据公布后，市场对美联储 12 月加息的押注进一步走高。这也是 11 月 25 日美股盘中大跌的重要导火索之一。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"PCE 通胀"</strong>：美联储最看重的通胀指标，统计的是全美国人实际花钱买的东西价格涨了多少。和 CPI 的区别在于，PCE 覆盖范围更广、还会根据大家"贵了就换便宜货"的行为做调整，所以美联储更信任它。同比 3.8% 的意思就是：同样一篮子东西，比去年贵了 3.8%。</li>
+<li><strong>"核心 PCE"</strong>：把食品和能源价格剔掉之后的 PCE。食品和能源价格忽上忽下（油价一会儿涨一会儿跌），剔掉它们才能看清通胀"底子"到底热不热。核心 PCE 涨到 3.3%，说明通胀不是油价闹的，是方方面面都在涨。</li>
+<li><strong>"GDP 二次估值"</strong>：一个季度的经济增速，官方会先给一个"初值"、过一个月再给一个更准的"二次估值"。这次从 3.4% 上修到 4.3%，等于官方说"上季度经济比我们一开始以为的还要好得多"。</li>
+<li><strong>"上修"</strong>：把之前公布的数字往上改。就像老师改卷发现少算了分，给你往上加——只不过这次加的是整个美国经济的成绩单。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>美国经济"又热又胀"——三季度增速上修到 4.3% 的三年最快，通胀却也升到 3.8%、离 2% 的目标更远；美联储 12 月议息的压力，一下子全回来了。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Reuters《US inflation rises further in October》—— <a href="https://www.reuters.com/business/us-inflation-rises-further-october-2026-11-25/">https://www.reuters.com/business/us-inflation-rises-further-october-2026-11-25/</a></li>
+<li>Reuters《US third-quarter GDP growth revised sharply higher》—— <a href="https://www.reuters.com/business/finance/us-third-quarter-gdp-growth-revised-sharply-higher-2026-11-25/">https://www.reuters.com/business/finance/us-third-quarter-gdp-growth-revised-sharply-higher-2026-11-25/</a></li>
+<li>Zacks《PCE/PCE Inflation Surges in October》—— <a href="https://www.zacks.com/stock/news/3035285/pcepce-inflation-surges-in-october">https://www.zacks.com/stock/news/3035285/pcepce-inflation-surges-in-october</a></li>
+</ul>
+<div class="zg-head"><h3>3. 特朗普政府正式公布：拟对 14 个贸易伙伴加征新关税，越南最高 35%、中国 20%</h3><button type="button" class="zg-btn" data-story="2026-11-26-fin-3" data-title="3. 特朗普政府正式公布：拟对 14 个贸易伙伴加征新关税，越南最高 35%、中国 20%" data-section="fin" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>美国贸易代表办公室（USTR）11 月 25 日（星期三）宣布，经过 8 个月的"301 调查"，拟以所谓"结构性产能过剩"为由，对 14 个主要贸易伙伴加征新关税，依据为 1974 年《贸易法》第 301 条款。这是今年 2 月美国最高法院推翻特朗普全面关税之后，白宫重建关税体系的最新尝试。调查原本覆盖 16 个经济体，墨西哥和挪威此次暂未被列入加税名单。</p>
+<p>税率（均为"最高可达"，且已扣掉已有贸易协议里的上限）：越南最高 35%（如果和美国达成贸易协议，可降至 20%），印度 25%（达成协议可降至 17%），中国 20%——这 20% 是在特朗普第一任期约 25% 的关税基础上再加，合计税率可达约 45%；如果中美贸易休战（2027 年 1 月 10 日到期）破裂，中国的新关税税率可能升至 40%。新加坡 20%（达成协议可降至 10%），欧盟、日本、韩国和台湾封顶 15%，孟加拉国、柬埔寨、印尼、马来西亚和泰国为 18%。巴西被单独点名：拟对巴西航空工业公司（Embraer）的整机加征 10% 关税，并提高超出配额的食糖关税。半导体等台湾、韩国的关键高科技产品拟获豁免。</p>
+<p>程序上：公众评议期截至 2027 年 1 月 5 日，听证会从 2027 年 1 月 25 日起举行，在此之前新关税不会生效。中国外交部同日回应称，所谓"产能过剩"根本不存在。这是中美贸易休战到期前最重磅的变量之一，直接关系到中国出口、全球供应链和美国物价；消息一出即成为 11 月 25 日美股盘中跳水的导火索之一，亚太股市 11 月 25 日也同步大跌。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"301 调查"</strong>：美国《贸易法》第 301 条给政府的一把"尚方宝剑"：只要认定别国贸易做法"不合理"，就可以单方面加税。不用去世界贸易组织打官司，自己调查、自己定罪、自己执行，相当于"既当裁判又当运动员"。</li>
+<li><strong>"产能过剩"</strong>：一个国家生产的东西超过了自己人能买的量，多出来的只能往外卖。美国指责这些国家靠政府补贴把东西造得又多又便宜，冲垮了美国本土工厂。中国方面则回应说，这种说法根本不存在。</li>
+<li><strong>"听证会"</strong>：正式收税之前必须走的程序：把各方叫来，当面听听反对意见。1 月 25 日才开听证会，意味着这轮关税最快也要明年 2 月之后才可能落地，中间还有讨价还价的空间。</li>
+<li><strong>"休战到期"</strong>：中美去年达成的贸易休战协议将于 2027 年 1 月 10 日到期。休战在，关税就有上限；休战一破，税率可能直接翻倍——这就是为什么 1 月 10 日这个日子比关税本身还关键。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>关税大棒这次是"明码标价"地抡出来了——越南 35% 最高、中国 20% 叠加旧税合计约 45%；但听证会要明年 1 月 25 日才开，真正落地前还有两个月的谈判窗口。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Reuters《US proposes new tariffs on 14 trading partners to fight excess factory capacity》—— <a href="https://www.reuters.com/world/china/us-proposes-new-tariffs-14-trading-partners-fight-excess-factory-capacity-2026-11-25/">https://www.reuters.com/world/china/us-proposes-new-tariffs-14-trading-partners-fight-excess-factory-capacity-2026-11-25/</a></li>
+<li>Al Jazeera《Trump announces new trade tariffs: Which countries are affected?》—— <a href="https://www.aljazeera.com/news/2026/11/25/trump-announces-new-trade-tariffs-which-countries-will-they-target">https://www.aljazeera.com/news/2026/11/25/trump-announces-new-trade-tariffs-which-countries-will-they-target</a></li>
+<li>Marketplace《Trump's latest tariff push: What are the details?》—— <a href="https://www.marketplace.org/story/2026/11/25/trumps-latest-tariff-push-what-are-the-details">https://www.marketplace.org/story/2026/11/25/trumps-latest-tariff-push-what-are-the-details</a></li>
+<li>The Straits Times《US proposes tariffs on 14 trading partners》—— <a href="https://www.straitstimes.com/world/united-states/us-proposes-new-tariffs-on-14-trading-partners-including-singapore-to-fight-excess-factory-capacity?ref=more-on-this-topic">https://www.straitstimes.com/world/united-states/us-proposes-new-tariffs-on-14-trading-partners-including-singapore-to-fight-excess-factory-capacity?ref=more-on-this-topic</a></li>
+</ul>
+<div class="zg-head"><h3>4. A 股 11 月 25 日大跌失守 3500 点，比特币跌破 6 万美元，黄金、原油盘中剧烈波动后收涨</h3><button type="button" class="zg-btn" data-story="2026-11-26-fin-4" data-title="4. A 股 11 月 25 日大跌失守 3500 点，比特币跌破 6 万美元，黄金、原油盘中剧烈波动后收涨" data-section="fin" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>A 股 11 月 25 日三大指数集体大跌：上证综指跌 2.03%，报 3476.47 点，失守 3500 点；深证成指跌 3.24%，报 10086.36 点；创业板指跌 4.19%，报 2183.58 点；科创 50 跌 5.12%，报 1186.14 点。三大指数均创本轮调整以来新低，全市场下跌个股超 4900 只，上涨不足 600 只。两市成交 13831 亿元，较前一交易日 16551 亿元缩量 2720 亿元。领跌的是半导体、算力硬件、电池、人形机器人，宁德时代大跌超 8%，市值跌破 1 万亿元；医药、零售逆势活跃。亚太同步承压：日经 225 跌 2.78%，报 57011.62 点；韩国 KOSPI 大跌 6.16%，报 4697.51 点，三星电子跌 9.87%，SK 海力士跌 11.05%。</p>
+<p>比特币 11 月 25 日跌破 6 万美元，盘中最低触及约 57209–57300 美元，收盘附近回升至约 60300 美元，但仍较本月高点跌约 25%。黄金期货收盘报约 3575 美元/盎司（涨约 0.3%），但盘中一度跌至 3425 美元的 14 个月低点；WTI 原油期货涨 2.5%，报 84.10 美元/桶。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"失守 3500 点"</strong>：沪指跌破 3500 这个整数关口。整数关口像一道心理防线——守住了大家觉得"还行"，跌破了就容易引发更多人跟着卖，形成"越跌越卖、越卖越跌"的循环。这是沪指自 2025 年 7 月中旬以来首次收在 3500 点下方。</li>
+<li><strong>"缩量下跌"</strong>：成交金额比前一天少了，但指数照样大跌。说明不是"大家疯狂抛售"，而是"买的人不肯接盘了"——想卖的人还在，想买的人缩回去了，价格自然往下掉。</li>
+<li><strong>"市值跌破 1 万亿元"</strong>：一家公司的全部股票加起来值多少钱，就是市值。宁德时代一天跌超 8%，市值从 1 万亿以上掉到 1 万亿以下，相当于一天蒸发了上千亿。</li>
+<li><strong>"避险"</strong>：市场害怕的时候，钱会往大家觉得安全的地方躲——黄金就是最典型的"避风港"。但周三黄金自己盘中也一度大跌，说明那天是"什么都在跌"，连避风港都差点没顶住。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>全球风险资产周三同步"股债币金"齐跌、盘中巨震，是 AI 泡沫担忧、美国通胀与关税三重利空共振的结果；A 股科技成长股是重灾区，沪指失守 3500 点，市场情绪明显转弱。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>澎湃新闻《沪指跌 2.03%，创指跌 4.19%》—— <a href="https://m.thepaper.cn/newsDetail_forward_34556304">https://m.thepaper.cn/newsDetail_forward_34556304</a></li>
+<li>新浪财经收评《沪指失守 3500 点 创指低开低走跌超 4%》—— <a href="https://finance.sina.cn/stock/dpps/2026-11-25/detail-inizxtsc9477012.d.html">https://finance.sina.cn/stock/dpps/2026-11-25/detail-inizxtsc9477012.d.html</a></li>
+<li>Investopedia《Markets News, Nov. 25, 2026》—— <a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-nasdaq-11252026-12279355">https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-nasdaq-11252026-12279355</a></li>
+</ul>
+<hr />
+<div class="zg-followup" data-story="2026-11-19-fin-2" hidden><p class="sec-label">📌 追更后续：美联储 10 月会议纪要：几乎所有官员认为还需进一步加息，12 月加息几成定局 · <span class="zg-followup-date">你 11月19日 开始追更</span></p><p>12 月加息预期进一步升温：市场对 12 月加息的定价已升至约 97–98%，10 月 PCE 通胀升至 3.8% 也强化了美联储继续收紧的理由。</p><p class="zg-followup-src">🔗 来源：<a href="https://www.ttnews.com/articles/fed-officials-back-rate-hike">https://www.ttnews.com/articles/fed-officials-back-rate-hike</a>；<a href="https://theapexwire.com/finance/fed-minutes-december-rate-hike-signal/">https://theapexwire.com/finance/fed-minutes-december-rate-hike-signal/</a></p></div><div class="zg-followup" data-story="2026-11-19-fin-3" hidden><p class="sec-label">📌 追更后续：Anthropic IPO 定价 83 美元：高于 70–78 美元区间，今晚纳斯达克上市，估值约 1.5 万亿美元 · <span class="zg-followup-date">你 11月19日 开始追更</span></p><p>上市不到一周就破发：11 月 24 日收盘 81.91 美元、跌 6.5%，盘中最低 75.61 美元；11 月 25 日开盘约 75 美元、收盘 82.79 美元，仍低于 83 美元发行价；摩根士丹利已行使全部 1.47 亿股绿鞋期权并结束稳定操作。</p><p class="zg-followup-src">🔗 来源：<a href="https://www.reuters.com/business/anthropic-breaks-below-83-ipo-price-debut-rally-unravels-2026-11-24/">https://www.reuters.com/business/anthropic-breaks-below-83-ipo-price-debut-rally-unravels-2026-11-24/</a>；<a href="https://www.morningstar.com/news/marketwatch/20261124198/anthropics-stock-just-broke-below-its-ipo-price-for-the-first-time">https://www.morningstar.com/news/marketwatch/20261124198/anthropics-stock-just-broke-below-its-ipo-price-for-the-first-time</a></p></div><div class="zg-followup" data-story="2026-11-22-fin-3" hidden><p class="sec-label">📌 追更后续：黄金、比特币周末继续跌：金价全周跌近 9%，比特币跌破 6 万美元至两年最低 · <span class="zg-followup-date">你 11月22日 开始追更</span></p><p>比特币 11 月 24 日再度跌破 6 万美元，最低约 5.93 万美元，11 月 25 日仍在 6 万下方徘徊；现货比特币 ETF 三周内净流出 35.9 亿美元；金价盘中一度跌至约 3446 美元后回升至 3609 美元，涨 0.5%。</p><p class="zg-followup-src">🔗 来源：<a href="https://www.businesstimes.com.sg/companies-markets/energy-commodities/oil-gains-iran-war-worries-and-short-covering-ahead-thanksgiving-holiday">https://www.businesstimes.com.sg/companies-markets/energy-commodities/oil-gains-iran-war-worries-and-short-covering-ahead-thanksgiving-holiday</a>；<a href="https://k.sina.com.cn/article_7857201856_1d45362c001908vo1m.html">https://k.sina.com.cn/article_7857201856_1d45362c001908vo1m.html</a></p></div><div class="zg-followup" data-story="2026-11-24-fin-1" hidden><p class="sec-label">📌 追更后续：美股周一历史级大反弹：纳指暴涨 6.51%、标普涨 4.73%、道指涨 1448 点，七连跌终结 · <span class="zg-followup-date">你 11月24日 开始追更</span></p><p>反弹只持续了一天：11 月 24 日纳指跌 1.48%，11 月 25 日盘中一度跌 4.6%、收盘跌 0.62% 至 23585.80 点；道指收涨 0.33% 至 50182.95 点。</p><p class="zg-followup-src">🔗 来源：<a href="https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-11-23/">https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-11-23/</a>；<a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-nasdaq-11232026-12274147">https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-nasdaq-11232026-12274147</a></p></div><div class="zg-followup" data-story="2026-11-24-fin-2" hidden><p class="sec-label">📌 追更后续：英伟达董事会 180 度大转弯：全票恢复黄仁勋 CEO 职务，股价单日暴涨 31%、市值一日增加约 9520 亿美元 · <span class="zg-followup-date">你 11月24日 开始追更</span></p><p>英伟达把涨幅吐了回去：11 月 24 日跌 5.86% 至 155.38 美元，11 月 25 日再跌 3.91% 至约 148.41 美元；SEC、FBI、加州总检察长和国会的调查仍在继续，黄仁勋将于 12 月 1 日和 12 月 3 日出席国会听证会。</p><p class="zg-followup-src">🔗 来源：<a href="https://www.cnn.com/2026/11/23/tech/nvidia-reinstates-jensen-huang-ceo?cid=external-feeds_iluminar_meta">https://www.cnn.com/2026/11/23/tech/nvidia-reinstates-jensen-huang-ceo?cid=external-feeds_iluminar_meta</a>；<a href="https://www.investopedia.com/jensen-huang-is-back-and-nvidia-s-stock-is-soaring-nvda-12274299">https://www.investopedia.com/jensen-huang-is-back-and-nvidia-s-stock-is-soaring-nvda-12274299</a></p></div><div class="zg-followup" data-story="2026-11-25-fin-2" hidden><p class="sec-label">📌 追更后续：特朗普政府拟对中国、欧盟等 16 个经济体加征新关税，最快本周宣布 · <span class="zg-followup-date">你 11月25日 开始追更</span></p><p>关税提案进入程序：公众意见征集截至 2027 年 1 月 5 日，听证会定于 2027 年 1 月 25 日举行，在此之前不会生效；越南最高 35%、印度 25%、中国 20% 的税率均为提案，仍有谈判空间。</p><p class="zg-followup-src">🔗 来源：<a href="https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-amd-anthropic-nvidia/">https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-amd-anthropic-nvidia/</a>；<a href="https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-11-24/">https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-11-24/</a></p></div><h2>二、AI 🤖</h2>
+<div class="zg-head"><h3>1. GPT-6.2 设计的蛋白质在实验室里真的结合上了：322 个里 35 个命中</h3><button type="button" class="zg-btn" data-story="2026-11-26-ai-1" data-title="1. GPT-6.2 设计的蛋白质在实验室里真的结合上了：322 个里 35 个命中" data-section="ai" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>11 月 24 日，OpenAI 发表预印本《GPT-6 as a Universal Foundation Model for Protein Biology》，称 GPT-6 系列模型只凭推理和通用代码就能设计新的蛋白质结构与氨基酸序列，不调用专门的生物学模型来生成设计。研究覆盖 14 项蛋白设计任务。与研究伙伴 Onava 合作的湿实验（真实做实验验证，不是只跑电脑评分）中，GPT-6.2 设计的 322 个迷你结合蛋白里有 35 个（10.9%）在实验室里结合上了各自的目标，5 个靶点全部命中：PD-L1 5 个、IL-7Rα 3 个、TrkA 1 个、VEGF-A 8 个、IL-17A 18 个。重新设计序列时，MDM2 靶点 88 个里 75 个（85%）保留了结合能力。</p>
+<p>这是通用大模型第一次拿到湿实验验证的蛋白设计成绩，意味着 AI 做新药、设计新蛋白的路可能从"专用生物模型"转向"一个通用模型包办多步"。但要冷静：这只是"结合上了"，不是药效、安全性的证明；且序列生成和候选筛选环节仍用了专门模型辅助，预印本也未经同行评审。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"蛋白质设计"</strong>：人工设计出自然界不存在的新蛋白质，让它能精准抓住某个目标（比如癌细胞表面的坏蛋白），从而做成新药。以前这活儿要靠专门的生物学模型，现在通用大模型也能上手了。</li>
+<li><strong>"湿实验"</strong>：真正在实验室里动手做实验（试管、试剂、显微镜全上阵），相对的是"干实验"——只在电脑上跑模拟、算分数。湿实验通过了，说明这东西在真实世界里确实管用，不只是纸上谈兵。</li>
+<li><strong>"靶点"</strong>：药物要瞄准的那个"靶子"，通常是某个致病蛋白。能"结合上靶点"，等于钥匙插进了锁孔——是做新药的第一步，但离真正能治病还差得远。</li>
+<li><strong>"预印本"</strong>：论文正式发表之前，先挂到网上给大家看的"未审稿版"。好处是传播快，坏处是还没经过同行专家把关，结论可能有水分，先别全信。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>通用大模型第一次在真实实验室里"设计"出了能用的蛋白质——322 个设计里 35 个命中，5 个靶点全中；但这只是"钥匙插进了锁孔"，离做成药还远，预印本也没过同行评审，先别急着欢呼。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>OpenAI 官网《GPT-6 models demonstrate intrinsic protein design capabilities》—— <a href="https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/">https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/</a></li>
+</ul>
+<div class="zg-head"><h3>2. MCP 两周年：Anthropic 推出 Skills over MCP，Tasks 与 Elicitation 正式可用</h3><button type="button" class="zg-btn" data-story="2026-11-26-ai-2" data-title="2. MCP 两周年：Anthropic 推出 Skills over MCP，Tasks 与 Elicitation 正式可用" data-section="ai" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>11 月 24 日，Anthropic 在 MCP（Model Context Protocol，模型上下文协议，相当于 AI 应用接外部工具的"通用插座"标准）发布两周年之际宣布：Skills over MCP 进入公开测试版，MCP 服务器现在可以直接给 Claude 配送"技能"（写好的工作流程说明书），Claude 按需加载、随服务器自动更新，不用用户再手动安装；Tasks（让服务器在后台跑耗时任务）和 Elicitation（执行前停下来向用户确认）转为正式可用。Anthropic 同时披露，MCP 的 SDK 每月下载量已超过 7 亿次，Claude 的连接器已超过 1 万个。Skills over MCP 在 Pro、Max、Ultra 套餐默认开启，Team 需管理员开启，企业版即将推出；Claude Code 需 2.1.331 或更高版本。</p>
+<p>AI 智能体正在从"会聊天"走向"会干活"，而 MCP 正在成为智能体干活的基础设施标准——谁控制了工具怎么接、流程怎么做，谁就掌握了下一代 AI 应用的入口。这次更新让工具不只提供功能，还能自带"使用说明书"，是智能体走向规模化落地的关键一步。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"MCP（模型上下文协议）"</strong>：Anthropic 定的一个开放标准，相当于 AI 应用接外部工具的"通用插座"。以前每个 AI 应用接工具都要单独"配插头"，有了 MCP，一套插座到处都能用。</li>
+<li><strong>"技能（Skills）"</strong>：写给 AI 的"工作流程说明书"，比如"写周报要先拉数据、再画图、最后按这个格式排版"。以前这类说明书要用户自己装，现在工具服务器可以直接"配送"给 AI，自动更新。</li>
+<li><strong>"Elicitation（确认）"</strong>：AI 在动手干一件有风险的事（比如删文件、花钱）之前，先停下来问你一句"确定要这么做吗"。相当于给 AI 的手上加了一道"二次确认"，防止它自作主张闯祸。</li>
+<li><strong>"SDK 下载量"</strong>：SDK 是供开发者调用的"工具包"，每月下载 7 亿多次，说明全世界的开发者都在用 MCP 这套标准接工具——它已经是事实上的行业标准了。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>MCP 两周年，Anthropic 让工具不只提供功能、还能自带"使用说明书"——AI 智能体从"会聊天"正式迈向"会干活"，而谁定这套规矩，谁就握着下一代 AI 应用的入口。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>TechTimes《Anthropic Launches Skills Over MCP Beta》—— <a href="https://www.techtimes.com/articles/331491/20261125/anthropic-launches-skills-over-mcp-beta-server-skills-update-without-reinstall-approval-unstated.htm">https://www.techtimes.com/articles/331491/20261125/anthropic-launches-skills-over-mcp-beta-server-skills-update-without-reinstall-approval-unstated.htm</a></li>
+</ul>
+<hr />
+<div class="zg-followup" data-story="2026-11-19-ai-1" hidden><p class="sec-label">📌 追更后续：谷歌一日双发：Gemini 4 Neon 补上&quot;中间档&quot;，Genie 4 世界模型开放给 AI Ultra 用户 · <span class="zg-followup-date">你 11月19日 开始追更</span></p><p>Gemini 4 Neon 在 Artificial Analysis 智能指数上拿下 61 分（Opus 5.5 为 59 分、GPT-6.2 Sol 为 57 分），在独立榜单上排第三（仅次于 Claude Fable 5.2 和 GPT-6.2 Astra）；输入价每百万 token 仅 3 美元。</p><p class="zg-followup-src">🔗 来源：<a href="https://dev.to/aleksei_aleinikov/gemini-4-neon-review-61-intelligence-index-127-toks-and-315-vs-opus-55-485n">https://dev.to/aleksei_aleinikov/gemini-4-neon-review-61-intelligence-index-127-toks-and-315-vs-opus-55-485n</a>；<a href="https://www.moneycontrol.com/technology/google-gemini-4-neon-launched-with-1-million-token-context-window-four-thinking-levels-price-starts-at-3-per-million-tokens-article-14084675.html/amp">https://www.moneycontrol.com/technology/google-gemini-4-neon-launched-with-1-million-token-context-window-four-thinking-levels-price-starts-at-3-per-million-tokens-article-14084675.html/amp</a></p></div><div class="zg-followup" data-story="2026-11-20-ai-1" hidden><p class="sec-label">📌 追更后续：腾讯混元 Hy4 flash 开源：2240 亿参数大模型免费下载，首日调用超 50 万亿 tokens · <span class="zg-followup-date">你 11月20日 开始追更</span></p><p>腾讯混元 Hy4 权重已全量开源：总参数 770B、激活参数 49B，支持 100 万上下文，权重约 1.55TB，采用腾讯混元许可协议 v1.0，大规模商用须另行授权。</p><p class="zg-followup-src">🔗 来源：<a href="https://technode.com/2026/11/19/tencent-says-hunyuan-hy4-flash-surpasses-50-trillion-tokens-in-first-day-usage/">https://technode.com/2026/11/19/tencent-says-hunyuan-hy4-flash-surpasses-50-trillion-tokens-in-first-day-usage/</a>；<a href="https://huggingface.co/tencent/Hy4-flash">https://huggingface.co/tencent/Hy4-flash</a></p></div><div class="zg-followup" data-story="2026-11-23-ai-1" hidden><p class="sec-label">📌 追更后续：数学界大地震：Anthropic 数学家声称和 Claude 一起证明了黎曼猜想，Lean 社区已联合背书，但争议才刚刚开始 · <span class="zg-followup-date">你 11月23日 开始追更</span></p><p>黎曼猜想证明又有新动向：Luke Sernau 11 月 25 日贴出更高效的版本；阿尔珀格承认&#x27;25 万页&#x27;的说法只是个玩笑；陶哲轩已给出初步审阅意见，但仍无人类可读的证明，克雷研究所仍将黎曼猜想列为未解难题。</p><p class="zg-followup-src">🔗 来源：<a href="https://www.nature.com/articles/d41586-026-03812-7">https://www.nature.com/articles/d41586-026-03812-7</a>；<a href="https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/">https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/</a></p></div><h2>三、国际事务 🌍</h2>
+<div class="zg-head"><h3>1. 美伊对峙升级：霍尔木兹海峡再传油轮遇袭，美国加码制裁伊朗"影子银行"，伊朗开出谈判七条件</h3><button type="button" class="zg-btn" data-story="2026-11-26-intl-1" data-title="1. 美伊对峙升级：霍尔木兹海峡再传油轮遇袭，美国加码制裁伊朗&quot;影子银行&quot;，伊朗开出谈判七条件" data-section="intl" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>11 月 24 日，英国海上贸易行动办公室通报，三艘船只在霍尔木兹海峡及附近遭不明抛射物击中，船员均无恙；11 月 25 日，伊朗伊斯兰革命卫队海军又声称两艘油轮在海峡触雷，但未点名船只，也未经独立核实，美国中央司令部此前曾称类似伊朗布雷说法不实。美国财政部 11 月 24 日宣布新一轮制裁，针对 20 多家伊朗兑换所、幌子公司及关键人员，打击其"影子银行网络"；美方还称，2025 年 1 月至 2026 年 8 月，约 147 亿美元金融活动可能与伊朗影子银行有关。财长贝森特称伊朗领导层正因经济恶化而"恐慌"。</p>
+<p>伊朗议长、首席谈判代表加利巴夫 11 月 25 日表示，除非满足伊朗的七项条件，否则德黑兰不会与华盛顿采取行动或谈判；伊朗此前要求解除美国对伊朗港口的海军封锁、解除制裁、解冻被冻结资金。伊朗货币在新制裁后于黑市大跌。另据 NBC 11 月 24 日报道，特朗普政府官员正在讨论是否打击伊朗高级领导人；《华尔街日报》11 月 24 日报道，美国正调查伊朗是否对多达 50 艘商船发动网络攻击。卡塔尔首相 11 月 23–24 日访美会见国务卿鲁比奥，卡塔尔称正居中斡旋、力促美伊重回谈判桌，并警告中东经不起美伊再次升级。</p>
+<p>背景：10 月单月霍尔木兹海峡遇袭超 30 起，为冲突以来最高；11 月截至 23 日已有至少 22 起。这是 2026 年美以伊冲突爆发以来，海峡航运遇袭最密集的阶段之一。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"霍尔木兹海峡"</strong>：波斯湾通往印度洋的"咽喉水道"，最窄处只有约 33 公里宽。全球约五分之一的石油贸易要从这里过——它一堵，世界油价就得抖三抖，相当于小区唯一的出门大路被堵了。</li>
+<li><strong>"影子银行"</strong>：不在正规监管体系里的地下资金网络。伊朗被制裁后没法正常用美元结算，就靠兑换所、幌子公司偷偷转钱——美国制裁的就是这套"地下钱庄"。</li>
+<li><strong>"触雷"</strong>：船撞上了水里布的水雷。伊朗方面说油轮走了"未经授权的航线"才触雷，但这个说法没经过独立核实——在海上，谁布的雷、是不是真有雷，往往各说各话。</li>
+<li><strong>"斡旋"</strong>：第三方在中间传话、劝和。卡塔尔这次就是"和事佬"，在美伊之间来回跑，试图把双方拉回谈判桌。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>从"袭击油轮"到"讨论打击高层"，美伊对峙正在从代理人冲突滑向直接摊牌；谈判大门还没关，但双方条件差距极大，霍尔木兹这条"世界油路咽喉"一刻都没消停。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Gulf News《Iran Warns Ships in Hormuz, Rules Out US Talks Without Meeting 7 Conditions》—— <a href="https://gulfnews.com/world/mena/middle-east-conflict-us-investigates-iran-over-cyberattacks-on-50-ships-as-fresh-sanctions-target-irans-shadow-banking-network-1.500758688">https://gulfnews.com/world/mena/middle-east-conflict-us-investigates-iran-over-cyberattacks-on-50-ships-as-fresh-sanctions-target-irans-shadow-banking-network-1.500758688</a></li>
+<li>China Daily《US imposes sanctions on Iran's networks》—— <a href="https://global.chinadaily.com.cn/a/202611/25/WS6b063c1ae4b03ebf8519e882.html">https://global.chinadaily.com.cn/a/202611/25/WS6b063c1ae4b03ebf8519e882.html</a></li>
+<li>GlobalSecurity《Iran War 2026 — Day 271 Update — 25 November 2026》—— <a href="https://www.globalsecurity.org/military/ops/iran-war-oprep.htm">https://www.globalsecurity.org/military/ops/iran-war-oprep.htm</a></li>
+</ul>
+<div class="zg-head"><h3>2. 俄乌阿布扎比谈判无果而终：领土问题陷入僵局，下一轮拟加入欧洲</h3><button type="button" class="zg-btn" data-story="2026-11-26-intl-2" data-title="2. 俄乌阿布扎比谈判无果而终：领土问题陷入僵局，下一轮拟加入欧洲" data-section="intl" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>乌克兰、美国、俄罗斯三方谈判 11 月 10–11 日及 11 月 24–25 日在阿布扎比举行，由美国斡旋，但未达成协议。美国特使库什纳 11 月 25 日接受采访时承认，领土问题"目前处于某种僵局"，美方希望先谈战后安排，再谈领土。俄方坚持要求乌克兰从顿巴斯剩余地区全部撤出，乌方拒绝交出任何未被占领土；俄方首席谈判代表梅金斯基称"每一寸俄罗斯土地都要收回"；俄外长拉夫罗夫拒绝了欧洲要求立即停火的主张。唯一积极进展是双方提出了新的大规模换俘方案。</p>
+<p>乌克兰总统泽连斯基 11 月 25 日表示，乌方已为让欧洲全面参与和平进程做了大量工作，现正等美方确定下一轮四方会谈（乌、美、欧、俄）的日期；乌方官员称，新一轮换俘第一阶段可能在 11 月底或 12 月初启动，分多阶段进行，每阶段数百人，总计可能超过 1000 人。谈判期间战事未停，俄军继续打击乌克兰能源设施，第聂伯罗、哈尔科夫等地数十万居民断电。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"僵局"</strong>：双方谁也不让步，谈判卡住了。俄方要乌方交出还没丢掉的顿巴斯土地，乌方说"没被占领的土地凭什么交"——这道题没有中间答案，所以谈判只能先搁置。</li>
+<li><strong>"换俘"</strong>：交战双方交换俘虏，你放我的人、我放你的人。这是谈判桌上最容易先达成的小共识——哪怕大问题谈不拢，先把人换回来，也算给谈判留了一线生机。</li>
+<li><strong>"四方会谈"</strong>：乌克兰、美国、欧洲、俄罗斯四方一起谈。之前的谈判是三方（乌、美、俄），欧洲一直想入场——欧洲能不能真正坐上谈判桌，将决定下一轮谈判的格局。</li>
+<li><strong>"斡旋"</strong>：第三方在中间传话、劝和。这次是美国在中间撮合俄乌，库什纳就是那个来回跑的"中间人"。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>这是 2026 年 2 月以来首次三方直接接触，谈判破裂意味着冬季战事将继续；但"四方会谈"和大规模换俘是两条值得跟踪的线索——欧洲能否真正入场，将决定下一轮谈判的格局。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>The New Voice of Ukraine《Ukraine–U.S.–Russia talks deadlocked over territory》—— <a href="https://english.nv.ua/nation/ukraine-u-s-russia-talks-deadlocked-over-territory-50662635.html">https://english.nv.ua/nation/ukraine-u-s-russia-talks-deadlocked-over-territory-50662635.html</a></li>
+<li>TRT World《Ukraine awaits US date for next peace talks with Russia: Zelenskyy》—— <a href="https://www.trtworld.com/article/f5e615345fc3">https://www.trtworld.com/article/f5e615345fc3</a></li>
+<li>Nexus Europa《US envoys head to Moscow and Dublin as trilateral Abu Dhabi talks conclude》—— <a href="https://nexuseuropa.eu/en/story/us-envoys-head-to-moscow-and-dublin-as-trilateral-abu-dhabi-talks-conclude-28476">https://nexuseuropa.eu/en/story/us-envoys-head-to-moscow-and-dublin-as-trilateral-abu-dhabi-talks-conclude-28476</a></li>
+</ul>
+<div class="zg-head"><h3>3. 加沙停火濒临崩溃：美国主导的"和平委员会"警告停火协议名存实亡，11 月 25 日空袭再致一家人 4 口遇难</h3><button type="button" class="zg-btn" data-story="2026-11-26-intl-3" data-title="3. 加沙停火濒临崩溃：美国主导的&quot;和平委员会&quot;警告停火协议名存实亡，11 月 25 日空袭再致一家人 4 口遇难" data-section="intl" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>美国主导的"和平委员会"（Board of Peace）向联合国安理会提交最新报告（11 月 18 日路透社首见，11 月 25 日见诸跟进报道），警告如果不立即落实 2025 年停火协议，加沙停火可能濒临崩溃。报告称，以色列和哈马斯均未履行承诺："一个看不到任何实际成果的停火无法无限期维持下去；一旦崩溃，将无路线图可回、无管理机构可部署、无重建环境。"报告指出，以色列几乎每天都在空袭加沙，哈马斯武装人员也继续袭击以军；以色列阻挠了负责过渡治理的技术官僚机构运作，也未就训练、部署和允许民事警察返回加沙作出决定。自 2025 年 10 月 10 日停火生效以来，加沙已有 1600 多名巴勒斯坦人和 5 名以色列士兵死亡。</p>
+<p>11 月 25 日凌晨，以军空袭加沙城西部沙提难民营一处民宅，造成同一家庭 4 人死亡；加沙政府媒体办公室 11 月 25 日称，已记录以方 6405 起违反停火行为，造成 1690 名巴勒斯坦人死亡、6120 人受伤、223 人被拘留。另据该办公室警告，未来数日内一场强风暴可能威胁 176 万住在帐篷里的流离失所者，11 月 6 日的一场风暴已淹没 7 万顶帐篷。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"和平委员会"</strong>：美国主导设立的监督机构，负责盯着加沙停火协议的落实。这次是美国自己设立的机构发出的最严厉警告——等于"自家裁判"都说比赛没法打了。</li>
+<li><strong>"停火协议"</strong>：交战双方约定"先别打了"的一纸约定。但它不是和平条约，只是个"暂停键"——任何一方觉得对方越线了，都可能重新按下"播放键"。</li>
+<li><strong>"技术官僚机构"</strong>：由专业管理人员（而非派别武装）组成的过渡治理班子，负责在停火后管理加沙的日常运转。以色列阻挠它运作，意味着停火之后"谁来管加沙"这个最基本的问题至今没有答案。</li>
+<li><strong>"流离失所者"</strong>：因战火被迫离开家园、无家可归的人。加沙有 176 万人住在帐篷里，冬天一场风暴就能把 7 万顶帐篷淹掉——停火谈不拢，挨冻受灾的是这些人。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>停火已生效 13 个月，但解除武装、撤军、重建等核心条款几乎无一落实；美国自己的监督机构都警告"撑不下去了"，而冬季风暴正在逼近 176 万住在帐篷里的人。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Al Jazeera《Board of Peace warns Gaza ceasefire faces imminent collapse without action》—— <a href="https://aljazeeranews.edgeone.app/news/2026/11/18/board-of-peace-warns-gaza-ceasefire-faces-imminent-collapse-without-action">https://aljazeeranews.edgeone.app/news/2026/11/18/board-of-peace-warns-gaza-ceasefire-faces-imminent-collapse-without-action</a></li>
+<li>Anadolu / ANews《Israeli airstrike kills 4 members of Palestinian family in latest Gaza ceasefire violation》（2026-11-25）—— <a href="https://www.anews.com.tr/middle-east/2026/11/25/israeli-airstrike-kills-4-members-of-palestinian-family-in-latest-gaza-ceasefire-violation">https://www.anews.com.tr/middle-east/2026/11/25/israeli-airstrike-kills-4-members-of-palestinian-family-in-latest-gaza-ceasefire-violation</a></li>
+<li>The Express Tribune（同题，安纳多卢通讯社 2026-11-25）—— <a href="https://tribune.com.pk/story/2642252/israeli-airstrike-kills-four-members-of-palestinian-family-in-latest-gaza-ceasefire-violation?amp=1">https://tribune.com.pk/story/2642252/israeli-airstrike-kills-four-members-of-palestinian-family-in-latest-gaza-ceasefire-violation?amp=1</a></li>
+</ul>
+<hr />
+<div class="zg-followup" data-story="2026-11-19-intl-1" hidden><p class="sec-label">📌 追更后续：APEC 深圳：习近平亲自到机场迎接特朗普，晚宴上中美俄三巨头首次同框，今天下午举行三方首脑会谈 · <span class="zg-followup-date">你 11月19日 开始追更</span></p><p>三方首脑会谈 11 月 19 日下午 16:16–18:01 举行并发表四点《和平宣言》，未提乌克兰与伊朗问题；特朗普与习近平同日举行双边会谈，贸易休战延长至 2027 年 1 月 10 日。</p><p class="zg-followup-src">🔗 来源：<a href="https://indianexpress.com/article/world/donald-trump-vladimir-putin-xi-jinping-trilateral-meeting-shenzhen-apec-takeaways-icc-ukraine-10970368/">https://indianexpress.com/article/world/donald-trump-vladimir-putin-xi-jinping-trilateral-meeting-shenzhen-apec-takeaways-icc-ukraine-10970368/</a>；<a href="https://timesofindia.indiatimes.com/world/china/historic-trilateral-summit-trump-xi-putin-sign-declaration-toward-peace-take-4-big-pledges/articleshow/135989588.cms">https://timesofindia.indiatimes.com/world/china/historic-trilateral-summit-trump-xi-putin-sign-declaration-toward-peace-take-4-big-pledges/articleshow/135989588.cms</a></p></div><div class="zg-followup" data-story="2026-11-19-intl-3" hidden><p class="sec-label">📌 追更后续：霍尔木兹海峡战火外溢：伊朗袭击科威特、巴林美军基地，沙特拦截胡塞导弹，美军航母增至 3 艘 · <span class="zg-followup-date">你 11月19日 开始追更</span></p><p>11 月 25 日又有油轮在霍尔木兹海峡触雷起火，伊朗革命卫队称两艘油轮走了&#x27;未经授权的航线&#x27;（该说法尚未经独立核实）。</p><p class="zg-followup-src">🔗 来源：<a href="https://www.channelnewsasia.com/world/iran-kuwait-us-patriot-bahrain-saudi-houthi-5464226">https://www.channelnewsasia.com/world/iran-kuwait-us-patriot-bahrain-saudi-houthi-5464226</a>；<a href="https://ktwb.com/iran-says-it-struck-us-base-in-kuwait-bahrain-says-it-intercepted-iranian-attacks/">https://ktwb.com/iran-says-it-struck-us-base-in-kuwait-bahrain-says-it-intercepted-iranian-attacks/</a></p></div><div class="zg-followup" data-story="2026-11-20-intl-1" hidden><p class="sec-label">📌 追更后续：中俄美史上首次三方首脑会谈落幕：四点《和平宣言》，核军控只谈了个&quot;以后再谈&quot;，乌克兰、伊朗均无协议 · <span class="zg-followup-date">你 11月20日 开始追更</span></p><p>英国《金融时报》11 月 21 日报道：美方正推动基辅在明年 1 月初民主党接管国会之前达成协议，并提议在圣诞节前举行乌克兰、美国、欧洲、俄罗斯四方会谈。</p><p class="zg-followup-src">🔗 来源：<a href="https://indianexpress.com/article/world/donald-trump-vladimir-putin-xi-jinping-trilateral-meeting-shenzhen-apec-takeaways-icc-ukraine-10970368/">https://indianexpress.com/article/world/donald-trump-vladimir-putin-xi-jinping-trilateral-meeting-shenzhen-apec-takeaways-icc-ukraine-10970368/</a>；<a href="https://www.letemps.ch/en/world/xi-jinping-donald-trump-and-vladimir-putin-conclude-their-summit-in-shenzhen-by-adopting-a-peace-declaration">https://www.letemps.ch/en/world/xi-jinping-donald-trump-and-vladimir-putin-conclude-their-summit-in-shenzhen-by-adopting-a-peace-declaration</a></p></div><div class="zg-followup" data-story="2026-11-20-intl-3" hidden><p class="sec-label">📌 追更后续：乌克兰四天三袭克里米亚大桥：铁路一度中断，普京称不再考虑黑海停火，&quot;报复会更痛苦&quot;；美乌欧同日在柏林会谈 · <span class="zg-followup-date">你 11月20日 开始追更</span></p><p>俄罗斯 11 月 19–20 日发动报复性空袭：出动 400 多架无人机和 110 多枚导弹，至少 8 名平民死亡；11 月 24 日夜袭扎波罗热致 2 死 40 伤，包括 4 名儿童。</p><p class="zg-followup-src">🔗 来源：<a href="https://www.thehindu.com/news/international/third-ukrainian-strike-in-4-days-halts-rail-traffic-on-russias-kerch-bridge-to-crimea/article71721511.ece">https://www.thehindu.com/news/international/third-ukrainian-strike-in-4-days-halts-rail-traffic-on-russias-kerch-bridge-to-crimea/article71721511.ece</a>；<a href="https://wixx.com/2026/11/19/putin-rules-out-black-sea-energy-truce-after-crimea-bridge-strike/">https://wixx.com/2026/11/19/putin-rules-out-black-sea-energy-truce-after-crimea-bridge-strike/</a></p></div><div class="zg-followup" data-story="2026-11-25-intl-2" hidden><p class="sec-label">📌 追更后续：以色列空袭加沙致 7 死，包括哈马斯内部安全部门负责人，停火协议仍在但裂痕加深 · <span class="zg-followup-date">你 11月25日 开始追更</span></p><p>加沙空袭仍在继续：11 月 25 日空袭造成至少 11 名巴勒斯坦人死亡，包括两名女孩；这是名义停火下的连续第三天空袭。</p><p class="zg-followup-src">🔗 来源：<a href="https://gulfnews.com/amp/story/world%2Fmena%2Fmiddle-east-conflict-us-investigates-iran-over-cyberattacks-on-50-ships-as-fresh-sanctions-target-irans-shadow-banking-network-1.500758688">https://gulfnews.com/amp/story/world%2Fmena%2Fmiddle-east-conflict-us-investigates-iran-over-cyberattacks-on-50-ships-as-fresh-sanctions-target-irans-shadow-banking-network-1.500758688</a>；<a href="https://dailyfoxnews.com/news/15043/early-edition-november-24-2026">https://dailyfoxnews.com/news/15043/early-edition-november-24-2026</a></p></div><h2>四、个人成长 🌱</h2>
+<div class="zg-head"><h3>1. 别等有动力了再开始：动力不是策略，是绊脚石</h3><button type="button" class="zg-btn" data-story="2026-11-26-growth-1" data-title="1. 别等有动力了再开始：动力不是策略，是绊脚石" data-section="growth" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>Medium 专栏作家 Katherine D Paterson 11 月的一篇文章说：等有动力了再开始，就像坐着摇椅旅行——摇了半天，还在原地。动力是一种情绪，不是一套计划：它在起点最高、最爱新鲜感、最不擅长执行；把它当作行动的前提，等于把人生的方向盘交给了心情，心情一低，当天就有了"正当理由"不干活，久而久之就成了"永远在起跑线"的人。</p>
+<p>真正的高手都明白，因果链是反过来的：不是"有动力 → 行动 → 有成果"，而是"行动 → 有势头 → 才有动力"。动力很少是点火的火柴，它更像是木头烧起来之后散发的热。文章给了三个在"一点都不想动"的日子里也能用的办法：把门槛降到不可能失败——不写 1500 字的稿子，只写三句烂句子；不去健身房一小时，只穿上跑鞋走五分钟；用"默认值"代替每天的纠结——每天 9 点坐在同一张书桌前，不管有没有灵感，环境会自动把你推进状态；盯住"摩擦力"而不是"心情"——任务卡住往往不是你懒，是第一步太大了，把第一步拆小，阻力就没了。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"动力（Motivation）"</strong>：那种"好想干点什么"的情绪。它像天气一样忽晴忽雨——靠它驱动的人生，晴天能跑、阴天就趴窝。文章的意思是：别把动力当汽油，它更像是车开起来之后仪表盘上亮起的灯。</li>
+<li><strong>"默认值（Default）"</strong>：不用每天重新决定的固定安排。比如"每天 9 点坐到书桌前"就是默认值——到了点就执行，不用问自己"今天想不想学"。意志力是有限的，省下来用在真正难的事上，别浪费在"今天学不学"的纠结里。</li>
+<li><strong>"摩擦力"</strong>：让你迟迟不开始的那股"别扭劲"。任务越大、第一步越模糊，摩擦力就越大。把"写论文"拆成"打开文档写一句话"，摩擦力一下子就小到推得动了。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>别再等"有感觉了"才开始——动力不是点火的火柴，是烧起来的热；先动起来，动出势头，动力自己会跟上来。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Medium · Katherine D Paterson《Motivation isn't a strategy… It's a setback.》（Nov 2026）—— <a href="https://medium.com/@katherinedpaterson/motivation-isnt-a-strategy-it-s-a-setback-bd53638c0fe6">https://medium.com/@katherinedpaterson/motivation-isnt-a-strategy-it-s-a-setback-bd53638c0fe6</a></li>
+</ul>
+<div class="zg-head"><h3>2. 正在悄悄毁掉你潜力的 7 个"沉默习惯"</h3><button type="button" class="zg-btn" data-story="2026-11-26-growth-2" data-title="2. 正在悄悄毁掉你潜力的 7 个&quot;沉默习惯&quot;" data-section="growth" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>Medium 作者 Dua 11 月 21 日的文章说：潜力不是某一天突然消失的，它是被一些不起眼的小习惯一点一点埋掉的。文章列了 7 个"沉默习惯"：总在等"完美的时机"；总拿自己的旅程和别人比较；想太多、做太少；选舒服、不选成长；到处寻求别人的认可；看不见小习惯的力量；对自己太苛刻。</p>
+<p>每一项听起来都不严重，但合在一起就是一台"慢慢漏气的轮胎"：等完美时机的人永远在等，比较的人永远觉得自己不够好，想太多的人把力气都花在了脑内小剧场里，而对自己太苛刻的人，连一点小进步都要先骂自己两句。文章的提醒是：你的潜力不是被某件大事毁掉的，是被每天重复的小选择一点点盖住的——反过来也成立：每天改掉一小点，潜力就会一点点露出来。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"沉默习惯"</strong>：不吵不闹、每天都在发生、你却意识不到它在拖你后腿的习惯。和"熬夜""拖延"这种显眼的坏习惯不同，沉默习惯披着"正常"的外衣——比如"等等再说""看看别人怎么做"，听起来都挺合理，攒久了才发现路走偏了。</li>
+<li><strong>"比较"</strong>：拿自己的"幕后"去比别人的"台前"。你看到的是别人晒出来的高光时刻，看到的却是自己没写完的作业、没减掉的肉——这种比较从一开始就不公平，只会越比越泄气。</li>
+<li><strong>"完美时机"</strong>：一种不存在的东西。"等我准备好了再开始"听起来很负责，实际上常常是害怕的借口——准备永远做不完，真正开始的那一刻才是"时机"。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>潜力不是被大事毁掉的，是被 7 个不起眼的小习惯一点点埋住的——每天改掉一小点，潜力就会一点点露出来。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Medium · Dua《The Silent Habits That Are Slowly Destroying Your Potential》（2026-11-21）—— <a href="https://medium.com/@dua39470/the-silent-habits-that-are-slowly-destroying-your-potential-d228a26ddaf2">https://medium.com/@dua39470/the-silent-habits-that-are-slowly-destroying-your-potential-d228a26ddaf2</a></li>
+</ul>
+<hr />
+<h2>五、爱情/关系 💕</h2>
+<div class="zg-head"><h3>1. 成年人如何培养安全型依恋：四周练习计划</h3><button type="button" class="zg-btn" data-story="2026-11-26-love-1" data-title="1. 成年人如何培养安全型依恋：四周练习计划" data-section="love" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>博客 Marriage by the Numbers 11 月 19 日更新的一篇文章说：依恋模式不是童年定死的，成年人可以通过反复的"低 drama 安全体验"练出后天的安全感，关键不在一次 grand gesture（盛大的示爱举动），而在成千上万个可预期的小回应。文章给出四周计划：第一周每天三次停下来，给当下的感受命名并留意它在身体的哪个部位；第二周练自我安抚（慢呼吸、散步、感官接地）；第三周把"试探"换成直接提需求，比如直接说"我现在有点不安，能告诉我我们没事吗"；第四周练冲突后的修复，24 小时内主动做一次小的修复尝试，如一句"我们重新开始好吗"。</p>
+<p>焦虑型和回避型的进步信号不同：前者是试探变少、从害怕中恢复得更快，后者是退缩变短、更愿意主动袒露。文章点破了一个常见误区：直接提需求不是示弱，反而是建立信任最快的方式。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"依恋模式"</strong>：一个人在亲密关系里的"默认设置"——焦虑型总怕被抛弃、回避型总想保持距离、安全型既能亲近也能独处。它小时候形成，但不是刻在石头上的，成年后可以慢慢改写。</li>
+<li><strong>"安全型依恋"</strong>：在关系里既不怕失去对方、也不怕被对方吞没的状态。能直接说"我需要你"，也能在对方需要空间时不慌张——像一间有门也有窗的房子，进出都自如。</li>
+<li><strong>"自我安抚"</strong>：情绪上来时自己把自己稳住的本事：慢呼吸、散步、摸一摸手边的东西让自己回到当下。练好了，就不用每次都靠对方来"灭火"。</li>
+<li><strong>"修复（Repair）"</strong>：吵完架之后主动迈出的和好一步。研究发现，关系好不好，不取决于吵不吵架，而取决于吵完之后有没有人愿意先说一句"我们重新开始好吗"。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>安全感不是天生的，是成千上万个"可预期的小回应"练出来的——直接提需求不是示弱，吵完主动修复一次，比一百句"我爱你"都管用。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Marriage by the Numbers（博客）《7 Steps to Develop Secure Attachment as an Adult》（更新于 2026-11-19）—— <a href="https://blog.marriagebythenumbers.com/7-steps-develop-secure-attachment-adult">https://blog.marriagebythenumbers.com/7-steps-develop-secure-attachment-adult</a></li>
+</ul>
+<div class="zg-head"><h3>2. 爱一个回避型伴侣：距离往往不是不爱</h3><button type="button" class="zg-btn" data-story="2026-11-26-love-2" data-title="2. 爱一个回避型伴侣：距离往往不是不爱" data-section="love" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>婚姻家庭治疗师 Joree Rose 11 月 20 日的一篇文章说：回避型伴侣的疏远常常不是没有感情，而是亲密感太强烈时触发的自我保护——依恋系统没有停止渴望亲密，只是把信号压下去了，看起来像冷漠，内里往往是"音量太大"。文章建议：别把对方的退缩当成对自己的审判；别追着要答案，给一句"我看得出你需要空间，我不走，等你准备好来找我"然后真的去做自己的事；把"我们需要谈谈"换成具体的小问题（"你周日突然安静下来，我以为你在生我的气，是吗？"）；提需求时说"我这周想多和你待一会儿"，而不是"你从来不陪我"这种听起来像审判的话。</p>
+<p>同时要诚实地观察：对方退缩后会不会回来、愿不愿意回头看看发生了什么——有回头的意愿比当下的技巧更重要。什么时候该坚持、什么时候该认真考虑这段关系是否还有弹性，答案就藏在"他退缩之后，会不会回来"里。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"回避型依恋"</strong>：一种亲密关系模式：越亲近越想逃。不是不爱，是亲密感一强烈，内心就拉响警报、自动往后退——像一只想靠近火堆取暖、又怕被烫到的手。</li>
+<li><strong>"追与逃"</strong>：一方越追、另一方越逃的恶性循环。你追着要一个答案，对方觉得被逼得更紧、逃得更远；你越觉得被冷落、追得越紧。打破循环的办法是：追的人先停下来，给逃的人一条回来的路。</li>
+<li><strong>"审判式表达"</strong>："你从来不陪我""你总是这样"——一开口就给对方定了罪，对方听到的不是需求，是指控。换成"我这周想多和你待一会儿"，说的是自己的需要，对方才听得进去。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>回避型伴侣的冷淡，多半不是不爱，是亲密感太强烈时拉响的自我保护——别追着要答案，给他空间、看他会不会回来；有回头的意愿，比当下的技巧重要得多。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Bay Area Mindfulness &amp; Therapy Center · Joree Rose, LMFT《Loving Someone With Avoidant Attachment》（2026-11-20）—— <a href="https://www.mindfulnessandtherapycenter.com/loving-someone-with-avoidant-attachment/">https://www.mindfulnessandtherapycenter.com/loving-someone-with-avoidant-attachment/</a></li>
+</ul>
+<hr />
+<h2>六、绿色低碳能源 🌱</h2>
+<div class="zg-head"><h3>1. 印度拟强制 10kW 以上屋顶光伏配储能：白天发的电留到晚上用</h3><button type="button" class="zg-btn" data-story="2026-11-26-green-1" data-title="1. 印度拟强制 10kW 以上屋顶光伏配储能：白天发的电留到晚上用" data-section="green" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>11 月 25 日，印度电力部提出修订《电力（消费者权利）修正规则》草案：10 千瓦（kW）以上的屋顶太阳能装置须强制安装电池储能，各邦监管机构也可自行设定更低的门槛。被覆盖的用户须安装的储能容量至少相当于其可再生能源系统日发电量的 20%。该要求拟于 2028 年 4 月 1 日生效，草案公开征求意见至 12 月 23 日。草案还提出，用电需求超过 10kW 的用户须在 2028 年 4 月 1 日前纳入分时电价。</p>
+<p>印度是全球增长最快的屋顶光伏市场之一，这条规定等于宣告"电网不再免费当电池"：以前白天多余的太阳能可以白白送上网、晚上再拿回来用，以后得自己存起来晚上用。这对中国光伏、储能出口企业也是风向标——配储从"可选项"变成"必选项"的趋势正在向更多国家蔓延。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"屋顶光伏"</strong>：装在自家屋顶上的太阳能板，白天晒太阳发电。印度很多家庭和商铺都装了，装机量涨得飞快。</li>
+<li><strong>"配储"</strong>：给光伏配上电池。太阳能白天多、晚上没有，电池就是"存电的罐子"——白天把多余的电存起来，晚上再拿出来用，不用全靠电网"先借后还"。</li>
+<li><strong>"分时电价"</strong>：不同时段电价不同：用电高峰时贵、半夜低谷时便宜。逼着大家把用电挪到便宜时段，电网的压力就小了。就像打车高峰期加价、半夜打折，一个道理。</li>
+<li><strong>"千瓦（kW）"</strong>：功率单位。10kW 的屋顶光伏大概能覆盖一栋小楼或一家小商铺的用电，超过这个规模的才被强制配储，普通家庭的小系统暂时不受影响。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>印度给屋顶光伏立了新规矩——10kW 以上必须配电池，白天发的电自己存着晚上用；"电网免费当电池"的日子正在结束，配储从可选项变成必选项的趋势，正在向更多国家蔓延。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Moneycontrol《Centre proposes battery mandate for rooftop solar above 10 kW》—— <a href="https://www.moneycontrol.com/news/business/centre-proposes-battery-mandate-for-rooftop-solar-above-10-kw-states-can-set-lower-threshold-14088991.html">https://www.moneycontrol.com/news/business/centre-proposes-battery-mandate-for-rooftop-solar-above-10-kw-states-can-set-lower-threshold-14088991.html</a></li>
+</ul>
+<div class="zg-head"><h3>2. COP31 能源日临近：全球超 2000GW 可再生能源项目排队等并网，电网和储能跟不上了</h3><button type="button" class="zg-btn" data-story="2026-11-26-green-2" data-title="2. COP31 能源日临近：全球超 2000GW 可再生能源项目排队等并网，电网和储能跟不上了" data-section="green" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>COP31 能源日前夕，全球太阳能理事会、全球可再生能源联盟、智库 Ember 与澳大利亚可再生能源署等机构的代表警告：全球已有超过 2000GW 的可再生能源项目在排队等待接入电网，电网瓶颈、储能不足和并网排队时间过长正成为能源转型的最大障碍。国际能源署（IEA）估计，2025 年处于后期阶段、等待并网的可再生能源项目至少有 1700GW，另有 600GW 公用事业级电池项目也在排队。电池装机在加速：Ember 数据显示 2025 年全球新增电池约 104GW，累计约 267GW；但各国 2030 年储能目标合计 822GW，仍比 2024 年定下的 1500GW 国际储能承诺低 45%。</p>
+<p>过去十年大家争论的是"绿电贵不贵"，现在价格问题已经解决（独立光伏全球均价约 40–50 美元/兆瓦时），真正的瓶颈变成了"发出来的电送不出去、存不下来"。这对中国尤其相关：中国是全球最大的光伏、电池和电网设备供应国，"电网增强技术 + 并网改革"这块蛋糕正在变大。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"并网"</strong>：把风电场、光伏电站发的电接进国家电网、送到千家万户。电站建好了、并不了网，电就送不出去，等于白建——现在全球有 2000GW 的项目卡在这一步上。</li>
+<li><strong>"GW（吉瓦）"</strong>：功率单位，1GW = 100 万千瓦。2000GW 的项目在排队，相当于 2000 座大型火电站的发电能力在等着接线。</li>
+<li><strong>"储能目标"</strong>：各国承诺到 2030 年要装多少电池。目标加起来 822GW，离国际承诺的 1500GW 还差 45%——等于大家嘴上说要存电，实际立的目标还不到承诺的一半。</li>
+<li><strong>"COP31"</strong>：第 31 届联合国气候变化大会，今年在土耳其安塔利亚举行，11 月 22 日已以无协议收场。"能源日"是大会期间专门讨论能源转型的日子。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>绿电已经不贵了，贵的是"送不出去、存不下来"——全球 2000GW 的可再生能源项目在排队等并网，电网和储能成了能源转型的新瓶颈。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Renewable Energy World《COP31 leaders warn grids and storage can't keep pace with renewable energy growth》—— <a href="https://www.renewableenergyworld.com/power-grid/cop31-leaders-warn-grids-and-storage-cant-keep-pace-with-renewable-energy-growth/">https://www.renewableenergyworld.com/power-grid/cop31-leaders-warn-grids-and-storage-cant-keep-pace-with-renewable-energy-growth/</a></li>
+</ul>
+<hr />
+<div class="zg-followup" data-story="2026-11-19-green-1" hidden><p class="sec-label">📌 追更后续：COP31 进入部长级决战：仍有 21 个议题未决，新文本周四清晨提交，周五闭幕 · <span class="zg-followup-date">你 11月19日 开始追更</span></p><p>COP31 于 11 月 22 日无协议收场：&#x27;化石燃料&#x27;表述被删除，1200 亿美元适应资金目标也被拿掉；约 90 国签署电气化承诺（2035 年电气化率达 35%），25 国发布了化石燃料淘汰路线图。</p><p class="zg-followup-src">🔗 来源：<a href="https://news.un.org/en/story/2026/11/1168833">https://news.un.org/en/story/2026/11/1168833</a>；<a href="https://www.thedailystar.net/environment/climate-change/news/cop31-enters-ministerial-phase-21-issues-unresolved-4048456">https://www.thedailystar.net/environment/climate-change/news/cop31-enters-ministerial-phase-21-issues-unresolved-4048456</a></p></div><h2>七、国内要闻 🇨🇳</h2>
+<div class="zg-head"><h3>1. 神舟二十四号 11 月 25 日发射圆满成功，首位外籍航天员进驻中国空间站</h3><button type="button" class="zg-btn" data-story="2026-11-26-cn-1" data-title="1. 神舟二十四号 11 月 25 日发射圆满成功，首位外籍航天员进驻中国空间站" data-section="cn" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>11 月 25 日 8 时 18 分，搭载神舟二十四号载人飞船的长征二号 F 遥二十四运载火箭在酒泉卫星发射中心点火发射，约 10 分钟后飞船与火箭分离进入预定轨道，约 3.5 小时后与天和核心舱前向端口快速交会对接，中国载人航天工程办公室宣布发射取得圆满成功。</p>
+<p>乘组共 3 人：指令长汤洪波、飞行工程师武毅，以及巴基斯坦载荷专家穆罕默德·齐尚·阿里（40 岁，巴基斯坦空军飞行员）。这是中国载人航天史上首次中外航天员联合飞行，阿里成为首位进入中国空间站"天宫"的外籍航天员。阿里将在轨约 5–10 天，开展光合蓝细菌实验等 4 项中巴合作项目，随后搭乘神舟二十三号飞船返回地球；汤洪波、武毅将在轨驻留约 6 个月，与已在轨的神舟二十三号航天员朱杨柱会师，空间站一度迎来 6 人同框。当天，国家主席习近平同巴基斯坦总统扎尔达里就中巴航天员执行联合飞行任务互致贺电。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"指令长"</strong>：乘组里说了算的人，负责整个飞行任务的指挥和决策，相当于机长。汤洪波三度飞天、经验最丰富，由他担任指令长是顺理成章的安排。</li>
+<li><strong>"交会对接"</strong>：飞船在太空里追上空间站、慢慢靠过去、最后严丝合缝地"对上接口"的过程。神舟二十四号只用了约 3.5 小时就完成对接，相当于太空里的"精准停车入位"。</li>
+<li><strong>"载荷专家"</strong>：不负责开飞船、专做科学实验的航天员。阿里是巴基斯坦空军飞行员出身，这次上去主要做中巴合作的科学实验，相当于"出差去太空实验室干活"。</li>
+<li><strong>"太空会师"</strong>：两批航天员在空间站里见面、一起工作。神舟二十四号乘组和神舟二十三号乘组在轨"会师"，空间站里一度有 6 个人，是中国航天史上第 9 次"太空会师"。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>神舟二十四号发射圆满成功——汤洪波三度飞天任指令长，巴基斯坦航天员首次加入，中国空间站正式迎来第一位外国"室友"，中巴航天合作也成了两国友谊的新象征。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>新华社英文版《Xinhua Headlines: China launches Shenzhou-24 spaceship, opening Tiangong space station to first foreign astronaut》—— <a href="https://english.news.cn/20261125/60f11f23112646159c0c3f669d2df98c/c.html">https://english.news.cn/20261125/60f11f23112646159c0c3f669d2df98c/c.html</a></li>
+<li>央视网《新闻联播》2026-11-25—— <a href="https://tv.cctv.com/2026/11/25/VIDEwVpX40zAsLOmeoL1mFj4261125.shtml">https://tv.cctv.com/2026/11/25/VIDEwVpX40zAsLOmeoL1mFj4261125.shtml</a></li>
+<li>Channel News Asia《China space station receives Pakistani astronaut on 'historic mission'》—— <a href="https://www.channelnewsasia.com/east-asia/china-rocket-shenzhou-24-mission-pakistan-astronaut-6580016">https://www.channelnewsasia.com/east-asia/china-rocket-shenzhou-24-mission-pakistan-astronaut-6580016</a></li>
+</ul>
+<div class="zg-head"><h3>2. 习近平对党内法规工作作出重要指示：坚持把依规治党当作管党治党基本方式</h3><button type="button" class="zg-btn" data-story="2026-11-26-cn-2" data-title="2. 习近平对党内法规工作作出重要指示：坚持把依规治党当作管党治党基本方式" data-section="cn" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>新华社北京 11 月 25 日电：中共中央总书记、国家主席、中央军委主席习近平近日对党内法规工作作出重要指示，强调五年来党内法规制度建设扎实有力、成效明显；新征程上要认真贯彻党的二十届五中全会精神，坚持把依规治党当作管党治党基本方式，补短板、强弱项，持续高质量推进党内法规制度建设，更加注重制度系统集成、学习教育、执行，以及党内法规同国家法律法规衔接协调。</p>
+<p>全国党内法规工作会议 11 月 24–25 日在北京召开，会上传达了习近平重要指示；中共中央政治局常委、中央书记处书记蔡奇出席会议并讲话。这是二十届五中全会后，党中央对全面从严治党制度建设的最新部署，为"十五五"时期管党治党定调；当晚《新闻联播》头条播发，央视快评同步跟进。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"党内法规"</strong>：党自己定的"内部规矩"，比如哪些事能做、哪些事不能做、违反了怎么处理。它和国家法律是两套系统：党内法规管党员，国家法律管所有人，两者要衔接好、不能打架。</li>
+<li><strong>"依规治党"</strong>：靠规矩来管党，而不是靠某个人说了算。就像一家公司要靠制度运转、不能全凭老板心情——党也要靠成体系的规矩来保证不出乱子。</li>
+<li><strong>"二十届五中全会"</strong>：今年 10 月召开的中央全会，主要定了"十五五"规划（2026–2030 年国家发展的总蓝图）。这次指示就是把全会精神落到"怎么管党"这件事上。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>二十届五中全会后，党中央对管党治党再定调——靠成体系的规矩管党，把制度的短板补上，为"十五五"时期打好基础。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>新华社（经中国日报网转载）《习近平对党内法规工作作出重要指示》—— <a href="http://china.chinadaily.com.cn/a/202611/25/WS6b068c90e4b0e14252fcd69b.html">http://china.chinadaily.com.cn/a/202611/25/WS6b068c90e4b0e14252fcd69b.html</a></li>
+<li>央视网《新闻联播》2026-11-25—— <a href="https://tv.cctv.com/2026/11/25/VIDEwVpX40zAsLOmeoL1mFj4261125.shtml">https://tv.cctv.com/2026/11/25/VIDEwVpX40zAsLOmeoL1mFj4261125.shtml</a></li>
+</ul>
+<div class="zg-head"><h3>3. 数字经济与数字社会发展"十五五"行动计划发布：到 2030 年数字经济核心产业增加值占 GDP 比重达 12.5%</h3><button type="button" class="zg-btn" data-story="2026-11-26-cn-3" data-title="3. 数字经济与数字社会发展&quot;十五五&quot;行动计划发布：到 2030 年数字经济核心产业增加值占 GDP 比重达 12.5%" data-section="cn" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>国家数据局 11 月 24 日宣布组织实施数字经济发展"十五五"行动计划和数字社会发展"十五五"行动计划，11 月 25 日见诸报道。目标：到 2030 年，数字经济核心产业增加值占 GDP 比重达到 12.5%，数字经济成为高质量发展的重要经济形态。</p>
+<p>数字经济行动计划五大任务：夯实数字经济发展基础（完善数据流通利用规则、加快构建全国一体化算力网、建设运营国家数据基础设施）；推动科技创新和产业创新深度融合；加快实体经济和数字经济深度融合（实施智能制造工程、"一链一策"指导重点行业和产业链数智化转型）；完善数字经济发展环境（推进制定数字经济促进法）；加强要素保障和改革创新。数字社会行动计划则聚焦民生：深化数据赋能公共服务提质增效、人工智能赋能教育、数据赋能医疗医保医药协同发展、丰富适老化数智产品供给等。</p>
+<p>这是"十五五"规划纲要落地后的首批专项行动计划之一，直接关系到算力、数据要素、智能制造等未来五年的政策走向，也是理解中国经济新动能的重要窗口。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"数字经济核心产业"</strong>：靠数字技术吃饭的产业——做芯片、写软件、搞云计算、做电商平台的都算。到 2030 年这类产业要占到 GDP 的 12.5%，等于经济里每 8 块钱就有 1 块是数字经济挣的。</li>
+<li><strong>"算力网"</strong>：把全国各地的计算机算力像电网一样连起来，哪里需要算力就往哪里送。以后训练 AI、跑大模型，不用自己买一堆服务器，联网"租"就行。</li>
+<li><strong>"数智化转型"</strong>：用数字技术和智能技术改造传统行业——工厂装上传感器、流水线交给 AI 调度，相当于给老工厂换上"数字大脑"。</li>
+<li><strong>"适老化数智产品"</strong>：给老年人用的智能产品：字大、操作简单、能语音控制。数字社会不能只让年轻人方便，也要让老年人跟得上。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>"十五五"开局的首批专项计划落地——到 2030 年数字经济核心产业要占 GDP 的 12.5%，算力网、数据要素、智能制造、AI 进课堂进医院，未来五年的政策走向基本定了调。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>国家数据局（经数字中国建设峰会官网转载）《国家数据局组织实施数字经济发展"十五五"行动计划》—— <a href="https://www.szzg.gov.cn/2026/xwzx/szkx/202611/t20261125_5396575.htm">https://www.szzg.gov.cn/2026/xwzx/szkx/202611/t20261125_5396575.htm</a></li>
+<li>工人日报（中工网）《数字经济发展"十五五"行动计划发布》—— <a href="https://www.workercn.cn/c/2026-11-25/8948987.shtml">https://www.workercn.cn/c/2026-11-25/8948987.shtml</a></li>
+</ul>
+<hr />
+<div class="zg-followup" data-story="2026-11-19-cn-1" hidden><p class="sec-label">📌 追更后续：习近平在深圳 APEC 工商峰会发表主旨演讲：坚定信心、勇毅前行，共创亚太光明未来 · <span class="zg-followup-date">你 11月19日 开始追更</span></p><p>APEC 深圳峰会 11 月 19 日闭幕：一致通过领导人宣言并提出&#x27;深圳展望&#x27;，中国出资 2000 万美元、将在深圳设立亚太共同体研究中心；2027 年轮值主席国为越南。</p><p class="zg-followup-src">🔗 来源：<a href="https://www.gmw.cn/2026-11/18/content_38298512.htm">https://www.gmw.cn/2026-11/18/content_38298512.htm</a>；<a href="https://tv.cctv.com/2026/11/18/VIDEBxzPhCzDOvbKcE9Y2PVV261118.shtml">https://tv.cctv.com/2026/11/18/VIDEBxzPhCzDOvbKcE9Y2PVV261118.shtml</a></p></div><div class="zg-followup" data-story="2026-11-25-cn-1" hidden><p class="sec-label">📌 追更后续：神舟二十四号航天员乘组确定：汤洪波任指令长，巴基斯坦航天员首次加入中国空间站任务 · <span class="zg-followup-date">你 11月25日 开始追更</span></p><p>神舟二十四号 11 月 25 日 8 时 18 分发射，11 时 56 分对接，14 时 35 分两批航天员会师——中国空间站首次迎来外国航天员的&#x27;太空握手&#x27;。</p><p class="zg-followup-src">🔗 来源：<a href="https://news.gscn.com.cn/system/2026/11/24/013586502.shtml">https://news.gscn.com.cn/system/2026/11/24/013586502.shtml</a>；<a href="http://news.yunnan.cn/system/2026/11/24/034201397.shtml">http://news.yunnan.cn/system/2026/11/24/034201397.shtml</a></p></div><h2>八、GitHub 新技术 💻</h2>
+<div class="zg-head"><h3>1. cathrynlavery/diagram-design：让 AI 给你画"能看的图"，52 种图表一次成型，再也不用忍 Mermaid 的丑图</h3><button type="button" class="zg-btn" data-story="2026-11-26-gh-1" data-title="1. cathrynlavery/diagram-design：让 AI 给你画&quot;能看的图&quot;，52 种图表一次成型，再也不用忍 Mermaid 的丑图" data-section="gh" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p><strong>仓库：</strong> cathrynlavery/diagram-design —— <a href="https://github.com/cathrynlavery/diagram-design">https://github.com/cathrynlavery/diagram-design</a></p>
+<p><strong>它是做什么的：</strong> 一个教 AI 画图的"技能包"，装给 Claude Code、Codex、GitHub Copilot、Cursor 等 AI 编程工具用。你用一句话告诉 AI："给我画一张我们 App 的架构图：前端、后端、数据库、Redis 缓存"，它就会按你的品牌配色和字体，生成一张单独的 HTML + SVG 文件——双击就能打开，不用装任何软件。支持 52 种图表类型（架构图、流程图、象限图、时序图……），还能从 draw.io、Mermaid、Excalidraw、PlantUML 的旧图里导入重画，导出 PNG 或 SVG 也行。</p>
+<p><strong>为什么最近火：</strong> 11 月 25 日 GitHub Trending 日榜第 9 名；仓库已有 73007 个 star、4857 个 fork，MIT 开源协议。火的原因很直接：用 AI 画图的人越来越多，但 AI 默认画出来的 Mermaid 图又丑又千篇一律——这个项目就是冲着"丑"来的，作者在 README 里直说"No Mermaid slop"（拒绝 Mermaid 垃圾图），还自带对比度检查、无障碍默认、离线字体，一下子戳中了所有被丑图折磨过的程序员。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"Agent Skills（智能体技能）"</strong>：写给 AI 的"工作说明书"。装上之后，AI 就知道"画图要按这个风格来、要先定配色、再排版、最后检查有没有重叠"——相当于给 AI 配了一本《画图标准作业手册》，不用你每次都手把手教。</li>
+<li><strong>"SVG"</strong>：一种用代码画的图，放大多少倍都不会糊。不像手机照片放大就变马赛克，SVG 不管放多大都清清楚楚，特别适合画图表。</li>
+<li><strong>"Mermaid"</strong>：一种用文字"写"图的工具，写几行代码就能自动生成流程图。方便是方便，但样式死板、千篇一律，程序员们一边用一边嫌它丑。</li>
+<li><strong>"Star"</strong>：GitHub 上的"收藏数"。7 万多 star 说明有 7 万多人觉得这个项目值得收藏——相当于 GitHub 世界里的"点赞数"，是衡量一个开源项目火不火最直观的指标。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>AI 画图终于有"审美"了——一句话就能让 AI 按你的品牌风格画出 52 种图表，告别千篇一律的 Mermaid 丑图，7 万多人已经点了收藏。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>GitHub 仓库页 —— <a href="https://github.com/cathrynlavery/diagram-design">https://github.com/cathrynlavery/diagram-design</a></li>
+<li>GitHub Trending 日榜 —— <a href="https://github.com/trending?since=daily">https://github.com/trending?since=daily</a></li>
+</ul>
+<div class="zg-head"><h3>2. mvanhorn/last30days-skill：一个"搜真人、不搜编辑"的 AI 搜索引擎，Reddit、X、油管、Polymarket 一次查完</h3><button type="button" class="zg-btn" data-story="2026-11-26-gh-2" data-title="2. mvanhorn/last30days-skill：一个&quot;搜真人、不搜编辑&quot;的 AI 搜索引擎，Reddit、X、油管、Polymarket 一次查完" data-section="gh" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p><strong>仓库：</strong> mvanhorn/last30days-skill —— <a href="https://github.com/mvanhorn/last30days-skill">https://github.com/mvanhorn/last30days-skill</a></p>
+<p><strong>它是做什么的：</strong> 一个 AI 智能体技能，帮你查"过去 30 天里，某个话题/某个人/某家公司到底发生了什么"。用法很简单，装给 Claude Code 等工具后，输入一句 <code>/last30days Peter Steinberger</code>，它就会同时去搜 Reddit、X（推特）、YouTube、Hacker News、TikTok、Polymarket、arXiv、专利局、招聘页面等十几个地方，按真实热度打分（Reddit 点赞数、X 点赞数、Polymarket 上真金白银的赔率），最后由 AI 综合成一份简报。作者的口号是："Google 搜的是编辑，/last30days 搜的是真人。"举个例子：开会前查一个人，它能告诉你这个人这个月在 X 上发了什么、YouTube 访谈里说了什么、GitHub 上合了多少个 PR——这些在 Google 上根本搜不到。</p>
+<p><strong>为什么最近火：</strong> 11 月 25 日 GitHub Trending 日榜第 10 名，仓库已有 75093 个 star、6619 个 fork，MIT 开源协议，README 上还挂着"GitHub Trending 每日第 1 名"的徽章。火的原因是它戳中了一个真痛点：每个平台都是"围墙花园"，Google 搜不到 Reddit 评论、ChatGPT 搜不到 X、Claude 哪个都搜不到——这个项目把十几座围墙一次打通，"开会前先查一遍对方最近 30 天"正在变成很多人的新习惯。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"Agent Skills（智能体技能）"</strong>：写给 AI 的"工作说明书"。装上之后，AI 就知道"查资料要先去这十几个平台、按热度打分、最后合成简报"——不用你每次都重复教它怎么做。</li>
+<li><strong>"Polymarket"</strong>：一个"预测市场"网站，大家用真钱下注、赌某件事会不会发生。赔率背后是真金白银，所以比专家的嘴炮可信得多——比如"某公司年底会不会成为全球市值第一"，市场赔率 91% 就是 91% 的人拿钱投了赞成票。</li>
+<li><strong>"围墙花园"</strong>：每个平台都把自己的内容锁在自家院子里，不让外面的搜索引擎进来。Reddit、X、TikTok 各有各的墙，想一次查完所有地方，以前只能一个个手动翻。</li>
+<li><strong>"Star"</strong>：GitHub 上的"收藏数"。7.5 万多 star 说明有 7.5 万多人觉得这个项目值得收藏——相当于 GitHub 世界里的"点赞数"，是衡量一个开源项目火不火最直观的指标。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>Google 搜编辑，它搜真人——一次查遍 Reddit、X、油管、Polymarket 等十几个平台，按真实热度打分、合成一份简报，开会前查人、投资前查公司都好用，7.5 万人已经收藏。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>GitHub 仓库页 —— <a href="https://github.com/mvanhorn/last30days-skill">https://github.com/mvanhorn/last30days-skill</a></li>
+<li>GitHub Trending 日榜 —— <a href="https://github.com/trending?since=daily">https://github.com/trending?since=daily</a></li>
+</ul>
+<hr />
+<h2>九、环球趣闻 🌍✈️</h2>
+<h3>1. 骑摩托去看菲律宾鹰，顺便逛了座巧克力岛</h3>
+<ul>
+<li><strong>平台：</strong> YouTube</li>
+<li><strong>频道：</strong> maw lifestyle</li>
+<li><strong>发帖时间：</strong> 2026 年 11 月 25 日</li>
+<li><strong>讲了什么：</strong> 一支摩托骑行小队杀到达沃，先是翻过布达山区的云雾公路，然后在马拉戈斯的菲律宾鹰中心用长焦镜头近距离拍到了极度濒危的菲律宾鹰，接着坐船去萨马尔岛的海滩，最后还逛了蝴蝶园和一家"从树到巧克力棒"的巧克力博物馆，全程野生动物＋海岛＋巧克力三连击。</li>
+<li>💡 <strong>推荐理由：</strong> 菲律宾鹰那张脸是真的霸气，长焦怼脸拍得羽毛根根分明，隔着屏幕都觉得它在瞪我——而且谁能拒绝"看完国宝顺手吃块现做巧克力"这种行程啊，摩托＋老鹰＋巧克力，这搭配我愿称之为旅行 vlog 界的"全家桶"。</li>
+<li>🔗 原链接：<a href="https://www.youtube.com/watch?v=2P-6enu6Lkc">https://www.youtube.com/watch?v=2P-6enu6Lkc</a></li>
+</ul>
+<h3>2. 52 天、11000 英里、20 个州，一个人开完了"百年 Route 66"</h3>
+<ul>
+<li><strong>平台：</strong> YouTube</li>
+<li><strong>频道：</strong> 2 Lane Traveler（Mike）</li>
+<li><strong>发帖时间：</strong> 2026 年 11 月 25 日</li>
+<li><strong>讲了什么：</strong> 2026 年是 66 号公路建成 100 周年，博主 Mike 用 52 天开了 11000 英里：从田纳西老家出发到芝加哥，沿 66 号公路一路开到圣莫尼卡，再走 80 号公路横穿回乔治亚州。一路上住遍仅存的三家"印第安帐篷汽车旅馆"、在汽车影院一个人看《美国风情画》、走过塞尔马的 Edmund Pettus 大桥，最后在同一趟旅程里同时踩了太平洋和大西洋的沙滩。</li>
+<li>💡 <strong>推荐理由：</strong> 52 天浓缩成一部公路片，看得我手痒想立刻请假——尤其是"在汽车影院一个人看电影"那个镜头，又孤独又浪漫是怎么回事。而且他那句"每次走错路，都只是还没遇见的故事"，哼，写得还挺会，准你骄傲三秒钟。</li>
+<li>🔗 原链接：<a href="https://www.youtube.com/watch?v=-Mmj-CcsCZk">https://www.youtube.com/watch?v=-Mmj-CcsCZk</a></li>
+</ul>
+<h3>3. 表兄弟在樟宜机场玩"换装挑战"，空姐都笑到憋不住</h3>
+<ul>
+<li><strong>平台：</strong> TikTok</li>
+<li><strong>发帖人：</strong> @habibiputih_（Danish 和他的表兄弟们）</li>
+<li><strong>发帖时间：</strong> 2026 年 11 月 15 日（近日爆火，已超 1440 万次播放）</li>
+<li><strong>讲了什么：</strong> 一群表兄弟去巴厘岛玩之前，先在新加坡樟宜机场登机口玩起了 viral 的"outfit exchange"挑战：出发前一周用转盘随机决定谁给谁挑衣服，结果登机口一亮相——史莱克里的法夸德勋爵、小红帽、绿毛怪罗拉克斯、露肩上衣配小花发夹……一个比一个离谱，旁边旅客笑到拿手机拍，空姐在机舱走道里也没绷住，落地巴厘岛时机场工作人员还在努力憋笑。</li>
+<li>💡 <strong>推荐理由：</strong> 那个穿小红帽的表弟一出场，直接有人笑到瘫坐在地，我隔着屏幕都替他脚趾抠地——但说真的，第一次全家出游就玩这么疯，这群人也太会给旅行加戏了，下次坐飞机前我也要先问一句：你们谁带了法夸德的假发？</li>
+<li>🔗 原链接：<a href="https://www.tiktok.com/@habibiputih_/video/7708352184928193799">https://www.tiktok.com/@habibiputih_/video/7708352184928193799</a></li>
+</ul>
+<hr />
+<p>Ricardo，今天是你的 20 岁生日🎂新的一岁，愿你想要的一切都在恐惧的另一边等着你——去拿吧。生日快乐！</p>
+<div class="vocabbox"><h2>📚 本期生词</h2>
+</div><div class="zg-panel"><p class="sec-label">👀 我的追更 · <span class="zg-count">正在追更：0 条</span></p><p class="zg-empty note">还没有追更的新闻。点每条新闻右上角的 ＋，就能追更它；有后续的那天，后续会出现在对应板块的最后一栏。</p><ul class="zg-list"></ul></div>
+<p class="note">简约版仅存档备查，每日推送仍为现在版（2026-10-28 定版）。</p>
+</div>
+<script>
+(function () {
+  var KEY = 'mashu_follow_v1';
+  var store = {};
+  try { store = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { store = {}; }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} }
+  function esc(s) { return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function fmt(d) { var p = String(d || '').split('-'); if (p.length !== 3) return d || ''; return parseInt(p[1], 10) + '月' + parseInt(p[2], 10) + '日'; }
+  function toast(msg) {
+    var t = document.getElementById('zgToast');
+    if (!t) {
+      t = document.createElement('div');
+      t.id = 'zgToast';
+      t.style.cssText = 'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1c1a17;color:#f7f2e7;padding:10px 16px;border-radius:999px;font-size:14px;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,.3);max-width:92vw;text-align:center;';
+      document.body.appendChild(t);
+    }
+    t.textContent = msg;
+    t.style.display = 'block';
+    clearTimeout(t._h);
+    t._h = setTimeout(function () { t.style.display = 'none'; }, 2600);
+  }
+  function render() {
+    var ids = Object.keys(store);
+    document.querySelectorAll('.zg-count').forEach(function (el) { el.textContent = '正在追更：' + ids.length + ' 条'; });
+    document.querySelectorAll('.zg-list').forEach(function (ul) {
+      ul.innerHTML = ids.map(function (id) {
+        var it = store[id] || {};
+        return '<li><span class="zg-list-title">' + esc(it.title || id) + '</span><span class="zg-list-date"> · ' + fmt(it.firstClicked) + ' 开始追更</span> <button type="button" class="zg-unfollow" data-story="' + esc(id) + '" aria-label="取消追更">×</button></li>';
+      }).join('');
+    });
+    document.querySelectorAll('.zg-empty').forEach(function (el) { el.style.display = ids.length ? 'none' : ''; });
+    document.querySelectorAll('.zg-btn').forEach(function (btn) {
+      var on = !!store[btn.getAttribute('data-story')];
+      btn.textContent = on ? '✓' : '+';
+      btn.classList.toggle('on', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('.zg-followup').forEach(function (slot) {
+      var it = store[slot.getAttribute('data-story')];
+      if (it) {
+        slot.hidden = false;
+        var d = slot.querySelector('.zg-followup-date');
+        if (d) d.textContent = '你 ' + fmt(it.firstClicked) + ' 开始追更';
+      } else {
+        slot.hidden = true;
+      }
+    });
+  }
+  function toggle(id, title, section) {
+    if (store[id]) { delete store[id]; toast('已取消追更'); }
+    else {
+      var now = new Date();
+      var ds = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
+      store[id] = { title: title, section: section, firstClicked: ds };
+      toast('已加入追更，会留意它的后续');
+    }
+    save();
+    render();
+  }
+  if (!window.__mashuFollowBound) {
+    window.__mashuFollowBound = true;
+    document.addEventListener('click', function (e) {
+      var btn = e.target && e.target.closest ? e.target.closest('.zg-btn, .zg-unfollow') : null;
+      if (!btn) return;
+      var id = btn.getAttribute('data-story');
+      if (!id) return;
+      if (btn.classList.contains('zg-unfollow')) {
+        if (store[id]) { delete store[id]; save(); render(); toast('已取消追更'); }
+        return;
+      }
+      toggle(id, btn.getAttribute('data-title') || '', btn.getAttribute('data-section') || '');
+    });
+  }
+  render();
+})();
+</script></body>
+</html>
