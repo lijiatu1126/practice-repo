@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《麻薯日报》第60期 · 2026-11-27</title>
+<style>
+/* 横向滚动根治（2026-11-17 与丰富版同修）：页面永不横向滚动，报纸居中 */
+html, body { overflow-x: hidden; }
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       margin: 0; line-height: 2.15; font-size: 17.5px; letter-spacing: 0.01em;
+       color: #1c1a17; background: #f0e8d5; }
+.sheet { max-width: 720px; width: 100%; box-sizing: border-box; margin: 0 auto; background: #fbf8f1;
+         padding: 36px 26px 56px; min-height: 100vh;
+         box-shadow: 0 0 28px rgba(60,45,20,.10); }
+p { margin: 0 0 1.5em; text-align: justify; text-indent: 2em; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em; margin: 0 0 6px; padding: 0; border: none; text-indent: 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 3.2em; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 3em; padding-top: 1.4em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
+a:visited { color: #6d4fc2; }
+ul li, ol li { margin: 20px 0; line-height: 2.0; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
+.note { color: #6b6257; font-size: 0.92em; text-align: center; text-indent: 0; }
+.sec-label { text-indent: 0; margin: 0 0 12px; font-weight: 700; text-align: left; }
+/* 丰富版同款分块：名词解释金边卡片、一句话总结红边卡片、来源灰色虚线区 */
+.glossary { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.glossary p, .glossary li { text-indent: 0; }
+.summary { background: #f6f1e3; border-left: 4px solid #8a3324; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.summary .sec-label { color: #8a3324; }
+.summary p { text-indent: 0; }
+.sources { border-top: 1px dashed #c9c2b2; padding: 18px 4px 4px; margin: 2em 0; }
+.sources .sec-label { color: #6b6257; font-size: 0.92em; }
+.sources ul { margin: 6px 0 8px; }
+.sources li { font-size: 0.88em; color: #6b6257; margin: 14px 0; line-height: 1.9; word-break: break-all; }
+.sources p, .sources li { text-indent: 0; }
+.vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.vocabbox p, .vocabbox li { text-indent: 0; }
+
+/* 追更（2026-11-09 Ricardo 批准，第 42 期起）：每条新闻右上角 ＋，点一下即追更 */
+.zg-head { position: relative; }
+.zg-head > h3 { padding-right: 56px; }
+button.zg-btn { position: absolute; right: 0; top: 1.4em; width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid #b98a1c; background: #fbf8f1; color: #7c5a10; font-size: 22px; line-height: 1; cursor: pointer; font-family: Georgia, "Songti SC", serif; padding: 0; }
+button.zg-btn.on { background: #b98a1c; color: #fff; }
+.zg-followup { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.zg-followup .sec-label { color: #7c5a10; }
+.zg-followup p { text-indent: 0; }
+.zg-panel { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.zg-panel .sec-label { color: #8a3324; }
+.zg-list { list-style: none; padding-left: 0; }
+.zg-list li { margin: 14px 0; line-height: 2.0; }
+.zg-list-date { color: #6b6257; font-size: 0.92em; }
+button.zg-unfollow { border: 1px solid #c9c2b2; background: transparent; border-radius: 50%; width: 26px; height: 26px; font-size: 16px; line-height: 1; cursor: pointer; color: #6b6257; padding: 0; }
+</style>
+</head>
+<body>
+<div class="sheet">
+<p class="note">简约版 · 2026-10-23 报纸版式重排（非第 025 期原件；无齿轮、无陀螺仪、无 v24 粉新闻框）</p>
+<h1>《麻薯日报》第 60 期 · 2026 年 11 月 27 日（星期五）</h1>
+<blockquote>
+<p>"Do what you can, with what you have, where you are." —— Theodore Roosevelt（尽你所能，用你所有，在你所在之处。——西奥多·罗斯福）</p>
+</blockquote>
+<p>Ricardo，早上好呀☀️今天是星期五，第 60 期《麻薯日报》准时送到——过去 24 小时最值得留意的三件事：美股感恩节休市，全球股市接力周三尾盘反弹，黑五半日开市；欧洲央行换帅尘埃落定，西班牙人德科斯接替拉加德；霍尔木兹海峡再有油轮触雷起火，油价跳涨逼近 95 美元。武汉今天上午有雾，9～20℃，无雨，但 AQI 282 很不健康、主要是 PM2.5，出门务必戴口罩😷今天只有下午一节基础营养学（14:00–15:35，J3-201），上午空闲——可以睡个懒觉再慢慢看报☕</p>
+<hr />
+<h2>一、财经 💰</h2>
+<div class="zg-head"><h3>1. 美股感恩节休市，全球股市接力反弹，黑五半日开市</h3><button type="button" class="zg-btn" data-story="2026-11-27-fin-1" data-title="1. 美股感恩节休市，全球股市接力反弹，黑五半日开市" data-section="fin" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>2026 年 11 月 26 日（星期四）美股因感恩节全天休市，今天（11 月 27 日星期五）"黑色星期五"只开半天：纽交所和纳斯达克美东时间 9:30–13:00 交易，债市 14:00 收市。感恩节当天，欧亚股市接力周三美股尾盘的大反弹：日经 225 涨 0.9% 至 57499.16 点，恒生涨 1.2%，韩国 KOSPI 涨 0.3%，德国 DAX 涨 2.2%，英国富时涨 1.9%，欧洲斯托克 600 涨 1.8%；标普 500 期货涨约 0.7%–0.8%，预示黑五高开约 50 点。上证 11 月 26 日基本平收，报 3476.88 点（+0.01%）。</p>
+<p>消费数据也来给黑五撑场面：Adobe 预测今年美国假日季（11–12 月）网购总额 2751 亿美元（+6.7%），黑五当天线上 129 亿美元（+9.2%）；美国零售联合会预计 11–12 月零售总额首次突破 1 万亿美元。不过要注意，Mastercard 估计通胀占了假日消费增幅（+5.5%）里的 2.8 个百分点——花钱多了，不等于东西买多了。今年的新变量是 AI：Adobe 预计 AI 工具引流同比增 130%。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"感恩节休市"</strong>：感恩节是美国最重要的节日之一，美股全天不开门；节后那个周五也只开半天。参与的人少、钱也少，价格容易被小单子带得忽上忽下。</li>
+<li><strong>"黑色星期五"</strong>：感恩节后的周五，美国商家大打折、消费者疯狂"买买买"的日子。因为商家账本这天常由亏转盈（黑字），所以叫"黑色星期五"。它是检验美国人还愿不愿意花钱的头号窗口。</li>
+<li><strong>"期货预示高开"</strong>：股指期货是"提前下单"的市场，夜里就能交易。期货涨了，说明大家押注第二天开盘会涨——相当于开盘前的"民意调查"。</li>
+<li><strong>"网购总额"</strong>：Adobe 统计的是全美国人在网上花的钱。2751 亿美元是什么概念？差不多相当于一个中等国家的全年 GDP——美国人两个月在网上花的钱就有这么多。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>感恩节美股放假，全球股市替它把反弹接了过去；黑五半日开市加消费数据撑场面，但"花钱多了不等于买多了"——通胀还在账单里藏着。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Barron's《Stock Futures Rise as Dow's Rebound Goes Global》—— <a href="https://www.barrons.com/articles/stock-market-today-futures-76292212">https://www.barrons.com/articles/stock-market-today-futures-76292212</a></li>
+<li>MarketWatch《Futures point to Black Friday gains》—— <a href="https://www.marketwatch.com/story/futures-point-to-black-friday-gains-for-wall-street-as-global-markets-welcome-u-s-resilience-ad6bcef2">https://www.marketwatch.com/story/futures-point-to-black-friday-gains-for-wall-street-as-global-markets-welcome-u-s-resilience-ad6bcef2</a></li>
+<li>XTB（黑五消费预测汇总）—— <a href="https://www.xtb.com/en/market-analysis/black-friday-2026-analysis-these-6-stocks-could-benefit-from-the-shopping-boom">https://www.xtb.com/en/market-analysis/black-friday-2026-analysis-these-6-stocks-could-benefit-from-the-shopping-boom</a></li>
+</ul>
+<div class="zg-head"><h3>2. 欧洲央行换帅尘埃落定：西班牙人德科斯接替拉加德</h3><button type="button" class="zg-btn" data-story="2026-11-27-fin-2" data-title="2. 欧洲央行换帅尘埃落定：西班牙人德科斯接替拉加德" data-section="fin" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>11 月 26 日布鲁塞尔欧盟峰会期间，欧元区国家一致同意推荐西班牙经济学家帕布罗·埃尔南德斯·德科斯（Pablo Hernández de Cos，现任国际清算银行总经理、前西班牙央行行长）接任欧洲央行行长，接替 2027 年 2 月 7 日提前卸任的拉加德；同时推荐法国的 Laurence Boone 和德国的 Markus Brunnermeier 进入执委会。正式任命预计 12 月欧盟峰会完成。德科斯将是首位西班牙籍欧洲央行行长，市场普遍认为他偏鸽派、政策上大体延续拉加德路线。</p>
+<p>欧洲央行是全球最重要的央行之一，这次换帅叠加法国债务问题、欧元区增长乏力与伊朗战争推升的通胀压力，关乎欧元与欧洲利率走向，也间接影响全球资金的流向。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"欧洲央行"</strong>：欧元区的"总管家"，管着 20 个用欧元的国家的利率和货币政策。它的行长换人，就像一家超大公司的 CEO 换帅——全欧洲的借钱成本都可能跟着变。</li>
+<li><strong>"鸽派"</strong>：主张利率低一点、货币政策宽松一点的官员。反义词是"鹰派"（主张加息、收紧）。鸽派行长上台，市场一般会觉得"借钱会便宜一点"，股票往往爱听这个。</li>
+<li><strong>"执委会"</strong>：欧洲央行的日常决策班子，行长加几位执委一起定利率。一次换掉行长、再进两位新人，等于决策班子换了小一半的人。</li>
+<li><strong>"国际清算银行"</strong>：各国央行的"央行"，总部在瑞士巴塞尔，平时帮各国央行协调政策、管外汇储备。德科斯现在就是这家机构的"一把手"。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>欧洲央行下任掌门定了——西班牙人德科斯接棒拉加德，市场押注他偏鸽、政策大体延续；真正的考验在后面：法国债务、增长乏力和战争推高的通胀，一个都不好对付。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Reuters《Euro countries pick Spain's de Cos as ECB chief, Costa says》—— <a href="https://www.reuters.com/world/europe/euro-countries-pick-spains-de-cos-ecb-chief-costa-says-2026-11-26/">https://www.reuters.com/world/europe/euro-countries-pick-spains-de-cos-ecb-chief-costa-says-2026-11-26/</a></li>
+<li>Al Jazeera《Spanish economist to become new European Central Bank chief》—— <a href="https://www.aljazeera.com/news/2026/11/26/spanish-economist-to-become-new-european-central-bank-chief?traffic_source=rss">https://www.aljazeera.com/news/2026/11/26/spanish-economist-to-become-new-european-central-bank-chief?traffic_source=rss</a></li>
+<li>CNN《ECB president: Pablo Hernández de Cos》—— <a href="https://www.cnn.com/2026/11/26/business/ecb-president-pablo-hernandez-de-cos-intl?cid=external-feeds_iluminar_meta">https://www.cnn.com/2026/11/26/business/ecb-president-pablo-hernandez-de-cos-intl?cid=external-feeds_iluminar_meta</a></li>
+</ul>
+<div class="zg-head"><h3>3. 油价跳涨、金价比特币反弹：霍尔木兹袭船＋胡塞袭击沙特炼厂</h3><button type="button" class="zg-btn" data-story="2026-11-27-fin-3" data-title="3. 油价跳涨、金价比特币反弹：霍尔木兹袭船＋胡塞袭击沙特炼厂" data-section="fin" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>布伦特原油 11 月 25 日（星期三）大涨 3.5%，11 月 26 日亚洲早盘续涨至约 94.71 美元/桶，盘中一度触及 95.27 美元；WTI 约 84 美元。推手有二：也门胡塞武装称袭击了沙特最大炼厂 Ras Tanura 及利雅得金融区；伊朗方面称多艘油轮在霍尔木兹海峡触雷起火（详见国际板块）。OPEC+ 将于 11 月 29 日开会，决定 2027 年产量政策。</p>
+<p>黄金现货约 3573–3600 美元/盎司：周三一度跌破 3500 美元（盘中低点约 3445 美元，为一年多最低）后反弹，但 11 月仍累计跌约 12%；白银约 41.65–42 美元，11 月跌约 23%。比特币约 60800 美元，24 小时涨约 3.2%，但 11 月跌超 20%，较 2025 年 10 月 126000 美元高点腰斩过半；11 月比特币现货 ETF 净流出约 49.4 亿美元，为 2024 年 1 月上市以来单月最多。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"布伦特原油"</strong>：全球油价的"基准价"之一，产自北海。新闻里说的"油价涨到多少"，通常指的就是它。94.71 美元/桶，意味着一桶油（约 159 升）卖这个价。</li>
+<li><strong>"ETF 净流出"</strong>：ETF 是可以在交易所买卖的"一篮子基金"，比特币现货 ETF 就是"帮你拿着真比特币的基金"。净流出 49.4 亿美元，等于一个月里大家从这类基金里撤走了近 50 亿美元——是上市以来撤得最狠的一个月。</li>
+<li><strong>"腰斩"</strong>：价格从高点跌掉一半以上。比特币从 126000 跌到 60800，差不多就是"膝盖以下都没了"，所以叫"腰斩过半"。</li>
+<li><strong>"OPEC+"</strong>：石油输出国组织加俄罗斯等产油国的"俱乐部"，定期开会商量"大家一起少产点油、把油价托住"还是"多产点"。11 月 29 日的会，将决定明年产多少油。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>霍尔木兹的炮火直接烧进了油价——布伦特逼近 95 美元；黄金比特币在感恩节假期里小幅回血，但 11 月一个跌 12%、一个跌超 20%，说"反转"还太早，顶多算跌多了喘口气。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Reuters《Oil rises on supply concerns as Iran claims mine strikes on ships》—— <a href="https://www.reuters.com/business/energy/oil-rises-supply-concerns-iran-claims-mine-strikes-ships-2026-11-26/">https://www.reuters.com/business/energy/oil-rises-supply-concerns-iran-claims-mine-strikes-ships-2026-11-26/</a></li>
+<li>TheStreet《Before the Bell: Gold, Oil and Bitcoin Skip the Thanksgiving Break》—— <a href="https://www.thestreet.com/crypto/markets/before-the-bell-gold-oil-and-bitcoin-skip-the-thanksgiving-break-">https://www.thestreet.com/crypto/markets/before-the-bell-gold-oil-and-bitcoin-skip-the-thanksgiving-break-</a></li>
+<li>FXStreet《Cross-asset whiplash》—— <a href="https://www.fxstreet.com/analysis/cross-asset-whiplash-why-yields-tariffs-and-positioning-drive-late-november-volatility-202611260938">https://www.fxstreet.com/analysis/cross-asset-whiplash-why-yields-tariffs-and-positioning-drive-late-november-volatility-202611260938</a></li>
+</ul>
+<div class="zg-head"><h3>4. 特朗普称选前 GDP 数据是"假的"，要求调查商务部</h3><button type="button" class="zg-btn" data-story="2026-11-27-fin-4" data-title="4. 特朗普称选前 GDP 数据是&quot;假的&quot;，要求调查商务部" data-section="fin" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>11 月 26 日感恩节当天，特朗普在 Truth Social 发文称，商务部经济分析局（BEA）11 月 25 日把三季度 GDP 年化增速从初值 3.4% 大幅上修至 4.3%，是"大规模、故意的错误"，指控数据在 11 月 3 日中期选举前被故意低报，要求"立即调查"。特朗普未提供证据，多家媒体指出这是无证据的指控。</p>
+<p>BEA 方面：修正主因是生产者价格指数更新后，消费支出强于初估；GDP 数据例行要出初值、二读、三读三版，最终值定于 12 月 23 日发布。这条是昨天 GDP 修正的政治后续——总统公开质疑自家政府统计数据的可信度，而市场和美联储的决策都依赖这些数据。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"GDP 三读"</strong>：一个季度的经济增速，官方会连发三版：初值（最先估的）、二读（修正一次）、三读（最终值）。这次是从初值 3.4% 修正到二读 4.3%，属于正常流程里的"改分"，不是临时编出来的新数字。</li>
+<li><strong>"中期选举"</strong>：美国每两年一次的国会选举，今年 11 月 3 日刚举行完。特朗普的意思是：数据在选举前被"压低"了，选举后才"放出来"——等于指控统计部门在帮对手。</li>
+<li><strong>"生产者价格指数"</strong>：工厂、企业的"出厂价"涨了多少。消费支出算 GDP 时要用到它，它一更新，GDP 的数字就跟着动——这次上修，主因就是它。</li>
+<li><strong>"公信力"</strong>：大家愿不愿意相信一个数字。官方数据一旦被总统公开说成"假的"，以后市场看到任何经济数据都会先打个问号——这比数字本身涨跌更麻烦。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>GDP 刚上修到 4.3%，特朗普就说它是"假的"、要求查商务部——数字本身是例行修正没错，但总统亲自质疑自家数据的公信力，这出戏比数字更值得盯着。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Reuters《Trump demands probe of GDP data released before midterms》—— <a href="https://www.reuters.com/world/us/trump-demands-probe-gdp-data-released-before-midterms-2026-11-26/">https://www.reuters.com/world/us/trump-demands-probe-gdp-data-released-before-midterms-2026-11-26/</a></li>
+<li>Al Jazeera《Trump calls GDP data released before midterms 'fake', demands investigation》—— <a href="https://www.aljazeera.com/amp/economy/2026/11/26/trump-calls-gdp-data-released-before-midterms-fake-demands-investigation">https://www.aljazeera.com/amp/economy/2026/11/26/trump-calls-gdp-data-released-before-midterms-fake-demands-investigation</a></li>
+</ul>
+<hr />
+<div class="zg-followup" data-story="2026-11-26-fin-2" hidden><p class="sec-label">📌 追更后续：美国 10 月 PCE 通胀升至 3.8%，三季度 GDP 二次估值大幅上修至 4.3% · <span class="zg-followup-date">你 11月26日 开始追更</span></p><p>特朗普 11 月 26 日称三季度 GDP 上修至 4.3% 是“大规模、故意的错误”，指控数据在中期选举前被故意低报，要求“立即调查”商务部；BEA 称修正是生产者价格指数更新后的例行流程，最终值定于 12 月 23 日发布。</p><p class="zg-followup-src">🔗 来源：<a href="https://www.reuters.com/world/us/trump-demands-probe-gdp-data-released-before-midterms-2026-11-26/">https://www.reuters.com/world/us/trump-demands-probe-gdp-data-released-before-midterms-2026-11-26/</a>；<a href="https://www.aljazeera.com/amp/economy/2026/11/26/trump-calls-gdp-data-released-before-midterms-fake-demands-investigation">https://www.aljazeera.com/amp/economy/2026/11/26/trump-calls-gdp-data-released-before-midterms-fake-demands-investigation</a></p></div><div class="zg-followup" data-story="2026-11-22-fin-3" hidden><p class="sec-label">📌 追更后续：黄金、比特币周末继续跌：金价全周跌近 9%，比特币跌破 6 万美元至两年最低 · <span class="zg-followup-date">你 11月22日 开始追更</span></p><p>11 月 26 日金价回升至约 3573–3600 美元/盎司、比特币约 60800 美元，但 11 月金价仍累计跌约 12%、比特币跌超 20%；11 月比特币现货 ETF 净流出约 49.4 亿美元，为 2024 年 1 月上市以来单月最多。</p><p class="zg-followup-src">🔗 来源：<a href="https://www.thestreet.com/crypto/markets/before-the-bell-gold-oil-and-bitcoin-skip-the-thanksgiving-break-">https://www.thestreet.com/crypto/markets/before-the-bell-gold-oil-and-bitcoin-skip-the-thanksgiving-break-</a>；<a href="https://www.fxstreet.com/analysis/cross-asset-whiplash-why-yields-tariffs-and-positioning-drive-late-november-volatility-202611260938">https://www.fxstreet.com/analysis/cross-asset-whiplash-why-yields-tariffs-and-positioning-drive-late-november-volatility-202611260938</a></p></div><div class="zg-followup" data-story="2026-11-26-fin-1" hidden><p class="sec-label">📌 追更后续：美股 11 月 25 日上演史诗级日内大逆转，道指收涨、纳指标普收跌，今天感恩节休市 · <span class="zg-followup-date">你 11月26日 开始追更</span></p><p>感恩节当天美股休市，全球股市接力周三尾盘反弹：日经涨 0.9%、恒生涨 1.2%、德国 DAX 涨 2.2%、欧洲斯托克 600 涨 1.8%；标普 500 期货涨约 0.7%，预示黑五半日开市高开。</p><p class="zg-followup-src">🔗 来源：<a href="https://www.barrons.com/articles/stock-market-today-futures-76292212">https://www.barrons.com/articles/stock-market-today-futures-76292212</a>；<a href="https://www.marketwatch.com/story/futures-point-to-black-friday-gains-for-wall-street-as-global-markets-welcome-u-s-resilience-ad6bcef2">https://www.marketwatch.com/story/futures-point-to-black-friday-gains-for-wall-street-as-global-markets-welcome-u-s-resilience-ad6bcef2</a></p></div><h2>二、AI 🤖</h2>
+<div class="zg-head"><h3>1. FCC 批准 SpaceX 发射 100 万颗"太空数据中心"卫星</h3><button type="button" class="zg-btn" data-story="2026-11-27-ai-1" data-title="1. FCC 批准 SpaceX 发射 100 万颗&quot;太空数据中心&quot;卫星" data-section="ai" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>美国联邦通信委员会（FCC）11 月 25 日（星期三）有条件批准 SpaceX 部署最多 100 万颗卫星，组建名为 Starmind 的轨道 AI 数据中心星座，用太空中的太阳能为 AI 算力供电。这是美国历史上首次批准太空数据中心星座。SpaceX 须在 2033 年 11 月前部署首颗运行卫星，2035 年前完成 10%（10 万颗），2038 年前 50%，2040 年前全部部署；首批发射计划 2027 年开始。FCC 尚未批准其 600 公里以上轨道的残骸处理方案。</p>
+<p>把数据中心搬上太空，是 AI 算力竞赛的新战线——绕开地面电力与土地瓶颈，但也引发天文学界对夜空污染和轨道拥堵的担忧；规模相当于现有在轨卫星总数的约 50 倍。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"数据中心"</strong>：一栋装满了服务器的大楼，AI 模型就住在里面"干活"。训练一个大模型要耗的电，相当于一座小城市的用电量——这就是为什么马斯克想把数据中心搬上太空：太空里太阳能管够，不用抢地面的电。</li>
+<li><strong>"星座"</strong>：成千上万颗卫星组网，就像天上的"星星"连成一片。SpaceX 的星链（Starlink）就是一个星座，只不过 Starmind 这个星座装的不是通信设备，而是会"算东西"的服务器。</li>
+<li><strong>"残骸处理方案"</strong>：卫星报废后不能一直飘在天上当"太空垃圾"，得有办法让它掉下来烧掉或者拖走。FCC 这次还没批 SpaceX 在 600 公里以上轨道的方案——等于说"先批你发射，垃圾怎么收以后再谈"。</li>
+<li><strong>"轨道拥堵"</strong>：天上的"车道"也是有限的。100 万颗卫星什么概念？现在天上所有在轨卫星加起来才约 2 万颗——一下子多 50 倍，天文学家担心以后看星星，满眼都是反光的卫星。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>马斯克要把数据中心搬上太空——FCC 批了 100 万颗卫星的 Starmind 星座，太阳能供电、2027 年开建；但天文学家已经在喊：夜空要被卫星"糊"住了。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Reuters《US authorizes SpaceX to deploy 1 million satellites for data centers in space》—— <a href="https://www.reuters.com/business/media-telecom/us-authorizes-spacex-deploy-1-million-satellites-data-centers-space-2026-11-25/">https://www.reuters.com/business/media-telecom/us-authorizes-spacex-deploy-1-million-satellites-data-centers-space-2026-11-25/</a></li>
+<li>TechCrunch《FCC approves SpaceX plan to put AI data centers in space》—— <a href="https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/?ref=implicator.ai">https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/?ref=implicator.ai</a></li>
+<li>CNN《SpaceX satellites, space data centers》—— <a href="https://www.cnn.com/2026/11/26/business/spacex-satellites-space-data-centers-intl?cid=external-feeds_iluminar_meta">https://www.cnn.com/2026/11/26/business/spacex-satellites-space-data-centers-intl?cid=external-feeds_iluminar_meta</a></li>
+</ul>
+<div class="zg-head"><h3>2. 谷歌 Workspace MCP 服务器正式上线，AI 助手 2027 年 2 月起必须走 MCP</h3><button type="button" class="zg-btn" data-story="2026-11-27-ai-2" data-title="2. 谷歌 Workspace MCP 服务器正式上线，AI 助手 2027 年 2 月起必须走 MCP" data-section="ai" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>谷歌 11 月 24 日宣布，8 个官方托管的 Workspace MCP 服务器（Gmail、Drive、Docs、Sheets、Slides、Calendar、Chat、Tasks，Keep 即将推出）及官方命令行工具 gwscli 正式 GA（一般可用），两周内分批推送给所有 Workspace 客户和开发者。同时发布《Workspace AI Tools Addendum》：2027 年 2 月 1 日起，任何 AI 助手/智能体访问 Workspace 数据必须经 MCP 服务器或 CLI，不得再直接调 REST API，否则将被限流到免费档配额；Scaled 档的 MCP 计费从 2027 年 4 月 1 日开始。Standard 档免费额度为每产品每天 5000 次请求。</p>
+<p>这是 MCP 从"可选项"变成"必经之路"的标志性事件，直接影响所有用 AI 助手读写 Gmail、日历、文档的开发者和企业；不迁移的旧集成将在两个多月后被限流。结合昨天 Anthropic 的 MCP 两周年消息看，"插座标准"之争已经分出胜负了——MCP 就是那个插座。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"MCP（模型上下文协议）"</strong>：Anthropic 定的一个开放标准，相当于 AI 应用接外部工具的"通用插座"。以前每个 AI 应用接工具都要单独"配插头"，有了 MCP，一套插座到处都能用。</li>
+<li><strong>"GA（一般可用）"</strong>：软件行业的黑话，意思是"测试完了，正式向所有人开放"。相对的是 Beta（测试版）——GA 之后，企业才敢放心把它用到正经业务里。</li>
+<li><strong>"REST API"</strong>：程序之间互相"喊话"的一种老办法：A 程序发个请求，B 程序回个数据。谷歌这次等于说：以后 AI 助手不许再直接"喊话"，必须走 MCP 这个"前台"登记——不登记就只给最低配额。</li>
+<li><strong>"限流"</strong>：超过免费额度就把你的请求速度掐慢、甚至直接挡掉。就像手机流量用超了被降速——只不过这次降速的是 AI 助手读你邮箱、日历的速度。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>谷歌给 AI 助手立了新规矩——2027 年 2 月 1 日起，想读你的 Gmail、日历、文档，必须走 MCP；MCP 从"可选项"正式变成"必经之路"，不迁移的旧工具，两个多月后就要被掐速度了。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Google 官方开发者发布说明 —— <a href="https://developers.google.com/workspace/release-notes">https://developers.google.com/workspace/release-notes</a></li>
+<li>TechRepublic《Google Workspace AI agent access》—— <a href="https://www.techrepublic.com/article/news-google-workspace-ai-agent-access/">https://www.techrepublic.com/article/news-google-workspace-ai-agent-access/</a></li>
+<li>DEV Community 详解 —— <a href="https://dev.to/delimitter/google-makes-workspace-mcp-and-cli-ga-ai-agents-switch-from-rest-by-february-1-2027-1jpo">https://dev.to/delimitter/google-makes-workspace-mcp-and-cli-ga-ai-agents-switch-from-rest-by-february-1-2027-1jpo</a></li>
+</ul>
+<div class="zg-head"><h3>3. Anthropic 用 Claude 把自家核心 API 从 Python 重写成 Rust，CPU 占用降约 70%</h3><button type="button" class="zg-btn" data-story="2026-11-27-ai-3" data-title="3. Anthropic 用 Claude 把自家核心 API 从 Python 重写成 Rust，CPU 占用降约 70%" data-section="ai" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>Anthropic 11 月 25 日发文披露，已把 Messages API（Claude API、Claude Code、Cowork 背后的主通道）从 Python 迁移到 Rust，全程零停机、功能开发未冻结。Claude 约一周写出核心请求路径的首版代码；到 2026 年 5 月，Claude 已写下公司 80% 以上合并代码。新 API 每请求 CPU 占用减少约 70%、内存减少 80% 以上、首 token 中位延迟缩短约 20%；生产流量已于 2026 年 9 月全面切到 Rust。</p>
+<p>难点不在写代码而在验证：团队用"影子流量"双跑新旧系统、只记录差异指纹（不暴露用户内容），再派 Claude 智能体三层循环（本地快速验证→生产验证→经验沉淀）自动修差异。背景：2024 年初至 2026 年秋，API 流量增长约 1800 倍。</p>
+<p>AI 写代码已进入"验证比生成更难"的新阶段；这是迄今最完整的"AI 重构 AI 基础设施并自证正确"的公开案例，对所有用 AI 智能体重构生产系统的人都有借鉴意义。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"Python / Rust"</strong>：两种编程语言。Python 写起来快、像"草稿纸"，适合快速搭东西；Rust 跑起来快、管得严，像"精密仪器"，适合扛大流量。Anthropic 这次就是把"草稿纸"换成了"精密仪器"。</li>
+<li><strong>"API"</strong>：程序之间的"服务窗口"。你每次和 Claude 聊天，背后都是通过 Messages API 这个窗口在"点菜"——Anthropic 这次换的，就是这个窗口背后的整套厨房。</li>
+<li><strong>"零停机"</strong>：整个搬家过程服务一次都没断过。就像给一辆行驶中的汽车换发动机——用户完全没感觉，车还在跑。</li>
+<li><strong>"影子流量"</strong>：新系统悄悄跟在老系统后面"偷学"：同样的请求，两边各跑一遍，只比结果哪里不一样。用户的数据不会被新系统真的用掉，只用来"对答案"。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>Anthropic 让 Claude 自己把"厨房"重盖了一遍——核心 API 从 Python 换成 Rust，CPU 占用降 70%、还一次都没停机；最难的不是写代码，是证明新代码和旧代码"算出来的答案一样"。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Anthropic 官方博客《Migrating our API to Rust》—— <a href="https://www.anthropic.com/research/migrating-api-to-rust">https://www.anthropic.com/research/migrating-api-to-rust</a></li>
+<li>TechRepublic《Anthropic Claude Messages API Rust migration》—— <a href="https://www.techrepublic.com/article/news-anthropic-claude-messages-api-rust-migration/">https://www.techrepublic.com/article/news-anthropic-claude-messages-api-rust-migration/</a></li>
+<li>InfoWorld《Anthropic says it moved its Claude API from Python to Rust with no downtime》—— <a href="https://www.infoworld.com/article/4253460/anthropic-says-it-moved-its-claude-api-from-python-to-rust-with-no-downtime.html">https://www.infoworld.com/article/4253460/anthropic-says-it-moved-its-claude-api-from-python-to-rust-with-no-downtime.html</a></li>
+</ul>
+<hr />
+<h2>三、国际事务 🌍</h2>
+<div class="zg-head"><h3>1. 霍尔木兹海峡再起袭船事件：两艘油轮触雷起火，伊朗称已"完全控制"海峡</h3><button type="button" class="zg-btn" data-story="2026-11-27-intl-1" data-title="1. 霍尔木兹海峡再起袭船事件：两艘油轮触雷起火，伊朗称已&quot;完全控制&quot;海峡" data-section="intl" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>11 月 26 日，伊朗革命卫队称两艘油轮在阿曼哈萨布港以北、试图经"未经授权路线"穿越霍尔木兹海峡时触雷爆炸起火，其中一艘是载油超 200 万桶的超级油轮；伊朗陆军海军 11 月 25 日也称一艘油轮及一艘 LNG 船在海峡以东触雷。英国海事贸易组织（UKMTO）另报告 11 月 25 日迪拜以西约 50 海里处一艘油轮附近发生爆炸，无损伤、无污染报告。伊朗方面关于船只身份与损失的说法尚未获独立核实。</p>
+<p>伊朗革命卫队海军司令称伊朗对海峡有"完全控制权"，议会副议长放话：若美国阻止伊朗石油出口，伊朗将切断地区所有油气外流。背景：10 月海峡袭船事件超 30 起（冲突爆发以来单月首次超 30），11 月截至 22 日已有至少 22 起；美国 7 月恢复对伊朗港口的海军封锁，11 月 24 日财政部又制裁了 20 多家伊朗换汇行及幌子公司；伊朗里亚尔跌至历史新低。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"霍尔木兹海峡"</strong>：波斯湾通往印度洋的"咽喉水道"，最窄处只有约 33 公里宽。全球约五分之一的石油贸易要从这里过——它一堵，世界油价就得抖三抖，相当于小区唯一的出门大路被堵了。</li>
+<li><strong>"触雷"</strong>：船撞上了水里布的水雷。伊朗方面说油轮走了"未经授权的航线"才触雷，但这个说法没经过独立核实——在海上，谁布的雷、是不是真有雷，往往各说各话。</li>
+<li><strong>"超级油轮"</strong>：能装 200 万桶以上原油的巨型油轮，一船油就值上亿美元。200 万桶什么概念？差不多够一个中等国家用上好几天。</li>
+<li><strong>"海军封锁"</strong>：军舰把港口围起来，不让船进出。美国 7 月恢复对伊朗港口的封锁，等于掐住了伊朗卖油的"出门路"——伊朗这次放话"切断地区所有油气外流"，就是针锋相对的威胁。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>从"袭击油轮"到"放话切断所有油气"，霍尔木兹的火越烧越旺——伊朗说两艘油轮触雷起火、自己已"完全控制"海峡，油价应声逼近 95 美元，全球五分之一的石油贸易正从这条咽喉里提心吊胆地过。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Reuters《Iran's Revolutionary Guards say two oil tankers hit sea mines near Oman's Khasab》—— <a href="https://www.reuters.com/world/middle-east/irans-revolutionary-guards-say-two-oil-tankers-hit-sea-mines-near-omans-khasab-2026-11-26/">https://www.reuters.com/world/middle-east/irans-revolutionary-guards-say-two-oil-tankers-hit-sea-mines-near-omans-khasab-2026-11-26/</a></li>
+<li>CGTN《Hormuz tensions rise as US-Iran standoff deepens》—— <a href="https://news.cgtn.com/news/2026-11-26/Hormuz-tensions-rise-as-US-Iran-standoff-deepens-1SnAD635EaI/p.html">https://news.cgtn.com/news/2026-11-26/Hormuz-tensions-rise-as-US-Iran-standoff-deepens-1SnAD635EaI/p.html</a></li>
+<li>Reuters《Oil rises on supply concerns as Iran claims mine strikes on ships》—— <a href="https://www.reuters.com/business/energy/oil-rises-supply-concerns-iran-claims-mine-strikes-ships-2026-11-26/">https://www.reuters.com/business/energy/oil-rises-supply-concerns-iran-claims-mine-strikes-ships-2026-11-26/</a></li>
+</ul>
+<div class="zg-head"><h3>2. 加沙停火承压：以防长威胁再迁移百万人，48 小时 19 死</h3><button type="button" class="zg-btn" data-story="2026-11-27-intl-2" data-title="2. 加沙停火承压：以防长威胁再迁移百万人，48 小时 19 死" data-section="intl" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>11 月 26 日，以色列看守政府防长卡茨在 X 发文威胁：若哈马斯不解除武装，以军将以"基甸战车二号行动"再把约 100 万加沙居民向南迁移；他称以军已控制加沙 70% 领土（停火协议允许以军留守 53%）。加沙卫生部 11 月 26 日称，过去 48 小时以军袭击造成 19 名巴勒斯坦人死亡、48 人受伤；自 2025 年 10 月 11 日停火生效以来死亡人数已升至 1705 人、伤 6163 人。同日以军称打死哈马斯政治局经济部门负责人兼副教育部长 Khaled Abu Nada。</p>
+<p>背景：哈马斯 2026 年 7 月曾宣布同意把武器移交给特朗普"和平委员会"下的巴勒斯坦技术官僚委员会，但至今未执行解除武装，以方坚持先可核查缴械、再撤军。停火已生效一年多，但袭击与死亡从未停过，防长此番威胁等于公开把"再打大战"摆上台面。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"看守政府"</strong>：政府已经辞职或任期将满、只负责"看摊子"的过渡状态。以色列现在就是这么个状态——防长说话的分量还在，但做重大决定的底气要打个折。</li>
+<li><strong>"解除武装"</strong>：把武器交出来、不再保留武装力量。这是以色列的核心要求：哈马斯先交枪，以军再撤军。哈马斯 7 月口头答应过，至今没动手——这就是停火卡住的死结。</li>
+<li><strong>"迁移"</strong>：把一百万人从住的地方赶到另一个地方。加沙总共才约 200 万人，迁 100 万等于一半人口要再次流离失所——冬天帐篷都住不暖的时候，这话的分量可想而知。</li>
+<li><strong>"停火协议"</strong>：交战双方约定"先别打了"的一纸约定。但它不是和平条约，只是个"暂停键"——任何一方觉得对方越线了，都可能重新按下"播放键"。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>停火生效一年多，死亡人数却还在涨——48 小时 19 死，以防长还放话要再迁走 100 万人；"先缴械、再撤军"的死结没解开，停火这张纸只会越来越薄。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>The Straits Times《Israel defence minister threatens to displace 1 million Gazans if Hamas won't disarm》—— <a href="https://www.straitstimes.com/world/middle-east/israel-defence-minister-threatens-to-displace-1-million-gazans-if-hamas-wont-disarm?ref=more-on-this-topic">https://www.straitstimes.com/world/middle-east/israel-defence-minister-threatens-to-displace-1-million-gazans-if-hamas-wont-disarm?ref=more-on-this-topic</a></li>
+<li>Yeni Safak《At least 19 Palestinians dead, 48 injured in Gaza despite ceasefire》—— <a href="https://en.yenisafak.com/world/at-least-19-palestinians-dead-48-injured-in-gaza-despite-ceasefire-3726026">https://en.yenisafak.com/world/at-least-19-palestinians-dead-48-injured-in-gaza-despite-ceasefire-3726026</a></li>
+<li>The Express Tribune《Israeli strikes kill 5 Palestinians, including deputy education minister, in Gaza》—— <a href="https://tribune.com.pk/story/2642450/israeli-strikes-kill-5-palestinians-including-deputy-education-minister-in-gaza?amp=1">https://tribune.com.pk/story/2642450/israeli-strikes-kill-5-palestinians-including-deputy-education-minister-in-gaza?amp=1</a></li>
+</ul>
+<hr />
+<div class="zg-followup" data-story="2026-11-26-intl-1" hidden><p class="sec-label">📌 追更后续：美伊对峙升级：霍尔木兹海峡再传油轮遇袭，美国加码制裁伊朗“影子银行”，伊朗开出谈判七条件 · <span class="zg-followup-date">你 11月26日 开始追更</span></p><p>11 月 26 日伊朗称又有两艘油轮在霍尔木兹海峡触雷起火，其中一艘为载油超 200 万桶的超级油轮；伊朗革命卫队海军司令称伊朗对海峡有“完全控制权”，议会副议长放话若美国阻止伊朗石油出口将切断地区所有油气外流。</p><p class="zg-followup-src">🔗 来源：<a href="https://www.reuters.com/world/middle-east/irans-revolutionary-guards-say-two-oil-tankers-hit-sea-mines-near-omans-khasab-2026-11-26/">https://www.reuters.com/world/middle-east/irans-revolutionary-guards-say-two-oil-tankers-hit-sea-mines-near-omans-khasab-2026-11-26/</a>；<a href="https://news.cgtn.com/news/2026-11-26/Hormuz-tensions-rise-as-US-Iran-standoff-deepens-1SnAD635EaI/p.html">https://news.cgtn.com/news/2026-11-26/Hormuz-tensions-rise-as-US-Iran-standoff-deepens-1SnAD635EaI/p.html</a></p></div><div class="zg-followup" data-story="2026-11-26-intl-3" hidden><p class="sec-label">📌 追更后续：加沙停火濒临崩溃：美国主导的“和平委员会”警告停火协议名存实亡，11 月 25 日空袭再致一家人 4 口遇难 · <span class="zg-followup-date">你 11月26日 开始追更</span></p><p>11 月 26 日以色列防长卡茨威胁，若哈马斯不解除武装，以军将再把约 100 万加沙居民向南迁移；过去 48 小时以军袭击造成 19 名巴勒斯坦人死亡，停火生效以来死亡人数已升至 1705 人。</p><p class="zg-followup-src">🔗 来源：<a href="https://www.straitstimes.com/world/middle-east/israel-defence-minister-threatens-to-displace-1-million-gazans-if-hamas-wont-disarm?ref=more-on-this-topic">https://www.straitstimes.com/world/middle-east/israel-defence-minister-threatens-to-displace-1-million-gazans-if-hamas-wont-disarm?ref=more-on-this-topic</a>；<a href="https://en.yenisafak.com/world/at-least-19-palestinians-dead-48-injured-in-gaza-despite-ceasefire-3726026">https://en.yenisafak.com/world/at-least-19-palestinians-dead-48-injured-in-gaza-despite-ceasefire-3726026</a></p></div><h2>四、个人成长 🌱</h2>
+<div class="zg-head"><h3>1. 别再定职业目标了，建一套职业系统</h3><button type="button" class="zg-btn" data-story="2026-11-27-growth-1" data-title="1. 别再定职业目标了，建一套职业系统" data-section="growth" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>Medium 作者 Hello Wiselittlestories 11 月 26 日的文章说：引用 James Clear《原子习惯》那句"你不会上升到目标的高度，只会跌落到系统的水平"——"今年升职"这类目标年年落空，因为目标只是方向，系统才是载体。作者给出每周约 90 分钟的极简职业系统：① 周五成果日志（10 分钟，写三行：交付了什么、解决了什么问题、帮助了谁，攒够 52 条就是述职证据）；② 每周一次"可见的"对话（20 分钟，团队外的人，一杯咖啡或一条带具体细节的感谢）；③ 每周 1 小时技能练习（像开会一样锁进日历，只练下一个岗位需要的技能）。每项都要有"5 分钟最低版本"保底；搭建方法：从已有目标倒推"达到目标的人每周在做什么"，最多挑 3 个行为，配上固定时间和触发点，每月复盘一次而非每年。</p>
+<p>这套方法的好处是"能直接照抄"：不用等一个宏大的年度计划，先把每周 90 分钟锁死，目标会自己跟上来——尤其适合在校生对照自己的学期目标改编。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"职业系统"</strong>：不是"今年要升职"这种一句话目标，而是一套每周固定重复的小动作：记成果、见人、练技能。目标是"想去的地方"，系统是"每天走的路"——路走对了，地方自然就到了。</li>
+<li><strong>"成果日志"</strong>：每周五花 10 分钟写下这周干成了什么。别小看这三行字：年底述职、写简历、申请实习时，它们就是现成的证据，不用再对着空白文档发愁"我今年到底干了啥"。</li>
+<li><strong>"触发点"</strong>：一个固定的"开关"，提醒你该做这件事了。比如"每周五下班前"就是写成果日志的触发点——到了点就做，不用每天问自己"今天要不要写"。</li>
+<li><strong>"复盘"</strong>：定期回头看看：这套系统这周跑得怎么样、哪里卡住了、要不要调一调。作者建议每月复盘一次，而不是等到年底才发现"今年又白过了"。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>别再把"今年升职"写进新年愿望里了——目标只是方向，每周 90 分钟的系统才是载体：记成果、见人、练技能，攒够 52 周，述职的证据自己就长出来了。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Medium · Hello Wiselittlestories《Stop Setting Career Goals. Build a Career System Instead.》（2026-11-26）—— <a href="https://medium.com/@hello.wiselittlestories/stop-setting-career-goals-build-a-career-system-instead-faa7e09edb1f">https://medium.com/@hello.wiselittlestories/stop-setting-career-goals-build-a-career-system-instead-faa7e09edb1f</a></li>
+</ul>
+<div class="zg-head"><h3>2. 在痴迷于"做"的世界里，给思考留出位置</h3><button type="button" class="zg-btn" data-story="2026-11-27-growth-2" data-title="2. 在痴迷于&quot;做&quot;的世界里，给思考留出位置" data-section="growth" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>Medium 作者 Rafi Writes 11 月的一篇文章说：只会埋头完成任务，不等于在做正确的事。哈佛商学院等研究者让印度某技术支持呼叫中心的学员每天最后 15 分钟写下"今天学到了什么、下次怎么做不同"，结果测试成绩比对照组高 22.8%。心理学家 Sophie Leroy 的"注意力残留"研究：任务切换后一部分注意力会滞留在上个任务上。作者建议：每周两次、每次 20 分钟（或每天收尾 15 分钟），手机放另一个房间、只带一张白纸；每次只带一个问题，写下所有想法，圈出其中"其实只是假设、并不知道"的部分，再想两种其他处理方式，最后落到"明天要做的一件小事"——没有这一步就只是空想。连美国前国务卿 George Shultz 每周都留至少两次 45 分钟独自思考，LinkedIn 前 CEO Jeff Weiner 每天留 90 分钟到 2 小时空白。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"注意力残留"</strong>：刚做完一件事、马上换下一件时，脑子还有一半留在上一件事上。就像刚看完一场电影就去写作业，脑子里还在回放剧情——这部分"残留"会偷走你的专注力。</li>
+<li><strong>"对照组"</strong>：实验里"什么都不变"的那组人，用来对比"做了新方法"的那组人。呼叫中心实验里，每天花 15 分钟复盘的那组，成绩比对照组高 22.8%——多出来的这 22.8%，就是"思考"值多少钱。</li>
+<li><strong>"假设"</strong>：你以为是事实、其实没验证过的想法。比如"我肯定考不过"——这常常只是假设，不是事实。思考的活儿之一，就是把假设圈出来、别让它冒充事实。</li>
+<li><strong>"留白"</strong>：日程表里故意空出来的时间，什么都不排。Shultz 每周留两次 45 分钟、Weiner 每天留 1.5–2 小时——越是位高权重的人，越舍得给"发呆"留位置。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>埋头苦干不等于在做正确的事——每天收尾花 15 分钟想一想，成绩能高 22.8%；思考不是偷懒，是给脑子留一个"换挡"的空档。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Medium · Rafi Writes《In A World Obsessed With Doing, Make Room for Thinking》（2026 年 11 月）—— <a href="https://medium.com/@rafiwritescontact/in-a-world-obsessed-with-doing-make-room-for-thinking-346a9fb3a839?source=topic_portal---latest_stories---design_thinking---3--------------------------------------">https://medium.com/@rafiwritescontact/in-a-world-obsessed-with-doing-make-room-for-thinking-346a9fb3a839?source=topic_portal---latest_stories---design_thinking---3--------------------------------------</a></li>
+</ul>
+<hr />
+<h2>五、爱情/关系 💕</h2>
+<div class="zg-head"><h3>1. 谁留下、谁离开：一项婚姻新研究</h3><button type="button" class="zg-btn" data-story="2026-11-27-love-1" data-title="1. 谁留下、谁离开：一项婚姻新研究" data-section="love" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>Psychology Today 11 月 26 日的文章介绍了一项 UCLA 的 Molly Smith 等人 2026 年新发表的研究：追踪 368 对新婚夫妇长达 12 年、10 次测量，对比三种解释离婚的理论：① 沟通质量（日常互动方式）；② 个人脆弱性（童年经历、依恋模式、神经质等人格特质）；③ 社会经济压力。结果：妻子的脆弱性（童年不良经历、父母离异、受虐史、负面情绪、物质滥用史）是唯一能显著预测离婚时间的因素；作者的可能解释是女性对关系问题更敏感、会先离开，社会角色理论则认为女性承担了更多家务与维系亲密关系的劳动。即使是最好的预测模型，准确率也只有 34%——婚姻走向极难预测，别轻易对别人的感情下判断。</p>
+<p>用 12 年追踪数据提醒读者：一段关系走不下去，往往不是某一次吵架，而是各自带进婚姻的旧伤；也给"为什么是她先提离婚"提供了研究视角。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"脆弱性"</strong>：一个人身上那些容易在压力下"裂开"的地方——童年的伤、糟糕的依恋模式、控制不住的负面情绪。研究发现，带进婚姻的旧伤，比婚后吵了多少次架更能预测这段婚姻走不走得下去。</li>
+<li><strong>"追踪研究"</strong>：同一批人，跟上十几年、反复测十次。368 对夫妇、12 年、10 次测量——这种研究的结论比"采访 20 个人"扎实得多，因为它看的是时间里的变化，不是一瞬间的快照。</li>
+<li><strong>"预测模型"</strong>：用一堆因素去"算"一件事会不会发生。最好的模型准确率也只有 34%——意思是拿着所有数据去猜一对夫妻会不会离婚，三次里也只能猜对一次。感情这事，数据算不准。</li>
+<li><strong>"社会角色理论"</strong>：一种解释：女性在家庭里承担了更多"看不见的活"——家务、照顾情绪、维系两边亲戚——活儿多、委屈多，自然也更容易先说"不干了"。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>368 对夫妇、12 年追踪告诉我们：婚姻走不下去，往往不是某次吵架的错，而是各自带进婚姻的旧伤；但就算拿着全部数据去猜，准确率也只有 34%——别轻易对别人的感情下判断。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Psychology Today · Fulfillment at Any Age《Who Stays, and Who Goes, in New Research on Relationships》（2026-11-26）—— <a href="https://www.psychologytoday.com/us/blog/fulfillment-at-any-age/202611/who-stays-and-who-goes-in-new-research-on-relationships">https://www.psychologytoday.com/us/blog/fulfillment-at-any-age/202611/who-stays-and-who-goes-in-new-research-on-relationships</a></li>
+</ul>
+<div class="zg-head"><h3>2. 暧昧关系里，双方的期待却大不相同</h3><button type="button" class="zg-btn" data-story="2026-11-27-love-2" data-title="2. 暧昧关系里，双方的期待却大不相同" data-section="love" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>性学研究者 Justin J. Lehmiller 博士 11 月 23 日在 Psychology Today 的文章聚焦"situationship"（暧昧关系/非正式关系）：有亲密和约会，却没有明确承诺。新研究调查 390 名 18–75 岁成年人（多来自美、英、加）发现：女性比男性更希望暧昧发展成正式关系；56% 的人曾希望暧昧能转正，但最终只有 9% 的暧昧关系真的变成了恋爱关系。核心提醒：暧昧的问题不在亲密程度，而在双方对"我们到底算什么"没有共识——期待错位才是受伤的根源。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"Situationship（暧昧关系）"</strong>：两个人像情侣一样约会、亲密，却谁也没说过"我们在一起吧"。没有名分、没有承诺，只有一句心照不宣的"就先这样吧"——英文里这个词就是 situation（处境）+ relationship（关系）拼出来的。</li>
+<li><strong>"转正"</strong>：从暧昧变成正式恋爱关系。研究里 56% 的人都希望转正，最后真转正的只有 9%——差不多每 6 个想转正的人里，只有 1 个如愿。</li>
+<li><strong>"期待错位"</strong>：两个人对同一段关系想的根本不是一回事：一个在等表白，一个只想保持现状。错位的不是感情，是"我们到底算什么"这个最基本的问题没对上。</li>
+<li><strong>"共识"</strong>：两个人对一件事达成了一致的看法。暧昧最伤人的地方，恰恰是没有共识——你以为的"默认在一起"，在他那里可能只是"还没想好"。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>56% 的人希望暧昧能转正，最后真转正的只有 9%——暧昧伤人的从来不是亲密程度，而是两个人对"我们到底算什么"根本没对上答案。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>Psychology Today · Justin J. Lehmiller《When Casual Dating Comes With Major Expectations》（2026-11-23）—— <a href="https://qoshe.com/psychology-today/justin-j-lehmiller-ph-d/when-casual-dating-comes-with-major-expectations/189567242">https://qoshe.com/psychology-today/justin-j-lehmiller-ph-d/when-casual-dating-comes-with-major-expectations/189567242</a></li>
+</ul>
+<hr />
+<h2>六、绿色低碳能源 🌱</h2>
+<div class="zg-head"><h3>1. 阿联酋把 2031 年清洁能源占比目标从 30% 提至 35%</h3><button type="button" class="zg-btn" data-story="2026-11-27-green-1" data-title="1. 阿联酋把 2031 年清洁能源占比目标从 30% 提至 35%" data-section="green" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>阿联酋能源与基础设施部长 Suhail bin Mohammed Al Mazrouei 11 月 25 日在第三届 RAK Energy Summit 开幕式上宣布，将清洁能源在电力结构中的占比目标从 30% 提高到 35%（2031 年），并把《2050 国家氢能战略》纳入整体能源规划。配套数字：2025 年阿联酋可再生能源装机约 8.2 GW，目标到 2031 年太阳能约 23 GW、核电 5.6 GW；部长称可再生能源竞争力提升和电池技术进步是上调目标的原因。需要注意：该 35% 目标部长在 9 月已提过一次，11 月 25 日属于在峰会上的重申并给出最新装机数字。</p>
+<p>产油国加速转向清洁能源的又一信号；IEA《Renewables 2026》预测阿联酋到 2031 年人均太阳能发电量将居世界第一。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"清洁能源占比"</strong>：一个国家发的电里，有多少来自不烧化石燃料的来源（太阳能、风电、核电等）。阿联酋说到 2031 年要到 35%——等于每发 100 度电，有 35 度是"干净"的。</li>
+<li><strong>"GW（吉瓦）"</strong>：功率单位，1GW = 100 万千瓦。阿联酋目标到 2031 年太阳能 23 GW，相当于 23 座大型火电站的发电能力。</li>
+<li><strong>"氢能战略"</strong>：用太阳能把水"电解"出氢气，再用氢气发电或当燃料——相当于把阳光"存"进氢气罐子里。阿联酋把氢能写进国家规划，等于正式把"卖油"的生意往"卖氢"上转。</li>
+<li><strong>"人均太阳能发电量"</strong>：平均到每个人头上的太阳能发电量。阿联酋人少、太阳多，到 2031 年这项指标要排世界第一——"家里有矿"正在变成"头顶有光"。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>产油国也在加速"换赛道"——阿联酋把 2031 年清洁能源占比目标提到 35%，太阳能要干到 23 GW；"卖油的"正在认真学"卖阳光"，这信号比数字本身更值得看。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>阿联酋官方通讯社 WAM《UAE raises clean energy target to 35% by 2031: Minister》—— <a href="https://www.wam.ae/en/article/c3fmbop-uae-raises-clean-energy-target-35-2031-minister">https://www.wam.ae/en/article/c3fmbop-uae-raises-clean-energy-target-35-2031-minister</a></li>
+<li>Gulf News《UAE raises clean energy target to 35% by 2031, minister of energy》—— <a href="https://gulfnews.com/uae/government/uae-raises-clean-energy-target-to-35-by-2031-minister-of-energy-1.500761170">https://gulfnews.com/uae/government/uae-raises-clean-energy-target-to-35-by-2031-minister-of-energy-1.500761170</a></li>
+</ul>
+<div class="zg-head"><h3>2. 法国把技术中立可再生能源招标规模从 500 MW 翻三倍至 1.5 GW</h3><button type="button" class="zg-btn" data-story="2026-11-27-green-2" data-title="2. 法国把技术中立可再生能源招标规模从 500 MW 翻三倍至 1.5 GW" data-section="green" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>法国政府 11 月 25 日在新闻发布会上宣布，即将启动的首轮技术中立可再生能源招标（PPE3 Neutre）规模从草案中的 500 MW 提高到 1.5 GW，对太阳能、陆上风电、水电等所有可再生技术开放，招标预计未来几天内启动。同时引入统一的基荷参考电价（M0 baseload，即全国月均批发 spot 电价）来计算对发电企业的补贴。此前法国可再生能源协会 SER 曾批评 500 MW 远远不够，行业要求 1.5 GW——政府这次基本采纳了行业诉求。</p>
+<p>欧洲大国在补贴退坡压力下仍加码可再生招标，且"技术中立 + 统一参考电价"是拍卖机制设计的新动向，会影响后续各国招标规则。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"技术中立招标"</strong>：政府不指定"必须建光伏"或"必须建风电"，而是说"我要 1.5 GW 的绿电，谁便宜、谁靠谱就买谁的"。太阳能、风电、水电同台打擂，价低者得——像一场不分项目的"绿电选秀"。</li>
+<li><strong>"MW（兆瓦）"</strong>：功率单位，1MW = 1000 千瓦。1.5 GW 就是 1500 MW，大约相当于一座半大型火电站的发电能力。</li>
+<li><strong>"基荷参考电价"</strong>：算补贴的"尺子"：先定一个全国月均批发电价当基准，发电企业卖电的收入低于这个数，政府补差价；高于这个数，就不用补。统一一把尺子，大家心里都有数。</li>
+<li><strong>"补贴退坡"</strong>：政府给绿电的补贴一年比一年少。以前是"大力扶持"，现在是"扶上马、慢慢松手"——法国这次加码招标，等于在补贴变少的情况下，依然愿意多买绿电。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>行业嫌 500 MW 太小气，法国政府干脆翻三倍给到 1.5 GW——太阳能、风电、水电同台打擂，价低者得；补贴在退坡，但欧洲大国买绿电的手一点没软。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>pv magazine《France triples planned renewable energy auction volume to 1.5 GW》—— <a href="https://www.pv-magazine.com/2026/11/26/france-triples-planned-renewable-energy-auction-volume-to-1-5-gw/">https://www.pv-magazine.com/2026/11/26/france-triples-planned-renewable-energy-auction-volume-to-1-5-gw/</a></li>
+<li>pv magazine（招标原 500 MW 方案背景）—— <a href="https://www.pv-magazine.com/2026/11/18/france-unveils-bidding-terms-for-500-mw-technology-neutral-renewables-tender/">https://www.pv-magazine.com/2026/11/18/france-unveils-bidding-terms-for-500-mw-technology-neutral-renewables-tender/</a></li>
+</ul>
+<hr />
+<h2>七、国内要闻 🇨🇳</h2>
+<div class="zg-head"><h3>1. 国务院常务会议：部署基本医保省级统筹，审议《全民阅读促进条例（草案）》</h3><button type="button" class="zg-btn" data-story="2026-11-27-cn-1" data-title="1. 国务院常务会议：部署基本医保省级统筹，审议《全民阅读促进条例（草案）》" data-section="cn" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>国务院总理李强 11 月 27 日主持召开国务院常务会议，听取推动高质量发展综合督查情况汇报，部署推进基本医疗保险省级统筹工作，审议通过《全民阅读促进条例（草案）》，讨论《中华人民共和国注册会计师法（修正草案）》（原则通过，提请全国人大常委会审议）。</p>
+<p>医保省级统筹方面：要求各地因地制宜分类施策、合理确定省级统筹基金管理模式，提高基金使用效率，并协调推进分级诊疗、优质医疗资源均衡布局。推进基本医保省级统筹是健全全民医保制度的重要举措，有利于更好发挥保险互助共济优势，增强医保制度保障能力——说白了，就是让医保的"钱袋子"从市一级升到省一级统筹，异地看病报销更顺、基金更经得起花。《全民阅读促进条例》则是首次从法律层面为全民阅读提供保障。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"基本医保省级统筹"</strong>：医保基金的管理层级从"市"升到"省"。以前各市的医保基金各管各的，有的市钱多、有的市钱紧；升到省一级统筹，等于全省的钱放进一个大池子调剂——异地就医报销更顺畅，小地方的医保基金也不容易"见底"。</li>
+<li><strong>"互助共济"</strong>：医保的本质：健康的人交的钱，帮生病的人付账；年轻的人交的钱，帮年老的人分担。池子越大，这种"众人拾柴"的效果越稳。</li>
+<li><strong>"分级诊疗"</strong>：小病去社区医院、大病再去大医院，别一感冒就往三甲挤。医保省级统筹要和分级诊疗一起推，优质医疗资源才能更均衡地铺开。</li>
+<li><strong>"综合督查"</strong>：国务院派人到各地"查作业"：年初定的高质量发展任务，到底落实得怎么样、有没有打折扣。这次会议先听了督查汇报，再逐项部署整改。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>医保的"钱袋子"要升到省一级统筹了——全省一个池子调剂，异地看病报销更顺；同时《全民阅读促进条例》首次从法律层面给"多读书"撑腰。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>新华社（北京市人民政府转载）《李强主持召开国务院常务会议》—— <a href="https://www.beijing.gov.cn/ywdt/zyldhd/202512/t20251201_4314024.html">https://www.beijing.gov.cn/ywdt/zyldhd/202512/t20251201_4314024.html</a></li>
+<li>新华社（上海市应急管理局转载）《李强主持召开国务院常务会议》—— <a href="http://yjglj.sh.gov.cn/xwzx/xw/20251201/bc9734d92f1a4312a6f8e04171394395.html">http://yjglj.sh.gov.cn/xwzx/xw/20251201/bc9734d92f1a4312a6f8e04171394395.html</a></li>
+</ul>
+<div class="zg-head"><h3>2. U17 国足 8-0 大胜斐济，时隔 21 年再进世少赛淘汰赛</h3><button type="button" class="zg-btn" data-story="2026-11-27-cn-2" data-title="2. U17 国足 8-0 大胜斐济，时隔 21 年再进世少赛淘汰赛" data-section="cn" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>北京时间 11 月 27 日凌晨，U17 男足世界杯（卡塔尔多哈）H 组末轮，中国 U17 男足 8-0 大胜斐济：赵松源开场 3 分钟闪击，邝兆镭、万项各梅开二度，张君豪、梁仕宇破门，另有一球为对手乌龙。中国队小组赛 1 负 1 平 1 胜积 4 分，以 H 组第三、成绩最好的 8 个小组第三之一晋级 32 强。这是中国队继 1985、2005 年之后队史第三次晋级世少赛淘汰赛，时隔 21 年重返世少赛淘汰赛；淘汰赛 11 月 30 日开踢。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"U17"</strong>：17 岁以下年龄组的比赛。这批小将大多 16、17 岁，是中国足球的下一代——他们赢球，意味着青训这条路终于看到了一点光。</li>
+<li><strong>"梅开二度"</strong>：一个球员一场比赛进了两个球。邝兆镭和万项各进两个，等于两个人就包办了全队一半的进球。</li>
+<li><strong>"小组第三晋级"</strong>：小组赛前两名直接晋级，成绩最好的 8 个小组第三也能"搭末班车"进 32 强。中国队正是靠这个规则挤进了淘汰赛——赢斐济这场 8-0，把净胜球刷了上去，末班车票就是这么抢到的。</li>
+<li><strong>"世少赛"</strong>：U17 男足世界杯的简称，两年一届，是世界足坛 17 岁以下最高水平的比赛。1985 年中国队还拿过第 8 名，之后就再也没进过淘汰赛——这一等就是 21 年。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>中国足球久违的好消息——U17 小将 8-0 横扫斐济，时隔 21 年再进世少赛淘汰赛；央视解说说，这场球"点燃了照亮前路的火把"。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>FIFA 官网《Matchday 8 round-up》—— <a href="https://www.fifa.com/en/tournaments/mens/u17worldcup/qatar-2026/articles/matchday-8-round-up-doga">https://www.fifa.com/en/tournaments/mens/u17worldcup/qatar-2026/articles/matchday-8-round-up-doga</a></li>
+<li>央视新闻客户端（华龙网转载）《U17 国足 8-0 大胜斐济晋级淘汰赛》—— <a href="https://www.cqnews.net/web/content_1575770836092399616.html">https://www.cqnews.net/web/content_1575770836092399616.html</a></li>
+</ul>
+<div class="zg-head"><h3>3. APEC 深圳会议纪实发布：习近平"大鹏展翅"与亚太合作</h3><button type="button" class="zg-btn" data-story="2026-11-27-cn-3" data-title="3. APEC 深圳会议纪实发布：习近平&quot;大鹏展翅&quot;与亚太合作" data-section="cn" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p>新华社 11 月 26 日晚发布长篇纪实《"像大鹏一样展翅高飞、鹏程万里"——习近平主席出席亚太经合组织深圳会议及相关活动纪实》，回顾 11 月 17–20 日习近平出席 APEC 深圳会议：时隔 12 年中国再次担任 APEC 东道主，围绕"建设亚太共同体，促进共同繁荣"主题，习近平主持 11 月 19 日 APEC 第三十三次领导人非正式会议并发表主旨演讲。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"APEC"</strong>：亚太经济合作组织的简称，21 个亚太经济体坐在一起谈贸易、谈合作的"大桌子"。今年轮到中国当东道主，会议开在深圳。</li>
+<li><strong>"领导人非正式会议"</strong>：APEC 最重头的会，各经济体领导人穿着东道主准备的特色服装、不用打领带，开"不那么正式"的会——但谈的都是最正式的大事。</li>
+<li><strong>"亚太共同体"</strong>：中国提出的愿景：亚太地区各经济体像一个大家庭一样，贸易更自由、合作更紧密、大家一起繁荣。这次深圳会议的主题就是这句话。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>本月中国主场外交的收官叙事出炉——时隔 12 年再当 APEC 东道主，深圳会议把"建设亚太共同体"写进了宣言。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>新华社（福建省科技厅转载）《"像大鹏一样展翅高飞、鹏程万里"——习近平主席出席亚太经合组织深圳会议及相关活动纪实》—— <a href="https://kjt.fj.gov.cn/xxgk/kjyw/szyw/202611/t20261126_7255470.htm">https://kjt.fj.gov.cn/xxgk/kjyw/szyw/202611/t20261126_7255470.htm</a></li>
+</ul>
+<hr />
+<h2>八、GitHub 新技术 💻</h2>
+<div class="zg-head"><h3>1. google-labs-code/stitch-skills：让 AI 帮你做界面设计，从一句话到一整套 App 界面</h3><button type="button" class="zg-btn" data-story="2026-11-27-gh-1" data-title="1. google-labs-code/stitch-skills：让 AI 帮你做界面设计，从一句话到一整套 App 界面" data-section="gh" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p><strong>仓库：</strong> google-labs-code/stitch-skills —— <a href="https://github.com/google-labs-code/stitch-skills">https://github.com/google-labs-code/stitch-skills</a></p>
+<p><strong>它是做什么的：</strong> 谷歌官方出的一套 AI 设计"技能包"，配给谷歌的 Stitch（AI 界面设计工具）用。装给 Codex、Claude Code、Cursor、Gemini CLI 等 AI 编程工具后，你说一句"给我做个约会 App 的浏览页面"，AI 就能按设计规范生成界面、改配色、换布局，还能把现成的网页代码"翻译"成设计稿、把设计稿再"翻译"回 React 代码。分设计、搭建、工具三个插件包，共 20 个左右技能，遵循 Agent Skills 开放标准，Apache 2.0 开源协议。</p>
+<p><strong>为什么最近火：</strong> 11 月 27 日 GitHub Trending 日榜前列，仓库已有 13283 个 star、1563 个 fork。火的原因是赶上了 11 月最热的风口——"AI 智能体技能（Skills）"：Anthropic 刚推 MCP 上的 Skills、谷歌又把 Workspace 接进 MCP，现在谷歌再把自家设计工具的技能库开源，等于"AI 不光会写代码，还会做设计了"，设计师和开发者的活儿正在被同一套技能打通。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"Agent Skills（智能体技能）"</strong>：写给 AI 的"工作说明书"。装上之后，AI 就知道"做界面要先定配色、再排版、最后检查有没有重叠"——相当于给 AI 配了一本《设计标准作业手册》，不用你每次都手把手教。</li>
+<li><strong>"Stitch"</strong>：谷歌的 AI 界面设计工具：输入一句话，它就给你生成 App 界面的设计稿。这个技能包就是让各家 AI 编程工具都能直接"调用"Stitch 的能力。</li>
+<li><strong>"React"</strong>：一种做网页和 App 界面的流行技术。设计稿变成 React 代码，意思就是"画好的图直接变成能用的 App 界面"，不用设计师画完、程序员再照着重做一遍。</li>
+<li><strong>"Star"</strong>：GitHub 上的"收藏数"。1.3 万多 star 说明有 1.3 万多人觉得这个项目值得收藏——相当于 GitHub 世界里的"点赞数"，是衡量一个开源项目火不火最直观的指标。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>谷歌把自家 AI 设计工具的"技能包"开源了——一句话生成 App 界面、设计稿和代码来回互转，1.3 万人已经收藏；AI 不光会写代码，连"长什么样"也开始包办了。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>GitHub 仓库页 —— <a href="https://github.com/google-labs-code/stitch-skills">https://github.com/google-labs-code/stitch-skills</a></li>
+<li>GitHub Trending 日榜 —— <a href="https://github.com/trending?since=daily">https://github.com/trending?since=daily</a></li>
+</ul>
+<div class="zg-head"><h3>2. mjmirza/app-store-compliance：App 上架"避坑手册"，被拒之前先自查一遍</h3><button type="button" class="zg-btn" data-story="2026-11-27-gh-2" data-title="2. mjmirza/app-store-compliance：App 上架&quot;避坑手册&quot;，被拒之前先自查一遍" data-section="gh" aria-label="追更这条新闻" aria-pressed="false">+</button></div>
+<p><strong>仓库：</strong> mjmirza/app-store-compliance —— <a href="https://github.com/mjmirza/app-store-compliance">https://github.com/mjmirza/app-store-compliance</a></p>
+<p><strong>它是做什么的：</strong> 一本开源的"App 上架合规手册"加一个提交前自查工具，专门对付苹果 App Store 和谷歌 Play 的审核驳回。里面整理了 125 种常见被拒原因和对应的修法、117 个有截止日期的法规（欧盟 AI 法案、数字服务法、儿童隐私 COPPA、年龄法等），还带隐私清单和数据安全检查。用法很简单：提交之前跑一条命令，它就扫描你的 App，告诉你哪里可能被拒、怎么修；也可以装进 Claude Code、Cursor 等 AI 编程工具，让 AI 每次提交前自动帮你查一遍。作者还贴心地写了"不是开发者也能用的纯文字版清单"。</p>
+<p><strong>为什么最近火：</strong> 11 月 27 日 GitHub Trending 日榜前列，仓库已有 7016 个 star、468 个 fork。火的原因很实在：一次被拒就要等好几天、改完再等好几天，独立开发者最耗不起的就是这个——"提交前先自查一遍"戳中的是所有做 App 的人的共同痛点。</p>
+<div class="glossary"><p class="sec-label">🔍 名词解释</p></div>
+<ul>
+<li><strong>"App Store 审核"</strong>：苹果和谷歌的"守门员"：你做的 App 想上架，得先过他们这一关。隐私没写清楚、缺个演示账号、按钮文案有问题，都可能被打回来——而且驳回理由常常只有一句话，猜都要猜半天。</li>
+<li><strong>"COPPA"</strong>：美国《儿童在线隐私保护法》的简称：App 如果面向 13 岁以下儿童，对数据的规矩格外严。很多 App 被拒，都是栽在"儿童隐私"这一条上。</li>
+<li><strong>"隐私清单"</strong>：向苹果申报"你的 App 会收集哪些用户数据"的一张表。表上写的和 App 实际干的必须对得上——对不上，就是最常见的被拒原因之一。</li>
+<li><strong>"Star"</strong>：GitHub 上的"收藏数"。7000 多 star 说明有 7000 多人觉得这个项目值得收藏——相当于 GitHub 世界里的"点赞数"，是衡量一个开源项目火不火最直观的指标。</li>
+</ul>
+<div class="summary"><p class="sec-label">📌 一句话总结</p><p>做 App 最怕的就是"提交、等几天、被拒、再猜为什么"——这本开源手册把 125 种被拒原因和修法一次写清，提交前先自查，7000 多个开发者已经收藏了。</p></div>
+<div class="sources"><p class="sec-label">🔗 来源</p></div>
+<ul>
+<li>GitHub 仓库页 —— <a href="https://github.com/mjmirza/app-store-compliance">https://github.com/mjmirza/app-store-compliance</a></li>
+<li>GitHub Trending 日榜 —— <a href="https://github.com/trending?since=daily">https://github.com/trending?since=daily</a></li>
+</ul>
+<hr />
+<h2>九、环球趣闻 🌍✈️</h2>
+<h3>1. 雨后的尼斯：从暴风雨的清晨走到洒满阳光的午后</h3>
+<ul>
+<li><strong>平台：</strong> YouTube</li>
+<li><strong>频道：</strong> 尼斯本地漫步博主</li>
+<li><strong>发帖时间：</strong> 2026 年 11 月（约 11 月 24 日发布）</li>
+<li><strong>讲了什么：</strong> 一位住在尼斯的博主拍的 4K 城市漫步：11 月的一个周日清晨，尼斯下着雨、地中海掀着大浪，英国人散步大道（Promenade des Anglais）上冷冷清清；到了下午，雨停了、云散了，阳光重新洒回街道和棕榈树上，老城海边的酒吧又坐满了人。全程没有行程、没有赶路，只有海浪声、散步的人和法式海滨城市慢悠悠的日常。</li>
+<li>💡 <strong>推荐理由：</strong> 这条片子最打动我的是"天气说变就变"那股劲儿——早上还是暴风雨拍岸，下午就阳光洒满棕榈树，尼斯这座城市是真的会"变脸"。而且 4K 画质下海浪扑上岸的样子，看得我都想立刻订票去晒太阳了，哼，11 月的尼斯都比武汉暖和，这找谁说理去。</li>
+<li>🔗 原链接：<a href="https://www.youtube.com/watch?v=5pg-r6Mjjhg">https://www.youtube.com/watch?v=5pg-r6Mjjhg</a></li>
+</ul>
+<h3>2. 漫威《复联：毁灭日》最终预告 24 小时播放 5.63 亿次，创迪士尼历史纪录</h3>
+<ul>
+<li><strong>平台：</strong> YouTube</li>
+<li><strong>频道：</strong> Marvel Entertainment（漫威影业官方）</li>
+<li><strong>发帖时间：</strong> 2026 年 11 月 23 日（最终预告片发布）；11 月 26 日破纪录消息出炉</li>
+<li><strong>讲了什么：</strong> 漫威《复仇者联盟：毁灭日》（Avengers: Doomsday）最终预告片 11 月 23 日上线，24 小时内播放量达到 5.63 亿次，成为迪士尼历史上观看量最高的预告片——超过了此前《复联：毁灭日》先行预告的 5.03 亿次和《死侍与金刚狼》2024 年超级碗预告的 3.65 亿次。预告片里，神奇四侠把美国队长史蒂夫·罗杰斯拉回战场，X 战警集结，钢铁侠的扮演者小罗伯特·唐尼这次演大反派毁灭博士；新放出的 16 秒片段里，万磁王想扯掉毁灭博士的面具，结果被绿魔法死死按住。影片定于 12 月 18 日在美国上映。</li>
+<li>💡 <strong>推荐理由：</strong> 5.63 亿次啊朋友们，这哪是预告片，这是全球漫威粉集体"过年"——而且你看预告片的路数：让史蒂夫·罗杰斯回归、让小罗伯特·唐尼演反派，漫威这是把"爷青回"和"爷青结"一起端上桌了。12 月 18 日上映，倒计时已经开始，我先去把前面几部补上，免得到时候看不懂谁是谁。</li>
+<li>🔗 原链接：<a href="https://www.youtube.com/embed/7SlptRQ_kPU?si=69ojq2u4OPD5Yv3X">https://www.youtube.com/embed/7SlptRQ_kPU?si=69ojq2u4OPD5Yv3X</a></li>
+</ul>
+<hr />
+<p>Ricardo，今天只有下午一节课，上午就好好歇着，慢慢看报；AQI 不太好，出门记得戴口罩😷周五啦，周末就在眼前了！</p>
+<div class="vocabbox"><h2>📚 本期生词</h2>
+</div><div class="zg-panel"><p class="sec-label">👀 我的追更 · <span class="zg-count">正在追更：0 条</span></p><p class="zg-empty note">还没有追更的新闻。点每条新闻右上角的 ＋，就能追更它；有后续的那天，后续会出现在对应板块的最后一栏。</p><ul class="zg-list"></ul></div>
+<p class="note">简约版仅存档备查，每日推送仍为现在版（2026-10-28 定版）。</p>
+</div>
+<script>
+(function () {
+  var KEY = 'mashu_follow_v1';
+  var store = {};
+  try { store = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { store = {}; }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} }
+  function esc(s) { return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function fmt(d) { var p = String(d || '').split('-'); if (p.length !== 3) return d || ''; return parseInt(p[1], 10) + '月' + parseInt(p[2], 10) + '日'; }
+  function toast(msg) {
+    var t = document.getElementById('zgToast');
+    if (!t) {
+      t = document.createElement('div');
+      t.id = 'zgToast';
+      t.style.cssText = 'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1c1a17;color:#f7f2e7;padding:10px 16px;border-radius:999px;font-size:14px;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,.3);max-width:92vw;text-align:center;';
+      document.body.appendChild(t);
+    }
+    t.textContent = msg;
+    t.style.display = 'block';
+    clearTimeout(t._h);
+    t._h = setTimeout(function () { t.style.display = 'none'; }, 2600);
+  }
+  function render() {
+    var ids = Object.keys(store);
+    document.querySelectorAll('.zg-count').forEach(function (el) { el.textContent = '正在追更：' + ids.length + ' 条'; });
+    document.querySelectorAll('.zg-list').forEach(function (ul) {
+      ul.innerHTML = ids.map(function (id) {
+        var it = store[id] || {};
+        return '<li><span class="zg-list-title">' + esc(it.title || id) + '</span><span class="zg-list-date"> · ' + fmt(it.firstClicked) + ' 开始追更</span> <button type="button" class="zg-unfollow" data-story="' + esc(id) + '" aria-label="取消追更">×</button></li>';
+      }).join('');
+    });
+    document.querySelectorAll('.zg-empty').forEach(function (el) { el.style.display = ids.length ? 'none' : ''; });
+    document.querySelectorAll('.zg-btn').forEach(function (btn) {
+      var on = !!store[btn.getAttribute('data-story')];
+      btn.textContent = on ? '✓' : '+';
+      btn.classList.toggle('on', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('.zg-followup').forEach(function (slot) {
+      var it = store[slot.getAttribute('data-story')];
+      if (it) {
+        slot.hidden = false;
+        var d = slot.querySelector('.zg-followup-date');
+        if (d) d.textContent = '你 ' + fmt(it.firstClicked) + ' 开始追更';
+      } else {
+        slot.hidden = true;
+      }
+    });
+  }
+  function toggle(id, title, section) {
+    if (store[id]) { delete store[id]; toast('已取消追更'); }
+    else {
+      var now = new Date();
+      var ds = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
+      store[id] = { title: title, section: section, firstClicked: ds };
+      toast('已加入追更，会留意它的后续');
+    }
+    save();
+    render();
+  }
+  if (!window.__mashuFollowBound) {
+    window.__mashuFollowBound = true;
+    document.addEventListener('click', function (e) {
+      var btn = e.target && e.target.closest ? e.target.closest('.zg-btn, .zg-unfollow') : null;
+      if (!btn) return;
+      var id = btn.getAttribute('data-story');
+      if (!id) return;
+      if (btn.classList.contains('zg-unfollow')) {
+        if (store[id]) { delete store[id]; save(); render(); toast('已取消追更'); }
+        return;
+      }
+      toggle(id, btn.getAttribute('data-title') || '', btn.getAttribute('data-section') || '');
+    });
+  }
+  render();
+})();
+</script></body>
+</html>
