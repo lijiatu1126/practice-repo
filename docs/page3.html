@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《麻薯日报》简约版 · 目录</title>
+<style>
+/* 横向滚动根治（2026-11-17 与丰富版同修）：页面永不横向滚动，报纸居中 */
+html, body { overflow-x: hidden; }
+body { font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+       margin: 0; line-height: 2.15; font-size: 17.5px; letter-spacing: 0.01em;
+       color: #1c1a17; background: #f0e8d5; }
+.sheet { max-width: 720px; width: 100%; box-sizing: border-box; margin: 0 auto; background: #fbf8f1;
+         padding: 36px 26px 56px; min-height: 100vh;
+         box-shadow: 0 0 28px rgba(60,45,20,.10); }
+p { margin: 0 0 1.5em; text-align: justify; text-indent: 2em; }
+h1 { font-size: 2em; line-height: 1.45; text-align: center; letter-spacing: 0.06em;
+     border-top: 5px solid #1c1a17; border-bottom: 6px double #1c1a17;
+     padding: 20px 8px 16px; margin: 4px 0 18px; }
+blockquote { text-align: center; color: #6b6257; font-size: 0.92em; margin: 0 0 6px; padding: 0; border: none; text-indent: 0; }
+h2 { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+     background: #1c1a17; color: #f7f2e7; font-size: 1.28em; letter-spacing: 0.06em;
+     padding: 10px 16px; margin-top: 3.2em; border-radius: 2px; line-height: 1.6; }
+h3 { font-size: 1.26em; line-height: 1.55; font-weight: 700;
+     margin-top: 3em; padding-top: 1.4em; border-top: 1px solid #d8d2c4; }
+a { color: #1757c2; text-decoration: underline; text-underline-offset: 3px; }
+a:visited { color: #6d4fc2; }
+ul li, ol li { margin: 20px 0; line-height: 2.0; }
+li > strong:first-child { color: #8a3324; }
+hr { border: none; border-top: 2px solid #1c1a17; margin: 2.6em 0; }
+.note { color: #6b6257; font-size: 0.92em; text-align: center; text-indent: 0; }
+.sec-label { text-indent: 0; margin: 0 0 12px; font-weight: 700; text-align: left; }
+/* 丰富版同款分块：名词解释金边卡片、一句话总结红边卡片、来源灰色虚线区 */
+.glossary { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.glossary .sec-label { color: #7c5a10; }
+.glossary ul { margin: 6px 0 8px; }
+.glossary p, .glossary li { text-indent: 0; }
+.summary { background: #f6f1e3; border-left: 4px solid #8a3324; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.summary .sec-label { color: #8a3324; }
+.summary p { text-indent: 0; }
+.sources { border-top: 1px dashed #c9c2b2; padding: 18px 4px 4px; margin: 2em 0; }
+.sources .sec-label { color: #6b6257; font-size: 0.92em; }
+.sources ul { margin: 6px 0 8px; }
+.sources li { font-size: 0.88em; color: #6b6257; margin: 14px 0; line-height: 1.9; word-break: break-all; }
+.sources p, .sources li { text-indent: 0; }
+.vocabbox { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.vocabbox p, .vocabbox li { text-indent: 0; }
+
+/* 追更（2026-11-09 Ricardo 批准，第 42 期起）：每条新闻右上角 ＋，点一下即追更 */
+.zg-head { position: relative; }
+.zg-head > h3 { padding-right: 56px; }
+button.zg-btn { position: absolute; right: 0; top: 1.4em; width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid #b98a1c; background: #fbf8f1; color: #7c5a10; font-size: 22px; line-height: 1; cursor: pointer; font-family: Georgia, "Songti SC", serif; padding: 0; }
+button.zg-btn.on { background: #b98a1c; color: #fff; }
+.zg-followup { background: #f4efe0; border-left: 4px solid #b98a1c; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.zg-followup .sec-label { color: #7c5a10; }
+.zg-followup p { text-indent: 0; }
+.zg-panel { background: #fdfcf8; border: 1px solid #e6dfc9; border-radius: 8px; padding: 20px 24px 8px; margin: 2em 0; }
+.zg-panel .sec-label { color: #8a3324; }
+.zg-list { list-style: none; padding-left: 0; }
+.zg-list li { margin: 14px 0; line-height: 2.0; }
+.zg-list-date { color: #6b6257; font-size: 0.92em; }
+button.zg-unfollow { border: 1px solid #c9c2b2; background: transparent; border-radius: 50%; width: 26px; height: 26px; font-size: 16px; line-height: 1; cursor: pointer; color: #6b6257; padding: 0; }
+
+/* 目录专用 */
+.intro { text-align: center; color: #6b6257; font-size: 0.95em; margin: 0 0 6px; text-indent: 0; }
+ol.toc { list-style: none; padding-left: 0; }
+ol.toc li { margin: 12px 0; }
+ol.toc a { display: block; border-radius: 16px; padding: 12px 16px; color: #33302a; text-decoration: none; background: linear-gradient(135deg, rgba(255,253,245,.95), rgba(255,253,245,.65)); border: 1px solid #e0d5ae; }
+ol.toc a:visited { color: #33302a; }
+ol.toc a:hover { color: #8a3324; border-color: #8a3324; }
+.pager { margin-top: 28px; padding-top: 16px; border-top: 1px solid #d8cdb2; display: flex; justify-content: space-between; align-items: center; font-size: 16px; }
+.pager button { margin: 0 4px; padding: 4px 14px; border-radius: 999px; border: 1px solid #c9b98a; background: #fffdf5; cursor: pointer; font-size: 15px; color: #33302a; }
+.pager .cur { color: #6b5d4f; }
+.mascot { text-align: center; margin: 10px 0 4px; }
+.mascot img { width: 150px; height: auto; border-radius: 18px; border: 1px solid #e0d5ae; }
+</style>
+</head>
+<body>
+<div class="sheet">
+<p class="note">简约版 · 2026-10-23 报纸版式重排</p>
+<h1>麻薯日报 · 简约版</h1>
+
+<p class="intro">简约版 · 报纸版式，每天八大板块，新闻、名词解释、来源链接分开排，慢慢看。</p>
+<hr />
+<ol class="toc">
+<li><a href="issue-061.html">《麻薯日报》第61期 · 2026-11-28（星期六）</a></li>
+</ol>
+<div class="pager"><button type="button" onclick="location.href='page2.html'">⬅ 上一页</button><span class="cur">第 3 页 / 共 3 页 · 共 61 期</span><span></span></div>
+</div>
+</body>
+</html>
